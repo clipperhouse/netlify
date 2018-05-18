@@ -1,1 +1,1 @@
-/blog   https://clipperhouse.com
+/blog/*   https://clipperhouse.com/:splat 200
