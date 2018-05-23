@@ -488,6 +488,19 @@ pre, code {
   }
 }
 
+/* Customer
+======================================================================= */
+
 #instantclick {
   display: none;
+}
+
+input,
+select, 
+textarea,
+button {
+  padding: 8px 12px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 100%;
 }
