@@ -1,6 +1,8 @@
 ---
 title: "This is what a non-neutral net looks like"
 date: 2011-02-01T07:06:51.000Z
+author: "Matt Sherman"
+
 ---
 
 Gogo, which offers in-flight Wi-fi on a bunch of airlines, is now [offering](http://www.usatoday.com/tech/news/2011-02-01-facebook-inflight-wifi_N.htm) Facebook at no charge — but access to other sites will cost $$.

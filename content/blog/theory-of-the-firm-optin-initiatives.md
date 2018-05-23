@@ -1,6 +1,8 @@
 ---
 title: "Theory of the firm: opt-in initiatives"
 date: 2015-03-08T20:01:19.000Z
+author: "Matt Sherman"
+
 ---
 
 I’ve become adamant about making internal initiatives opt-in for the following reason: it brings more information to bear.

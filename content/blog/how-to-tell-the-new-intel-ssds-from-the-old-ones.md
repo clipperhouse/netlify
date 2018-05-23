@@ -1,6 +1,8 @@
 ---
 title: "How to tell the new Intel SSDs from the old ones"
 date: 2009-07-21T21:17:57.000Z
+author: "Matt Sherman"
+
 ---
 
 Intel today announced [faster and cheaper](http://arstechnica.com/hardware/news/2009/07/intels-new-34nm-ssds-cut-prices-by-60-percent-boost-speed.ars) versions of their very impressive solid state hard drives (SSDs). I didn’t see any ship dates so I guess they are making their way into the sales channel now.

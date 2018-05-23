@@ -1,6 +1,8 @@
 ---
 title: "Web Components: have we not been here before?"
 date: 2014-03-31T16:15:30.000Z
+author: "Matt Sherman"
+
 ---
 
 Addy Osmani describes [Web Components](http://addyosmani.com/blog/the-webs-declarative-composable-future/), of which an important part is custom tags. The promise:

@@ -1,6 +1,8 @@
 ---
 title: "Epistemology in everyday life"
 date: 2010-04-27T09:07:36.000Z
+author: "Matt Sherman"
+
 ---
 
 In school, (cough) years ago, I did a bit of epistemology. It’s the study of knowledge. It asks the questions “why do we know that?” and “how will we find that out?”.

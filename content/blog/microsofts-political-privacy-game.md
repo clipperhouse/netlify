@@ -1,6 +1,8 @@
 ---
 title: "Microsoft’s political privacy game"
 date: 2012-08-08T18:55:59.000Z
+author: "Matt Sherman"
+
 ---
 
 I’ve suggested many times that Microsoft should disable third-party cookies by default in IE10 (and Safari [does](http://www.apple.com/safari/features.html#security) currently). This would be strategic for them: it devalues Google’s main income source and allows Microsoft to trumpet a commitment to privacy.

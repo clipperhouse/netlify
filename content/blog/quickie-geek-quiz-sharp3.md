@@ -1,6 +1,8 @@
 ---
 title: "Quickie geek quiz #3"
 date: 2009-08-31T13:10:27.000Z
+author: "Matt Sherman"
+
 ---
 
 Alright, today’s geek question relates to branding:

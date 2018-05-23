@@ -1,6 +1,8 @@
 ---
 title: "URL shortener for ASP.net"
 date: 2009-06-06T21:56:00.000Z
+author: "Matt Sherman"
+
 ---
 
 If you use Twitter, you are familiar with URL shortening services like bit.ly and tinyurl.com. They are useful for saving characters in the space-limited messages that Twitter allows.

@@ -1,6 +1,8 @@
 ---
 title: "What advertising means"
 date: 2008-02-10T22:04:01.000Z
+author: "Matt Sherman"
+
 ---
 
 Whenever I see a new ad for a product or industry, I am relieved and encouraged. Why? Isn’t advertising the most crass, manipulative expression of our capitalist system?

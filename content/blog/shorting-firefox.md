@@ -1,6 +1,8 @@
 ---
 title: "Shorting Firefox"
 date: 2009-12-10T09:22:29.000Z
+author: "Matt Sherman"
+
 ---
 
 If Firefox were a stock, I’d be [shorting it](http://www.techcrunch.com/2009/12/10/chrome-firefox/). That’s what I said a [few months ago](/blog/post/Firefox-has-a-user-base-does-it-have-a-future.aspx), too, and one of the Mozilla guys took issue.

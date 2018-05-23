@@ -1,6 +1,8 @@
 ---
 title: "Does null ever equal anything?"
 date: 2009-05-15T13:47:00.000Z
+author: "Matt Sherman"
+
 ---
 
 Yesterday’s [discussion](/blog/post/Nulls-and-knowledge.aspx) of nulls got me to thinking about this common bit of syntax in C#:

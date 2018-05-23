@@ -1,6 +1,8 @@
 ---
 title: "64-bitness: what it is and what it ain’t"
 date: 2009-06-12T15:49:00.000Z
+author: "Matt Sherman"
+
 ---
 
 Very interesting post from Rico Mariani on the [why’s and why-not’s of doing 64-bit applications](http://blogs.msdn.com/ricom/archive/2009/06/10/visual-studio-why-is-there-no-64-bit-version.aspx), specifically Visual Studio. It’s important to understand that Visual Studio is about manipulating code, not the data that your code will ultimately handle.

@@ -1,6 +1,8 @@
 ---
 title: "The trouble with interfaces in Go"
 date: 2014-02-04T03:35:38.000Z
+author: "Matt Sherman"
+
 ---
 
 I am working on a [tool](https://github.com/clipperhouse/gen) for generics-like functionality in Go. Despite what you may have heard, Go does have generic functionality, in that you can create (e.g.) methods which operate on any type, by using interface{} — the interface that all types implement. For example, you can do something like:

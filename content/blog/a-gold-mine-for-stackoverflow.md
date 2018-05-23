@@ -1,6 +1,8 @@
 ---
 title: "A gold mine for StackOverflow"
 date: 2009-12-02T20:09:00.000Z
+author: "Matt Sherman"
+
 ---
 
 [This](http://www.joelonsoftware.com/items/2009/12/02.html) is a gold mine for [Joel and Jeff](http://stackoverflow.com/about) over at StackOverflow: careers. It’s something I thought of a while ago, and I am sure the SO guys were ahead of me by a millennium.

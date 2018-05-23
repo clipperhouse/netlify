@@ -1,6 +1,8 @@
 ---
 title: "My security and privacy tools"
 date: 2014-10-14T00:41:55.517Z
+author: "Matt Sherman"
+
 ---
 
 A quick list of the things I use to improve my web experience:

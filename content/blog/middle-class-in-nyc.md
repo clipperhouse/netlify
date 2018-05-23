@@ -1,6 +1,8 @@
 ---
 title: "Middle class in NYC"
 date: 2014-05-04T16:15:54.000Z
+author: "Matt Sherman"
+
 ---
 
 There is a notion I hear from time to time that earning (say) $100,000 while living in NYC makes one “middle class”. The logic being, NYC is expensive and $100K doesn’t go as far as it would in other places. Or, that many nearby people earn similar or higher incomes, putting one “in the middle”.

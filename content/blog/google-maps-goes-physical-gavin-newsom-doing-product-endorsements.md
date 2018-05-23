@@ -1,6 +1,8 @@
 ---
 title: "Google Maps goes physical, Gavin Newsom doing product endorsements"
 date: 2009-07-15T10:27:00.000Z
+author: "Matt Sherman"
+
 ---
 
 Walking to my client’s place this morning, I couldn’t help but wonder what-the-hell-is-that? as I approached the cafe:

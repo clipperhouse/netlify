@@ -1,6 +1,8 @@
 ---
 title: "GM + Men’s Wearhouse = Tootsie Roll"
 date: 2009-06-01T14:38:00.000Z
+author: "Matt Sherman"
+
 ---
 
 For perspective, here are a few companies whose market cap is greater than [GM](http://www.google.com/finance?q=NYSE:GM):

@@ -1,6 +1,8 @@
 ---
 title: "The artificial distinction between “content” and “delivery”"
 date: 2010-03-17T08:24:00.000Z
+author: "Matt Sherman"
+
 ---
 
 In the arguments over net neutrality, the discussion is often around “content” vs “delivery”. The concern is that the delivery people (ISPs) might cut off or otherwise extort the content people. Eg, what if Comcast slowed down YouTube so it could push its own video?

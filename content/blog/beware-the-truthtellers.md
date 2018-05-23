@@ -1,6 +1,8 @@
 ---
 title: "Beware the truth-tellers"
 date: 2010-06-04T10:29:00.000Z
+author: "Matt Sherman"
+
 ---
 
 I find it is so funny and ironic when a person has to tell you they are telling the truth before they tell you the true thing that is truthful. [Today](http://whydoeseverythingsuck.com/2010/06/john-gruber-jumps-shark.html), as part of a otherwise interesting and opinionated post, we learn:

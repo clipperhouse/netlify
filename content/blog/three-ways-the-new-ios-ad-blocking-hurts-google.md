@@ -1,6 +1,8 @@
 ---
 title: "Three ways the new iOS ad blocking hurts Google"
 date: 2015-09-18T14:43:21.031Z
+author: "Matt Sherman"
+
 ---
 
 Apple’s ad blocking API is good for users and bad for Google, in 3 ways:

@@ -1,6 +1,8 @@
 ---
 title: "Deploying an ASP.net MVC project"
 date: 2009-09-10T17:17:15.000Z
+author: "Matt Sherman"
+
 ---
 
 So, I was looking around for a simple way to emulate the “Publish” function of Visual Studio for my first ASP.net MVC project.

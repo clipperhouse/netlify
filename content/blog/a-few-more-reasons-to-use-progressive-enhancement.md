@@ -1,6 +1,8 @@
 ---
 title: "A few more reasons to use Progressive Enhancement"
 date: 2010-02-23T10:55:01.000Z
+author: "Matt Sherman"
+
 ---
 
 [Progressive Enhancement](http://www.alistapart.com/articles/understandingprogressiveenhancement) is a methodology where a web application is developed in layers. Each layer works correctly on its own, and additional layers on top enhance the user experience.

@@ -1,6 +1,8 @@
 ---
 title: "HTTPS is the least of your problems"
 date: 2010-06-18T07:44:17.000Z
+author: "Matt Sherman"
+
 ---
 
 It’s cool that the EFF is [offering](http://arstechnica.com/open-source/news/2010/06/eff-announces-web-encryption-add-on-for-firefox.ars) a Firefox extension to use SSL where it’s available. I prefer to encrypt things too, but really, that’s the least of your problems.

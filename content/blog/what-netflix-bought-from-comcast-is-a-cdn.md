@@ -1,6 +1,8 @@
 ---
 title: "What Netflix bought from Comcast is a CDN"
 date: 2014-05-08T00:40:39.000Z
+author: "Matt Sherman"
+
 ---
 
 With the hubbub about net neutrality, fast lanes and Netflix, I though I would illustrate what we are dealing with technologically.

@@ -1,6 +1,8 @@
 ---
 title: "How I optimize conversations"
 date: 2014-03-15T20:12:03.000Z
+author: "Matt Sherman"
+
 ---
 
 I had a realization some years ago in working with a person at a previous firm. After many interactions, I noticed that my productivity, my happiness, my motivation consistently were diminished after dealing with them.

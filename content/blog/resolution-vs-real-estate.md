@@ -1,6 +1,8 @@
 ---
 title: "Resolution vs “real estate”"
 date: 2012-06-12T03:05:59.000Z
+author: "Matt Sherman"
+
 ---
 
 The new Retina Macbook looks quite beautiful, but from a productivity standpoint I am a bit disappointed. While they have quadrupled the pixel count (to 2880 x 1800), they have not increased real estate, per se.

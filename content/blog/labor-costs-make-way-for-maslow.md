@@ -1,6 +1,8 @@
 ---
 title: "Labor costs make way for Maslow"
 date: 2012-12-09T02:58:58.000Z
+author: "Matt Sherman"
+
 ---
 
 That Apple, and other companies, are deciding to [move manufacturing](http://bits.blogs.nytimes.com/2012/12/07/why-apple-got-a-made-in-u-s-a-bug/) back to the United States is evidence of the diminishing importance of labor costs in decision-making. This implies several things.

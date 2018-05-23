@@ -1,6 +1,8 @@
 ---
 title: "What is Google going to do with On2?"
 date: 2009-08-05T22:41:44.000Z
+author: "Matt Sherman"
+
 ---
 
 Google recently acquired On2, a company that creates video codecs, most notably for Flash (which is used on the most popular video sites). Dan Rayburn runs down and debunks a [number of theories](http://blog.streamingmedia.com/the_business_of_online_vi/2009/08/debunking-some-more-myths-of-the-googleon2-deal.html) as to what Google has in mind. Rightly, he says that none are obviously correct.

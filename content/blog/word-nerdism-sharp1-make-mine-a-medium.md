@@ -1,6 +1,8 @@
 ---
 title: "Word nerdism #1: Make mine a medium"
 date: 2009-10-19T01:28:58.000Z
+author: "Matt Sherman"
+
 ---
 
 I am a word nerd, I love crosswords and love to wonder how words and expressions come to be. I also love thinking about computer languages as _languages_, with style and grammar. (For example, see the interplay between [terseness and readability](http://www.paulgraham.com/popular.html).)

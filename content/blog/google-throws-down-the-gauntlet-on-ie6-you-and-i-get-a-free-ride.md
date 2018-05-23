@@ -1,6 +1,8 @@
 ---
 title: "Google throws down the gauntlet on IE6; you and I get a free ride"
 date: 2010-01-29T16:04:00.000Z
+author: "Matt Sherman"
+
 ---
 
 Today, Google announced that it will begin [phasing out support](http://googledocs.blogspot.com/2010/01/web-browser-support-for-docs-and-sites.html) on older browsers, most notably IE6, for Google Docs. It will take this step with Gmail and Calendar later in the year. This is a big step.

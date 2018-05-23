@@ -1,6 +1,8 @@
 ---
 title: "Nobody cares about “channels”"
 date: 2012-03-03T06:05:41.000Z
+author: "Matt Sherman"
+
 ---
 
 There are rumors afoot that Apple will offer TV [channels as apps](http://www.geekwire.com/2012/channels-apps-apple-reinvent-television) in an upcoming release. This might work as an interim idea, but it has no legs long-term.

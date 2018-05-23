@@ -1,6 +1,8 @@
 ---
 title: "It’s the data, not the algorithm"
 date: 2009-08-30T21:22:49.000Z
+author: "Matt Sherman"
+
 ---
 
 Chris Dixon [points out](http://www.cdixon.org/?p=340) that the challenge in “artificial intelligence” — which in a mainstream definition would be “making computers learn like humans” — is not so much the cleverness of the algorithm but in finding useful data. He cites the Google example where the breakthrough was realizing that links are a good (and previously untapped) source of data on what people think is a relevant web page.

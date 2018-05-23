@@ -1,6 +1,8 @@
 ---
 title: "What follows the “no-fly” list?"
 date: 2010-01-07T10:29:00.000Z
+author: "Matt Sherman"
+
 ---
 
 In this article, we get a [foreshadowing](http://www.usatoday.com/news/washington/2010-01-06-terror_N.htm) of the new, lawless use of the “no-fly” list:

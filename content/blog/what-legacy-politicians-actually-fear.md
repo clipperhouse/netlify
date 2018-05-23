@@ -1,6 +1,8 @@
 ---
 title: "What legacy politicians actually fear"
 date: 2012-01-18T21:28:12.000Z
+author: "Matt Sherman"
+
 ---
 
 I was at the [PIPA/SOPA protest](http://www.meetup.com/ny-tech/events/47879702/) in front of the offices of Senators Schumer and Gillibrand today. All fine and good, but why should the senators care?

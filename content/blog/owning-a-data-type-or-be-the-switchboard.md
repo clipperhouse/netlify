@@ -1,6 +1,8 @@
 ---
 title: "Owning a data type, or, be the switchboard"
 date: 2012-02-11T19:39:32.000Z
+author: "Matt Sherman"
+
 ---
 
 I was chatting with my colleagues at Stack Exchange the other day and we wondered what it means to “own” a data type.

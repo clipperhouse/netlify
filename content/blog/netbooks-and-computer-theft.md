@@ -1,6 +1,8 @@
 ---
 title: "Netbooks and computer theft"
 date: 2010-01-11T09:08:35.000Z
+author: "Matt Sherman"
+
 ---
 
 I am sitting in a cafe and a woman is impressed that “this is the kind of place where people leave their computers unattended”, which I guess is true. With the coming [age of the netbook](http://www.codinghorror.com/blog/archives/001318.html), let’s look at the economics of crime.

@@ -1,6 +1,8 @@
 ---
 title: "Educator extension for BlogEngine.net released"
 date: 2009-05-19T14:39:00.000Z
+author: "Matt Sherman"
+
 ---
 
 I’ve created an extension for [BlogEngine.Net](http://www.dotnetblogengine.net/) to improve typography. It “educates” the text, so that quotes and apostrophes are transformed into their smart (curly) counterparts. This blog uses it.

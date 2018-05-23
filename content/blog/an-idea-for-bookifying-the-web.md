@@ -1,6 +1,8 @@
 ---
 title: "An idea for bookifying the web"
 date: 2014-04-19T19:16:25.000Z
+author: "Matt Sherman"
+
 ---
 
 I use Pocket, a handy “read it later” tool. The idea is that I can “pocket” a web page by clicking a bookmarklet (or browser extension), and the page is:

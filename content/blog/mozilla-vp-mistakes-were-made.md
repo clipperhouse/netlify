@@ -1,6 +1,8 @@
 ---
 title: "Mozilla VP: “mistakes were made”"
 date: 2009-10-19T11:48:00.000Z
+author: "Matt Sherman"
+
 ---
 
 I love the language of Mozilla VP Mike Shaver’s [non-retraction retraction](http://shaver.off.net/diary/2009/10/18/update-net-framework-assistant-clickonce-support-unblocked/) regarding a Microsoft plugin for Firefox:

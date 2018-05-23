@@ -1,6 +1,8 @@
 ---
 title: "A type system in runtime’s clothing"
 date: 2014-08-25T23:19:31.000Z
+author: "Matt Sherman"
+
 ---
 
 Any sufficiently complicated C or Fortran program contains an ad hoc, informally-specified, bug-ridden, slow implementation of half of Common Lisp. — [Greenspun](http://en.wikipedia.org/wiki/Greenspun%27s_tenth_rule)

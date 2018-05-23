@@ -1,6 +1,8 @@
 ---
 title: "Will Microsoft “subsidize” Zune HD pricing?"
 date: 2009-08-13T12:28:00.000Z
+author: "Matt Sherman"
+
 ---
 
 Microsoft announced [pricing for its upcoming Zune HD](http://online.wsj.com/article/SB125017417702129259.html?mod=djemTECH) today, coming around 25% below the prices of equivalent iPod Touches. I wondered if Microsoft is making any money at such prices — after all, it’s based on a [fancy new chip](http://arstechnica.com/gadgets/news/2009/08/nvidia-tegra-is-ready-for-its-close-up-with-zune-hd-launch.ars) and has other nice specs.

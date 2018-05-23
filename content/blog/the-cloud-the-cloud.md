@@ -1,6 +1,8 @@
 ---
 title: "The cloud! The cloud!"
 date: 2009-06-11T15:07:00.000Z
+author: "Matt Sherman"
+
 ---
 
 Everything in technology is an abstraction of something else. The browser is an abstraction, the keyboard is an abstraction, C# is an abstraction; they all sit on top of other things and hide the details, with the goal of making you productive. (And each of those layers is actually comprised of many substrata.)

@@ -1,6 +1,8 @@
 ---
 title: "The Man sticks it to The Man; or, the Country-club Revolt; or, Whitey’s Revenge"
 date: 2009-12-17T21:43:00.000Z
+author: "Matt Sherman"
+
 ---
 
 So Fake Steve, who I like, thinks it would be funny to try to [overload AT&amp;T network tomorrow](http://www.fakesteve.net/2009/12/some-last-minute-thoughts.html). Which, fine, OK, but consider this.

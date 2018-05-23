@@ -1,6 +1,8 @@
 ---
 title: "Firefox has a user base; does it have a future?"
 date: 2009-05-13T17:17:00.000Z
+author: "Matt Sherman"
+
 ---
 
 Firefox is a fine browser. Really, the current release of any of the major browsers is very good.

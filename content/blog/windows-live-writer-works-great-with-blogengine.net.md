@@ -1,6 +1,8 @@
 ---
 title: "Windows Live Writer works great with BlogEngine.Net"
 date: 2009-06-06T21:32:00.000Z
+author: "Matt Sherman"
+
 ---
 
 Just experimenting a bit with using [Windows Live Writer](http://windowslivewriter.spaces.live.com/) as a publishing tool for [BlogEngine.Net](http://www.dotnetblogengine.net/). So far, it works really nicely. For one thing, it respects the theme of the blog right in the editing environment. Check it out:

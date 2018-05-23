@@ -1,6 +1,8 @@
 ---
 title: "Demand first, then supply"
 date: 2008-02-17T19:26:29.000Z
+author: "Matt Sherman"
+
 ---
 
 Paul Buchheit, whom I’ve never read prior, has a very nice article about what [makes a successful company](http://paulbuchheit.blogspot.com/2008/02/most-import-thing-to-understand-about.html):

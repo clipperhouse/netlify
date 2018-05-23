@@ -1,6 +1,8 @@
 ---
 title: "Another reason publishers should adopt SSL: referrers"
 date: 2014-01-22T21:58:47.000Z
+author: "Matt Sherman"
+
 ---
 
 I previously [mentioned](http://clipperhouse.com/2013/12/15/publishers-and-ssl/) that advertising-based publishers should embrace SSL as a product upgrade, a service to their customer. Here’s a more self-interested take.

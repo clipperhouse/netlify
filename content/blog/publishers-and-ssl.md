@@ -1,6 +1,8 @@
 ---
 title: "Publishers and SSL"
 date: 2013-12-15T19:20:56.000Z
+author: "Matt Sherman"
+
 ---
 
 Here’s a good article about why news sites on the web are [slow to embrace SSL](http://www.washingtonpost.com/blogs/the-switch/wp/2013/12/11/news-sites-could-protect-your-privacy-with-encryption-heres-why-they-probably-wont/). The short answer is, the advertising services they use are not prepared to support it.

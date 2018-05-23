@@ -1,6 +1,8 @@
 ---
 title: "A political approach to hiring creatives"
 date: 2012-09-08T18:14:10.000Z
+author: "Matt Sherman"
+
 ---
 
 [This article](http://the-pastry-box-project.net/stephen-anderson/2012-september-7/) offers a lot of sound advice on hiring a designer. As techies, we’re often out of our depth in knowing what a good designer is — often, we hire a decorator instead (or as the article calls it, a stylist).

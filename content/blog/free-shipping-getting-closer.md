@@ -1,6 +1,8 @@
 ---
 title: "Free shipping: getting closer"
 date: 2009-04-03T04:05:46.000Z
+author: "Matt Sherman"
+
 ---
 
 Public Knowledge [points out](http://www.publicknowledge.org/node/2069) AT&amp;T’s new Terms which give different treatment to video based on its source. (No, it’s not neutral but of course, I think that’s [fine](http://clipperhouse.com/2008/03/01/the-biggest-threat-to-your-rights-scarcity/).)

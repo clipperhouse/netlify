@@ -1,6 +1,8 @@
 ---
 title: "Try “Better Bird”"
 date: 2012-02-28T18:21:18.000Z
+author: "Matt Sherman"
+
 ---
 
 I created a [Chrome extension](https://chrome.google.com/webstore/detail/dolfbfbhjniibjlmpebhdkjanjlcnolp?hl=en-US) to fix what I think are some rough edges and poor choices in the Twitter web app. Have a look:

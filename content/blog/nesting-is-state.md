@@ -1,6 +1,8 @@
 ---
 title: "Nesting is state"
 date: 2014-03-30T18:05:25.000Z
+author: "Matt Sherman"
+
 ---
 
 There are stylistic debates about how much nesting or indentation one should choose in code. [This slide](http://talks.golang.org/2013/bestpractices.slide#3) and the [one that follows](http://talks.golang.org/2013/bestpractices.slide#4) illustrate the issue well. The slide refers to “cognitive load” without explaining, and it occurs to me that **nesting is state**.

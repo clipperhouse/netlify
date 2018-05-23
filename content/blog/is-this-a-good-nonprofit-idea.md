@@ -1,6 +1,8 @@
 ---
 title: "Is this a good “non-profit” idea?"
 date: 2009-12-27T19:40:00.000Z
+author: "Matt Sherman"
+
 ---
 
 So, an idea I have been kicking around a while is BillableHour.org. Would like to gather some feedback.

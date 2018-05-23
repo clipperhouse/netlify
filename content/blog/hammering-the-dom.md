@@ -1,6 +1,8 @@
 ---
 title: "Hammering the DOM"
 date: 2009-04-28T18:18:00.000Z
+author: "Matt Sherman"
+
 ---
 
 As I work on my ASP.net [jQuery controls](/jQuery/), I got to thinking about what “animations” really are. The core animation framework in jQuery (as far as I can tell) is to simply iterate in small steps between two CSS states. So if you are going from 0% opacity to 100% opacity, jQuery applies (say) 100 CSS changes in 1% increments.

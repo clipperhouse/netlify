@@ -1,6 +1,8 @@
 ---
 title: "Me doing techno"
 date: 2011-12-15T15:33:21.000Z
+author: "Matt Sherman"
+
 ---
 
 Watch the [original](http://www.youtube.com/watch?v=F6ImxY6hnfA&amp;ob=av2e) first. Then:

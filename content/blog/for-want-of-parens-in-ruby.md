@@ -1,6 +1,8 @@
 ---
 title: "For want of parens in Ruby"
 date: 2013-06-03T01:54:15.000Z
+author: "Matt Sherman"
+
 ---
 
 Ruby is beautiful in many ways. The opportunities to create tight, readable code are impressive. More than other languages, it affords the opportunity to make code look like what it does.

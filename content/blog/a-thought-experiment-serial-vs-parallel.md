@@ -1,6 +1,8 @@
 ---
 title: "A thought experiment: serial vs parallel"
 date: 2009-09-19T18:54:50.000Z
+author: "Matt Sherman"
+
 ---
 
 Now that solid-state drives are arriving in the mainstream, I’ve been thinking about the implications of serial vs parallel and how they affect overall perceived performance. And by “perceived” I mean, what does the client — both the technical and human variety — experience?

@@ -1,6 +1,8 @@
 ---
 title: "Entrepreneurship and health care"
 date: 2010-03-23T13:48:04.000Z
+author: "Matt Sherman"
+
 ---
 
 Some folks are putting forward theories that the new health bill will [increase entrepreneurship](http://www.washingtonmonthly.com/features/2009/0905.gruber.html) in the US, as individuals are freed from reliance on large employers for health care. I think the theory is both wishful and unempirical.

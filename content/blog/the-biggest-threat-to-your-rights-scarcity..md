@@ -1,6 +1,8 @@
 ---
 title: "The biggest threat to your rights? Scarcity."
 date: 2008-03-01T06:20:45.000Z
+author: "Matt Sherman"
+
 ---
 
 I would not have predicted [this](http://www.infoworld.com/article/08/02/29/Civil-rights-groups-FCC-should-allow-network-management_1.html):

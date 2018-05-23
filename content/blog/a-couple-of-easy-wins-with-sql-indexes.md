@@ -1,6 +1,8 @@
 ---
 title: "A couple of easy wins with SQL indexes"
 date: 2010-10-17T12:14:00.000Z
+author: "Matt Sherman"
+
 ---
 
 I was lucky enough to watch a great talk by SQL expert [Brent Ozar](http://www.brentozar.com/) courtesy of [Fog Creek](http://www.fogcreek.com/). A couple of actionable takeaways that stuck with me are about creating and choosing indexes.

@@ -1,6 +1,8 @@
 ---
 title: "Compile-time checking of views in ASP.Net MVC"
 date: 2009-09-19T15:20:41.000Z
+author: "Matt Sherman"
+
 ---
 
 I noticed that syntax errors in my views were not being caught during the build process — instead I would find them at run-time when I actually hit the view.

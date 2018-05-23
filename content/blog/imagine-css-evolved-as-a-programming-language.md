@@ -1,6 +1,8 @@
 ---
 title: "Imagine CSS evolved as a programming language"
 date: 2009-06-16T17:35:27.000Z
+author: "Matt Sherman"
+
 ---
 
 I’ve gotten reasonably good with CSS, but I often find myself feeling that certain concepts are conflated or a bit ad hoc.

@@ -1,6 +1,8 @@
 ---
 title: "This way madness lies (thankfully)"
 date: 2012-05-28T17:08:35.000Z
+author: "Matt Sherman"
+
 ---
 
 Tim Lee offers [two views](http://www.forbes.com/sites/timothylee/2012/05/27/two-views-of-innovation/) of the economic case for innovation. I am certainly more Hayekian — I think expertise and information is inherently dispersed and the Hayekian view is more granular, if you will. It’s more likely to discover and serve niches and inefficiencies.

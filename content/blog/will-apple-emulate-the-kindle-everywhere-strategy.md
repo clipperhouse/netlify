@@ -1,6 +1,8 @@
 ---
 title: "Will Apple emulate the “Kindle everywhere” strategy?"
 date: 2010-01-19T20:45:00.000Z
+author: "Matt Sherman"
+
 ---
 
 I like the concept of e-books, if not their current state-of-the-art. The Kindle device sounds very impressive, I’ve only played with them a bit, and I know they have a lot of devoted fans.

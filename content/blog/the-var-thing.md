@@ -1,6 +1,8 @@
 ---
 title: "The “var” thing"
 date: 2009-09-04T11:02:54.000Z
+author: "Matt Sherman"
+
 ---
 
 I’ve come to really enjoy using the “var” keyword in C#. Although it’s been [written about](http://haacked.com/archive/2009/08/31/7-stages-of-language-keyword-grief.aspx) many times, I want to clarify what it is.

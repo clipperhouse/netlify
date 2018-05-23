@@ -1,6 +1,8 @@
 ---
 title: "Can haz Mifi?"
 date: 2009-05-24T12:08:00.000Z
+author: "Matt Sherman"
+
 ---
 
 This [portable 3G-to-Wifi hotspot](http://news.cnet.com/8301-13924_3-10247616-64.html) looks really great. Apparently Verizon and Sprint will offer it. The size is amazing — they claim it’s equivalent to “8 stacked credit cards”. (I am a bit shocked that no one has used the brand “MiFi” before!)

@@ -1,6 +1,8 @@
 ---
 title: "The most viable reason for Apple’s rejection of Google Voice (so far)"
 date: 2009-08-04T12:11:59.000Z
+author: "Matt Sherman"
+
 ---
 
 So, in the Apple-Google-AT&amp;T kerfuffle over Google Voice being rejected from the iPhone, I [haven’t heard](/blog/post/A-market-opportunity-for-Verizon-and-Sprint.aspx) many reasons I consider viable. [This one is](http://www.eweek.com/c/a/Mobile-and-Wireless/Apples-Rejection-of-Google-Voice-Points-to-Just-One-Thing-189443/):

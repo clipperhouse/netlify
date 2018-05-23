@@ -1,6 +1,8 @@
 ---
 title: "Solving the n+1 problem in Linq to SQL, using projection"
 date: 2009-10-12T16:38:24.000Z
+author: "Matt Sherman"
+
 ---
 
 Rick Strahl has a nice solution for [mitigating the n+1 problem](http://west-wind.com/weblog/posts/38838.aspx) in Linq to SQL. The n+1 problem is a [situation](http://www.pbell.com/index.cfm/2006/9/17/Understanding-the-n1-query-problem) where, as you iterate over a set of query results in a list view, one or more additional database queries are fired for each row in the list. Since database calls are relatively expensive, you want to keep these to a minimum.

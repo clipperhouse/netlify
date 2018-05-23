@@ -1,6 +1,8 @@
 ---
 title: "Lore"
 date: 2016-03-10T16:39:52.000Z
+author: "Matt Sherman"
+
 ---
 
 Code has a user experience. Our methods have a UX. Our data models have a UX.

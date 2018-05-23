@@ -1,6 +1,8 @@
 ---
 title: "Hack for viewing WSJ stories"
 date: 2011-11-04T15:08:34.000Z
+author: "Matt Sherman"
+
 ---
 
 The Wall Street Journal restricts access to some stories — as when it will show you the first paragraph or two as a “Subscribe Content Preview”.

@@ -1,6 +1,8 @@
 ---
 title: "Imagining version control for APIs"
 date: 2015-12-21T00:49:04.000Z
+author: "Matt Sherman"
+
 ---
 
 Versioning is, right now, merely a human label. We have helpful conventions like [semver](http://semver.org/), but one still relies on human judgment as to the definition of a “notable” change.

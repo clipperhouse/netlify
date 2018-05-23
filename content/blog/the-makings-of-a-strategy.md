@@ -1,6 +1,8 @@
 ---
 title: "The makings of a strategy"
 date: 2018-05-02T14:31:10.280Z
+author: "Matt Sherman"
+
 ---
 
 A product process is typically something like Strategy → Discovery → Specification → Build → Delivery.

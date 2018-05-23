@@ -1,6 +1,8 @@
 ---
 title: "Sherman’s law of prior knowledge, or, predicting the past"
 date: 2010-07-15T17:31:00.000Z
+author: "Matt Sherman"
+
 ---
 
 #### “When a disaster happens, large or small, there is a 100% chance that a headline will be written claiming ignored warnings.”

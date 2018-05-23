@@ -1,6 +1,8 @@
 ---
 title: "Please don’t write “efficient” CSS"
 date: 2010-05-31T06:34:00.000Z
+author: "Matt Sherman"
+
 ---
 
 Contra [many](http://css-tricks.com/efficiently-rendering-css/) [smart](http://developer.mozilla.org/en/Writing_Efficient_CSS) [people](http://code.google.com/speed/page-speed/docs/rendering.html), I am going to make a contrarian request: **please do not attempt to optimize your CSS for performance**. Instead, please optimize for correctness, specificity and maintainability.

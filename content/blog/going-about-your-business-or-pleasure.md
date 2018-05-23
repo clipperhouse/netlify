@@ -1,6 +1,8 @@
 ---
 title: "Going about your business, or pleasure"
 date: 2011-06-30T23:50:08.000Z
+author: "Matt Sherman"
+
 ---
 
 I haven’t tried Google+ (pronounced _ploo_, the French way), but I note that there hasn’t been the dismissive pile-on that greeted Buzz and Wave. My meta-analysis is that they might be on to something.

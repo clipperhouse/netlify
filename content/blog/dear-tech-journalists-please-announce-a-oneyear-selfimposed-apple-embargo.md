@@ -1,6 +1,8 @@
 ---
 title: "Dear tech journalists: please announce a one-year, self-imposed Apple embargo"
 date: 2010-04-26T14:14:36.000Z
+author: "Matt Sherman"
+
 ---
 
 San Mateo county police, presumably at the bidding of Apple, [broke open](http://www.businessinsider.com/cops-bust-into-gizmodo-editors-home-and-seize-computers-documents-in-iphone-probe-2010-4) the front the door of the home of the editor of a technology blog and seized his property. This is in relation to Gizmodo’s revelation of what is presumed to be the next iPhone.

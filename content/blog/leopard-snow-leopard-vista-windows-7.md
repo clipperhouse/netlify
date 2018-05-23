@@ -1,6 +1,8 @@
 ---
 title: "Leopard : Snow Leopard :: Vista : Windows 7"
 date: 2009-06-08T19:22:00.000Z
+author: "Matt Sherman"
+
 ---
 
 I’m excited about the new announcements from Apple today. Can’t wait to update my iPhone to the 3.0 OS and use the bitchen ZipCar app.

@@ -1,6 +1,8 @@
 ---
 title: "Killer app for the Zune HD: Tivo for radio"
 date: 2009-08-10T16:34:00.000Z
+author: "Matt Sherman"
+
 ---
 
 The [upcoming Zune HD](http://www.engadget.com/2009/08/10/zune-hd-hits-fcc-in-prolific-photo-shoot-16gb-and-32gb-capaciti/) sounds pretty nice. I use my iPhone less as a recorded music device and more like a radio. I listen to podcasts or Pandora. Honestly, in the age of [subscription media](/blog/post/Subscription-media-consolidation-gets-started.aspx) I have no interest in buying-and-syncing music.

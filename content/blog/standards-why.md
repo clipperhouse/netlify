@@ -1,6 +1,8 @@
 ---
 title: "Standards: why?"
 date: 2010-04-29T17:46:30.000Z
+author: "Matt Sherman"
+
 ---
 
 There has been some fun stuff today following Steve Jobs [missive](http://www.apple.com/hotnews/thoughts-on-flash/) on Flash and standards. [Joe Hewitt](http://twitter.com/joehewitt) (former Facebook and Mozilla dev and rock star):

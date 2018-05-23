@@ -1,6 +1,8 @@
 ---
 title: "Programmers and “productivity”"
 date: 2009-12-25T21:58:00.000Z
+author: "Matt Sherman"
+
 ---
 
 There have been some interesting posts lately [asking](http://www.marginalrevolution.com/marginalrevolution/2009/12/what-does-programmer-productivity-look-like.html) the question, “if some programmers are 10 times as productive as others, why aren’t they paid 10 times as much?”. It’s a good question, though I don’t think the recent posts quite get to the heart of it.

@@ -1,6 +1,8 @@
 ---
 title: "Google’s China move: don’t be played"
 date: 2010-01-12T21:30:00.000Z
+author: "Matt Sherman"
+
 ---
 
 Hat tip to Sarah Lacy [for laying it out](http://www.techcrunch.com/2010/01/12/google%E2%80%99s-china-stance-more-about-business-than-thwarting-evil/) so well:

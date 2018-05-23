@@ -1,6 +1,8 @@
 ---
 title: "Don’t confuse syntax with reasoning"
 date: 2010-03-14T21:21:00.000Z
+author: "Matt Sherman"
+
 ---
 
 This article asks if [programming is the new literacy](http://www.edutopia.org/literacy-computer-programming):

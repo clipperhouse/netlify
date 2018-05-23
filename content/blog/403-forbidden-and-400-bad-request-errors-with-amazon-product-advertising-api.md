@@ -1,6 +1,8 @@
 ---
 title: "403 Forbidden (and 400 Bad Request) errors with Amazon Product Advertising API"
 date: 2009-08-01T16:05:23.000Z
+author: "Matt Sherman"
+
 ---
 
 I recently experienced an issue using the Amazon Product Advertising API (formerly the Amazon Associates Web Service). I was getting a “403 Forbidden” error for what seemed like a normal request.

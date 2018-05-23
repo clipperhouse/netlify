@@ -1,6 +1,8 @@
 ---
 title: "OCD is id, high standards are ego"
 date: 2013-06-16T18:17:10.000Z
+author: "Matt Sherman"
+
 ---
 
 As programmers, we have a powerful tool that we deploy often: OCD.

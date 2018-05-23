@@ -1,6 +1,8 @@
 ---
 title: "Craigslist can help fix the NYC apartment market"
 date: 2012-02-26T17:43:14.000Z
+author: "Matt Sherman"
+
 ---
 
 As I’ve written in the past, there are several unique [inefficiencies](http://clipperhouse.com/2012/02/04/disrupting-the-nyc-rental-information-market/) to the Manhattan apartment market. Many can’t be helped in the short term, owing to an endemically tight market.

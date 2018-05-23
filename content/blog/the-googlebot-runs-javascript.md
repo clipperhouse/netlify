@@ -1,6 +1,8 @@
 ---
 title: "The Googlebot runs Javascript"
 date: 2009-07-26T18:54:00.000Z
+author: "Matt Sherman"
+
 ---
 
 I’ve had idle chats with techie friends wondering whether search engines such as Google simply index the raw HTML of your web page, or do they actually parse and “display” it as a true browser would.

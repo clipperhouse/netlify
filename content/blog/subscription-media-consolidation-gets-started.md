@@ -1,6 +1,8 @@
 ---
 title: "Subscription media consolidation gets started"
 date: 2009-07-13T12:11:00.000Z
+author: "Matt Sherman"
+
 ---
 
 There are [rumors](http://www.techcrunch.com/2009/07/13/rumor-amazon-wants-to-rent-netflix-and-never-return-it/) that Amazon is interested in buying Netflix. I like the idea, though it’s just one step toward the sort of [subscription media consolidation](/blog/post/Subscription-music-consolidation.aspx) that I outlined a while ago.

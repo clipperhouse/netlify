@@ -1,6 +1,8 @@
 ---
 title: "Philip Greenspun…"
 date: 2009-05-19T19:54:00.000Z
+author: "Matt Sherman"
+
 ---
 
 …is someone I hadn’t heard of until I read this very amusing post: [Ruby on Rails and the importance of being stupid](http://blogs.law.harvard.edu/philg/2009/05/18/ruby-on-rails-and-the-importance-of-being-stupid/). The comments are every bit as interesting as the article.

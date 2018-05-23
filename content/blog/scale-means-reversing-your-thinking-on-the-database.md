@@ -1,6 +1,8 @@
 ---
 title: "Scale means reversing your thinking on the database"
 date: 2009-09-09T19:14:00.000Z
+author: "Matt Sherman"
+
 ---
 
 There are only a small number of sites in the world that require truly tremendous scale. Usually, this is referred to as “web scale”, and describes a site where the data is **user-generated and highly dynamic**. Among the first that come to mind are Facebook, Digg, MySpace and the like.

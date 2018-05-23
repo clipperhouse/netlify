@@ -1,6 +1,8 @@
 ---
 title: "“Modern browsers” nearly doubled share in 2009; IE6 lost a third of its user base"
 date: 2010-01-01T16:49:00.000Z
+author: "Matt Sherman"
+
 ---
 
 So, we have December browser numbers, giving us complete year of browser stats for 2009 [[browsers](http://marketshare.hitslink.com/browser-market-share.aspx?qprid=1&amp;qpdt=1&amp;qpct=4&amp;qptimeframe=M&amp;qpsp=119&amp;qpnp=13) | [browser versions](http://marketshare.hitslink.com/browser-market-share.aspx?qprid=3&amp;qpdt=1&amp;qpct=4&amp;qptimeframe=M&amp;qpsp=119&amp;qpnp=13)]. Here are a few observations.

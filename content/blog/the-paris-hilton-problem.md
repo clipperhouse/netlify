@@ -1,6 +1,8 @@
 ---
 title: "The Paris Hilton problem"
 date: 2009-11-04T07:15:57.000Z
+author: "Matt Sherman"
+
 ---
 
 Joel Spolsky has an article in Inc describing the [tension between growth and quality](http://www.inc.com/magazine/20091101/does-slow-growth-equal-slow-death.html?partner=fogcreek) at his company. The issue is, if your competitor is outgrowing you, their dominance might become self-fulfilling: customers prefer a safe choice, and the safe choice is what other customers are buying. Even if your product is better, nothing attracts a crowd like a crowd.

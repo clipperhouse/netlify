@@ -1,6 +1,8 @@
 ---
 title: "Javastrict"
 date: 2009-05-22T09:45:00.000Z
+author: "Matt Sherman"
+
 ---
 
 John Resig (jQuery guy) talks about [advances in the next rev of Javascript](http://ejohn.org/blog/ecmascript-5-strict-mode-json-and-more/) (properly known as ECMAScript 5). It now has a “strict” mode, which makes Javascript look a lot more like a compiled language.

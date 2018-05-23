@@ -1,6 +1,8 @@
 ---
 title: "Everyone wants to “own the relationship”, until they actually do"
 date: 2010-01-08T22:40:00.000Z
+author: "Matt Sherman"
+
 ---
 
 It would appear that Google is [learning something about customer service](http://www.infoworld.com/d/mobilize/google-hit-nexus-one-sales-model-complaints-929):

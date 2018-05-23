@@ -1,6 +1,8 @@
 ---
 title: "Is Google building an anti-spam empire?, or, size matters"
 date: 2009-09-16T11:10:00.000Z
+author: "Matt Sherman"
+
 ---
 
 Google [acquired](http://googleblog.blogspot.com/2009/09/teaching-computers-to-read-google.html) reCAPTCHA today, a company that provides a simple means of adding a spam-limiting mechanism to your site. (I’ve implemented it several times and I recommend it to clients.)

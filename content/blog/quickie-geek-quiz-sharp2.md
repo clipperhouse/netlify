@@ -1,6 +1,8 @@
 ---
 title: "Quickie geek quiz #2"
 date: 2009-08-24T14:19:00.000Z
+author: "Matt Sherman"
+
 ---
 
 OK, I might or might not give out a prize like [last time](/blog/post/Quickie-geek-quiz-1.aspx). Times are tight, y’know. Impress me and we’ll see. The question is:

@@ -1,6 +1,8 @@
 ---
 title: "Betting on a future without IE6"
 date: 2009-11-30T20:39:00.000Z
+author: "Matt Sherman"
+
 ---
 
 My startup is developing a new web site, and every web developer must decide the extent to which they will support old technology — especially Internet Explorer 6.

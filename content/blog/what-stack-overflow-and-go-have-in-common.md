@@ -1,6 +1,8 @@
 ---
 title: "What Stack Overflow and Go have in common"
 date: 2014-03-21T14:59:42.000Z
+author: "Matt Sherman"
+
 ---
 
 I’ve been working at Stack for over three years now, and over the last six months or so I’ve been doing [playing with](http://clipperhouse.github.io/gen/) a programming language called Go. Both are highly regarded and, for many, controversial, and I’ve realized what they have in common.

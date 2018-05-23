@@ -1,6 +1,8 @@
 ---
 title: "Amazon’s core competency? Pricing."
 date: 2009-12-16T08:06:00.000Z
+author: "Matt Sherman"
+
 ---
 
 I think it’s quite brilliant that Amazon has introduced spot pricing for servers. Great way to exploit unutilized CPUs and bring prices down. Nicholas Carr explains it in [utility terms](http://www.roughtype.com/archives/2009/12/the_new_chicago.php):

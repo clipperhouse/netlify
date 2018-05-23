@@ -1,6 +1,8 @@
 ---
 title: "The Internet is not a public commons, and it is not Beetlejuice"
 date: 2010-12-24T10:34:29.000Z
+author: "Matt Sherman"
+
 ---
 
 There are some stories [making the rounds](http://www.theatlantic.com/technology/print/2010/12/wikileaks-exposes-internets-dissent-tax-not-nerd-supremacy/68397/) that “the Internet” is a public commons built on private property. This is wrong.

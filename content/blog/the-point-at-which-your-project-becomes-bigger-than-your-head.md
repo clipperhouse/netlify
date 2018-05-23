@@ -1,6 +1,8 @@
 ---
 title: "The point at which your project becomes bigger than your head"
 date: 2010-03-23T14:18:33.000Z
+author: "Matt Sherman"
+
 ---
 
 I’ve seen it argued that a measure of a good programmer is the amount of “stuff” they can keep in their head at one time.

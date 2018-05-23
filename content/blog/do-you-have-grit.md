@@ -1,6 +1,8 @@
 ---
 title: "Do you have “grit”?"
 date: 2009-08-02T17:10:00.000Z
+author: "Matt Sherman"
+
 ---
 
 A very interesting [study of the idea of “grit”](http://www.boston.com/bostonglobe/ideas/articles/2009/08/02/the_truth_about_grit/?page=full). It attempts to quantify personal characteristics than lead to success via perseverance.

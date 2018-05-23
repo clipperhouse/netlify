@@ -1,6 +1,8 @@
 ---
 title: "Embedding a struct declaration in a text template in Go"
 date: 2015-01-31T23:38:25.000Z
+author: "Matt Sherman"
+
 ---
 
 Here’s a nice little technique I came across in developing [gen](http://clipperhouse.github.io/gen).

@@ -1,6 +1,8 @@
 ---
 title: "Unsolicited iPhone suggestions #1: email"
 date: 2009-11-17T12:07:09.000Z
+author: "Matt Sherman"
+
 ---
 
 OK, so a friend is raving about his Droid phone, and it sounds quite cool. The Palm Pre has some good ideas too. Hopefully a little competition will keep Apple from being Apple — “we know what’s best for you” — too often.

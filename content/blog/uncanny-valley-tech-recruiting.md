@@ -1,6 +1,8 @@
 ---
 title: "Uncanny valley tech recruiting"
 date: 2015-01-22T19:52:41.000Z
+author: "Matt Sherman"
+
 ---
 
 As recruiter pitches show up in my inbox, it’s clear there’s a lot of “fake it til you make it” when it comes to tech terminology.

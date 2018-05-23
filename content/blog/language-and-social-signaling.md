@@ -1,6 +1,8 @@
 ---
 title: "Language and social signaling"
 date: 2013-08-24T19:23:44.000Z
+author: "Matt Sherman"
+
 ---
 
 I like language. I came to it causally at first, and more formally of late.

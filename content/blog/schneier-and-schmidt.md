@@ -1,6 +1,8 @@
 ---
 title: "Schneier and Schmidt"
 date: 2009-12-10T08:26:49.000Z
+author: "Matt Sherman"
+
 ---
 
 Schmidt: if you’re not doing anything wrong, you have no need for privacy

@@ -1,6 +1,8 @@
 ---
 title: "Holy licensing costs, MasterCard"
 date: 2009-07-14T20:38:57.000Z
+author: "Matt Sherman"
+
 ---
 
 In one commercial, you’ll see Marlon Brando, Carols Santana, Marilyn Monroe and the Ramones, with a David Bowie tune in the background:

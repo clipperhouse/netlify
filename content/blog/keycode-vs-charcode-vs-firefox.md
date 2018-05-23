@@ -1,6 +1,8 @@
 ---
 title: "keyCode vs charCode vs Firefox"
 date: 2009-11-17T15:35:50.000Z
+author: "Matt Sherman"
+
 ---
 
 I am working on a filtered HTML field. The idea is to only allow alphanumeric characters to be typed, and have all other keystrokes ignored.

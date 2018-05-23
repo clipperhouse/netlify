@@ -1,6 +1,8 @@
 ---
 title: "Subscription music consolidation"
 date: 2009-05-20T13:08:00.000Z
+author: "Matt Sherman"
+
 ---
 
 I am a fan of subscription music services. I consider music a service, not a product. I am not interested in keeping track of what I own and where it’s stored. What I want is to queue up my tracks when and where I please — I don’t need to “own” anything to achieve that.

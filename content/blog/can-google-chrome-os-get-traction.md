@@ -1,6 +1,8 @@
 ---
 title: "Can Google Chrome OS get traction?"
 date: 2009-07-07T22:40:00.000Z
+author: "Matt Sherman"
+
 ---
 
 Google has [pre-announced the “Google Chrome OS”](http://googleblog.blogspot.com/2009/07/introducing-google-chrome-os.html). It’s intended as a lightweight operating system built primarily for hosting a browser.

@@ -1,6 +1,8 @@
 ---
 title: "How Microsoft can make Visual Studio cool among the cool kids"
 date: 2011-02-01T20:34:00.000Z
+author: "Matt Sherman"
+
 ---
 
 I am quite partial to ASP.net MVC and C#. I’ve played with other platforms, esp Ruby, which have appeal as well.

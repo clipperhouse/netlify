@@ -1,6 +1,8 @@
 ---
 title: "Entrepeneurs vs bureacrats"
 date: 2008-02-15T21:06:14.000Z
+author: "Matt Sherman"
+
 ---
 
 A great story about TJ Rodgers’ personal [green revolution](http://abcnews.go.com/Business/GadgetGuide/story?id=4293368&amp;page=1).

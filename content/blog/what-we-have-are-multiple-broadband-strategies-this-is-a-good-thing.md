@@ -1,6 +1,8 @@
 ---
 title: "What we have are multiple broadband strategies; this is a good thing"
 date: 2008-02-01T20:10:46.000Z
+author: "Matt Sherman"
+
 ---
 
 Over at Ars, the normally reasonable Nate [misses the point](http://arstechnica.com/news.ars/post/20080131-we-have-a-broadband-strategy-bush-administration-says-yes.html) on a national broadband strategy. He despairs over the fact that “we”, meaning the government, have no broadband strategy.

@@ -1,6 +1,8 @@
 ---
 title: "Making good programmers feel like bad programmers"
 date: 2009-07-24T11:19:28.000Z
+author: "Matt Sherman"
+
 ---
 
 A web developer friend of mine has been doing a lot of backend-integration-type work over the last year, and has therefore has not been developing web sites. He made a point of wading back in to the web this week, so as not to get too “rusty”, in his words.

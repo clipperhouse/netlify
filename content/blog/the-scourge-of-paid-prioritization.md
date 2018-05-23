@@ -1,6 +1,8 @@
 ---
 title: "The scourge of paid prioritization"
 date: 2010-12-22T07:35:34.000Z
+author: "Matt Sherman"
+
 ---
 
 I received a pair of earmuffs today via [Amazon Prime](http://amazon.com/prime). Great service! They got to New York in just two days, all the way from a Nevada warehouse.

@@ -1,6 +1,8 @@
 ---
 title: "A new language from Google"
 date: 2009-11-10T17:34:09.000Z
+author: "Matt Sherman"
+
 ---
 
 Neat, Google has a [new language called Go](http://golang.org/doc/go_tutorial.html). Clever branding, that.

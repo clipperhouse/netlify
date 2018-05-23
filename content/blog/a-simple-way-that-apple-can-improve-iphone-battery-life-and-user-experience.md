@@ -1,6 +1,8 @@
 ---
 title: "A simple way that Apple can improve iPhone battery life and user experience"
 date: 2009-10-08T12:19:23.000Z
+author: "Matt Sherman"
+
 ---
 
 I dig my iPhone, but when I switched over from my Blackberry, I was very surprised at how many steps it takes to find out about new email.

@@ -1,6 +1,8 @@
 ---
 title: "The iPhone needs multi-tasking, stat"
 date: 2009-07-11T23:36:30.000Z
+author: "Matt Sherman"
+
 ---
 
 Joshua Topolsky offers a [very funny and insightful take](http://www.engadget.com/2009/07/10/editorial-taking-the-iphone-3gs-off-the-job-market/) on the iPhone’s very fundamental flaw: it is designed for doing one thing at a time.

@@ -1,6 +1,8 @@
 ---
 title: "Known and unknown unknowns"
 date: 2009-07-19T13:01:00.000Z
+author: "Matt Sherman"
+
 ---
 
 Jeff Atwood has an article [revealing some things](http://www.codinghorror.com/blog/archives/001288.html) that I’ve learned about software and business in general: the dangerous belief in certainty.

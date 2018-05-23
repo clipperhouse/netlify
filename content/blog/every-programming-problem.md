@@ -1,6 +1,8 @@
 ---
 title: "Every programming problem…"
 date: 2011-03-19T20:46:00.000Z
+author: "Matt Sherman"
+
 ---
 
 …can be entirely described in these four dimensions:

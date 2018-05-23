@@ -1,6 +1,8 @@
 ---
 title: "Design is information"
 date: 2011-03-23T06:48:11.000Z
+author: "Matt Sherman"
+
 ---
 
 It seems to me the companies with the greatest customer loyalty are those where design has a strong presence in the corporate culture. I don’t mean this in a touchy-feely way. I mean that customer loyalty is worth billions of dollars, and most companies see fit to leave that on the table.

@@ -1,6 +1,8 @@
 ---
 title: "Quality of life in NYC"
 date: 2011-12-30T00:36:33.000Z
+author: "Matt Sherman"
+
 ---
 
 Every time I get out of NYC, I am reminded at what we put up with to live here. It’s a known trope: we deal with sh*t that suburbanites couldn’t imagine, in exchange for being around amazing people (and companies, and $$).

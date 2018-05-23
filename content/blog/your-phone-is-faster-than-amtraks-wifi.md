@@ -1,6 +1,8 @@
 ---
 title: "Your phone is faster than Amtrak’s wifi"
 date: 2013-01-11T15:18:18.000Z
+author: "Matt Sherman"
+
 ---
 
 Amtrak is [improving](http://www.chicagotribune.com/business/breaking/la-fi-mo-amtrak-upgrades-wifi-20130110,0,2752507.story) its wifi, it claims. Fine. The problem is, it’ll never be faster than your phone’s 4G connection.

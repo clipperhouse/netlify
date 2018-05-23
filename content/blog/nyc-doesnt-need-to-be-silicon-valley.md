@@ -1,6 +1,8 @@
 ---
 title: "NYC doesn’t need to be Silicon Valley"
 date: 2014-04-28T19:04:34.000Z
+author: "Matt Sherman"
+
 ---
 
 [](https://twitter.com/clipperhouse/status/460804530989694976)

@@ -1,6 +1,8 @@
 ---
 title: "Your site doesn’t need a novel progress indicator"
 date: 2013-09-18T14:32:10.000Z
+author: "Matt Sherman"
+
 ---
 
 There’s been healthy talk about progress indicators in the age of ajax. In our will-to-design I think some things are being missed.

@@ -1,6 +1,8 @@
 ---
 title: "California says the iPhone costs $599"
 date: 2009-10-22T12:48:00.000Z
+author: "Matt Sherman"
+
 ---
 
 I recently purchased a new iPhone 3GS since my previous phone bit the dust (or pavement, more accurately). I went to order online via AT&amp;T, and was surprised to find out the tax on a $199 phone was $56, or over 25%. Wha? I went to make the same purchase at Apple’s online store, and found the same thing.

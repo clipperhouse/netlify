@@ -1,6 +1,8 @@
 ---
 title: "Quickie geek quiz #4"
 date: 2009-09-11T10:12:06.000Z
+author: "Matt Sherman"
+
 ---
 
 For fabulous prizes, or perhaps a hearty attaboy, the question is:

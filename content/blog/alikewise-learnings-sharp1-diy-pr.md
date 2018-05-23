@@ -1,6 +1,8 @@
 ---
 title: "Alikewise learnings #1: DIY PR"
 date: 2010-08-11T21:48:00.000Z
+author: "Matt Sherman"
+
 ---
 
 Thought I would write a few posts to reflect on what I’ve learned with my startup, [Alikewise](http://alikewise.com), day jobs, and NYC. This is the first.

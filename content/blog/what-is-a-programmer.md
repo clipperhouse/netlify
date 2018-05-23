@@ -1,6 +1,8 @@
 ---
 title: "What is a “programmer”?"
 date: 2009-06-14T01:33:00.000Z
+author: "Matt Sherman"
+
 ---
 
 Phil Haack has a nice exploration of [what it means to “program”](http://haacked.com/archive/2009/06/12/getting-rid-of-programmers.aspx). As long as I’ve been doing this — since the early 90’s — there has always been the promise that “programming” will go away. This usually takes the form of [visual tools](http://www.macuser.co.uk/reviews/16049/tango-31-for-filemaker.html) that offer the ability to drag-and-drop the logical chunks of your programs together.

@@ -1,6 +1,8 @@
 ---
 title: "Why is a Social Security Number considered a secret?"
 date: 2009-07-06T17:43:00.000Z
+author: "Matt Sherman"
+
 ---
 
 Identity theft boggles my mind a bit. It’s no mystery why criminal enterprises attempt it. It’s a mystery that we have systems where public information is used for security.

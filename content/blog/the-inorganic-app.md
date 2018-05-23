@@ -1,6 +1,8 @@
 ---
 title: "The inorganic app"
 date: 2012-03-12T02:04:40.000Z
+author: "Matt Sherman"
+
 ---
 
 It occurs to me, as I look at my Google+ stream for the first time in two months, the reason I never use it: it never had a chance to _grow_ on me.

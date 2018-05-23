@@ -1,6 +1,8 @@
 ---
 title: "IE8 becomes #1 browser, Chrome up, Firefox plateaus"
 date: 2010-02-01T09:24:14.000Z
+author: "Matt Sherman"
+
 ---
 
 We have January browser numbers. Firstly, we note that Internet Explorer 8 is now the [most popular browser](http://marketshare.hitslink.com/browser-market-share.aspx?qprid=3&amp;qptimeframe=M&amp;qpsp=121&amp;qpnp=13), overtaking IE6.

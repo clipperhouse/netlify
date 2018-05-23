@@ -1,6 +1,8 @@
 ---
 title: "Debugging is debugging"
 date: 2013-03-17T17:38:25.000Z
+author: "Matt Sherman"
+
 ---
 
 I use CoffeeScript [here](https://github.com/clipperhouse/classicalrad.io) and [there](https://github.com/clipperhouse/BetterBird). And JavaScript everywhere else.

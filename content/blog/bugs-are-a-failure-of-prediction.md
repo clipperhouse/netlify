@@ -1,6 +1,8 @@
 ---
 title: "Bugs are a failure of prediction"
 date: 2015-02-07T23:12:58.000Z
+author: "Matt Sherman"
+
 ---
 
 We think of bugs as flaws in code. This is incorrect, or at best, banal.

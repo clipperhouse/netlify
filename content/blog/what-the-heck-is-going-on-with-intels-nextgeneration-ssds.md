@@ -1,6 +1,8 @@
 ---
 title: "What the heck is going on with Intel’s next-generation SSDs?"
 date: 2009-09-14T17:11:00.000Z
+author: "Matt Sherman"
+
 ---
 
 Intel first [announced](http://www.intel.com/pressroom/archive/releases/20090721comp.htm) its second generation consumer solid-state drives on July 21. There were plenty of positive reviews at the time, and the price drop combined with better performance made me ready to take the plunge.

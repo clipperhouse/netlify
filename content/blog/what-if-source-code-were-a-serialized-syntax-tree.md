@@ -1,6 +1,8 @@
 ---
 title: "What if ‘source code’ were a serialized syntax tree?"
 date: 2013-04-04T02:41:46.000Z
+author: "Matt Sherman"
+
 ---
 
 At the risk of revealing my lack of a CompSci degree: what if ‘source code’ were replaced by serialized syntax trees?

@@ -1,6 +1,8 @@
 ---
 title: "The emergence of Big Data (2.0)"
 date: 2009-11-16T10:07:00.000Z
+author: "Matt Sherman"
+
 ---
 
 I’ve written previously on the idea that [data, not algorithms](http://clipperhouse.com/blog/post/Ite28099s-the-data-not-the-algorithm.aspx), will be a main differentiator for web companies moving forward. What does this mean?

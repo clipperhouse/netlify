@@ -1,6 +1,8 @@
 ---
 title: "Google Closure based on naive server-side notions?"
 date: 2009-11-12T09:05:11.000Z
+author: "Matt Sherman"
+
 ---
 
 I rely on libraries (mostly jQuery) instead of writing a lot of serious JavaScript these days. I mean, of course I am writing JavaScript but the libraries allow me to stay in “script space” — small procedure bits that are _scripts_ as opposed to applications.

@@ -1,6 +1,8 @@
 ---
 title: "The long game on metered pricing and Net Neutrality"
 date: 2008-01-28T00:52:32.000Z
+author: "Matt Sherman"
+
 ---
 
 Last week, Time-Warner announced that it is [experimenting](http://www.ipdemocracy.com/archives/002847is_consumptionbased_broadband_billing_the_answer.php) with metered Internet pricing in a couple of markets. The same week, HBO (owned by TW) announced that it will be [offering](http://www.engadget.com/2008/01/21/hbo-on-broadband-to-offer-free-downloads-live-feed/) a number of its shows free over the Internet to existing HBO cable subscribers.

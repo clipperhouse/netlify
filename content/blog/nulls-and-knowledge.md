@@ -1,6 +1,8 @@
 ---
 title: "Nulls and knowledge"
 date: 2009-05-14T18:43:00.000Z
+author: "Matt Sherman"
+
 ---
 
 Eric Lippert has a worthwhile post about [what nulls are and why we use them](http://blogs.msdn.com/ericlippert/archive/2009/05/14/null-is-not-empty.aspx). I like reading Eric because I think we think alike — computer languages are languages, with grammar and semantics.

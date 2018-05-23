@@ -1,6 +1,8 @@
 ---
 title: "The legacy ad industry is wrong about ad blockers"
 date: 2015-02-03T23:17:14.000Z
+author: "Matt Sherman"
+
 ---
 
 I was recently directed to a couple of papers on browser ad-blocking software ([here](http://downloads.pagefair.com/reports/adblocking_goes_mainstream_2014_report.pdf) and [here](http://downloads.pagefair.com/reports/the_rise_of_adblocking.pdf)). They are not so much alarmist as they are self-serving and hindered by status quo bias.

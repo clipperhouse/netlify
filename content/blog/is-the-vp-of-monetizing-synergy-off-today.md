@@ -1,6 +1,8 @@
 ---
 title: "Is the VP of Monetizing Synergy off today?"
 date: 2009-07-17T12:44:00.000Z
+author: "Matt Sherman"
+
 ---
 
 So, I’m a bit surprised that the upcoming [Web version](http://gizmodo.com/5070055/microsoft-bringing-office-suite-online) of Office isn’t based on Silverlight (Microsoft’s “rich internet application” framework). Instead, it appears that it will be browser-native, which is to say, [written in Javascript](/blog/post/Javascript-is-now-strategic-for-Microsoft.aspx).

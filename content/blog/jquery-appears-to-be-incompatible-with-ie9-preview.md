@@ -1,6 +1,8 @@
 ---
 title: "jQuery appears to be incompatible with IE9 preview"
 date: 2010-03-16T13:01:19.000Z
+author: "Matt Sherman"
+
 ---
 
 It would appear that jQuery (1.4.2) is not compatible with the new [IE9 preview](http://ie.microsoft.com/testdrive/):

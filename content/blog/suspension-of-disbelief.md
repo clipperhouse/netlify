@@ -1,6 +1,8 @@
 ---
 title: "Suspension of disbelief"
 date: 2012-02-29T16:52:27.000Z
+author: "Matt Sherman"
+
 ---
 
 You watch a movie. In order to get something from it, you have to enter the world that it presents. You must suspend disbelief.

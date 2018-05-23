@@ -1,6 +1,8 @@
 ---
 title: "The good might be the enemy of the perfect with software patents"
 date: 2012-08-02T02:44:34.000Z
+author: "Matt Sherman"
+
 ---
 
 I have a few concerns, relating to unintended consequences, with a proposed [loser-pays bill](http://arstechnica.com/tech-policy/2012/08/bill-would-force-patent-trolls-to-pay-defendants-legal-bills/) on software patents.

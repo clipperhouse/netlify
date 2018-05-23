@@ -1,6 +1,8 @@
 ---
 title: "De facto immutability"
 date: 2014-06-05T23:23:47.000Z
+author: "Matt Sherman"
+
 ---
 
 _Another in a series of posts wherein I spitball about things that computer scientists already know, but have only just occurred to me._

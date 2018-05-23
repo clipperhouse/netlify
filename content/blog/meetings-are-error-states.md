@@ -1,6 +1,8 @@
 ---
 title: "Meetings are error states"
 date: 2009-07-25T23:35:00.000Z
+author: "Matt Sherman"
+
 ---
 
 Paul Graham explores the difference between [the maker’s schedule and the manager’s schedule](http://www.paulgraham.com/makersschedule.html). People that know me have heard me say that “meetings are the opposite of work”. Paul offers empathy:

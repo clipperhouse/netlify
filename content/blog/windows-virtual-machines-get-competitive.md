@@ -1,6 +1,8 @@
 ---
 title: "Windows virtual machines get competitive"
 date: 2009-11-11T16:19:00.000Z
+author: "Matt Sherman"
+
 ---
 
 Rackspace has [announced](http://www.rackspacecloud.com/blog/2009/11/11/cloud-servers-for-windows-beta-coming-in-early-2010/) that they are getting into the Windows virtual machine bizness. I’ve been waiting for this market to heat up, and have competition drive down some prices.

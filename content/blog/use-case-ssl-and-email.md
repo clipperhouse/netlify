@@ -1,6 +1,8 @@
 ---
 title: "Use case: SSL and email"
 date: 2009-06-17T14:04:00.000Z
+author: "Matt Sherman"
+
 ---
 
 Interesting article in the NYT about [using SSL for email](http://bits.blogs.nytimes.com/2009/06/16/gmail-to-get-more-protection-from-snoops/). It’s an option for Gmail which I turned on some time ago.

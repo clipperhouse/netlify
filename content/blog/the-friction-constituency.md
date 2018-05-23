@@ -1,6 +1,8 @@
 ---
 title: "The friction constituency"
 date: 2012-01-18T03:35:46.000Z
+author: "Matt Sherman"
+
 ---
 
 Having learned that both the Chamber of Commerce and the AFL-CIO support SOPA, it’s becoming clearer to me just how much of our economy is based on extracting rents from friction.

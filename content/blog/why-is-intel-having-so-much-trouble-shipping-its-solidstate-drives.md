@@ -1,6 +1,8 @@
 ---
 title: "Why is Intel having so much trouble shipping its solid-state drives?"
 date: 2009-11-29T09:27:41.000Z
+author: "Matt Sherman"
+
 ---
 
 I know I am getting repetitive but I have to ask again — why is Intel having so much trouble shipping its second-generation solid-state drives (the X25-M G2)?

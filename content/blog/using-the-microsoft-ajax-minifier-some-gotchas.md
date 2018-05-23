@@ -1,6 +1,8 @@
 ---
 title: "Using the Microsoft Ajax Minifier, some gotcha’s"
 date: 2009-11-20T15:08:00.000Z
+author: "Matt Sherman"
+
 ---
 
 I am playing with the [Microsoft Ajax Minifier](http://aspnet.codeplex.com/Release/ProjectReleases.aspx?ReleaseId=35893), which removes whitespace from your Javascripts for quicker download. Stephen Walther has a [nice how-to](http://stephenwalther.com/blog/archive/2009/10/16/using-the-new-microsoft-ajax-minifier.aspx).

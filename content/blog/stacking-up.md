@@ -1,6 +1,8 @@
 ---
 title: "Stacking up"
 date: 2010-06-06T17:05:20.000Z
+author: "Matt Sherman"
+
 ---
 
 I am happy to announce that I’ve taken a job over at [Stack Overflow](http://stackoverflow.com/).

@@ -1,6 +1,8 @@
 ---
 title: "C# should be truthy-y"
 date: 2012-03-04T05:41:45.000Z
+author: "Matt Sherman"
+
 ---
 
 While “truthy” values in JavaScript can cause no small amount of heartache, one must admit they help readability. For objects anyway, it’s very nice to say if (object) {…} and get on with business. If the object is null or undefined, “false” strikes me as a perfectly legitimate behavior in that context.

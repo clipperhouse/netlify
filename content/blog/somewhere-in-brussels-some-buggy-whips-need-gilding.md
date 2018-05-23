@@ -1,6 +1,8 @@
 ---
 title: "Somewhere in Brussels, some buggy whips need gilding"
 date: 2008-02-28T22:27:54.000Z
+author: "Matt Sherman"
+
 ---
 
 One might think we live in feudal times, what with an unelected bureaucrat being able to [tax companies arbitrarily and retroactively](http://www.techcrunch.com/2008/02/28/microsoft-the-eus-atm-machine/). However, since it’s an “anti-trust” issue, the European Commission gets around calling it a tax or tariff, and thus can charge whatever the Commission decides. There is no rate schedule to adhere to, no [trade agreements](http://www.wto.org/english/thewto_e/whatis_e/tif_e/fact5_e.htm) to abide. Didn’t we get past this kind of thing hundreds of years ago?

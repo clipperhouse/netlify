@@ -1,6 +1,8 @@
 ---
 title: "Avoiding “magic strings” in jQuery, C# and ASP.net MVC"
 date: 2010-09-07T16:44:00.000Z
+author: "Matt Sherman"
+
 ---
 
 The longer I program, the less tolerance I have for “magic strings”. You might be familiar with them — they are strings that have programmatic meaning but are trapped between quotes in another language.

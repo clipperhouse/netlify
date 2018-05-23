@@ -1,6 +1,8 @@
 ---
 title: "Why is Apple treading water with the Apple TV? Because the real product is in the works."
 date: 2009-10-30T18:23:00.000Z
+author: "Matt Sherman"
+
 ---
 
 Apple has come out with version 3.0 of its Apple TV product, and it appears to be little more than a visual refresh with a couple of nice bits of iTunes integration. It still doesn’t do what we expect of a “set-top box” or “media center”: things like recording live TV.

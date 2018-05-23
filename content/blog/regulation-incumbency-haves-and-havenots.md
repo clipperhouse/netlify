@@ -1,6 +1,8 @@
 ---
 title: "Regulation, incumbency, haves and have-nots"
 date: 2008-02-14T20:27:35.000Z
+author: "Matt Sherman"
+
 ---
 
 When we talk about regulations, in housing or agriculture or the Internet, it is usually sold as being intended to protect some “little guy” — be it the “family farm” or the [file sharer](http://blogs.zdnet.com/Ou/?p=1001). The insight that is most lacking is that regulations often have the opposite effect, which is to weaken consumers, the poor, or the upstart competitor.

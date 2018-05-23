@@ -1,6 +1,8 @@
 ---
 title: "Speeding up localhost in Visual Studio"
 date: 2009-12-16T11:02:57.000Z
+author: "Matt Sherman"
+
 ---
 
 I recently put a new [SSD](http://www.amazon.com/gp/product/B002IJA1EG?ie=UTF8&amp;tag=clipperhouse-20&amp;linkCode=as2&amp;camp=1789&amp;creative=390957&amp;creativeASIN=B002IJA1EG) in my system (yay!) and did a clean install of Windows 7, Visual Studio, etc. I found that when viewing my web app on localhost (using the Cassini web server built into VS), it was very slow. This was true across browsers.

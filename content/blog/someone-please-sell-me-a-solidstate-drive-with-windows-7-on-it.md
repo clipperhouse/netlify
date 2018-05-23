@@ -1,6 +1,8 @@
 ---
 title: "Someone please sell me a solid-state drive with Windows 7 on it"
 date: 2009-07-29T10:35:57.000Z
+author: "Matt Sherman"
+
 ---
 
 The thing that computers are good at is brainless repetition. They are perfect when you’ve figured out a logical problem and need to exploit it over and over.

@@ -1,6 +1,8 @@
 ---
 title: "Adobe: call it Flash 11 already"
 date: 2010-04-29T19:06:57.000Z
+author: "Matt Sherman"
+
 ---
 
 I feel like I’ve been hearing about Flash 10.1 forever. The earliest public announcement I can [find](http://gizmodo.com/5374115/flash-101-full-flash-for-everyone-but-iphone-actually-playable-hd-vids) is October 5 of last year. That’s over 6 months of development for a point release.

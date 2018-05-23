@@ -1,6 +1,8 @@
 ---
 title: "Does this metric pass the smell test?"
 date: 2009-10-23T00:15:15.000Z
+author: "Matt Sherman"
+
 ---
 
 Via Silicon Alley Insider, an analysis by a company called Drake Direct claims that [1 in 4 pageviews](http://www.businessinsider.com/henry-blodget-facebook-accounts-for-1-in-4-internet-pageviews-2009-10) in the US goes to Facebook.

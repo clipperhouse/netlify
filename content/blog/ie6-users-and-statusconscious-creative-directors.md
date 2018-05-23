@@ -1,6 +1,8 @@
 ---
 title: "IE6 users and status-conscious creative directors"
 date: 2009-10-23T01:48:12.000Z
+author: "Matt Sherman"
+
 ---
 
 A friend directed me to [this site](http://www.newtoyork.com/) , belonging to a creative director at [Squarespace](http://www.squarespace.com/), and containing the following message for IE6 users:

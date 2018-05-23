@@ -1,6 +1,8 @@
 ---
 title: "Fasctimidating"
 date: 2013-06-02T17:36:37.000Z
+author: "Matt Sherman"
+
 ---
 
 Chris Baus [laments](http://baus.net/you-cant-impress-developers/) that developers are rarely impressed by other developers. It’s often true. But _why_ are developers hard to (outwardly) impress?

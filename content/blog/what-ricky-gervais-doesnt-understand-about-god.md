@@ -1,6 +1,8 @@
 ---
 title: "What Ricky Gervais doesn’t understand about God"
 date: 2010-12-19T20:45:00.000Z
+author: "Matt Sherman"
+
 ---
 
 I am not a religious person. I also happen to believe that religious people bear the brunt of more everyday bigotry than most groups.

@@ -1,6 +1,8 @@
 ---
 title: "Will Apple fix Boot Camp for Windows?"
 date: 2009-10-22T15:09:00.000Z
+author: "Matt Sherman"
+
 ---
 
 I wrote earlier about how Windows running on Mac hardware via Boot Camp appears to have [serious battery-life issues](/blog/post/Is-proprietary-Mac-hardware-killing-Windows-battery-life.aspx) — getting only around 2 hours of life on a machine that should offer at least twice that.

@@ -1,6 +1,8 @@
 ---
 title: "John Resig jQuery talk"
 date: 2009-12-17T09:35:49.000Z
+author: "Matt Sherman"
+
 ---
 
 Very interesting (if-you’re-a-nerd) talk by John Resig. It’s real geek stuff but the takeaways are:

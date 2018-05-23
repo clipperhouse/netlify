@@ -1,6 +1,8 @@
 ---
 title: "Displaying the Subversion revision number in your web application"
 date: 2009-05-26T22:28:00.000Z
+author: "Matt Sherman"
+
 ---
 
 I found a nice technique for automatically displaying the SVN revision number in the footer of a web site. It is based in [CruiseControl.Net](http://ccnet.thoughtworks.com/).

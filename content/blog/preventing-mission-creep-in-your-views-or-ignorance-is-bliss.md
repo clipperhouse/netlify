@@ -1,6 +1,8 @@
 ---
 title: "Preventing mission creep in your Views, or, ignorance is bliss"
 date: 2009-12-19T13:48:00.000Z
+author: "Matt Sherman"
+
 ---
 
 An important concept in MVC is that Views are meant to be “dumb” — and by that I mean, your View should only care about outputting a user interface, and should know very little about business logic.

@@ -1,6 +1,8 @@
 ---
 title: "Tegra notebooks wanted"
 date: 2009-12-16T12:02:00.000Z
+author: "Matt Sherman"
+
 ---
 
 I would love to see notebooks based on Nvidia’s insane Tegra chip:

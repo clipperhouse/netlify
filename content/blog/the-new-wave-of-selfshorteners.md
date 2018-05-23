@@ -1,6 +1,8 @@
 ---
 title: "The new wave of self-shorteners"
 date: 2009-07-07T21:59:18.000Z
+author: "Matt Sherman"
+
 ---
 
 So, my previous bit on the attraction of [shortening one’s own URLs](/blog/post/URL-shortener-for-ASPnet.aspx) seems to have some traction. Obviously it wasn’t original to me, but I see that sites like Ars Technica and Flickr have begun doing their own URL shortening. Check it out:

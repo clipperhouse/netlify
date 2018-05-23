@@ -1,6 +1,8 @@
 ---
 title: "Epistemology and human factors: deal with ‘em"
 date: 2013-06-20T22:05:06.000Z
+author: "Matt Sherman"
+
 ---
 
 [This study](http://www.nytimes.com/2013/06/20/business/in-head-hunting-big-data-may-not-be-such-a-big-deal.html?pagewanted=all) that Google conducted to find predictors for success in their hiring process is very interesting. Among the things that are not predictive of success: the candidate’s GPA, their ability to solve brain-teasers, and which manager did the interview.

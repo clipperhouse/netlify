@@ -1,6 +1,8 @@
 ---
 title: "The DOM is a data source, query it wisely"
 date: 2009-06-02T19:05:00.000Z
+author: "Matt Sherman"
+
 ---
 
 Nice set of performance tips for jQuery selectors: [http://www.artzstudio.com/2009/04/jquery-performance-rules/](http://www.artzstudio.com/2009/04/jquery-performance-rules/)

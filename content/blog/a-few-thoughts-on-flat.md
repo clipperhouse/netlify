@@ -1,6 +1,8 @@
 ---
 title: "A few thoughts on flat"
 date: 2013-06-12T19:27:18.000Z
+author: "Matt Sherman"
+
 ---
 
 I played with iOS7 today for a bit and discussed the flat design with a couple of Stack’ers. I also read Matt Gemmell’s [review](http://mattgemmell.com/2013/06/12/ios-7/), and John Gruber’s take on [flatness](http://daringfireball.net/2013/06/wwdc_2013_expectations).

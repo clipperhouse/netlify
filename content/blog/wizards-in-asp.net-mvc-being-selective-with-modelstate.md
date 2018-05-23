@@ -1,6 +1,8 @@
 ---
 title: "Wizards in ASP.Net MVC: being selective with ModelState"
 date: 2009-11-23T21:22:50.000Z
+author: "Matt Sherman"
+
 ---
 
 So, there are many ways to skin the cat we called form validation. With a wizard-style application, it requires some nuance.

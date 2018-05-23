@@ -1,6 +1,8 @@
 ---
 title: "Ad blocking, like piracy, is a market phenomenon"
 date: 2013-01-07T04:07:36.000Z
+author: "Matt Sherman"
+
 ---
 
 A French ISP has started [blocking ads](http://www.nytimes.com/2013/01/07/technology/ad-blocking-raises-alarm-among-firms-like-google.html) at the router level for its customers, enabled by default. Advertisers are, not surprisingly, upset.

@@ -1,6 +1,8 @@
 ---
 title: "When Apple aligns with a carrier, act II"
 date: 2009-10-07T20:07:00.000Z
+author: "Matt Sherman"
+
 ---
 
 Apple is not really a partnering company. They make their own hardware and software — and services like .Mac Mobile Me — to ensure a certain user experience. This is their offer, and it works.

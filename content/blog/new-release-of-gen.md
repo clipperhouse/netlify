@@ -1,6 +1,8 @@
 ---
 title: "New release of gen"
 date: 2014-01-26T17:33:53.000Z
+author: "Matt Sherman"
+
 ---
 
 I’ve a new release of gen, the generics-like tool for Go. It includes API changes so I suggest reading the [changelog](http://clipperhouse.github.io/gen/#Changelog). Highlights:

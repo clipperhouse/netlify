@@ -1,6 +1,8 @@
 ---
 title: "Conservative and liberal"
 date: 2012-04-01T22:32:18.000Z
+author: "Matt Sherman"
+
 ---
 
 The ideas of conservative and liberal have become very confused, and in many cases exactly backwards. Let’s try to understand them — as adjectives instead of nouns — and strip them of some connotations.

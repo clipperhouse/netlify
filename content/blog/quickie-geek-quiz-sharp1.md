@@ -1,6 +1,8 @@
 ---
 title: "Quickie geek quiz #1"
 date: 2009-08-10T15:28:00.000Z
+author: "Matt Sherman"
+
 ---
 
 OK, $10 on iTunes or Amazon for the first person to answer this:

@@ -1,6 +1,8 @@
 ---
 title: "A failure of empathy"
 date: 2012-03-07T00:10:06.000Z
+author: "Matt Sherman"
+
 ---
 
 Consider for a moment the logic of the leading paragraph of [this article](http://opinionator.blogs.nytimes.com/2012/03/05/healthy-labels-not-stealthy-labels/?hp):

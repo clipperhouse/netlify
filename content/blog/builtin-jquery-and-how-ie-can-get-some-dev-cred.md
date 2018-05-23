@@ -1,6 +1,8 @@
 ---
 title: "“Built-in” jQuery (and how IE can get some dev cred)"
 date: 2009-06-15T13:27:00.000Z
+author: "Matt Sherman"
+
 ---
 
 I’ve mentioned in the past that [jQuery is an API](http://clipperhouse.com/blog/post/Hammering-the-DOM.aspx) as much as it is a set of functions. As syntaxes go, it’s very nice — consistent, logical, readable.

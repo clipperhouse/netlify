@@ -1,6 +1,8 @@
 ---
 title: "Is Wolfram Alpha too clever by half?"
 date: 2009-07-11T23:05:00.000Z
+author: "Matt Sherman"
+
 ---
 
 An excellent and [exhaustive survey of Wolfram Alpha](http://unqualified-reservations.blogspot.com/2009/07/wolfram-alpha-and-hubristic-user.html) by Mencius Moldbug. I think he thinks like I do: an engineer that looks at user interface analytically.

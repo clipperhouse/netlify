@@ -1,6 +1,8 @@
 ---
 title: "Logic as data, and a case where strong typing impeded learning"
 date: 2009-12-06T11:11:17.000Z
+author: "Matt Sherman"
+
 ---
 
 These days, I am doing a lot of Javascript, or more accurately, a lot of jQuery. A concept I have gotten comfortable with is the idea of passing logic as data.

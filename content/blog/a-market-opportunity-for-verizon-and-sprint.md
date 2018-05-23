@@ -1,6 +1,8 @@
 ---
 title: "A market opportunity for Verizon and Sprint"
 date: 2009-08-01T17:31:00.000Z
+author: "Matt Sherman"
+
 ---
 
 In the current [FCC-involved kerfuffle](http://www.techcrunch.com/2009/08/01/why-the-fcc-wants-to-smash-open-the-iphone/) over why Apple or AT&amp;T blocked Google Voice on the iPhone, I see opportunity.

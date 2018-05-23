@@ -1,6 +1,8 @@
 ---
 title: "{less} CSS for .Net"
 date: 2009-12-04T15:47:00.000Z
+author: "Matt Sherman"
+
 ---
 
 A while back I [asked](/blog/post/Imagine-CSS-evolved-as-a-programming-language.aspx) whether some enterprising-person-who-is-smarter-than-I would offer a version of the [{less} CSS](http://lesscss.org/) framework for .Net. Looks like [they have](http://www.dotlesscss.com/), and they did it as I’d hoped: an HttpHandler mapped to the .less extension. So your .less files are compiled on the fly and served to the browser as plain ol’ CSS.

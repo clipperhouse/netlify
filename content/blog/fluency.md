@@ -1,6 +1,8 @@
 ---
 title: "Fluency"
 date: 2012-06-09T18:18:23.000Z
+author: "Matt Sherman"
+
 ---
 
 At my ripe old age one might expect me to give up programming and focus more on management. Which I do, if informally. But I have never seen the need to put aside programming in order to manage.

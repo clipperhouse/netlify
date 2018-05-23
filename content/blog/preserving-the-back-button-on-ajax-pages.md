@@ -1,6 +1,8 @@
 ---
 title: "Preserving the back button on Ajax pages"
 date: 2010-01-19T09:35:22.000Z
+author: "Matt Sherman"
+
 ---
 
 So, I’ve been going a little Ajax crazy lately. I am using a [progressive enhancement](http://www.alistapart.com/articles/understandingprogressiveenhancement/) approach — make everything work solidly without Javascript, then drizzle on some Ajaxy goodness as refinement.

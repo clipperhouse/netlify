@@ -1,6 +1,8 @@
 ---
 title: "Time well spent"
 date: 2016-04-07T15:54:41.000Z
+author: "Matt Sherman"
+
 ---
 
 Critical to developer and company success is the idea of **time well spent**. Optimistically, the company’s and the dev’s incentives are aligned in this regard.

@@ -1,6 +1,8 @@
 ---
 title: "Is Fred Wilson arguing for “Content Neutrality”?"
 date: 2010-10-17T14:36:00.000Z
+author: "Matt Sherman"
+
 ---
 
 Fred Wilson, whom I admire, [comments](http://www.avc.com/a_vc/2010/10/a-net-neutrality-case-study.html) on a recent dust-up where a content provider blocked their programming from customers of a specific ISP.

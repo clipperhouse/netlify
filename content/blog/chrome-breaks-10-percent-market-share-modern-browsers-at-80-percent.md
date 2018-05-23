@@ -1,6 +1,8 @@
 ---
 title: "Chrome breaks 10% market share; modern browsers at 80%"
 date: 2011-02-01T11:19:00.000Z
+author: "Matt Sherman"
+
 ---
 
 The headline say most of it. Google’s Chrome browser [popped up](http://marketshare.hitslink.com/browser-market-share.aspx?qprid=1) over 10% market share for January. Modern browsers* are [creeping up](http://marketshare.hitslink.com/browser-market-share.aspx?qprid=2) to around 80% market share, which means the user experience of the web is moving forward.

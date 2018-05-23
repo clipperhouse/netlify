@@ -1,6 +1,8 @@
 ---
 title: "Network, network, network, network or network?"
 date: 2009-06-25T20:53:00.000Z
+author: "Matt Sherman"
+
 ---
 
 I love how Vista offers me so many choices in getting on the interwebs. I can:

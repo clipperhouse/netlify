@@ -1,6 +1,8 @@
 ---
 title: "The long game on metered pricing: free shipping"
 date: 2008-06-03T17:17:49.000Z
+author: "Matt Sherman"
+
 ---
 
 Time-Warner cable has begun to roll out its metered pricing plan in Beaumont, Texas. Alley Insider says it [won’t work](http://www.alleyinsider.com/2008/6/why_time_warner_cables_pay_per_use_internet_experiment_will_fail), and Mike Arrington declares it a [moral outrage](http://www.techcrunch.com/2008/06/02/going-medieval-time-warner-begins-metered-bandwidth-testing/). Both are missing the “[third way](/2008/01/28/the-long-game-on-metered-pricing-and-net-neutrality/)” which I wrote about earlier this year.

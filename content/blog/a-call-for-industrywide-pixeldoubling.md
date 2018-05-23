@@ -1,6 +1,8 @@
 ---
 title: "A call for industry-wide pixel-doubling"
 date: 2011-01-18T16:31:28.000Z
+author: "Matt Sherman"
+
 ---
 
 Computer screens have not changed much over the last 20 years, relative to other technologies like processing power and bandwidth. Yes, panels are better in many ways in terms of color accuracy and “resolution”. But most applications are designed around an assumption of 72 or 96 pixels per inch.

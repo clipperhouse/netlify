@@ -1,6 +1,8 @@
 ---
 title: "Tip: random sort order in C#"
 date: 2010-04-28T09:37:00.000Z
+author: "Matt Sherman"
+
 ---
 
 I wanted to randomize the display of a List on [my site](http://alikewise.com/) — meaning I would retrieve (say) 20 records, but display only 5, chosen at random. I was imagining a loop that generates a bunch of random indexes, which I use to individually pull elements from the list. Yuck.

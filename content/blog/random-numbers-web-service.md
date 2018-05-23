@@ -1,6 +1,8 @@
 ---
 title: "Random numbers web service"
 date: 2009-08-05T21:46:00.000Z
+author: "Matt Sherman"
+
 ---
 
 Generating numbers that are truly random is quite difficult. Every random number needs to be based on some starting place — the time of day in milliseconds, perhaps. As such it’s actually a predictable number; it’s [deterministic](http://en.wikipedia.org/wiki/Determinism), even if a regular human won’t realistically guess it.

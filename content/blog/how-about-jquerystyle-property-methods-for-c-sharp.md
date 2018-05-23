@@ -1,6 +1,8 @@
 ---
 title: "How about jQuery-style “property methods” for C#?"
 date: 2010-02-23T21:56:00.000Z
+author: "Matt Sherman"
+
 ---
 
 Here’s an idiom that I think would be useful in C#: “property methods” in the style of jQuery.

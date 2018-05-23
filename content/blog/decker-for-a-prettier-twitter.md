@@ -1,6 +1,8 @@
 ---
 title: "Decker, for a prettier Twitter"
 date: 2016-03-10T20:02:56.000Z
+author: "Matt Sherman"
+
 ---
 
 I made a Chrome extension which makes Twitter.com’s UX more tolerable, called [decker](https://chrome.google.com/webstore/detail/decker/jiooocaggnohgjapeljmhoeljemddapj). It:

@@ -1,6 +1,8 @@
 ---
 title: "Disrupting the NYC rental information market"
 date: 2012-02-04T15:44:41.000Z
+author: "Matt Sherman"
+
 ---
 
 The Manhattan apartment rental market is unique, as anyone who has experienced it will tell you. The very low vacancy rate (high demand) allows for behavior that other markets don’t bear.

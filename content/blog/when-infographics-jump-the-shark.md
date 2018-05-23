@@ -1,6 +1,8 @@
 ---
 title: "When “infographics” jump the shark"
 date: 2010-07-10T09:22:00.000Z
+author: "Matt Sherman"
+
 ---
 
 Mashable offers an “infographic” describing Google’s [history in social networking](http://mashable.com/2010/07/09/google-social-media-attempts/). And it’s pretty and all well and good, except that the **graphic adds no information**.

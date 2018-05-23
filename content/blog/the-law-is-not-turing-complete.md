@@ -1,6 +1,8 @@
 ---
 title: "The law is not Turing complete"
 date: 2011-07-17T20:23:10.000Z
+author: "Matt Sherman"
+
 ---
 
 In recent comments on Hacker News, I suggested, with some snark, that the definition of net neutrality is slippery and ad-hoc, and therefore exploitable. I was promptly voted down.

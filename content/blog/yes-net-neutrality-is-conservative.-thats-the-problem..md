@@ -1,6 +1,8 @@
 ---
 title: "Yes, net neutrality is conservative. That’s the problem."
 date: 2014-11-16T19:16:36.000Z
+author: "Matt Sherman"
+
 ---
 
 Fred Wilson makes the argument ([here](http://avc.com/2014/11/internet-freedom-2/) and [here](http://avc.com/2014/11/the-cable-model-and-the-internet-model/)) that net neutrality is a conservative idea. That’s correct, and that’s the problem.

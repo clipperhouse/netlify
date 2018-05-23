@@ -1,6 +1,8 @@
 ---
 title: "Alerts as spam"
 date: 2013-05-15T15:42:05.000Z
+author: "Matt Sherman"
+
 ---
 
 I went to a talk last night by John Allspaw at Etsy, about alerts and how they are hard to get right.

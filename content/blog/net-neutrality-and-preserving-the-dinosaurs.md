@@ -1,6 +1,8 @@
 ---
 title: "Net neutrality and preserving the dinosaurs"
 date: 2010-02-22T07:45:00.000Z
+author: "Matt Sherman"
+
 ---
 
 I recently had a chat with a peer/CTO-type who has argued before Congress a local board on net neutrality. Got me thinking again. Even though I made these arguments in the mid 00’s (in a more, um, polemic venue) I thought it might be worth revisiting.

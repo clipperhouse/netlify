@@ -1,6 +1,8 @@
 ---
 title: "Market share for the taking, or, outrunning the bear"
 date: 2010-10-11T17:31:00.000Z
+author: "Matt Sherman"
+
 ---
 
 Much of the commentary I’ve seen for today’s [announcement](http://www.engadget.com/2010/10/11/microsoft-announces-ten-windows-phone-7-handsets-for-30-countrie/) of Windows Phone 7 revolves around whether Microsoft can catch up with Apple’s iPhone and Google’s Android. Fair enough; feature-wise, they are in the same ballpark.

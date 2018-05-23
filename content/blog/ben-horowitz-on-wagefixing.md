@@ -1,6 +1,8 @@
 ---
 title: "Ben Horowitz on wage-fixing"
 date: 2014-03-23T17:11:46.000Z
+author: "Matt Sherman"
+
 ---
 
 I am really, really enjoying Ben Horowitz’s [_The Hard Thing About Hard Things_](http://www.amazon.com/gp/product/B00DQ845EA/ref=as_li_ss_tl?ie=UTF8&amp;camp=1789&amp;creative=390957&amp;creativeASIN=B00DQ845EA&amp;linkCode=as2&amp;tag=theonlrepinsa-20)_._ It’s blunt and refreshing, and lives up to its title. It’s a nice counter to the notion that running a business is dreamy and life-affirming all the time.

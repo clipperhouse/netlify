@@ -1,6 +1,8 @@
 ---
 title: "Browser-specific CSS without Javascript or horrible syntax"
 date: 2009-12-07T03:09:00.000Z
+author: "Matt Sherman"
+
 ---
 
 So, we all know that browsers have [differing levels](http://www.quirksmode.org/css/contents.html) of CSS support. Working around them can be a pain in the a**, requiring non-standards-based [hacks](http://www.webmonkey.com/tutorial/Browser-Specific_CSS_Hacks) which are very hard to read and debug.

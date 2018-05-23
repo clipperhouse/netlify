@@ -1,6 +1,8 @@
 ---
 title: "Is Verizon’s network better, or is it simply untested?"
 date: 2009-10-21T15:56:00.000Z
+author: "Matt Sherman"
+
 ---
 
 [This article](http://www.techcrunch.com/2009/10/21/how-the-iphone-is-blowing-everyone-else-away-in-charts/) over a TechCrunch is putatively about the iPhone, but the take-away for me is that AT&amp;T’s data traffic has grown 50-fold over the last 3 years:

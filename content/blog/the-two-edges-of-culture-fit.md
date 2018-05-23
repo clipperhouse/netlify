@@ -1,6 +1,8 @@
 ---
 title: "The two edges of “culture fit”"
 date: 2014-07-01T15:00:01.000Z
+author: "Matt Sherman"
+
 ---
 
 Here’s a [smart and funny bit](http://qz.com/225782/the-next-thing-silicon-valley-needs-to-disrupt-big-time-its-own-culture/) about culture fit. I think it’s brutal and by and large true. [1]

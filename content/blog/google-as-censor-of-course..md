@@ -1,6 +1,8 @@
 ---
 title: "Google as censor? Of course."
 date: 2009-06-21T22:18:39.000Z
+author: "Matt Sherman"
+
 ---
 
 Daniel Indiviglio semi-condemns Google for its [compliance with Chinese censorship laws](http://business.theatlantic.com/2009/06/google_high_tech_censor.php). The “condemnation” is that they put profits before ethics. But that’s way too simplistic and strikes me as a bit insincere — as if we are shocked that Google is trying to make money.

@@ -1,6 +1,8 @@
 ---
 title: "The binary web"
 date: 2011-10-30T21:49:09.000Z
+author: "Matt Sherman"
+
 ---
 
 It’s easy to see the web as sets of advances that come in waves. The first was its emergence as a consumer (and corporate) phenomenon, starting with Netscape and continuing through Internet Explorer 6 (which, we often forget, was the first “legitimate” browser for many businesses).

@@ -1,6 +1,8 @@
 ---
 title: "Javascript is now strategic for Microsoft"
 date: 2009-07-14T19:18:00.000Z
+author: "Matt Sherman"
+
 ---
 
 In [this video](http://www.viddler.com/explore/scobleizer/videos/29/), Chris Bryant of Microsoft makes an offhand comment that the components of the new Microsoft Office 2010 for Web are “some of the biggest Javascript applications ever built”.

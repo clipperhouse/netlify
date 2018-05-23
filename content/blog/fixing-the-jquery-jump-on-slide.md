@@ -1,6 +1,8 @@
 ---
 title: "Fixing the jQuery “jump” on slide"
 date: 2011-02-10T08:59:00.000Z
+author: "Matt Sherman"
+
 ---
 
 You may notice in some situations, when using jQuery’s slideDown(), that the last little bit of the animation “jumps”. It feel un-smooth and frustrates those who like to dot our i’s. ([Here an explanation](http://jqueryfordesigners.com/slidedown-animation-jump-revisited/).)

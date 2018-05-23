@@ -1,6 +1,8 @@
 ---
 title: "Inversion of scarcity"
 date: 2011-06-26T20:21:06.000Z
+author: "Matt Sherman"
+
 ---
 
 Every business, if it’s smart, should realize that the Internet has the ability to drop out its pricing floor, or more precisely, to eliminate the scarcity on which price depends. This is what is usually meant by the catchphrase “disruption.”

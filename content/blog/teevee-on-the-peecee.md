@@ -1,6 +1,8 @@
 ---
 title: "Teevee on the peecee"
 date: 2009-11-14T11:22:53.000Z
+author: "Matt Sherman"
+
 ---
 
 So I’ve moved to a new place in NYC, and it’s a bit…cozier…than what I was used to in San Francisco. So I am looking for ways to save space and for now I’ve decided to go without a TV.

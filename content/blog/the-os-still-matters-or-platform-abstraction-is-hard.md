@@ -1,6 +1,8 @@
 ---
 title: "The OS still matters, or, platform abstraction is hard"
 date: 2009-06-04T23:50:00.000Z
+author: "Matt Sherman"
+
 ---
 
 Google has released some [preliminary versions of Chrome](http://news.cnet.com/8301-17939_109-10257538-2.html?part=rss&amp;subj=news&amp;tag=2547-1_3-0-20) for Mac and Linux. They announced it almost apologetically.

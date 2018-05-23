@@ -7,8 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
   <title>Solving the n&#43;1 problem in Linq to SQL, using projection - clipperhouse</title>
-  <meta name="description" content="Rick Strahl has a nice solution for mitigating the n&#43;1 problem in Linq to SQL. The n&#43;1 problem is a situation where, as you iterate over a set of query results in a list view, one or more additional database queries are fired for each row in the list. Since database calls are relatively expensive, you want to keep these to a minimum.
-Things like Linq to SQL make this an easy mistake to make.">
+  <meta name="description" content="Rick Strahl has a nice solution for mitigating the n&#43;1 problem in Linq to SQL. The n&#43;1 problem is a situation where, as you iterate over a set of query results in a list view, one or more additional database queries are fired for each row in the list.">
   <meta name="author" content="Matt Sherman">
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700,700i" rel="stylesheet">
 
@@ -39,7 +38,7 @@ Things like Linq to SQL make this an easy mistake to make.">
 <article class="post post-view">
   <header class="post-header">
   <h1 class="post-title">Solving the n&#43;1 problem in Linq to SQL, using projection</h1>
-  <p class="post-meta">Published by Matt Sherman · 2009.10.12</p>
+  <p class="post-meta">Published by Matt Sherman · October 12, 2009</p>
 </header>
 <div class="post-content"><p>Rick Strahl has a nice solution for <a href="http://west-wind.com/weblog/posts/38838.aspx">mitigating the n+1 problem</a> in Linq to SQL. The n+1 problem is a <a href="http://www.pbell.com/index.cfm/2006/9/17/Understanding-the-n1-query-problem">situation</a> where, as you iterate over a set of query results in a list view, one or more additional database queries are fired for each row in the list. Since database calls are relatively expensive, you want to keep these to a minimum.</p>
 

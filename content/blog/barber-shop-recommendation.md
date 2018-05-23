@@ -1,6 +1,8 @@
 ---
 title: "Barber shop recommendation"
 date: 2009-08-27T10:31:00.000Z
+author: "Matt Sherman"
+
 ---
 
 _Tech blogging shall resume shortly._

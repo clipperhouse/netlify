@@ -1,6 +1,8 @@
 ---
 title: "Dear Facebook: let us define the relationships"
 date: 2010-04-25T12:17:16.000Z
+author: "Matt Sherman"
+
 ---
 
 We’ve begun implementing some of Facebook’s Open Graph on [Alikewise](http://alikewise.com/), my dating startup. By [Dare Obasanjo’s definition](http://www.25hoursaday.com/weblog/2010/04/24/FacebooksOpenGraphProtocolFromAWebDevelopersPerspective.aspx), books are our main “social object”.

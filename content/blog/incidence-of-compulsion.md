@@ -1,6 +1,8 @@
 ---
 title: "Incidence of compulsion"
 date: 2013-07-18T00:09:08.000Z
+author: "Matt Sherman"
+
 ---
 
 This is an [encouraging story](http://news.cnet.com/8301-13578_3-57594171-38/google-tests-encryption-to-protect-users-drive-files-against-government-demands/) about Google exploring the ability to encrypt ‘sitting files’ in their Google Drive product. This is distinct from something like SSL, which only protects items in transit; most companies store the canonical file in the clear.

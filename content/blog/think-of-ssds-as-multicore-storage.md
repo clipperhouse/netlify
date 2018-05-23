@@ -1,6 +1,8 @@
 ---
 title: "Think of SSDs as multi-core storage"
 date: 2009-10-18T17:16:00.000Z
+author: "Matt Sherman"
+
 ---
 
 I’ve written a few times why solid-state hard drives (SSDs) are a sea change, similar to our transition from CRT to LCD a few years ago.

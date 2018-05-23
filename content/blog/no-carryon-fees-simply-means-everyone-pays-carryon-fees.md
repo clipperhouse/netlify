@@ -1,6 +1,8 @@
 ---
 title: "“No carry-on fees” simply means everyone pays carry-on fees"
 date: 2010-04-20T08:52:00.000Z
+author: "Matt Sherman"
+
 ---
 
 I can’t imagine why Congress is involved in [this](http://www.washingtonpost.com/wp-dyn/content/article/2010/04/16/AR2010041602024.html), but apparently it’s an outrage that airlines are charging fees for carry-on bags.

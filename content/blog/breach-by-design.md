@@ -1,6 +1,8 @@
 ---
 title: "Breach by design"
 date: 2010-01-13T09:54:29.000Z
+author: "Matt Sherman"
+
 ---
 
 It appears that the hack against Google was perpetrated via their [law enforcement compliance system](http://www.cato-at-liberty.org/2010/01/13/surveillance-secruity-and-the-google-breach/).

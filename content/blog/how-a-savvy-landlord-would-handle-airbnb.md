@@ -1,6 +1,8 @@
 ---
 title: "How a savvy landlord would handle Airbnb"
 date: 2014-06-21T03:55:58.000Z
+author: "Matt Sherman"
+
 ---
 
 Megan McArdle [describes](http://www.bloombergview.com/articles/2014-06-20/airbnb-is-a-risky-neighbor) the understandable discomfort that some tenants and property owners have about Airbnb’ers coming into their buildings.

@@ -1,6 +1,8 @@
 ---
 title: "Liquidity, open source and security"
 date: 2015-04-04T19:40:53.000Z
+author: "Matt Sherman"
+
 ---
 
 Jeff has a [thoughtful post](http://blog.codinghorror.com/given-enough-money-all-bugs-are-shallow/) about open source, security and incentives. A few points stood out to me.

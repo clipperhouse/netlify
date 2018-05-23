@@ -1,6 +1,8 @@
 ---
 title: "Three outcomes of the adpocalypse"
 date: 2015-09-07T22:08:57.959Z
+author: "Matt Sherman"
+
 ---
 
 It appears that Internet advertising is going through a bit of a shakeout. Ad blocking is becoming more pervasive ([perhaps 30%](http://bits.blogs.nytimes.com/2015/08/10/study-of-ad-blocking-software-suggests-wide-use/) of users), and a study by Google indicates that [as many as 50%](http://marketingland.com/googles-report-56-percent-ads-arent-seen-isnt-shocking-heres-110433) of ad “impressions” are never actually put in front of a human being.

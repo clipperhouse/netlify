@@ -1,6 +1,8 @@
 ---
 title: "Why can’t mobile apps have URLs?"
 date: 2011-12-14T03:23:02.000Z
+author: "Matt Sherman"
+
 ---
 
 Dave Winer [laments](http://scripting.com/stories/2011/12/13/whyAppsAreNotTheFuture.html) that mobile apps are not universally addressable via a locator like a URL.

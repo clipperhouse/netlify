@@ -1,6 +1,8 @@
 ---
 title: "Ben Bernanke’s list of economic participants"
 date: 2010-11-04T05:26:00.000Z
+author: "Matt Sherman"
+
 ---
 
 [Bernanke](http://www.washingtonpost.com/wp-dyn/content/article/2010/11/03/AR2010110307372.html):

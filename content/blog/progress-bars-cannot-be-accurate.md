@@ -1,6 +1,8 @@
 ---
 title: "Progress bars cannot be accurate"
 date: 2013-10-23T01:52:42.000Z
+author: "Matt Sherman"
+
 ---
 
 We all see progress bars and some of us even implement them. And we’ve all seen how hilariously wrong they can be. There’s a reason for that.

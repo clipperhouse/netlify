@@ -1,6 +1,8 @@
 ---
 title: "Questions about the Apple tablet that no one is answering yet"
 date: 2009-12-30T22:05:00.000Z
+author: "Matt Sherman"
+
 ---
 
 I don’t underestimate Apple’s ability to create unprecedented stuff, and to make it much better than anyone imagined. Yet for all the [breathlessness](http://www.businessweek.com/technology/content/dec2009/tc20091229_795528.htm) about the supposed Apple tablet, no one seems to be asking the right questions.

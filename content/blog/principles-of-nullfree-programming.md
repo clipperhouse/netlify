@@ -1,6 +1,8 @@
 ---
 title: "Principles of null-free programming"
 date: 2016-03-02T19:35:42.000Z
+author: "Matt Sherman"
+
 ---
 
 Nulls are a notorious source of bugs in many programming languages. Here, I sketch out a way to avoid them, using C# for illustration.

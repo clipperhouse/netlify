@@ -1,6 +1,8 @@
 ---
 title: "Hierarchy and orthogonality in C# and Go"
 date: 2014-08-25T00:17:39.000Z
+author: "Matt Sherman"
+
 ---
 
 Prompted by [this question](https://groups.google.com/d/msg/golang-nuts/aJ6JiiIusqg/TJM09vOkv9YJ) I got to thinking about methods in C# and Go. It’s another example, I realized, of Go’s (logical) insistence on orthogonality and (stylistic) insistence on flatness/lack of hierarchy.

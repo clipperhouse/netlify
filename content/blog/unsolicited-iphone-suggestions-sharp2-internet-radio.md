@@ -1,6 +1,8 @@
 ---
 title: "Unsolicited iPhone suggestions #2: internet radio"
 date: 2009-11-19T09:32:23.000Z
+author: "Matt Sherman"
+
 ---
 
 Since moving from Cali to NY, I’ve come to miss my favorite radio station, KDFC. They rule, especially Hoyt Smith on my clock radio in the morning.

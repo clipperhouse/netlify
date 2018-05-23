@@ -1,6 +1,8 @@
 ---
 title: "Domain names are too cheap"
 date: 2009-06-28T12:21:00.000Z
+author: "Matt Sherman"
+
 ---
 
 I am not sure I’ve ever used the term “cyber” for anything, ever, but that’s the name given to [those who squat on domain names](http://www.computerworld.com/action/article.do?command=viewArticleBasic&amp;articleId=9134605). Here’s my story.

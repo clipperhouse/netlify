@@ -1,6 +1,8 @@
 ---
 title: "WebClient, Fiddler and SSL"
 date: 2009-05-01T18:19:00.000Z
+author: "Matt Sherman"
+
 ---
 
 I am developing a credit card authorization library which uses the [WebClient](http://msdn.microsoft.com/en-us/library/system.net.webclient.aspx) class. In addition, I am using the excellent [Fiddler](http://www.fiddler2.com) to watch the requests and responses.

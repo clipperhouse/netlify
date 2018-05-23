@@ -1,6 +1,8 @@
 ---
 title: "The NYT paywall is about segmenting, not security"
 date: 2011-06-26T23:37:14.000Z
+author: "Matt Sherman"
+
 ---
 
 It may be intemperate of me, but why do geeks respond in such a…Pavlovian way when given the opportunity to assume another person’s stupidity? The latest exhibit is Gizmodo, [claiming](http://gizmodo.com/5815360) that the New York Times has implemented their paywall poorly.

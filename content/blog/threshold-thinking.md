@@ -1,6 +1,8 @@
 ---
 title: "Threshold thinking"
 date: 2014-02-18T21:25:06.000Z
+author: "Matt Sherman"
+
 ---
 
 I consider our industry’s current approach to ads to be wildly inefficient. Very “good” click-through rates are in the single-digit percentages, and more likely one or two orders of magnitude below that.

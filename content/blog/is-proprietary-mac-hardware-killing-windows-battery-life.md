@@ -1,6 +1,8 @@
 ---
 title: "Is proprietary Mac hardware killing Windows battery life?"
 date: 2009-07-31T17:46:00.000Z
+author: "Matt Sherman"
+
 ---
 
 Dong Ngo over at CNET has a review of the experience of [installing the final Windows 7](http://news.cnet.com/8301-17938_105-10301015-1.html?part=rss&amp;subj=news&amp;tag=2547-1_3-0-20) on a new (unibody) MacBook Pro.

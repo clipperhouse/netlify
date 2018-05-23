@@ -1,6 +1,8 @@
 ---
 title: "More about {less}"
 date: 2009-06-30T17:50:00.000Z
+author: "Matt Sherman"
+
 ---
 
 Raena Jackson Armitage offers an [interesting exploration of LessCSS](http://www.sitepoint.com/blogs/2009/06/30/write-better-css-with-less/):

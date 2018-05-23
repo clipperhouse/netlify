@@ -1,6 +1,8 @@
 ---
 title: "Use case: the metric system, or, all that useless beauty"
 date: 2009-07-01T12:31:00.000Z
+author: "Matt Sherman"
+
 ---
 
 Ah, nothing gets international rivalry boiling like soccer football and the metric system. One wonders why the metric system hasn’t taken off here in the US. I posit this: it doesn’t offer any advantage to end users, ie, regular citizens. Let’s do the use case.

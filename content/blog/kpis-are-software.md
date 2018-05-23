@@ -1,6 +1,8 @@
 ---
 title: "KPIs are software"
 date: 2016-10-28T15:52:42.907Z
+author: "Matt Sherman"
+
 ---
 
 It’s easy to think of key performance indicators as a task to be tacked on to the end of a project. Rather, KPIs should be understood as a product like any other, and so:

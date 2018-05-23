@@ -1,6 +1,8 @@
 ---
 title: "Why I heart jQuery"
 date: 2009-09-01T21:46:00.000Z
+author: "Matt Sherman"
+
 ---
 
 I am one of the many people who have fallen in love with jQuery over the past year or two. I haven’t seen it articulated why this might be, so here’s my stab at it.

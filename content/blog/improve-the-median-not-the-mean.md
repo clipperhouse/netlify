@@ -1,6 +1,8 @@
 ---
 title: "Improve the median, not the mean"
 date: 2015-04-20T21:13:18.000Z
+author: "Matt Sherman"
+
 ---
 
 I like seeing Google Fiber prompt incumbent dinosaurs into [boosting speeds](http://www.wired.com/2015/04/comcast-says-itll-bring-ultra-fast-internet-us-2016/). It’s great.

@@ -1,6 +1,8 @@
 ---
 title: "What’s the word…?"
 date: 2009-09-03T14:28:00.000Z
+author: "Matt Sherman"
+
 ---
 
 Oh right…bollocks. This report seems to be [circulating](http://www.infoworld.com/d/storage/report-intels-braidwood-flash-memory-module-could-kill-ssd-market-439) that “Braidwood”, Intel’s inexpensive flash-memory-disk-cache-helper-outer, will somehow negate demand for full-blown SSDs (solid-state drives).

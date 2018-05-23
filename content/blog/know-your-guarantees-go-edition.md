@@ -1,6 +1,8 @@
 ---
 title: "Know your guarantees, Go edition"
 date: 2014-07-12T01:53:50.000Z
+author: "Matt Sherman"
+
 ---
 
 I was directed to a thread about a [poor soul](http://forums.thedailywtf.com/forums/t/27755.aspx) who started a project in Go, eventually had to hand it off to the community, and discovered that his original source no longer compiled, due to third-party dependencies having changed. Key quote:

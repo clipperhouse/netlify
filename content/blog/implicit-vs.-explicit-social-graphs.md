@@ -1,6 +1,8 @@
 ---
 title: "Implicit vs. explicit social graphs"
 date: 2011-06-19T20:40:36.000Z
+author: "Matt Sherman"
+
 ---
 
 There are two kinds of social graphs in the world, explicit and implicit. The explicit ones are the most rare and give their owners disproportionate market values.
