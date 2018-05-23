@@ -10,9 +10,9 @@
   
   <meta name="description" content="These days, I am doing a lot of Javascript, or more accurately, a lot of jQuery. A concept I have gotten comfortable with is the idea of passing logic as data.
 This article demonstrates a pattern to avoid brittle if-then statements. Instead of very long conditional branches, one encapsulates evaluation logic in a table of data. Each data item is a function containing an arbitrary piece of logic — code which runs after being passed to the main algorithm.">
-  <meta name="author" content="">
+  <meta name="author" content="Matt Sherman">
   
-  <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,400i,700,700i" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700,700i" rel="stylesheet">
   <link href="https://cdn.bootcss.com/highlight.js/9.12.0/styles/default.min.css" rel="stylesheet">
   <link href="/css/style.css" rel="stylesheet">
   
@@ -26,7 +26,7 @@ This article demonstrates a pattern to avoid brittle if-then statements. Instead
 <body class="single">
   <header class="header">
     
-    <p class="title"><a href="/"><span>🍱</span>clipperhouse</a></p>
+    <p class="title"><a href="/">clipperhouse</a></p>
     
     <button class="menu-toggle" type="button"></button>
     <nav class="menu">
@@ -40,10 +40,10 @@ This article demonstrates a pattern to avoid brittle if-then statements. Instead
 
 <article class="post post-view">
   <header class="post-header">
-    <h1 class="post-title">Logic as data, and a case where strong typing impeded learning</h1>
-    <p class="post-meta">2009.12.6</p>
-  </header>
-  <div class="post-content"><p>These days, I am doing a lot of Javascript, or more accurately, a lot of jQuery. A concept I have gotten comfortable with is the idea of passing logic as data.</p>
+  <h1 class="post-title">Logic as data, and a case where strong typing impeded learning</h1>
+  <p class="post-meta">Published by Matt Sherman · 2009.12.6</p>
+</header>
+<div class="post-content"><p>These days, I am doing a lot of Javascript, or more accurately, a lot of jQuery. A concept I have gotten comfortable with is the idea of passing logic as data.</p>
 
 <p><a href="http://leftrightfold.com/?p=85">This article</a> demonstrates a pattern to avoid brittle if-then statements. Instead of very long conditional branches, one encapsulates evaluation logic in a table of data. Each data item is a function containing an arbitrary piece of logic — code which runs <em>after</em> being passed to the main algorithm. To add new rules you add a new item to the table — no code changes to your core algorithm. The algorithm <strong>delegates</strong> decision-making to functions outside of its own scope.</p>
 
@@ -57,7 +57,7 @@ This article demonstrates a pattern to avoid brittle if-then statements. Instead
 
 <p>In the case of delegation, however, the syntax required by strong typing was a hindrance to learning. Interesting trade-off.</p>
 </div>
-  <footer class="post-footer">
+<footer class="post-footer">
     
   </footer>
   
@@ -67,11 +67,11 @@ This article demonstrates a pattern to avoid brittle if-then statements. Instead
 </article>
 </main>
 <footer class="footer">
-  <span>&copy; 2017-2018 clipperhouse 🎉</span>
+  <span>&copy; 2017-2018 clipperhouse</span>
   <span>&middot;</span>
-  <span>Powered by <a href="https://gohugo.io/" target="_blank">Hugo❤️️</a></span>
+  <span>Powered by <a href="https://gohugo.io/" target="_blank">Hugo</a></span>
   <span>&middot;</span>
-  <span>Designed by <a href="http://21beats.com/" target="_blank">️21beats⚡️</a></span>
+  <span>Designed by <a href="http://21beats.com/" target="_blank">21beats</a></span>
 </footer>
 <script src="https://cdn.bootcss.com/instantclick/3.0.1/instantclick.min.js" data-no-instant></script>
 <script data-no-instant>InstantClick.init();</script>

@@ -10,9 +10,9 @@
   
   <meta name="description" content="Rick Strahl has a nice solution for mitigating the n&#43;1 problem in Linq to SQL. The n&#43;1 problem is a situation where, as you iterate over a set of query results in a list view, one or more additional database queries are fired for each row in the list. Since database calls are relatively expensive, you want to keep these to a minimum.
 Things like Linq to SQL make this an easy mistake to make.">
-  <meta name="author" content="">
+  <meta name="author" content="Matt Sherman">
   
-  <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,400i,700,700i" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700,700i" rel="stylesheet">
   <link href="https://cdn.bootcss.com/highlight.js/9.12.0/styles/default.min.css" rel="stylesheet">
   <link href="/css/style.css" rel="stylesheet">
   
@@ -26,7 +26,7 @@ Things like Linq to SQL make this an easy mistake to make.">
 <body class="single">
   <header class="header">
     
-    <p class="title"><a href="/"><span>🍱</span>clipperhouse</a></p>
+    <p class="title"><a href="/">clipperhouse</a></p>
     
     <button class="menu-toggle" type="button"></button>
     <nav class="menu">
@@ -40,10 +40,10 @@ Things like Linq to SQL make this an easy mistake to make.">
 
 <article class="post post-view">
   <header class="post-header">
-    <h1 class="post-title">Solving the n&#43;1 problem in Linq to SQL, using projection</h1>
-    <p class="post-meta">2009.10.12</p>
-  </header>
-  <div class="post-content"><p>Rick Strahl has a nice solution for <a href="http://west-wind.com/weblog/posts/38838.aspx">mitigating the n+1 problem</a> in Linq to SQL. The n+1 problem is a <a href="http://www.pbell.com/index.cfm/2006/9/17/Understanding-the-n1-query-problem">situation</a> where, as you iterate over a set of query results in a list view, one or more additional database queries are fired for each row in the list. Since database calls are relatively expensive, you want to keep these to a minimum.</p>
+  <h1 class="post-title">Solving the n&#43;1 problem in Linq to SQL, using projection</h1>
+  <p class="post-meta">Published by Matt Sherman · 2009.10.12</p>
+</header>
+<div class="post-content"><p>Rick Strahl has a nice solution for <a href="http://west-wind.com/weblog/posts/38838.aspx">mitigating the n+1 problem</a> in Linq to SQL. The n+1 problem is a <a href="http://www.pbell.com/index.cfm/2006/9/17/Understanding-the-n1-query-problem">situation</a> where, as you iterate over a set of query results in a list view, one or more additional database queries are fired for each row in the list. Since database calls are relatively expensive, you want to keep these to a minimum.</p>
 
 <p>Things like Linq to SQL make this an easy mistake to make. There is nothing in the syntax that warns you about the problem. If, for each row of your query result for Customers, you access the related Customer.Orders collection, you’ll fire a new query on each row. The code will look clean, but your database gets hammered.</p>
 
@@ -51,7 +51,7 @@ Things like Linq to SQL make this an easy mistake to make.">
 
 <p>This is not unlike the <a href="http://stephenwalther.com/blog/archive/2009/04/13/asp.net-mvc-tip-50-ndash-create-view-models.aspx">ViewModel</a> approach in ASP.Net MVC — you are creating a custom data type that is optimized for output.</p>
 </div>
-  <footer class="post-footer">
+<footer class="post-footer">
     
   </footer>
   
@@ -61,11 +61,11 @@ Things like Linq to SQL make this an easy mistake to make.">
 </article>
 </main>
 <footer class="footer">
-  <span>&copy; 2017-2018 clipperhouse 🎉</span>
+  <span>&copy; 2017-2018 clipperhouse</span>
   <span>&middot;</span>
-  <span>Powered by <a href="https://gohugo.io/" target="_blank">Hugo❤️️</a></span>
+  <span>Powered by <a href="https://gohugo.io/" target="_blank">Hugo</a></span>
   <span>&middot;</span>
-  <span>Designed by <a href="http://21beats.com/" target="_blank">️21beats⚡️</a></span>
+  <span>Designed by <a href="http://21beats.com/" target="_blank">21beats</a></span>
 </footer>
 <script src="https://cdn.bootcss.com/instantclick/3.0.1/instantclick.min.js" data-no-instant></script>
 <script data-no-instant>InstantClick.init();</script>

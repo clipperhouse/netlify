@@ -12,9 +12,9 @@
 Say you have a text template, and that template is intended to output Go code. You’d like to pass a data structure into the template, and have the structure appear in the template as its own value literal.
 There is a printf format string that does just this: %#v
 Let’s say you have a template like: p := {{.}}">
-  <meta name="author" content="">
+  <meta name="author" content="Matt Sherman">
   
-  <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,400i,700,700i" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700,700i" rel="stylesheet">
   <link href="https://cdn.bootcss.com/highlight.js/9.12.0/styles/default.min.css" rel="stylesheet">
   <link href="/css/style.css" rel="stylesheet">
   
@@ -28,7 +28,7 @@ Let’s say you have a template like: p := {{.}}">
 <body class="single">
   <header class="header">
     
-    <p class="title"><a href="/"><span>🍱</span>clipperhouse</a></p>
+    <p class="title"><a href="/">clipperhouse</a></p>
     
     <button class="menu-toggle" type="button"></button>
     <nav class="menu">
@@ -42,10 +42,10 @@ Let’s say you have a template like: p := {{.}}">
 
 <article class="post post-view">
   <header class="post-header">
-    <h1 class="post-title">Embedding a struct declaration in a text template in Go</h1>
-    <p class="post-meta">2015.1.31</p>
-  </header>
-  <div class="post-content"><p>Here’s a nice little technique I came across in developing <a href="http://clipperhouse.github.io/gen">gen</a>.</p>
+  <h1 class="post-title">Embedding a struct declaration in a text template in Go</h1>
+  <p class="post-meta">Published by Matt Sherman · 2015.1.31</p>
+</header>
+<div class="post-content"><p>Here’s a nice little technique I came across in developing <a href="http://clipperhouse.github.io/gen">gen</a>.</p>
 
 <p>Say you have a text template, and that template is intended to output Go code. You’d like to pass a data structure into the template, and have the structure appear in the template as its own value literal.</p>
 
@@ -62,7 +62,7 @@ Let’s say you have a template like: p := {{.}}">
 
 <p>In order to have the output work as we wish, we make this modification to the template:<code>p := {{ printf &amp;#34;%#v&amp;#34; . }}</code>&hellip;which means &#34;call printf with the format string %#v and the value ., which represents the passed data.<code>We execute the template along the lines of:</code>tmpl.Execute(w, person)<code>(Where tmpl is the compiled template above, and w is an io.Writer)</code>The resulting output will be:<code>p := pkg.Person{Name:&amp;#34;Jane&amp;#34;, Age:30}</code>&hellip;where pkg is your package name. That&#39;s valid Go code which in turn can be executed. Neat.`<code>Here&amp;#39;s a [runnable version](http://play.golang.org/p/7lF_UmL2Qt) on the Go playground.</code></p>
 </div>
-  <footer class="post-footer">
+<footer class="post-footer">
     
   </footer>
   
@@ -72,11 +72,11 @@ Let’s say you have a template like: p := {{.}}">
 </article>
 </main>
 <footer class="footer">
-  <span>&copy; 2017-2018 clipperhouse 🎉</span>
+  <span>&copy; 2017-2018 clipperhouse</span>
   <span>&middot;</span>
-  <span>Powered by <a href="https://gohugo.io/" target="_blank">Hugo❤️️</a></span>
+  <span>Powered by <a href="https://gohugo.io/" target="_blank">Hugo</a></span>
   <span>&middot;</span>
-  <span>Designed by <a href="http://21beats.com/" target="_blank">️21beats⚡️</a></span>
+  <span>Designed by <a href="http://21beats.com/" target="_blank">21beats</a></span>
 </footer>
 <script src="https://cdn.bootcss.com/instantclick/3.0.1/instantclick.min.js" data-no-instant></script>
 <script data-no-instant>InstantClick.init();</script>

@@ -10,9 +10,9 @@
   
   <meta name="description" content="I wanted to randomize the display of a List on my site — meaning I would retrieve (say) 20 records, but display only 5, chosen at random. I was imagining a loop that generates a bunch of random indexes, which I use to individually pull elements from the list. Yuck.
 The solution I found is much more elegant — two lines! To randomize your list, simply: var rnd = new Random();">
-  <meta name="author" content="">
+  <meta name="author" content="Matt Sherman">
   
-  <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,400i,700,700i" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700,700i" rel="stylesheet">
   <link href="https://cdn.bootcss.com/highlight.js/9.12.0/styles/default.min.css" rel="stylesheet">
   <link href="/css/style.css" rel="stylesheet">
   
@@ -26,7 +26,7 @@ The solution I found is much more elegant — two lines! To randomize your l
 <body class="single">
   <header class="header">
     
-    <p class="title"><a href="/"><span>🍱</span>clipperhouse</a></p>
+    <p class="title"><a href="/">clipperhouse</a></p>
     
     <button class="menu-toggle" type="button"></button>
     <nav class="menu">
@@ -40,10 +40,10 @@ The solution I found is much more elegant — two lines! To randomize your l
 
 <article class="post post-view">
   <header class="post-header">
-    <h1 class="post-title">Tip: random sort order in C#</h1>
-    <p class="post-meta">2010.4.28</p>
-  </header>
-  <div class="post-content"><p>I wanted to randomize the display of a List on <a href="http://alikewise.com/">my site</a> — meaning I would retrieve (say) 20 records, but display only 5, chosen at random. I was imagining a loop that generates a bunch of random indexes, which I use to individually pull elements from the list. Yuck.</p>
+  <h1 class="post-title">Tip: random sort order in C#</h1>
+  <p class="post-meta">Published by Matt Sherman · 2010.4.28</p>
+</header>
+<div class="post-content"><p>I wanted to randomize the display of a List on <a href="http://alikewise.com/">my site</a> — meaning I would retrieve (say) 20 records, but display only 5, chosen at random. I was imagining a loop that generates a bunch of random indexes, which I use to individually pull elements from the list. Yuck.</p>
 
 <p>The solution I <a href="http://wiki.evident.nl/Default.aspx?Page=Random-sort-order-Csharp">found</a> is much more elegant — two lines! To randomize your list, simply:
 var rnd = new Random();<br />
@@ -69,7 +69,7 @@ public static IEnumerable&lt;T&gt; OrderByRandom&lt;T&gt;(this IEnumerable&lt;T&
 
 <p><em>Note: be careful with IEnumerable here — because it behaves</em> <a href="http://blogs.msdn.com/ericwhite/pages/Lazy-Evaluation-_2800_and-in-contrast_2C00_-Eager-Evaluation_2900_.aspx"><em>lazily</em></a><em>, it can cause the randomization to happen multiple times, depending on how you call it. Better to “realize” it using ToList().</em></p>
 </div>
-  <footer class="post-footer">
+<footer class="post-footer">
     
   </footer>
   
@@ -79,11 +79,11 @@ public static IEnumerable&lt;T&gt; OrderByRandom&lt;T&gt;(this IEnumerable&lt;T&
 </article>
 </main>
 <footer class="footer">
-  <span>&copy; 2017-2018 clipperhouse 🎉</span>
+  <span>&copy; 2017-2018 clipperhouse</span>
   <span>&middot;</span>
-  <span>Powered by <a href="https://gohugo.io/" target="_blank">Hugo❤️️</a></span>
+  <span>Powered by <a href="https://gohugo.io/" target="_blank">Hugo</a></span>
   <span>&middot;</span>
-  <span>Designed by <a href="http://21beats.com/" target="_blank">️21beats⚡️</a></span>
+  <span>Designed by <a href="http://21beats.com/" target="_blank">21beats</a></span>
 </footer>
 <script src="https://cdn.bootcss.com/instantclick/3.0.1/instantclick.min.js" data-no-instant></script>
 <script data-no-instant>InstantClick.init();</script>

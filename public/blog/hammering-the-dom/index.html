@@ -10,9 +10,9 @@
   
   <meta name="description" content="As I work on my ASP.net jQuery controls, I got to thinking about what “animations” really are. The core animation framework in jQuery (as far as I can tell) is to simply iterate in small steps between two CSS states. So if you are going from 0% opacity to 100% opacity, jQuery applies (say) 100 CSS changes in 1% increments.
 This is essentially hammering the DOM. The browser is forced to make 100 updates to the state of an element, and re-render it, over a short period of time.">
-  <meta name="author" content="">
+  <meta name="author" content="Matt Sherman">
   
-  <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,400i,700,700i" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700,700i" rel="stylesheet">
   <link href="https://cdn.bootcss.com/highlight.js/9.12.0/styles/default.min.css" rel="stylesheet">
   <link href="/css/style.css" rel="stylesheet">
   
@@ -26,7 +26,7 @@ This is essentially hammering the DOM. The browser is forced to make 100 updates
 <body class="single">
   <header class="header">
     
-    <p class="title"><a href="/"><span>🍱</span>clipperhouse</a></p>
+    <p class="title"><a href="/">clipperhouse</a></p>
     
     <button class="menu-toggle" type="button"></button>
     <nav class="menu">
@@ -40,10 +40,10 @@ This is essentially hammering the DOM. The browser is forced to make 100 updates
 
 <article class="post post-view">
   <header class="post-header">
-    <h1 class="post-title">Hammering the DOM</h1>
-    <p class="post-meta">2009.4.28</p>
-  </header>
-  <div class="post-content"><p>As I work on my ASP.net <a href="/jQuery/">jQuery controls</a>, I got to thinking about what “animations” really are. The core animation framework in jQuery (as far as I can tell) is to simply iterate in small steps between two CSS states. So if you are going from 0% opacity to 100% opacity, jQuery applies (say) 100 CSS changes in 1% increments.</p>
+  <h1 class="post-title">Hammering the DOM</h1>
+  <p class="post-meta">Published by Matt Sherman · 2009.4.28</p>
+</header>
+<div class="post-content"><p>As I work on my ASP.net <a href="/jQuery/">jQuery controls</a>, I got to thinking about what “animations” really are. The core animation framework in jQuery (as far as I can tell) is to simply iterate in small steps between two CSS states. So if you are going from 0% opacity to 100% opacity, jQuery applies (say) 100 CSS changes in 1% increments.</p>
 
 <p>This is essentially hammering the DOM. The browser is forced to make 100 updates to the state of an element, and re-render it, over a short period of time. This must incur a lot of overhead. Indeed, I see very different degrees of “smoothness” on different browsers.</p>
 
@@ -63,7 +63,7 @@ This is essentially hammering the DOM. The browser is forced to make 100 updates
 
 <p>Update: Indeed it has already been <a href="http://ejohn.org/blog/css-animations-and-javascript/">discussed</a> over at jQuery. Sounds like John Resig sees a couple of dealbreakers in the current technologies.</p>
 </div>
-  <footer class="post-footer">
+<footer class="post-footer">
     
   </footer>
   
@@ -73,11 +73,11 @@ This is essentially hammering the DOM. The browser is forced to make 100 updates
 </article>
 </main>
 <footer class="footer">
-  <span>&copy; 2017-2018 clipperhouse 🎉</span>
+  <span>&copy; 2017-2018 clipperhouse</span>
   <span>&middot;</span>
-  <span>Powered by <a href="https://gohugo.io/" target="_blank">Hugo❤️️</a></span>
+  <span>Powered by <a href="https://gohugo.io/" target="_blank">Hugo</a></span>
   <span>&middot;</span>
-  <span>Designed by <a href="http://21beats.com/" target="_blank">️21beats⚡️</a></span>
+  <span>Designed by <a href="http://21beats.com/" target="_blank">21beats</a></span>
 </footer>
 <script src="https://cdn.bootcss.com/instantclick/3.0.1/instantclick.min.js" data-no-instant></script>
 <script data-no-instant>InstantClick.init();</script>

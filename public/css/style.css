@@ -20,15 +20,15 @@ article, aside, figcaption, figure, footer, header, main, nav, section {
 }
 body {
   margin: 0;
-  font-family: 'PT Sans', sans-serif;
-  color: rgba(0, 0, 0, .8);
+  font-family: 'Open Sans', sans-serif;
+  color:#222;
   font-size: 18px;
   line-height: 1.7;
 }
 h1, h2, h3, h4, h5, h6 {
   margin-top: 0;
   margin-bottom: 0;
-  line-height: 1.2;
+  line-height: 1.4;
 }
 p {
   margin-top: 0;
@@ -180,7 +180,7 @@ pre, code {
 .first-entry > *,
 .post-entry,
 .list-footer {
-  max-width: 700px;
+  max-width: 800px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -204,7 +204,7 @@ pre, code {
   padding-bottom: 30px;
 }
 .post-view {
-  width: 700px;
+  width: 800px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -307,7 +307,6 @@ pre, code {
 .post-content h4,
 .post-content h5,
 .post-content h6 {
-  color: rgba(0, 0, 0, .4);
   font-weight: 400;
   margin-bottom: 10px;
 }
@@ -487,4 +486,8 @@ pre, code {
   .footer span:nth-child(2n) {
     display: none;
   }
+}
+
+#instantclick {
+  display: none;
 }

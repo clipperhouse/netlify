@@ -487,3 +487,7 @@ pre, code {
     display: none;
   }
 }
+
+#instantclick {
+  display: none;
+}

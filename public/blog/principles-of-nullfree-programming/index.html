@@ -12,9 +12,9 @@
 To be clear, this post is intended as habits for human programmers; it is specifically not about static analysis or language features.
 Principles I submit that we can avoid a large majority of null-related errors if we follow these two principles:
  Passing a null is a programming error Branching on null is a programming error  I think most of our problems trace back to imbuing null with meaning, i.">
-  <meta name="author" content="">
+  <meta name="author" content="Matt Sherman">
   
-  <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,400i,700,700i" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700,700i" rel="stylesheet">
   <link href="https://cdn.bootcss.com/highlight.js/9.12.0/styles/default.min.css" rel="stylesheet">
   <link href="/css/style.css" rel="stylesheet">
   
@@ -28,7 +28,7 @@ Principles I submit that we can avoid a large majority of null-related errors if
 <body class="single">
   <header class="header">
     
-    <p class="title"><a href="/"><span>🍱</span>clipperhouse</a></p>
+    <p class="title"><a href="/">clipperhouse</a></p>
     
     <button class="menu-toggle" type="button"></button>
     <nav class="menu">
@@ -42,10 +42,10 @@ Principles I submit that we can avoid a large majority of null-related errors if
 
 <article class="post post-view">
   <header class="post-header">
-    <h1 class="post-title">Principles of null-free programming</h1>
-    <p class="post-meta">2016.3.2</p>
-  </header>
-  <div class="post-content">
+  <h1 class="post-title">Principles of null-free programming</h1>
+  <p class="post-meta">Published by Matt Sherman · 2016.3.2</p>
+</header>
+<div class="post-content">
 
 <p>Nulls are a notorious source of bugs in many programming languages. Here, I sketch out a way to avoid them, using C# for illustration.</p>
 
@@ -108,7 +108,7 @@ if (!TryThingById(12345, out t)) {
 
 <p>Again, these are patterns for humans, not static guarantees. But now we can lint for strings like “null”, and have a good chance of catching errors.</p>
 </div>
-  <footer class="post-footer">
+<footer class="post-footer">
     
   </footer>
   
@@ -118,11 +118,11 @@ if (!TryThingById(12345, out t)) {
 </article>
 </main>
 <footer class="footer">
-  <span>&copy; 2017-2018 clipperhouse 🎉</span>
+  <span>&copy; 2017-2018 clipperhouse</span>
   <span>&middot;</span>
-  <span>Powered by <a href="https://gohugo.io/" target="_blank">Hugo❤️️</a></span>
+  <span>Powered by <a href="https://gohugo.io/" target="_blank">Hugo</a></span>
   <span>&middot;</span>
-  <span>Designed by <a href="http://21beats.com/" target="_blank">️21beats⚡️</a></span>
+  <span>Designed by <a href="http://21beats.com/" target="_blank">21beats</a></span>
 </footer>
 <script src="https://cdn.bootcss.com/instantclick/3.0.1/instantclick.min.js" data-no-instant></script>
 <script data-no-instant>InstantClick.init();</script>

@@ -11,9 +11,9 @@
   <meta name="description" content="Any sufficiently complicated C or Fortran program contains an ad hoc, informally-specified, bug-ridden, slow implementation of half of Common Lisp. — Greenspun
 I am reminded of this quote when I see a common pattern in data stores, especially RDBMS. It’s a key-value pattern, along the lines of: Columns: IDType | ID | Value
 …combined with application code which branches on the IDType column. The Value (and heck, the identifier) are interpreted differently based on the type.">
-  <meta name="author" content="">
+  <meta name="author" content="Matt Sherman">
   
-  <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,400i,700,700i" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700,700i" rel="stylesheet">
   <link href="https://cdn.bootcss.com/highlight.js/9.12.0/styles/default.min.css" rel="stylesheet">
   <link href="/css/style.css" rel="stylesheet">
   
@@ -27,7 +27,7 @@ I am reminded of this quote when I see a common pattern in data stores, especial
 <body class="single">
   <header class="header">
     
-    <p class="title"><a href="/"><span>🍱</span>clipperhouse</a></p>
+    <p class="title"><a href="/">clipperhouse</a></p>
     
     <button class="menu-toggle" type="button"></button>
     <nav class="menu">
@@ -41,10 +41,10 @@ I am reminded of this quote when I see a common pattern in data stores, especial
 
 <article class="post post-view">
   <header class="post-header">
-    <h1 class="post-title">A type system in runtime’s clothing</h1>
-    <p class="post-meta">2014.8.25</p>
-  </header>
-  <div class="post-content"><p>Any sufficiently complicated C or Fortran program contains an ad hoc, informally-specified, bug-ridden, slow implementation of half of Common Lisp. — <a href="http://en.wikipedia.org/wiki/Greenspun%27s_tenth_rule">Greenspun</a></p>
+  <h1 class="post-title">A type system in runtime’s clothing</h1>
+  <p class="post-meta">Published by Matt Sherman · 2014.8.25</p>
+</header>
+<div class="post-content"><p>Any sufficiently complicated C or Fortran program contains an ad hoc, informally-specified, bug-ridden, slow implementation of half of Common Lisp. — <a href="http://en.wikipedia.org/wiki/Greenspun%27s_tenth_rule">Greenspun</a></p>
 
 <p>I am reminded of this quote when I see a common pattern in data stores, especially RDBMS. It’s a key-value pattern, along the lines of:
 <code>Columns: IDType | ID | Value</code></p>
@@ -65,7 +65,7 @@ I am reminded of this quote when I see a common pattern in data stores, especial
 
 <p>The upshot is, it’s a trade-off between safety and flexibility, exactly as with static and dynamic type systems. If one chooses the latter, plan on accounting for legal and illegal states in application code — and be clear about guarantees the system will and won’t offer.</p>
 </div>
-  <footer class="post-footer">
+<footer class="post-footer">
     
   </footer>
   
@@ -75,11 +75,11 @@ I am reminded of this quote when I see a common pattern in data stores, especial
 </article>
 </main>
 <footer class="footer">
-  <span>&copy; 2017-2018 clipperhouse 🎉</span>
+  <span>&copy; 2017-2018 clipperhouse</span>
   <span>&middot;</span>
-  <span>Powered by <a href="https://gohugo.io/" target="_blank">Hugo❤️️</a></span>
+  <span>Powered by <a href="https://gohugo.io/" target="_blank">Hugo</a></span>
   <span>&middot;</span>
-  <span>Designed by <a href="http://21beats.com/" target="_blank">️21beats⚡️</a></span>
+  <span>Designed by <a href="http://21beats.com/" target="_blank">21beats</a></span>
 </footer>
 <script src="https://cdn.bootcss.com/instantclick/3.0.1/instantclick.min.js" data-no-instant></script>
 <script data-no-instant>InstantClick.init();</script>

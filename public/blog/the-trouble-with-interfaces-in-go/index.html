@@ -13,9 +13,9 @@ func DoSomething(interface{}) interface{} {
 …
 }
 …where both the input parameter and the output return value are interface{}. It’s quite flexible.">
-  <meta name="author" content="">
+  <meta name="author" content="Matt Sherman">
   
-  <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,400i,700,700i" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700,700i" rel="stylesheet">
   <link href="https://cdn.bootcss.com/highlight.js/9.12.0/styles/default.min.css" rel="stylesheet">
   <link href="/css/style.css" rel="stylesheet">
   
@@ -29,7 +29,7 @@ func DoSomething(interface{}) interface{} {
 <body class="single">
   <header class="header">
     
-    <p class="title"><a href="/"><span>🍱</span>clipperhouse</a></p>
+    <p class="title"><a href="/">clipperhouse</a></p>
     
     <button class="menu-toggle" type="button"></button>
     <nav class="menu">
@@ -43,10 +43,10 @@ func DoSomething(interface{}) interface{} {
 
 <article class="post post-view">
   <header class="post-header">
-    <h1 class="post-title">The trouble with interfaces in Go</h1>
-    <p class="post-meta">2014.2.4</p>
-  </header>
-  <div class="post-content"><p>I am working on a <a href="https://github.com/clipperhouse/gen">tool</a> for generics-like functionality in Go. Despite what you may have heard, Go does have generic functionality, in that you can create (e.g.) methods which operate on any type, by using interface{} — the interface that all types implement. For example, you can do something like:</p>
+  <h1 class="post-title">The trouble with interfaces in Go</h1>
+  <p class="post-meta">Published by Matt Sherman · 2014.2.4</p>
+</header>
+<div class="post-content"><p>I am working on a <a href="https://github.com/clipperhouse/gen">tool</a> for generics-like functionality in Go. Despite what you may have heard, Go does have generic functionality, in that you can create (e.g.) methods which operate on any type, by using interface{} — the interface that all types implement. For example, you can do something like:</p>
 
 <p>func DoSomething(interface{}) interface{} {<br />
 …<br />
@@ -64,7 +64,7 @@ func DoSomething(interface{}) interface{} {
 
 <p>So one of the motivations of <a href="https://github.com/clipperhouse/gen">gen</a> is to deal with that return value on the right-hand side of the above code sample — to bring it into the realm of known types that the compiler (and the user) can reliably exploit.</p>
 </div>
-  <footer class="post-footer">
+<footer class="post-footer">
     
   </footer>
   
@@ -74,11 +74,11 @@ func DoSomething(interface{}) interface{} {
 </article>
 </main>
 <footer class="footer">
-  <span>&copy; 2017-2018 clipperhouse 🎉</span>
+  <span>&copy; 2017-2018 clipperhouse</span>
   <span>&middot;</span>
-  <span>Powered by <a href="https://gohugo.io/" target="_blank">Hugo❤️️</a></span>
+  <span>Powered by <a href="https://gohugo.io/" target="_blank">Hugo</a></span>
   <span>&middot;</span>
-  <span>Designed by <a href="http://21beats.com/" target="_blank">️21beats⚡️</a></span>
+  <span>Designed by <a href="http://21beats.com/" target="_blank">21beats</a></span>
 </footer>
 <script src="https://cdn.bootcss.com/instantclick/3.0.1/instantclick.min.js" data-no-instant></script>
 <script data-no-instant>InstantClick.init();</script>
