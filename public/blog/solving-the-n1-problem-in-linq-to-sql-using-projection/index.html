@@ -1,38 +1,15 @@
 <!DOCTYPE html>
-<html lang="en-us">
+<html lang="en">
+
   <head>
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    
-    <title>My New Hugo Site  | Solving the n&#43;1 problem in Linq to SQL, using projection</title>
-    <meta name="HandheldFriendly" content="True">
-    <meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <meta name="viewport" content="width=device-width,minimum-scale=1">
-    <meta name="generator" content="Hugo 0.40.3" />
-    
-    
-      <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
-    
-
-    
-    
-      <link href="/dist/css/app.ab4b67a3ea25990fa8279f3b7ef08b61.css" rel="stylesheet">
-    
-
-    
-
-    
-      
-    
-
-    
-
-    <meta property="og:title" content="Solving the n&#43;1 problem in Linq to SQL, using projection" />
+<meta property="og:title" content="Solving the n&#43;1 problem in Linq to SQL, using projection" />
 <meta property="og:description" content="Rick Strahl has a nice solution for mitigating the n&#43;1 problem in Linq to SQL. The n&#43;1 problem is a situation where, as you iterate over a set of query results in a list view, one or more additional database queries are fired for each row in the list. Since database calls are relatively expensive, you want to keep these to a minimum.
 Things like Linq to SQL make this an easy mistake to make." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="http://example.org/blog/solving-the-n1-problem-in-linq-to-sql-using-projection/" />
+<meta property="og:url" content="https://clipperhouse.netlify.com/blog/solving-the-n1-problem-in-linq-to-sql-using-projection/" />
 
 
 
@@ -50,118 +27,147 @@ Things like Linq to SQL make this an easy mistake to make." />
 
 
 
-<meta itemprop="name" content="Solving the n&#43;1 problem in Linq to SQL, using projection">
-<meta itemprop="description" content="Rick Strahl has a nice solution for mitigating the n&#43;1 problem in Linq to SQL. The n&#43;1 problem is a situation where, as you iterate over a set of query results in a list view, one or more additional database queries are fired for each row in the list. Since database calls are relatively expensive, you want to keep these to a minimum.
-Things like Linq to SQL make this an easy mistake to make.">
-
-
-<meta itemprop="datePublished" content="2009-10-12T16:38:24&#43;00:00" />
-<meta itemprop="dateModified" content="2009-10-12T16:38:24&#43;00:00" />
-<meta itemprop="wordCount" content="206">
-
-
-
-<meta itemprop="keywords" content="" />
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Solving the n&#43;1 problem in Linq to SQL, using projection"/>
 <meta name="twitter:description" content="Rick Strahl has a nice solution for mitigating the n&#43;1 problem in Linq to SQL. The n&#43;1 problem is a situation where, as you iterate over a set of query results in a list view, one or more additional database queries are fired for each row in the list. Since database calls are relatively expensive, you want to keep these to a minimum.
 Things like Linq to SQL make this an easy mistake to make."/>
+<meta name="generator" content="Hugo 0.40.3" />
+
+
+    
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Solving the n&#43;1 problem in Linq to SQL, using projection",
+  "url": "https://clipperhouse.netlify.com/blog/solving-the-n1-problem-in-linq-to-sql-using-projection/",
+  "wordCount": "206",
+  "datePublished": "2009-10-12T16:38:24&#43;00:00",
+  "dateModified": "2009-10-12T16:38:24&#43;00:00",
+  "author": {
+    "@type": "Person",
+    "name": ""
+  }
+}
+</script>
+
+
+
+    <link rel="canonical" href="https://clipperhouse.netlify.com/blog/solving-the-n1-problem-in-linq-to-sql-using-projection/">
+
+    <title>Solving the n&#43;1 problem in Linq to SQL, using projection | clipperhouse</title>
+
+    <!-- combined, minified CSS -->
+    <link href="https://clipperhouse.netlify.com/css/style.css" rel="stylesheet" integrity="sha384-TbfEhJn4HkgPUIZUhhHaAYsycYKHxSuIloCjZOiyCSpbVunRQxg5T5pxKVFwxilF" crossorigin="anonymous">
+
+    
+
+    
+
+    
+
+    
 
   </head>
 
-  <body class="ma0 avenir bg-near-white">
+  <body>
 
     
-   
-  
-
-  <header>
-    <div class="bg-black">
-      <nav class="pv3 ph3 ph4-ns" role="navigation">
-  <div class="flex-l justify-between items-center center">
-    <a href="http://example.org/" class="f3 fw2 hover-white no-underline white-90 dib">
-      My New Hugo Site
-    </a>
-    <div class="flex-l items-center">
-      
-      
-
-
-
-
-
-
-
-
+    <div class="blog-masthead">
+      <div class="container">
+        <nav class="nav blog-nav">
+          <a class="nav-link " href="https://clipperhouse.netlify.com/">Home</a>
+        </nav>
+      </div>
     </div>
-  </div>
-</nav>
+    
 
-    </div>
-  </header>
-
-
-
-    <main class="pb7" role="main">
-      
-  <article class="flex-l flex-wrap justify-between mw8 center">
-
-    <header class="mt4 w-100">
-      <p class="f6 b helvetica tracked">
-          
-        BLOGS
-      </p>
-      <h1 class="f1 athelas mb1">Solving the n&#43;1 problem in Linq to SQL, using projection</h1>
-      
-      <time class="f6 mv4 dib tracked" datetime="2009-10-12T16:38:24Z">October 12, 2009</time>
+    
+    <header class="blog-header">
+      <div class="container">
+        <h1 class="blog-title"><a href="https://clipperhouse.netlify.com/" rel="home">clipperhouse</a></h1>
+        
+      </div>
     </header>
+    
 
-    <main class="nested-copy-line-height lh-copy serif f4 nested-links nested-img mid-gray pr4-l w-two-thirds-l"><p>Rick Strahl has a nice solution for <a href="http://west-wind.com/weblog/posts/38838.aspx">mitigating the n+1 problem</a> in Linq to SQL. The n+1 problem is a <a href="http://www.pbell.com/index.cfm/2006/9/17/Understanding-the-n1-query-problem">situation</a> where, as you iterate over a set of query results in a list view, one or more additional database queries are fired for each row in the list. Since database calls are relatively expensive, you want to keep these to a minimum.</p>
+    
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-8 blog-main">
+
+          
+
+
+<article class="blog-post">
+  <header>
+    <h2 class="blog-post-title"><a href="https://clipperhouse.netlify.com/blog/solving-the-n1-problem-in-linq-to-sql-using-projection/">Solving the n+1 problem in Linq to SQL, using projection</a></h2>
+    <p class="blog-post-meta"><time datetime="2009-10-12T16:38:24Z">Mon Oct 12, 2009</time> by </p>
+  </header>
+  <p>Rick Strahl has a nice solution for <a href="http://west-wind.com/weblog/posts/38838.aspx">mitigating the n+1 problem</a> in Linq to SQL. The n+1 problem is a <a href="http://www.pbell.com/index.cfm/2006/9/17/Understanding-the-n1-query-problem">situation</a> where, as you iterate over a set of query results in a list view, one or more additional database queries are fired for each row in the list. Since database calls are relatively expensive, you want to keep these to a minimum.</p>
 
 <p>Things like Linq to SQL make this an easy mistake to make. There is nothing in the syntax that warns you about the problem. If, for each row of your query result for Customers, you access the related Customer.Orders collection, you’ll fire a new query on each row. The code will look clean, but your database gets hammered.</p>
 
 <p>Rick’s solution uses “projection”, which essentially means that you define a new data type for your particular output. So instead of iterating through a list of Customer, we might create a new CustomerReportEntry class just for that purpose. Have a look at Rick’s post — the win is that Linq to SQL is smart enough to pre-load a lot of related data.</p>
 
 <p>This is not unlike the <a href="http://stephenwalther.com/blog/archive/2009/04/13/asp.net-mvc-tip-50-ndash-create-view-models.aspx">ViewModel</a> approach in ASP.Net MVC — you are creating a custom data type that is optimized for output.</p>
-<ul class="pa0">
+
+
   
-</ul>
-<div class="mt6">
-        
-      </div>
-    </main>
 
-    <aside class="w-30-l mt6-l">
+  
+  <hr>
+  <footer>
+
+  
+    <section>
+    <h4>Share</h4>
+    <nav class="nav sharing-icons">
+      <a class="nav-item" href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fclipperhouse.netlify.com%2fblog%2fsolving-the-n1-problem-in-linq-to-sql-using-projection%2f" title="Share on Facebook"><span class="fa fa-facebook fa-2x" aria-hidden="true"></span></a>
+      <a class="nav-item" href="https://plus.google.com/share?url=https%3a%2f%2fclipperhouse.netlify.com%2fblog%2fsolving-the-n1-problem-in-linq-to-sql-using-projection%2f" title="Share on Google+"><span class="fa fa-google-plus fa-2x" aria-hidden="true"></span></a>
+      <a class="nav-item" href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3a%2f%2fclipperhouse.netlify.com%2fblog%2fsolving-the-n1-problem-in-linq-to-sql-using-projection%2f" title="Share on LinkedIn"><span class="fa fa-linkedin fa-2x" aria-hidden="true"></span></a>
+      <a class="nav-item" href="https://twitter.com/home?status=https%3a%2f%2fclipperhouse.netlify.com%2fblog%2fsolving-the-n1-problem-in-linq-to-sql-using-projection%2f" title="Tweet this"><span class="fa fa-twitter fa-2x"></span></a>
+    </nav>
+  </section>
+
+  
+
+  
+  </footer>
+  
+
+</article> 
 
 
 
+        </div> <!-- /.blog-main -->
 
+        <aside class="col-sm-3 ml-auto blog-sidebar">
+  
+
+  
+
+  
 </aside>
 
-  </article>
 
-    </main>
-    <footer class="bg-near-black bottom-0 w-100 pa3" role="contentinfo">
-  <div class="flex justify-between">
-  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://example.org/" >
-    &copy; 2018 My New Hugo Site
-  </a>
-  
-
-
-
-
-
-
-
-
-  </div>
-</footer>
-
+      </div> <!-- /.row -->
+    </div> <!-- /.container -->
     
 
-  <script src="/dist/js/app.3fc0f988d21662902933.js"></script>
-
+    
+    <footer class="blog-footer">
+      <p>
+      
+      Blog template created by <a href="https://twitter.com/mdo">@mdo</a>, ported to Hugo by <a href='https://twitter.com/mralanorth'>@mralanorth</a>.
+      
+      </p>
+      <p>
+      <a href="#">Back to top</a>
+      </p>
+    </footer>
+    
 
   </body>
+
 </html>
