@@ -1,4 +1,8 @@
 baseURL = "https://clipperhouse.netlify.com/"
 languageCode = "en-us"
 title = "clipperhouse"
-theme = "bootstrap"
+theme = "hugo-paper"
+author = "Matt Sherman"
+
+[params]
+  author = "Matt Sherman"
