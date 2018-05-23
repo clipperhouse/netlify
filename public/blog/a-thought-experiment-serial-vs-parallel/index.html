@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+    <title>My New Hugo Site  | A thought experiment: serial vs parallel</title>
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+
+    <meta name="viewport" content="width=device-width,minimum-scale=1">
+    <meta name="generator" content="Hugo 0.40.3" />
+    
+    
+      <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
+    
+
+    
+    
+      <link href="/dist/css/app.ab4b67a3ea25990fa8279f3b7ef08b61.css" rel="stylesheet">
+    
+
+    
+
+    
+      
+    
+
+    
+
+    <meta property="og:title" content="A thought experiment: serial vs parallel" />
+<meta property="og:description" content="Now that solid-state drives are arriving in the mainstream, I’ve been thinking about the implications of serial vs parallel and how they affect overall perceived performance. And by “perceived” I mean, what does the client — both the technical and human variety — experience?
+If the capacity of two systems is each (say) ten requests per hour, yet one is serial and one is parallel, can there be a net benefit for the user?" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://example.org/blog/a-thought-experiment-serial-vs-parallel/" />
+
+
+
+<meta property="article:published_time" content="2009-09-19T18:54:50&#43;00:00"/>
+
+<meta property="article:modified_time" content="2009-09-19T18:54:50&#43;00:00"/>
+
+
+
+
+
+
+
+
+
+
+
+<meta itemprop="name" content="A thought experiment: serial vs parallel">
+<meta itemprop="description" content="Now that solid-state drives are arriving in the mainstream, I’ve been thinking about the implications of serial vs parallel and how they affect overall perceived performance. And by “perceived” I mean, what does the client — both the technical and human variety — experience?
+If the capacity of two systems is each (say) ten requests per hour, yet one is serial and one is parallel, can there be a net benefit for the user?">
+
+
+<meta itemprop="datePublished" content="2009-09-19T18:54:50&#43;00:00" />
+<meta itemprop="dateModified" content="2009-09-19T18:54:50&#43;00:00" />
+<meta itemprop="wordCount" content="628">
+
+
+
+<meta itemprop="keywords" content="" />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="A thought experiment: serial vs parallel"/>
+<meta name="twitter:description" content="Now that solid-state drives are arriving in the mainstream, I’ve been thinking about the implications of serial vs parallel and how they affect overall perceived performance. And by “perceived” I mean, what does the client — both the technical and human variety — experience?
+If the capacity of two systems is each (say) ten requests per hour, yet one is serial and one is parallel, can there be a net benefit for the user?"/>
+
+  </head>
+
+  <body class="ma0 avenir bg-near-white">
+
+    
+   
+  
+
+  <header>
+    <div class="bg-black">
+      <nav class="pv3 ph3 ph4-ns" role="navigation">
+  <div class="flex-l justify-between items-center center">
+    <a href="http://example.org/" class="f3 fw2 hover-white no-underline white-90 dib">
+      My New Hugo Site
+    </a>
+    <div class="flex-l items-center">
+      
+      
+
+
+
+
+
+
+
+
+    </div>
+  </div>
+</nav>
+
+    </div>
+  </header>
+
+
+
+    <main class="pb7" role="main">
+      
+  <article class="flex-l flex-wrap justify-between mw8 center">
+
+    <header class="mt4 w-100">
+      <p class="f6 b helvetica tracked">
+          
+        BLOGS
+      </p>
+      <h1 class="f1 athelas mb1">A thought experiment: serial vs parallel</h1>
+      
+      <time class="f6 mv4 dib tracked" datetime="2009-09-19T18:54:50Z">September 19, 2009</time>
+    </header>
+
+    <main class="nested-copy-line-height lh-copy serif f4 nested-links nested-img mid-gray pr4-l w-two-thirds-l"><p>Now that solid-state drives are arriving in the mainstream, I’ve been thinking about the implications of serial vs parallel and how they affect overall perceived performance. And by “perceived” I mean, what does the client — both the technical and human variety — experience?</p>
+
+<p>If the capacity of two systems is each (say) ten requests per hour, yet one is serial and one is parallel, can there be a net benefit for the user? Mathematically, one thinks shouldn’t be a difference. Intuitively, I feel that there might be. So let’s do the math.</p>
+
+<p>We have two supermarkets, A and B. At supermarket A, there is one fast cashier, who can handle 10 normal customers per hour. At the other, there are two slow cashiers, who can each handle 5 normal customers per hour. Each store can therefore handle 10 normal customers per hour.</p>
+
+<p>The line of customers in each store is identical. Here’s the wrinkle: one customer in each store’s line is has a huge cart, with 4 times the groceries of a normal customer. That customer is #5 in line, in both stores.</p>
+
+<p>We start at 1pm. What happens?</p>
+
+<p>At 1:12, store A and store B have both handled two customers. 8 customers not yet served.</p>
+
+<p>At 1:24, ditto, 4 customers served, 6 customers not yet served.</p>
+
+<p>Mr Big customer #5 walks up to the register. At store A, the only cashier is monopolized. At store B, they monopolize one of the two cashiers, we’ll call him B1.</p>
+
+<p><em>Note, because store B’s cashiers are half as fast as the one at store A, it will take twice as long to resolve the big customer at store B. Store A’s cashier can handle one normal customer every 6 minutes, therefore Mr Big Customer will take 24 minutes. Store B’s cashiers can individually handle one customer in 12 minutes, therefore it will take 48 minutes for one of them to serve Mr Big.</em></p>
+
+<p>At 1:36, Store A has not handled any new customers, so still only 4 served. The one free cashier at store B (call her B2) has handled one, so 5 served.</p>
+
+<p>At 1:48, Store A has finished with Mr Big, so now 5 served. At store B, one more served, so 6.</p>
+
+<p><em>For this 48-minute time span, Store B’s parallelism has resulted 6 customers being served compared to A’s 5. That’s 20% better end-user performance, even though both stores have identical total capacity.</em></p>
+
+<p>At 2:00, Store A is back at full speed, 7 customers have been served. Store B, still at half capacity, serves one more, putting it at 7 as well.</p>
+
+<p>At 2:12, B1 finishes with Mr Big. B2 has served one at normal pace, so 9 customers served by B. Store A has also served 2, total of 9.</p>
+
+<p>At 2:18, Store A finishes the last customer.</p>
+
+<p>At 2:24, B1 finishes with his last customer.</p>
+
+<p>—</p>
+
+<p><em>[please check my math]</em></p>
+
+<p>Moral of the story? Heck, I’m not sure.</p>
+
+<p>At Store A, the longest period where the line didn’t move was 24 minutes. At Store B, the longest was 12 minutes.</p>
+
+<p>Store A finished everything in a shorter period of time. Store B handled more customers in the first 48 minutes but took longer overall.</p>
+
+<p>If Mr Big was first in line, Store A would serve only one customer in the first 24 minutes. Store B’s free cashier would have served two in that time. Store A would soon catch up.</p>
+
+<p>Seems to me that a parallel system would ensure more “liquid” service — like anti-freeze, it may move slowly but it won’t stop. Store A can freeze up for short periods, but otherwise runs quickly.</p>
+
+<p>Personally, I net out on the parallel side, as I think customers’ perception will be better. Am I right?</p>
+<ul class="pa0">
+  
+</ul>
+<div class="mt6">
+        
+      </div>
+    </main>
+
+    <aside class="w-30-l mt6-l">
+
+
+
+
+</aside>
+
+  </article>
+
+    </main>
+    <footer class="bg-near-black bottom-0 w-100 pa3" role="contentinfo">
+  <div class="flex justify-between">
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://example.org/" >
+    &copy; 2018 My New Hugo Site
+  </a>
+  
+
+
+
+
+
+
+
+
+  </div>
+</footer>
+
+    
+
+  <script src="/dist/js/app.3fc0f988d21662902933.js"></script>
+
+
+  </body>
+</html>

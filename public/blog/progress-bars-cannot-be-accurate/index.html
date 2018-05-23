@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+    <title>My New Hugo Site  | Progress bars cannot be accurate</title>
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+
+    <meta name="viewport" content="width=device-width,minimum-scale=1">
+    <meta name="generator" content="Hugo 0.40.3" />
+    
+    
+      <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
+    
+
+    
+    
+      <link href="/dist/css/app.ab4b67a3ea25990fa8279f3b7ef08b61.css" rel="stylesheet">
+    
+
+    
+
+    
+      
+    
+
+    
+
+    <meta property="og:title" content="Progress bars cannot be accurate" />
+<meta property="og:description" content="We all see progress bars and some of us even implement them. And we’ve all seen how hilariously wrong they can be. There’s a reason for that.
+In order for a progress bar to be accurate, a program needs to determine how long it will take to run, prior to running it. It needs to know how much work it will do before doing it.
+It seems to me that the only way to accurately know how much work a program has to do, is to do the work." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://example.org/blog/progress-bars-cannot-be-accurate/" />
+
+
+
+<meta property="article:published_time" content="2013-10-23T01:52:42&#43;00:00"/>
+
+<meta property="article:modified_time" content="2013-10-23T01:52:42&#43;00:00"/>
+
+
+
+
+
+
+
+
+
+
+
+<meta itemprop="name" content="Progress bars cannot be accurate">
+<meta itemprop="description" content="We all see progress bars and some of us even implement them. And we’ve all seen how hilariously wrong they can be. There’s a reason for that.
+In order for a progress bar to be accurate, a program needs to determine how long it will take to run, prior to running it. It needs to know how much work it will do before doing it.
+It seems to me that the only way to accurately know how much work a program has to do, is to do the work.">
+
+
+<meta itemprop="datePublished" content="2013-10-23T01:52:42&#43;00:00" />
+<meta itemprop="dateModified" content="2013-10-23T01:52:42&#43;00:00" />
+<meta itemprop="wordCount" content="345">
+
+
+
+<meta itemprop="keywords" content="" />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Progress bars cannot be accurate"/>
+<meta name="twitter:description" content="We all see progress bars and some of us even implement them. And we’ve all seen how hilariously wrong they can be. There’s a reason for that.
+In order for a progress bar to be accurate, a program needs to determine how long it will take to run, prior to running it. It needs to know how much work it will do before doing it.
+It seems to me that the only way to accurately know how much work a program has to do, is to do the work."/>
+
+  </head>
+
+  <body class="ma0 avenir bg-near-white">
+
+    
+   
+  
+
+  <header>
+    <div class="bg-black">
+      <nav class="pv3 ph3 ph4-ns" role="navigation">
+  <div class="flex-l justify-between items-center center">
+    <a href="http://example.org/" class="f3 fw2 hover-white no-underline white-90 dib">
+      My New Hugo Site
+    </a>
+    <div class="flex-l items-center">
+      
+      
+
+
+
+
+
+
+
+
+    </div>
+  </div>
+</nav>
+
+    </div>
+  </header>
+
+
+
+    <main class="pb7" role="main">
+      
+  <article class="flex-l flex-wrap justify-between mw8 center">
+
+    <header class="mt4 w-100">
+      <p class="f6 b helvetica tracked">
+          
+        BLOGS
+      </p>
+      <h1 class="f1 athelas mb1">Progress bars cannot be accurate</h1>
+      
+      <time class="f6 mv4 dib tracked" datetime="2013-10-23T01:52:42Z">October 23, 2013</time>
+    </header>
+
+    <main class="nested-copy-line-height lh-copy serif f4 nested-links nested-img mid-gray pr4-l w-two-thirds-l"><p>We all see progress bars and some of us even implement them. And we’ve all seen how hilariously wrong they can be. There’s a reason for that.</p>
+
+<p>In order for a progress bar to be accurate, a program needs to determine how long it will take to run, prior to running it. It needs to know how much work it will do before doing it.</p>
+
+<p>It seems to me that the only way to accurately know how much work a program has to do, is to do the work. That’s not as banal as it sounds.</p>
+
+<p>Computer-theoretically, is it possible for a program to calculate how much work it needs to do, in less work than is required to actually run the program? I haven’t done the math, but my instinct says it cannot.</p>
+
+<p>The best we can hope for, and what most progress bars actually do, is to estimate based on <strong>other evidence</strong>.</p>
+
+<p>For example, when downloading a file from a network, the progress bar indicates how much time is left based on how much time it took so far. Subsequent bytes might come down at the same rate as previous bytes; some may not. So “progress” is, at best, probabilistic.</p>
+
+<p>If we set aside time as the measure of progress, and instead simply indicate how many more bytes need to transfer, we are still making an assumption. The program can’t <em>know</em> how big the downloaded file is prior to downloading it; what it <em>can</em> do is trust that the server correctly told it what to expect prior to download (eg, in a header).</p>
+
+<p>One might also gather evidence over time. I’m watching Mavericks install on my MacBook. The progress bar seems reasonable enough. My assumption is that Apple, refined as they are, has sampled/recorded previous install times on different hardware. Maybe Apple has put previous measurements of the program <em>in the program</em>.</p>
+
+<p>In many cases, in controlled environments or with lots of trials, we can offer a progress bar that gives the user a reasonably confident guess. But that’s all it can be.</p>
+<ul class="pa0">
+  
+</ul>
+<div class="mt6">
+        
+      </div>
+    </main>
+
+    <aside class="w-30-l mt6-l">
+
+
+
+
+</aside>
+
+  </article>
+
+    </main>
+    <footer class="bg-near-black bottom-0 w-100 pa3" role="contentinfo">
+  <div class="flex justify-between">
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://example.org/" >
+    &copy; 2018 My New Hugo Site
+  </a>
+  
+
+
+
+
+
+
+
+
+  </div>
+</footer>
+
+    
+
+  <script src="/dist/js/app.3fc0f988d21662902933.js"></script>
+
+
+  </body>
+</html>

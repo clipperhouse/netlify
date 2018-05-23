@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+    <title>My New Hugo Site  | Preventing mission creep in your Views, or, ignorance is bliss</title>
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+
+    <meta name="viewport" content="width=device-width,minimum-scale=1">
+    <meta name="generator" content="Hugo 0.40.3" />
+    
+    
+      <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
+    
+
+    
+    
+      <link href="/dist/css/app.ab4b67a3ea25990fa8279f3b7ef08b61.css" rel="stylesheet">
+    
+
+    
+
+    
+      
+    
+
+    
+
+    <meta property="og:title" content="Preventing mission creep in your Views, or, ignorance is bliss" />
+<meta property="og:description" content="An important concept in MVC is that Views are meant to be “dumb” — and by that I mean, your View should only care about outputting a user interface, and should know very little about business logic.
+You want this for a few reasons. For example, you might create alternate Views for different kinds of output, such as for a mobile device. You shouldn’t have to re-implement any business logic to do that." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://example.org/blog/preventing-mission-creep-in-your-views-or-ignorance-is-bliss/" />
+
+
+
+<meta property="article:published_time" content="2009-12-19T13:48:00&#43;00:00"/>
+
+<meta property="article:modified_time" content="2009-12-19T13:48:00&#43;00:00"/>
+
+
+
+
+
+
+
+
+
+
+
+<meta itemprop="name" content="Preventing mission creep in your Views, or, ignorance is bliss">
+<meta itemprop="description" content="An important concept in MVC is that Views are meant to be “dumb” — and by that I mean, your View should only care about outputting a user interface, and should know very little about business logic.
+You want this for a few reasons. For example, you might create alternate Views for different kinds of output, such as for a mobile device. You shouldn’t have to re-implement any business logic to do that.">
+
+
+<meta itemprop="datePublished" content="2009-12-19T13:48:00&#43;00:00" />
+<meta itemprop="dateModified" content="2009-12-19T13:48:00&#43;00:00" />
+<meta itemprop="wordCount" content="469">
+
+
+
+<meta itemprop="keywords" content="" />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Preventing mission creep in your Views, or, ignorance is bliss"/>
+<meta name="twitter:description" content="An important concept in MVC is that Views are meant to be “dumb” — and by that I mean, your View should only care about outputting a user interface, and should know very little about business logic.
+You want this for a few reasons. For example, you might create alternate Views for different kinds of output, such as for a mobile device. You shouldn’t have to re-implement any business logic to do that."/>
+
+  </head>
+
+  <body class="ma0 avenir bg-near-white">
+
+    
+   
+  
+
+  <header>
+    <div class="bg-black">
+      <nav class="pv3 ph3 ph4-ns" role="navigation">
+  <div class="flex-l justify-between items-center center">
+    <a href="http://example.org/" class="f3 fw2 hover-white no-underline white-90 dib">
+      My New Hugo Site
+    </a>
+    <div class="flex-l items-center">
+      
+      
+
+
+
+
+
+
+
+
+    </div>
+  </div>
+</nav>
+
+    </div>
+  </header>
+
+
+
+    <main class="pb7" role="main">
+      
+  <article class="flex-l flex-wrap justify-between mw8 center">
+
+    <header class="mt4 w-100">
+      <p class="f6 b helvetica tracked">
+          
+        BLOGS
+      </p>
+      <h1 class="f1 athelas mb1">Preventing mission creep in your Views, or, ignorance is bliss</h1>
+      
+      <time class="f6 mv4 dib tracked" datetime="2009-12-19T13:48:00Z">December 19, 2009</time>
+    </header>
+
+    <main class="nested-copy-line-height lh-copy serif f4 nested-links nested-img mid-gray pr4-l w-two-thirds-l"><p>An important concept in MVC is that Views are meant to be “dumb” — and by that I mean, your View should only care about outputting a user interface, and should know very little about business logic.</p>
+
+<p>You want this for a few reasons. For example, you might create alternate Views for different kinds of output, such as for a mobile device. You shouldn’t have to re-implement any business logic to do that.</p>
+
+<p>And down the road, when your logic inevitably changes, you shouldn’t have to worry about changing it in more than one place. Not only is that tedious and time-consuming, but you open up the risk of having inconsistent behavior. It violates <a href="http://en.wikipedia.org/wiki/Don%27t_repeat_yourself">DRY</a>.</p>
+
+<p>How might this happen? Here’s an example.</p>
+
+<p>Let’s say you have a social app which displays user profiles. If a user is looking at their own profile, you might want to offer them a link to edit it. So your View would have something like:</p>
+
+<p>&lt;% if (Model.DisplayedUser == Model.LoggedInUser) { %&gt;<br />
+&lt;a href=”url_of_edit_screen”&gt;edit this profile&lt;/a&gt;<br />
+&lt;% } %&gt;</p>
+
+<p>Simple enough, and it might not raise any red flags at the time. Then, however, you realize that administrators should be able to edit profiles as well. Now your View code becomes:</p>
+
+<p>&lt;% if (Model.DisplayedUser == Model.LoggedInUser || Request.User.IsInRole(“Administrator”)) { %&gt;<br />
+&lt;a href=”url_of_edit_screen”&gt;edit this profile&lt;/a&gt;<br />
+&lt;% } %&gt;</p>
+
+<p>See where this is going? A month later, you realize that “moderators” need the same ability. And if a profile has been suspended, perhaps the user should no longer see that link. And maybe you want to offer a “preview” mode, where the link is hidden. Etc.</p>
+
+<p>Your View is now handling business logic. It becomes unreadable and untestable, and you are blurring the <a href="http://consultingblogs.emc.com/jamesbroome/archive/2009/08/24/asp-net-mvc-separation-of-concerns-amongst-team-members.aspx">separation of concerns</a>.</p>
+
+<p>The best way to avoid this is, first, <a href="http://www.superexpert.com/blog/archive/2009/04/13/asp.net-mvc-tip-50-ndash-create-view-models.aspx">have a ViewModel</a> (the above code already assumes that). Second, add properties to that ViewModel that describe only <strong>what the View should show, without regard for why</strong>. The usage becomes:</p>
+
+<p>&lt;% if (Model.EnableEditLink) { %&gt;<br />
+&lt;a href=”url_of_edit_screen”&gt;edit this profile&lt;/a&gt;<br />
+&lt;% } %&gt;</p>
+
+<p>Now, your View doesn’t know anything about Users, Roles or anything like that. It’s simply <strong>following orders</strong> that describe what to output. For Views, <strong>ignorance is bliss</strong>.</p>
+
+<p>Meanwhile, back in your ViewModel class, the property might be something like:</p>
+
+<p>public class ProfileViewModel<br />
+{<br />
+ public bool EnableEditLink {<br />
+ get<br />
+ {<br />
+ bool display = (this.DisplayedUser == this.LoggedInUser)<br />
+ || Request.User.IsInRole(“Administrator”)<br />
+ &amp;&amp; !UserAccountIsSuspended<br />
+ &amp;&amp; !IsPreviewMode;<br />
+ return display;<br />
+ }<br />
+ }<br />
+}</p>
+
+<p>(Another practical benefit: <strong>you can’t set a breakpoint in a View</strong>. By encapsulating the logic in the ViewModel, you can debug and write tests to your heart’s content.)</p>
+
+<p>So next time you need to put an if-then in your View, resist the urge to let the View make the decision. No matter how simple, push the logic back into the ViewModel, where it belongs.</p>
+<ul class="pa0">
+  
+</ul>
+<div class="mt6">
+        
+      </div>
+    </main>
+
+    <aside class="w-30-l mt6-l">
+
+
+
+
+</aside>
+
+  </article>
+
+    </main>
+    <footer class="bg-near-black bottom-0 w-100 pa3" role="contentinfo">
+  <div class="flex justify-between">
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://example.org/" >
+    &copy; 2018 My New Hugo Site
+  </a>
+  
+
+
+
+
+
+
+
+
+  </div>
+</footer>
+
+    
+
+  <script src="/dist/js/app.3fc0f988d21662902933.js"></script>
+
+
+  </body>
+</html>

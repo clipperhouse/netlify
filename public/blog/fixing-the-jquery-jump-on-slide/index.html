@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+    <title>My New Hugo Site  | Fixing the jQuery “jump” on slide</title>
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+
+    <meta name="viewport" content="width=device-width,minimum-scale=1">
+    <meta name="generator" content="Hugo 0.40.3" />
+    
+    
+      <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
+    
+
+    
+    
+      <link href="/dist/css/app.ab4b67a3ea25990fa8279f3b7ef08b61.css" rel="stylesheet">
+    
+
+    
+
+    
+      
+    
+
+    
+
+    <meta property="og:title" content="Fixing the jQuery “jump” on slide" />
+<meta property="og:description" content="You may notice in some situations, when using jQuery’s slideDown(), that the last little bit of the animation “jumps”. It feel un-smooth and frustrates those who like to dot our i’s. (Here an explanation.)
+The main issue is that the browser (and thus jQuery) is uncertain about the height of the element that is sliding. This, in turn, is based on uncertainty about the _width_ — the width determines how lines wrap, and dictates the height." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://example.org/blog/fixing-the-jquery-jump-on-slide/" />
+
+
+
+<meta property="article:published_time" content="2011-02-10T08:59:00&#43;00:00"/>
+
+<meta property="article:modified_time" content="2011-02-10T08:59:00&#43;00:00"/>
+
+
+
+
+
+
+
+
+
+
+
+<meta itemprop="name" content="Fixing the jQuery “jump” on slide">
+<meta itemprop="description" content="You may notice in some situations, when using jQuery’s slideDown(), that the last little bit of the animation “jumps”. It feel un-smooth and frustrates those who like to dot our i’s. (Here an explanation.)
+The main issue is that the browser (and thus jQuery) is uncertain about the height of the element that is sliding. This, in turn, is based on uncertainty about the _width_ — the width determines how lines wrap, and dictates the height.">
+
+
+<meta itemprop="datePublished" content="2011-02-10T08:59:00&#43;00:00" />
+<meta itemprop="dateModified" content="2011-02-10T08:59:00&#43;00:00" />
+<meta itemprop="wordCount" content="126">
+
+
+
+<meta itemprop="keywords" content="" />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Fixing the jQuery “jump” on slide"/>
+<meta name="twitter:description" content="You may notice in some situations, when using jQuery’s slideDown(), that the last little bit of the animation “jumps”. It feel un-smooth and frustrates those who like to dot our i’s. (Here an explanation.)
+The main issue is that the browser (and thus jQuery) is uncertain about the height of the element that is sliding. This, in turn, is based on uncertainty about the _width_ — the width determines how lines wrap, and dictates the height."/>
+
+  </head>
+
+  <body class="ma0 avenir bg-near-white">
+
+    
+   
+  
+
+  <header>
+    <div class="bg-black">
+      <nav class="pv3 ph3 ph4-ns" role="navigation">
+  <div class="flex-l justify-between items-center center">
+    <a href="http://example.org/" class="f3 fw2 hover-white no-underline white-90 dib">
+      My New Hugo Site
+    </a>
+    <div class="flex-l items-center">
+      
+      
+
+
+
+
+
+
+
+
+    </div>
+  </div>
+</nav>
+
+    </div>
+  </header>
+
+
+
+    <main class="pb7" role="main">
+      
+  <article class="flex-l flex-wrap justify-between mw8 center">
+
+    <header class="mt4 w-100">
+      <p class="f6 b helvetica tracked">
+          
+        BLOGS
+      </p>
+      <h1 class="f1 athelas mb1">Fixing the jQuery “jump” on slide</h1>
+      
+      <time class="f6 mv4 dib tracked" datetime="2011-02-10T08:59:00Z">February 10, 2011</time>
+    </header>
+
+    <main class="nested-copy-line-height lh-copy serif f4 nested-links nested-img mid-gray pr4-l w-two-thirds-l"><p>You may notice in some situations, when using jQuery’s slideDown(), that the last little bit of the animation “jumps”. It feel un-smooth and frustrates those who like to dot our i’s. (<a href="http://jqueryfordesigners.com/slidedown-animation-jump-revisited/">Here an explanation</a>.)</p>
+
+<p>The main issue is that the browser (and thus jQuery) is uncertain about the height of the element that is sliding. This, in turn, is based on uncertainty about the _width_ — the width determines how lines wrap, and dictates the height.</p>
+
+<p>If your width is defined in % or auto, it remains uncertain. So, to smooth the animation, let’s make it certain. Here’s a one-liner:</p>
+
+<p>$elementToSlide.width($elementToSlide.width());</p>
+
+<p>All it does is assign a pixel value to the width of the element, based on the … width of the element. Worked for me.</p>
+<ul class="pa0">
+  
+</ul>
+<div class="mt6">
+        
+      </div>
+    </main>
+
+    <aside class="w-30-l mt6-l">
+
+
+
+
+</aside>
+
+  </article>
+
+    </main>
+    <footer class="bg-near-black bottom-0 w-100 pa3" role="contentinfo">
+  <div class="flex justify-between">
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://example.org/" >
+    &copy; 2018 My New Hugo Site
+  </a>
+  
+
+
+
+
+
+
+
+
+  </div>
+</footer>
+
+    
+
+  <script src="/dist/js/app.3fc0f988d21662902933.js"></script>
+
+
+  </body>
+</html>

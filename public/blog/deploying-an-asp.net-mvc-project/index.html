@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+    <title>My New Hugo Site  | Deploying an ASP.net MVC project</title>
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+
+    <meta name="viewport" content="width=device-width,minimum-scale=1">
+    <meta name="generator" content="Hugo 0.40.3" />
+    
+    
+      <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
+    
+
+    
+    
+      <link href="/dist/css/app.ab4b67a3ea25990fa8279f3b7ef08b61.css" rel="stylesheet">
+    
+
+    
+
+    
+      
+    
+
+    
+
+    <meta property="og:title" content="Deploying an ASP.net MVC project" />
+<meta property="og:description" content="So, I was looking around for a simple way to emulate the “Publish” function of Visual Studio for my first ASP.net MVC project.
+I am doing my builds on a server with CruiseControl.Net. Google led me to things like msdeploy, which I am sure is great, but really I shouldn’t need another tool.
+I need two steps implemented as simply as possible:
+ Build it Move the built project to directory that IIS points to — but only the required files  The build step is straightforward and familiar to those who use CC: the MsBuild Task." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://example.org/blog/deploying-an-asp.net-mvc-project/" />
+
+
+
+<meta property="article:published_time" content="2009-09-10T17:17:15&#43;00:00"/>
+
+<meta property="article:modified_time" content="2009-09-10T17:17:15&#43;00:00"/>
+
+
+
+
+
+
+
+
+
+
+
+<meta itemprop="name" content="Deploying an ASP.net MVC project">
+<meta itemprop="description" content="So, I was looking around for a simple way to emulate the “Publish” function of Visual Studio for my first ASP.net MVC project.
+I am doing my builds on a server with CruiseControl.Net. Google led me to things like msdeploy, which I am sure is great, but really I shouldn’t need another tool.
+I need two steps implemented as simply as possible:
+ Build it Move the built project to directory that IIS points to — but only the required files  The build step is straightforward and familiar to those who use CC: the MsBuild Task.">
+
+
+<meta itemprop="datePublished" content="2009-09-10T17:17:15&#43;00:00" />
+<meta itemprop="dateModified" content="2009-09-10T17:17:15&#43;00:00" />
+<meta itemprop="wordCount" content="210">
+
+
+
+<meta itemprop="keywords" content="" />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Deploying an ASP.net MVC project"/>
+<meta name="twitter:description" content="So, I was looking around for a simple way to emulate the “Publish” function of Visual Studio for my first ASP.net MVC project.
+I am doing my builds on a server with CruiseControl.Net. Google led me to things like msdeploy, which I am sure is great, but really I shouldn’t need another tool.
+I need two steps implemented as simply as possible:
+ Build it Move the built project to directory that IIS points to — but only the required files  The build step is straightforward and familiar to those who use CC: the MsBuild Task."/>
+
+  </head>
+
+  <body class="ma0 avenir bg-near-white">
+
+    
+   
+  
+
+  <header>
+    <div class="bg-black">
+      <nav class="pv3 ph3 ph4-ns" role="navigation">
+  <div class="flex-l justify-between items-center center">
+    <a href="http://example.org/" class="f3 fw2 hover-white no-underline white-90 dib">
+      My New Hugo Site
+    </a>
+    <div class="flex-l items-center">
+      
+      
+
+
+
+
+
+
+
+
+    </div>
+  </div>
+</nav>
+
+    </div>
+  </header>
+
+
+
+    <main class="pb7" role="main">
+      
+  <article class="flex-l flex-wrap justify-between mw8 center">
+
+    <header class="mt4 w-100">
+      <p class="f6 b helvetica tracked">
+          
+        BLOGS
+      </p>
+      <h1 class="f1 athelas mb1">Deploying an ASP.net MVC project</h1>
+      
+      <time class="f6 mv4 dib tracked" datetime="2009-09-10T17:17:15Z">September 10, 2009</time>
+    </header>
+
+    <main class="nested-copy-line-height lh-copy serif f4 nested-links nested-img mid-gray pr4-l w-two-thirds-l"><p>So, I was looking around for a simple way to emulate the “Publish” function of Visual Studio for my first ASP.net MVC project.</p>
+
+<p>I am doing my builds on a server with CruiseControl.Net. Google led me to things like <a href="http://blogs.iis.net/msdeploy/">msdeploy</a>, which I am sure is great, but really I shouldn’t need another tool.</p>
+
+<p>I need two steps implemented as simply as possible:</p>
+
+<ul>
+<li>Build it</li>
+<li>Move the built project to directory that IIS points to — but only the <em>required</em> files</li>
+</ul>
+
+<p>The build step is straightforward and familiar to those who use CC: the <a href="http://confluence.public.thoughtworks.org/display/CCNET/MsBuild+Task">MsBuild Task</a>. It builds in-place.</p>
+
+<p>For the deployment, why complicate it? I just use robocopy to move the files from the built source, while being selective. Thus:</p>
+
+<p>robocopy “C:\MyStuff\Source\Alikewise.Web” “C:\MyStuff\Dev” *.dll *.aspx *.ascx *.asax *.master *.ico *.gif *.png *.jpg *.js *.css *.config /S /PURGE /XF *.pdb *.cs *.csproj *.t4 *.tt /XD .svn obj</p>
+
+<p>It looks long but that’s only because I am being very specific about what files to copy. A web project needs:</p>
+
+<ul>
+<li>dll’s</li>
+<li>views (aspx, ascx, asax and master files)</li>
+<li>images (png, gif, jpg, ico)</li>
+<li>CSS</li>
+<li>Javascript</li>
+<li>Config files</li>
+</ul>
+
+<p>That’s enough, but for good measure I make sure to exclude:</p>
+
+<ul>
+<li>C# source</li>
+<li>Debug files</li>
+<li>Project files</li>
+</ul>
+
+<p>And it works! Have a better suggestion? Lemme know.</p>
+<ul class="pa0">
+  
+</ul>
+<div class="mt6">
+        
+      </div>
+    </main>
+
+    <aside class="w-30-l mt6-l">
+
+
+
+
+</aside>
+
+  </article>
+
+    </main>
+    <footer class="bg-near-black bottom-0 w-100 pa3" role="contentinfo">
+  <div class="flex justify-between">
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://example.org/" >
+    &copy; 2018 My New Hugo Site
+  </a>
+  
+
+
+
+
+
+
+
+
+  </div>
+</footer>
+
+    
+
+  <script src="/dist/js/app.3fc0f988d21662902933.js"></script>
+
+
+  </body>
+</html>

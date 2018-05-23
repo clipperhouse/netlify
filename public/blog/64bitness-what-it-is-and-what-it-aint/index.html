@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+    <title>My New Hugo Site  | 64-bitness: what it is and what it ain’t</title>
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+
+    <meta name="viewport" content="width=device-width,minimum-scale=1">
+    <meta name="generator" content="Hugo 0.40.3" />
+    
+    
+      <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
+    
+
+    
+    
+      <link href="/dist/css/app.ab4b67a3ea25990fa8279f3b7ef08b61.css" rel="stylesheet">
+    
+
+    
+
+    
+      
+    
+
+    
+
+    <meta property="og:title" content="64-bitness: what it is and what it ain’t" />
+<meta property="og:description" content="Very interesting post from Rico Mariani on the why’s and why-not’s of doing 64-bit applications, specifically Visual Studio. It’s important to understand that Visual Studio is about manipulating code, not the data that your code will ultimately handle.
+This implies that, in order to truly exploit 64-bit, your program itself would need to be 4 gigabytes in size or larger.
+Photoshop will benefit from keeping a massive image file in memory." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://example.org/blog/64bitness-what-it-is-and-what-it-aint/" />
+
+
+
+<meta property="article:published_time" content="2009-06-12T15:49:00&#43;00:00"/>
+
+<meta property="article:modified_time" content="2009-06-12T15:49:00&#43;00:00"/>
+
+
+
+
+
+
+
+
+
+
+
+<meta itemprop="name" content="64-bitness: what it is and what it ain’t">
+<meta itemprop="description" content="Very interesting post from Rico Mariani on the why’s and why-not’s of doing 64-bit applications, specifically Visual Studio. It’s important to understand that Visual Studio is about manipulating code, not the data that your code will ultimately handle.
+This implies that, in order to truly exploit 64-bit, your program itself would need to be 4 gigabytes in size or larger.
+Photoshop will benefit from keeping a massive image file in memory.">
+
+
+<meta itemprop="datePublished" content="2009-06-12T15:49:00&#43;00:00" />
+<meta itemprop="dateModified" content="2009-06-12T15:49:00&#43;00:00" />
+<meta itemprop="wordCount" content="200">
+
+
+
+<meta itemprop="keywords" content="" />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="64-bitness: what it is and what it ain’t"/>
+<meta name="twitter:description" content="Very interesting post from Rico Mariani on the why’s and why-not’s of doing 64-bit applications, specifically Visual Studio. It’s important to understand that Visual Studio is about manipulating code, not the data that your code will ultimately handle.
+This implies that, in order to truly exploit 64-bit, your program itself would need to be 4 gigabytes in size or larger.
+Photoshop will benefit from keeping a massive image file in memory."/>
+
+  </head>
+
+  <body class="ma0 avenir bg-near-white">
+
+    
+   
+  
+
+  <header>
+    <div class="bg-black">
+      <nav class="pv3 ph3 ph4-ns" role="navigation">
+  <div class="flex-l justify-between items-center center">
+    <a href="http://example.org/" class="f3 fw2 hover-white no-underline white-90 dib">
+      My New Hugo Site
+    </a>
+    <div class="flex-l items-center">
+      
+      
+
+
+
+
+
+
+
+
+    </div>
+  </div>
+</nav>
+
+    </div>
+  </header>
+
+
+
+    <main class="pb7" role="main">
+      
+  <article class="flex-l flex-wrap justify-between mw8 center">
+
+    <header class="mt4 w-100">
+      <p class="f6 b helvetica tracked">
+          
+        BLOGS
+      </p>
+      <h1 class="f1 athelas mb1">64-bitness: what it is and what it ain’t</h1>
+      
+      <time class="f6 mv4 dib tracked" datetime="2009-06-12T15:49:00Z">June 12, 2009</time>
+    </header>
+
+    <main class="nested-copy-line-height lh-copy serif f4 nested-links nested-img mid-gray pr4-l w-two-thirds-l"><p>Very interesting post from Rico Mariani on the <a href="http://blogs.msdn.com/ricom/archive/2009/06/10/visual-studio-why-is-there-no-64-bit-version.aspx">why’s and why-not’s of doing 64-bit applications</a>, specifically Visual Studio. It’s important to understand that Visual Studio is about manipulating code, not the data that your code will ultimately handle.</p>
+
+<p>This implies that, in order to truly exploit 64-bit, your program <em>itself</em> would need to be 4 gigabytes in size or larger.</p>
+
+<p>Photoshop will benefit from keeping a massive image file in memory. In Visual Studio, the “file” is your source code (and its compiled and debug representations). There aren’t many programs that are comprised of 4G of code. I think the SQL Server executable is maybe 1G, max, and that’s a massive friggin’ program.</p>
+
+<p>The distinction: SQL Server, when deployed, may manipulate much more than 4G of data — so deploying it as a 64-bit executable makes sense. But the developers who write SQL Server would get almost no benefit from a 64-bit Visual Studio, since the program is much smaller than that.</p>
+
+<p>Rico concludes that your best bet is running 32-bit Visual Studio on a 64-bit operating system. This obviates a lot of the limitations that 32-bit operating systems place on their applications, without requiring VS itself to be 64-bit.</p>
+<ul class="pa0">
+  
+</ul>
+<div class="mt6">
+        
+      </div>
+    </main>
+
+    <aside class="w-30-l mt6-l">
+
+
+
+
+</aside>
+
+  </article>
+
+    </main>
+    <footer class="bg-near-black bottom-0 w-100 pa3" role="contentinfo">
+  <div class="flex justify-between">
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://example.org/" >
+    &copy; 2018 My New Hugo Site
+  </a>
+  
+
+
+
+
+
+
+
+
+  </div>
+</footer>
+
+    
+
+  <script src="/dist/js/app.3fc0f988d21662902933.js"></script>
+
+
+  </body>
+</html>

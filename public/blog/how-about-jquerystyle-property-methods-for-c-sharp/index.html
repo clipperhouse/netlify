@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+    <title>My New Hugo Site  | How about jQuery-style “property methods” for C#?</title>
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+
+    <meta name="viewport" content="width=device-width,minimum-scale=1">
+    <meta name="generator" content="Hugo 0.40.3" />
+    
+    
+      <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
+    
+
+    
+    
+      <link href="/dist/css/app.ab4b67a3ea25990fa8279f3b7ef08b61.css" rel="stylesheet">
+    
+
+    
+
+    
+      
+    
+
+    
+
+    <meta property="og:title" content="How about jQuery-style “property methods” for C#?" />
+<meta property="og:description" content="Here’s an idiom that I think would be useful in C#: “property methods” in the style of jQuery.
+There are many methods in jQ — html(), val(), width() — that are getters when they are called without an argument, and setters when they are. This makes for some very nice fluent code: $(“#someElement”).width(“100px”).html(“hello there”);
+window.alert(“The width of #someElement is ” &#43; $(“#someElement”).width());
+I’d love to be able to do this in C#, to bring in some of that fluency and terseness." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://example.org/blog/how-about-jquerystyle-property-methods-for-c-sharp/" />
+
+
+
+<meta property="article:published_time" content="2010-02-23T21:56:00&#43;00:00"/>
+
+<meta property="article:modified_time" content="2010-02-23T21:56:00&#43;00:00"/>
+
+
+
+
+
+
+
+
+
+
+
+<meta itemprop="name" content="How about jQuery-style “property methods” for C#?">
+<meta itemprop="description" content="Here’s an idiom that I think would be useful in C#: “property methods” in the style of jQuery.
+There are many methods in jQ — html(), val(), width() — that are getters when they are called without an argument, and setters when they are. This makes for some very nice fluent code: $(“#someElement”).width(“100px”).html(“hello there”);
+window.alert(“The width of #someElement is ” &#43; $(“#someElement”).width());
+I’d love to be able to do this in C#, to bring in some of that fluency and terseness.">
+
+
+<meta itemprop="datePublished" content="2010-02-23T21:56:00&#43;00:00" />
+<meta itemprop="dateModified" content="2010-02-23T21:56:00&#43;00:00" />
+<meta itemprop="wordCount" content="324">
+
+
+
+<meta itemprop="keywords" content="" />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="How about jQuery-style “property methods” for C#?"/>
+<meta name="twitter:description" content="Here’s an idiom that I think would be useful in C#: “property methods” in the style of jQuery.
+There are many methods in jQ — html(), val(), width() — that are getters when they are called without an argument, and setters when they are. This makes for some very nice fluent code: $(“#someElement”).width(“100px”).html(“hello there”);
+window.alert(“The width of #someElement is ” &#43; $(“#someElement”).width());
+I’d love to be able to do this in C#, to bring in some of that fluency and terseness."/>
+
+  </head>
+
+  <body class="ma0 avenir bg-near-white">
+
+    
+   
+  
+
+  <header>
+    <div class="bg-black">
+      <nav class="pv3 ph3 ph4-ns" role="navigation">
+  <div class="flex-l justify-between items-center center">
+    <a href="http://example.org/" class="f3 fw2 hover-white no-underline white-90 dib">
+      My New Hugo Site
+    </a>
+    <div class="flex-l items-center">
+      
+      
+
+
+
+
+
+
+
+
+    </div>
+  </div>
+</nav>
+
+    </div>
+  </header>
+
+
+
+    <main class="pb7" role="main">
+      
+  <article class="flex-l flex-wrap justify-between mw8 center">
+
+    <header class="mt4 w-100">
+      <p class="f6 b helvetica tracked">
+          
+        BLOGS
+      </p>
+      <h1 class="f1 athelas mb1">How about jQuery-style “property methods” for C#?</h1>
+      
+      <time class="f6 mv4 dib tracked" datetime="2010-02-23T21:56:00Z">February 23, 2010</time>
+    </header>
+
+    <main class="nested-copy-line-height lh-copy serif f4 nested-links nested-img mid-gray pr4-l w-two-thirds-l"><p>Here’s an idiom that I think would be useful in C#: “property methods” in the style of jQuery.</p>
+
+<p>There are many methods in jQ — html(), val(), width() — that are getters when they are called without an argument, and setters when they are. This makes for some very nice fluent code:
+$(“#someElement”).width(“100px”).html(“hello there”);<br />
+window.alert(“The width of #someElement is ” + $(“#someElement”).width());</p>
+
+<p>I’d love to be able to do this in C#, to bring in some of that fluency and terseness. For example, I currently have to write:
+myPerson.FirstName = “Joe”;<br />
+myPerson.LastName = “Smith”;<br />
+myPerson.ZipCode = “12345”;</p>
+
+<p>The code smell here is that I refer to myPerson 3 times. Don’t you just wanna say “Yeah, I get it, myPerson, sheesh.” Wouldn’t it be better to write:
+myPerson.FirstName(“Joe”).LastName(“Smith”).ZipCode(“12345”);</p>
+
+<p>Of course I could implement the above with overloads and private fields. But I shouldn’t need to do that much notation.</p>
+
+<p>I think it can be done in C# without new keywords. Simply allow methods to have get and set bodies:
+public class Person<br />
+{<br />
+public string FirstName() { get; set ; }<br />
+public string LastName () { get; set ; }<br />
+public string ZipCode () { get; set ; }<br />
+}</p>
+
+<p>The compiler would interpret these much like regular properties, backed by (automagical) private fields, with the caveat that a passed value invokes <em>set</em>. <strong>The setter returns the parent object</strong>, giving us the fluency.</p>
+
+<p>And as with properties, you could add bodies to get and set as you desire, where the <em>value</em> argument is implied for <em>set</em>.</p>
+
+<p>Overall, this is the equivalent of:
+public class Person<br />
+{<br />
+public string FirstName() // getter<br />
+{<br />
+ return _FirstName;<br />
+}public Person FirstName(string value) // setter<br />
+{<br />
+ _FirstName = value;<br />
+ return this; // the fluent bit<br />
+}private string _FirstName; // backing store</p>
+
+<p>//…and repeat for each property<br />
+}</p>
+
+<p>Again, I <em>could</em> write my classes this way. But that would be so much boilerplate, uninformative code. Please compiler, do it for me.</p>
+<ul class="pa0">
+  
+</ul>
+<div class="mt6">
+        
+      </div>
+    </main>
+
+    <aside class="w-30-l mt6-l">
+
+
+
+
+</aside>
+
+  </article>
+
+    </main>
+    <footer class="bg-near-black bottom-0 w-100 pa3" role="contentinfo">
+  <div class="flex justify-between">
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://example.org/" >
+    &copy; 2018 My New Hugo Site
+  </a>
+  
+
+
+
+
+
+
+
+
+  </div>
+</footer>
+
+    
+
+  <script src="/dist/js/app.3fc0f988d21662902933.js"></script>
+
+
+  </body>
+</html>

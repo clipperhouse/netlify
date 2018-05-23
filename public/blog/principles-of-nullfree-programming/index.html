@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+    <title>My New Hugo Site  | Principles of null-free programming</title>
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+
+    <meta name="viewport" content="width=device-width,minimum-scale=1">
+    <meta name="generator" content="Hugo 0.40.3" />
+    
+    
+      <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
+    
+
+    
+    
+      <link href="/dist/css/app.ab4b67a3ea25990fa8279f3b7ef08b61.css" rel="stylesheet">
+    
+
+    
+
+    
+      
+    
+
+    
+
+    <meta property="og:title" content="Principles of null-free programming" />
+<meta property="og:description" content="Nulls are a notorious source of bugs in many programming languages. Here, I sketch out a way to avoid them, using C# for illustration.
+To be clear, this post is intended as habits for human programmers; it is specifically not about static analysis or language features.
+Principles I submit that we can avoid a large majority of null-related errors if we follow these two principles:
+ Passing a null is a programming error Branching on null is a programming error  I think most of our problems trace back to imbuing null with meaning, i." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://example.org/blog/principles-of-nullfree-programming/" />
+
+
+
+<meta property="article:published_time" content="2016-03-02T19:35:42&#43;00:00"/>
+
+<meta property="article:modified_time" content="2016-03-02T19:35:42&#43;00:00"/>
+
+
+
+
+
+
+
+
+
+
+
+<meta itemprop="name" content="Principles of null-free programming">
+<meta itemprop="description" content="Nulls are a notorious source of bugs in many programming languages. Here, I sketch out a way to avoid them, using C# for illustration.
+To be clear, this post is intended as habits for human programmers; it is specifically not about static analysis or language features.
+Principles I submit that we can avoid a large majority of null-related errors if we follow these two principles:
+ Passing a null is a programming error Branching on null is a programming error  I think most of our problems trace back to imbuing null with meaning, i.">
+
+
+<meta itemprop="datePublished" content="2016-03-02T19:35:42&#43;00:00" />
+<meta itemprop="dateModified" content="2016-03-02T19:35:42&#43;00:00" />
+<meta itemprop="wordCount" content="547">
+
+
+
+<meta itemprop="keywords" content="" />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Principles of null-free programming"/>
+<meta name="twitter:description" content="Nulls are a notorious source of bugs in many programming languages. Here, I sketch out a way to avoid them, using C# for illustration.
+To be clear, this post is intended as habits for human programmers; it is specifically not about static analysis or language features.
+Principles I submit that we can avoid a large majority of null-related errors if we follow these two principles:
+ Passing a null is a programming error Branching on null is a programming error  I think most of our problems trace back to imbuing null with meaning, i."/>
+
+  </head>
+
+  <body class="ma0 avenir bg-near-white">
+
+    
+   
+  
+
+  <header>
+    <div class="bg-black">
+      <nav class="pv3 ph3 ph4-ns" role="navigation">
+  <div class="flex-l justify-between items-center center">
+    <a href="http://example.org/" class="f3 fw2 hover-white no-underline white-90 dib">
+      My New Hugo Site
+    </a>
+    <div class="flex-l items-center">
+      
+      
+
+
+
+
+
+
+
+
+    </div>
+  </div>
+</nav>
+
+    </div>
+  </header>
+
+
+
+    <main class="pb7" role="main">
+      
+  <article class="flex-l flex-wrap justify-between mw8 center">
+
+    <header class="mt4 w-100">
+      <p class="f6 b helvetica tracked">
+          
+        BLOGS
+      </p>
+      <h1 class="f1 athelas mb1">Principles of null-free programming</h1>
+      
+      <time class="f6 mv4 dib tracked" datetime="2016-03-02T19:35:42Z">March 2, 2016</time>
+    </header>
+
+    <main class="nested-copy-line-height lh-copy serif f4 nested-links nested-img mid-gray pr4-l w-two-thirds-l">
+
+<p>Nulls are a notorious source of bugs in many programming languages. Here, I sketch out a way to avoid them, using C# for illustration.</p>
+
+<p>To be clear, this post is intended as <strong>habits for human programmers</strong>; it is specifically <em>not</em> about static analysis or language features.</p>
+
+<h4 id="principles">Principles</h4>
+
+<p>I submit that we can avoid a large majority of null-related errors if we follow these two principles:</p>
+
+<ul>
+<li>Passing a null is a programming error</li>
+<li>Branching on null is a programming error</li>
+</ul>
+
+<p>I think most of our problems trace back to imbuing null with meaning, i.e., we use it as a signal.</p>
+
+<p>I submit that null is the <strong>absence of meaning</strong>. It is not a <em>de facto</em> Boolean describing existence. Rather, it should be treated non-deterministically.</p>
+
+<p>This implies that <strong>most functions should not “handle” null</strong>. Because null is the absence of meaning, we can not use it to make a decision.</p>
+
+<p>When a method receives a null, and throws, it should be interpreted as a <strong>bug in the caller</strong>. (Admirably, C#’s LINQ methods do this.)</p>
+
+<h4 id="some-patterns">Some patterns</h4>
+
+<p>One great way of avoiding null is to have a better definition of non-existence. For example, where we might be tempted to define non-existence as null, let’s define it as <strong>a collection of length zero</strong>. <a href="https://en.wikipedia.org/wiki/Option_type">Option type</a> implementations often look like this.</p>
+
+<p>In C#, “by ID” database calls will typically return null if such a record does not exist. In LINQ, it’s expressed as a FirstOrDefault or SingleOrDefault, which return null on “not found”. Or, one can call First or Single methods which throw on same. I consider both to be bad semantics.</p>
+
+<p>Rather, consider a pattern based on an explicit Boolean for existence, and where <strong>null is not in our vocabulary</strong>:
+<code>Thing t;  
+if (!TryThingById(12345, out t)) {  
+    return &amp;#34;Sorry, not found!&amp;#34;;  
+}</code><code>// …do as you wish with t, without worrying about null</code></p>
+
+<p>The Try pseudocode would look something like:
+<code>bool TryThingById(int id, out Thing t) {  
+    var rows = DB.Query(&amp;#34;select * from Things where ID = ?&amp;#34;, id);  
+    if (rows.Length == 0) {  
+        return false; // t is indeed null but should be irrelevant  
+    }  
+    if (rows.Length == 1) {  
+        t = rows[0];  
+        return true;  
+    }  
+    throw; // there’s a database problem  
+}</code></p>
+
+<p>I believe this code follows our Principles above: we don’t pass a null, and we don’t branch on one either.</p>
+
+<p>A common idiom in C# is to use <strong>optional parameters</strong>, with null as the default value:
+<code>void Foo(int id, Bar bar = null, Baz baz = null)</code></p>
+
+<p>When I see a method signature like this, I have $5 that says the method’s implementation branches on those parameters. Which means that parameters are no longer just values, but are control flow. Bad semantics.</p>
+
+<p>Instead, consider creating several methods with good names, and which <strong>accept and require only the parameters they use</strong> – no more optionals. “Branching” is done via method resolution, about which we can more easily reason.</p>
+
+<hr />
+
+<p>What’s nice about the above code is that nulls are not mentioned, or even relevant. Of <em>course</em> a caller can do the wrong thing, but now the word “null” sticks out as a code smell.</p>
+
+<p>Again, these are patterns for humans, not static guarantees. But now we can lint for strings like “null”, and have a good chance of catching errors.</p>
+<ul class="pa0">
+  
+</ul>
+<div class="mt6">
+        
+      </div>
+    </main>
+
+    <aside class="w-30-l mt6-l">
+
+
+
+
+</aside>
+
+  </article>
+
+    </main>
+    <footer class="bg-near-black bottom-0 w-100 pa3" role="contentinfo">
+  <div class="flex justify-between">
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://example.org/" >
+    &copy; 2018 My New Hugo Site
+  </a>
+  
+
+
+
+
+
+
+
+
+  </div>
+</footer>
+
+    
+
+  <script src="/dist/js/app.3fc0f988d21662902933.js"></script>
+
+
+  </body>
+</html>

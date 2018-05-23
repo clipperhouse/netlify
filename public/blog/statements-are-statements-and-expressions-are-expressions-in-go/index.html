@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+    <title>My New Hugo Site  | Statements are statements, and expressions are expressions (in Go)</title>
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+
+    <meta name="viewport" content="width=device-width,minimum-scale=1">
+    <meta name="generator" content="Hugo 0.40.3" />
+    
+    
+      <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
+    
+
+    
+    
+      <link href="/dist/css/app.ab4b67a3ea25990fa8279f3b7ef08b61.css" rel="stylesheet">
+    
+
+    
+
+    
+      
+    
+
+    
+
+    <meta property="og:title" content="Statements are statements, and expressions are expressions (in Go)" />
+<meta property="og:description" content="I got trolled by a facetious article on Go on April 1. But it did trigger a conversation about why Go doesn’t do certain things other languages do.
+The answer, in several cases, is that Go chooses to make a clear distinction between expressions and statements. It chooses not to conflate them.
+By way of definition, an expression is a thing that has (returns) a value. A statement is an imperative command to do something, but itself does not have a value." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://example.org/blog/statements-are-statements-and-expressions-are-expressions-in-go/" />
+
+
+
+<meta property="article:published_time" content="2015-04-03T19:03:15&#43;00:00"/>
+
+<meta property="article:modified_time" content="2015-04-03T19:03:15&#43;00:00"/>
+
+
+
+
+
+
+
+
+
+
+
+<meta itemprop="name" content="Statements are statements, and expressions are expressions (in Go)">
+<meta itemprop="description" content="I got trolled by a facetious article on Go on April 1. But it did trigger a conversation about why Go doesn’t do certain things other languages do.
+The answer, in several cases, is that Go chooses to make a clear distinction between expressions and statements. It chooses not to conflate them.
+By way of definition, an expression is a thing that has (returns) a value. A statement is an imperative command to do something, but itself does not have a value.">
+
+
+<meta itemprop="datePublished" content="2015-04-03T19:03:15&#43;00:00" />
+<meta itemprop="dateModified" content="2015-04-03T19:03:15&#43;00:00" />
+<meta itemprop="wordCount" content="371">
+
+
+
+<meta itemprop="keywords" content="" />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Statements are statements, and expressions are expressions (in Go)"/>
+<meta name="twitter:description" content="I got trolled by a facetious article on Go on April 1. But it did trigger a conversation about why Go doesn’t do certain things other languages do.
+The answer, in several cases, is that Go chooses to make a clear distinction between expressions and statements. It chooses not to conflate them.
+By way of definition, an expression is a thing that has (returns) a value. A statement is an imperative command to do something, but itself does not have a value."/>
+
+  </head>
+
+  <body class="ma0 avenir bg-near-white">
+
+    
+   
+  
+
+  <header>
+    <div class="bg-black">
+      <nav class="pv3 ph3 ph4-ns" role="navigation">
+  <div class="flex-l justify-between items-center center">
+    <a href="http://example.org/" class="f3 fw2 hover-white no-underline white-90 dib">
+      My New Hugo Site
+    </a>
+    <div class="flex-l items-center">
+      
+      
+
+
+
+
+
+
+
+
+    </div>
+  </div>
+</nav>
+
+    </div>
+  </header>
+
+
+
+    <main class="pb7" role="main">
+      
+  <article class="flex-l flex-wrap justify-between mw8 center">
+
+    <header class="mt4 w-100">
+      <p class="f6 b helvetica tracked">
+          
+        BLOGS
+      </p>
+      <h1 class="f1 athelas mb1">Statements are statements, and expressions are expressions (in Go)</h1>
+      
+      <time class="f6 mv4 dib tracked" datetime="2015-04-03T19:03:15Z">April 3, 2015</time>
+    </header>
+
+    <main class="nested-copy-line-height lh-copy serif f4 nested-links nested-img mid-gray pr4-l w-two-thirds-l">
+
+<p>I got <a href="https://twitter.com/clipperhouse/status/583393327757860864">trolled</a> by a facetious article on Go on April 1. But it did trigger a conversation about why Go doesn’t do certain things other languages do.</p>
+
+<p>The answer, in several cases, is that Go chooses to make a clear distinction between expressions and statements. It chooses not to conflate them.</p>
+
+<p>By way of definition, an expression is a thing that has (returns) a value. A statement is an imperative command to <em>do something</em>, but itself does not have a value.</p>
+
+<p>I’ll use C# by way of comparison.</p>
+
+<h4 id="increment-operators">Increment operators</h4>
+
+<p>Most C-family languages have an operator like a++, which says “increment the value of a value by 1”.</p>
+
+<p>In most languages, this expression has a return value. In Go, it does not.</p>
+
+<p><strong>C#</strong></p>
+
+<p>var a = 5;<br />
+Console.WriteLine(a++);<br />
+// prints 5 (though a is now valued at 6)</p>
+
+<p><strong>Go</strong></p>
+
+<p>a := 5<br />
+fmt.Println(a++)<br />
+// syntax error: unexpected ++</p>
+
+<p>To be clear, a++ is a valid statement in Go; it increments by 1. It does not, however, return a value, avoiding error-prone patterns like if (a++ == 6) { …</p>
+
+<h4 id="assignment">Assignment</h4>
+
+<p>In C#, assignments have return values.</p>
+
+<p><strong>C#</strong></p>
+
+<p>int a;<br />
+Console.WriteLine(a = 5);<br />
+// prints 5</p>
+
+<p>The expression a = 5 has a return value of 5. Further shenanigans:</p>
+
+<p>int a;<br />
+Console.WriteLine((a = 5) == 5);<br />
+// prints True</p>
+
+<p>The expression (a = 5) returns a value of 5, which is then compared to 5.</p>
+
+<p><strong>Go</strong></p>
+
+<p>In Go, assignments are statements.</p>
+
+<p>a := 5<br />
+fmt.Println(a = 6)<br />
+// syntax error: unexpected =</p>
+
+<p>a = 6 is a valid statement. It is not, however, an expression (and thus can’t be evaluated and printed).</p>
+
+<h4 id="ternaries">Ternaries</h4>
+
+<p>You are probably familiar with an expression like condition ? value : other. It’s generally understood as syntactic sugar for an if-else statement, with a return value.</p>
+
+<p><strong>C#</strong></p>
+
+<p>var temp = 50;<br />
+Console.WriteLine(temp &gt; 30 ? “warm” : “cold”);<br />
+// prints warm</p>
+
+<p><strong>Go</strong></p>
+
+<p>Go doesn’t have ternaries! Reason being, it’s sugar for an if-else, and if-else’s are statements, not expressions.</p>
+
+<p>You may be detecting a pattern here: Go prefers orthogonality over sugar. There are classes of (human) error that result from a statement also being an expression, and Go chooses to make that class of error less likely.</p>
+<ul class="pa0">
+  
+</ul>
+<div class="mt6">
+        
+      </div>
+    </main>
+
+    <aside class="w-30-l mt6-l">
+
+
+
+
+</aside>
+
+  </article>
+
+    </main>
+    <footer class="bg-near-black bottom-0 w-100 pa3" role="contentinfo">
+  <div class="flex justify-between">
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://example.org/" >
+    &copy; 2018 My New Hugo Site
+  </a>
+  
+
+
+
+
+
+
+
+
+  </div>
+</footer>
+
+    
+
+  <script src="/dist/js/app.3fc0f988d21662902933.js"></script>
+
+
+  </body>
+</html>

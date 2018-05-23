@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+    <title>My New Hugo Site  | Debugging is debugging</title>
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+
+    <meta name="viewport" content="width=device-width,minimum-scale=1">
+    <meta name="generator" content="Hugo 0.40.3" />
+    
+    
+      <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
+    
+
+    
+    
+      <link href="/dist/css/app.ab4b67a3ea25990fa8279f3b7ef08b61.css" rel="stylesheet">
+    
+
+    
+
+    
+      
+    
+
+    
+
+    <meta property="og:title" content="Debugging is debugging" />
+<meta property="og:description" content="I use CoffeeScript here and there. And JavaScript everywhere else.
+Depending on the scenario, and this is a matter of taste, CoffeeScript is more elegant, readable, and usable.
+When offering this notion, inevitably there is a complaint about “debugging.” CS is generating code, it’s a layer of abstraction, which will lead to frustration, etc.
+The question is, compared to what? When JavaScript is not behaving as you wish, what do you do?" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://example.org/blog/debugging-is-debugging/" />
+
+
+
+<meta property="article:published_time" content="2013-03-17T17:38:25&#43;00:00"/>
+
+<meta property="article:modified_time" content="2013-03-17T17:38:25&#43;00:00"/>
+
+
+
+
+
+
+
+
+
+
+
+<meta itemprop="name" content="Debugging is debugging">
+<meta itemprop="description" content="I use CoffeeScript here and there. And JavaScript everywhere else.
+Depending on the scenario, and this is a matter of taste, CoffeeScript is more elegant, readable, and usable.
+When offering this notion, inevitably there is a complaint about “debugging.” CS is generating code, it’s a layer of abstraction, which will lead to frustration, etc.
+The question is, compared to what? When JavaScript is not behaving as you wish, what do you do?">
+
+
+<meta itemprop="datePublished" content="2013-03-17T17:38:25&#43;00:00" />
+<meta itemprop="dateModified" content="2013-03-17T17:38:25&#43;00:00" />
+<meta itemprop="wordCount" content="423">
+
+
+
+<meta itemprop="keywords" content="" />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Debugging is debugging"/>
+<meta name="twitter:description" content="I use CoffeeScript here and there. And JavaScript everywhere else.
+Depending on the scenario, and this is a matter of taste, CoffeeScript is more elegant, readable, and usable.
+When offering this notion, inevitably there is a complaint about “debugging.” CS is generating code, it’s a layer of abstraction, which will lead to frustration, etc.
+The question is, compared to what? When JavaScript is not behaving as you wish, what do you do?"/>
+
+  </head>
+
+  <body class="ma0 avenir bg-near-white">
+
+    
+   
+  
+
+  <header>
+    <div class="bg-black">
+      <nav class="pv3 ph3 ph4-ns" role="navigation">
+  <div class="flex-l justify-between items-center center">
+    <a href="http://example.org/" class="f3 fw2 hover-white no-underline white-90 dib">
+      My New Hugo Site
+    </a>
+    <div class="flex-l items-center">
+      
+      
+
+
+
+
+
+
+
+
+    </div>
+  </div>
+</nav>
+
+    </div>
+  </header>
+
+
+
+    <main class="pb7" role="main">
+      
+  <article class="flex-l flex-wrap justify-between mw8 center">
+
+    <header class="mt4 w-100">
+      <p class="f6 b helvetica tracked">
+          
+        BLOGS
+      </p>
+      <h1 class="f1 athelas mb1">Debugging is debugging</h1>
+      
+      <time class="f6 mv4 dib tracked" datetime="2013-03-17T17:38:25Z">March 17, 2013</time>
+    </header>
+
+    <main class="nested-copy-line-height lh-copy serif f4 nested-links nested-img mid-gray pr4-l w-two-thirds-l"><p>I use CoffeeScript <a href="https://github.com/clipperhouse/classicalrad.io">here</a> and <a href="https://github.com/clipperhouse/BetterBird">there</a>. And JavaScript everywhere else.</p>
+
+<p>Depending on the scenario, and this is a matter of taste, CoffeeScript is more elegant, readable, and usable.</p>
+
+<p>When offering this notion, inevitably there is a complaint about “debugging.” CS is generating code, it’s a layer of abstraction, which will lead to frustration, etc.</p>
+
+<p>The question is, compared to what? When JavaScript is not behaving as you wish, what do you do?</p>
+
+<p>You debug it. You log, you hit breakpoints, and most importantly, you build a mental model of how the program is behaving.</p>
+
+<p>Did you learn about truthiness and ‘this’ in JS by <em>logic</em>? Ex post facto maybe. But you debugged your way to that understanding.</p>
+
+<p>CoffeeScript is identical in this regard. It has syntax, and semantics. You write code, see what it does, change it, see what it does. You build a mental model.</p>
+
+<p>CoffeeScript doesn’t make a program easier to debug; it also doesn’t make it harder. Semantics. Behavior. Mental model. Rinse and repeat.</p>
+
+<p>What CoffeeScript does do, in my experience, it make trivial debugging less likely.</p>
+
+<p>Because it’s whitespace-significant, you are unlikely to miss a closing brace. Because it has sensible iterators, you are not going to fuck it up Google it for the 50th time. Because it has ?, you are not going to choose among false, falsy, null, undefined, typeof, instanceof. For the 50th time.</p>
+
+<p>Maybe I’m projecting. I am sure you’re adept with the above issues. You’ve memorized them over time, hammered JS’s behaviors into your head, experimented and built a robust mental model. Which is great!</p>
+
+<p>But there might be a bit of <a href="http://www.youtube.com/watch?v=ekeELle5g-o"><em>challenge accepted</em></a> in there, if we’re honest. JS is tedious and idiosyncratic — which is how normals see programming in general. Our ability to reason through that stuff to make something useful is where we derive our reward.</p>
+
+<p>For me, and more so over time, shipping is where I derive my reward. Correctness is rewarding. Code that looks like what it does, is rewarding. So CoffeeScript, for me, is rewarding.</p>
+
+<p>—</p>
+
+<p>A couple of addenda — in terms of the ‘taste’ thing, I’ve settled on CS on the server (if using node) and plain JS on the client. The difference is that the latter requires a build step while the former does not. coffee app.coffee just works, no hint of JS.</p>
+
+<p>And source maps are a nice tool, so I can imagine that objection to the CS abstraction. Looks like CS got <a href="http://coffeescript.org/#source-maps">support</a> for that as well, but haven’t yet tried it.</p>
+<ul class="pa0">
+  
+</ul>
+<div class="mt6">
+        
+      </div>
+    </main>
+
+    <aside class="w-30-l mt6-l">
+
+
+
+
+</aside>
+
+  </article>
+
+    </main>
+    <footer class="bg-near-black bottom-0 w-100 pa3" role="contentinfo">
+  <div class="flex justify-between">
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://example.org/" >
+    &copy; 2018 My New Hugo Site
+  </a>
+  
+
+
+
+
+
+
+
+
+  </div>
+</footer>
+
+    
+
+  <script src="/dist/js/app.3fc0f988d21662902933.js"></script>
+
+
+  </body>
+</html>

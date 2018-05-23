@@ -1,0 +1,1462 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <url>
+    <loc>http://example.org/blog/the-makings-of-a-strategy/</loc>
+    <lastmod>2018-05-02T14:31:10+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/blog/toward-less-injection/</loc>
+    <lastmod>2017-09-18T21:41:19+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/blog/kpis-are-software/</loc>
+    <lastmod>2016-10-28T15:52:42+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/blog/time-well-spent/</loc>
+    <lastmod>2016-04-07T15:54:41+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/blog/decker-for-a-prettier-twitter/</loc>
+    <lastmod>2016-03-10T20:02:56+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/blog/lore/</loc>
+    <lastmod>2016-03-10T16:39:52+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/blog/principles-of-nullfree-programming/</loc>
+    <lastmod>2016-03-02T19:35:42+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/blog/imagining-version-control-for-apis/</loc>
+    <lastmod>2015-12-21T00:49:04+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/blog/three-ways-the-new-ios-ad-blocking-hurts-google/</loc>
+    <lastmod>2015-09-18T14:43:21+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/blog/three-outcomes-of-the-adpocalypse/</loc>
+    <lastmod>2015-09-07T22:08:57+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/blog/improve-the-median-not-the-mean/</loc>
+    <lastmod>2015-04-20T21:13:18+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/blog/liquidity-open-source-and-security/</loc>
+    <lastmod>2015-04-04T19:40:53+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/blog/statements-are-statements-and-expressions-are-expressions-in-go/</loc>
+    <lastmod>2015-04-03T19:03:15+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/blog/theory-of-the-firm-optin-initiatives/</loc>
+    <lastmod>2015-03-08T20:01:19+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/blog/bugs-are-a-failure-of-prediction/</loc>
+    <lastmod>2015-02-07T23:12:58+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/blog/the-legacy-ad-industry-is-wrong-about-ad-blockers/</loc>
+    <lastmod>2015-02-03T23:17:14+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/blog/embedding-a-struct-declaration-in-a-text-template-in-go/</loc>
+    <lastmod>2015-01-31T23:38:25+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/blog/uncanny-valley-tech-recruiting/</loc>
+    <lastmod>2015-01-22T19:52:41+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/blog/yes-net-neutrality-is-conservative.-thats-the-problem./</loc>
+    <lastmod>2014-11-16T19:16:36+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/blog/my-security-and-privacy-tools/</loc>
+    <lastmod>2014-10-14T00:41:55+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/blog/a-type-system-in-runtimes-clothing/</loc>
+    <lastmod>2014-08-25T23:19:31+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/blog/hierarchy-and-orthogonality-in-c-sharp-and-go/</loc>
+    <lastmod>2014-08-25T00:17:39+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/blog/know-your-guarantees-go-edition/</loc>
+    <lastmod>2014-07-12T01:53:50+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/blog/the-two-edges-of-culture-fit/</loc>
+    <lastmod>2014-07-01T15:00:01+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/blog/how-a-savvy-landlord-would-handle-airbnb/</loc>
+    <lastmod>2014-06-21T03:55:58+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/blog/de-facto-immutability/</loc>
+    <lastmod>2014-06-05T23:23:47+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/blog/what-netflix-bought-from-comcast-is-a-cdn/</loc>
+    <lastmod>2014-05-08T00:40:39+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/blog/middle-class-in-nyc/</loc>
+    <lastmod>2014-05-04T16:15:54+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/blog/nyc-doesnt-need-to-be-silicon-valley/</loc>
+    <lastmod>2014-04-28T19:04:34+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/blog/an-idea-for-bookifying-the-web/</loc>
+    <lastmod>2014-04-19T19:16:25+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/blog/web-components-have-we-not-been-here-before/</loc>
+    <lastmod>2014-03-31T16:15:30+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/blog/nesting-is-state/</loc>
+    <lastmod>2014-03-30T18:05:25+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/blog/ben-horowitz-on-wagefixing/</loc>
+    <lastmod>2014-03-23T17:11:46+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/blog/what-stack-overflow-and-go-have-in-common/</loc>
+    <lastmod>2014-03-21T14:59:42+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/blog/how-i-optimize-conversations/</loc>
+    <lastmod>2014-03-15T20:12:03+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/blog/threshold-thinking/</loc>
+    <lastmod>2014-02-18T21:25:06+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/blog/the-trouble-with-interfaces-in-go/</loc>
+    <lastmod>2014-02-04T03:35:38+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/blog/new-release-of-gen/</loc>
+    <lastmod>2014-01-26T17:33:53+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/blog/another-reason-publishers-should-adopt-ssl-referrers/</loc>
+    <lastmod>2014-01-22T21:58:47+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/blog/publishers-and-ssl/</loc>
+    <lastmod>2013-12-15T19:20:56+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/blog/multicredentialing/</loc>
+    <lastmod>2013-10-28T01:25:53+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/blog/progress-bars-cannot-be-accurate/</loc>
+    <lastmod>2013-10-23T01:52:42+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/blog/your-site-doesnt-need-a-novel-progress-indicator/</loc>
+    <lastmod>2013-09-18T14:32:10+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/blog/language-and-social-signaling/</loc>
+    <lastmod>2013-08-24T19:23:44+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/blog/1.6-percent-of-what/</loc>
+    <lastmod>2013-08-11T21:05:23+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/blog/incidence-of-compulsion/</loc>
+    <lastmod>2013-07-18T00:09:08+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/blog/epistemology-and-human-factors-deal-with-em/</loc>
+    <lastmod>2013-06-20T22:05:06+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/blog/ocd-is-id-high-standards-are-ego/</loc>
+    <lastmod>2013-06-16T18:17:10+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/blog/a-few-thoughts-on-flat/</loc>
+    <lastmod>2013-06-12T19:27:18+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/blog/for-want-of-parens-in-ruby/</loc>
+    <lastmod>2013-06-03T01:54:15+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/blog/fasctimidating/</loc>
+    <lastmod>2013-06-02T17:36:37+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/blog/alerts-as-spam/</loc>
+    <lastmod>2013-05-15T15:42:05+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/blog/what-if-source-code-were-a-serialized-syntax-tree/</loc>
+    <lastmod>2013-04-04T02:41:46+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/blog/debugging-is-debugging/</loc>
+    <lastmod>2013-03-17T17:38:25+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/blog/your-phone-is-faster-than-amtraks-wifi/</loc>
+    <lastmod>2013-01-11T15:18:18+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/blog/ad-blocking-like-piracy-is-a-market-phenomenon/</loc>
+    <lastmod>2013-01-07T04:07:36+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/blog/labor-costs-make-way-for-maslow/</loc>
+    <lastmod>2012-12-09T02:58:58+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/blog/a-political-approach-to-hiring-creatives/</loc>
+    <lastmod>2012-09-08T18:14:10+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/blog/microsofts-political-privacy-game/</loc>
+    <lastmod>2012-08-08T18:55:59+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/blog/the-quaintness-of-content-vs-infrastructure/</loc>
+    <lastmod>2012-08-02T03:20:25+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/blog/the-good-might-be-the-enemy-of-the-perfect-with-software-patents/</loc>
+    <lastmod>2012-08-02T02:44:34+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/blog/two-billiondollar-ui-mistakes-in-windows-8/</loc>
+    <lastmod>2012-08-01T18:22:14+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/blog/resolution-vs-real-estate/</loc>
+    <lastmod>2012-06-12T03:05:59+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/blog/fluency/</loc>
+    <lastmod>2012-06-09T18:18:23+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/blog/this-way-madness-lies-thankfully/</loc>
+    <lastmod>2012-05-28T17:08:35+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/blog/conservative-and-liberal/</loc>
+    <lastmod>2012-04-01T22:32:18+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/blog/whats-next-for-better-bird/</loc>
+    <lastmod>2012-03-18T16:24:57+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/blog/the-inorganic-app/</loc>
+    <lastmod>2012-03-12T02:04:40+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/blog/a-failure-of-empathy/</loc>
+    <lastmod>2012-03-07T00:10:06+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/blog/c-sharp-should-be-truthyy/</loc>
+    <lastmod>2012-03-04T05:41:45+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/blog/nobody-cares-about-channels/</loc>
+    <lastmod>2012-03-03T06:05:41+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/blog/suspension-of-disbelief/</loc>
+    <lastmod>2012-02-29T16:52:27+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/blog/try-better-bird/</loc>
+    <lastmod>2012-02-28T18:21:18+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/blog/craigslist-can-help-fix-the-nyc-apartment-market/</loc>
+    <lastmod>2012-02-26T17:43:14+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/blog/owning-a-data-type-or-be-the-switchboard/</loc>
+    <lastmod>2012-02-11T19:39:32+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/blog/disrupting-the-nyc-rental-information-market/</loc>
+    <lastmod>2012-02-04T15:44:41+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/blog/what-legacy-politicians-actually-fear/</loc>
+    <lastmod>2012-01-18T21:28:12+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/blog/the-friction-constituency/</loc>
+    <lastmod>2012-01-18T03:35:46+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/blog/quality-of-life-in-nyc/</loc>
+    <lastmod>2011-12-30T00:36:33+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/blog/please-dont-lobby/</loc>
+    <lastmod>2011-12-19T15:45:36+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/blog/me-doing-techno/</loc>
+    <lastmod>2011-12-15T15:33:21+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/blog/why-cant-mobile-apps-have-urls/</loc>
+    <lastmod>2011-12-14T03:23:02+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/blog/hack-for-viewing-wsj-stories/</loc>
+    <lastmod>2011-11-04T15:08:34+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/blog/the-binary-web/</loc>
+    <lastmod>2011-10-30T21:49:09+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/blog/the-law-is-not-turing-complete/</loc>
+    <lastmod>2011-07-17T20:23:10+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/blog/going-about-your-business-or-pleasure/</loc>
+    <lastmod>2011-06-30T23:50:08+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/blog/the-nyt-paywall-is-about-segmenting-not-security/</loc>
+    <lastmod>2011-06-26T23:37:14+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/blog/inversion-of-scarcity/</loc>
+    <lastmod>2011-06-26T20:21:06+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/blog/implicit-vs.-explicit-social-graphs/</loc>
+    <lastmod>2011-06-19T20:40:36+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/blog/design-is-information/</loc>
+    <lastmod>2011-03-23T06:48:11+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/blog/every-programming-problem/</loc>
+    <lastmod>2011-03-19T20:46:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/blog/fixing-the-jquery-jump-on-slide/</loc>
+    <lastmod>2011-02-10T08:59:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/blog/how-microsoft-can-make-visual-studio-cool-among-the-cool-kids/</loc>
+    <lastmod>2011-02-01T20:34:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/blog/chrome-breaks-10-percent-market-share-modern-browsers-at-80-percent/</loc>
+    <lastmod>2011-02-01T11:19:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/blog/this-is-what-a-nonneutral-net-looks-like/</loc>
+    <lastmod>2011-02-01T07:06:51+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/blog/a-call-for-industrywide-pixeldoubling/</loc>
+    <lastmod>2011-01-18T16:31:28+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/blog/the-internet-is-not-a-public-commons-and-it-is-not-beetlejuice/</loc>
+    <lastmod>2010-12-24T10:34:29+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/blog/the-scourge-of-paid-prioritization/</loc>
+    <lastmod>2010-12-22T07:35:34+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/blog/what-ricky-gervais-doesnt-understand-about-god/</loc>
+    <lastmod>2010-12-19T20:45:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/blog/ben-bernankes-list-of-economic-participants/</loc>
+    <lastmod>2010-11-04T05:26:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/blog/is-fred-wilson-arguing-for-content-neutrality/</loc>
+    <lastmod>2010-10-17T14:36:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/blog/a-couple-of-easy-wins-with-sql-indexes/</loc>
+    <lastmod>2010-10-17T12:14:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/blog/market-share-for-the-taking-or-outrunning-the-bear/</loc>
+    <lastmod>2010-10-11T17:31:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/blog/avoiding-magic-strings-in-jquery-c-sharp-and-asp.net-mvc/</loc>
+    <lastmod>2010-09-07T16:44:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/blog/alikewise-learnings-sharp1-diy-pr/</loc>
+    <lastmod>2010-08-11T21:48:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/blog/shermans-law-of-prior-knowledge-or-predicting-the-past/</loc>
+    <lastmod>2010-07-15T17:31:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/blog/the-busiest-people-at-apple-right-now/</loc>
+    <lastmod>2010-07-13T21:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/blog/when-infographics-jump-the-shark/</loc>
+    <lastmod>2010-07-10T09:22:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/blog/https-is-the-least-of-your-problems/</loc>
+    <lastmod>2010-06-18T07:44:17+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/blog/stacking-up/</loc>
+    <lastmod>2010-06-06T17:05:20+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/blog/beware-the-truthtellers/</loc>
+    <lastmod>2010-06-04T10:29:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/blog/please-dont-write-efficient-css/</loc>
+    <lastmod>2010-05-31T06:34:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/blog/0.facebook.com-is-not-neutral/</loc>
+    <lastmod>2010-05-18T17:07:55+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/blog/adobe-call-it-flash-11-already/</loc>
+    <lastmod>2010-04-29T19:06:57+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/blog/standards-why/</loc>
+    <lastmod>2010-04-29T17:46:30+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/blog/tip-random-sort-order-in-c-sharp/</loc>
+    <lastmod>2010-04-28T09:37:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/blog/epistemology-in-everyday-life/</loc>
+    <lastmod>2010-04-27T09:07:36+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/blog/dear-tech-journalists-please-announce-a-oneyear-selfimposed-apple-embargo/</loc>
+    <lastmod>2010-04-26T14:14:36+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/blog/dear-facebook-let-us-define-the-relationships/</loc>
+    <lastmod>2010-04-25T12:17:16+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/blog/no-carryon-fees-simply-means-everyone-pays-carryon-fees/</loc>
+    <lastmod>2010-04-20T08:52:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/blog/the-point-at-which-your-project-becomes-bigger-than-your-head/</loc>
+    <lastmod>2010-03-23T14:18:33+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/blog/entrepreneurship-and-health-care/</loc>
+    <lastmod>2010-03-23T13:48:04+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/blog/the-artificial-distinction-between-content-and-delivery/</loc>
+    <lastmod>2010-03-17T08:24:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/blog/jquery-appears-to-be-incompatible-with-ie9-preview/</loc>
+    <lastmod>2010-03-16T13:01:19+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/blog/dont-confuse-syntax-with-reasoning/</loc>
+    <lastmod>2010-03-14T21:21:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/blog/how-about-jquerystyle-property-methods-for-c-sharp/</loc>
+    <lastmod>2010-02-23T21:56:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/blog/a-few-more-reasons-to-use-progressive-enhancement/</loc>
+    <lastmod>2010-02-23T10:55:01+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/blog/net-neutrality-and-preserving-the-dinosaurs/</loc>
+    <lastmod>2010-02-22T07:45:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/blog/ie8-becomes-sharp1-browser-chrome-up-firefox-plateaus/</loc>
+    <lastmod>2010-02-01T09:24:14+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/blog/google-throws-down-the-gauntlet-on-ie6-you-and-i-get-a-free-ride/</loc>
+    <lastmod>2010-01-29T16:04:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/blog/will-apple-emulate-the-kindle-everywhere-strategy/</loc>
+    <lastmod>2010-01-19T20:45:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/blog/preserving-the-back-button-on-ajax-pages/</loc>
+    <lastmod>2010-01-19T09:35:22+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/blog/modal-performance-in-browsers-or-exploiting-zindex/</loc>
+    <lastmod>2010-01-15T13:42:39+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/blog/breach-by-design/</loc>
+    <lastmod>2010-01-13T09:54:29+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/blog/googles-china-move-dont-be-played/</loc>
+    <lastmod>2010-01-12T21:30:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/blog/netbooks-and-computer-theft/</loc>
+    <lastmod>2010-01-11T09:08:35+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/blog/everyone-wants-to-own-the-relationship-until-they-actually-do/</loc>
+    <lastmod>2010-01-08T22:40:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/blog/what-follows-the-nofly-list/</loc>
+    <lastmod>2010-01-07T10:29:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/blog/modern-browsers-nearly-doubled-share-in-2009-ie6-lost-a-third-of-its-user-base/</loc>
+    <lastmod>2010-01-01T16:49:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/blog/questions-about-the-apple-tablet-that-no-one-is-answering-yet/</loc>
+    <lastmod>2009-12-30T22:05:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/blog/how-about-implied-interfaces-in-c-sharp/</loc>
+    <lastmod>2009-12-30T18:51:21+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/blog/is-this-a-good-nonprofit-idea/</loc>
+    <lastmod>2009-12-27T19:40:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/blog/programmers-and-productivity/</loc>
+    <lastmod>2009-12-25T21:58:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/blog/att-etc-etc/</loc>
+    <lastmod>2009-12-21T20:16:51+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/blog/preventing-mission-creep-in-your-views-or-ignorance-is-bliss/</loc>
+    <lastmod>2009-12-19T13:48:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/blog/the-man-sticks-it-to-the-man-or-the-countryclub-revolt-or-whiteys-revenge/</loc>
+    <lastmod>2009-12-17T21:43:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/blog/john-resig-jquery-talk/</loc>
+    <lastmod>2009-12-17T09:35:49+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/blog/tegra-notebooks-wanted/</loc>
+    <lastmod>2009-12-16T12:02:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/blog/speeding-up-localhost-in-visual-studio/</loc>
+    <lastmod>2009-12-16T11:02:57+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/blog/amazons-core-competency-pricing./</loc>
+    <lastmod>2009-12-16T08:06:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/blog/wifi-cafes-in-nyc/</loc>
+    <lastmod>2009-12-15T10:23:06+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/blog/100-percent-data-loss-at-coding-horror/</loc>
+    <lastmod>2009-12-11T13:55:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/blog/shorting-firefox/</loc>
+    <lastmod>2009-12-10T09:22:29+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/blog/schneier-and-schmidt/</loc>
+    <lastmod>2009-12-10T08:26:49+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/blog/browserspecific-css-without-javascript-or-horrible-syntax/</loc>
+    <lastmod>2009-12-07T03:09:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/blog/logic-as-data-and-a-case-where-strong-typing-impeded-learning/</loc>
+    <lastmod>2009-12-06T11:11:17+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/blog/less-css-for-.net/</loc>
+    <lastmod>2009-12-04T15:47:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/blog/a-gold-mine-for-stackoverflow/</loc>
+    <lastmod>2009-12-02T20:09:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/blog/betting-on-a-future-without-ie6/</loc>
+    <lastmod>2009-11-30T20:39:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/blog/why-is-intel-having-so-much-trouble-shipping-its-solidstate-drives/</loc>
+    <lastmod>2009-11-29T09:27:41+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/blog/wizards-in-asp.net-mvc-being-selective-with-modelstate/</loc>
+    <lastmod>2009-11-23T21:22:50+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/blog/using-the-microsoft-ajax-minifier-some-gotchas/</loc>
+    <lastmod>2009-11-20T15:08:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/blog/unsolicited-iphone-suggestions-sharp2-internet-radio/</loc>
+    <lastmod>2009-11-19T09:32:23+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/blog/wtf-intel/</loc>
+    <lastmod>2009-11-19T09:14:21+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/blog/yup-microsoft-is-focusing-on-javascript/</loc>
+    <lastmod>2009-11-18T12:06:50+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/blog/the-iphone-calendar-has-a-separate-time-zone-from-the-phone/</loc>
+    <lastmod>2009-11-17T18:44:25+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/blog/ie9-preview-coming/</loc>
+    <lastmod>2009-11-17T17:54:44+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/blog/keycode-vs-charcode-vs-firefox/</loc>
+    <lastmod>2009-11-17T15:35:50+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/blog/unsolicited-iphone-suggestions-sharp1-email/</loc>
+    <lastmod>2009-11-17T12:07:09+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/blog/the-emergence-of-big-data-2.0/</loc>
+    <lastmod>2009-11-16T10:07:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/blog/teevee-on-the-peecee/</loc>
+    <lastmod>2009-11-14T11:22:53+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/blog/google-music-previews-songs-based-on-lyrics/</loc>
+    <lastmod>2009-11-12T09:46:20+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/blog/google-closure-based-on-naive-serverside-notions/</loc>
+    <lastmod>2009-11-12T09:05:11+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/blog/windows-virtual-machines-get-competitive/</loc>
+    <lastmod>2009-11-11T16:19:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/blog/a-new-language-from-google/</loc>
+    <lastmod>2009-11-10T17:34:09+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/blog/the-paris-hilton-problem/</loc>
+    <lastmod>2009-11-04T07:15:57+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/blog/the-flagship-strategy-of-mobile-phones-microsoft-needs-one/</loc>
+    <lastmod>2009-11-02T12:05:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/blog/why-is-apple-treading-water-with-the-apple-tv-because-the-real-product-is-in-the-works./</loc>
+    <lastmod>2009-10-30T18:23:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/blog/ie6-users-and-statusconscious-creative-directors/</loc>
+    <lastmod>2009-10-23T01:48:12+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/blog/does-this-metric-pass-the-smell-test/</loc>
+    <lastmod>2009-10-23T00:15:15+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/blog/will-apple-fix-boot-camp-for-windows/</loc>
+    <lastmod>2009-10-22T15:09:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/blog/california-says-the-iphone-costs-599/</loc>
+    <lastmod>2009-10-22T12:48:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/blog/is-verizons-network-better-or-is-it-simply-untested/</loc>
+    <lastmod>2009-10-21T15:56:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/blog/mozilla-vp-mistakes-were-made/</loc>
+    <lastmod>2009-10-19T11:48:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/blog/word-nerdism-sharp1-make-mine-a-medium/</loc>
+    <lastmod>2009-10-19T01:28:58+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/blog/think-of-ssds-as-multicore-storage/</loc>
+    <lastmod>2009-10-18T17:16:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/blog/stackoverflow-facebook-.0001/</loc>
+    <lastmod>2009-10-13T13:12:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/blog/solving-the-n1-problem-in-linq-to-sql-using-projection/</loc>
+    <lastmod>2009-10-12T16:38:24+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/blog/a-simple-way-that-apple-can-improve-iphone-battery-life-and-user-experience/</loc>
+    <lastmod>2009-10-08T12:19:23+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/blog/when-apple-aligns-with-a-carrier-act-ii/</loc>
+    <lastmod>2009-10-07T20:07:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/blog/a-thought-experiment-serial-vs-parallel/</loc>
+    <lastmod>2009-09-19T18:54:50+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/blog/compiletime-checking-of-views-in-asp.net-mvc/</loc>
+    <lastmod>2009-09-19T15:20:41+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/blog/your-bottleneck-is-you-or-why-ive-stopped-worrying-about-performance/</loc>
+    <lastmod>2009-09-16T13:32:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/blog/the-dullest-blog/</loc>
+    <lastmod>2009-09-16T11:38:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/blog/is-google-building-an-antispam-empire-or-size-matters/</loc>
+    <lastmod>2009-09-16T11:10:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/blog/what-the-heck-is-going-on-with-intels-nextgeneration-ssds/</loc>
+    <lastmod>2009-09-14T17:11:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/blog/quickie-geek-quiz-sharp4/</loc>
+    <lastmod>2009-09-11T10:12:06+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/blog/deploying-an-asp.net-mvc-project/</loc>
+    <lastmod>2009-09-10T17:17:15+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/blog/scale-means-reversing-your-thinking-on-the-database/</loc>
+    <lastmod>2009-09-09T19:14:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/blog/the-var-thing/</loc>
+    <lastmod>2009-09-04T11:02:54+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/blog/whats-the-word/</loc>
+    <lastmod>2009-09-03T14:28:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/blog/why-i-heart-jquery/</loc>
+    <lastmod>2009-09-01T21:46:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/blog/quickie-geek-quiz-sharp3/</loc>
+    <lastmod>2009-08-31T13:10:27+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/blog/its-the-data-not-the-algorithm/</loc>
+    <lastmod>2009-08-30T21:22:49+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/blog/barber-shop-recommendation/</loc>
+    <lastmod>2009-08-27T10:31:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/blog/quickie-geek-quiz-sharp2/</loc>
+    <lastmod>2009-08-24T14:19:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/blog/chair-in-the-sky/</loc>
+    <lastmod>2009-08-18T08:02:49+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/blog/will-microsoft-subsidize-zune-hd-pricing/</loc>
+    <lastmod>2009-08-13T12:28:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/blog/tell-me-your-favorite-expression-for-dead/</loc>
+    <lastmod>2009-08-11T08:59:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/blog/killer-app-for-the-zune-hd-tivo-for-radio/</loc>
+    <lastmod>2009-08-10T16:34:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/blog/quickie-geek-quiz-sharp1/</loc>
+    <lastmod>2009-08-10T15:28:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/blog/what-is-google-going-to-do-with-on2/</loc>
+    <lastmod>2009-08-05T22:41:44+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/blog/random-numbers-web-service/</loc>
+    <lastmod>2009-08-05T21:46:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/blog/the-most-viable-reason-for-apples-rejection-of-google-voice-so-far/</loc>
+    <lastmod>2009-08-04T12:11:59+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/blog/do-you-have-grit/</loc>
+    <lastmod>2009-08-02T17:10:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/blog/a-market-opportunity-for-verizon-and-sprint/</loc>
+    <lastmod>2009-08-01T17:31:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/blog/403-forbidden-and-400-bad-request-errors-with-amazon-product-advertising-api/</loc>
+    <lastmod>2009-08-01T16:05:23+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/blog/is-proprietary-mac-hardware-killing-windows-battery-life/</loc>
+    <lastmod>2009-07-31T17:46:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/blog/someone-please-sell-me-a-solidstate-drive-with-windows-7-on-it/</loc>
+    <lastmod>2009-07-29T10:35:57+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/blog/the-googlebot-runs-javascript/</loc>
+    <lastmod>2009-07-26T18:54:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/blog/meetings-are-error-states/</loc>
+    <lastmod>2009-07-25T23:35:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/blog/making-good-programmers-feel-like-bad-programmers/</loc>
+    <lastmod>2009-07-24T11:19:28+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/blog/how-to-tell-the-new-intel-ssds-from-the-old-ones/</loc>
+    <lastmod>2009-07-21T21:17:57+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/blog/known-and-unknown-unknowns/</loc>
+    <lastmod>2009-07-19T13:01:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/blog/is-the-vp-of-monetizing-synergy-off-today/</loc>
+    <lastmod>2009-07-17T12:44:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/blog/google-maps-goes-physical-gavin-newsom-doing-product-endorsements/</loc>
+    <lastmod>2009-07-15T10:27:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/blog/holy-licensing-costs-mastercard/</loc>
+    <lastmod>2009-07-14T20:38:57+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/blog/javascript-is-now-strategic-for-microsoft/</loc>
+    <lastmod>2009-07-14T19:18:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/blog/subscription-media-consolidation-gets-started/</loc>
+    <lastmod>2009-07-13T12:11:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/blog/pandoras-trying-to-change-my-tastes/</loc>
+    <lastmod>2009-07-12T16:36:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/blog/the-iphone-needs-multitasking-stat/</loc>
+    <lastmod>2009-07-11T23:36:30+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/blog/is-wolfram-alpha-too-clever-by-half/</loc>
+    <lastmod>2009-07-11T23:05:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/blog/a-prediction-of-eu-hypocrisy/</loc>
+    <lastmod>2009-07-07T23:39:23+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/blog/can-google-chrome-os-get-traction/</loc>
+    <lastmod>2009-07-07T22:40:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/blog/the-new-wave-of-selfshorteners/</loc>
+    <lastmod>2009-07-07T21:59:18+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/blog/why-is-a-social-security-number-considered-a-secret/</loc>
+    <lastmod>2009-07-06T17:43:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/blog/use-case-the-metric-system-or-all-that-useless-beauty/</loc>
+    <lastmod>2009-07-01T12:31:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/blog/more-about-less/</loc>
+    <lastmod>2009-06-30T17:50:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/blog/domain-names-are-too-cheap/</loc>
+    <lastmod>2009-06-28T12:21:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/blog/birthday-suggestion/</loc>
+    <lastmod>2009-06-27T00:13:56+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/blog/network-network-network-network-or-network/</loc>
+    <lastmod>2009-06-25T20:53:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/blog/google-as-censor-of-course./</loc>
+    <lastmod>2009-06-21T22:18:39+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/blog/use-case-ssl-and-email/</loc>
+    <lastmod>2009-06-17T14:04:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/blog/iphone-activation-servers-overwhelmed/</loc>
+    <lastmod>2009-06-17T12:04:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/blog/imagine-css-evolved-as-a-programming-language/</loc>
+    <lastmod>2009-06-16T17:35:27+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/blog/builtin-jquery-and-how-ie-can-get-some-dev-cred/</loc>
+    <lastmod>2009-06-15T13:27:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/blog/what-is-a-programmer/</loc>
+    <lastmod>2009-06-14T01:33:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/blog/64bitness-what-it-is-and-what-it-aint/</loc>
+    <lastmod>2009-06-12T15:49:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/blog/the-cloud-the-cloud/</loc>
+    <lastmod>2009-06-11T15:07:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/blog/more-jquery-performance-tips-11-keystrokes-buy-you-10x/</loc>
+    <lastmod>2009-06-09T11:54:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/blog/leopard-snow-leopard-vista-windows-7/</loc>
+    <lastmod>2009-06-08T19:22:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/blog/url-shortener-for-asp.net/</loc>
+    <lastmod>2009-06-06T21:56:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/blog/windows-live-writer-works-great-with-blogengine.net/</loc>
+    <lastmod>2009-06-06T21:32:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/blog/mayor-at-the-movies/</loc>
+    <lastmod>2009-06-05T22:32:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/blog/the-os-still-matters-or-platform-abstraction-is-hard/</loc>
+    <lastmod>2009-06-04T23:50:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/blog/highslide-as-asp.net-control/</loc>
+    <lastmod>2009-06-04T21:49:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/blog/the-dom-is-a-data-source-query-it-wisely/</loc>
+    <lastmod>2009-06-02T19:05:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/blog/gm-mens-wearhouse-tootsie-roll/</loc>
+    <lastmod>2009-06-01T14:38:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/blog/displaying-the-subversion-revision-number-in-your-web-application/</loc>
+    <lastmod>2009-05-26T22:28:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/blog/new-build-of-jquery-controls-1.0.3433/</loc>
+    <lastmod>2009-05-26T19:58:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/blog/can-haz-mifi/</loc>
+    <lastmod>2009-05-24T12:08:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/blog/new-build-of-jquery-controls-1.0.3429/</loc>
+    <lastmod>2009-05-23T14:48:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/blog/javastrict/</loc>
+    <lastmod>2009-05-22T09:45:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/blog/subscription-music-consolidation/</loc>
+    <lastmod>2009-05-20T13:08:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/blog/go-craigslist/</loc>
+    <lastmod>2009-05-20T10:17:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/blog/philip-greenspun/</loc>
+    <lastmod>2009-05-19T19:54:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/blog/educator-extension-for-blogengine.net-released/</loc>
+    <lastmod>2009-05-19T14:39:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/blog/hidden-features-of-c-sharp/</loc>
+    <lastmod>2009-05-16T23:55:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/blog/does-null-ever-equal-anything/</loc>
+    <lastmod>2009-05-15T13:47:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/blog/nulls-and-knowledge/</loc>
+    <lastmod>2009-05-14T18:43:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/blog/firefox-has-a-user-base-does-it-have-a-future/</loc>
+    <lastmod>2009-05-13T17:17:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/blog/jquery-controls-alpha-available-for-download/</loc>
+    <lastmod>2009-05-04T08:43:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/blog/webclient-fiddler-and-ssl/</loc>
+    <lastmod>2009-05-01T18:19:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/blog/hammering-the-dom/</loc>
+    <lastmod>2009-04-28T18:18:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/blog/just-getting-started/</loc>
+    <lastmod>2009-04-24T12:30:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/blog/free-shipping-getting-closer/</loc>
+    <lastmod>2009-04-03T04:05:46+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/blog/the-long-game-on-metered-pricing-free-shipping/</loc>
+    <lastmod>2008-06-03T17:17:49+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/blog/the-biggest-threat-to-your-rights-scarcity./</loc>
+    <lastmod>2008-03-01T06:20:45+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/blog/somewhere-in-brussels-some-buggy-whips-need-gilding/</loc>
+    <lastmod>2008-02-28T22:27:54+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/blog/demand-first-then-supply/</loc>
+    <lastmod>2008-02-17T19:26:29+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/blog/entrepeneurs-vs-bureacrats/</loc>
+    <lastmod>2008-02-15T21:06:14+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/blog/regulation-incumbency-haves-and-havenots/</loc>
+    <lastmod>2008-02-14T20:27:35+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/blog/what-advertising-means/</loc>
+    <lastmod>2008-02-10T22:04:01+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/blog/podcast-on-broadband-with-your-humble-host/</loc>
+    <lastmod>2008-02-07T22:57:22+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/blog/internet-diversity-cut-cables/</loc>
+    <lastmod>2008-02-04T20:58:27+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/blog/what-we-have-are-multiple-broadband-strategies-this-is-a-good-thing/</loc>
+    <lastmod>2008-02-01T20:10:46+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/blog/the-long-game-on-metered-pricing-and-net-neutrality/</loc>
+    <lastmod>2008-01-28T00:52:32+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/blog/</loc>
+    <lastmod>2018-05-02T14:31:10+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.org/categories/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.org/</loc>
+    <lastmod>2018-05-02T14:31:10+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.org/tags/</loc>
+    <priority>0</priority>
+  </url>
+  
+</urlset>

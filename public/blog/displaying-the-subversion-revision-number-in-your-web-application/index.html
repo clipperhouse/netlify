@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+    <title>My New Hugo Site  | Displaying the Subversion revision number in your web application</title>
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+
+    <meta name="viewport" content="width=device-width,minimum-scale=1">
+    <meta name="generator" content="Hugo 0.40.3" />
+    
+    
+      <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
+    
+
+    
+    
+      <link href="/dist/css/app.ab4b67a3ea25990fa8279f3b7ef08b61.css" rel="stylesheet">
+    
+
+    
+
+    
+      
+    
+
+    
+
+    <meta property="og:title" content="Displaying the Subversion revision number in your web application" />
+<meta property="og:description" content="I found a nice technique for automatically displaying the SVN revision number in the footer of a web site. It is based in CruiseControl.Net.
+Why would I do this? Well, we don’t have a strict version numbering convention for our app. We roll out incremental builds all the time. This falls under the technique of “continuous integration”, or in Google’s case, “eternal beta”. So it’s easier just to have the app give itself an incremental version number each time, that corresponds with our build process." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://example.org/blog/displaying-the-subversion-revision-number-in-your-web-application/" />
+
+
+
+<meta property="article:published_time" content="2009-05-26T22:28:00&#43;00:00"/>
+
+<meta property="article:modified_time" content="2009-05-26T22:28:00&#43;00:00"/>
+
+
+
+
+
+
+
+
+
+
+
+<meta itemprop="name" content="Displaying the Subversion revision number in your web application">
+<meta itemprop="description" content="I found a nice technique for automatically displaying the SVN revision number in the footer of a web site. It is based in CruiseControl.Net.
+Why would I do this? Well, we don’t have a strict version numbering convention for our app. We roll out incremental builds all the time. This falls under the technique of “continuous integration”, or in Google’s case, “eternal beta”. So it’s easier just to have the app give itself an incremental version number each time, that corresponds with our build process.">
+
+
+<meta itemprop="datePublished" content="2009-05-26T22:28:00&#43;00:00" />
+<meta itemprop="dateModified" content="2009-05-26T22:28:00&#43;00:00" />
+<meta itemprop="wordCount" content="269">
+
+
+
+<meta itemprop="keywords" content="" />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Displaying the Subversion revision number in your web application"/>
+<meta name="twitter:description" content="I found a nice technique for automatically displaying the SVN revision number in the footer of a web site. It is based in CruiseControl.Net.
+Why would I do this? Well, we don’t have a strict version numbering convention for our app. We roll out incremental builds all the time. This falls under the technique of “continuous integration”, or in Google’s case, “eternal beta”. So it’s easier just to have the app give itself an incremental version number each time, that corresponds with our build process."/>
+
+  </head>
+
+  <body class="ma0 avenir bg-near-white">
+
+    
+   
+  
+
+  <header>
+    <div class="bg-black">
+      <nav class="pv3 ph3 ph4-ns" role="navigation">
+  <div class="flex-l justify-between items-center center">
+    <a href="http://example.org/" class="f3 fw2 hover-white no-underline white-90 dib">
+      My New Hugo Site
+    </a>
+    <div class="flex-l items-center">
+      
+      
+
+
+
+
+
+
+
+
+    </div>
+  </div>
+</nav>
+
+    </div>
+  </header>
+
+
+
+    <main class="pb7" role="main">
+      
+  <article class="flex-l flex-wrap justify-between mw8 center">
+
+    <header class="mt4 w-100">
+      <p class="f6 b helvetica tracked">
+          
+        BLOGS
+      </p>
+      <h1 class="f1 athelas mb1">Displaying the Subversion revision number in your web application</h1>
+      
+      <time class="f6 mv4 dib tracked" datetime="2009-05-26T22:28:00Z">May 26, 2009</time>
+    </header>
+
+    <main class="nested-copy-line-height lh-copy serif f4 nested-links nested-img mid-gray pr4-l w-two-thirds-l"><p>I found a nice technique for automatically displaying the SVN revision number in the footer of a web site. It is based in <a href="http://ccnet.thoughtworks.com/">CruiseControl.Net</a>.</p>
+
+<p>Why would I do this? Well, we don’t have a strict version numbering convention for our app. We roll out incremental builds all the time. This falls under the technique of “continuous integration”, or in Google’s case, “eternal beta”. So it’s easier just to have the app give itself an incremental version number each time, that corresponds with our build process.</p>
+
+<p>First, go get the SVN revision labeller and follow the instructions: <a href="http://code.google.com/p/svnrevisionlabeller/">http://code.google.com/p/svnrevisionlabeller/</a></p>
+
+<p>This will automatically write the revision number in the .state file associated with your CruiseControl project. This file is usually stored at C:\Program Files\CruiseControl.NET\server[ProjectName].state</p>
+
+<p>It’s just an XML file, so you can read the contents. Using a bit of Linq to XML, I am able to grab that data on the fly:</p>
+
+<p>[code:c#]using System.Xml.Linq;<br />
+using System.IO;</p>
+
+<p>public string GetRevisionLabel()<br />
+{<br />
+ string result = String.Empty;<br />
+ string stateFilePath = “C:\Program Files\CruiseControl.NET\server\MyProject.state”;<br />
+ if (HttpContext.Current.Application[“BuildLabel”] != null)<br />
+ {<br />
+ result = (string)HttpContext.Current.Application[“BuildLabel”];<br />
+ }<br />
+ else if (File.Exists(stateFilePath))<br />
+ {<br />
+ XDocument stateFileRoot = XDocument.Load(stateFilePath);</p>
+
+<p>var q = (from label in stateFileRoot.Descendants(“Label”)<br />
+ select (string)label).SingleOrDefault();</p>
+
+<p>if (q != null)<br />
+ {<br />
+ result = q.ToString();<br />
+ HttpContext.Current.Application[“BuildLabel”] = result;<br />
+ }<br />
+ }<br />
+ return result;<br />
+}[/code]</p>
+
+<p>Now display it wherever you like. In this case, you can see that I cache it for performance and easy access.</p>
+
+<p>Security note: you might not want your web process reaching into the Program Files folder. I copy the .state files to App_Data as part of the build process, and query them there.</p>
+
+<p>Hope this helps.</p>
+
+<p>— —</p>
+
+<p>Inspired by: <a href="http://stackoverflow.com/questions/913904/why-would-a-site-display-svn-version-and-what-are-the-advantages">http://stackoverflow.com/questions/913904/why-would-a-site-display-svn-version-and-what-are-the-advantages</a></p>
+<ul class="pa0">
+  
+</ul>
+<div class="mt6">
+        
+      </div>
+    </main>
+
+    <aside class="w-30-l mt6-l">
+
+
+
+
+</aside>
+
+  </article>
+
+    </main>
+    <footer class="bg-near-black bottom-0 w-100 pa3" role="contentinfo">
+  <div class="flex justify-between">
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://example.org/" >
+    &copy; 2018 My New Hugo Site
+  </a>
+  
+
+
+
+
+
+
+
+
+  </div>
+</footer>
+
+    
+
+  <script src="/dist/js/app.3fc0f988d21662902933.js"></script>
+
+
+  </body>
+</html>

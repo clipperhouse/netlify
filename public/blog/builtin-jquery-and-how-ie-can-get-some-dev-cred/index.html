@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+    <title>My New Hugo Site  | “Built-in” jQuery (and how IE can get some dev cred)</title>
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+
+    <meta name="viewport" content="width=device-width,minimum-scale=1">
+    <meta name="generator" content="Hugo 0.40.3" />
+    
+    
+      <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
+    
+
+    
+    
+      <link href="/dist/css/app.ab4b67a3ea25990fa8279f3b7ef08b61.css" rel="stylesheet">
+    
+
+    
+
+    
+      
+    
+
+    
+
+    <meta property="og:title" content="“Built-in” jQuery (and how IE can get some dev cred)" />
+<meta property="og:description" content="I’ve mentioned in the past that jQuery is an API as much as it is a set of functions. As syntaxes go, it’s very nice — consistent, logical, readable.
+What are the chances that one of the browser makers will announce “native” support for jQuery in their next version? What would this even mean?
+Well, for starters, I think it would mean that the jQuery selector syntax would be understood by the browser as a DOM query language." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://example.org/blog/builtin-jquery-and-how-ie-can-get-some-dev-cred/" />
+
+
+
+<meta property="article:published_time" content="2009-06-15T13:27:00&#43;00:00"/>
+
+<meta property="article:modified_time" content="2009-06-15T13:27:00&#43;00:00"/>
+
+
+
+
+
+
+
+
+
+
+
+<meta itemprop="name" content="“Built-in” jQuery (and how IE can get some dev cred)">
+<meta itemprop="description" content="I’ve mentioned in the past that jQuery is an API as much as it is a set of functions. As syntaxes go, it’s very nice — consistent, logical, readable.
+What are the chances that one of the browser makers will announce “native” support for jQuery in their next version? What would this even mean?
+Well, for starters, I think it would mean that the jQuery selector syntax would be understood by the browser as a DOM query language.">
+
+
+<meta itemprop="datePublished" content="2009-06-15T13:27:00&#43;00:00" />
+<meta itemprop="dateModified" content="2009-06-15T13:27:00&#43;00:00" />
+<meta itemprop="wordCount" content="217">
+
+
+
+<meta itemprop="keywords" content="" />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="“Built-in” jQuery (and how IE can get some dev cred)"/>
+<meta name="twitter:description" content="I’ve mentioned in the past that jQuery is an API as much as it is a set of functions. As syntaxes go, it’s very nice — consistent, logical, readable.
+What are the chances that one of the browser makers will announce “native” support for jQuery in their next version? What would this even mean?
+Well, for starters, I think it would mean that the jQuery selector syntax would be understood by the browser as a DOM query language."/>
+
+  </head>
+
+  <body class="ma0 avenir bg-near-white">
+
+    
+   
+  
+
+  <header>
+    <div class="bg-black">
+      <nav class="pv3 ph3 ph4-ns" role="navigation">
+  <div class="flex-l justify-between items-center center">
+    <a href="http://example.org/" class="f3 fw2 hover-white no-underline white-90 dib">
+      My New Hugo Site
+    </a>
+    <div class="flex-l items-center">
+      
+      
+
+
+
+
+
+
+
+
+    </div>
+  </div>
+</nav>
+
+    </div>
+  </header>
+
+
+
+    <main class="pb7" role="main">
+      
+  <article class="flex-l flex-wrap justify-between mw8 center">
+
+    <header class="mt4 w-100">
+      <p class="f6 b helvetica tracked">
+          
+        BLOGS
+      </p>
+      <h1 class="f1 athelas mb1">“Built-in” jQuery (and how IE can get some dev cred)</h1>
+      
+      <time class="f6 mv4 dib tracked" datetime="2009-06-15T13:27:00Z">June 15, 2009</time>
+    </header>
+
+    <main class="nested-copy-line-height lh-copy serif f4 nested-links nested-img mid-gray pr4-l w-two-thirds-l"><p>I’ve mentioned in the past that <a href="http://clipperhouse.com/blog/post/Hammering-the-DOM.aspx">jQuery is an API</a> as much as it is a set of functions. As syntaxes go, it’s very nice — consistent, logical, readable.</p>
+
+<p>What are the chances that one of the browser makers will announce “native” support for jQuery in their next version? What would this even mean?</p>
+
+<p>Well, for starters, I think it would mean that the jQuery selector syntax would be understood by the browser as a <a href="http://clipperhouse.com/blog/post/jQuery-performance-tips.aspx">DOM query language</a>. Browsers have made incremental steps in this direction: <a href="https://developer.mozilla.org/en/DOM/element.getElementsByTagName">getElementsByTagName</a> and <a href="http://www.quirksmode.org/blog/archives/2008/05/getelementsbycl.html">getElementsByClassName</a>, for example. Still not generalized enough, IMHO.</p>
+
+<p>The next step would be support for <a href="http://ejohn.org/blog/css-animations-and-javascript/">CSS transitions</a>. Tell the browser three things: beginning state, end state and how to get there (easing). Right now, jQuery achieves animation by asking the browser to <a href="/blog/post/Hammering-the-DOM.aspx">redraw the DOM a hundred times</a>. Yikes. We can feel IE struggling in the form of less-than-smooth animations.</p>
+
+<p>Today’s machines can do 60 frames/sec of 3D rendering. Shouldn’t the browser be able to smoothly fade in a paragraph of text without spiking the CPU?</p>
+
+<p>Announcing these two things, while working closely with John Resig to make sure they serve the jQ community, would be a great way for Microsoft get a little cred for IE 9. Maybe even leapfrog the current jQ and go straight to <a href="http://sizzlejs.com/">Sizzle</a>.</p>
+<ul class="pa0">
+  
+</ul>
+<div class="mt6">
+        
+      </div>
+    </main>
+
+    <aside class="w-30-l mt6-l">
+
+
+
+
+</aside>
+
+  </article>
+
+    </main>
+    <footer class="bg-near-black bottom-0 w-100 pa3" role="contentinfo">
+  <div class="flex justify-between">
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://example.org/" >
+    &copy; 2018 My New Hugo Site
+  </a>
+  
+
+
+
+
+
+
+
+
+  </div>
+</footer>
+
+    
+
+  <script src="/dist/js/app.3fc0f988d21662902933.js"></script>
+
+
+  </body>
+</html>

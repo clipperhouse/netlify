@@ -1,3 +1,1 @@
-/blog  https://medium.com/@clipperhouse/latest 200!
-/blog/* https://medium.com/@clipperhouse/:splat   200
 /jargon/*   https://jargon-demo.appspot.com/:splat    200

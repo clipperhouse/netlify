@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+    <title>My New Hugo Site  | Wizards in ASP.Net MVC: being selective with ModelState</title>
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+
+    <meta name="viewport" content="width=device-width,minimum-scale=1">
+    <meta name="generator" content="Hugo 0.40.3" />
+    
+    
+      <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
+    
+
+    
+    
+      <link href="/dist/css/app.ab4b67a3ea25990fa8279f3b7ef08b61.css" rel="stylesheet">
+    
+
+    
+
+    
+      
+    
+
+    
+
+    <meta property="og:title" content="Wizards in ASP.Net MVC: being selective with ModelState" />
+<meta property="og:description" content="So, there are many ways to skin the cat we called form validation. With a wizard-style application, it requires some nuance.
+With ASP.Net MVC, a traditional way to do validation is to use ModelState. ModelState is a property on your controller where you can collect errors relating to your Model. For example, if a LastName property is required, you would do something like this:
+if (String.IsNullOrEmpty(lastName))
+ModelState.AddModelError(“lastName”, “A last name is required." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://example.org/blog/wizards-in-asp.net-mvc-being-selective-with-modelstate/" />
+
+
+
+<meta property="article:published_time" content="2009-11-23T21:22:50&#43;00:00"/>
+
+<meta property="article:modified_time" content="2009-11-23T21:22:50&#43;00:00"/>
+
+
+
+
+
+
+
+
+
+
+
+<meta itemprop="name" content="Wizards in ASP.Net MVC: being selective with ModelState">
+<meta itemprop="description" content="So, there are many ways to skin the cat we called form validation. With a wizard-style application, it requires some nuance.
+With ASP.Net MVC, a traditional way to do validation is to use ModelState. ModelState is a property on your controller where you can collect errors relating to your Model. For example, if a LastName property is required, you would do something like this:
+if (String.IsNullOrEmpty(lastName))
+ModelState.AddModelError(“lastName”, “A last name is required.">
+
+
+<meta itemprop="datePublished" content="2009-11-23T21:22:50&#43;00:00" />
+<meta itemprop="dateModified" content="2009-11-23T21:22:50&#43;00:00" />
+<meta itemprop="wordCount" content="523">
+
+
+
+<meta itemprop="keywords" content="" />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Wizards in ASP.Net MVC: being selective with ModelState"/>
+<meta name="twitter:description" content="So, there are many ways to skin the cat we called form validation. With a wizard-style application, it requires some nuance.
+With ASP.Net MVC, a traditional way to do validation is to use ModelState. ModelState is a property on your controller where you can collect errors relating to your Model. For example, if a LastName property is required, you would do something like this:
+if (String.IsNullOrEmpty(lastName))
+ModelState.AddModelError(“lastName”, “A last name is required."/>
+
+  </head>
+
+  <body class="ma0 avenir bg-near-white">
+
+    
+   
+  
+
+  <header>
+    <div class="bg-black">
+      <nav class="pv3 ph3 ph4-ns" role="navigation">
+  <div class="flex-l justify-between items-center center">
+    <a href="http://example.org/" class="f3 fw2 hover-white no-underline white-90 dib">
+      My New Hugo Site
+    </a>
+    <div class="flex-l items-center">
+      
+      
+
+
+
+
+
+
+
+
+    </div>
+  </div>
+</nav>
+
+    </div>
+  </header>
+
+
+
+    <main class="pb7" role="main">
+      
+  <article class="flex-l flex-wrap justify-between mw8 center">
+
+    <header class="mt4 w-100">
+      <p class="f6 b helvetica tracked">
+          
+        BLOGS
+      </p>
+      <h1 class="f1 athelas mb1">Wizards in ASP.Net MVC: being selective with ModelState</h1>
+      
+      <time class="f6 mv4 dib tracked" datetime="2009-11-23T21:22:50Z">November 23, 2009</time>
+    </header>
+
+    <main class="nested-copy-line-height lh-copy serif f4 nested-links nested-img mid-gray pr4-l w-two-thirds-l"><p>So, there are many ways to skin the cat we called form validation. With a wizard-style application, it requires some nuance.</p>
+
+<p>With ASP.Net MVC, a traditional way to do validation is to use <a href="http://davidhayden.com/blog/dave/archive/2008/09/07/MVCUIErrorHandlingModelStateAddModelError.aspx">ModelState</a>. ModelState is a property on your controller where you can collect errors relating to your Model. For example, if a LastName property is required, you would do something like this:</p>
+
+<p>if (String.IsNullOrEmpty(lastName))<br />
+ ModelState.AddModelError(“lastName”, “A last name is required.”);</p>
+
+<p>And then, when deciding whether to commit the changes, you’ll test the IsValid property:</p>
+
+<p>if (ModelState.IsValid)<br />
+{<br />
+ …commit to database or whatever<br />
+}</p>
+
+<p>What I am trying to do, however, is create a “wizard”. A characteristic of a wizard is that you can move forward only if all the data is valid, but you can <strong>move back regardless</strong>. And, after moving back and continuing forward again, your <strong>data on the forward screens will have been preserved</strong>. (Observe this on the next wizard you use.)</p>
+
+<p>The ModelState.IsValid approach above is a bit monolithic — progress can only be made if all the submitted data is valid. What I want to do is save data on the back button where it’s valid, but still allow the backward move even if it’s not <em>all</em> correct. Follow?</p>
+
+<p>So I found a nice little way of doing this. First, I created an extension method on ModelState which allows me to test if a <em>particular part</em> of the ModelState is valid:</p>
+
+<p>namespace Clipperhouse.Mvc<br />
+{<br />
+ public static partial class Extensions<br />
+ {<br />
+ public static bool IsValid(this ModelState modelState)<br />
+ {<br />
+ return (modelState == null || modelState.Errors.Count == 0);<br />
+ }<br />
+ }<br />
+}</p>
+
+<p>This allows me to selectively commit the valid data, while simply ignoring the bad stuff:</p>
+
+<p>public ActionResult Register(string firstName, string lastName)<br />
+{<br />
+ // 1. Detect model errors<br />
+ if (String.IsNullOrEmpty(firstName))<br />
+ {<br />
+ ModelState.AddModelError(“firstName”, “A first name is required”);<br />
+ }<br />
+ if (String.IsNullOrEmpty(lastName))<br />
+ {<br />
+ ModelState.AddModelError(“lastName”, “A last name is required”);<br />
+ }</p>
+
+<p>// 2. Detect which button was clicked<br />
+ bool isNext = Request.Form[“nextButton”] != null;<br />
+ bool isBack = Request.Form[“backButton”] != null;</p>
+
+<p>// 3. Get my model object<br />
+ var personRep = new PersonRepository();<br />
+ var person = personRep.GetPerson(5);</p>
+
+<p>// 4. Selectively update only those properties that are valid<br />
+ if (ModelState[“firstName”].IsValid())<br />
+ person.FirstName = firstName;<br />
+ if (ModelState[“lastName”].IsValid())<br />
+ person.LastName = lastName;</p>
+
+<p>personRep.Save();</p>
+
+<p>// If the user clicked “Next”, only move forward if the whole model is valid.<br />
+ // If the user clicked “Back”, go back regardless,<br />
+ // with the knowledge that “we saved what we could” above.<br />
+ if (ModelState.IsValid &amp;&amp; isNext)<br />
+ {<br />
+ return RedirectToAction(…next screen…));<br />
+ }<br />
+ else if (isBack)<br />
+ {<br />
+ return RedirectToAction(…previous screen…);<br />
+ }</p>
+
+<p>// If we got this far, the user is trying to go Next,<br />
+ // but the data is not completely valid. Return to the current view<br />
+ // and display errors<br />
+ return Register();<br />
+}</p>
+
+<p>Hopefully the above will help.</p>
+
+<p>I haven’t seen a lot of discussion of wizards in ASP.Net MVC. There was explicit support for this sort of thing in WebForms, but it’s a roll-your-own proposition in MVC. This is to be expected — the stateless nature of the web is not really made for wizards, and MVC is close to the metal.</p>
+
+<p>Would love to see Microsoft thinking about this scenario in future versions.</p>
+<ul class="pa0">
+  
+</ul>
+<div class="mt6">
+        
+      </div>
+    </main>
+
+    <aside class="w-30-l mt6-l">
+
+
+
+
+</aside>
+
+  </article>
+
+    </main>
+    <footer class="bg-near-black bottom-0 w-100 pa3" role="contentinfo">
+  <div class="flex justify-between">
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://example.org/" >
+    &copy; 2018 My New Hugo Site
+  </a>
+  
+
+
+
+
+
+
+
+
+  </div>
+</footer>
+
+    
+
+  <script src="/dist/js/app.3fc0f988d21662902933.js"></script>
+
+
+  </body>
+</html>
