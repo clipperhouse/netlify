@@ -258,7 +258,6 @@ pre, code {
 }
 .post-summary {
   margin-top: 10px;
-  color: rgba(0, 0, 0, .4);
 }
 @media (max-width: 767px) {
   .first-entry {
