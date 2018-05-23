@@ -1238,7 +1238,7 @@ For example, ESPN might make a deal with Comcast to say “any video from ESPN f
       <pubDate>Tue, 18 May 2010 17:07:55 +0000</pubDate>
       
       <guid>https://clipperhouse.netlify.com/jarg/</guid>
-      <description>Try some text here     Lemmatize reset    (function () { console.log(&#39;hi&#39;); // Intercept the submit to use ajax $(document).on(&#34;submit&#34;, &#34;#text-form&#34;, function (e) { var url = this.action; var data = $(this).serialize(); $.ajax({ type: &#34;POST&#34;, url: url, data: data, success: update }); return false; e.preventDefault(); }); function update(html) { $(&#34;#result&#34;).html(html); } })();  </description>
+      <description>Try some text here     Lemmatize reset    (function () { console.log(&#39;hi&#39;); // Intercept the submit to use ajax $(document).on(&#34;submit&#34;, &#34;#text-form&#34;, function (e) { var url = this.action; var data = $(this).serialize(); $.ajax({ type: &#34;POST&#34;, url: url, crossDomain: false, data: data, success: update }); return false; e.preventDefault(); }); function update(html) { $(&#34;#result&#34;).html(html); } })();  </description>
     </item>
     
     <item>

@@ -33,7 +33,8 @@ jquery: true
             var data = $(this).serialize();
             $.ajax({
                 type: "POST",
-                url: url,
+                url: url,             
+                crossDomain: false,
                 data: data,
                 success: update
             });

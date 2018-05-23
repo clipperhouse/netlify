@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
   <title>Jargon demo - clipperhouse</title>
-  <meta name="description" content="Try some text here     Lemmatize reset    (function () { console.log(&#39;hi&#39;); // Intercept the submit to use ajax $(document).on(&#34;submit&#34;, &#34;#text-form&#34;, function (e) { var url = this.action; var data = $(this).serialize(); $.ajax({ type: &#34;POST&#34;, url: url, data: data, success: update }); return false; e.preventDefault(); }); function update(html) { $(&#34;#result&#34;).html(html); } })();  ">
+  <meta name="description" content="Try some text here     Lemmatize reset    (function () { console.log(&#39;hi&#39;); // Intercept the submit to use ajax $(document).on(&#34;submit&#34;, &#34;#text-form&#34;, function (e) { var url = this.action; var data = $(this).serialize(); $.ajax({ type: &#34;POST&#34;, url: url, crossDomain: false, data: data, success: update }); return false; e.preventDefault(); }); function update(html) { $(&#34;#result&#34;).html(html); } })();  ">
   <meta name="author" content="Matt Sherman">
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700,700i" rel="stylesheet">
 
@@ -69,7 +69,8 @@
             var data = $(this).serialize();
             $.ajax({
                 type: "POST",
-                url: url,
+                url: url,             
+                crossDomain: false,
                 data: data,
                 success: update
             });
