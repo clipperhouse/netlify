@@ -58,15 +58,17 @@
 
 <p><strong>C#</strong></p>
 
-<p>var a = 5;<br />
-Console.WriteLine(a++);<br />
-// prints 5 (though a is now valued at 6)</p>
+<pre><code class="language-c#">var a = 5;
+Console.WriteLine(a++);  
+// prints 5 (though a is now valued at 6)
+</code></pre>
 
 <p><strong>Go</strong></p>
 
-<p>a := 5<br />
-fmt.Println(a++)<br />
-// syntax error: unexpected ++</p>
+<pre><code class="language-go">a := 5  
+fmt.Println(a++)  
+// syntax error: unexpected ++
+</code></pre>
 
 <p>To be clear, a++ is a valid statement in Go; it increments by 1. It does not, however, return a value, avoiding error-prone patterns like if (a++ == 6) { …</p>
 
@@ -76,15 +78,17 @@ fmt.Println(a++)<br />
 
 <p><strong>C#</strong></p>
 
-<p>int a;<br />
-Console.WriteLine(a = 5);<br />
-// prints 5</p>
+<pre><code class="language-c#">int a;  
+Console.WriteLine(a = 5);  
+// prints 5
+</code></pre>
 
 <p>The expression a = 5 has a return value of 5. Further shenanigans:</p>
 
-<p>int a;<br />
-Console.WriteLine((a = 5) == 5);<br />
-// prints True</p>
+<pre><code class="language-c#">int a;  
+Console.WriteLine((a = 5) == 5);  
+// prints True
+</code></pre>
 
 <p>The expression (a = 5) returns a value of 5, which is then compared to 5.</p>
 
@@ -92,9 +96,10 @@ Console.WriteLine((a = 5) == 5);<br />
 
 <p>In Go, assignments are statements.</p>
 
-<p>a := 5<br />
-fmt.Println(a = 6)<br />
-// syntax error: unexpected =</p>
+<pre><code class="language-go">a := 5
+fmt.Println(a = 6)  
+// syntax error: unexpected =
+</code></pre>
 
 <p>a = 6 is a valid statement. It is not, however, an expression (and thus can’t be evaluated and printed).</p>
 
@@ -104,9 +109,10 @@ fmt.Println(a = 6)<br />
 
 <p><strong>C#</strong></p>
 
-<p>var temp = 50;<br />
-Console.WriteLine(temp &gt; 30 ? “warm” : “cold”);<br />
-// prints warm</p>
+<pre><code class="language-c#">var temp = 50;  
+Console.WriteLine(temp &amp;gt; 30 ? “warm” : “cold”);  
+// prints warm
+</code></pre>
 
 <p><strong>Go</strong></p>
 

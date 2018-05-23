@@ -78,8 +78,8 @@ pre, code {
 .title a {
   display: block;
   margin-top: 18px;
-  font-size: 28px;
-  font-weight: 700;
+  font-weight: normal;
+  font-size: 24px;
   line-height: 35px;
 }
 .title span {
@@ -200,7 +200,7 @@ pre, code {
   margin-top: 30px;
 }
 .single .main {
-  padding-top: 60px;
+  padding-top: 30px;
   padding-bottom: 30px;
 }
 .post-view {
@@ -280,9 +280,6 @@ pre, code {
 .post-entry:hover {
   box-shadow: 0 5px 40px -5px rgba(0, 0, 0, .1);
 }
-.post-entry .post-title {
-  font-size: 30px;
-}
 .post-link {
   position: absolute;
   top: 0;
@@ -292,7 +289,7 @@ pre, code {
 }
 /* Post view */
 .post-view .post-title {
-  font-size: 45px;
+  font-size: 36px;
 }
 .post-content {
   padding-top: 30px;
@@ -389,7 +386,7 @@ pre, code {
 }
 .post-content pre {
   padding: 20px;
-  background: rgba(0, 0, 0, .05);
+  background: #eee;
 }
 .post-content pre code {
   padding: 0;
@@ -397,8 +394,8 @@ pre, code {
 }
 .post-content code {
   padding: 3px 6px;
-  font-size: 15px;
-  background: rgba(0, 0, 0, .05);
+  font-size: 85%;
+  background: #eee;
   border-radius: 3px;
 }
 .post-content blockquote {

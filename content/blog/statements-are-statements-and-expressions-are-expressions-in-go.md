@@ -21,15 +21,19 @@ In most languages, this expression has a return value. In Go, it does not.
 
 **C#**
 
-var a = 5;  
+```c#
+var a = 5;
 Console.WriteLine(a++);  
 // prints 5 (though a is now valued at 6)
+```
 
 **Go**
 
+```go
 a := 5  
 fmt.Println(a++)  
 // syntax error: unexpected ++
+```
 
 To be clear, a++ is a valid statement in Go; it increments by 1. It does not, however, return a value, avoiding error-prone patterns like if (a++ == 6) { …
 
@@ -39,15 +43,19 @@ In C#, assignments have return values.
 
 **C#**
 
+```c#
 int a;  
 Console.WriteLine(a = 5);  
 // prints 5
+```
 
 The expression a = 5 has a return value of 5. Further shenanigans:
 
+```c#
 int a;  
 Console.WriteLine((a = 5) == 5);  
 // prints True
+```
 
 The expression (a = 5) returns a value of 5, which is then compared to 5.
 
@@ -55,9 +63,11 @@ The expression (a = 5) returns a value of 5, which is then compared to 5.
 
 In Go, assignments are statements.
 
-a := 5  
+```go
+a := 5
 fmt.Println(a = 6)  
 // syntax error: unexpected =
+```
 
 a = 6 is a valid statement. It is not, however, an expression (and thus can’t be evaluated and printed).
 
@@ -67,9 +77,11 @@ You are probably familiar with an expression like condition ? value : other. It�
 
 **C#**
 
+```c#
 var temp = 50;  
 Console.WriteLine(temp &gt; 30 ? “warm” : “cold”);  
 // prints warm
+```
 
 **Go**
 
