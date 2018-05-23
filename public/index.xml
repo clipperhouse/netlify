@@ -13,10 +13,10 @@
     
     <item>
       <title>The makings of a strategy</title>
-      <link>https://clipperhouse.netlify.com/blog/the-makings-of-a-strategy/</link>
+      <link>https://clipperhouse.netlify.com/blog/makings-of-a-strategy/</link>
       <pubDate>Wed, 02 May 2018 14:31:10 +0000</pubDate>
       
-      <guid>https://clipperhouse.netlify.com/blog/the-makings-of-a-strategy/</guid>
+      <guid>https://clipperhouse.netlify.com/blog/makings-of-a-strategy/</guid>
       <description>A product process is typically something like Strategy → Discovery → Specification → Build → Delivery.</description>
     </item>
     
@@ -150,10 +150,10 @@ But: it doesn’t matter much.</description>
     
     <item>
       <title>The legacy ad industry is wrong about ad blockers</title>
-      <link>https://clipperhouse.netlify.com/blog/the-legacy-ad-industry-is-wrong-about-ad-blockers/</link>
+      <link>https://clipperhouse.netlify.com/blog/legacy-ad-industry-is-wrong-about-ad-blockers/</link>
       <pubDate>Tue, 03 Feb 2015 23:17:14 +0000</pubDate>
       
-      <guid>https://clipperhouse.netlify.com/blog/the-legacy-ad-industry-is-wrong-about-ad-blockers/</guid>
+      <guid>https://clipperhouse.netlify.com/blog/legacy-ad-industry-is-wrong-about-ad-blockers/</guid>
       <description>I was recently directed to a couple of papers on browser ad-blocking software (here and here). They are not so much alarmist as they are self-serving and hindered by status quo bias.</description>
     </item>
     
@@ -197,10 +197,10 @@ HTTPS Everywhere – Does its best to detect whether a site offers HTTPS, and sw
     
     <item>
       <title>A type system in runtime’s clothing</title>
-      <link>https://clipperhouse.netlify.com/blog/a-type-system-in-runtimes-clothing/</link>
+      <link>https://clipperhouse.netlify.com/blog/type-system-in-runtimes-clothing/</link>
       <pubDate>Mon, 25 Aug 2014 23:19:31 +0000</pubDate>
       
-      <guid>https://clipperhouse.netlify.com/blog/a-type-system-in-runtimes-clothing/</guid>
+      <guid>https://clipperhouse.netlify.com/blog/type-system-in-runtimes-clothing/</guid>
       <description>Any sufficiently complicated C or Fortran program contains an ad hoc, informally-specified, bug-ridden, slow implementation of half of Common Lisp.</description>
     </item>
     
@@ -224,10 +224,10 @@ HTTPS Everywhere – Does its best to detect whether a site offers HTTPS, and sw
     
     <item>
       <title>The two edges of “culture fit”</title>
-      <link>https://clipperhouse.netlify.com/blog/the-two-edges-of-culture-fit/</link>
+      <link>https://clipperhouse.netlify.com/blog/two-edges-of-culture-fit/</link>
       <pubDate>Tue, 01 Jul 2014 15:00:01 +0000</pubDate>
       
-      <guid>https://clipperhouse.netlify.com/blog/the-two-edges-of-culture-fit/</guid>
+      <guid>https://clipperhouse.netlify.com/blog/two-edges-of-culture-fit/</guid>
       <description>Here’s a smart and funny bit about culture fit. I think it’s brutal and by and large true.</description>
     </item>
     
@@ -348,10 +348,10 @@ HTTPS Everywhere – Does its best to detect whether a site offers HTTPS, and sw
     
     <item>
       <title>The trouble with interfaces in Go</title>
-      <link>https://clipperhouse.netlify.com/blog/the-trouble-with-interfaces-in-go/</link>
+      <link>https://clipperhouse.netlify.com/blog/trouble-with-interfaces-in-go/</link>
       <pubDate>Tue, 04 Feb 2014 03:35:38 +0000</pubDate>
       
-      <guid>https://clipperhouse.netlify.com/blog/the-trouble-with-interfaces-in-go/</guid>
+      <guid>https://clipperhouse.netlify.com/blog/trouble-with-interfaces-in-go/</guid>
       <description>I am working on a tool for generics-like functionality in Go. Despite what you may have heard, Go does have generic functionality, in that you can create (e.</description>
     </item>
     
@@ -458,10 +458,10 @@ While the name connotes a ‘disorder’, certain obsessive behaviors make for v
     
     <item>
       <title>A few thoughts on flat</title>
-      <link>https://clipperhouse.netlify.com/blog/a-few-thoughts-on-flat/</link>
+      <link>https://clipperhouse.netlify.com/blog/few-thoughts-on-flat/</link>
       <pubDate>Wed, 12 Jun 2013 19:27:18 +0000</pubDate>
       
-      <guid>https://clipperhouse.netlify.com/blog/a-few-thoughts-on-flat/</guid>
+      <guid>https://clipperhouse.netlify.com/blog/few-thoughts-on-flat/</guid>
       <description>I played with iOS7 today for a bit and discussed the flat design with a couple of Stack’ers.</description>
     </item>
     
@@ -540,10 +540,10 @@ Depending on the scenario, and this is a matter of taste, CoffeeScript is more e
     
     <item>
       <title>A political approach to hiring creatives</title>
-      <link>https://clipperhouse.netlify.com/blog/a-political-approach-to-hiring-creatives/</link>
+      <link>https://clipperhouse.netlify.com/blog/political-approach-to-hiring-creatives/</link>
       <pubDate>Sat, 08 Sep 2012 18:14:10 +0000</pubDate>
       
-      <guid>https://clipperhouse.netlify.com/blog/a-political-approach-to-hiring-creatives/</guid>
+      <guid>https://clipperhouse.netlify.com/blog/political-approach-to-hiring-creatives/</guid>
       <description>This article offers a lot of sound advice on hiring a designer. As techies, we’re often out of our depth in knowing what a good designer is — often, we hire a decorator instead (or as the article calls it, a stylist).</description>
     </item>
     
@@ -558,19 +558,19 @@ Depending on the scenario, and this is a matter of taste, CoffeeScript is more e
     
     <item>
       <title>The quaintness of “content” vs “infrastructure”</title>
-      <link>https://clipperhouse.netlify.com/blog/the-quaintness-of-content-vs-infrastructure/</link>
+      <link>https://clipperhouse.netlify.com/blog/quaintness-of-content-vs-infrastructure/</link>
       <pubDate>Thu, 02 Aug 2012 03:20:25 +0000</pubDate>
       
-      <guid>https://clipperhouse.netlify.com/blog/the-quaintness-of-content-vs-infrastructure/</guid>
+      <guid>https://clipperhouse.netlify.com/blog/quaintness-of-content-vs-infrastructure/</guid>
       <description>Here’s a really informative article on the economics of Google’s fiber offer. One of the key takeaways is that Google’s ownership of high-bandwidth content (YouTube) gives them leverage in peering arrangements.</description>
     </item>
     
     <item>
       <title>The good might be the enemy of the perfect with software patents</title>
-      <link>https://clipperhouse.netlify.com/blog/the-good-might-be-the-enemy-of-the-perfect-with-software-patents/</link>
+      <link>https://clipperhouse.netlify.com/blog/good-might-be-the-enemy-of-the-perfect-with-software-patents/</link>
       <pubDate>Thu, 02 Aug 2012 02:44:34 +0000</pubDate>
       
-      <guid>https://clipperhouse.netlify.com/blog/the-good-might-be-the-enemy-of-the-perfect-with-software-patents/</guid>
+      <guid>https://clipperhouse.netlify.com/blog/good-might-be-the-enemy-of-the-perfect-with-software-patents/</guid>
       <description>I have a few concerns, relating to unintended consequences, with a proposed loser-pays bill on software patents.</description>
     </item>
     
@@ -630,19 +630,19 @@ Depending on the scenario, and this is a matter of taste, CoffeeScript is more e
     
     <item>
       <title>The inorganic app</title>
-      <link>https://clipperhouse.netlify.com/blog/the-inorganic-app/</link>
+      <link>https://clipperhouse.netlify.com/blog/inorganic-app/</link>
       <pubDate>Mon, 12 Mar 2012 02:04:40 +0000</pubDate>
       
-      <guid>https://clipperhouse.netlify.com/blog/the-inorganic-app/</guid>
+      <guid>https://clipperhouse.netlify.com/blog/inorganic-app/</guid>
       <description>It occurs to me, as I look at my Google+ stream for the first time in two months, the reason I never use it: it never had a chance to grow on me.</description>
     </item>
     
     <item>
       <title>A failure of empathy</title>
-      <link>https://clipperhouse.netlify.com/blog/a-failure-of-empathy/</link>
+      <link>https://clipperhouse.netlify.com/blog/failure-of-empathy/</link>
       <pubDate>Wed, 07 Mar 2012 00:10:06 +0000</pubDate>
       
-      <guid>https://clipperhouse.netlify.com/blog/a-failure-of-empathy/</guid>
+      <guid>https://clipperhouse.netlify.com/blog/failure-of-empathy/</guid>
       <description>Consider for a moment the logic of the leading paragraph of this article: Research suggests that consumers spend only about one second looking at nutrition information when making myriad choices.</description>
     </item>
     
@@ -720,10 +720,10 @@ Depending on the scenario, and this is a matter of taste, CoffeeScript is more e
     
     <item>
       <title>The friction constituency</title>
-      <link>https://clipperhouse.netlify.com/blog/the-friction-constituency/</link>
+      <link>https://clipperhouse.netlify.com/blog/friction-constituency/</link>
       <pubDate>Wed, 18 Jan 2012 03:35:46 +0000</pubDate>
       
-      <guid>https://clipperhouse.netlify.com/blog/the-friction-constituency/</guid>
+      <guid>https://clipperhouse.netlify.com/blog/friction-constituency/</guid>
       <description>Having learned that both the Chamber of Commerce and the AFL-CIO support SOPA, it’s becoming clearer to me just how much of our economy is based on extracting rents from friction.</description>
     </item>
     
@@ -775,19 +775,19 @@ Depending on the scenario, and this is a matter of taste, CoffeeScript is more e
     
     <item>
       <title>The binary web</title>
-      <link>https://clipperhouse.netlify.com/blog/the-binary-web/</link>
+      <link>https://clipperhouse.netlify.com/blog/binary-web/</link>
       <pubDate>Sun, 30 Oct 2011 21:49:09 +0000</pubDate>
       
-      <guid>https://clipperhouse.netlify.com/blog/the-binary-web/</guid>
+      <guid>https://clipperhouse.netlify.com/blog/binary-web/</guid>
       <description>It’s easy to see the web as sets of advances that come in waves. The first was its emergence as a consumer (and corporate) phenomenon, starting with Netscape and continuing through Internet Explorer 6 (which, we often forget, was the first “legitimate” browser for many businesses).</description>
     </item>
     
     <item>
       <title>The law is not Turing complete</title>
-      <link>https://clipperhouse.netlify.com/blog/the-law-is-not-turing-complete/</link>
+      <link>https://clipperhouse.netlify.com/blog/law-is-not-turing-complete/</link>
       <pubDate>Sun, 17 Jul 2011 20:23:10 +0000</pubDate>
       
-      <guid>https://clipperhouse.netlify.com/blog/the-law-is-not-turing-complete/</guid>
+      <guid>https://clipperhouse.netlify.com/blog/law-is-not-turing-complete/</guid>
       <description>In recent comments on Hacker News, I suggested, with some snark, that the definition of net neutrality is slippery and ad-hoc, and therefore exploitable.</description>
     </item>
     
@@ -802,10 +802,10 @@ Depending on the scenario, and this is a matter of taste, CoffeeScript is more e
     
     <item>
       <title>The NYT paywall is about segmenting, not security</title>
-      <link>https://clipperhouse.netlify.com/blog/the-nyt-paywall-is-about-segmenting-not-security/</link>
+      <link>https://clipperhouse.netlify.com/blog/nyt-paywall-is-about-segmenting-not-security/</link>
       <pubDate>Sun, 26 Jun 2011 23:37:14 +0000</pubDate>
       
-      <guid>https://clipperhouse.netlify.com/blog/the-nyt-paywall-is-about-segmenting-not-security/</guid>
+      <guid>https://clipperhouse.netlify.com/blog/nyt-paywall-is-about-segmenting-not-security/</guid>
       <description>It may be intemperate of me, but why do geeks respond in such a…Pavlovian way when given the opportunity to assume another person’s stupidity?</description>
     </item>
     
@@ -884,28 +884,28 @@ Depending on the scenario, and this is a matter of taste, CoffeeScript is more e
     
     <item>
       <title>A call for industry-wide pixel-doubling</title>
-      <link>https://clipperhouse.netlify.com/blog/a-call-for-industrywide-pixeldoubling/</link>
+      <link>https://clipperhouse.netlify.com/blog/call-for-industrywide-pixeldoubling/</link>
       <pubDate>Tue, 18 Jan 2011 16:31:28 +0000</pubDate>
       
-      <guid>https://clipperhouse.netlify.com/blog/a-call-for-industrywide-pixeldoubling/</guid>
+      <guid>https://clipperhouse.netlify.com/blog/call-for-industrywide-pixeldoubling/</guid>
       <description>Computer screens have not changed much over the last 20 years, relative to other technologies like processing power and bandwidth.</description>
     </item>
     
     <item>
       <title>The Internet is not a public commons, and it is not Beetlejuice</title>
-      <link>https://clipperhouse.netlify.com/blog/the-internet-is-not-a-public-commons-and-it-is-not-beetlejuice/</link>
+      <link>https://clipperhouse.netlify.com/blog/internet-is-not-a-public-commons-and-it-is-not-beetlejuice/</link>
       <pubDate>Fri, 24 Dec 2010 10:34:29 +0000</pubDate>
       
-      <guid>https://clipperhouse.netlify.com/blog/the-internet-is-not-a-public-commons-and-it-is-not-beetlejuice/</guid>
+      <guid>https://clipperhouse.netlify.com/blog/internet-is-not-a-public-commons-and-it-is-not-beetlejuice/</guid>
       <description>There are some stories making the rounds that “the Internet” is a public commons built on private property.</description>
     </item>
     
     <item>
       <title>The scourge of paid prioritization</title>
-      <link>https://clipperhouse.netlify.com/blog/the-scourge-of-paid-prioritization/</link>
+      <link>https://clipperhouse.netlify.com/blog/scourge-of-paid-prioritization/</link>
       <pubDate>Wed, 22 Dec 2010 07:35:34 +0000</pubDate>
       
-      <guid>https://clipperhouse.netlify.com/blog/the-scourge-of-paid-prioritization/</guid>
+      <guid>https://clipperhouse.netlify.com/blog/scourge-of-paid-prioritization/</guid>
       <description>I received a pair of earmuffs today via Amazon Prime. Great service! They got to New York in just two days, all the way from a Nevada warehouse.</description>
     </item>
     
@@ -938,10 +938,10 @@ Depending on the scenario, and this is a matter of taste, CoffeeScript is more e
     
     <item>
       <title>A couple of easy wins with SQL indexes</title>
-      <link>https://clipperhouse.netlify.com/blog/a-couple-of-easy-wins-with-sql-indexes/</link>
+      <link>https://clipperhouse.netlify.com/blog/couple-of-easy-wins-with-sql-indexes/</link>
       <pubDate>Sun, 17 Oct 2010 12:14:00 +0000</pubDate>
       
-      <guid>https://clipperhouse.netlify.com/blog/a-couple-of-easy-wins-with-sql-indexes/</guid>
+      <guid>https://clipperhouse.netlify.com/blog/couple-of-easy-wins-with-sql-indexes/</guid>
       <description>I was lucky enough to watch a great talk by SQL expert Brent Ozar courtesy of Fog Creek.</description>
     </item>
     
@@ -983,10 +983,10 @@ Depending on the scenario, and this is a matter of taste, CoffeeScript is more e
     
     <item>
       <title>The busiest people at Apple right now…</title>
-      <link>https://clipperhouse.netlify.com/blog/the-busiest-people-at-apple-right-now/</link>
+      <link>https://clipperhouse.netlify.com/blog/busiest-people-at-apple-right-now/</link>
       <pubDate>Tue, 13 Jul 2010 21:00:00 +0000</pubDate>
       
-      <guid>https://clipperhouse.netlify.com/blog/the-busiest-people-at-apple-right-now/</guid>
+      <guid>https://clipperhouse.netlify.com/blog/busiest-people-at-apple-right-now/</guid>
       <description>…are the ones planning the hardware recall. The second busiest are the ones figuring out how to coat the antenna with an electrical insulator that doesn’t hurt the aesthetics.</description>
     </item>
     
@@ -1119,10 +1119,10 @@ I’ve been a reader and admirer of Joel and Jeff for some years now, so I am th
     
     <item>
       <title>The point at which your project becomes bigger than your head</title>
-      <link>https://clipperhouse.netlify.com/blog/the-point-at-which-your-project-becomes-bigger-than-your-head/</link>
+      <link>https://clipperhouse.netlify.com/blog/point-at-which-your-project-becomes-bigger-than-your-head/</link>
       <pubDate>Tue, 23 Mar 2010 14:18:33 +0000</pubDate>
       
-      <guid>https://clipperhouse.netlify.com/blog/the-point-at-which-your-project-becomes-bigger-than-your-head/</guid>
+      <guid>https://clipperhouse.netlify.com/blog/point-at-which-your-project-becomes-bigger-than-your-head/</guid>
       <description>I’ve seen it argued that a measure of a good programmer is the amount of “stuff” they can keep in their head at one time.</description>
     </item>
     
@@ -1137,10 +1137,10 @@ I’ve been a reader and admirer of Joel and Jeff for some years now, so I am th
     
     <item>
       <title>The artificial distinction between “content” and “delivery”</title>
-      <link>https://clipperhouse.netlify.com/blog/the-artificial-distinction-between-content-and-delivery/</link>
+      <link>https://clipperhouse.netlify.com/blog/artificial-distinction-between-content-and-delivery/</link>
       <pubDate>Wed, 17 Mar 2010 08:24:00 +0000</pubDate>
       
-      <guid>https://clipperhouse.netlify.com/blog/the-artificial-distinction-between-content-and-delivery/</guid>
+      <guid>https://clipperhouse.netlify.com/blog/artificial-distinction-between-content-and-delivery/</guid>
       <description>In the arguments over net neutrality, the discussion is often around “content” vs “delivery”. The concern is that the delivery people (ISPs) might cut off or otherwise extort the content people.</description>
     </item>
     
@@ -1174,10 +1174,10 @@ Looks like the .</description>
     
     <item>
       <title>A few more reasons to use Progressive Enhancement</title>
-      <link>https://clipperhouse.netlify.com/blog/a-few-more-reasons-to-use-progressive-enhancement/</link>
+      <link>https://clipperhouse.netlify.com/blog/few-more-reasons-to-use-progressive-enhancement/</link>
       <pubDate>Tue, 23 Feb 2010 10:55:01 +0000</pubDate>
       
-      <guid>https://clipperhouse.netlify.com/blog/a-few-more-reasons-to-use-progressive-enhancement/</guid>
+      <guid>https://clipperhouse.netlify.com/blog/few-more-reasons-to-use-progressive-enhancement/</guid>
       <description>Progressive Enhancement is a methodology where a web application is developed in layers. Each layer works correctly on its own, and additional layers on top enhance the user experience.</description>
     </item>
     
@@ -1346,10 +1346,10 @@ One idea in Go that would be especially handy in C# is implied interfaces.</desc
     
     <item>
       <title>The Man sticks it to The Man; or, the Country-club Revolt; or, Whitey’s Revenge</title>
-      <link>https://clipperhouse.netlify.com/blog/the-man-sticks-it-to-the-man-or-the-countryclub-revolt-or-whiteys-revenge/</link>
+      <link>https://clipperhouse.netlify.com/blog/man-sticks-it-to-the-man-or-the-countryclub-revolt-or-whiteys-revenge/</link>
       <pubDate>Thu, 17 Dec 2009 21:43:00 +0000</pubDate>
       
-      <guid>https://clipperhouse.netlify.com/blog/the-man-sticks-it-to-the-man-or-the-countryclub-revolt-or-whiteys-revenge/</guid>
+      <guid>https://clipperhouse.netlify.com/blog/man-sticks-it-to-the-man-or-the-countryclub-revolt-or-whiteys-revenge/</guid>
       <description>So Fake Steve, who I like, thinks it would be funny to try to overload AT&amp;amp;T network tomorrow.</description>
     </item>
     
@@ -1458,10 +1458,10 @@ Schneier: that’s not what privacy is for</description>
     
     <item>
       <title>A gold mine for StackOverflow</title>
-      <link>https://clipperhouse.netlify.com/blog/a-gold-mine-for-stackoverflow/</link>
+      <link>https://clipperhouse.netlify.com/blog/gold-mine-for-stackoverflow/</link>
       <pubDate>Wed, 02 Dec 2009 20:09:00 +0000</pubDate>
       
-      <guid>https://clipperhouse.netlify.com/blog/a-gold-mine-for-stackoverflow/</guid>
+      <guid>https://clipperhouse.netlify.com/blog/gold-mine-for-stackoverflow/</guid>
       <description>This is a gold mine for Joel and Jeff over at StackOverflow: careers. It’s something I thought of a while ago, and I am sure the SO guys were ahead of me by a millennium.</description>
     </item>
     
@@ -1530,10 +1530,10 @@ Schneier: that’s not what privacy is for</description>
     
     <item>
       <title>The iPhone calendar has a separate time zone from the phone</title>
-      <link>https://clipperhouse.netlify.com/blog/the-iphone-calendar-has-a-separate-time-zone-from-the-phone/</link>
+      <link>https://clipperhouse.netlify.com/blog/iphone-calendar-has-a-separate-time-zone-from-the-phone/</link>
       <pubDate>Tue, 17 Nov 2009 18:44:25 +0000</pubDate>
       
-      <guid>https://clipperhouse.netlify.com/blog/the-iphone-calendar-has-a-separate-time-zone-from-the-phone/</guid>
+      <guid>https://clipperhouse.netlify.com/blog/iphone-calendar-has-a-separate-time-zone-from-the-phone/</guid>
       <description>After my recent move to NYC, I discovered that my Google Calendar was 3 hours off from my iPhone calendar.</description>
     </item>
     
@@ -1566,10 +1566,10 @@ Schneier: that’s not what privacy is for</description>
     
     <item>
       <title>The emergence of Big Data (2.0)</title>
-      <link>https://clipperhouse.netlify.com/blog/the-emergence-of-big-data-2.0/</link>
+      <link>https://clipperhouse.netlify.com/blog/emergence-of-big-data-2.0/</link>
       <pubDate>Mon, 16 Nov 2009 10:07:00 +0000</pubDate>
       
-      <guid>https://clipperhouse.netlify.com/blog/the-emergence-of-big-data-2.0/</guid>
+      <guid>https://clipperhouse.netlify.com/blog/emergence-of-big-data-2.0/</guid>
       <description>I’ve written previously on the idea that data, not algorithms, will be a main differentiator for web companies moving forward.</description>
     </item>
     
@@ -1611,29 +1611,29 @@ Schneier: that’s not what privacy is for</description>
     
     <item>
       <title>A new language from Google</title>
-      <link>https://clipperhouse.netlify.com/blog/a-new-language-from-google/</link>
+      <link>https://clipperhouse.netlify.com/blog/new-language-from-google/</link>
       <pubDate>Tue, 10 Nov 2009 17:34:09 +0000</pubDate>
       
-      <guid>https://clipperhouse.netlify.com/blog/a-new-language-from-google/</guid>
+      <guid>https://clipperhouse.netlify.com/blog/new-language-from-google/</guid>
       <description>Neat, Google has a new language called Go. Clever branding, that.
 It seems to be Google’s attempt to step into the Java/C# space.</description>
     </item>
     
     <item>
       <title>The Paris Hilton problem</title>
-      <link>https://clipperhouse.netlify.com/blog/the-paris-hilton-problem/</link>
+      <link>https://clipperhouse.netlify.com/blog/paris-hilton-problem/</link>
       <pubDate>Wed, 04 Nov 2009 07:15:57 +0000</pubDate>
       
-      <guid>https://clipperhouse.netlify.com/blog/the-paris-hilton-problem/</guid>
+      <guid>https://clipperhouse.netlify.com/blog/paris-hilton-problem/</guid>
       <description>Joel Spolsky has an article in Inc describing the tension between growth and quality at his company.</description>
     </item>
     
     <item>
       <title>The flagship strategy of mobile phones — Microsoft needs one</title>
-      <link>https://clipperhouse.netlify.com/blog/the-flagship-strategy-of-mobile-phones-microsoft-needs-one/</link>
+      <link>https://clipperhouse.netlify.com/blog/flagship-strategy-of-mobile-phones-microsoft-needs-one/</link>
       <pubDate>Mon, 02 Nov 2009 12:05:00 +0000</pubDate>
       
-      <guid>https://clipperhouse.netlify.com/blog/the-flagship-strategy-of-mobile-phones-microsoft-needs-one/</guid>
+      <guid>https://clipperhouse.netlify.com/blog/flagship-strategy-of-mobile-phones-microsoft-needs-one/</guid>
       <description>The flagship strategy of mobile phones — Microsoft needs one In the wake of the iPhone over the last few years, it seems that the market is responding to a business model different than the PC’s that preceded it.</description>
     </item>
     
@@ -1738,10 +1738,10 @@ It seems to be Google’s attempt to step into the Java/C# space.</description>
     
     <item>
       <title>A simple way that Apple can improve iPhone battery life and user experience</title>
-      <link>https://clipperhouse.netlify.com/blog/a-simple-way-that-apple-can-improve-iphone-battery-life-and-user-experience/</link>
+      <link>https://clipperhouse.netlify.com/blog/simple-way-that-apple-can-improve-iphone-battery-life-and-user-experience/</link>
       <pubDate>Thu, 08 Oct 2009 12:19:23 +0000</pubDate>
       
-      <guid>https://clipperhouse.netlify.com/blog/a-simple-way-that-apple-can-improve-iphone-battery-life-and-user-experience/</guid>
+      <guid>https://clipperhouse.netlify.com/blog/simple-way-that-apple-can-improve-iphone-battery-life-and-user-experience/</guid>
       <description>I dig my iPhone, but when I switched over from my Blackberry, I was very surprised at how many steps it takes to find out about new email.</description>
     </item>
     
@@ -1756,10 +1756,10 @@ It seems to be Google’s attempt to step into the Java/C# space.</description>
     
     <item>
       <title>A thought experiment: serial vs parallel</title>
-      <link>https://clipperhouse.netlify.com/blog/a-thought-experiment-serial-vs-parallel/</link>
+      <link>https://clipperhouse.netlify.com/blog/thought-experiment-serial-vs-parallel/</link>
       <pubDate>Sat, 19 Sep 2009 18:54:50 +0000</pubDate>
       
-      <guid>https://clipperhouse.netlify.com/blog/a-thought-experiment-serial-vs-parallel/</guid>
+      <guid>https://clipperhouse.netlify.com/blog/thought-experiment-serial-vs-parallel/</guid>
       <description>Now that solid-state drives are arriving in the mainstream, I’ve been thinking about the implications of serial vs parallel and how they affect overall perceived performance.</description>
     </item>
     
@@ -1784,10 +1784,10 @@ Like Jeff Atwood, I consider end-user performance to be a feature.</description>
     
     <item>
       <title>The dullest blog</title>
-      <link>https://clipperhouse.netlify.com/blog/the-dullest-blog/</link>
+      <link>https://clipperhouse.netlify.com/blog/dullest-blog/</link>
       <pubDate>Wed, 16 Sep 2009 11:38:00 +0000</pubDate>
       
-      <guid>https://clipperhouse.netlify.com/blog/the-dullest-blog/</guid>
+      <guid>https://clipperhouse.netlify.com/blog/dullest-blog/</guid>
       <description>I navigated on my computer to the web site called “The dullest blog in the world”. I was mildly amused for several minutes.</description>
     </item>
     
@@ -1839,10 +1839,10 @@ People are throwing things at you and yelling “horn high yo”.</description>
     
     <item>
       <title>The “var” thing</title>
-      <link>https://clipperhouse.netlify.com/blog/the-var-thing/</link>
+      <link>https://clipperhouse.netlify.com/blog/var-thing/</link>
       <pubDate>Fri, 04 Sep 2009 11:02:54 +0000</pubDate>
       
-      <guid>https://clipperhouse.netlify.com/blog/the-var-thing/</guid>
+      <guid>https://clipperhouse.netlify.com/blog/var-thing/</guid>
       <description>I’ve come to really enjoy using the “var” keyword in C#. Although it’s been written about many times, I want to clarify what it is.</description>
     </item>
     
@@ -1969,10 +1969,10 @@ What keyword in C# is derived from a person’s name, and who is that person?</d
     
     <item>
       <title>The most viable reason for Apple’s rejection of Google Voice (so far)</title>
-      <link>https://clipperhouse.netlify.com/blog/the-most-viable-reason-for-apples-rejection-of-google-voice-so-far/</link>
+      <link>https://clipperhouse.netlify.com/blog/most-viable-reason-for-apples-rejection-of-google-voice-so-far/</link>
       <pubDate>Tue, 04 Aug 2009 12:11:59 +0000</pubDate>
       
-      <guid>https://clipperhouse.netlify.com/blog/the-most-viable-reason-for-apples-rejection-of-google-voice-so-far/</guid>
+      <guid>https://clipperhouse.netlify.com/blog/most-viable-reason-for-apples-rejection-of-google-voice-so-far/</guid>
       <description>So, in the Apple-Google-AT&amp;amp;T kerfuffle over Google Voice being rejected from the iPhone, I haven’t heard many reasons I consider viable.</description>
     </item>
     
@@ -1987,10 +1987,10 @@ What keyword in C# is derived from a person’s name, and who is that person?</d
     
     <item>
       <title>A market opportunity for Verizon and Sprint</title>
-      <link>https://clipperhouse.netlify.com/blog/a-market-opportunity-for-verizon-and-sprint/</link>
+      <link>https://clipperhouse.netlify.com/blog/market-opportunity-for-verizon-and-sprint/</link>
       <pubDate>Sat, 01 Aug 2009 17:31:00 +0000</pubDate>
       
-      <guid>https://clipperhouse.netlify.com/blog/a-market-opportunity-for-verizon-and-sprint/</guid>
+      <guid>https://clipperhouse.netlify.com/blog/market-opportunity-for-verizon-and-sprint/</guid>
       <description>In the current FCC-involved kerfuffle over why Apple or AT&amp;amp;T blocked Google Voice on the iPhone, I see opportunity.</description>
     </item>
     
@@ -2023,10 +2023,10 @@ What keyword in C# is derived from a person’s name, and who is that person?</d
     
     <item>
       <title>The Googlebot runs Javascript</title>
-      <link>https://clipperhouse.netlify.com/blog/the-googlebot-runs-javascript/</link>
+      <link>https://clipperhouse.netlify.com/blog/googlebot-runs-javascript/</link>
       <pubDate>Sun, 26 Jul 2009 18:54:00 +0000</pubDate>
       
-      <guid>https://clipperhouse.netlify.com/blog/the-googlebot-runs-javascript/</guid>
+      <guid>https://clipperhouse.netlify.com/blog/googlebot-runs-javascript/</guid>
       <description>I’ve had idle chats with techie friends wondering whether search engines such as Google simply index the raw HTML of your web page, or do they actually parse and “display” it as a true browser would.</description>
     </item>
     
@@ -2122,10 +2122,10 @@ What keyword in C# is derived from a person’s name, and who is that person?</d
     
     <item>
       <title>The iPhone needs multi-tasking, stat</title>
-      <link>https://clipperhouse.netlify.com/blog/the-iphone-needs-multitasking-stat/</link>
+      <link>https://clipperhouse.netlify.com/blog/iphone-needs-multitasking-stat/</link>
       <pubDate>Sat, 11 Jul 2009 23:36:30 +0000</pubDate>
       
-      <guid>https://clipperhouse.netlify.com/blog/the-iphone-needs-multitasking-stat/</guid>
+      <guid>https://clipperhouse.netlify.com/blog/iphone-needs-multitasking-stat/</guid>
       <description>Joshua Topolsky offers a very funny and insightful take on the iPhone’s very fundamental flaw: it is designed for doing one thing at a time.</description>
     </item>
     
@@ -2140,10 +2140,10 @@ What keyword in C# is derived from a person’s name, and who is that person?</d
     
     <item>
       <title>A prediction of EU hypocrisy</title>
-      <link>https://clipperhouse.netlify.com/blog/a-prediction-of-eu-hypocrisy/</link>
+      <link>https://clipperhouse.netlify.com/blog/prediction-of-eu-hypocrisy/</link>
       <pubDate>Tue, 07 Jul 2009 23:39:23 +0000</pubDate>
       
-      <guid>https://clipperhouse.netlify.com/blog/a-prediction-of-eu-hypocrisy/</guid>
+      <guid>https://clipperhouse.netlify.com/blog/prediction-of-eu-hypocrisy/</guid>
       <description>Google’s search market share in Europe is over 80%. Meanwhile, Microsoft’s Internet Explorer — the target of repeated anti-trust charges by the EU — hovers under 50% in Europe.</description>
     </item>
     
@@ -2158,10 +2158,10 @@ What keyword in C# is derived from a person’s name, and who is that person?</d
     
     <item>
       <title>The new wave of self-shorteners</title>
-      <link>https://clipperhouse.netlify.com/blog/the-new-wave-of-selfshorteners/</link>
+      <link>https://clipperhouse.netlify.com/blog/new-wave-of-selfshorteners/</link>
       <pubDate>Tue, 07 Jul 2009 21:59:18 +0000</pubDate>
       
-      <guid>https://clipperhouse.netlify.com/blog/the-new-wave-of-selfshorteners/</guid>
+      <guid>https://clipperhouse.netlify.com/blog/new-wave-of-selfshorteners/</guid>
       <description>So, my previous bit on the attraction of shortening one’s own URLs seems to have some traction.</description>
     </item>
     
@@ -2285,10 +2285,10 @@ Anyone else?</description>
     
     <item>
       <title>The cloud! The cloud!</title>
-      <link>https://clipperhouse.netlify.com/blog/the-cloud-the-cloud/</link>
+      <link>https://clipperhouse.netlify.com/blog/cloud-the-cloud/</link>
       <pubDate>Thu, 11 Jun 2009 15:07:00 +0000</pubDate>
       
-      <guid>https://clipperhouse.netlify.com/blog/the-cloud-the-cloud/</guid>
+      <guid>https://clipperhouse.netlify.com/blog/cloud-the-cloud/</guid>
       <description>Everything in technology is an abstraction of something else. The browser is an abstraction, the keyboard is an abstraction, C# is an abstraction; they all sit on top of other things and hide the details, with the goal of making you productive.</description>
     </item>
     
@@ -2340,10 +2340,10 @@ blip.tv [http://blip.tv/play/g8s2gYbdKZfJDA]</description>
     
     <item>
       <title>The OS still matters, or, platform abstraction is hard</title>
-      <link>https://clipperhouse.netlify.com/blog/the-os-still-matters-or-platform-abstraction-is-hard/</link>
+      <link>https://clipperhouse.netlify.com/blog/os-still-matters-or-platform-abstraction-is-hard/</link>
       <pubDate>Thu, 04 Jun 2009 23:50:00 +0000</pubDate>
       
-      <guid>https://clipperhouse.netlify.com/blog/the-os-still-matters-or-platform-abstraction-is-hard/</guid>
+      <guid>https://clipperhouse.netlify.com/blog/os-still-matters-or-platform-abstraction-is-hard/</guid>
       <description>Google has released some preliminary versions of Chrome for Mac and Linux. They announced it almost apologetically.</description>
     </item>
     
@@ -2358,10 +2358,10 @@ blip.tv [http://blip.tv/play/g8s2gYbdKZfJDA]</description>
     
     <item>
       <title>The DOM is a data source, query it wisely</title>
-      <link>https://clipperhouse.netlify.com/blog/the-dom-is-a-data-source-query-it-wisely/</link>
+      <link>https://clipperhouse.netlify.com/blog/dom-is-a-data-source-query-it-wisely/</link>
       <pubDate>Tue, 02 Jun 2009 19:05:00 +0000</pubDate>
       
-      <guid>https://clipperhouse.netlify.com/blog/the-dom-is-a-data-source-query-it-wisely/</guid>
+      <guid>https://clipperhouse.netlify.com/blog/dom-is-a-data-source-query-it-wisely/</guid>
       <description>Nice set of performance tips for jQuery selectors: http://www.artzstudio.com/2009/04/jquery-performance-rules/
 They are all quite logical if you are used to selecting from data sets or file hierarchies.</description>
     </item>
@@ -2540,19 +2540,19 @@ They are all quite logical if you are used to selecting from data sets or file h
     
     <item>
       <title>The long game on metered pricing: free shipping</title>
-      <link>https://clipperhouse.netlify.com/blog/the-long-game-on-metered-pricing-free-shipping/</link>
+      <link>https://clipperhouse.netlify.com/blog/long-game-on-metered-pricing-free-shipping/</link>
       <pubDate>Tue, 03 Jun 2008 17:17:49 +0000</pubDate>
       
-      <guid>https://clipperhouse.netlify.com/blog/the-long-game-on-metered-pricing-free-shipping/</guid>
+      <guid>https://clipperhouse.netlify.com/blog/long-game-on-metered-pricing-free-shipping/</guid>
       <description>Time-Warner cable has begun to roll out its metered pricing plan in Beaumont, Texas. Alley Insider says it won’t work, and Mike Arrington declares it a moral outrage.</description>
     </item>
     
     <item>
       <title>The biggest threat to your rights? Scarcity.</title>
-      <link>https://clipperhouse.netlify.com/blog/the-biggest-threat-to-your-rights-scarcity./</link>
+      <link>https://clipperhouse.netlify.com/blog/biggest-threat-to-your-rights-scarcity./</link>
       <pubDate>Sat, 01 Mar 2008 06:20:45 +0000</pubDate>
       
-      <guid>https://clipperhouse.netlify.com/blog/the-biggest-threat-to-your-rights-scarcity./</guid>
+      <guid>https://clipperhouse.netlify.com/blog/biggest-threat-to-your-rights-scarcity./</guid>
       <description>I would not have predicted this: The U.S. Federal Communications Commission (FCC) should allow broadband providers to manage their networks and slow “bandwidth hogs,” despite concerns that such practices arbitrarily target some customers, said a coalition of seven civil rights groups.</description>
     </item>
     
@@ -2631,10 +2631,10 @@ Rich: UN committees. Reach: entrepeneurs. Advantage: reach.</description>
     
     <item>
       <title>The long game on metered pricing and Net Neutrality</title>
-      <link>https://clipperhouse.netlify.com/blog/the-long-game-on-metered-pricing-and-net-neutrality/</link>
+      <link>https://clipperhouse.netlify.com/blog/long-game-on-metered-pricing-and-net-neutrality/</link>
       <pubDate>Mon, 28 Jan 2008 00:52:32 +0000</pubDate>
       
-      <guid>https://clipperhouse.netlify.com/blog/the-long-game-on-metered-pricing-and-net-neutrality/</guid>
+      <guid>https://clipperhouse.netlify.com/blog/long-game-on-metered-pricing-and-net-neutrality/</guid>
       <description>Last week, Time-Warner announced that it is experimenting with metered Internet pricing in a couple of markets.</description>
     </item>
     

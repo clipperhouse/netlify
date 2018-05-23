@@ -9,7 +9,7 @@ It appears that Internet advertising is going through a bit of a shakeout. Ad bl
 
 For those that rely on ad revenues in their business, this might seem like a reason for panic. I don’t know if it is! But I see three possible outcomes.
 
-### 1: Not much
+#### 1: Not much
 
 The basic math of “typical” click-through rates indicates that, charitably, [90% of ads are useless](http://clipperhouse.com/2014/02/18/threshold-thinking/). We know it’s a hard problem — very, very good targeting _might_ achieve a 1% CTR.
 
@@ -23,7 +23,7 @@ The devil, then, is in the inefficiency. (I have to believe that ad blockers sel
 
 It’s possible that “ad blocking” really means removing waste from the total pool of impressions, while advertisers retain approximately the same overall ROI.
 
-### 2: Native ads
+#### 2: Native ads
 
 This is already happening in many forms. Like in the old days where the radio DJ would pitch a product on air as part of their show, or Jennifer Aniston holds a can of Coke on Friends, or a golfer sports a Nike logo on their hat.
 
@@ -31,7 +31,7 @@ Similarly, you might see explicitly sponsored content on Medium, product placeme
 
 We might even file this one under “not much” — product placement has never not been.
 
-### 3: DRM
+#### 3: DRM
 
 What if the web (and apps) become DRM’d such that ad blockers cannot interact with the content at all? I haven’t seen it, though the first place I’d expect to is in video (much of which is already DRM’d).
 

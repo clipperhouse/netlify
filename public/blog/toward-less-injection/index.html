@@ -46,17 +46,17 @@
 
 <p>The conversation goes like this…</p>
 
-<h4 id="i-need-to-inject-an-httpcontext">I need to inject an <code>HttpContext</code></h4>
+<h4 id="i-need-to-inject-an-httpcontext">I need to inject an HttpContext</h4>
 
 <p>Great. Why? Because we need to read a cookie. So really….</p>
 
-<h4 id="ah-ok-i-only-need-to-inject-an-httprequest">Ah, OK I only need to inject an <code>HttpRequest</code></h4>
+<h4 id="ah-ok-i-only-need-to-inject-an-httprequest">Ah, OK I only need to inject an HttpRequest</h4>
 
 <p>Better! But seriously, are you only looking at cookies?</p>
 
-<h4 id="right-i-only-ever-touch-request-cookies-which-is-an-httpcookiecollection">Right, I only ever touch <code>Request.Cookies</code>, which is an <code>HttpCookieCollection</code></h4>
+<h4 id="right-i-only-ever-touch-request-cookies-which-is-an-httpcookiecollection">Right, I only ever touch Request.Cookies, which is an HttpCookieCollection</h4>
 
-<p>Now we are getting somewhere! You only need an <code>HttpCookieCollection</code>. That’s a pretty simple data type.</p>
+<p>Now we are getting somewhere! You only need an <em>HttpCookieCollection</em>. That’s a pretty simple data type.</p>
 
 <p>If that’s all you need, you don’t need to <em>inject</em> it at all — just pass it as an <strong>argument</strong> to the method that needs it.</p>
 
@@ -64,7 +64,7 @@
 
 <p>–</p>
 
-<p>You could push it further and say, OK, which of <a href="https://msdn.microsoft.com/en-us/library/system.web.httpcookiecollection%28v=vs.110%29.aspx"><code>CookieCollection’s methods</code></a> am I actually using? Is there an <strong>even smaller type</strong> that I could accept, maybe an <code>IEnumerable&lt;HttpCookie&gt;</code>? How about just the <code>HttpCookie</code>, no collection at all? A <code>string</code>, even?</p>
+<p>You could push it further and say, OK, which of <a href="https://msdn.microsoft.com/en-us/library/system.web.httpcookiecollection%28v=vs.110%29.aspx"><em>CookieCollection’s</em> methods</a> am I actually using? Is there an <strong>even smaller type</strong> that I could accept, maybe an <em>IEnumerable&lt;HttpCookie&gt;</em>? How about just the <em>HttpCookie</em>, no collection at all? A <em>string</em>, even?</p>
 
 <p>The smaller the interface, the easier the mock — though there may be a trade-off in asking the caller to do more work.</p>
 
