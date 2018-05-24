@@ -1443,6 +1443,10 @@
   </url>
   
   <url>
+    <loc>https://clipperhouse.netlify.com/blog/how-to-move-from-medium-to-static-hosting-with-jekyll-or-hugo/</loc>
+  </url>
+  
+  <url>
     <loc>https://clipperhouse.netlify.com/blog/</loc>
     <lastmod>2018-05-02T14:31:10+00:00</lastmod>
     <priority>0</priority>

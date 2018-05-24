@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="renderer" content="webkit">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <title> - clipperhouse</title>
+  <meta name="description" content="–- title: “How to move from Medium to static hosting with Jekyll or Hugo” date: 2018-05-24 author: “Matt Sherman”">
+  <meta name="author" content="Matt Sherman">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700,700i" rel="stylesheet">
+
+  <link href="/css/style.css" rel="stylesheet">
+
+  <link rel="apple-touch-icon" href="/img/apple-touch-icon.png">
+  <link rel="icon" href="/img/favicon.ico">
+
+  <meta name="generator" content="Hugo 0.40.3">
+
+  <link rel="alternate" type="application/atom+xml" href="/index.xml" title="clipperhouse">
+</head>
+<body class="single">
+  <header class="header">
+    
+    <p class="title"><a href="/">clipperhouse</a></p>
+    
+    <button class="menu-toggle" type="button"></button>
+    <nav class="menu">
+      <ul>
+        
+        
+      </ul>
+    </nav>
+  </header>
+  <main class="main">
+
+<article class="post post-view">
+  <header class="post-header">
+  <h1 class="post-title"></h1>
+  <p class="post-meta">Published by Matt Sherman · January 1, 0001</p>
+</header>
+<div class="post-content">
+
+<p>–-
+title: “How to move from Medium to static hosting with Jekyll or Hugo”
+date: 2018-05-24
+author: “Matt Sherman”</p>
+
+<p>–-</p>
+
+<p>I recently moved <a href="http://clipperhouse.netlify.com/">my blog</a> from Medium to static generation with Hugo &amp; hosting with Netlify. I like prefer for performance reasons, and because Markdown is so nice.</p>
+
+<p>This approach is good for people who are comfortable with Git and other tools. It’s not great if you like UI’s that (say) Medium or Wordpress provides.</p>
+
+<h3 id="get-familiar-with-hugo-or-jekyll">Get familiar with Hugo or Jekyll</h3>
+
+<p>Out of scope of this article is how to use <a href="https://gohugo.io/getting-started/">Hugo</a>, <a href="https://jekyllrb.com/docs/quickstart/">Jekyll</a> or <a href="https://www.netlify.com">Netlify</a>. That’s what their docs are for! I suggest you get up and running with “Hello, world” using those platforms before continuing.</p>
+
+<blockquote>
+<p>I happen to prefer Hugo, it’s super fast and I like Go. I like Netlify because the static hosting is automagic (triggered via Git).</p>
+</blockquote>
+
+<h3 id="export-from-medium">Export from Medium</h3>
+
+<p>First, download your articles from <a href="https://medium.com/me/export">your Medium export page</a> page, and expand the .zip file. (It takes a second, they email when it’s ready.)</p>
+
+<p>Once downloaded and expanded, you should see a list of HTML files.</p>
+
+<h3 id="convert-to-markdown">Convert to Markdown</h3>
+
+<p>Your Medium HTML pages need to be converted to Markdown. I <a href="https://gist.github.com/clipperhouse/010d4666892807afee16ba7711b41401">wrote a script</a> (in Go) that worked for me. Copy it into a local file on your computer. You’ll need to set up Go.</p>
+
+<p>In that script, you’ll want to change the <code>src</code> and <code>dest</code> variables. <code>src</code> is the folder with your Medium HTML files; <code>dest</code> is where you want the new Markdown files to end up. Then, <code>go run main.go</code>.</p>
+
+<p>You should see a folder full of <code>.md</code> files in the <code>dest</code> folder. If not&hellip;</p>
+
+<h3 id="happy-to-help">Happy to help</h3>
+
+<p>I learned a bunch about Hugo and Netlify during this project and am happy to help. Ping me <a href="https://mobile.twitter.com/clipperhouse">@clipperhouse</a>.</p>
+</div>
+<footer class="post-footer">
+  
+</footer>
+</article>
+</main>
+<footer class="footer">
+  <span>&copy; 2017-2018 clipperhouse</span>
+  <span>&middot;</span>
+  <span>Powered by <a href="https://gohugo.io/" target="_blank">Hugo</a></span>
+  <span>&middot;</span>
+  <span>Designed by <a href="http://21beats.com/" target="_blank">21beats</a></span>
+</footer>
+
+</body>
+</html>
+

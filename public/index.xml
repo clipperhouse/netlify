@@ -2638,5 +2638,14 @@ Rich: UN committees. Reach: entrepeneurs. Advantage: reach.</description>
       <description>Last week, Time-Warner announced that it is experimenting with metered Internet pricing in a couple of markets.</description>
     </item>
     
+    <item>
+      <title></title>
+      <link>https://clipperhouse.netlify.com/blog/how-to-move-from-medium-to-static-hosting-with-jekyll-or-hugo/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://clipperhouse.netlify.com/blog/how-to-move-from-medium-to-static-hosting-with-jekyll-or-hugo/</guid>
+      <description>–- title: “How to move from Medium to static hosting with Jekyll or Hugo” date: 2018-05-24 author: “Matt Sherman”</description>
+    </item>
+    
   </channel>
 </rss>
