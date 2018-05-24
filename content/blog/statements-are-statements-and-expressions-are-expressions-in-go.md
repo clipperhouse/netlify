@@ -2,7 +2,6 @@
 title: "Statements are statements, and expressions are expressions (in Go)"
 date: 2015-04-03T19:03:15.000Z
 author: "Matt Sherman"
-tags: ["c#", "go"]
 ---
 
 I got [trolled](https://twitter.com/clipperhouse/status/583393327757860864) by a facetious article on Go on April 1. But it did trigger a conversation about why Go doesn’t do certain things other languages do.

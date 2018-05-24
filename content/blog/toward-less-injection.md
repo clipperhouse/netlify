@@ -2,7 +2,6 @@
 title: "Toward less injection"
 date: 2017-09-18T21:41:19.159Z
 author: "Matt Sherman"
-tags: ["c#", "dependency injection"]
 ---
 
 Here’s a habit that may help to reduce the complexity of your dependency injection tree. Ask yourself: **how much of an injected dependency** are you actually using?
