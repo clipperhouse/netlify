@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Go on clipperhouse</title>
+    <link>https://clipperhouse.netlify.com/tags/go/</link>
+    <description>Recent content in Go on clipperhouse</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 03 Apr 2015 19:03:15 +0000</lastBuildDate>
+    
+	<atom:link href="https://clipperhouse.netlify.com/tags/go/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Statements are statements, and expressions are expressions (in Go)</title>
+      <link>https://clipperhouse.netlify.com/blog/statements-are-statements-and-expressions-are-expressions-in-go/</link>
+      <pubDate>Fri, 03 Apr 2015 19:03:15 +0000</pubDate>
+      
+      <guid>https://clipperhouse.netlify.com/blog/statements-are-statements-and-expressions-are-expressions-in-go/</guid>
+      <description>I got trolled by a facetious article on Go on April 1. But it did trigger a conversation about why Go doesn’t do certain things other languages do.</description>
+    </item>
+    
+  </channel>
+</rss>
