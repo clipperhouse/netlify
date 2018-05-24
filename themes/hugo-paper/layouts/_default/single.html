@@ -9,33 +9,15 @@
 </header>
 <div class="post-content">{{ .Content }}</div>
 <footer class="post-footer">
-    {{ if .Params.tags }}
-    <ul class="post-tags">
-      {{ range .Params.tags }}
-      <li><a href="{{ `/tags/` }}{{ . | urlize }}/">{{ . }}</a></li>
-      {{ end }}
-    </ul>
+  {{ if .Params.tags }}
+  <br>
+  <p class="tagged">Tagged</p>
+  <ul class="post-tags">
+    {{ range .Params.tags }}
+    <li><a href="{{ `/tags/` }}{{ replace . "#" "%23" | urlize }}/">{{ . }}</a></li>
     {{ end }}
-  </footer>
-  <!-- Comments system area start -->
-  {{ if not (eq .Params.comments false) }}
-  {{ if .Site.DisqusShortname }}
-  <div id="disqus_thread"></div>
-  <script>
-    var disqus_shortname = '{{ .Site.DisqusShortname }}';
-    (function() { // DON'T EDIT BELOW THIS LINE
-      var d = document, s = d.createElement('script');
-      s.src = 'https://' + disqus_shortname + '.disqus.com/embed.js';
-      s.setAttribute('data-timestamp', +new Date());
-      (d.head || d.body).appendChild(s);
-    })();
-  </script>
-  <noscript>
-    Please enable JavaScript to view the
-    <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
-  </noscript>
-  <!-- Comments system area end -->
+  </ul>
   {{ end }}
-  {{ end }}
+</footer>
 </article>
 {{ partial "footer.html" . }}

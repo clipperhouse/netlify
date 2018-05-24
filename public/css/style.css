@@ -224,7 +224,8 @@ pre, code {
 }
 /* List header
 ------------------------------ */
-.list-header span {
+.list-header span,
+.tagged {
   color: rgba(0, 0, 0, .4);
   font-size: 12px;
   letter-spacing: 2px;
@@ -419,6 +420,7 @@ pre, code {
 }
 .post-tags li {
   display: inline-block;
+  font-size: 90%;
 }
 .post-tags a {
   display: block;
