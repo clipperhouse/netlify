@@ -16,7 +16,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
   <title>Jargon demo · Matt Sherman</title>
-  <meta name="description" content="Jargon is a Go package with tokenizers and lemmatizers. The source code and docs are here.">
+  <meta name="description" content="Jargon is a Go package with tokenizers and lemmatizers. It’s useful for identfying, and optionally replacing, canonical terms in text.">
   <meta name="author" content="Matt Sherman">
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700,700i" rel="stylesheet">
 
@@ -43,13 +43,14 @@
   <h1 class="post-title"><a href="/jargon/">Jargon demo</a></h1>
   <p class="post-meta">Published by Matt Sherman · May 18, 2010</p>
 </header>
-<div class="post-content"><p>Jargon is a Go package with tokenizers and lemmatizers. The source code and docs are <a href="https://github.com/clipperhouse/jargon">here</a>.</p>
+<div class="post-content"><p><a href="https://github.com/clipperhouse/jargon">Jargon</a> is a Go package with tokenizers and lemmatizers. It’s useful for identfying, and optionally replacing, canonical terms in text.</p>
 
-<p>I&rsquo;ve put together a little playground below.</p>
+<p>The default implementation is based on a dictionary of tags and synonyms from Stack Overflow. I’ve put together a playground below.</p>
 
 <style type="text/css">
-    #result-wrap, #examples {
+    #result, #examples {
         display:none;
+        margin-top: 12px;
     }
     .hint {
         color: #666;
@@ -57,41 +58,31 @@
     }
 </style>
 
-<form action="http://localhost:8080/jargon" method="POST" id="text-form">
-    <div class="form-group">
-        <div>
-            <span class="hint">
-                Try it out:
-            </span>
-            <label for="prose">
-                <input type="radio" id="prose" name="format" value="prose">
-                Prose
-            </label>
-            <label for="json">
-                <input type="radio" id="json" name="format" value="json">
-                JSON
-            </label>        
-            <label for="csv">
-                <input type="radio" id="csv" name="format" value="csv">
-                CSV
-            </label>
-            <label for="html">
-                <input type="radio" id="html" name="format" value="html">
-                HTML
-            </label>
-        </div>
-        <textarea class="code" id="text" name="text" rows="6"></textarea>
-    </div>
+<form action="http://jargon-demo.appspot.com/jargon" method="POST" id="text-form">
+    <span class="hint">
+        Try it out:
+    </span>
+    <label for="prose">
+        <input type="radio" id="prose" name="format" value="prose">
+        Prose
+    </label>
+    <label for="json">
+        <input type="radio" id="json" name="format" value="json">
+        JSON
+    </label>        
+    <label for="csv">
+        <input type="radio" id="csv" name="format" value="csv">
+        CSV
+    </label>
+
+    <textarea class="code" id="text" name="text" rows="6"></textarea>
 
     <div>
         <button type="submit">Lemmatize</button>
     </div>
 </form>
 
-<div id="result-wrap">
-    <pre><code id="result">
-
-    </code></pre>        
+<div id="result" class="pre code">
 </div>
 
 <div id="examples">
@@ -101,6 +92,21 @@ We can lemmatize some plain prose, perhaps a job listing.
 We are looking for experienced Rails developers, with experience in HTML 5 and T-SQL.
 
 Experience with ObjC and React Native is a plus.
+    </div>
+    <div id="csv">
+Name,Skills,Years
+Jane Doe,"c sharp, ecma script",6
+Foo Bar,"aspnet mvc R NodeJS", 7.5
+    </div>
+    <div id="json">
+{
+    "product": {
+        "name": "Microsoft Access",
+    },
+    "product": {
+        "name": "X Code",
+    }
+}
     </div>
 </div>
 
@@ -125,17 +131,18 @@ Experience with ObjC and React Native is a plus.
         function update(html) {
             $("#result").html(html);
             if (html) {
-                $("#result-wrap").show();
+                $("#result").show();
             } else {
-                $("#result-wrap").hide();
+                $("#result").hide();
             }
         }
 
-        $(document).on("click", "input[name='format']", function (e) {
+        $(document).on("change", "input[name='format']", function (e) {
             var id = this.id;
             var example = $("#examples").find('#' + id);
             var text = example.text().trim();
             $("form #text").val(text);
+            $("#result").html('').hide();
         });
 
         $("input#prose").click();

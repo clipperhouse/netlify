@@ -67,14 +67,14 @@ pre, code, .code {
   font-family: Menlo, Consolas, monospace;
   font-size: 90%;
 }
-pre {
+pre, .pre {
   background: #f9f9f9;
   padding: 16px;
   border-radius: 5px;
+  white-space: pre-wrap;
 }
 pre code {
   font-size: inherit;
-  white-space: pre-wrap;
 }
 /* Header
 ============================================================= */
