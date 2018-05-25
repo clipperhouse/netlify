@@ -1,1 +1,5 @@
-/jargon/*   https://jargon-demo.appspot.com/:splat    200!
+# Redirect default Netlify subdomain to primary domain
+https://clipperhouse.netlify.com/* https://clipperhouse.com/:splat 302!
+
+# These extra rules are required because HTTPS is not forced
+http://clipperhouse.netlify.com/* https://clipperhouse.com/:splat 302!

@@ -1,6 +1,6 @@
 baseURL = ""
 languageCode = "en-us"
-title = "clipperhouse"
+title = "clipperhouse.com"
 theme = "hugo-paper"
 summaryLength = 16
 

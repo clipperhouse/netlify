@@ -16,12 +16,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
   <title>
-    {{- if not .IsHome }}
-    {{- if eq .Kind "page" }}{{ .Title }}
-    {{- else if eq .Data.Singular "tag" }}{{ .Data.Term }}
-    {{- else }}Posts
-    {{- end }} - {{ end }}
-    {{- .Site.Title -}}
+    {{- if .IsHome }}
+      {{- .Site.Title }} · {{ .Site.Params.author -}}
+    {{- else if eq .Kind "page" }}
+      {{- .Title }} · {{ .Params.author | default .Site.Params.author -}}
+    {{ end -}}
   </title>
 
   {{- if eq .Kind "page" }}
