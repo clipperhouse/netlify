@@ -16,11 +16,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
   <title>Jargon demo · Matt Sherman</title>
-  <meta name="description" content="Try some text here     Lemmatize reset     (function () { // Intercept the submit to use ajax $(document).">
+  <meta name="description" content="Jargon is a Go package with tokenizers and lemmatizers. The source code and docs are here.">
   <meta name="author" content="Matt Sherman">
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700,700i" rel="stylesheet">
 
-  <link href="/css/style.css?1" rel="stylesheet">
+  <link href="/css/style.css?2" rel="stylesheet">
 
   <link rel="apple-touch-icon" href="/img/apple-touch-icon.png">
   <link rel="icon" href="/img/favicon.ico">
@@ -34,13 +34,7 @@
     
     <p class="title"><a href="/">clipperhouse.com</a></p>
     
-    <button class="menu-toggle" type="button"></button>
-    <nav class="menu">
-      <ul>
-        
-        
-      </ul>
-    </nav>
+    
   </header>
   <main class="main">
 
@@ -49,23 +43,66 @@
   <h1 class="post-title"><a href="/jargon/">Jargon demo</a></h1>
   <p class="post-meta">Published by Matt Sherman · May 18, 2010</p>
 </header>
-<div class="post-content"><form action="https://jargon-demo.appspot.com" method="POST" id="text-form">
+<div class="post-content"><p>Jargon is a Go package with tokenizers and lemmatizers. The source code and docs are <a href="https://github.com/clipperhouse/jargon">here</a>.</p>
+
+<p>I&rsquo;ve put together a little playground below.</p>
+
+<style type="text/css">
+    #result-wrap, #examples {
+        display:none;
+    }
+    .hint {
+        color: #666;
+        padding-right: 8px;
+    }
+</style>
+
+<form action="http://localhost:8080/jargon" method="POST" id="text-form">
     <div class="form-group">
-        <label for="text">
-            <strong>Try some text here</strong>
-        </label>
-        <textarea class="form-control" id="text" name="text" rows="6"></textarea>
+        <div>
+            <span class="hint">
+                Try it out:
+            </span>
+            <label for="prose">
+                <input type="radio" id="prose" name="format" value="prose">
+                Prose
+            </label>
+            <label for="json">
+                <input type="radio" id="json" name="format" value="json">
+                JSON
+            </label>        
+            <label for="csv">
+                <input type="radio" id="csv" name="format" value="csv">
+                CSV
+            </label>
+            <label for="html">
+                <input type="radio" id="html" name="format" value="html">
+                HTML
+            </label>
+        </div>
+        <textarea class="code" id="text" name="text" rows="6"></textarea>
     </div>
 
     <div>
-        <button type="submit" class="btn btn-primary">Lemmatize</button>
-        <a href="" class="btn btn-link">reset</a>
-    </div>
-
-    <div id="result">
-        
+        <button type="submit">Lemmatize</button>
     </div>
 </form>
+
+<div id="result-wrap">
+    <pre><code id="result">
+
+    </code></pre>        
+</div>
+
+<div id="examples">
+    <div id="prose">
+We can lemmatize some plain prose, perhaps a job listing.
+
+We are looking for experienced Rails developers, with experience in HTML 5 and T-SQL.
+
+Experience with ObjC and React Native is a plus.
+    </div>
+</div>
 
 <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 
@@ -82,13 +119,26 @@
                 data: data,
                 success: update
             });
-            return false;
             e.preventDefault();
         });
 
         function update(html) {
             $("#result").html(html);
+            if (html) {
+                $("#result-wrap").show();
+            } else {
+                $("#result-wrap").hide();
+            }
         }
+
+        $(document).on("click", "input[name='format']", function (e) {
+            var id = this.id;
+            var example = $("#examples").find('#' + id);
+            var text = example.text().trim();
+            $("form #text").val(text);
+        });
+
+        $("input#prose").click();
     })();
 </script>
 </div>

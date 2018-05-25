@@ -1060,7 +1060,7 @@ I’ve been a reader and admirer of Joel and Jeff for some years now, so I am th
       <pubDate>Tue, 18 May 2010 17:07:55 +0000</pubDate>
       
       <guid>/jargon/</guid>
-      <description>Try some text here     Lemmatize reset     (function () { // Intercept the submit to use ajax $(document).</description>
+      <description>Jargon is a Go package with tokenizers and lemmatizers. The source code and docs are here.</description>
     </item>
     
     <item>
