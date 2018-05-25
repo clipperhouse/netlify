@@ -23,7 +23,7 @@ body {
   font-family: 'Open Sans', sans-serif;
   color:#222;
   font-size: 18px;
-  line-height: 1.7;
+  line-height: 1.75;
 }
 h1, h2, h3, h4, h5, h6 {
   margin-top: 0;
@@ -304,7 +304,7 @@ pre, code {
 .post-content h4,
 .post-content h5,
 .post-content h6 {
-  font-weight: 400;
+  font-weight: normal;
   margin-bottom: 10px;
 }
 .post-content h1 {
@@ -336,6 +336,7 @@ pre, code {
 .post-content ol,
 .post-content dl {
   margin-bottom: 20px;
+  font-family: Georgia, Cambria, 'Times New Roman', Times, serif
 }
 .post-content ul,
 .post-content ol {

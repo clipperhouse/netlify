@@ -26,7 +26,6 @@ jquery: true
 
 <script type="text/javascript" defer>
     (function () {
-        console.log('hi');
         // Intercept the submit to use ajax
         $(document).on("submit", "#text-form", function (e) {
             var url = this.action;
