@@ -12,10 +12,10 @@ jquery: true
         <textarea class="form-control" id="text" name="text" rows="6"></textarea>
     </div>
 
-    <p>
+    <div>
         <button type="submit" class="btn btn-primary">Lemmatize</button>
         <a href="" class="btn btn-link">reset</a>
-    </p>
+    </div>
 
     <div id="result">
         
