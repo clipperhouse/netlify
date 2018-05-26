@@ -128,6 +128,7 @@
 
 	// build the right-hand sites menu once we have the data
 	doc.on('sites:load', function() {
+		var temp = $("<div>")
 		for (var key in sites) {
 			if (sites.hasOwnProperty(key)) {
 				var site = sites[key];
@@ -135,14 +136,10 @@
 					.attr('href', '#' + site.api_site_parameter)
 					.html(site.name)
 					.css('background-image', 'url(' + site.favicon_url + ')');
-
-				// add UI element
-				menu.append(a);
-				// keep a reference to link
-				site.a = a;
+				temp.append(a);
 			}
 		}
-		menu.show();
+		menu.html(temp.html());
 		doc.trigger('menu:load');
 	});
 
@@ -206,10 +203,10 @@
 
 	var setSiteUI = function(site) {
 		// select menu item
-		site.a.addClass('selected').siblings().removeClass('selected');
+		$('#menu a[href=#' + site.api_site_parameter + ']').addClass('selected').siblings().removeClass('selected');
 
 		// update header
-		siteName.html(site.name);
+		header.html(site.name + ' tag correlations');
 		header.css('background-image', 'url(' + site.favicon_url + ')')
 			.attr('href', '#' + site.api_site_parameter);
 	};
@@ -266,9 +263,9 @@
 			tagCorrelations.hide().html(html).fadeIn('fast');
 			popular.hide();
 			tagName.html(tag);
-			soLink.attr('href', urls.site_tag(site, tag));
-			wikipediaLink.attr('href', urls.wikipedia_search(tag));
-			links.show();
+			// soLink.attr('href', urls.site_tag(site, tag));
+			// wikipediaLink.attr('href', urls.wikipedia_search(tag));
+			// links.show();
 		});
 	};
 

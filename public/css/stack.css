@@ -1,9 +1,9 @@
 h1.post-title > a {
-  padding: 0 42px 0 0;
+  padding: 0 0 0 42px;
   background-repeat: no-repeat;
-  background-position: right center;
+  background-position: left center;
   background-size: 32px 32px;
-} 
+}
 
 .tag, a.tag {
   font-family: 'Helvetica Neue', Helvetica, sans-serif;
@@ -34,9 +34,8 @@ h1.post-title > a {
     margin-bottom: 20px;
 }
 #menu {
-  border: 1px solid #ccc;
+  border: none;
   margin: 0 1em 3em 0;
-  display: none;
 }
 #menu > a {
   display: block;
@@ -44,10 +43,8 @@ h1.post-title > a {
   padding: 7px 6px 6px 28px;
   background-repeat: no-repeat;
   background-position: 6px center;
-  -moz-background-size: 16px 16px;
-  -o-background-size: 16px 16px;
-  -webkit-background-size: 16px 16px;
   background-size: 16px 16px;
+  border: none;
 }
 #menu > a:hover {
   background-color: #f5f5f5;
