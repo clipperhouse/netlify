@@ -25,7 +25,7 @@ The default implementation is based on a dictionary of tags and synonyms from St
     }
 </style>
 
-<form action="//jargon-demo.appspot.com/jargon" method="POST" id="text-form">
+<form action="https://jargon-demo.appspot.com/jargon" method="POST" id="text-form">
     <span class="hint">
         Try it out:
     </span>

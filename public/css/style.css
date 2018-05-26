@@ -253,6 +253,10 @@ pre code {
   color: rgba(0, 0, 0, .4);
   font-size: 15px;
   letter-spacing: .5px;
+  display: none;
+}
+.blog .post-header .post-meta {
+  display: block;
 }
 /* First entry */
 .first-entry {
@@ -348,6 +352,11 @@ pre code {
 .post-content ol,
 .post-content dl {
   margin-bottom: 20px;
+}
+.blog .post-content p,
+.blog .post-content ul,
+.blog .post-content ol,
+.blog .post-content dl {
   font-family: Georgia, Cambria, 'Times New Roman', Times, serif
 }
 .post-content ul,
@@ -493,6 +502,7 @@ pre code {
 }
 
 input[type=text],
+input[type=search],
 select, 
 textarea,
 button {
@@ -500,4 +510,8 @@ button {
   border: 1px solid #ccc;
   border-radius: 5px;
   width: 100%;
+}
+
+input[type=search]{
+  -webkit-appearance: textfield;
 }

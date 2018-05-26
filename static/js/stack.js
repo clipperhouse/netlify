@@ -21,7 +21,7 @@
 		return $.getJSON(url + '&callback=?', continuation);
 	};
 
-	var api_base_url = '//api.stackexchange.com/2.2/';
+	var api_base_url = 'https://api.stackexchange.com/2.2/';
 	var api_key_param = '&key=zg)SFUiAw3KznQKAw)AXzQ((';
 
 	var urls = {
@@ -74,7 +74,6 @@
 				var site = items[i];
 				if (site.site_type === 'main_site' && site.name.indexOf('Meta') !== 0 && site.site_state === 'normal') {
 					// scheme-relative url
-					site.favicon_url = site.favicon_url.replace('http:', '');
 					sites[site.api_site_parameter] = site;
 
 					// first one, effectively
@@ -198,7 +197,7 @@
 			tagInput.val(state.tag);
 		} else {
 			// clear it out
-			tagInput.val('').attr('placeholder', 'type a tag name here');
+			tagInput.val('').attr('placeholder', 'type a tag name here').focus();
 			tagCorrelations.html('');
 			links.hide();
 			loadPopularTags(state.site);
@@ -211,8 +210,8 @@
 
 		// update header
 		siteName.html(site.name);
-		// header.css('background-image', 'url(' + site.favicon_url + ')')
-		// 	.attr('href', '#' + site.api_site_parameter);
+		header.css('background-image', 'url(' + site.favicon_url + ')')
+			.attr('href', '#' + site.api_site_parameter);
 	};
 
 	var loadPopularTags = function(site) {
@@ -228,7 +227,7 @@
 					.addClass('tag').html(item.name);
 				popular.append(a).append('&nbsp;');
 			}
-			popular.show();
+			popular.css('visibility', 'visible').show();
 		});
 	};
 
@@ -287,4 +286,10 @@
 		getJSONCached(urls.api_tag_count(stateToBe.site, stateToBe.tag), null);
 		getJSONCached(urls.api_tags_related(stateToBe.site, stateToBe.tag), null);
 	};
+
+	doc.on('search', 'input', function(){
+		if (this.value === '') {
+			location.href = '#' + state.site.api_site_parameter;
+		}
+	});
 })(jQuery);

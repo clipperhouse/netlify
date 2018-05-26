@@ -3,10 +3,12 @@ title: "Stack Overflow tag correlations"
 date: 2018-05-26
 ---
 
+A tool to discover correlations between technologies on Stack Overflow. Start typing a tag name below, or click one of the popular ones.
+
 <div id="form">
     <link href="/css/stack.css" rel="stylesheet">
     <link href="/css/jquery-ui.css" rel="stylesheet" />
-    <input type="text" name="tag" id="tag" /><br />
+    <input name="tag" id="tag" type="search" /><br />
     <span id="popular"></span>
 </div>
 
