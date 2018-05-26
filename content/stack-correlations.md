@@ -1,9 +1,9 @@
 ---
-title: "Stack Overflow tag correlations"
+title: "Stack Exchange tag correlations"
 date: 2018-05-26
 ---
 
-A tool to discover correlations between technologies on Stack Overflow. Start typing a tag name below, or click one of the popular ones.
+A tool to discover correlations between technologies on Stack Exchange sites. Start typing a tag name below, or click one of the popular ones.
 
 <div id="form">
     <link href="/css/stack.css" rel="stylesheet">
