@@ -6,3 +6,15 @@ summaryLength = 16
 
 [params]
   author = "Matt Sherman"
+
+[menu]
+
+  [[menu.main]]
+    identifier = "blog"
+    name = "blog"
+    url = "/blog/"
+
+  [[menu.main]]
+    identifier = "jargon"
+    name = "jargon"
+    url = "/jargon/"

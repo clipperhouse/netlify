@@ -17,10 +17,12 @@ The default implementation is based on a dictionary of tags and synonyms from St
         color: #666;
         padding-right: 8px;
     }
-
     span.lemma {
         background-color: #ffffcc;
         padding: 3px;
+    }
+    button {
+        width: auto;
     }
 </style>
 
@@ -44,7 +46,7 @@ The default implementation is based on a dictionary of tags and synonyms from St
     <textarea class="code" id="text" name="text" rows="6"></textarea>
 
     <div>
-        <button type="submit">Lemmatize</button>
+        <button type="submit">👉 Lemmatize</button>
     </div>
 </form>
 
@@ -107,7 +109,7 @@ Foo Bar,"aspnet mvc R NodeJS", 7.5
             var id = this.id;
             var example = $("#examples").find('#' + id);
             var text = example.text().trim();
-            $("form #text").val(text);
+            $("form #text").val(text).focus();
             $("#result").html('').hide();
         });
 

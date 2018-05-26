@@ -49,7 +49,7 @@
     {{ else }}
     <p class="title"><a href="{{ `/` }}">{{ .Site.Title }}</a></p>
     {{ end }}
-    <!-- <button class="menu-toggle" type="button"></button>
+    <button class="menu-toggle" type="button"></button>
     <nav class="menu">
       <ul>
         {{ $currentPage := . }}
@@ -59,6 +59,14 @@
         </li>
         {{ end }}
       </ul>
-    </nav> -->
+    </nav>
   </header>
+
+  <script type="text/javascript">
+    function toggleMenu() {
+        var menu = document.querySelector('nav.menu');
+        menu.style.display = menu.style.display == "none" ? "block" : "none";
+    }
+    document.querySelector('button.menu-toggle').onclick = toggleMenu;
+  </script>
   <main class="main">
