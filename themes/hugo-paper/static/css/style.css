@@ -20,7 +20,7 @@ article, aside, figcaption, figure, footer, header, main, nav, section {
 }
 body {
   margin: 0;
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Helvetica Neue', Helvetica, sans-serif;
   color:#222;
   font-size: 18px;
   line-height: 1.75;
@@ -341,7 +341,7 @@ pre code {
   font-size: 14px;
 }
 .post-content a {
-  border-bottom: 1px solid rgba(0, 0, 0, .8);
+  border-bottom: 1px solid rgba(0, 0, 0, .6);
 }
 .post-content p,
 .post-content ul,

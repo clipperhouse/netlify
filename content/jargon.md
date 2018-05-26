@@ -1,7 +1,6 @@
 ---
-title: "Jargon demo"
-date: 2010-05-18T17:07:55.000Z
-jquery: true
+title: "Jargon playground"
+date: 2018-05-18T17:07:55.000Z
 ---
 
 [Jargon](https://github.com/clipperhouse/jargon) is a Go package with tokenizers and lemmatizers. It’s useful for identfying, and optionally replacing, canonical terms in text.
