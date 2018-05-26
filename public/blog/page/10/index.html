@@ -34,8 +34,30 @@
     
     <p class="title"><a href="/">clipperhouse.com</a></p>
     
-    
+    <button class="menu-toggle" type="button"></button>
+    <nav class="menu">
+      <ul>
+        
+        
+        <li class="active">
+          <a href="/blog/">blog</a>
+        </li>
+        
+        <li class="">
+          <a href="/jargon/">jargon</a>
+        </li>
+        
+      </ul>
+    </nav>
   </header>
+
+  <script type="text/javascript">
+    function toggleMenu() {
+        var menu = document.querySelector('nav.menu');
+        menu.style.display = menu.style.display == "none" ? "block" : "none";
+    }
+    document.querySelector('button.menu-toggle').onclick = toggleMenu;
+  </script>
   <main class="main">
 
 

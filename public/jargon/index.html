@@ -34,8 +34,30 @@
     
     <p class="title"><a href="/">clipperhouse.com</a></p>
     
-    
+    <button class="menu-toggle" type="button"></button>
+    <nav class="menu">
+      <ul>
+        
+        
+        <li class="">
+          <a href="/blog/">blog</a>
+        </li>
+        
+        <li class="">
+          <a href="/jargon/">jargon</a>
+        </li>
+        
+      </ul>
+    </nav>
   </header>
+
+  <script type="text/javascript">
+    function toggleMenu() {
+        var menu = document.querySelector('nav.menu');
+        menu.style.display = menu.style.display == "none" ? "block" : "none";
+    }
+    document.querySelector('button.menu-toggle').onclick = toggleMenu;
+  </script>
   <main class="main">
 
 <article class="post post-view">
@@ -56,10 +78,12 @@
         color: #666;
         padding-right: 8px;
     }
-
     span.lemma {
         background-color: #ffffcc;
         padding: 3px;
+    }
+    button {
+        width: auto;
     }
 </style>
 
@@ -83,7 +107,7 @@
     <textarea class="code" id="text" name="text" rows="6"></textarea>
 
     <div>
-        <button type="submit">Lemmatize</button>
+        <button type="submit">👉 Lemmatize</button>
     </div>
 </form>
 
@@ -146,7 +170,7 @@ Foo Bar,"aspnet mvc R NodeJS", 7.5
             var id = this.id;
             var example = $("#examples").find('#' + id);
             var text = example.text().trim();
-            $("form #text").val(text);
+            $("form #text").val(text).focus();
             $("#result").html('').hide();
         });
 
