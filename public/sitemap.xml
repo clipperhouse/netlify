@@ -3,8 +3,18 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>/stack-correlations/</loc>
+    <lastmod>2018-05-26T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>/blog/how-to-move-from-medium-to-static-hosting-with-jekyll-or-hugo/</loc>
     <lastmod>2018-05-24T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/jargon/</loc>
+    <lastmod>2018-05-18T17:07:55+00:00</lastmod>
   </url>
   
   <url>
@@ -569,11 +579,6 @@
   
   <url>
     <loc>/blog/0.facebook.com-is-not-neutral/</loc>
-    <lastmod>2010-05-18T17:07:55+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/jargon/</loc>
     <lastmod>2010-05-18T17:07:55+00:00</lastmod>
   </url>
   
@@ -1465,7 +1470,7 @@
   
   <url>
     <loc>/</loc>
-    <lastmod>2018-05-24T00:00:00+00:00</lastmod>
+    <lastmod>2018-05-26T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   

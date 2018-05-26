@@ -6,10 +6,19 @@
     <description>Recent content on clipperhouse.com</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 24 May 2018 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 26 May 2018 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Stack Overflow tag correlations</title>
+      <link>/stack-correlations/</link>
+      <pubDate>Sat, 26 May 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/stack-correlations/</guid>
+      <description>Learn more...   View  on Stack Overflow Search Wikipedia for ‘’   Details “Correlation” is coincidence of tags on questions.</description>
+    </item>
     
     <item>
       <title>How to move from Medium to static hosting with Jekyll or Hugo</title>
@@ -18,6 +27,15 @@
       
       <guid>/blog/how-to-move-from-medium-to-static-hosting-with-jekyll-or-hugo/</guid>
       <description>I recently moved my blog from Medium to static generation with Hugo &amp;amp; hosting with Netlify.</description>
+    </item>
+    
+    <item>
+      <title>Jargon playground</title>
+      <link>/jargon/</link>
+      <pubDate>Fri, 18 May 2018 17:07:55 +0000</pubDate>
+      
+      <guid>/jargon/</guid>
+      <description>Jargon is a Go package with tokenizers and lemmatizers. It’s useful for identfying, and optionally replacing, canonical terms in text.</description>
     </item>
     
     <item>
@@ -1052,15 +1070,6 @@ I’ve been a reader and admirer of Joel and Jeff for some years now, so I am th
       
       <guid>/blog/0.facebook.com-is-not-neutral/</guid>
       <description>A while back I mentioned the idea that some content sites would offer free shipping for their bits.</description>
-    </item>
-    
-    <item>
-      <title>Jargon demo</title>
-      <link>/jargon/</link>
-      <pubDate>Tue, 18 May 2010 17:07:55 +0000</pubDate>
-      
-      <guid>/jargon/</guid>
-      <description>Jargon is a Go package with tokenizers and lemmatizers. It’s useful for identfying, and optionally replacing, canonical terms in text.</description>
     </item>
     
     <item>
