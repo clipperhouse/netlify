@@ -222,7 +222,7 @@
 				item = items[i];
 				var a = $('<a>').attr('href', '#' + state.site.api_site_parameter + '/' + encodeURIComponent(item.name))
 					.addClass('tag').html(item.name);
-				popular.append(a).append('&nbsp;');
+				popular.append(a).append('\n');
 			}
 			popular.css('visibility', 'visible').show();
 		});

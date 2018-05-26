@@ -1,5 +1,5 @@
 ---
-title: "Stack Exchange tag correlations"
+title: "Stack Overflow tag correlations"
 date: 2018-05-26
 ---
 
@@ -9,7 +9,13 @@ A tool to discover correlations between technologies on Stack Exchange sites. St
     <link href="/css/stack.css" rel="stylesheet">
     <link href="/css/jquery-ui.css" rel="stylesheet" />
     <input name="tag" id="tag" type="search" /><br />
-    <span id="popular"></span>
+    <span id="popular">
+        Popular: &nbsp;<a href="#stackoverflow/javascript" class="tag">javascript</a>
+        <a href="#stackoverflow/java" class="tag">java</a>
+        <a href="#stackoverflow/c%23" class="tag">c#</a>
+        <a href="#stackoverflow/php" class="tag">php</a>
+        <a href="#stackoverflow/android" class="tag">android</a>
+    </span>
 </div>
 
 <div id="tag-correlations"></div>
@@ -27,12 +33,12 @@ A tool to discover correlations between technologies on Stack Exchange sites. St
 This works for all Stack Exchange sites. Select a different one below if you like.
 
 <div id="menu">
-    <a href="#stackoverflow" style="background-image: url(https://cdn.sstatic.net/Sites/stackoverflow/img/favicon.ico);">Stack Overflow</a>
+    <a href="#stackoverflow" class="selected" style="background-image: url(https://cdn.sstatic.net/Sites/stackoverflow/img/favicon.ico);">Stack Overflow</a>
     <a href="#serverfault" style="background-image: url(https://cdn.sstatic.net/Sites/serverfault/img/favicon.ico);">Server Fault</a>
     <a href="#superuser" class="" style="background-image: url(https://cdn.sstatic.net/Sites/superuser/img/favicon.ico);">Super User</a>
     <a href="#webapps" style="background-image: url(https://cdn.sstatic.net/Sites/webapps/img/favicon.ico);">Web Applications</a>
     <a href="#gaming" style="background-image: url(https://cdn.sstatic.net/Sites/gaming/img/favicon.ico);">Arqade</a>
-    <a href="#webmasters" class="selected" style="background-image: url(https://cdn.sstatic.net/Sites/webmasters/img/favicon.ico);">Webmasters</a>
+    <a href="#webmasters" style="background-image: url(https://cdn.sstatic.net/Sites/webmasters/img/favicon.ico);">Webmasters</a>
     <a href="#cooking" style="background-image: url(https://cdn.sstatic.net/Sites/cooking/img/favicon.ico);">Seasoned Advice</a>
     <a href="#gamedev" style="background-image: url(https://cdn.sstatic.net/Sites/gamedev/img/favicon.ico);">Game Development</a>
     <a href="#photo" style="background-image: url(https://cdn.sstatic.net/Sites/photo/img/favicon.ico);">Photography</a>
