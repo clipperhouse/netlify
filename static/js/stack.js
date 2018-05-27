@@ -65,7 +65,7 @@
 	var doc = $(document);
 	var menu, header, siteName, tagName, tagCorrelations, title, popular, links, soLink, wikipediaLink, tagInput;
 
-	doc.on('ready', function () {
+	doc.ready(function () {
 		// start by loading all the sites
 		getJSONCached(urls.api_sites(1), function (data) {
 			var items = data.items;
@@ -203,7 +203,9 @@
 
 	var setSiteUI = function (site) {
 		// select menu item
-		$('#menu a[href=#' + site.api_site_parameter + ']').addClass('selected').siblings().removeClass('selected');
+		var selector = "a[href='#" + site.api_site_parameter + "']";
+		var el = menu.find(selector);
+		menu.find(selector).addClass('selected').siblings().removeClass('selected');
 
 		// update header
 		header.html(site.name + ' tag correlations');
@@ -260,7 +262,7 @@
 			var template = $('#correlations-tmpl').html();
 			var html = Mustache.to_html(template, obj);
 
-			tagCorrelations.hide().html(html).fadeIn('fast');
+			tagCorrelations.css('opacity', '0').html(html).animate({opacity: 1}, 100);
 			popular.hide();
 			tagName.html(tag);
 			// soLink.attr('href', urls.site_tag(site, tag));

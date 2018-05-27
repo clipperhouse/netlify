@@ -1,4 +1,4 @@
-(function($) {
+(function ($) {
 
 	// set up json & cache
 	var api_cache = {};
@@ -7,13 +7,13 @@
 		cache: true
 	});
 
-	getJSONCached = function(url, callback) {
+	getJSONCached = function (url, callback) {
 		var cache = api_cache[url];
 		if (cache != null) {
 			return callback && callback(cache);
 		}
 
-		var continuation = function(json) {
+		var continuation = function (json) {
 			api_cache[url] = json;
 			return callback && callback(json);
 		};
@@ -25,30 +25,30 @@
 	var api_key_param = '&key=zg)SFUiAw3KznQKAw)AXzQ((';
 
 	var urls = {
-		api_sites: function(page) {
+		api_sites: function (page) {
 			return api_base_url + 'sites?page=' + page + '&pagesize=100&filter=!0U12eE-l6vTXjGb9hog*DtBLF' + api_key_param;
 		},
-		api_tags: function(site, tag) {
+		api_tags: function (site, tag) {
 			return api_base_url + 'tags?pagesize=16&order=desc&sort=popular&inname=' + encodeURIComponent(tag) + '&site=' + site.api_site_parameter + '&filter=!*M27MxijjqVg4jGo' + api_key_param;
 		},
-		api_tags_popular: function(site) {
+		api_tags_popular: function (site) {
 			return api_base_url + 'tags?pagesize=5&order=desc&sort=popular&site=' + site.api_site_parameter + '&filter=!*M27MxijjqVg4jGo' + api_key_param;
 		},
-		api_tag_count: function(site, tag) {
+		api_tag_count: function (site, tag) {
 			return api_base_url + 'questions?order=desc&sort=activity&tagged=' + encodeURIComponent(tag) + '&site=' + site.api_site_parameter + '&filter=!LQa0AXyWeCS0eBBhfz)UnE' + api_key_param;
 		},
-		api_tags_related: function(site, tag) {
+		api_tags_related: function (site, tag) {
 			return api_base_url + 'tags/' + encodeURIComponent(tag) + '/related?site=' + site.api_site_parameter + '&pagesize=10&filter=!n9Z4Y*b7KJ' + api_key_param;
 		},
-		site_tag: function(site, tag) {
+		site_tag: function (site, tag) {
 			return site.site_url.replace('http:', '') + '/tags/' + encodeURIComponent(tag) + '/info';
 		},
-		wikipedia_search: function(tag) {
+		wikipedia_search: function (tag) {
 			return '//en.wikipedia.org/w/index.php?search=' + encodeURIComponent(tag.replace(/\-/g, ' ').replace('#', ' sharp').replace('-', ' '));
 		},
 	};
 
-	var round = function(num, dec) {
+	var round = function (num, dec) {
 		var result = (Math.round(num * Math.pow(10, dec)) / Math.pow(10, dec)).toString();
 
 		while (result.split('.').length > 1 && result.split('.')[1].length < dec) {
@@ -65,9 +65,9 @@
 	var doc = $(document);
 	var menu, header, siteName, tagName, tagCorrelations, title, popular, links, soLink, wikipediaLink, tagInput;
 
-	doc.on('ready', function() {
+	doc.ready(function () {
 		// start by loading all the sites
-		getJSONCached(urls.api_sites(1), function(data) {
+		getJSONCached(urls.api_sites(1), function (data) {
 			var items = data.items;
 			var len = items.length;
 			for (var i = 0; i < len; i++) {
@@ -100,8 +100,8 @@
 
 		// set up autocomplete
 		tagInput.autocomplete({
-			source: function(request, response) {
-				getJSONCached(urls.api_tags(state.site, request.term), function(data) {
+			source: function (request, response) {
+				getJSONCached(urls.api_tags(state.site, request.term), function (data) {
 					var results = [];
 					var items = data.items;
 					var len = items.length;
@@ -118,7 +118,7 @@
 					response(results);
 				});
 			},
-			select: function(event, ui) {
+			select: function (event, ui) {
 				location.href = ui.item.href;
 			},
 			autoFocus: true,
@@ -127,7 +127,7 @@
 	});
 
 	// build the right-hand sites menu once we have the data
-	doc.on('sites:load', function() {
+	doc.on('sites:load', function () {
 		var temp = $("<div>")
 		for (var key in sites) {
 			if (sites.hasOwnProperty(key)) {
@@ -136,7 +136,7 @@
 					.attr('href', '#' + site.api_site_parameter)
 					.html(site.name)
 					.css('background-image', 'url(' + site.favicon_url + ')');
-				temp.append(a);
+				temp.append(a).append('\n');
 			}
 		}
 		menu.html(temp.html());
@@ -144,18 +144,18 @@
 	});
 
 	// once we have the menu, initialize state
-	doc.on('menu:load', function() {
+	doc.on('menu:load', function () {
 		pop();
 		window.onpopstate = pop;
 	});
 
-	var pop = function() {
+	var pop = function () {
 		var newState = parseUrl(location.href);
 		transition(newState);
 	};
 
 	// returns a state object, as expressed by the url
-	var parseUrl = function(url) {
+	var parseUrl = function (url) {
 		var newState = {};
 
 		// is there a hash?
@@ -184,7 +184,7 @@
 		return newState;
 	};
 
-	var transition = function(newState) {
+	var transition = function (newState) {
 		state = newState;
 
 		setSiteUI(state.site);
@@ -201,9 +201,11 @@
 		}
 	};
 
-	var setSiteUI = function(site) {
+	var setSiteUI = function (site) {
 		// select menu item
-		$('#menu a[href=#' + site.api_site_parameter + ']').addClass('selected').siblings().removeClass('selected');
+		var selector = "a[href='#" + site.api_site_parameter + "']";
+		var el = menu.find(selector);
+		menu.find(selector).addClass('selected').siblings().removeClass('selected');
 
 		// update header
 		header.html(site.name + ' tag correlations');
@@ -211,8 +213,8 @@
 			.attr('href', '#' + site.api_site_parameter);
 	};
 
-	var loadPopularTags = function(site) {
-		getJSONCached(urls.api_tags_popular(site), function(data) {
+	var loadPopularTags = function (site) {
+		getJSONCached(urls.api_tags_popular(site), function (data) {
 			popular.html('Popular: &nbsp;');
 
 			var items = data.items;
@@ -228,21 +230,21 @@
 		});
 	};
 
-	var loadTag = function(site, tag) {
-		getJSONCached(urls.api_tag_count(site, tag), function(data) {
+	var loadTag = function (site, tag) {
+		getJSONCached(urls.api_tag_count(site, tag), function (data) {
 			loadCorrelations(site, tag, data.total);
 		});
 	};
 
-	var loadCorrelations = function(site, tag, total) {
-		getJSONCached(urls.api_tags_related(site, tag), function(data) {
+	var loadCorrelations = function (site, tag, total) {
+		getJSONCached(urls.api_tags_related(site, tag), function (data) {
 			var correlations = [];
 			var items = data.items;
 			var len = items.length;
 
 			for (var i = 0; i < len; i++) {
-                item = items[i];
-                if (item.name == tag) continue;
+				item = items[i];
+				if (item.name == tag) continue;
 				correlations.push({
 					tag: item.name,
 					href: '#' + site.api_site_parameter + '/' + encodeURIComponent(item.name),
@@ -260,7 +262,7 @@
 			var template = $('#correlations-tmpl').html();
 			var html = Mustache.to_html(template, obj);
 
-			tagCorrelations.hide().html(html).fadeIn('fast');
+			tagCorrelations.css('opacity', '0').html(html).animate({opacity: 1}, 100);
 			popular.hide();
 			tagName.html(tag);
 			// soLink.attr('href', urls.site_tag(site, tag));
@@ -269,22 +271,22 @@
 		});
 	};
 
-	doc.on('touchstart', 'a.tag', function() {
+	doc.on('touchstart', 'a.tag', function () {
 		location.href = this.href;
 		return false;
 	});
 
-	doc.on('mouseover', 'a.tag', function() {
+	doc.on('mouseover', 'a.tag', function () {
 		preFetchTag($(this));
 	});
 
-	var preFetchTag = function(a) {
+	var preFetchTag = function (a) {
 		var stateToBe = parseUrl(a.attr('href'));
 		getJSONCached(urls.api_tag_count(stateToBe.site, stateToBe.tag), null);
 		getJSONCached(urls.api_tags_related(stateToBe.site, stateToBe.tag), null);
 	};
 
-	doc.on('search', 'input', function(){
+	doc.on('search', 'input', function () {
 		if (this.value === '') {
 			location.href = '#' + state.site.api_site_parameter;
 		}
