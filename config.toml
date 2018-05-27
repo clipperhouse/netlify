@@ -10,11 +10,6 @@ summaryLength = 16
 [menu]
 
   [[menu.main]]
-    identifier = "blog"
-    name = "blog"
-    url = "/blog/"
-
-  [[menu.main]]
-    identifier = "jargon"
-    name = "jargon"
-    url = "/jargon/"
+    identifier = "about"
+    name = "about"
+    url = "/about/"
