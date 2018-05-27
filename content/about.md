@@ -3,19 +3,6 @@ title: "About"
 date: 2018-05-27
 ---
 
-<style>
-.post-content img {
-    width: 132px;
-    border-radius: 50%;
-    border: 1px solid #999;
-    float:right;
-    margin:0 2em;
-    position: relative;
-    top: 32px;
-    opacity: .9;
-}
-</style>
-
 ![Matt Sherman](https://pbs.twimg.com/profile_images/557247446649036800/JSalo08u_400x400.jpeg)
 
 ### Hi, I'm Matt
@@ -45,3 +32,17 @@ I am on Twitter [@clipperhouse](https://mobile.twitter.com/@clipperhouse). Happy
 I am also reachable at mwsherman@gmail.com and +1 415 516-5121.
 
 Here's [my LinkedIn](https://linkedin.com/in/clipperhouse).
+
+
+<style>
+.post-content img {
+    width: 132px;
+    border-radius: 50%;
+    border: 1px solid #999;
+    float:right;
+    margin:0 2em;
+    position: relative;
+    top: 32px;
+    opacity: .9;
+}
+</style>
