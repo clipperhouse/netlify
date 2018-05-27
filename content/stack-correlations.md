@@ -90,9 +90,7 @@ Built by <a href="http://clipperhouse.com/about/">Matt Sherman</a> using the <a 
 <script src="/js/stack.js"></script>
 <script id="correlations-tmpl" type="text/template">
     {{#correlations}}
-    <div>
         <a class="tag" title="View correlations for “{{tag}}”" href="{{href}}">{{tag}}</a>
-        <span class="c">{{correlation}}</span>
-    </div>
+        <span class="c">{{correlation}}</span><br />
     {{/correlations}}
 </script>
