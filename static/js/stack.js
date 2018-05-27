@@ -265,17 +265,12 @@
 		});
 	};
 
-	doc.on('touchstart', 'a.tag', function () {
-		location.href = this.href;
-		return false;
-	});
-
 	doc.on('mouseover', 'a.tag', function () {
-		preFetchTag($(this));
+		preFetchTag(this);
 	});
 
 	var preFetchTag = function (a) {
-		var stateToBe = parseUrl(a.attr('href'));
+		var stateToBe = parseUrl(a.href);
 		getJSONCached(urls.api_tag_count(stateToBe.site, stateToBe.tag), null);
 		getJSONCached(urls.api_tags_related(stateToBe.site, stateToBe.tag), null);
 	};
