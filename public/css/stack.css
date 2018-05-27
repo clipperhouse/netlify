@@ -1,10 +1,9 @@
 h1.post-title > a {
-  padding: 0 0 0 42px;
+  padding: 0 0 0 52px;
   background-repeat: no-repeat;
   background-position: left center;
-  background-size: 32px 32px;
+  background-size: 42px 42px;
 }
-
 .tag, a.tag {
   font-family: 'Helvetica Neue', Helvetica, sans-serif;
   color: #3e6d8e;
@@ -17,32 +16,21 @@ h1.post-title > a {
   display: inline-block;
   border: none;
 }
-.post-content a.tag {
-  text-decoration: none;
-  border: none;
-}
 #popular {
   display: inline-block;
   font-size: 95%;
   margin-top: 1em;
 }
-#tag-links {
-  display: none;
-}
 #form {
     margin-bottom: 20px;
-}
-#menu {
-  border: none;
-  margin: 0 1em 3em 0;
 }
 #menu > a {
   display: block;
   margin: 0;
   padding: 7px 6px 6px 28px;
   background-repeat: no-repeat;
-  background-position: 6px center;
-  background-size: 16px 16px;
+  background-position: left center;
+  background-size: 21px 21px;
   border: none;
 }
 #menu > a:hover {
@@ -51,37 +39,7 @@ h1.post-title > a {
 #menu > a.selected {
   background-color: #eee;
 }
-#right > p#se {
-  margin: 0;
-  padding: 7px 6px 6px 28px;
-  background-repeat: no-repeat;
-  background-position: 6px center;
-  -moz-background-size: 16px 16px;
-  -o-background-size: 16px 16px;
-  -webkit-background-size: 16px 16px;
-  background-size: 16px 16px;
-  background-image: url(//cdn.sstatic.net/stackexchange/img/favicon.ico);
-}
-#tag-correlations {
+#correlations {
   margin-bottom: 1.7em;
   font-size: 95%;
-}
-.up-and-out {
-  background-image: url(up-and-out.png);
-  background-position: right center;
-  padding-right: 10px;
-  background-repeat: no-repeat;
-}
-a#github {
-  background-image: url(https://github.com/favicon.ico);
-  background-repeat: no-repeat;
-  background-position: left center;
-  display: inline-block;
-  -moz-background-size: 32px 32px;
-  -o-background-size: 32px 32px;
-  -webkit-background-size: 32px 32px;
-  background-size: 32px 32px;
-  height: 32px;
-  line-height: 32px;
-  padding-left: 40px;
 }

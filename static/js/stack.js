@@ -26,7 +26,7 @@
 
 	var urls = {
 		api_sites: function (page) {
-			return api_base_url + 'sites?page=' + page + '&pagesize=100&filter=!0U12eE-l6vTXjGb9hog*DtBLF' + api_key_param;
+			return api_base_url + 'sites?page=' + page + '&pagesize=100&filter=!Fn45Y*tjmFi3M0vFdE*Orm1hST' + api_key_param;
 		},
 		api_tags: function (site, tag) {
 			return api_base_url + 'tags?pagesize=16&order=desc&sort=popular&inname=' + encodeURIComponent(tag) + '&site=' + site.api_site_parameter + '&filter=!*M27MxijjqVg4jGo' + api_key_param;
@@ -63,7 +63,7 @@
 	var defaultSite = null;
 
 	var doc = $(document);
-	var menu, header, siteName, tagName, tagCorrelations, title, popular, links, soLink, wikipediaLink, tagInput;
+	var menu, header, results, title, popular, input;
 
 	doc.ready(function () {
 		// start by loading all the sites
@@ -88,18 +88,13 @@
 		// and get the elements
 		menu = $("#menu")
 		header = $('h1 > a');
-		tagInput = $('input[name=tag]');
-		siteName = $('.site-name');
-		tagName = $('.tag-name');
-		tagCorrelations = $('#tag-correlations');
+		input = $('input[name=tag]');
+		results = $('#correlations');
 		title = $('title');
 		popular = $('#popular');
-		links = $('#tag-links');
-		soLink = links.find('a#so');
-		wikipediaLink = links.find('a#wikipedia');
 
 		// set up autocomplete
-		tagInput.autocomplete({
+		input.autocomplete({
 			source: function (request, response) {
 				getJSONCached(urls.api_tags(state.site, request.term), function (data) {
 					var results = [];
@@ -135,7 +130,7 @@
 				var a = $('<a>')
 					.attr('href', '#' + site.api_site_parameter)
 					.html(site.name)
-					.css('background-image', 'url(' + site.favicon_url + ')');
+					.css('background-image', 'url(' + site.icon_url + ')');
 				temp.append(a).append('\n');
 			}
 		}
@@ -191,13 +186,14 @@
 
 		if (state.tag) {
 			loadTag(state.site, state.tag)
-			tagInput.val(state.tag);
+			input.val(state.tag);
 		} else {
 			// clear it out
-			tagInput.val('').attr('placeholder', 'type a tag name here').focus();
-			tagCorrelations.html('');
-			links.hide();
+			input.val('').attr('placeholder', 'type a tag name here');
+			results.html('');
 			loadPopularTags(state.site);
+			$('html, body').animate({scrollTop:0},'50')
+			input.focus();
 		}
 	};
 
@@ -209,7 +205,7 @@
 
 		// update header
 		header.html(site.name + ' tag correlations');
-		header.css('background-image', 'url(' + site.favicon_url + ')')
+		header.css('background-image', 'url(' + site.icon_url + ')')
 			.attr('href', '#' + site.api_site_parameter);
 	};
 
@@ -256,12 +252,8 @@
 			var data = { 'correlations': correlations };
 			var html = Mustache.to_html(template, data);
 
-			tagCorrelations.css('opacity', '0').html(html).animate({opacity: 1}, 100);
+			results.css('opacity', '0').html(html).animate({opacity: 1}, 100);
 			popular.hide();
-			tagName.html(tag);
-			// soLink.attr('href', urls.site_tag(site, tag));
-			// wikipediaLink.attr('href', urls.wikipedia_search(tag));
-			// links.show();
 		});
 	};
 

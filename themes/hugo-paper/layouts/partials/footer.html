@@ -1,4 +1,6 @@
 </main>
-
+{{ range .Params.js -}}
+<script src="{{ . }}"></script>
+{{ end }}
 </body>
 </html>

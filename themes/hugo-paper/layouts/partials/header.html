@@ -32,7 +32,9 @@
   {{ end -}}
 
   <link href="/css/style.css?3" rel="stylesheet">
-
+  {{ range .Params.css -}}
+  <link href="{{ . }}" rel="stylesheet">
+  {{ end }}
   <link rel="apple-touch-icon" href="/img/apple-touch-icon.png">
   <link rel="icon" href="/img/favicon.ico">
 
