@@ -5,7 +5,7 @@ date: 2018-05-27
 
 ![Matt Sherman](https://pbs.twimg.com/profile_images/557247446649036800/JSalo08u_400x400.jpeg)
 
-### Hi, I'm Matt
+### Hi, I’m Matt
 
 I am an independent developer and engineering manager based in NYC. I decided to leave my very good job at Stack Overflow, and am looking for interesting projects.
 
@@ -31,7 +31,7 @@ I am on Twitter [@clipperhouse](https://mobile.twitter.com/@clipperhouse). Happy
 
 I am also reachable at mwsherman@gmail.com and +1 415 516-5121.
 
-Here's [my LinkedIn](https://linkedin.com/in/clipperhouse).
+Here’s [my LinkedIn](https://linkedin.com/in/clipperhouse).
 
 
 <style>
