@@ -248,19 +248,13 @@
 				correlations.push({
 					tag: item.name,
 					href: '#' + site.api_site_parameter + '/' + encodeURIComponent(item.name),
-					site: site.api_site_parameter,
-					favicon: site.favicon_url,
-					url: site.site_url + '/questions/tagged/' + encodeURIComponent(tag) + '+' + encodeURIComponent(item.name),
 					correlation: correlations.length == 0 ? ('appears on ' + round(100 * item.count / total, 0) + '% of ‘' + tag + '’ questions') : (round(100 * item.count / total, 0) + '%')
 				});
 			}
 
-			var obj = {
-				'correlations': correlations
-			};
-
 			var template = $('#correlations-tmpl').html();
-			var html = Mustache.to_html(template, obj);
+			var data = { 'correlations': correlations };
+			var html = Mustache.to_html(template, data);
 
 			tagCorrelations.css('opacity', '0').html(html).animate({opacity: 1}, 100);
 			popular.hide();
