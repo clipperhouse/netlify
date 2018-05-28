@@ -3,6 +3,7 @@ title: "About"
 date: 2018-05-27
 ---
 
+
 ![Matt Sherman](https://pbs.twimg.com/profile_images/557247446649036800/JSalo08u_400x400.jpeg)
 
 ### Hi, I’m Matt
@@ -28,7 +29,7 @@ Non-technical folks appreciate my ability to explain technology and how to get t
 
 ### Founder
 
-I founded and lead engineering for Alikewise, a dating site based on books.
+I founded and led engineering for [Alikewise](/alikewise), a dating site based on books.
 
 ### Contact
 
@@ -40,14 +41,17 @@ Here’s [my LinkedIn](https://linkedin.com/in/clipperhouse).
 
 
 <style>
-.post-content img {
-    width: 132px;
+.post-content p:first-of-type {
+    float:right;
+    margin-left: 2em;
+    position: relative;
+    top: 30px;
+    opacity: .9;
+}
+
+.post-content p:first-of-type img {
+    width: 120px;
     border-radius: 50%;
     border: 1px solid #999;
-    float:right;
-    margin:0 2em;
-    position: relative;
-    top: 32px;
-    opacity: .9;
 }
 </style>
