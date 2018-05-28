@@ -7,23 +7,28 @@ date: 2018-05-27
 
 ### Hi, I’m Matt
 
-I am an independent developer and engineering manager based in NYC. I decided to leave my very good job at Stack Overflow, and am looking for interesting projects.
+I am a founder, engineering manager and developer in NYC. I recently decided to leave Stack Overflow, and am taking some time to find my next thing. I’d like to start something new or join something small.
 
-### Engineering manager
+For now, I am looking for interesting people to meet and collaborate with. Ideas:
 
-Most recently, I was Engineer Manager at Stack Overflow, overseeing the team building the Talent product. I have a lot to say about engineering and product management, happy to chat.
+- Data science, and NLP in particular. I see opportunities for turning unstructured text into humane applications.
+- Fixing niche problems. There is a remarkable amount of friction/entropy within industries and across systems, that people will pay to fix.
+
+### Engineering Manager
+
+Most recently, I was Engineer Manager at Stack Overflow, overseeing the team building the Talent product. I have a lot to say about building and managing product teams. Hiring and performance evaluation are specialties.
 
 ### Developer
 
-I like Go and C#, and have built some stuff.
+I like Go and C#, and and high-performance fast web applications. I am currently working on a tokenizer and lemmatizer in Go, called [Jargon](https://github.com/clipperhouse/jargon). I built [Stack Overflow tag correlations](/stack-correlations/).
 
-I am currently working on a tokenizer and lemmatizer in Go, called [Jargon](https://github.com/clipperhouse/jargon).
+### Explainer
 
-I built a [Stack Overflow tag correlations](/stack-correlations/).
+Non-technical folks appreciate my ability to explain technology and how to get things done when working with engineers. At Stack Overflow, this meant working with salespeople and technical recruiters.
 
 ### Founder
 
-I founded and did the engineering (and design direction) for Alikewise, a dating site based on books.
+I founded and lead engineering for Alikewise, a dating site based on books.
 
 ### Contact
 
