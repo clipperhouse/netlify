@@ -6,10 +6,19 @@
     <description>Recent content on clipperhouse.com</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 28 May 2018 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 29 May 2018 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://clipperhouse.com/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Static file hosting with active content</title>
+      <link>https://clipperhouse.com/blog/static-active-hosting/</link>
+      <pubDate>Tue, 29 May 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://clipperhouse.com/blog/static-active-hosting/</guid>
+      <description>The combination of Hugo &amp;amp; Netlify to host my blog has turned out to make easy things easy, and hard things possible.</description>
+    </item>
     
     <item>
       <title>Alikewise (dating by the book)</title>
