@@ -13,15 +13,15 @@ I am a founder, engineering manager and developer in NYC. I recently decided to 
 For now, I am looking for interesting people to meet and collaborate with. Ideas:
 
 - Data science, and NLP in particular. I see opportunities for turning unstructured text into humane applications.
-- Fixing niche problems. There is a remarkable amount of friction/entropy within industries and across systems, that people will pay to fix.
+- Fixing niche problems with domain experts. There is a remarkable amount of friction/entropy within industries and across systems, that people will pay to fix.
 
 ### Engineering Manager
 
-Most recently, I was Engineer Manager at Stack Overflow, overseeing the team building the Talent product. I have a lot to say about building and managing product teams. Hiring and performance evaluation are specialties.
+Most recently, I was Engineering Manager at Stack Overflow, overseeing the team building the Talent product. I have a lot to say about building and managing product teams. Hiring and performance evaluation are specialties.
 
 ### Developer
 
-I like Go and C#, and and high-performance fast web applications. I am currently working on a tokenizer and lemmatizer in Go, called [Jargon](https://github.com/clipperhouse/jargon). I built [Stack Overflow tag correlations](/stack-correlations/).
+I like Go and C#, and high-performance fast web applications. I am currently working on a tokenizer and lemmatizer in Go, called [Jargon](https://github.com/clipperhouse/jargon). I built [Stack Overflow tag correlations](/stack-correlations/).
 
 ### Explainer
 
