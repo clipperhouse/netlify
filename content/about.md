@@ -22,7 +22,7 @@ Most recently, I was Engineering Manager at Stack Overflow, overseeing the team 
 
 ### Developer
 
-I like Go and C#, and high-performance fast web applications. I am currently working on a tokenizer and lemmatizer in Go, called [Jargon](https://github.com/clipperhouse/jargon). I built [Stack Overflow tag correlations](/stack-correlations/).
+I like Go and C#, and high-performance web applications. I am currently working on a tokenizer and lemmatizer in Go, called [Jargon](https://github.com/clipperhouse/jargon). I created package for generics for Go, called [gen](/gen/). I built [Stack Overflow tag correlations](/stack-correlations/).
 
 ### Explainer
 
