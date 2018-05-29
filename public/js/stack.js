@@ -119,6 +119,8 @@
 			autoFocus: true,
 			delay: 200
 		});
+
+		input.focus();
 	});
 
 	// build the right-hand sites menu once we have the data
@@ -193,7 +195,6 @@
 			results.html('');
 			loadPopularTags(state.site);
 			$('html, body').animate({scrollTop:0},'50')
-			input.focus();
 		}
 	};
 

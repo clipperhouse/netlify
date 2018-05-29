@@ -1,29 +1,16 @@
 ---
 title: "Jargon playground"
 date: 2018-05-18T17:07:55.000Z
+css:
+- "/css/jargon.css"
+js:
+- "https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"
+- "/js/jargon.js"
 ---
 
-[Jargon](https://github.com/clipperhouse/jargon) is a Go package with tokenizers and lemmatizers. It’s useful for identfying, and optionally replacing, canonical terms in text.
+[Jargon](https://github.com/clipperhouse/jargon) is a Go package with tokenizers and lemmatizers. It’s useful for identifying, and optionally replacing, canonical terms in text.
 
 The default implementation is based on a dictionary of tags and synonyms from Stack Overflow. I’ve put together a playground below.
-
-<style type="text/css">
-    #result, #examples {
-        display:none;
-        margin-top: 12px;
-    }
-    .hint {
-        color: #666;
-        padding-right: 8px;
-    }
-    span.lemma {
-        background-color: #ffffcc;
-        padding: 3px;
-    }
-    button {
-        width: auto;
-    }
-</style>
 
 <form action="https://jargon-demo.appspot.com/jargon" method="POST" id="text-form">
     <span class="hint">
@@ -76,42 +63,3 @@ Foo Bar,"aspnet mvc R NodeJS", 7.5
 }
     </div>
 </div>
-
-<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-
-<script type="text/javascript" defer>
-    (function () {
-        // Intercept the submit to use ajax
-        $(document).on("submit", "#text-form", function (e) {
-            var url = this.action;
-            var data = $(this).serialize();
-            $.ajax({
-                type: "POST",
-                url: url,             
-                crossDomain: false,
-                data: data,
-                success: update
-            });
-            e.preventDefault();
-        });
-
-        function update(html) {
-            $("#result").html(html);
-            if (html) {
-                $("#result").show();
-            } else {
-                $("#result").hide();
-            }
-        }
-
-        $(document).on("change", "input[name='format']", function (e) {
-            var id = this.id;
-            var example = $("#examples").find('#' + id);
-            var text = example.text().trim();
-            $("form #text").val(text).focus();
-            $("#result").html('').hide();
-        });
-
-        $("input#prose").click();
-    })();
-</script>

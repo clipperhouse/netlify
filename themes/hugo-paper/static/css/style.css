@@ -451,4 +451,5 @@ button {
 
 input[type=search]{
   -webkit-appearance: textfield;
+  appearance: textfield;
 }

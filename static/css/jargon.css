@@ -1,0 +1,15 @@
+#result, #examples {
+    display:none;
+    margin-top: 12px;
+}
+.hint {
+    color: #666;
+    padding-right: 8px;
+}
+span.lemma {
+    background-color: #ffffcc;
+    padding: 3px;
+}
+button {
+    width: auto;
+}
