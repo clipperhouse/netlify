@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-8534189-2"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-8534189-2');
+  </script>
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="renderer" content="webkit">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <title>gen: optional typewriters · Matt Sherman</title>
+  <meta name="description" content="Here are a few optional typewriters I&rsquo;ve created. They are not built into gen, but can be added as follows.">
+  <meta name="author" content="Matt Sherman">
+  <link href="/css/style.css?3" rel="stylesheet">
+  
+  <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/img/favicon-16x16.png">
+  <link rel="apple-touch-icon" href="/img/apple-touch-icon.png">
+
+  <meta name="generator" content="Hugo 0.40.3">
+
+  <link rel="alternate" type="application/atom+xml" href="/index.xml" title="clipperhouse.com">
+
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:creator" content="@clipperhouse" />
+<meta name="twitter:site" content="@clipperhouse" />
+<meta name="twitter:title" content="gen: optional typewriters · Matt Sherman">
+
+<meta name="twitter:description" content="Here are a few optional typewriters I&rsquo;ve created. They are not built into gen, but can be added as follows.">
+<meta name="twitter:image" content="https://clipperhouse.com/img/apple-touch-icon.png" />
+
+</head>
+<body class="single gen">
+  <header class="header">
+    
+    <p class="title"><a href="/">clipperhouse.com</a></p>
+    
+    <button class="menu-toggle" type="button"></button>
+    <nav class="menu">
+      <ul>
+        
+        
+        <li class="">
+          <a href="/about/">about</a>
+        </li>
+        
+      </ul>
+    </nav>
+  </header>
+
+  <script type="text/javascript">
+    function toggleMenu() {
+        var menu = document.querySelector('nav.menu');
+        menu.style.display = menu.style.display == "none" ? "block" : "none";
+    }
+    document.querySelector('button.menu-toggle').onclick = toggleMenu;
+  </script>
+  <main class="main">
+
+<article class="post post-view">
+  <header class="post-header">
+  <h1 class="post-title"><a href="https://clipperhouse.com/gen/optional/">gen: optional typewriters</a></h1>
+  <p class="post-meta">Published by Matt Sherman · January 1, 0001</p>
+</header>
+<div class="post-content">
+
+<p>Here are a few optional <a href="/gen/typewriters/">typewriters</a> I&rsquo;ve created. They are not built into <a href="/gen/">gen</a>, but can be added as follows.</p>
+
+<h3 id="set">Set</h3>
+
+<p>To add:</p>
+
+<pre><code>gen add github.com/clipperhouse/set
+</code></pre>
+
+<p>To use:</p>
+
+<pre><code>// +gen set
+type MyType struct{}
+</code></pre>
+
+<p>Implements a strongly-typed set with common <a href="http://godoc.org/github.com/deckarep/golang-set">operations</a> (Union, Difference, etc). Items stored within it are unordered and unique.</p>
+
+<p>The implementation is based on <a href="https://github.com/deckarep/golang-set">github.com/deckarep/golang-set</a>, with permission. API documentation is available here. Parameters and return values that would be <code>interface{}</code> in the @deckarep implementation will instead use your type in the gen implementation.</p>
+
+<h3 id="list">List</h3>
+
+<p>To add:</p>
+
+<pre><code>gen add github.com/clipperhouse/linkedlist
+</code></pre>
+
+<p>To use:</p>
+
+<pre><code>// +gen list
+type MyType struct{}
+</code></pre>
+
+<p>Implements a strongly-typed, doubly-linked list, based on <a href="https://golang.org/pkg/container/list">golang.org/pkg/container/list</a>. API documentation is available at that link. Parameters and return values that would be interface{} in the golang implementation will instead use your type in the gen implementation.</p>
+
+<h3 id="ring">Ring</h3>
+
+<p>To add:</p>
+
+<pre><code>gen add github.com/clipperhouse/ring
+</code></pre>
+
+<p>To use:</p>
+
+<pre><code>// +gen ring
+type MyType struct{}
+</code></pre>
+
+<p>Implements strongly-typed operations on circular lists, based on <a href="https://golang.org/pkg/container/ring">golang.org/pkg/container/ring</a>. API documentation is available at that link. Parameters and return values that would be interface{} in the golang implementation will instead use your type in the gen implementation.</p>
+</div>
+<footer class="post-footer">
+  
+</footer>
+</article>
+</main>
+
+</body>
+</html>
+

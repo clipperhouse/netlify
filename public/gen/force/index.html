@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-8534189-2"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-8534189-2');
+  </script>
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="renderer" content="webkit">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <title>gen: force flag · Matt Sherman</title>
+  <meta name="description" content="Tolerating type errors gen operates by parsing and type-checking your source code. The correctness of your code will affect gen&rsquo;s ability to operate.">
+  <meta name="author" content="Matt Sherman">
+  <link href="/css/style.css?3" rel="stylesheet">
+  
+  <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/img/favicon-16x16.png">
+  <link rel="apple-touch-icon" href="/img/apple-touch-icon.png">
+
+  <meta name="generator" content="Hugo 0.40.3">
+
+  <link rel="alternate" type="application/atom+xml" href="/index.xml" title="clipperhouse.com">
+
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:creator" content="@clipperhouse" />
+<meta name="twitter:site" content="@clipperhouse" />
+<meta name="twitter:title" content="gen: force flag · Matt Sherman">
+
+<meta name="twitter:description" content="Tolerating type errors gen operates by parsing and type-checking your source code. The correctness of your code will affect gen&rsquo;s ability to operate.">
+<meta name="twitter:image" content="https://clipperhouse.com/img/apple-touch-icon.png" />
+
+</head>
+<body class="single gen">
+  <header class="header">
+    
+    <p class="title"><a href="/">clipperhouse.com</a></p>
+    
+    <button class="menu-toggle" type="button"></button>
+    <nav class="menu">
+      <ul>
+        
+        
+        <li class="">
+          <a href="/about/">about</a>
+        </li>
+        
+      </ul>
+    </nav>
+  </header>
+
+  <script type="text/javascript">
+    function toggleMenu() {
+        var menu = document.querySelector('nav.menu');
+        menu.style.display = menu.style.display == "none" ? "block" : "none";
+    }
+    document.querySelector('button.menu-toggle').onclick = toggleMenu;
+  </script>
+  <main class="main">
+
+<article class="post post-view">
+  <header class="post-header">
+  <h1 class="post-title"><a href="https://clipperhouse.com/gen/force/">gen: force flag</a></h1>
+  <p class="post-meta">Published by Matt Sherman · January 1, 0001</p>
+</header>
+<div class="post-content">
+
+<h3 id="tolerating-type-errors">Tolerating type errors</h3>
+
+<p><code>gen</code> operates by parsing and type-checking your source code. The correctness of your code will affect gen&rsquo;s ability to operate.</p>
+
+<p>There are scenarios where one can get a bit stuck, however. For example, if you generate incorrect code, your codebase is now incorrect &ndash; which will cause gen to refuse to generate new code! (Most users won&rsquo;t experience this, but if you are authoring your own typewriter, it will sound familiar.)</p>
+
+<p>There are classes of errors that gen can tolerate while maintaining correctness. For example:</p>
+
+<pre><code>// +gen slice:&quot;Where&quot;
+type Foo int
+
+var Bar DoesntExist
+</code></pre>
+
+<p>Here, the code is syntactically valid and the <code>Foo</code> type is fully understood. However, <code>DoesntExist</code> is an unknown type, so the code won&rsquo;t build.</p>
+
+<p>Under normal circumstances, gen will stop in the presence of any type error such as the one above. One can imagine that gen <em>should</em> logically be able to operate here, since it only cares about <code>Foo</code>.</p>
+
+<p>The solution to this is the <code>-f</code> flag, which means &ldquo;force&rdquo;. In this mode, type-check errors such as the one above <strong>will be ignored</strong> by gen. gen will do its best to continue in their presence.</p>
+
+<p>Officially gen considers &ldquo;force&rdquo; mode to be unspecified behavior. There are many classes of errors and we can&rsquo;t guarantee the correct behavior under all circumstances.</p>
+
+<p>However, for certain classes of type-check errors, <code>-f</code> is a good way to get yourself out of a jam.</p>
+
+<p><em>Here&rsquo;s a bit of <a href="https://github.com/clipperhouse/gen/issues/77">background discussion</a>.</em></p>
+</div>
+<footer class="post-footer">
+  
+</footer>
+</article>
+</main>
+
+</body>
+</html>
+

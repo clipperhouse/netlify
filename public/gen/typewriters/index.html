@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-8534189-2"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-8534189-2');
+  </script>
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="renderer" content="webkit">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <title>gen: TypeWriters · Matt Sherman</title>
+  <meta name="description" content="gen is driven by &ldquo;type writers&rdquo; &ndash; packages which are responsible for interpreting the annotated tags and turning them into generated code.">
+  <meta name="author" content="Matt Sherman">
+  <link href="/css/style.css?3" rel="stylesheet">
+  
+  <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/img/favicon-16x16.png">
+  <link rel="apple-touch-icon" href="/img/apple-touch-icon.png">
+
+  <meta name="generator" content="Hugo 0.40.3">
+
+  <link rel="alternate" type="application/atom+xml" href="/index.xml" title="clipperhouse.com">
+
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:creator" content="@clipperhouse" />
+<meta name="twitter:site" content="@clipperhouse" />
+<meta name="twitter:title" content="gen: TypeWriters · Matt Sherman">
+
+<meta name="twitter:description" content="gen is driven by &ldquo;type writers&rdquo; &ndash; packages which are responsible for interpreting the annotated tags and turning them into generated code.">
+<meta name="twitter:image" content="https://clipperhouse.com/img/apple-touch-icon.png" />
+
+</head>
+<body class="single gen">
+  <header class="header">
+    
+    <p class="title"><a href="/">clipperhouse.com</a></p>
+    
+    <button class="menu-toggle" type="button"></button>
+    <nav class="menu">
+      <ul>
+        
+        
+        <li class="">
+          <a href="/about/">about</a>
+        </li>
+        
+      </ul>
+    </nav>
+  </header>
+
+  <script type="text/javascript">
+    function toggleMenu() {
+        var menu = document.querySelector('nav.menu');
+        menu.style.display = menu.style.display == "none" ? "block" : "none";
+    }
+    document.querySelector('button.menu-toggle').onclick = toggleMenu;
+  </script>
+  <main class="main">
+
+<article class="post post-view">
+  <header class="post-header">
+  <h1 class="post-title"><a href="https://clipperhouse.com/gen/typewriters/">gen: TypeWriters</a></h1>
+  <p class="post-meta">Published by Matt Sherman · January 1, 0001</p>
+</header>
+<div class="post-content">
+
+<p><a href="/gen/">gen</a> is driven by &ldquo;type writers&rdquo; &ndash; packages which are responsible for interpreting the annotated tags and turning them into generated code.</p>
+
+<p>gen includes two built-in TypeWriters:</p>
+
+<h4 id="slice"><code>slice</code></h4>
+
+<p>The <code>slice</code> typewriter generates functional convenience methods that will look familiar to users of C#&rsquo;s LINQ or JavaScript&rsquo;s Array methods. It is intended to save you some loops, using a &ldquo;pass a function&rdquo; pattern. It offers grouping, filtering, ad-hoc sorts and projections. <a href="/gen/slice/">Details and docs&hellip;</a></p>
+
+<h4 id="stringer"><code>stringer</code></h4>
+
+<p>The <code>stringer</code> typewriter is a fork of Rob Pike’s <a href="https://godoc.org/golang.org/x/tools/cmd/stringer">tool</a> of the same name, which generates readable strings for consts. <a href="/gen/stringer/">Details and docs&hellip;</a></p>
+
+<h3 id="listing-typewriters">Listing typewriters</h3>
+
+<p>To view the currently-available typewriters, <code>cd</code> into your package and type:</p>
+
+<pre><code>gen list
+</code></pre>
+
+<h3 id="adding-third-party-typewriters">Adding third-party TypeWriters</h3>
+
+<p>TypeWriters can be implemented by third-parties and used at &ldquo;gen time&rdquo;. To use a third-party typewriter, <code>cd</code> into the root of your package and type (for example):</p>
+
+<pre><code>gen add github.com/clipperhouse/set
+</code></pre>
+
+<p>This will create a <code>_gen.go</code> file. Have a look at it &ndash; it should contain imports for the built-in slice (above) and your new typewriter.</p>
+
+<p>Confirm it by typing:</p>
+
+<pre><code>gen list
+</code></pre>
+
+<p>To ensure you&rsquo;ve got your third-party packages locally, type:</p>
+
+<pre><code>gen get
+</code></pre>
+
+<p>Now use the third-party tag (<code>set</code> in this case) to your type annotation:</p>
+
+<pre><code>// +gen set slice:&quot;Where,Count,GroupBy[string]&quot;
+type MyType struct {}
+</code></pre>
+
+<p>And run gen on your package:</p>
+
+<pre><code>gen
+</code></pre>
+
+<p>You should have a new file <code>mytype_set.go</code>. Third-parties are responsible for the quality and documentation of their typewriters, of course.</p>
+
+<p>To <strong>remove</strong> a typewriter, simply remove the import from the <code>_gen.go</code> file.</p>
+
+<h3 id="implementing-typewriters">Implementing TypeWriters</h3>
+
+<p>You can create your own typewriter by implementing <a href="http://godoc.org/github.com/clipperhouse/typewriter#Interface">typewriter.Interface</a>.</p>
+
+<p>Typewriters follow the pattern of formats in the <a href="http://blog.golang.org/go-image-package#TOC_5.">image package</a> of Go&rsquo;s standard library. They are registered via an <code>init()</code> method.</p>
+
+<p>The best thing to do is have a look at an existing implementation, <a href="https://github.com/clipperhouse/set">Set</a> is straightforward.</p>
+
+<p>By convention, the name of the typewriter is the name of the tag that it uses. Type <code>gen list</code> to see the name of the typewriters available in your current package.</p>
+
+<p>The <a href="https://github.com/clipperhouse/typewriter">typewriter package</a> handles tag parsing and type evaluation, and passes this information to your typewriter. It offers some conveniences for text templating, as well.</p>
+</div>
+<footer class="post-footer">
+  
+</footer>
+</article>
+</main>
+
+</body>
+</html>
+

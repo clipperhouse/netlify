@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-8534189-2"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-8534189-2');
+  </script>
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="renderer" content="webkit">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <title>gen: stringer · Matt Sherman</title>
+  <meta name="description" content="The stringer typewriter is a fork of Rob Pike’s tool of the same name, which generates readable strings for consts.">
+  <meta name="author" content="Matt Sherman">
+  <link href="/css/style.css?3" rel="stylesheet">
+  
+  <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/img/favicon-16x16.png">
+  <link rel="apple-touch-icon" href="/img/apple-touch-icon.png">
+
+  <meta name="generator" content="Hugo 0.40.3">
+
+  <link rel="alternate" type="application/atom+xml" href="/index.xml" title="clipperhouse.com">
+
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:creator" content="@clipperhouse" />
+<meta name="twitter:site" content="@clipperhouse" />
+<meta name="twitter:title" content="gen: stringer · Matt Sherman">
+
+<meta name="twitter:description" content="The stringer typewriter is a fork of Rob Pike’s tool of the same name, which generates readable strings for consts.">
+<meta name="twitter:image" content="https://clipperhouse.com/img/apple-touch-icon.png" />
+
+</head>
+<body class="single gen">
+  <header class="header">
+    
+    <p class="title"><a href="/">clipperhouse.com</a></p>
+    
+    <button class="menu-toggle" type="button"></button>
+    <nav class="menu">
+      <ul>
+        
+        
+        <li class="">
+          <a href="/about/">about</a>
+        </li>
+        
+      </ul>
+    </nav>
+  </header>
+
+  <script type="text/javascript">
+    function toggleMenu() {
+        var menu = document.querySelector('nav.menu');
+        menu.style.display = menu.style.display == "none" ? "block" : "none";
+    }
+    document.querySelector('button.menu-toggle').onclick = toggleMenu;
+  </script>
+  <main class="main">
+
+<article class="post post-view">
+  <header class="post-header">
+  <h1 class="post-title"><a href="https://clipperhouse.com/gen/stringer/">gen: stringer</a></h1>
+  <p class="post-meta">Published by Matt Sherman · January 1, 0001</p>
+</header>
+<div class="post-content"><p>The <code>stringer</code> <a href="/gen/typewriters/">typewriter</a> is a fork of Rob Pike’s <a href="https://godoc.org/golang.org/x/tools/cmd/stringer">tool</a> of the same name, which generates readable strings for consts. It is built into gen by default.</p>
+
+<p>To use, mark up a type for which you have consts, using Rob’s example:</p>
+
+<pre><code>// +gen stringer
+type Pill int
+
+const (
+    Placebo Pill = iota
+    Aspirin
+    Ibuprofen
+    Paracetamol
+    Acetaminophen = Paracetamol
+)
+</code></pre>
+
+<p>Then simply <code>gen</code> your package, as normal. You should see a new file, <code>pill_stringer.go</code>, containing the String method for your type.</p>
+</div>
+<footer class="post-footer">
+  
+</footer>
+</article>
+</main>
+
+</body>
+</html>
+

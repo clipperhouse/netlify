@@ -1474,6 +1474,11 @@
   </url>
   
   <url>
+    <loc>https://clipperhouse.com/gen/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://clipperhouse.com/tags/</loc>
     <priority>0</priority>
   </url>
@@ -1482,6 +1487,30 @@
     <loc>https://clipperhouse.com/</loc>
     <lastmod>2018-05-28T00:00:00+00:00</lastmod>
     <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://clipperhouse.com/gen/overview/</loc>
+  </url>
+  
+  <url>
+    <loc>https://clipperhouse.com/gen/typewriters/</loc>
+  </url>
+  
+  <url>
+    <loc>https://clipperhouse.com/gen/force/</loc>
+  </url>
+  
+  <url>
+    <loc>https://clipperhouse.com/gen/optional/</loc>
+  </url>
+  
+  <url>
+    <loc>https://clipperhouse.com/gen/slice/</loc>
+  </url>
+  
+  <url>
+    <loc>https://clipperhouse.com/gen/stringer/</loc>
   </url>
   
 </urlset>

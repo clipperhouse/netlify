@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-8534189-2"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-8534189-2');
+  </script>
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="renderer" content="webkit">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <title>gen: Type-driven code generation for Go · Matt Sherman</title>
+  <meta name="description" content="gen is an attempt to bring some generics-like functionality to Go. It uses type annotations to add &ldquo;of T&rdquo; functionality to your packages.">
+  <meta name="author" content="Matt Sherman">
+  <link href="/css/style.css?3" rel="stylesheet">
+  
+  <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/img/favicon-16x16.png">
+  <link rel="apple-touch-icon" href="/img/apple-touch-icon.png">
+
+  <meta name="generator" content="Hugo 0.40.3">
+
+  <link rel="alternate" type="application/atom+xml" href="/index.xml" title="clipperhouse.com">
+
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:creator" content="@clipperhouse" />
+<meta name="twitter:site" content="@clipperhouse" />
+<meta name="twitter:title" content="gen: Type-driven code generation for Go · Matt Sherman">
+
+<meta name="twitter:description" content="gen is an attempt to bring some generics-like functionality to Go. It uses type annotations to add &ldquo;of T&rdquo; functionality to your packages.">
+<meta name="twitter:image" content="https://clipperhouse.com/img/apple-touch-icon.png" />
+
+</head>
+<body class="single gen">
+  <header class="header">
+    
+    <p class="title"><a href="/">clipperhouse.com</a></p>
+    
+    <button class="menu-toggle" type="button"></button>
+    <nav class="menu">
+      <ul>
+        
+        
+        <li class="">
+          <a href="/about/">about</a>
+        </li>
+        
+      </ul>
+    </nav>
+  </header>
+
+  <script type="text/javascript">
+    function toggleMenu() {
+        var menu = document.querySelector('nav.menu');
+        menu.style.display = menu.style.display == "none" ? "block" : "none";
+    }
+    document.querySelector('button.menu-toggle').onclick = toggleMenu;
+  </script>
+  <main class="main">
+
+<article class="post post-view">
+  <header class="post-header">
+  <h1 class="post-title"><a href="https://clipperhouse.com/gen/overview/">gen: Type-driven code generation for Go</a></h1>
+  <p class="post-meta">Published by Matt Sherman · January 1, 0001</p>
+</header>
+<div class="post-content">
+
+<p><strong>gen</strong> is an attempt to bring some generics-like functionality to Go. It uses type annotations to add &ldquo;of T&rdquo; functionality to your packages.</p>
+
+<p>gen generates code for your types, at development time, using the command line. It is not an import; the generated source becomes part of your package and takes no external dependencies.</p>
+
+<h2 id="quick-start">Quick start</h2>
+
+<p>Start by installing Go, <a href="http://golang.org/doc/code.html">setting up paths</a>, etc. Then:</p>
+
+<pre><code>go get github.com/clipperhouse/gen
+</code></pre>
+
+<p>Create a new Go project, and <code>cd</code> into it. Create a <code>main.go</code> file and define a type.</p>
+
+<p>Now, mark it up with a <code>+gen</code> annotation in an adjacent comment like so:</p>
+
+<pre><code>// +gen slice:&quot;Where,Count,GroupBy[string]&quot;
+type MyType struct {}
+</code></pre>
+
+<p>And at the command line, simply type:</p>
+
+<pre><code>gen
+</code></pre>
+
+<p>You should see a new file, named <code>mytype_slice.go</code>. Have a look around.</p>
+
+<h2 id="annotations">Annotations</h2>
+
+<p>The annotation syntax will look familiar to Go users, it is modeled after struct tags.</p>
+
+<pre><code>// +gen [*] tag:&quot;Value, Value[T,T]&quot; anothertag
+</code></pre>
+
+<p>The annotation is a comment that begins with the <code>+gen</code> directive. It is optionally followed by a <code>*</code>, indicating that the generated type should be a pointer. Then, struct-style tags which include any number of values. In turn, each value can have optional type parameters. Tags can be &ldquo;naked&rdquo; (without values), as in <code>anothertag</code> above.</p>
+
+<p>The tags &amp; values are interpreted by TypeWriters.</p>
+
+<h2 id="typewriters">TypeWriters</h2>
+
+<p>gen is driven by “type writers” – packages which are responsible for interpreting the annotated tags and turning them into generated code. <a href="/gen/typewriters/">Learn more&hellip;</a></p>
+
+<h2 id="usage">Usage</h2>
+
+<p>Type <code>gen help</code>:</p>
+
+<pre><code>gen           Generate files for types marked with +gen.
+              Optional -f flag (force) to ignore type-check errors
+gen list      List available typewriters.
+gen add       Add a third-party typewriter to the current package.
+gen get       Download and install imported typewriters. 
+              Optional flags from go get: [-d] [-fix] [-t] [-u].
+gen watch     Watch the current directory for file changes, run gen
+              when detected. 
+gen help      Print usage.
+</code></pre>
+
+<h2 id="faq">FAQ</h2>
+
+<h4 id="why">Why?</h4>
+
+<p>The goal of gen is not just to offer conveniences, but stronger typing. By generating strongly-typed methods and containers, we avoid having to use <code>interface{}</code>s, type assertions and reflection.</p>
+
+<p>We gain compile-time safety and (perhaps) performance.</p>
+
+<h4 id="codegen-really">Codegen, really?</h4>
+
+<p>Yes! It felt a bit dirty to us at the beginning, too. But it turns out that a lot of actual generics implementations look a lot like code generation &ndash; you just don’t see it. (Compilers and JITs do it for you.)</p>
+
+<p>Code generation removes mystery. It’s just code, right there in your package. Read it. The history goes in your repo like everything else.</p>
+
+<p>You get all the usual compiler checks and optimizations, of course, so gen won’t introduce surprises in production.</p>
+
+<p>gen is a <em>tool</em> that helps the developer produce code on their local workstation, alongside their text editor and utilities.</p>
+
+<h4 id="is-there-a-video">Is there a video?</h4>
+
+<p><a href="https://www.youtube.com/watch?v=KY8OXFi3CDU">Glad you asked, yes.</a></p>
+
+<h4 id="wait-is-this-go-generate">Wait, is this <code>go generate</code>?</h4>
+
+<p>No, <a href="https://docs.google.com/document/d/1V03LUfjSADDooDMhe-_K59EgpTEm3V8uvQRuNMAEnjg/edit">that’s</a> different (and very cool). <code>go generate</code> will run any command and is intended to obviate <code>make</code> files and such. <code>gen</code> is specifically about codegen for types.</p>
+
+<p>The two tools are complementary.</p>
+
+<h4 id="can-i-run-gen-on-the-server">Can I run gen on the server?</h4>
+
+<p>Like as part of the build? Sure, but that’s not what it’s designed around so we don’t recommend it.</p>
+
+<p>It’s a local dev tool, not a platform or (shudder) a framework. Run it locally, test it, and commit the generated code to the repo.</p>
+
+<h4 id="what-if-my-code-is-incorrect">What if my code is incorrect?</h4>
+
+<p>gen parses and type-checks your source code. Having correct, buildable source code before you begin is important.</p>
+
+<p>That said, there are classes of errors that gen can optionally tolerate, via the <code>-f</code> (force) flag. <a href="/gen/force/">Learn more&hellip;</a></p>
+</div>
+<footer class="post-footer">
+  
+</footer>
+</article>
+</main>
+
+</body>
+</html>
+
