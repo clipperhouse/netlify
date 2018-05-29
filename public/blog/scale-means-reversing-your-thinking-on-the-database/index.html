@@ -69,7 +69,8 @@
   <h1 class="post-title"><a href="https://clipperhouse.com/blog/scale-means-reversing-your-thinking-on-the-database/">Scale means reversing your thinking on the database</a></h1>
   <p class="post-meta">Published by Matt Sherman · September 9, 2009</p>
 </header>
-<div class="post-content"><p>There are only a small number of sites in the world that require truly tremendous scale. Usually, this is referred to as “web scale”, and describes a site where the data is <strong>user-generated and highly dynamic</strong>. Among the first that come to mind are Facebook, Digg, MySpace and the like.</p>
+<div class="post-content">
+  <p>There are only a small number of sites in the world that require truly tremendous scale. Usually, this is referred to as “web scale”, and describes a site where the data is <strong>user-generated and highly dynamic</strong>. Among the first that come to mind are Facebook, Digg, MySpace and the like.</p>
 
 <p>Once you get to that scale, the rules of building a site become counter-intuitive to what most of us know.</p>
 
@@ -84,11 +85,18 @@
 <p>So they <a href="http://blog.digg.com/?p=966">throw out what you and I know</a>. Their assumption becomes: calculate nothing on the fly — no joins, no aggregates. No new information. Instead, dumb down the database so that it is truly just a data bucket with a massive spigot.</p>
 
 <p>This means that <strong>any calculation is done at write-time instead of read-time</strong>. Throw out the idea that your database reflects a model, which you can manipulate ad-hoc. Rather, you calculate what you need, write it once, and serve it up unfettered, a million times.</p>
+
+  <hr>
+  <small style="color:#999">
+      The source code for this page is <a href="https://github.com/clipperhouse/netlify/blob/master/content/blog/scale-means-reversing-your-thinking-on-the-database.md">here</a>.
+  </small>
 </div>
 <footer class="post-footer">
   
+  
 </footer>
 </article>
+
 </main>
 
 </body>

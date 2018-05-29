@@ -69,7 +69,8 @@
   <h1 class="post-title"><a href="https://clipperhouse.com/blog/webclient-fiddler-and-ssl/">WebClient, Fiddler and SSL</a></h1>
   <p class="post-meta">Published by Matt Sherman · May 1, 2009</p>
 </header>
-<div class="post-content"><p>I am developing a credit card authorization library which uses the <a href="http://msdn.microsoft.com/en-us/library/system.net.webclient.aspx">WebClient</a> class. In addition, I am using the excellent <a href="http://www.fiddler2.com">Fiddler</a> to watch the requests and responses.</p>
+<div class="post-content">
+  <p>I am developing a credit card authorization library which uses the <a href="http://msdn.microsoft.com/en-us/library/system.net.webclient.aspx">WebClient</a> class. In addition, I am using the excellent <a href="http://www.fiddler2.com">Fiddler</a> to watch the requests and responses.</p>
 
 <p>As you might expect, the credit card web service is HTTPS. Fiddler is acting as a proxy server on my dev machine.</p>
 
@@ -108,11 +109,18 @@ using System.Web;</p>
 <p>In my case, you’ll notice I check for localhost first, to reduce the risk that this gets called on a production site. You’ll want to put your own precautions in there as well.</p>
 
 <p>Sources:</p>
+
+  <hr>
+  <small style="color:#999">
+      The source code for this page is <a href="https://github.com/clipperhouse/netlify/blob/master/content/blog/webclient-fiddler-and-ssl.md">here</a>.
+  </small>
 </div>
 <footer class="post-footer">
   
+  
 </footer>
 </article>
+
 </main>
 
 </body>

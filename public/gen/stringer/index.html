@@ -69,7 +69,8 @@
   <h1 class="post-title"><a href="https://clipperhouse.com/gen/stringer/">gen: stringer</a></h1>
   <p class="post-meta">Published by Matt Sherman · January 1, 0001</p>
 </header>
-<div class="post-content"><p>The <code>stringer</code> <a href="/gen/typewriters/">typewriter</a> is a fork of Rob Pike’s <a href="https://godoc.org/golang.org/x/tools/cmd/stringer">tool</a> of the same name, which generates readable strings for consts. It is built into gen by default.</p>
+<div class="post-content">
+  <p>The <code>stringer</code> <a href="/gen/typewriters/">typewriter</a> is a fork of Rob Pike’s <a href="https://godoc.org/golang.org/x/tools/cmd/stringer">tool</a> of the same name, which generates readable strings for consts. It is built into gen by default.</p>
 
 <p>To use, mark up a type for which you have consts, using Rob’s example:</p>
 
@@ -86,11 +87,18 @@ const (
 </code></pre>
 
 <p>Then simply <code>gen</code> your package, as normal. You should see a new file, <code>pill_stringer.go</code>, containing the String method for your type.</p>
+
+  <hr>
+  <small style="color:#999">
+      The source code for this page is <a href="https://github.com/clipperhouse/netlify/blob/master/content/gen/stringer.md">here</a>.
+  </small>
 </div>
 <footer class="post-footer">
   
+  
 </footer>
 </article>
+
 </main>
 
 </body>

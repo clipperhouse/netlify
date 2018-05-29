@@ -69,7 +69,8 @@
   <h1 class="post-title"><a href="https://clipperhouse.com/blog/keycode-vs-charcode-vs-firefox/">keyCode vs charCode vs Firefox</a></h1>
   <p class="post-meta">Published by Matt Sherman · November 17, 2009</p>
 </header>
-<div class="post-content"><p>I am working on a filtered HTML field. The idea is to only allow alphanumeric characters to be typed, and have all other keystrokes ignored.</p>
+<div class="post-content">
+  <p>I am working on a filtered HTML field. The idea is to only allow alphanumeric characters to be typed, and have all other keystrokes ignored.</p>
 
 <p>I am using the <a href="http://docs.jquery.com/Events/keypress">keypress event</a> in jQuery to capture the keystrokes — my function returns true for valid characters (which simply passes the event to the field) and false for everything else (which kills the event before it can “reach” the field).</p>
 
@@ -90,11 +91,18 @@
 });</code></p>
 
 <p>It hasn’t been exhaustively tested, but is in the “works for me” stage right now. Let me know if it’s helpful.</p>
+
+  <hr>
+  <small style="color:#999">
+      The source code for this page is <a href="https://github.com/clipperhouse/netlify/blob/master/content/blog/keycode-vs-charcode-vs-firefox.md">here</a>.
+  </small>
 </div>
 <footer class="post-footer">
   
+  
 </footer>
 </article>
+
 </main>
 
 </body>

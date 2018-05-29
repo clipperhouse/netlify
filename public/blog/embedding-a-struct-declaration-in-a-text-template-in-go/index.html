@@ -71,7 +71,8 @@ Say you have a text template, and that template is intended to output Go code.">
   <h1 class="post-title"><a href="https://clipperhouse.com/blog/embedding-a-struct-declaration-in-a-text-template-in-go/">Embedding a struct declaration in a text template in Go</a></h1>
   <p class="post-meta">Published by Matt Sherman · January 31, 2015</p>
 </header>
-<div class="post-content"><p>Here’s a nice little technique I came across in developing <a href="http://clipperhouse.github.io/gen">gen</a>.</p>
+<div class="post-content">
+  <p>Here’s a nice little technique I came across in developing <a href="http://clipperhouse.github.io/gen">gen</a>.</p>
 
 <p>Say you have a text template, and that template is intended to output Go code. You’d like to pass a data structure into the template, and have the structure appear in the template as its own value literal.</p>
 
@@ -87,11 +88,18 @@ Say you have a text template, and that template is intended to output Go code.">
 }</code>`person := Person{&#34;Jane&#34;, 30}</p>
 
 <p>In order to have the output work as we wish, we make this modification to the template:<code>p := {{ printf &amp;#34;%#v&amp;#34; . }}</code>&hellip;which means &#34;call printf with the format string %#v and the value ., which represents the passed data.<code>We execute the template along the lines of:</code>tmpl.Execute(w, person)<code>(Where tmpl is the compiled template above, and w is an io.Writer)</code>The resulting output will be:<code>p := pkg.Person{Name:&amp;#34;Jane&amp;#34;, Age:30}</code>&hellip;where pkg is your package name. That&#39;s valid Go code which in turn can be executed. Neat.`<code>Here&amp;#39;s a [runnable version](http://play.golang.org/p/7lF_UmL2Qt) on the Go playground.</code></p>
+
+  <hr>
+  <small style="color:#999">
+      The source code for this page is <a href="https://github.com/clipperhouse/netlify/blob/master/content/blog/embedding-a-struct-declaration-in-a-text-template-in-go.md">here</a>.
+  </small>
 </div>
 <footer class="post-footer">
   
+  
 </footer>
 </article>
+
 </main>
 
 </body>

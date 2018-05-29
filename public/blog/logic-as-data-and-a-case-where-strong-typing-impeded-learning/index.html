@@ -69,7 +69,8 @@
   <h1 class="post-title"><a href="https://clipperhouse.com/blog/logic-as-data-and-a-case-where-strong-typing-impeded-learning/">Logic as data, and a case where strong typing impeded learning</a></h1>
   <p class="post-meta">Published by Matt Sherman · December 6, 2009</p>
 </header>
-<div class="post-content"><p>These days, I am doing a lot of Javascript, or more accurately, a lot of jQuery. A concept I have gotten comfortable with is the idea of passing logic as data.</p>
+<div class="post-content">
+  <p>These days, I am doing a lot of Javascript, or more accurately, a lot of jQuery. A concept I have gotten comfortable with is the idea of passing logic as data.</p>
 
 <p><a href="http://leftrightfold.com/?p=85">This article</a> demonstrates a pattern to avoid brittle if-then statements. Instead of very long conditional branches, one encapsulates evaluation logic in a table of data. Each data item is a function containing an arbitrary piece of logic — code which runs <em>after</em> being passed to the main algorithm. To add new rules you add a new item to the table — no code changes to your core algorithm. The algorithm <strong>delegates</strong> decision-making to functions outside of its own scope.</p>
 
@@ -82,11 +83,18 @@
 <p>Professionally, I grew up on static typing — unambiguous definitions and compile-time checking. And for my core business logic, I still insist on it. (Silent-but-deadly errors are very frightening.)</p>
 
 <p>In the case of delegation, however, the syntax required by strong typing was a hindrance to learning. Interesting trade-off.</p>
+
+  <hr>
+  <small style="color:#999">
+      The source code for this page is <a href="https://github.com/clipperhouse/netlify/blob/master/content/blog/logic-as-data-and-a-case-where-strong-typing-impeded-learning.md">here</a>.
+  </small>
 </div>
 <footer class="post-footer">
   
+  
 </footer>
 </article>
+
 </main>
 
 </body>

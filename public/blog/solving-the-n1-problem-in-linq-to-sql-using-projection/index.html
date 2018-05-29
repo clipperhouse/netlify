@@ -69,18 +69,26 @@
   <h1 class="post-title"><a href="https://clipperhouse.com/blog/solving-the-n1-problem-in-linq-to-sql-using-projection/">Solving the n&#43;1 problem in Linq to SQL, using projection</a></h1>
   <p class="post-meta">Published by Matt Sherman · October 12, 2009</p>
 </header>
-<div class="post-content"><p>Rick Strahl has a nice solution for <a href="http://west-wind.com/weblog/posts/38838.aspx">mitigating the n+1 problem</a> in Linq to SQL. The n+1 problem is a <a href="http://www.pbell.com/index.cfm/2006/9/17/Understanding-the-n1-query-problem">situation</a> where, as you iterate over a set of query results in a list view, one or more additional database queries are fired for each row in the list. Since database calls are relatively expensive, you want to keep these to a minimum.</p>
+<div class="post-content">
+  <p>Rick Strahl has a nice solution for <a href="http://west-wind.com/weblog/posts/38838.aspx">mitigating the n+1 problem</a> in Linq to SQL. The n+1 problem is a <a href="http://www.pbell.com/index.cfm/2006/9/17/Understanding-the-n1-query-problem">situation</a> where, as you iterate over a set of query results in a list view, one or more additional database queries are fired for each row in the list. Since database calls are relatively expensive, you want to keep these to a minimum.</p>
 
 <p>Things like Linq to SQL make this an easy mistake to make. There is nothing in the syntax that warns you about the problem. If, for each row of your query result for Customers, you access the related Customer.Orders collection, you’ll fire a new query on each row. The code will look clean, but your database gets hammered.</p>
 
 <p>Rick’s solution uses “projection”, which essentially means that you define a new data type for your particular output. So instead of iterating through a list of Customer, we might create a new CustomerReportEntry class just for that purpose. Have a look at Rick’s post — the win is that Linq to SQL is smart enough to pre-load a lot of related data.</p>
 
 <p>This is not unlike the <a href="http://stephenwalther.com/blog/archive/2009/04/13/asp.net-mvc-tip-50-ndash-create-view-models.aspx">ViewModel</a> approach in ASP.Net MVC — you are creating a custom data type that is optimized for output.</p>
+
+  <hr>
+  <small style="color:#999">
+      The source code for this page is <a href="https://github.com/clipperhouse/netlify/blob/master/content/blog/solving-the-n1-problem-in-linq-to-sql-using-projection.md">here</a>.
+  </small>
 </div>
 <footer class="post-footer">
   
+  
 </footer>
 </article>
+
 </main>
 
 </body>

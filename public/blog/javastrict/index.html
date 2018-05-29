@@ -69,7 +69,8 @@
   <h1 class="post-title"><a href="https://clipperhouse.com/blog/javastrict/">Javastrict</a></h1>
   <p class="post-meta">Published by Matt Sherman · May 22, 2009</p>
 </header>
-<div class="post-content"><p>John Resig (jQuery guy) talks about <a href="http://ejohn.org/blog/ecmascript-5-strict-mode-json-and-more/">advances in the next rev of Javascript</a> (properly known as ECMAScript 5). It now has a “strict” mode, which makes Javascript look a lot more like a compiled language.</p>
+<div class="post-content">
+  <p>John Resig (jQuery guy) talks about <a href="http://ejohn.org/blog/ecmascript-5-strict-mode-json-and-more/">advances in the next rev of Javascript</a> (properly known as ECMAScript 5). It now has a “strict” mode, which makes Javascript look a lot more like a compiled language.</p>
 
 <p>When I first moved from classic ASP — interpreted VBScript — to C# in .Net, I must admit I was a bit annoyed. Why do I need to declare every variable? What’s this “build” stuff? I was used to just throwing text files on the server and if they were broken, I would hear about it.</p>
 
@@ -82,11 +83,18 @@
 <p>Now, with strict mode, you can tell JS not to be so forgiving. Undeclared variables are caught — which helps to catch typos and forces you to manage scope. And asking-for-trouble functions like Eval() are no longer allowed.</p>
 
 <p>What John doesn’t mention is that strict mode will probably lead to greater performance. If the browser is told “I declare this code to be good and right”, it can spend less time handling ambiguities, and get on to the business at hand.</p>
+
+  <hr>
+  <small style="color:#999">
+      The source code for this page is <a href="https://github.com/clipperhouse/netlify/blob/master/content/blog/javastrict.md">here</a>.
+  </small>
 </div>
 <footer class="post-footer">
   
+  
 </footer>
 </article>
+
 </main>
 
 </body>

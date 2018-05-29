@@ -69,7 +69,8 @@
   <h1 class="post-title"><a href="https://clipperhouse.com/blog/trouble-with-interfaces-in-go/">The trouble with interfaces in Go</a></h1>
   <p class="post-meta">Published by Matt Sherman · February 4, 2014</p>
 </header>
-<div class="post-content"><p>I am working on a <a href="https://github.com/clipperhouse/gen">tool</a> for generics-like functionality in Go. Despite what you may have heard, Go does have generic functionality, in that you can create (e.g.) methods which operate on any type, by using interface{} — the interface that all types implement. For example, you can do something like:</p>
+<div class="post-content">
+  <p>I am working on a <a href="https://github.com/clipperhouse/gen">tool</a> for generics-like functionality in Go. Despite what you may have heard, Go does have generic functionality, in that you can create (e.g.) methods which operate on any type, by using interface{} — the interface that all types implement. For example, you can do something like:</p>
 
 <p>func DoSomething(interface{}) interface{} {<br />
 …<br />
@@ -86,11 +87,18 @@
 <p>For me, static typing means exploiting type information to make guarantees at compile time. Without traditional generics, we must resort to doing some of what (IMHO) is the type system’s job.</p>
 
 <p>So one of the motivations of <a href="https://github.com/clipperhouse/gen">gen</a> is to deal with that return value on the right-hand side of the above code sample — to bring it into the realm of known types that the compiler (and the user) can reliably exploit.</p>
+
+  <hr>
+  <small style="color:#999">
+      The source code for this page is <a href="https://github.com/clipperhouse/netlify/blob/master/content/blog/trouble-with-interfaces-in-go.md">here</a>.
+  </small>
 </div>
 <footer class="post-footer">
   
+  
 </footer>
 </article>
+
 </main>
 
 </body>

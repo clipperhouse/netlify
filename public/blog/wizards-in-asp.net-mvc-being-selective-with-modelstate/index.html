@@ -69,7 +69,8 @@
   <h1 class="post-title"><a href="https://clipperhouse.com/blog/wizards-in-asp.net-mvc-being-selective-with-modelstate/">Wizards in ASP.Net MVC: being selective with ModelState</a></h1>
   <p class="post-meta">Published by Matt Sherman · November 23, 2009</p>
 </header>
-<div class="post-content"><p>So, there are many ways to skin the cat we called form validation. With a wizard-style application, it requires some nuance.</p>
+<div class="post-content">
+  <p>So, there are many ways to skin the cat we called form validation. With a wizard-style application, it requires some nuance.</p>
 
 <p>With ASP.Net MVC, a traditional way to do validation is to use <a href="http://davidhayden.com/blog/dave/archive/2008/09/07/MVCUIErrorHandlingModelStateAddModelError.aspx">ModelState</a>. ModelState is a property on your controller where you can collect errors relating to your Model. For example, if a LastName property is required, you would do something like this:</p>
 
@@ -153,11 +154,18 @@
 <p>I haven’t seen a lot of discussion of wizards in ASP.Net MVC. There was explicit support for this sort of thing in WebForms, but it’s a roll-your-own proposition in MVC. This is to be expected — the stateless nature of the web is not really made for wizards, and MVC is close to the metal.</p>
 
 <p>Would love to see Microsoft thinking about this scenario in future versions.</p>
+
+  <hr>
+  <small style="color:#999">
+      The source code for this page is <a href="https://github.com/clipperhouse/netlify/blob/master/content/blog/wizards-in-asp.net-mvc-being-selective-with-modelstate.md">here</a>.
+  </small>
 </div>
 <footer class="post-footer">
   
+  
 </footer>
 </article>
+
 </main>
 
 </body>

@@ -69,7 +69,8 @@
   <h1 class="post-title"><a href="https://clipperhouse.com/blog/does-null-ever-equal-anything/">Does null ever equal anything?</a></h1>
   <p class="post-meta">Published by Matt Sherman · May 15, 2009</p>
 </header>
-<div class="post-content"><p>Yesterday’s <a href="/blog/post/Nulls-and-knowledge.aspx">discussion</a> of nulls got me to thinking about this common bit of syntax in C#:</p>
+<div class="post-content">
+  <p>Yesterday’s <a href="/blog/post/Nulls-and-knowledge.aspx">discussion</a> of nulls got me to thinking about this common bit of syntax in C#:</p>
 
 <p>[code:c#]if (myObject == null)<br />
 {<br />
@@ -85,11 +86,18 @@
 <p>I imagine the “== null” operator is allowed in C# as a syntactic convenience. I mean, it’s readable and easy to remember. No complaints.</p>
 
 <p>But I bet this requires the compiler to extract those statements and send them to a different evaluation algorithm. It’s a different kind of test. Curious if any C# language designers would have an insight.</p>
+
+  <hr>
+  <small style="color:#999">
+      The source code for this page is <a href="https://github.com/clipperhouse/netlify/blob/master/content/blog/does-null-ever-equal-anything.md">here</a>.
+  </small>
 </div>
 <footer class="post-footer">
   
+  
 </footer>
 </article>
+
 </main>
 
 </body>

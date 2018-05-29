@@ -69,7 +69,8 @@
   <h1 class="post-title"><a href="https://clipperhouse.com/blog/hierarchy-and-orthogonality-in-c-sharp-and-go/">Hierarchy and orthogonality in C# and Go</a></h1>
   <p class="post-meta">Published by Matt Sherman · August 25, 2014</p>
 </header>
-<div class="post-content"><p>Prompted by <a href="https://groups.google.com/d/msg/golang-nuts/aJ6JiiIusqg/TJM09vOkv9YJ">this question</a> I got to thinking about methods in C# and Go. It’s another example, I realized, of Go’s (logical) insistence on orthogonality and (stylistic) insistence on flatness/lack of hierarchy.</p>
+<div class="post-content">
+  <p>Prompted by <a href="https://groups.google.com/d/msg/golang-nuts/aJ6JiiIusqg/TJM09vOkv9YJ">this question</a> I got to thinking about methods in C# and Go. It’s another example, I realized, of Go’s (logical) insistence on orthogonality and (stylistic) insistence on flatness/lack of hierarchy.</p>
 
 <p>Go does not allow methods to be defined within a struct (ersatz class) definition. Instead of this, where the method lives in the declaration:
 <code>type Foo struct {  
@@ -110,11 +111,18 @@
 <p>Second, a matter of taste perhaps, there is less hierarchy in Go. Methods are just funcs alongside all the others; they don&#39;t represent a new level of &#34;indentation&#34; or membership.</p>
 
 <p>There are other design justifications described in the above link, but these advantages are the ones that jump out for me.</p>
+
+  <hr>
+  <small style="color:#999">
+      The source code for this page is <a href="https://github.com/clipperhouse/netlify/blob/master/content/blog/hierarchy-and-orthogonality-in-c-sharp-and-go.md">here</a>.
+  </small>
 </div>
 <footer class="post-footer">
   
+  
 </footer>
 </article>
+
 </main>
 
 </body>

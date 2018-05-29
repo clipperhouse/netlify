@@ -69,7 +69,8 @@
   <h1 class="post-title"><a href="https://clipperhouse.com/blog/type-system-in-runtimes-clothing/">A type system in runtime’s clothing</a></h1>
   <p class="post-meta">Published by Matt Sherman · August 25, 2014</p>
 </header>
-<div class="post-content"><p>Any sufficiently complicated C or Fortran program contains an ad hoc, informally-specified, bug-ridden, slow implementation of half of Common Lisp. — <a href="http://en.wikipedia.org/wiki/Greenspun%27s_tenth_rule">Greenspun</a></p>
+<div class="post-content">
+  <p>Any sufficiently complicated C or Fortran program contains an ad hoc, informally-specified, bug-ridden, slow implementation of half of Common Lisp. — <a href="http://en.wikipedia.org/wiki/Greenspun%27s_tenth_rule">Greenspun</a></p>
 
 <p>I am reminded of this quote when I see a common pattern in data stores, especially RDBMS. It’s a key-value pattern, along the lines of:
 <code>Columns: IDType | ID | Value</code></p>
@@ -89,11 +90,18 @@
 <p>Too often, such code looks like an <em>ad hoc, informally-specified, slow</em> type system.</p>
 
 <p>The upshot is, it’s a trade-off between safety and flexibility, exactly as with static and dynamic type systems. If one chooses the latter, plan on accounting for legal and illegal states in application code — and be clear about guarantees the system will and won’t offer.</p>
+
+  <hr>
+  <small style="color:#999">
+      The source code for this page is <a href="https://github.com/clipperhouse/netlify/blob/master/content/blog/type-system-in-runtimes-clothing.md">here</a>.
+  </small>
 </div>
 <footer class="post-footer">
   
+  
 </footer>
 </article>
+
 </main>
 
 </body>

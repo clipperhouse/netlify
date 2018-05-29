@@ -70,6 +70,7 @@
   <p class="post-meta">Published by Matt Sherman · September 18, 2017</p>
 </header>
 <div class="post-content">
+  
 
 <p>Here’s a habit that may help to reduce the complexity of your dependency injection tree. Ask yourself: <strong>how much of an injected dependency</strong> are you actually using?</p>
 
@@ -100,11 +101,18 @@
 <p>–</p>
 
 <p>Now: does your service have state, or more precisely, do its methods depend on the service’s state? If not, the method can — and likely should — be static. One less dependency on injection, one hopes.</p>
+
+  <hr>
+  <small style="color:#999">
+      The source code for this page is <a href="https://github.com/clipperhouse/netlify/blob/master/content/blog/toward-less-injection.md">here</a>.
+  </small>
 </div>
 <footer class="post-footer">
   
+  
 </footer>
 </article>
+
 </main>
 
 </body>

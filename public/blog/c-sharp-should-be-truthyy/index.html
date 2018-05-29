@@ -69,7 +69,8 @@
   <h1 class="post-title"><a href="https://clipperhouse.com/blog/c-sharp-should-be-truthyy/">C# should be truthy-y</a></h1>
   <p class="post-meta">Published by Matt Sherman · March 4, 2012</p>
 </header>
-<div class="post-content"><p>While “truthy” values in JavaScript can cause no small amount of heartache, one must admit they help readability. For objects anyway, it’s very nice to say if (object) {…} and get on with business. If the object is null or undefined, “false” strikes me as a perfectly legitimate behavior in that context.</p>
+<div class="post-content">
+  <p>While “truthy” values in JavaScript can cause no small amount of heartache, one must admit they help readability. For objects anyway, it’s very nice to say if (object) {…} and get on with business. If the object is null or undefined, “false” strikes me as a perfectly legitimate behavior in that context.</p>
 
 <p>I’d love to see something similar in C# — not truthiness, but an implicit test for existence.</p>
 
@@ -80,11 +81,18 @@
 <p>Like ToString, it might be overridden, depending on how one defines a legitimate value for their particular class. Doing so is fraught with danger if one goes about changing it a lot (careful with that axe, <a href="http://www.youtube.com/watch?v=tMpGdG27K9o">Eugene</a>).</p>
 
 <p>I would only support this idea for Object and Nullable&lt;T&gt;. And note this is not truthiness — it’s an <strong>explicit definition with a sensible default</strong>. Thoughts?</p>
+
+  <hr>
+  <small style="color:#999">
+      The source code for this page is <a href="https://github.com/clipperhouse/netlify/blob/master/content/blog/c-sharp-should-be-truthyy.md">here</a>.
+  </small>
 </div>
 <footer class="post-footer">
   
+  
 </footer>
 </article>
+
 </main>
 
 </body>

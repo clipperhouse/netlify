@@ -69,7 +69,8 @@
   <h1 class="post-title"><a href="https://clipperhouse.com/blog/403-forbidden-and-400-bad-request-errors-with-amazon-product-advertising-api/">403 Forbidden (and 400 Bad Request) errors with Amazon Product Advertising API</a></h1>
   <p class="post-meta">Published by Matt Sherman · August 1, 2009</p>
 </header>
-<div class="post-content"><p>I recently experienced an issue using the Amazon Product Advertising API (formerly the Amazon Associates Web Service). I was getting a “403 Forbidden” error for what seemed like a normal request.</p>
+<div class="post-content">
+  <p>I recently experienced an issue using the Amazon Product Advertising API (formerly the Amazon Associates Web Service). I was getting a “403 Forbidden” error for what seemed like a normal request.</p>
 
 <p>I am using the sample C# code provided <a href="http://developer.amazonwebservices.com/connect/entry.jspa?externalID=2480&amp;amp;categoryID=14">here</a>, along with the Amazon.ECS library (which apparently is no longer supported by Amazon).</p>
 
@@ -96,11 +97,18 @@
 <p>Part of the new API authentication scheme is a timestamp. The clock on my server had fallen quite a ways behind — it hadn’t been synced in a while. This resulted in an inaccurate timestamp on the request, and Amazon rejected it.</p>
 
 <p>After correcting the server’s clock, it worked fine.</p>
+
+  <hr>
+  <small style="color:#999">
+      The source code for this page is <a href="https://github.com/clipperhouse/netlify/blob/master/content/blog/403-forbidden-and-400-bad-request-errors-with-amazon-product-advertising-api.md">here</a>.
+  </small>
 </div>
 <footer class="post-footer">
   
+  
 </footer>
 </article>
+
 </main>
 
 </body>

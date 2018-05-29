@@ -69,7 +69,8 @@
   <h1 class="post-title"><a href="https://clipperhouse.com/blog/displaying-the-subversion-revision-number-in-your-web-application/">Displaying the Subversion revision number in your web application</a></h1>
   <p class="post-meta">Published by Matt Sherman · May 26, 2009</p>
 </header>
-<div class="post-content"><p>I found a nice technique for automatically displaying the SVN revision number in the footer of a web site. It is based in <a href="http://ccnet.thoughtworks.com/">CruiseControl.Net</a>.</p>
+<div class="post-content">
+  <p>I found a nice technique for automatically displaying the SVN revision number in the footer of a web site. It is based in <a href="http://ccnet.thoughtworks.com/">CruiseControl.Net</a>.</p>
 
 <p>Why would I do this? Well, we don’t have a strict version numbering convention for our app. We roll out incremental builds all the time. This falls under the technique of “continuous integration”, or in Google’s case, “eternal beta”. So it’s easier just to have the app give itself an incremental version number each time, that corresponds with our build process.</p>
 
@@ -115,11 +116,18 @@ using System.IO;</p>
 <p>— —</p>
 
 <p>Inspired by: <a href="http://stackoverflow.com/questions/913904/why-would-a-site-display-svn-version-and-what-are-the-advantages">http://stackoverflow.com/questions/913904/why-would-a-site-display-svn-version-and-what-are-the-advantages</a></p>
+
+  <hr>
+  <small style="color:#999">
+      The source code for this page is <a href="https://github.com/clipperhouse/netlify/blob/master/content/blog/displaying-the-subversion-revision-number-in-your-web-application.md">here</a>.
+  </small>
 </div>
 <footer class="post-footer">
   
+  
 </footer>
 </article>
+
 </main>
 
 </body>

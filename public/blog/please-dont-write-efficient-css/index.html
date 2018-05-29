@@ -69,7 +69,8 @@
   <h1 class="post-title"><a href="https://clipperhouse.com/blog/please-dont-write-efficient-css/">Please don’t write “efficient” CSS</a></h1>
   <p class="post-meta">Published by Matt Sherman · May 31, 2010</p>
 </header>
-<div class="post-content"><p>Contra <a href="http://css-tricks.com/efficiently-rendering-css/">many</a> <a href="http://developer.mozilla.org/en/Writing_Efficient_CSS">smart</a> <a href="http://code.google.com/speed/page-speed/docs/rendering.html">people</a>, I am going to make a contrarian request: <strong>please do not attempt to optimize your CSS for performance</strong>. Instead, please optimize for correctness, specificity and maintainability.</p>
+<div class="post-content">
+  <p>Contra <a href="http://css-tricks.com/efficiently-rendering-css/">many</a> <a href="http://developer.mozilla.org/en/Writing_Efficient_CSS">smart</a> <a href="http://code.google.com/speed/page-speed/docs/rendering.html">people</a>, I am going to make a contrarian request: <strong>please do not attempt to optimize your CSS for performance</strong>. Instead, please optimize for correctness, specificity and maintainability.</p>
 
 <p>A quick bit of philosophical background. CSS is a <em>declarative</em> language, not unlike HTML and (basic) SQL. It is designed to describe what you want, but not how to execute it. Thus, declarative languages have no verbs — only nouns and adjectives.</p>
 
@@ -114,11 +115,18 @@ p.storydescription { … }</p>
 <p>—</p>
 
 <p><strong>Addendum:</strong> Another way to think of it is that CSS is a query language. That’s why they call them “selectors”. More rules = more queries. Keeping queries as few and as specific as possible should give the best results, just like SQL.</p>
+
+  <hr>
+  <small style="color:#999">
+      The source code for this page is <a href="https://github.com/clipperhouse/netlify/blob/master/content/blog/please-dont-write-efficient-css.md">here</a>.
+  </small>
 </div>
 <footer class="post-footer">
   
+  
 </footer>
 </article>
+
 </main>
 
 </body>

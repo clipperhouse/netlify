@@ -69,7 +69,8 @@
   <h1 class="post-title"><a href="https://clipperhouse.com/blog/nesting-is-state/">Nesting is state</a></h1>
   <p class="post-meta">Published by Matt Sherman · March 30, 2014</p>
 </header>
-<div class="post-content"><p>There are stylistic debates about how much nesting or indentation one should choose in code. <a href="http://talks.golang.org/2013/bestpractices.slide#3">This slide</a> and the <a href="http://talks.golang.org/2013/bestpractices.slide#4">one that follows</a> illustrate the issue well. The slide refers to “cognitive load” without explaining, and it occurs to me that <strong>nesting is state</strong>.</p>
+<div class="post-content">
+  <p>There are stylistic debates about how much nesting or indentation one should choose in code. <a href="http://talks.golang.org/2013/bestpractices.slide#3">This slide</a> and the <a href="http://talks.golang.org/2013/bestpractices.slide#4">one that follows</a> illustrate the issue well. The slide refers to “cognitive load” without explaining, and it occurs to me that <strong>nesting is state</strong>.</p>
 
 <p>In the first example, if we want to debug around the highlighted line, what do we need to keep in mind?
 <code>func (g *Gopher) WriteTo(w io.Writer) (size int64, err error) {  
@@ -119,11 +120,18 @@
 <p>And for me, “list of non-local things” is a good definition of “state”.</p>
 
 <p><a href="https://news.ycombinator.com/item?id=7497134"><em>discuss on hacker news</em></a></p>
+
+  <hr>
+  <small style="color:#999">
+      The source code for this page is <a href="https://github.com/clipperhouse/netlify/blob/master/content/blog/nesting-is-state.md">here</a>.
+  </small>
 </div>
 <footer class="post-footer">
   
+  
 </footer>
 </article>
+
 </main>
 
 </body>

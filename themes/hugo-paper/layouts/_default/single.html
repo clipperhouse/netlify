@@ -7,7 +7,13 @@
     {{- .Date.Format "January 2, 2006" -}}
   </p>
 </header>
-<div class="post-content">{{ .Content }}</div>
+<div class="post-content">
+  {{ .Content }}
+  <hr>
+  <small style="color:#999">
+      The source code for this page is <a href="https://github.com/clipperhouse/netlify/blob/master/content/{{ .File.Path }}">here</a>.
+  </small>
+</div>
 <footer class="post-footer">
   {{ if .Params.tags }}
   <br>
@@ -18,6 +24,7 @@
     {{ end }}
   </ul>
   {{ end }}
+  
 </footer>
 </article>
 {{ partial "footer.html" . }}

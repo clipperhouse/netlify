@@ -70,6 +70,7 @@
   <p class="post-meta">Published by Matt Sherman · March 2, 2016</p>
 </header>
 <div class="post-content">
+  
 
 <p>Nulls are a notorious source of bugs in many programming languages. Here, I sketch out a way to avoid them, using C# for illustration.</p>
 
@@ -131,11 +132,18 @@ if (!TryThingById(12345, out t)) {
 <p>What’s nice about the above code is that nulls are not mentioned, or even relevant. Of <em>course</em> a caller can do the wrong thing, but now the word “null” sticks out as a code smell.</p>
 
 <p>Again, these are patterns for humans, not static guarantees. But now we can lint for strings like “null”, and have a good chance of catching errors.</p>
+
+  <hr>
+  <small style="color:#999">
+      The source code for this page is <a href="https://github.com/clipperhouse/netlify/blob/master/content/blog/principles-of-nullfree-programming.md">here</a>.
+  </small>
 </div>
 <footer class="post-footer">
   
+  
 </footer>
 </article>
+
 </main>
 
 </body>

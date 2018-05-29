@@ -69,7 +69,8 @@
   <h1 class="post-title"><a href="https://clipperhouse.com/blog/fixing-the-jquery-jump-on-slide/">Fixing the jQuery “jump” on slide</a></h1>
   <p class="post-meta">Published by Matt Sherman · February 10, 2011</p>
 </header>
-<div class="post-content"><p>You may notice in some situations, when using jQuery’s slideDown(), that the last little bit of the animation “jumps”. It feel un-smooth and frustrates those who like to dot our i’s. (<a href="http://jqueryfordesigners.com/slidedown-animation-jump-revisited/">Here an explanation</a>.)</p>
+<div class="post-content">
+  <p>You may notice in some situations, when using jQuery’s slideDown(), that the last little bit of the animation “jumps”. It feel un-smooth and frustrates those who like to dot our i’s. (<a href="http://jqueryfordesigners.com/slidedown-animation-jump-revisited/">Here an explanation</a>.)</p>
 
 <p>The main issue is that the browser (and thus jQuery) is uncertain about the height of the element that is sliding. This, in turn, is based on uncertainty about the _width_ — the width determines how lines wrap, and dictates the height.</p>
 
@@ -78,11 +79,18 @@
 <p>$elementToSlide.width($elementToSlide.width());</p>
 
 <p>All it does is assign a pixel value to the width of the element, based on the … width of the element. Worked for me.</p>
+
+  <hr>
+  <small style="color:#999">
+      The source code for this page is <a href="https://github.com/clipperhouse/netlify/blob/master/content/blog/fixing-the-jquery-jump-on-slide.md">here</a>.
+  </small>
 </div>
 <footer class="post-footer">
   
+  
 </footer>
 </article>
+
 </main>
 
 </body>
