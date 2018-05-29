@@ -1,4 +1,4 @@
-baseURL = "https://clipperhouse.com/"
+baseURL = "https://clipperhouse.com"
 languageCode = "en-us"
 title = "clipperhouse.com"
 theme = "hugo-paper"
