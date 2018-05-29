@@ -54,7 +54,7 @@ September 17, 2010
 July 12, 2010  
 [A New Online Dating Site For Bookworms](http://www.thefrisky.com/post/246-a-new-online-dating-site-for-bookworms/)
 
-**The Telegraph** (UK)
+**The Telegraph (UK)**  
 July 21, 2010  
 [Dating by the book](http://www.telegraph.co.uk/relationships/online-dating/7902938/Dating-by-the-book.html)
 
@@ -70,7 +70,7 @@ October 18, 2010
 August 17, 2010  
 [Dating by the Book](http://www.tressugar.com/Dating-Site-Favorite-Books-Alikewise-10246899)
 
-**Fifty First (J)Dates** (via Huffington Post)
+**Fifty First (J)Dates**  
 October 28, 2010  
 [Alikewise: The Online Dating Equivalent to Wearing Glasses](http://www.huffingtonpost.com/meredith-fineman/fifty-first-jdates-alikew_b_775611.html)
 
@@ -101,7 +101,7 @@ October 27, 2010
 **violet blue :: open source sex **  
 March 31, 2010  
 [new dating site alikewise matches book nerds](http://www.tinynibbles.com/blogarchives/2010/03/new-dating-site-alikewise-matches-book-nerds.html)
-[warning: adult content]
+[adult content]
 
 **Miami New Times**  
 September 7, 2010  
@@ -150,6 +150,6 @@ July 29, 2010
 July 22, 2010  
 [Alikewise, la red social de las citas literarias](http://baquia.com/articulos/empresas/noticia/16817/alikiwise-la-red-social-de-las-citas-literarias)
 
-**[TK] Reviews Blog**  
+** [TK] Reviews Blog**  
 November 5, 2010  
 [It's a Dealbreaker!](http://reviewstk.blogspot.com/2010/11/its-dealbreaker.html)
