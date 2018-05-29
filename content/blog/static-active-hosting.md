@@ -4,7 +4,7 @@ date: 2018-05-29
 author: "Matt Sherman"
 ---
 
-The combination of Hugo & Netlify to host my blog has turned out to make [easy things easy, and hard things possible](https://www.quora.com/What-is-the-origin-of-the-phrase-make-the-easy-things-easy-and-the-hard-things-possible).
+The combination of [Hugo & Netlify]({{< relref "blog/how-to-move-from-medium-to-static-hosting-with-jekyll-or-hugo.md" >}}) to host my blog has turned out to make [easy things easy, and hard things possible](https://www.quora.com/What-is-the-origin-of-the-phrase-make-the-easy-things-easy-and-the-hard-things-possible).
 
 Static content – blog posts, docs – is a natural win. Set-it-and-forget-it. Once it’s up in the cloud, there is no bit rot.
 
@@ -23,7 +23,7 @@ Despite being apps, they have the same chrome and styles as the rest of the site
 
 ### Proxying
 
-There is a third option for keeping all your apps under one domain. Netlify offers [proxying](https://www.netlify.com/docs/redirects/#proxying) of paths to URLs.
+There is a third option for keeping all your apps under one domain: Netlify offers [proxying](https://www.netlify.com/docs/redirects/#proxying) of paths to URLs.
 
 So if I want the Jargon API above to “live” on clipperhouse.com, I could proxy the `clipperhouse.com/jargon` path to the `jargon-demo.appspot.com` host.
 
