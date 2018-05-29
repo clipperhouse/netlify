@@ -1,5 +1,6 @@
 ---
 title: "About"
+description: "What I am looking for next"
 date: 2018-05-27
 ---
 

@@ -42,6 +42,22 @@
   <meta name="generator" content="Hugo {{ .Hugo.Version }}">
 
   <link rel="alternate" type="application/atom+xml" href="/index.xml" title="{{ .Site.Title }}">
+
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:creator" content="@clipperhouse" />
+<meta name="twitter:site" content="@clipperhouse" />
+{{- if .IsHome }}
+<meta name="twitter:title" content="{{- .Site.Title }} · {{ .Site.Params.author -}}">
+{{- else if eq .Kind "page" }}
+<meta name="twitter:title" content="{{- .Title }} · {{ .Params.author | default .Site.Params.author -}}">
+{{ end -}}
+{{- if eq .Kind "page" }}
+<meta name="twitter:description" content="{{ .Params.description | default .Summary }}">
+{{ else }}
+<meta name="description" content="{{ .Site.Params.description }}">
+{{ end -}}
+<meta name="twitter:image" content="/img/apple-touch-icon.png" />
+
 </head>
 <body class="{{if eq .Kind `page` }}single{{else}}list{{end}} {{ .Section }}">
   <header class="header">
