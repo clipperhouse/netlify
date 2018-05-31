@@ -1,10 +1,15 @@
 (function () {
-    // Intercept the submit to use ajax
-    $(document).on("submit", "#text-form", function (e) {
+    var textForm = $('#text-form');
+    var textRadios = textForm.find('input[name=format]');
+    var textInput = textForm.find('textarea');
+    var textExamples = $('#text-examples');
+    var textResult = $('#text-result');
+
+    textForm.on('submit', function (e) {
         var url = this.action;
         var data = $(this).serialize();
         $.ajax({
-            type: "POST",
+            type: 'POST',
             url: url,             
             crossDomain: false,
             data: data,
@@ -14,25 +19,19 @@
     });
 
     function update(html) {
-        $("#result").html(html);
-        if (html) {
-            $("#result").show();
-        } else {
-            $("#result").hide();
-        }
+        textResult.html(html);
+        html ? textResult.show() : textResult.hide();
     }
 
-    $(document).on("change", "input[name='format']", function (e) {
-        var id = this.id;
-        var example = $("#examples").find('#' + id);
-        var text = example.text().trim();
-        $("form #text").val(text);
-        $("#result").html('').hide();
+    textRadios.on('change', function (e) {
+        var ex = textExamples.find('#' + this.id);
+        textInput.val(ex.text().trim());
+        textResult.html('').hide();
     });
 
-    $("input#prose").click();
+    textRadios.first().click();
 
-    if (location.hostname == "localhost") {
-        $("#text-form").attr("action", "//localhost:8080/text")
+    if (location.hostname == 'localhost') {
+        textForm.attr('action', '//localhost:8080/text')
     }
 })();

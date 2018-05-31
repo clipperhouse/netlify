@@ -12,20 +12,22 @@ js:
 
 The default implementation is based on a dictionary of tags and synonyms from Stack Overflow. I’ve put together a playground below.
 
+### Text
+
 <form action="//jargon-demo.appspot.com/text" method="POST" id="text-form">
     <span class="hint">
-        Try it out:
+        Examples:
     </span>
     <label for="prose">
-        <input type="radio" id="prose" name="format" value="prose">
+        <input type="radio" id="prose" name="format">
         Prose
     </label>
     <label for="json">
-        <input type="radio" id="json" name="format" value="json">
+        <input type="radio" id="json" name="format">
         JSON
     </label>        
     <label for="csv">
-        <input type="radio" id="csv" name="format" value="csv">
+        <input type="radio" id="csv" name="format">
         CSV
     </label>
 
@@ -36,30 +38,35 @@ The default implementation is based on a dictionary of tags and synonyms from St
     </div>
 </form>
 
-<div id="result" class="pre code">
+<div id="text-result" class="pre code result">
 </div>
 
-<div id="examples">
+
+### HTML
+
+Coming soon.
+
+<div id="text-examples" class="examples">
     <div id="prose">
-We can lemmatize some plain prose, perhaps a job listing.
+We can lemmatize plain prose, perhaps a technical job listing:
 
 We are looking for experienced Rails developers, with experience in HTML 5 and T-SQL.
 
-Experience with ObjC and React Native is a plus.
+Experience with ObjC and cpp and vue and React  Native is a plus.
     </div>
     <div id="csv">
+The parsing rules work well for comma separated files:
+
 Name,Skills,Years
 Jane Doe,"c sharp, ecma script",6
 Foo Bar,"aspnet mvc R NodeJS", 7.5
     </div>
     <div id="json">
-{
-    "product": {
-        "name": "Microsoft Access",
-    },
-    "product": {
-        "name": "X Code",
-    }
-}
+The parsing rules work well for JSON:
+
+{[
+    "name": "Microsoft Access",
+    "name": "X Code"
+]}
     </div>
 </div>
