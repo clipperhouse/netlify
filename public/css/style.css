@@ -128,7 +128,7 @@ pre code {
 .first-entry > *,
 .post-entry,
 .list-footer {
-  max-width: 700px;
+  max-width: 800px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -152,11 +152,11 @@ pre code {
   padding-bottom: 30px;
 }
 .post-view {
-  width: 700px;
+  width: 800px;
   margin-left: auto;
   margin-right: auto;
 }
-@media (max-width: 767px) {
+@media (max-width: 768px) {
   .main {
     min-height: calc(100vh - 155px);
   }
@@ -315,7 +315,6 @@ pre code {
 }
 .post-content dt {
   width: 25%;
-  font-weight: 700;
 }
 .post-content dd {
   width: 75%;
@@ -404,7 +403,6 @@ pre code {
 .not-found {
   text-align: center;
   font-size: 180px;
-  font-weight: 700;
   line-height: calc(100vh - 300px);
 }
 /* Footer
