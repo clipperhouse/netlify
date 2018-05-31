@@ -12,7 +12,7 @@ js:
 
 The default implementation is based on a dictionary of tags and synonyms from Stack Overflow. I’ve put together a playground below.
 
-<form action="https://jargon-demo.appspot.com/jargon" method="POST" id="text-form">
+<form action="//jargon-demo.appspot.com/text" method="POST" id="text-form">
     <span class="hint">
         Try it out:
     </span>
