@@ -31,4 +31,8 @@
     });
 
     $("input#prose").click();
+
+    if (location.hostname == "localhost") {
+        $("#text-form").attr("action", "//localhost:8080/text")
+    }
 })();
