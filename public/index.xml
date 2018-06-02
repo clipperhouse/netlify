@@ -21,15 +21,6 @@
     </item>
     
     <item>
-      <title>Alikewise (dating by the book)</title>
-      <link>https://clipperhouse.com/alikewise/</link>
-      <pubDate>Mon, 28 May 2018 00:00:00 +0000</pubDate>
-      
-      <guid>https://clipperhouse.com/alikewise/</guid>
-      <description>Thank you As of December 2016 we have shut down Alikewise.com. We are thrilled with the response to the site and we hope you found romance, or at least a good read.</description>
-    </item>
-    
-    <item>
       <title>About</title>
       <link>https://clipperhouse.com/about/</link>
       <pubDate>Sun, 27 May 2018 00:00:00 +0000</pubDate>
@@ -81,6 +72,15 @@
       
       <guid>https://clipperhouse.com/blog/toward-less-injection/</guid>
       <description>Here’s a habit that may help to reduce the complexity of your dependency injection tree. Ask yourself: how much of an injected dependency are you actually using?</description>
+    </item>
+    
+    <item>
+      <title>Alikewise (dating by the book)</title>
+      <link>https://clipperhouse.com/alikewise/</link>
+      <pubDate>Sun, 01 Jan 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://clipperhouse.com/alikewise/</guid>
+      <description>Thank you As of December 2016 we have shut down Alikewise.com. We are thrilled with the response to the site and we hope you found romance, or at least a good read.</description>
     </item>
     
     <item>

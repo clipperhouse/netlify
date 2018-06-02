@@ -1,18 +1,23 @@
-h1{
-    font-family: Arial, Helvetica, sans-serif;
-    color: crimson;
-    font-size: 38px;
+h1 {
+  font-family: Arial, Helvetica, sans-serif;
+  color: red;
+  font-size: 38px;
 }
-p{
-    font-family: fantasy;
-    color: azure;
-    font-size: 19px;
+p {
+  font-family: fantasy;
+  color: azure;
+  font-size: 19px;
 }
-body{
-    background-color: black;
+body {
+  background-color: black;
 }
-a{
-    color: deeppink;
-    font-family: cursive;
-    font-size: 21px;
+a {
+  color: red;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  font-size: 21px;
+}
+#corner {
+  position: absolute;
+  right: 0;
+  bottom: 0;
 }
