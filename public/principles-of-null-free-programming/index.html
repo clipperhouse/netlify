@@ -103,14 +103,15 @@
 
 <pre><code class="language-c#">Thing t;  
 if (!TryThingById(12345, out t)) {  
-    return &amp;#34;Sorry, not found!&amp;#34;;  
-} // …do as you wish with t, without worrying about null`
+    return &quot;Sorry, not found!&quot;;  
+} 
+// …do as you wish with t, without worrying about null
 </code></pre>
 
 <p>The Try pseudocode would look something like:</p>
 
 <pre><code class="language-c#">bool TryThingById(int id, out Thing t) {  
-    var rows = DB.Query(&amp;#34;select * from Things where ID = ?&amp;#34;, id);  
+    var rows = DB.Query(&quot;select * from Things where ID = ?&quot;, id);  
     if (rows.Length == 0) {  
         return false; // t is indeed null but should be irrelevant  
     }  

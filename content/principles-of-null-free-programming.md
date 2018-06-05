@@ -35,15 +35,16 @@ Rather, consider a pattern based on an explicit Boolean for existence, and where
 ```c#
 Thing t;  
 if (!TryThingById(12345, out t)) {  
-    return &#34;Sorry, not found!&#34;;  
-} // …do as you wish with t, without worrying about null`
+    return "Sorry, not found!";  
+} 
+// …do as you wish with t, without worrying about null
 ```
 
 The Try pseudocode would look something like:
 
 ```c#
 bool TryThingById(int id, out Thing t) {  
-    var rows = DB.Query(&#34;select * from Things where ID = ?&#34;, id);  
+    var rows = DB.Query("select * from Things where ID = ?", id);  
     if (rows.Length == 0) {  
         return false; // t is indeed null but should be irrelevant  
     }  
