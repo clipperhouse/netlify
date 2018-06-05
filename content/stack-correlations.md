@@ -1,6 +1,7 @@
 ---
 title: "Stack Overflow tag correlations"
 date: 2018-05-26
+style: "app"
 css:
 - "/css/stack.css"
 - "/css/jquery-ui.css"

@@ -59,7 +59,7 @@
 <meta name="twitter:image" content="{{ .Site.BaseURL }}/img/apple-touch-icon.png" />
 
 </head>
-<body class="{{if eq .Kind `page` }}single{{else}}list{{end}} {{ .Section }}">
+<body class="{{if eq .Kind `page` }}single{{else}}list{{end}} {{ .Params.style }}">
   <header class="header">
     {{ if .IsHome }}
     <h1 class="title"><a href="{{ `/` }}">{{ .Site.Title }}</a></h1>

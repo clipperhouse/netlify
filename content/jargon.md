@@ -1,6 +1,7 @@
 ---
-title: "Jargon playground"
-date: 2018-05-18T17:07:55.000Z
+title: "Jargon demo"
+date: 2018-05-18
+style: "app"
 css:
 - "/css/jargon.css"
 js:

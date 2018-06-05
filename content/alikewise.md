@@ -1,6 +1,7 @@
 ---
 title: "Alikewise (dating by the book)"
 date: 2017-01-01
+style: "app"
 ---
 
 ### Thank you
