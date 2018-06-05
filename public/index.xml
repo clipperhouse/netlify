@@ -122,10 +122,10 @@
     
     <item>
       <title>Principles of null-free programming</title>
-      <link>https://clipperhouse.com/principles-of-nullfree-programming/</link>
+      <link>https://clipperhouse.com/principles-of-null-free-programming/</link>
       <pubDate>Wed, 02 Mar 2016 19:35:42 +0000</pubDate>
       
-      <guid>https://clipperhouse.com/principles-of-nullfree-programming/</guid>
+      <guid>https://clipperhouse.com/principles-of-null-free-programming/</guid>
       <description>Nulls are a notorious source of bugs in many programming languages. Here, I sketch out a way to avoid them, using C# for illustration.</description>
     </item>
     
