@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-8534189-2"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-8534189-2');
+  </script>
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="renderer" content="webkit">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <title>Browser-specific CSS without Javascript or horrible syntax · Matt Sherman</title>
+  <meta name="description" content="So, we all know that browsers have differing levels of CSS support. Working around them can be a pain in the a**, requiring non-standards-based hacks which are very hard to read and debug.">
+  <meta name="author" content="Matt Sherman">
+  <link href="/css/style.css?3" rel="stylesheet">
+  
+  <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/img/favicon-16x16.png">
+  <link rel="apple-touch-icon" href="/img/apple-touch-icon.png">
+
+  <meta name="generator" content="Hugo 0.40.3">
+
+  <link rel="alternate" type="application/atom+xml" href="/index.xml" title="clipperhouse.com">
+
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:creator" content="@clipperhouse" />
+<meta name="twitter:site" content="@clipperhouse" />
+<meta name="twitter:title" content="Browser-specific CSS without Javascript or horrible syntax · Matt Sherman">
+
+<meta name="twitter:description" content="So, we all know that browsers have differing levels of CSS support. Working around them can be a pain in the a**, requiring non-standards-based hacks which are very hard to read and debug.">
+<meta name="twitter:image" content="https://clipperhouse.com/img/apple-touch-icon.png" />
+
+</head>
+<body class="single ">
+  <header class="header">
+    
+    <p class="title"><a href="/">clipperhouse.com</a></p>
+    
+    <button class="menu-toggle" type="button"></button>
+    <nav class="menu">
+      <ul>
+        
+        
+        <li class="">
+          <a href="/about/">about</a>
+        </li>
+        
+      </ul>
+    </nav>
+  </header>
+
+  <script type="text/javascript">
+    function toggleMenu() {
+        var menu = document.querySelector('nav.menu');
+        menu.style.display = menu.style.display == "none" ? "block" : "none";
+    }
+    document.querySelector('button.menu-toggle').onclick = toggleMenu;
+  </script>
+  <main class="main">
+
+<article class="post post-view">
+  <header class="post-header">
+  <h1 class="post-title"><a href="https://clipperhouse.com/browserspecific-css-without-javascript-or-horrible-syntax/">Browser-specific CSS without Javascript or horrible syntax</a></h1>
+  <p class="post-meta">Published by Matt Sherman · December 7, 2009</p>
+</header>
+<div class="post-content">
+  <p>So, we all know that browsers have <a href="http://www.quirksmode.org/css/contents.html">differing levels</a> of CSS support. Working around them can be a pain in the a**, requiring non-standards-based <a href="http://www.webmonkey.com/tutorial/Browser-Specific_CSS_Hacks">hacks</a> which are very hard to read and debug.</p>
+
+<p>I’d like to write CSS that looks like this:</p>
+
+<p>.ie div.thing<br />
+{<br />
+…some tweaks for IE…<br />
+}</p>
+
+<p>.ff div.thing<br />
+{<br />
+…some tweaks for Firefox…<br />
+}<br />
+…etc. Even better:</p>
+
+<p>.ie6 div.thing<br />
+{<br />
+…curse you old browser…<br />
+}</p>
+
+<p>That’s readable, and isn’t polluted with the –moz stuff or &lt;! — If IE –&gt; or whatever. How to do it? Well, on the server, I simply add a class (or classes) to the &lt;body&gt; tag. It ends up looking like this:</p>
+
+<p>…or…</p>
+
+<p><strong>So, every child of &lt;body&gt; inherits the browser-specific class(es).</strong> This allows you to use the readable CSS above.</p>
+
+<p>I implemented this in C# as an <a href="http://msdn.microsoft.com/en-us/library/bb383977.aspx">extension method</a> on HttpBrowserCapabilities. Like so:</p>
+
+<p>namespace ClipperHouse.Extensions<br />
+{<br />
+ public static partial class BrowserCapabilityExtensions<br />
+ {<br />
+ public static string CssClass(this HttpBrowserCapabilities b, bool addVersion)<br />
+ {<br />
+ string cssClass = String.Empty;</p>
+
+<p>if (b.Browser.ToLower() == “ie”)<br />
+ cssClass = “ie”;<br />
+ if (b.Browser.ToLower().Contains(“firefox”))<br />
+ cssClass = “ff”;</p>
+
+<p>bool isChrome = b.Capabilities[“”].ToString().ToLower().Contains(“chrome”);<br />
+ bool isSafari = b.Browser.ToLower().Contains(“safari”) &amp;&amp; !isChrome;<br />
+ bool isWebkit = isChrome || isSafari;</p>
+
+<p>if (isWebkit)<br />
+ {<br />
+ cssClass = “webkit”;<br />
+ }</p>
+
+<p>if (addVersion)<br />
+ cssClass += “ “ + cssClass + b.MajorVersion.ToString();</p>
+
+<p>if (isChrome)<br />
+ cssClass += “ chrome”;<br />
+ if (isSafari)<br />
+ cssClass += “ safari”;</p>
+
+<p>return cssClass;<br />
+ }</p>
+
+<p>public static string CssClass(this HttpBrowserCapabilities b)<br />
+ {<br />
+ return b.CssClass(false);<br />
+ }<br />
+ }<br />
+}</p>
+
+<p>Then, in my master page:</p>
+
+<p>&lt;body class=””&gt;</p>
+
+<p>Easy-peasy. I added a bit of cleverness that gives you both “webkit” and “chrome” so you can target the rendering engine and/or the browser. Of course, this could go further, recognizing (say) mobile browsers or operating systems. Give me your ideas in the comments.</p>
+
+<p>You should be able to do similar in PHP or whatever. Hope this helps!</p>
+
+<p>—</p>
+
+<p>PS: One might be tempted to use Javascript/jQuery to achieve the above. But CSS mustn’t depend on JS — we need our pages to degrade gracefully in the absence of JS.</p>
+
+<p>Related: <a href="http://stackoverflow.com/questions/1855998/jquery-how-to-hide-divs-they-are-showing-for-a-split-second-on-page-load">CSS that is scoped only when Javascript is present</a></p>
+
+<p>—</p>
+
+<p><em>PPS, using extension methods in your master page may require adding a line to web.config, let me know if you need help</em></p>
+
+  <hr>
+  <small style="color:#999">
+      The source code for this page is <a href="https://github.com/clipperhouse/netlify/blob/master/content/browserspecific-css-without-javascript-or-horrible-syntax.md">here</a>.
+  </small>
+</div>
+<footer class="post-footer">
+  
+  
+</footer>
+</article>
+
+</main>
+
+</body>
+</html>
+

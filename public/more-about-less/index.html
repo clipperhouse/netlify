@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-8534189-2"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-8534189-2');
+  </script>
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="renderer" content="webkit">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <title>More about {less} · Matt Sherman</title>
+  <meta name="description" content="Raena Jackson Armitage offers an interesting exploration of LessCSS: I have a confession: I think parts of CSS suck.">
+  <meta name="author" content="Matt Sherman">
+  <link href="/css/style.css?3" rel="stylesheet">
+  
+  <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/img/favicon-16x16.png">
+  <link rel="apple-touch-icon" href="/img/apple-touch-icon.png">
+
+  <meta name="generator" content="Hugo 0.40.3">
+
+  <link rel="alternate" type="application/atom+xml" href="/index.xml" title="clipperhouse.com">
+
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:creator" content="@clipperhouse" />
+<meta name="twitter:site" content="@clipperhouse" />
+<meta name="twitter:title" content="More about {less} · Matt Sherman">
+
+<meta name="twitter:description" content="Raena Jackson Armitage offers an interesting exploration of LessCSS: I have a confession: I think parts of CSS suck.">
+<meta name="twitter:image" content="https://clipperhouse.com/img/apple-touch-icon.png" />
+
+</head>
+<body class="single ">
+  <header class="header">
+    
+    <p class="title"><a href="/">clipperhouse.com</a></p>
+    
+    <button class="menu-toggle" type="button"></button>
+    <nav class="menu">
+      <ul>
+        
+        
+        <li class="">
+          <a href="/about/">about</a>
+        </li>
+        
+      </ul>
+    </nav>
+  </header>
+
+  <script type="text/javascript">
+    function toggleMenu() {
+        var menu = document.querySelector('nav.menu');
+        menu.style.display = menu.style.display == "none" ? "block" : "none";
+    }
+    document.querySelector('button.menu-toggle').onclick = toggleMenu;
+  </script>
+  <main class="main">
+
+<article class="post post-view">
+  <header class="post-header">
+  <h1 class="post-title"><a href="https://clipperhouse.com/more-about-less/">More about {less}</a></h1>
+  <p class="post-meta">Published by Matt Sherman · June 30, 2009</p>
+</header>
+<div class="post-content">
+  <p>Raena Jackson Armitage offers an <a href="http://www.sitepoint.com/blogs/2009/06/30/write-better-css-with-less/">interesting exploration of LessCSS</a>:
+I have a confession: I think parts of CSS <em>suck.</em> It’s repetitive, tedious, and … well, kind of dumb.</p>
+
+<p>(Here are my <a href="/blog/post/Imagine-CSS-evolved-as-a-programming-language.aspx">previous comments</a>.)</p>
+
+<p>I wonder what it would take to work LESS into the <a href="http://www.w3.org/Style/CSS/">CSS standard</a>? The syntax seems intuitive and unambiguous, and feels like CSS. It’s a small evolution that would make a lot of people happy. I suspect the standards process is not so nimble. ;)</p>
+
+<p>This presents an interesting case in standards versioning. CSS versions are mostly based around the addition of more sophisticated styles, but the syntax doesn’t change. So when a browser doesn’t support a particular CSS feature, it’s an incremental, cosmetic loss. It degrades gently. Since my above suggestion is a syntactic change, we must take more care as not to break things.</p>
+
+<p>That said, I believe we can <strong>begin using the new syntax now</strong>. Here’s a straightforward, server-side backward- and forward-compatibility story.</p>
+
+<p>On the .Net side, one would write an HttpHandler for “.less” files. For the current generation of browsers, the handler would parse the .less into standard CSS, as the Ruby-based <a href="http://github.com/cloudhead/less/tree/master">LESS compiler</a> does. For those browsers that support the new standard — whenever that might be — the handler would simply pass the .less code straightaway. (I am sure that an Apache mod would be similarly straightforward.)</p>
+
+<p>We don’t need to wait for a standard — if the web community likes this idea, let’s make it a de facto standard and let the W3C catch up if they care to.</p>
+
+<p>I’ll ask again — what enterprising .Net Ruby person is gonna implement this so I can start playing?</p>
+
+  <hr>
+  <small style="color:#999">
+      The source code for this page is <a href="https://github.com/clipperhouse/netlify/blob/master/content/more-about-less.md">here</a>.
+  </small>
+</div>
+<footer class="post-footer">
+  
+  
+</footer>
+</article>
+
+</main>
+
+</body>
+</html>
+

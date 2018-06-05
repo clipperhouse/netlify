@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-8534189-2"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-8534189-2');
+  </script>
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="renderer" content="webkit">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <title>Progress bars cannot be accurate · Matt Sherman</title>
+  <meta name="description" content="We all see progress bars and some of us even implement them. And we’ve all seen how hilariously wrong they can be.">
+  <meta name="author" content="Matt Sherman">
+  <link href="/css/style.css?3" rel="stylesheet">
+  
+  <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/img/favicon-16x16.png">
+  <link rel="apple-touch-icon" href="/img/apple-touch-icon.png">
+
+  <meta name="generator" content="Hugo 0.40.3">
+
+  <link rel="alternate" type="application/atom+xml" href="/index.xml" title="clipperhouse.com">
+
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:creator" content="@clipperhouse" />
+<meta name="twitter:site" content="@clipperhouse" />
+<meta name="twitter:title" content="Progress bars cannot be accurate · Matt Sherman">
+
+<meta name="twitter:description" content="We all see progress bars and some of us even implement them. And we’ve all seen how hilariously wrong they can be.">
+<meta name="twitter:image" content="https://clipperhouse.com/img/apple-touch-icon.png" />
+
+</head>
+<body class="single ">
+  <header class="header">
+    
+    <p class="title"><a href="/">clipperhouse.com</a></p>
+    
+    <button class="menu-toggle" type="button"></button>
+    <nav class="menu">
+      <ul>
+        
+        
+        <li class="">
+          <a href="/about/">about</a>
+        </li>
+        
+      </ul>
+    </nav>
+  </header>
+
+  <script type="text/javascript">
+    function toggleMenu() {
+        var menu = document.querySelector('nav.menu');
+        menu.style.display = menu.style.display == "none" ? "block" : "none";
+    }
+    document.querySelector('button.menu-toggle').onclick = toggleMenu;
+  </script>
+  <main class="main">
+
+<article class="post post-view">
+  <header class="post-header">
+  <h1 class="post-title"><a href="https://clipperhouse.com/progress-bars-cannot-be-accurate/">Progress bars cannot be accurate</a></h1>
+  <p class="post-meta">Published by Matt Sherman · October 23, 2013</p>
+</header>
+<div class="post-content">
+  <p>We all see progress bars and some of us even implement them. And we’ve all seen how hilariously wrong they can be. There’s a reason for that.</p>
+
+<p>In order for a progress bar to be accurate, a program needs to determine how long it will take to run, prior to running it. It needs to know how much work it will do before doing it.</p>
+
+<p>It seems to me that the only way to accurately know how much work a program has to do, is to do the work. That’s not as banal as it sounds.</p>
+
+<p>Computer-theoretically, is it possible for a program to calculate how much work it needs to do, in less work than is required to actually run the program? I haven’t done the math, but my instinct says it cannot.</p>
+
+<p>The best we can hope for, and what most progress bars actually do, is to estimate based on <strong>other evidence</strong>.</p>
+
+<p>For example, when downloading a file from a network, the progress bar indicates how much time is left based on how much time it took so far. Subsequent bytes might come down at the same rate as previous bytes; some may not. So “progress” is, at best, probabilistic.</p>
+
+<p>If we set aside time as the measure of progress, and instead simply indicate how many more bytes need to transfer, we are still making an assumption. The program can’t <em>know</em> how big the downloaded file is prior to downloading it; what it <em>can</em> do is trust that the server correctly told it what to expect prior to download (eg, in a header).</p>
+
+<p>One might also gather evidence over time. I’m watching Mavericks install on my MacBook. The progress bar seems reasonable enough. My assumption is that Apple, refined as they are, has sampled/recorded previous install times on different hardware. Maybe Apple has put previous measurements of the program <em>in the program</em>.</p>
+
+<p>In many cases, in controlled environments or with lots of trials, we can offer a progress bar that gives the user a reasonably confident guess. But that’s all it can be.</p>
+
+  <hr>
+  <small style="color:#999">
+      The source code for this page is <a href="https://github.com/clipperhouse/netlify/blob/master/content/progress-bars-cannot-be-accurate.md">here</a>.
+  </small>
+</div>
+<footer class="post-footer">
+  
+  
+</footer>
+</article>
+
+</main>
+
+</body>
+</html>
+

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-8534189-2"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-8534189-2');
+  </script>
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="renderer" content="webkit">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <title>Liquidity, open source and security · Matt Sherman</title>
+  <meta name="description" content="Jeff has a thoughtful post about open source, security and incentives. A few points stood out to me.">
+  <meta name="author" content="Matt Sherman">
+  <link href="/css/style.css?3" rel="stylesheet">
+  
+  <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/img/favicon-16x16.png">
+  <link rel="apple-touch-icon" href="/img/apple-touch-icon.png">
+
+  <meta name="generator" content="Hugo 0.40.3">
+
+  <link rel="alternate" type="application/atom+xml" href="/index.xml" title="clipperhouse.com">
+
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:creator" content="@clipperhouse" />
+<meta name="twitter:site" content="@clipperhouse" />
+<meta name="twitter:title" content="Liquidity, open source and security · Matt Sherman">
+
+<meta name="twitter:description" content="Jeff has a thoughtful post about open source, security and incentives. A few points stood out to me.">
+<meta name="twitter:image" content="https://clipperhouse.com/img/apple-touch-icon.png" />
+
+</head>
+<body class="single ">
+  <header class="header">
+    
+    <p class="title"><a href="/">clipperhouse.com</a></p>
+    
+    <button class="menu-toggle" type="button"></button>
+    <nav class="menu">
+      <ul>
+        
+        
+        <li class="">
+          <a href="/about/">about</a>
+        </li>
+        
+      </ul>
+    </nav>
+  </header>
+
+  <script type="text/javascript">
+    function toggleMenu() {
+        var menu = document.querySelector('nav.menu');
+        menu.style.display = menu.style.display == "none" ? "block" : "none";
+    }
+    document.querySelector('button.menu-toggle').onclick = toggleMenu;
+  </script>
+  <main class="main">
+
+<article class="post post-view">
+  <header class="post-header">
+  <h1 class="post-title"><a href="https://clipperhouse.com/liquidity-open-source-and-security/">Liquidity, open source and security</a></h1>
+  <p class="post-meta">Published by Matt Sherman · April 4, 2015</p>
+</header>
+<div class="post-content">
+  
+
+<p>Jeff has a <a href="http://blog.codinghorror.com/given-enough-money-all-bugs-are-shallow/">thoughtful post</a> about open source, security and incentives. A few points stood out to me.</p>
+
+<h4 id="liquidity">Liquidity</h4>
+
+<p>First, the “all bugs are shallow” idea is a bit idealistic, as he points out. What comes to mind for me is Joel’s <a href="http://www.joelonsoftware.com/articles/HighNotes.html">Hitting the High Notes</a>. Tens of thousands of average developers will not pick up a bug that only experts would recognize, and adding another ten thousand won’t help.</p>
+
+<p>If we have a “chunky”, discrete Gaussian distribution of talent reviewing the code, the area under of the far right-hand tail may be indistinguishable from zero.</p>
+
+<p>Few markets are liquid enough for distributions to be smooth, which allows <em>some</em> area under the right tail.</p>
+
+<p>For example, casinos doing millions of bets with known probabilities have smooth, measurable, non-zero tails; they are liquid enough to predict that <em>someone</em> will win a million dollars.</p>
+
+<p>An open source project with an audience <em>not</em> in the millions, less so. At some point moving right, the graph will <strong>discretely drop to zero</strong>. That zero represents “the number of people smart enough to identify difficult bugs”.</p>
+
+<h4 id="incentives">Incentives</h4>
+
+<p>Second, we consider incentives. Jeff explores the idea that paying for bugs may both be necessary and risky.</p>
+
+<p>He sees moral hazard: perhaps there is an incentive to hoard important information for a payoff. Maybe only the wealthiest organizations can afford to pay for vulnerabilities, as their value is bid up.</p>
+
+<p>But let’s consider the audience. A person that discovers a bug in an important piece of software is someone with an unusually strong interest in that software. They are likely a user, and therefore are more likely interested in having better software, for their own interests.</p>
+
+<p>The alternative to imagine mercenaries that dive into unfamiliar software in the hope of a payoff. Not impossible! But unlikely.</p>
+
+<p>Which is an essential quality of open source that confuses those new to it — that volunteers work not only on goodwill, but on self-interest.</p>
+
+<p>I’ll stretch the analogy. The person next to you on the plane might be a terrorist. Not impossible!</p>
+
+<p>But it’s more likely that, if they showed up where you showed up, they simply want the same things you do.</p>
+
+<h4 id="cheaper">Cheaper</h4>
+
+<p>What if security becomes too cheap to meter? Which is to say, what happens if improving software quality requires a lot fewer humans?</p>
+
+<p>In that case, the economics and incentives questions become a lot less salient.</p>
+
+<p>It’s possible — likely, to my mind — that safer software will not come mainly from greater resources, but better tools.</p>
+
+<p>The two that come to mind are formal methods and safer languages. (These are actually two sides of the same coin.)</p>
+
+<p>To the extent that we can formally articulate a definition for “safety”, we can prove a program’s characteristics with static analysis. Describing code paths in terms of provable propositions allows us to know where logical guarantees exist, and where they don’t.</p>
+
+<p>We talk less about talent and trust, and more about the existence, or non-existence, of guarantees.</p>
+
+<p>And heck, even informally: languages like Rust and Go prevent classes of human errors that C cannot. Using such languages, we prevent <em>the humans</em> from making certain classes of mistakes.</p>
+
+<p>Both of the above strike me a relatively cheap and automatable, and therefore more likely a source of progress than foundations and funding.</p>
+
+  <hr>
+  <small style="color:#999">
+      The source code for this page is <a href="https://github.com/clipperhouse/netlify/blob/master/content/liquidity-open-source-and-security.md">here</a>.
+  </small>
+</div>
+<footer class="post-footer">
+  
+  
+</footer>
+</article>
+
+</main>
+
+</body>
+</html>
+

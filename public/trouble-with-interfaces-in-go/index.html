@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-8534189-2"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-8534189-2');
+  </script>
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="renderer" content="webkit">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <title>The trouble with interfaces in Go · Matt Sherman</title>
+  <meta name="description" content="I am working on a tool for generics-like functionality in Go. Despite what you may have heard, Go does have generic functionality, in that you can create (e.">
+  <meta name="author" content="Matt Sherman">
+  <link href="/css/style.css?3" rel="stylesheet">
+  
+  <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/img/favicon-16x16.png">
+  <link rel="apple-touch-icon" href="/img/apple-touch-icon.png">
+
+  <meta name="generator" content="Hugo 0.40.3">
+
+  <link rel="alternate" type="application/atom+xml" href="/index.xml" title="clipperhouse.com">
+
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:creator" content="@clipperhouse" />
+<meta name="twitter:site" content="@clipperhouse" />
+<meta name="twitter:title" content="The trouble with interfaces in Go · Matt Sherman">
+
+<meta name="twitter:description" content="I am working on a tool for generics-like functionality in Go. Despite what you may have heard, Go does have generic functionality, in that you can create (e.">
+<meta name="twitter:image" content="https://clipperhouse.com/img/apple-touch-icon.png" />
+
+</head>
+<body class="single ">
+  <header class="header">
+    
+    <p class="title"><a href="/">clipperhouse.com</a></p>
+    
+    <button class="menu-toggle" type="button"></button>
+    <nav class="menu">
+      <ul>
+        
+        
+        <li class="">
+          <a href="/about/">about</a>
+        </li>
+        
+      </ul>
+    </nav>
+  </header>
+
+  <script type="text/javascript">
+    function toggleMenu() {
+        var menu = document.querySelector('nav.menu');
+        menu.style.display = menu.style.display == "none" ? "block" : "none";
+    }
+    document.querySelector('button.menu-toggle').onclick = toggleMenu;
+  </script>
+  <main class="main">
+
+<article class="post post-view">
+  <header class="post-header">
+  <h1 class="post-title"><a href="https://clipperhouse.com/trouble-with-interfaces-in-go/">The trouble with interfaces in Go</a></h1>
+  <p class="post-meta">Published by Matt Sherman · February 4, 2014</p>
+</header>
+<div class="post-content">
+  <p>I am working on a <a href="https://github.com/clipperhouse/gen">tool</a> for generics-like functionality in Go. Despite what you may have heard, Go does have generic functionality, in that you can create (e.g.) methods which operate on any type, by using interface{} — the interface that all types implement. For example, you can do something like:</p>
+
+<p>func DoSomething(interface{}) interface{} {<br />
+…<br />
+}</p>
+
+<p>…where both the input parameter and the output return value are interface{}. It’s quite flexible. The very nice <a href="https://github.com/ahmetalpbalkan/go-linq">go-linq</a> operates this way, as do data structure packages like <a href="https://github.com/fatih/set">Set</a>. That they will accept any type, and can return any type, meets a definition of generic.</p>
+
+<p>The trouble is, the user will (in all likelihood) need to cast return values into types to do something meaningful. If they use such a function to, say, filter a slice of int, the user will need to cast the resulting values back to int to proceed.</p>
+
+<p>There is an <a href="http://en.wikipedia.org/wiki/Robustness_principle">adage</a> in programming that one should be liberal in what one accepts, and conservative with what one emits. The above pattern only gets the first part right. The input parameter is liberal, but unfortunately so is the return value.</p>
+
+<p>This burdens the user with figuring out the nature of the output. It’s more code, and less safety.</p>
+
+<p>For me, static typing means exploiting type information to make guarantees at compile time. Without traditional generics, we must resort to doing some of what (IMHO) is the type system’s job.</p>
+
+<p>So one of the motivations of <a href="https://github.com/clipperhouse/gen">gen</a> is to deal with that return value on the right-hand side of the above code sample — to bring it into the realm of known types that the compiler (and the user) can reliably exploit.</p>
+
+  <hr>
+  <small style="color:#999">
+      The source code for this page is <a href="https://github.com/clipperhouse/netlify/blob/master/content/trouble-with-interfaces-in-go.md">here</a>.
+  </small>
+</div>
+<footer class="post-footer">
+  
+  
+</footer>
+</article>
+
+</main>
+
+</body>
+</html>
+

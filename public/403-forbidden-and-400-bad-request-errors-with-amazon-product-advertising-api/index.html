@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-8534189-2"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-8534189-2');
+  </script>
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="renderer" content="webkit">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <title>403 Forbidden (and 400 Bad Request) errors with Amazon Product Advertising API · Matt Sherman</title>
+  <meta name="description" content="I recently experienced an issue using the Amazon Product Advertising API (formerly the Amazon Associates Web Service).">
+  <meta name="author" content="Matt Sherman">
+  <link href="/css/style.css?3" rel="stylesheet">
+  
+  <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/img/favicon-16x16.png">
+  <link rel="apple-touch-icon" href="/img/apple-touch-icon.png">
+
+  <meta name="generator" content="Hugo 0.40.3">
+
+  <link rel="alternate" type="application/atom+xml" href="/index.xml" title="clipperhouse.com">
+
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:creator" content="@clipperhouse" />
+<meta name="twitter:site" content="@clipperhouse" />
+<meta name="twitter:title" content="403 Forbidden (and 400 Bad Request) errors with Amazon Product Advertising API · Matt Sherman">
+
+<meta name="twitter:description" content="I recently experienced an issue using the Amazon Product Advertising API (formerly the Amazon Associates Web Service).">
+<meta name="twitter:image" content="https://clipperhouse.com/img/apple-touch-icon.png" />
+
+</head>
+<body class="single ">
+  <header class="header">
+    
+    <p class="title"><a href="/">clipperhouse.com</a></p>
+    
+    <button class="menu-toggle" type="button"></button>
+    <nav class="menu">
+      <ul>
+        
+        
+        <li class="">
+          <a href="/about/">about</a>
+        </li>
+        
+      </ul>
+    </nav>
+  </header>
+
+  <script type="text/javascript">
+    function toggleMenu() {
+        var menu = document.querySelector('nav.menu');
+        menu.style.display = menu.style.display == "none" ? "block" : "none";
+    }
+    document.querySelector('button.menu-toggle').onclick = toggleMenu;
+  </script>
+  <main class="main">
+
+<article class="post post-view">
+  <header class="post-header">
+  <h1 class="post-title"><a href="https://clipperhouse.com/403-forbidden-and-400-bad-request-errors-with-amazon-product-advertising-api/">403 Forbidden (and 400 Bad Request) errors with Amazon Product Advertising API</a></h1>
+  <p class="post-meta">Published by Matt Sherman · August 1, 2009</p>
+</header>
+<div class="post-content">
+  <p>I recently experienced an issue using the Amazon Product Advertising API (formerly the Amazon Associates Web Service). I was getting a “403 Forbidden” error for what seemed like a normal request.</p>
+
+<p>I am using the sample C# code provided <a href="http://developer.amazonwebservices.com/connect/entry.jspa?externalID=2480&amp;amp;categoryID=14">here</a>, along with the Amazon.ECS library (which apparently is no longer supported by Amazon).</p>
+
+<p>I was doing an ItemSearchRequest, with a search term of “black swan”.</p>
+
+<p>I tracked the error down to the encoding of the search terms. They were being passed with the URL encoding, so the querystring became “black+swan”. This is apparently no longer supported — you must use percent-style encoding. By using “black%20swan” instead, it worked.</p>
+
+<p>This is caused by a bug in the sample code at the link above. Line 142 of SignedRequestHelper.cs reads:
+<code>str.Replace(&amp;#34;&amp;#39;&amp;#34;, &amp;#34;%27&amp;#34;).Replace(&amp;#34;(&amp;#34;, &amp;#34;%28&amp;#34;).Replace(&amp;#34;)&amp;#34;, &amp;#34;%29&amp;#34;)  
+   .Replace(&amp;#34;*&amp;#34;, &amp;#34;%2A&amp;#34;).Replace(&amp;#34;!&amp;#34;, &amp;#34;%21&amp;#34;).Replace(&amp;#34;%7e&amp;#34;, &amp;#34;~&amp;#34;).Replace(&amp;#34;+&amp;#34;, &amp;#34;%20&amp;#34;);</code></p>
+
+<p>It needs to read:
+<code>str = str.Replace(&amp;#34;&amp;#39;&amp;#34;, &amp;#34;%27&amp;#34;).Replace(&amp;#34;(&amp;#34;, &amp;#34;%28&amp;#34;).Replace(&amp;#34;)&amp;#34;, &amp;#34;%29&amp;#34;)  
+         .Replace(&amp;#34;*&amp;#34;, &amp;#34;%2A&amp;#34;).Replace(&amp;#34;!&amp;#34;, &amp;#34;%21&amp;#34;).Replace(&amp;#34;%7e&amp;#34;, &amp;#34;~&amp;#34;).Replace(&amp;#34;+&amp;#34;, &amp;#34;%20&amp;#34;);</code></p>
+
+<p>Someone forgot that strings are <a href="http://codebetter.com/blogs/patricksmacchia/archive/2008/01/13/immutable-types-understand-them-and-use-them.aspx">immutable</a>!</p>
+
+<p>By the way, I was making changes because Amazon has a <a href="http://developer.amazonwebservices.com/connect/ann.jspa?annID=444">new security requirement</a> for this API. If you would like some help/code in adapting to the updated API, <a href="/blog/Contact.aspx">drop me a note</a>.</p>
+
+<p>—</p>
+
+<p>While I’m in the neighborhood, I also had to deal with a “400 Bad Request” error.</p>
+
+<p>Part of the new API authentication scheme is a timestamp. The clock on my server had fallen quite a ways behind — it hadn’t been synced in a while. This resulted in an inaccurate timestamp on the request, and Amazon rejected it.</p>
+
+<p>After correcting the server’s clock, it worked fine.</p>
+
+  <hr>
+  <small style="color:#999">
+      The source code for this page is <a href="https://github.com/clipperhouse/netlify/blob/master/content/403-forbidden-and-400-bad-request-errors-with-amazon-product-advertising-api.md">here</a>.
+  </small>
+</div>
+<footer class="post-footer">
+  
+  
+</footer>
+</article>
+
+</main>
+
+</body>
+</html>
+

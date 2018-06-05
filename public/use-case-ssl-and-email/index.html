@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-8534189-2"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-8534189-2');
+  </script>
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="renderer" content="webkit">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <title>Use case: SSL and email · Matt Sherman</title>
+  <meta name="description" content="Interesting article in the NYT about using SSL for email. It’s an option for Gmail which I turned on some time ago.">
+  <meta name="author" content="Matt Sherman">
+  <link href="/css/style.css?3" rel="stylesheet">
+  
+  <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/img/favicon-16x16.png">
+  <link rel="apple-touch-icon" href="/img/apple-touch-icon.png">
+
+  <meta name="generator" content="Hugo 0.40.3">
+
+  <link rel="alternate" type="application/atom+xml" href="/index.xml" title="clipperhouse.com">
+
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:creator" content="@clipperhouse" />
+<meta name="twitter:site" content="@clipperhouse" />
+<meta name="twitter:title" content="Use case: SSL and email · Matt Sherman">
+
+<meta name="twitter:description" content="Interesting article in the NYT about using SSL for email. It’s an option for Gmail which I turned on some time ago.">
+<meta name="twitter:image" content="https://clipperhouse.com/img/apple-touch-icon.png" />
+
+</head>
+<body class="single ">
+  <header class="header">
+    
+    <p class="title"><a href="/">clipperhouse.com</a></p>
+    
+    <button class="menu-toggle" type="button"></button>
+    <nav class="menu">
+      <ul>
+        
+        
+        <li class="">
+          <a href="/about/">about</a>
+        </li>
+        
+      </ul>
+    </nav>
+  </header>
+
+  <script type="text/javascript">
+    function toggleMenu() {
+        var menu = document.querySelector('nav.menu');
+        menu.style.display = menu.style.display == "none" ? "block" : "none";
+    }
+    document.querySelector('button.menu-toggle').onclick = toggleMenu;
+  </script>
+  <main class="main">
+
+<article class="post post-view">
+  <header class="post-header">
+  <h1 class="post-title"><a href="https://clipperhouse.com/use-case-ssl-and-email/">Use case: SSL and email</a></h1>
+  <p class="post-meta">Published by Matt Sherman · June 17, 2009</p>
+</header>
+<div class="post-content">
+  <p>Interesting article in the NYT about <a href="http://bits.blogs.nytimes.com/2009/06/16/gmail-to-get-more-protection-from-snoops/">using SSL for email</a>. It’s an option for Gmail which I turned on some time ago.</p>
+
+<p>Eric Schmidt mentions that the (potential) downside of SSL is performance — your computer and the email service need to encrypt and decrypt data for every operation. That’s work. But does it matter to humans?</p>
+
+<p>Let’s do the use case: how do we use email? Of all the applications we use on the internet, I would argue that email is the <strong>least real-time of all of them</strong>.</p>
+
+<p>Email is pretty much the only electronic medium that a user does not actively wait for. When you click to a web page, you are waiting for something to happen. Same for voice and video and instant messaging. Small performance degradations can be felt very intuitively at human scale.</p>
+
+<p>Not so with email. You won’t know if it takes an extra 5 or 30 seconds for a message to come in. This is because user has <strong>no expectation of a message until after it has arrived</strong>. So it always feels “fast”.</p>
+
+<p>(This is why Blackberry was very successful even when it went over a dog-slow paging network.)</p>
+
+<p>It’s almost like ignorance is bliss: if you knew that a message has been sent then you might feel like it’s taking a while. But that only ever happens if you are simultaneously communicating with a person over a more real-time medium.</p>
+
+<p>Therefore, enabling SSL for email seems an obvious choice: improved security without the user perceiving any difference whatsoever.</p>
+
+  <hr>
+  <small style="color:#999">
+      The source code for this page is <a href="https://github.com/clipperhouse/netlify/blob/master/content/use-case-ssl-and-email.md">here</a>.
+  </small>
+</div>
+<footer class="post-footer">
+  
+  
+</footer>
+</article>
+
+</main>
+
+</body>
+</html>
+

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-8534189-2"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-8534189-2');
+  </script>
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="renderer" content="webkit">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <title>A couple of easy wins with SQL indexes · Matt Sherman</title>
+  <meta name="description" content="I was lucky enough to watch a great talk by SQL expert Brent Ozar courtesy of Fog Creek.">
+  <meta name="author" content="Matt Sherman">
+  <link href="/css/style.css?3" rel="stylesheet">
+  
+  <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/img/favicon-16x16.png">
+  <link rel="apple-touch-icon" href="/img/apple-touch-icon.png">
+
+  <meta name="generator" content="Hugo 0.40.3">
+
+  <link rel="alternate" type="application/atom+xml" href="/index.xml" title="clipperhouse.com">
+
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:creator" content="@clipperhouse" />
+<meta name="twitter:site" content="@clipperhouse" />
+<meta name="twitter:title" content="A couple of easy wins with SQL indexes · Matt Sherman">
+
+<meta name="twitter:description" content="I was lucky enough to watch a great talk by SQL expert Brent Ozar courtesy of Fog Creek.">
+<meta name="twitter:image" content="https://clipperhouse.com/img/apple-touch-icon.png" />
+
+</head>
+<body class="single ">
+  <header class="header">
+    
+    <p class="title"><a href="/">clipperhouse.com</a></p>
+    
+    <button class="menu-toggle" type="button"></button>
+    <nav class="menu">
+      <ul>
+        
+        
+        <li class="">
+          <a href="/about/">about</a>
+        </li>
+        
+      </ul>
+    </nav>
+  </header>
+
+  <script type="text/javascript">
+    function toggleMenu() {
+        var menu = document.querySelector('nav.menu');
+        menu.style.display = menu.style.display == "none" ? "block" : "none";
+    }
+    document.querySelector('button.menu-toggle').onclick = toggleMenu;
+  </script>
+  <main class="main">
+
+<article class="post post-view">
+  <header class="post-header">
+  <h1 class="post-title"><a href="https://clipperhouse.com/couple-of-easy-wins-with-sql-indexes/">A couple of easy wins with SQL indexes</a></h1>
+  <p class="post-meta">Published by Matt Sherman · October 17, 2010</p>
+</header>
+<div class="post-content">
+  <p>I was lucky enough to watch a great talk by SQL expert <a href="http://www.brentozar.com/">Brent Ozar</a> courtesy of <a href="http://www.fogcreek.com/">Fog Creek</a>. A couple of actionable takeaways that stuck with me are about creating and choosing indexes.</p>
+
+<p>Indexes in SQL for me are kind of a black art. You look at Query Execution plans, try to intuit where the work is being done, and then make a guess as to what index might help. Then you see if things are “faster”. I never <em>really</em> know which ones are helping in an empirical way.</p>
+
+<p>Turns out you can query SQL Server itself to find out. Check out this <a href="http://www.sqlserverpedia.com/wiki/Find_Missing_Indexes">Find Missing Indexes</a> query by Brent. And if you are wondering whether your existing indexes are doing any good, try this <a href="http://www.sqlserverpedia.com/wiki/Find_Indexes_Not_In_Use">Find Indexes Not In Use</a> query.</p>
+
+<p>(As a practical matter, Brent recommends only changing a few indexes at a time. Keep the experiment controlled.)</p>
+
+<p>These scripts look like great 80–20 solutions: a small amount of work to find the the most glaring issues. It’s the sort of thing a guru like Brent would charge big $$ for. ;)</p>
+
+  <hr>
+  <small style="color:#999">
+      The source code for this page is <a href="https://github.com/clipperhouse/netlify/blob/master/content/couple-of-easy-wins-with-sql-indexes.md">here</a>.
+  </small>
+</div>
+<footer class="post-footer">
+  
+  
+</footer>
+</article>
+
+</main>
+
+</body>
+</html>
+

@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-8534189-2"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-8534189-2');
+  </script>
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="renderer" content="webkit">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <title>Avoiding “magic strings” in jQuery, C# and ASP.net MVC · Matt Sherman</title>
+  <meta name="description" content="The longer I program, the less tolerance I have for “magic strings”. You might be familiar with them — they are strings that have programmatic meaning but are trapped between quotes in another language.">
+  <meta name="author" content="Matt Sherman">
+  <link href="/css/style.css?3" rel="stylesheet">
+  
+  <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/img/favicon-16x16.png">
+  <link rel="apple-touch-icon" href="/img/apple-touch-icon.png">
+
+  <meta name="generator" content="Hugo 0.40.3">
+
+  <link rel="alternate" type="application/atom+xml" href="/index.xml" title="clipperhouse.com">
+
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:creator" content="@clipperhouse" />
+<meta name="twitter:site" content="@clipperhouse" />
+<meta name="twitter:title" content="Avoiding “magic strings” in jQuery, C# and ASP.net MVC · Matt Sherman">
+
+<meta name="twitter:description" content="The longer I program, the less tolerance I have for “magic strings”. You might be familiar with them — they are strings that have programmatic meaning but are trapped between quotes in another language.">
+<meta name="twitter:image" content="https://clipperhouse.com/img/apple-touch-icon.png" />
+
+</head>
+<body class="single ">
+  <header class="header">
+    
+    <p class="title"><a href="/">clipperhouse.com</a></p>
+    
+    <button class="menu-toggle" type="button"></button>
+    <nav class="menu">
+      <ul>
+        
+        
+        <li class="">
+          <a href="/about/">about</a>
+        </li>
+        
+      </ul>
+    </nav>
+  </header>
+
+  <script type="text/javascript">
+    function toggleMenu() {
+        var menu = document.querySelector('nav.menu');
+        menu.style.display = menu.style.display == "none" ? "block" : "none";
+    }
+    document.querySelector('button.menu-toggle').onclick = toggleMenu;
+  </script>
+  <main class="main">
+
+<article class="post post-view">
+  <header class="post-header">
+  <h1 class="post-title"><a href="https://clipperhouse.com/avoiding-magic-strings-in-jquery-c-sharp-and-asp.net-mvc/">Avoiding “magic strings” in jQuery, C# and ASP.net MVC</a></h1>
+  <p class="post-meta">Published by Matt Sherman · September 7, 2010</p>
+</header>
+<div class="post-content">
+  
+
+<p>The longer I program, the less tolerance I have for “magic strings”. You might be familiar with them — they are strings that have programmatic meaning but are trapped between quotes in another language.</p>
+
+<p>A classic example is SQL held in a string variable within your C#/PHP/whatever code. It might just as easily be HTML in your Javascript.</p>
+
+<p>The problem is that this code is meaningless outside of its domain. Your SQL server knows what SELECT means, but the PHP interpreter does not. If you misspell it, or generate it dynamically, and it fails, you are not going to know why. Cross your fingers!</p>
+
+<p>The problems are clear:</p>
+
+<ul>
+<li>Magic strings are error-prone</li>
+<li>Your tools (compilers, interpreters, debuggers and IDEs) can’t tell you if (or why) they are wrong</li>
+<li>They are tedious, hard to read, and hard to maintain — i.e., a waste of a smart programmer’s time</li>
+</ul>
+
+<p>I’ve learned a few ways of avoiding these problems. Most of the techniques come down to being disciplined about <a href="http://en.wikipedia.org/wiki/Separation_of_concerns">separation of concerns</a>.</p>
+
+<h4 id="javascript-jquery-and-html">Javascript (jQuery) and HTML</h4>
+
+<p>How many times have you seen something like…
+$(“body”).append(‘&lt;div class=”highlight” id=”’ + newid + ‘”&gt;” + message + ‘&lt;/div&gt;’);</p>
+
+<p>That new div might or might not appear in the browser. See the syntax error? You might have to squint. And imagine, god forbid, that we need to nest an element inside that div.</p>
+
+<p>We’re not adding a DOM element to the page, we are adding a magic string that might maybe be a tag.</p>
+
+<p>How do we avoid this? One option is to have the DOM element already on the page (perhaps with display:none), and then just manipulate it with jQuery — that would be ideal separation of concerns.</p>
+
+<p>But if you must create the new element, jQuery allows us to do this with a minimum of stringy-ness:
+var newdiv = $(“&lt;div /&gt;”).addClass(“highlight”).attr(“id”, newid).html(message);<br />
+$(“body”).append(newdiv);</p>
+
+<p>That first bit creates a jQuery <em>object</em> that can accept the methods that follow. We avoid worrying about matching up the closing tags &amp; attribute quotes, counting apostrophes — and squinting.</p>
+
+<h4 id="c-html-and-urls">C#, HTML and URLs</h4>
+
+<p>There are places where you might want to dynamically create markup in your executable code. This leads us down the same road as above.</p>
+
+<p>(Again, you would hope your HTML lives elsewhere, but-if-you-must…)</p>
+
+<p>C# has classes which can help here. The first is <a href="http://msdn.microsoft.com/en-us/library/system.web.mvc.tagbuilder_members.aspx">TagBuilder</a>, and it has a style similar to the jQuery thing above:
+var img = new TagBuilder(“img”);<br />
+img.MergeAttribute(“src”, my_image_url, true);<br />
+img.MergeAttribute(“alt”, my_image_desc);<br />
+img.MergeAttributes(new RouteValueDictionary(htmlAttributes));</p>
+
+<p>var a = new TagBuilder(“a”);<br />
+a.MergeAttribute(“href”, my_url, true);<br />
+a.InnerHtml = img.ToString(TagRenderMode.SelfClosing);</p>
+
+<p>An img inside an anchor is clean and readable. There are a number of convenience bits in there (note the MergeAttributes and SelfClosing) that will save you tedium.</p>
+
+<p>And you know what? URL’s are magic strings too. How many times have you concatenated and replaced and parsed them? Ick. Check out <a href="http://msdn.microsoft.com/en-us/library/system.uribuilder_members.aspx">UriBuilder</a>. (URI is the proper term, btw.)</p>
+
+<p>Want to switch from http to https?
+var url = new UriBuilder(Request.Url);<br />
+url.Scheme = Uri.UriSchemeHttps;</p>
+
+<p>Then just call ToString() when you need the full URL as a string.</p>
+
+<p>Want to find out the fully qualified host name, without parsing? That’s simply the url.Host property. The querystring is .Query. You get it. Not a substring() or indexOf() in sight.</p>
+
+<h4 id="asp-net-mvc">ASP.net MVC</h4>
+
+<p>…is wonderful, IMHO. But there can be a lot o’ magic strings. This allows us to work fluidly, as if we are in a dynamic language. But, speaking for myself, I want to know when I’ve fat-fingered something before runtime.</p>
+
+<p>There is a great third-party tool called <a href="http://mvccontrib.codeplex.com/wikipage?title=T4MVC">T4MVC</a> by the brilliant <a href="http://blogs.msdn.com/b/davidebb/">David Ebbo</a>. Long story short, it gives you strongly-typed helpers such as:
+&lt;%= Html.ActionLink(“view my profile”, MVC.Profile.Detail(some_user_id)) %&gt;</p>
+
+<p>…and…
+return Redirect(MVC.Account.Logon());</p>
+
+<p>It helps with versioning your static CSS and JS files, too. (I bet you are using magic strings for that.)</p>
+
+<p>And if you really want to go nuts, check out <a href="http://www.weirdlover.com/tag/chirpy/">Chirpy</a>, which automates T4MVC and a bunch more.</p>
+
+  <hr>
+  <small style="color:#999">
+      The source code for this page is <a href="https://github.com/clipperhouse/netlify/blob/master/content/avoiding-magic-strings-in-jquery-c-sharp-and-asp.net-mvc.md">here</a>.
+  </small>
+</div>
+<footer class="post-footer">
+  
+  
+</footer>
+</article>
+
+</main>
+
+</body>
+</html>
+

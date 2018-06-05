@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-8534189-2"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-8534189-2');
+  </script>
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="renderer" content="webkit">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <title>Hammering the DOM · Matt Sherman</title>
+  <meta name="description" content="As I work on my ASP.net jQuery controls, I got to thinking about what “animations” really are.">
+  <meta name="author" content="Matt Sherman">
+  <link href="/css/style.css?3" rel="stylesheet">
+  
+  <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/img/favicon-16x16.png">
+  <link rel="apple-touch-icon" href="/img/apple-touch-icon.png">
+
+  <meta name="generator" content="Hugo 0.40.3">
+
+  <link rel="alternate" type="application/atom+xml" href="/index.xml" title="clipperhouse.com">
+
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:creator" content="@clipperhouse" />
+<meta name="twitter:site" content="@clipperhouse" />
+<meta name="twitter:title" content="Hammering the DOM · Matt Sherman">
+
+<meta name="twitter:description" content="As I work on my ASP.net jQuery controls, I got to thinking about what “animations” really are.">
+<meta name="twitter:image" content="https://clipperhouse.com/img/apple-touch-icon.png" />
+
+</head>
+<body class="single ">
+  <header class="header">
+    
+    <p class="title"><a href="/">clipperhouse.com</a></p>
+    
+    <button class="menu-toggle" type="button"></button>
+    <nav class="menu">
+      <ul>
+        
+        
+        <li class="">
+          <a href="/about/">about</a>
+        </li>
+        
+      </ul>
+    </nav>
+  </header>
+
+  <script type="text/javascript">
+    function toggleMenu() {
+        var menu = document.querySelector('nav.menu');
+        menu.style.display = menu.style.display == "none" ? "block" : "none";
+    }
+    document.querySelector('button.menu-toggle').onclick = toggleMenu;
+  </script>
+  <main class="main">
+
+<article class="post post-view">
+  <header class="post-header">
+  <h1 class="post-title"><a href="https://clipperhouse.com/hammering-the-dom/">Hammering the DOM</a></h1>
+  <p class="post-meta">Published by Matt Sherman · April 28, 2009</p>
+</header>
+<div class="post-content">
+  <p>As I work on my ASP.net <a href="/jQuery/">jQuery controls</a>, I got to thinking about what “animations” really are. The core animation framework in jQuery (as far as I can tell) is to simply iterate in small steps between two CSS states. So if you are going from 0% opacity to 100% opacity, jQuery applies (say) 100 CSS changes in 1% increments.</p>
+
+<p>This is essentially hammering the DOM. The browser is forced to make 100 updates to the state of an element, and re-render it, over a short period of time. This must incur a lot of overhead. Indeed, I see very different degrees of “smoothness” on different browsers.</p>
+
+<p>There must be a better way. Wouldn’t it be better to tell the browser: “transition smoothly between these two states”, and have it happen natively?</p>
+
+<p>Considering the horsepower on most computers, a simply fade should be trivial in terms of computing effort. Even better, imagine if the browser could offload it to a video card?</p>
+
+<p>Thinking further: wouldn’t it be great if jQuery could take advantage of such a thing?</p>
+
+<p>A little research led me to <a href="http://weston.ruter.net/projects/jquery-css-transitions/">this</a>. Indeed, Webkit does have proprietary native support for such animations. Weston Ruter created a shim to use the native transition where available.</p>
+
+<p>I’d like to see jQuery adopt this approach. Preserve the API — eg, $(“p”).fadeOut() — but change the underlying implementation based on browser capabilities. More capable browsers get smooter animations, less capable browsers do things the old way (circa 2009!).</p>
+
+<p>This would move jQuery toward being more of an API than an animation engine. I think that’s a fine thing.</p>
+
+<p>— -</p>
+
+<p>Update: Indeed it has already been <a href="http://ejohn.org/blog/css-animations-and-javascript/">discussed</a> over at jQuery. Sounds like John Resig sees a couple of dealbreakers in the current technologies.</p>
+
+  <hr>
+  <small style="color:#999">
+      The source code for this page is <a href="https://github.com/clipperhouse/netlify/blob/master/content/hammering-the-dom.md">here</a>.
+  </small>
+</div>
+<footer class="post-footer">
+  
+  
+</footer>
+</article>
+
+</main>
+
+</body>
+</html>
+

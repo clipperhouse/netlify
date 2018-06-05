@@ -191,8 +191,11 @@ pre code {
   letter-spacing: .5px;
   display: none;
 }
-.blog .post-header .post-meta {
+.post-header .post-meta {
   display: block;
+}
+.app .post-header .post-meta {
+  display: none;
 }
 /* First entry */
 .first-entry {
@@ -290,11 +293,17 @@ pre code {
 .post-content dl {
   margin-bottom: 20px;
 }
-.blog .post-content p,
-.blog .post-content ul,
-.blog .post-content ol,
-.blog .post-content dl {
-  font-family: Georgia, Cambria, 'Times New Roman', Times, serif
+.post-content p,
+.post-content ul,
+.post-content ol,
+.post-content dl {
+  font-family: Georgia, Cambria, 'Times New Roman', Times, serif;
+}
+.app .post-content p,
+.app .post-content ul,
+.app .post-content ol,
+.app .post-content dl {
+  font-family: inherit;
 }
 .post-content ul,
 .post-content ol {

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-8534189-2"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-8534189-2');
+  </script>
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="renderer" content="webkit">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <title>Betting on a future without IE6 · Matt Sherman</title>
+  <meta name="description" content="My startup is developing a new web site, and every web developer must decide the extent to which they will support old technology — especially Internet Explorer 6.">
+  <meta name="author" content="Matt Sherman">
+  <link href="/css/style.css?3" rel="stylesheet">
+  
+  <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/img/favicon-16x16.png">
+  <link rel="apple-touch-icon" href="/img/apple-touch-icon.png">
+
+  <meta name="generator" content="Hugo 0.40.3">
+
+  <link rel="alternate" type="application/atom+xml" href="/index.xml" title="clipperhouse.com">
+
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:creator" content="@clipperhouse" />
+<meta name="twitter:site" content="@clipperhouse" />
+<meta name="twitter:title" content="Betting on a future without IE6 · Matt Sherman">
+
+<meta name="twitter:description" content="My startup is developing a new web site, and every web developer must decide the extent to which they will support old technology — especially Internet Explorer 6.">
+<meta name="twitter:image" content="https://clipperhouse.com/img/apple-touch-icon.png" />
+
+</head>
+<body class="single ">
+  <header class="header">
+    
+    <p class="title"><a href="/">clipperhouse.com</a></p>
+    
+    <button class="menu-toggle" type="button"></button>
+    <nav class="menu">
+      <ul>
+        
+        
+        <li class="">
+          <a href="/about/">about</a>
+        </li>
+        
+      </ul>
+    </nav>
+  </header>
+
+  <script type="text/javascript">
+    function toggleMenu() {
+        var menu = document.querySelector('nav.menu');
+        menu.style.display = menu.style.display == "none" ? "block" : "none";
+    }
+    document.querySelector('button.menu-toggle').onclick = toggleMenu;
+  </script>
+  <main class="main">
+
+<article class="post post-view">
+  <header class="post-header">
+  <h1 class="post-title"><a href="https://clipperhouse.com/betting-on-a-future-without-ie6/">Betting on a future without IE6</a></h1>
+  <p class="post-meta">Published by Matt Sherman · November 30, 2009</p>
+</header>
+<div class="post-content">
+  <p>My startup is developing a new web site, and every web developer must decide the extent to which they will support old technology — especially Internet Explorer 6.</p>
+
+<p>From a technology perspective, officially supporting that browser could mean forgoing sexy features, or spending an inordinate amount of time working around the browser’s limitations and inconsistencies. You want your devs to spend their time making your site more compelling.</p>
+
+<p>On the other hand, there are a lot of customers on IE6 whom you don’t want to alienate. It’s easy to say, hey, that browser sucks and we’re <a href="/blog/post/IE6-users-and-status-conscious-creative-directors.aspx">way cooler</a> than that. We don’t want those customers anyway!</p>
+
+<p>But that sort of reasoning is childish and passive-aggressive, and the <a href="http://blog.digg.com/?p=878">research shows</a> that those using old technology don’t do so by choice.</p>
+
+<p>So: how much of your resources do you dedicate to this problem? Here’s how I am thinking through it.</p>
+
+<p>IE6 is <a href="http://gs.statcounter.com/#browser_version-ww-monthly-200812-200911">losing around 1 percentage point</a> of market share per month, over the last year. It’s around 15% right now. So, it may break below 10% by the middle of next year — or sooner, if it turns out that new Windows 7 computers are replacing old XP machines (more below).</p>
+
+<p>You’ll notice that the sum of IE7 and IE8’s market share has remained almost perfectly steady for a year. This implies that there is a group of people who are willing and able to use a more modern Microsoft browser — but that group is not growing.</p>
+
+<p>Thus, we can infer that <strong>IE6 users are not the upgrading to newer MS browser versions</strong> at all. We see that IE6 expats are <a href="http://gs.statcounter.com/#browser-ww-monthly-200812-200911">going to other browsers</a>, mostly Firefox and Chrome.</p>
+
+<p>Windows XP is losing market share at a rate that <a href="http://gs.statcounter.com/#os-ww-monthly-200812-200911">tracks very closely</a> to IE6. However, in this case, it <em>would</em> appear that those customers are sticking with Microsoft and moving to Windows 7 (note the parallel uptick and downtick in November), though some surveys <a href="http://technologizer.com/2009/11/11/survey-xp-users-arent-upgrading-to-windows-7/">say otherwise</a>.</p>
+
+<p>—</p>
+
+<p>At my (bootstrap) startup, the two most critical things are my time and features that don’t exist yet. Since we are at an early stage, the math goes like this: I am willing to lose one customer (the IE6 person) if I gain five others via new functionality.</p>
+
+<p>So I <strong>will not be testing my site on IE6</strong> until I hear a complaint from a customer.</p>
+
+<p>Testing for IE7 and IE8 is <a href="http://blogs.msdn.com/ie/archive/2008/08/27/introducing-compatibility-view.aspx">easy</a>, and I spend plenty of time in Chrome, Firefox and Safari. I am relying on <a href="http://jquery.com/">Javascript</a> and <a href="http://developer.yahoo.com/yui/3/cssreset/">CSS</a> libraries, which cushion many browser differences.</p>
+
+<p>I am also architecting my site to degrade gracefully. If a user does not have Javascript, for example, they will fall back to an HTML 4 experience — which IE can handle.</p>
+
+<p>I’ve found a very nice methodology — create all functionality <strong>without</strong> Javascript (relying on standard forms), and then apply JS as a layer of UI. If JS fails, all you miss are the pretty bits (like modals, animations and drop shadows).</p>
+
+<p>So, due to fortunate timing and decent tools, I am making a calculated bet that there is more upside in focusing on features than legacy compatibility. By the time we are successful, the business case for IE6 will have passed.</p>
+
+  <hr>
+  <small style="color:#999">
+      The source code for this page is <a href="https://github.com/clipperhouse/netlify/blob/master/content/betting-on-a-future-without-ie6.md">here</a>.
+  </small>
+</div>
+<footer class="post-footer">
+  
+  
+</footer>
+</article>
+
+</main>
+
+</body>
+</html>
+

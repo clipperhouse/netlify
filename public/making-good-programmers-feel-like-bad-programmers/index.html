@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-8534189-2"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-8534189-2');
+  </script>
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="renderer" content="webkit">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <title>Making good programmers feel like bad programmers · Matt Sherman</title>
+  <meta name="description" content="A web developer friend of mine has been doing a lot of backend-integration-type work over the last year, and has therefore has not been developing web sites.">
+  <meta name="author" content="Matt Sherman">
+  <link href="/css/style.css?3" rel="stylesheet">
+  
+  <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/img/favicon-16x16.png">
+  <link rel="apple-touch-icon" href="/img/apple-touch-icon.png">
+
+  <meta name="generator" content="Hugo 0.40.3">
+
+  <link rel="alternate" type="application/atom+xml" href="/index.xml" title="clipperhouse.com">
+
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:creator" content="@clipperhouse" />
+<meta name="twitter:site" content="@clipperhouse" />
+<meta name="twitter:title" content="Making good programmers feel like bad programmers · Matt Sherman">
+
+<meta name="twitter:description" content="A web developer friend of mine has been doing a lot of backend-integration-type work over the last year, and has therefore has not been developing web sites.">
+<meta name="twitter:image" content="https://clipperhouse.com/img/apple-touch-icon.png" />
+
+</head>
+<body class="single ">
+  <header class="header">
+    
+    <p class="title"><a href="/">clipperhouse.com</a></p>
+    
+    <button class="menu-toggle" type="button"></button>
+    <nav class="menu">
+      <ul>
+        
+        
+        <li class="">
+          <a href="/about/">about</a>
+        </li>
+        
+      </ul>
+    </nav>
+  </header>
+
+  <script type="text/javascript">
+    function toggleMenu() {
+        var menu = document.querySelector('nav.menu');
+        menu.style.display = menu.style.display == "none" ? "block" : "none";
+    }
+    document.querySelector('button.menu-toggle').onclick = toggleMenu;
+  </script>
+  <main class="main">
+
+<article class="post post-view">
+  <header class="post-header">
+  <h1 class="post-title"><a href="https://clipperhouse.com/making-good-programmers-feel-like-bad-programmers/">Making good programmers feel like bad programmers</a></h1>
+  <p class="post-meta">Published by Matt Sherman · July 24, 2009</p>
+</header>
+<div class="post-content">
+  <p>A web developer friend of mine has been doing a lot of backend-integration-type work over the last year, and has therefore has not been developing web sites. He made a point of wading back in to the web this week, so as not to get too “rusty”, in his words.</p>
+
+<p><img src="http://ecx.images-amazon.com/images/I/5115SW8FP3L._SL500_AA280_.jpg" alt="image" /></p>
+
+<p>He is working in ASP.net <a href="http://www.west-wind.com/WebLog/posts/198731.aspx">Web Forms</a> — and the wading did not go well. He is struggling to do what he considers basic stuff like toggling between an edit form and a detail view.</p>
+
+<p>Now, he’s been doing web work since the mid-90’s, when the tools were extremely raw. He knows web apps. And right now he feels like an idiot.</p>
+
+<p>Is he as rusty as he says? No. The problem is the abstraction layer that is Web Forms. It was designed for people who don’t know how the web works; it abstracts away all the request-response stuff in an attempt to achieve a desktop-app metaphor.</p>
+
+<p>Sadly, for all its sophistication, it can feel like <strong>doing surgery while wearing boxing gloves</strong>.</p>
+
+<p>If you <em>do</em> know how the web works, you may find this abstraction hurts more than it helps. Knowing “when” a piece of code will execute under Web Forms, or what an element’s value will be at the time, is mysterious. It wants you to commit completely to its event-driven metaphor — in other words, to forget what you know about the actual web.</p>
+
+<p>If your project requires you to jump outside the metaphor, then you end up in a special circle of hell, one where some things happen as you expect them to, and others don’t. It is a classic <a href="http://www.joelonsoftware.com/articles/LeakyAbstractions.html">leaky abstraction</a>.</p>
+
+<p>I say this as someone who has spent a lot of time in the web forms <a href="http://msdn.microsoft.com/en-us/library/ms178472.aspx">page life-cycle</a>. It is quite an achievement in many ways; it opened the web to many traditional desktop developers. However, in 2009, it feels like a lot of <a href="/blog/post/Use-case-the-metric-system-or-all-that-useless-beauty.aspx">useless beauty</a>.</p>
+
+<p>The result of such high-level abstractions is that a good programmer (like my friend) feels like a bad programmer. I suspect I’ll find him going <a href="http://www.asp.net/mvc/">back to basics</a> soon.</p>
+
+  <hr>
+  <small style="color:#999">
+      The source code for this page is <a href="https://github.com/clipperhouse/netlify/blob/master/content/making-good-programmers-feel-like-bad-programmers.md">here</a>.
+  </small>
+</div>
+<footer class="post-footer">
+  
+  
+</footer>
+</article>
+
+</main>
+
+</body>
+</html>
+

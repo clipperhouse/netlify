@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-8534189-2"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-8534189-2');
+  </script>
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="renderer" content="webkit">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <title>Preserving the back button on Ajax pages · Matt Sherman</title>
+  <meta name="description" content="So, I’ve been going a little Ajax crazy lately. I am using a progressive enhancement approach — make everything work solidly without Javascript, then drizzle on some Ajaxy goodness as refinement.">
+  <meta name="author" content="Matt Sherman">
+  <link href="/css/style.css?3" rel="stylesheet">
+  
+  <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/img/favicon-16x16.png">
+  <link rel="apple-touch-icon" href="/img/apple-touch-icon.png">
+
+  <meta name="generator" content="Hugo 0.40.3">
+
+  <link rel="alternate" type="application/atom+xml" href="/index.xml" title="clipperhouse.com">
+
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:creator" content="@clipperhouse" />
+<meta name="twitter:site" content="@clipperhouse" />
+<meta name="twitter:title" content="Preserving the back button on Ajax pages · Matt Sherman">
+
+<meta name="twitter:description" content="So, I’ve been going a little Ajax crazy lately. I am using a progressive enhancement approach — make everything work solidly without Javascript, then drizzle on some Ajaxy goodness as refinement.">
+<meta name="twitter:image" content="https://clipperhouse.com/img/apple-touch-icon.png" />
+
+</head>
+<body class="single ">
+  <header class="header">
+    
+    <p class="title"><a href="/">clipperhouse.com</a></p>
+    
+    <button class="menu-toggle" type="button"></button>
+    <nav class="menu">
+      <ul>
+        
+        
+        <li class="">
+          <a href="/about/">about</a>
+        </li>
+        
+      </ul>
+    </nav>
+  </header>
+
+  <script type="text/javascript">
+    function toggleMenu() {
+        var menu = document.querySelector('nav.menu');
+        menu.style.display = menu.style.display == "none" ? "block" : "none";
+    }
+    document.querySelector('button.menu-toggle').onclick = toggleMenu;
+  </script>
+  <main class="main">
+
+<article class="post post-view">
+  <header class="post-header">
+  <h1 class="post-title"><a href="https://clipperhouse.com/preserving-the-back-button-on-ajax-pages/">Preserving the back button on Ajax pages</a></h1>
+  <p class="post-meta">Published by Matt Sherman · January 19, 2010</p>
+</header>
+<div class="post-content">
+  <p>So, I’ve been going a little Ajax crazy lately. I am using a <a href="http://www.alistapart.com/articles/understandingprogressiveenhancement/">progressive enhancement</a> approach — make everything work solidly without Javascript, then drizzle on some Ajaxy goodness as refinement.</p>
+
+<p>One problem is, on an Ajax-driven page, your user “loses” the use of the back button. It’s caused a mismatch between what the user and the browser consider to be a “new page”.</p>
+
+<p>You’ll note that in your Ajax page, when the user clicks to a new “page state”, the URL doesn’t change. Now the user and the browser have a different concept of “last page”. And so, if the user hits the back button, they will be taken to the last URL, not the last “page” as the user understands it. That last URL might have been 10 clicks ago.</p>
+
+<p>In trying to work around it, I found the problem to be surprisingly complex. But I’ve found a <a href="http://www.asual.com/jquery/address/">life-saver of jQuery plugin</a> that solves exactly this.</p>
+
+<p>It does two things: first, it changes the URL on every Ajax click. Second, the plugin “records” the page history in a hidden frame. So now your browser sees each page state as a new page — just like your user. The back button magically works.</p>
+
+<p>This also provides the advantage of deep-linking: each Ajax page state gets its own URL, so you can link directly to that state. Brilliant.</p>
+
+  <hr>
+  <small style="color:#999">
+      The source code for this page is <a href="https://github.com/clipperhouse/netlify/blob/master/content/preserving-the-back-button-on-ajax-pages.md">here</a>.
+  </small>
+</div>
+<footer class="post-footer">
+  
+  
+</footer>
+</article>
+
+</main>
+
+</body>
+</html>
+

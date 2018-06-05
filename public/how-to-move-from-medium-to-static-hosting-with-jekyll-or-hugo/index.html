@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-8534189-2"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-8534189-2');
+  </script>
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="renderer" content="webkit">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <title>How to move from Medium to static hosting with Jekyll or Hugo · Matt Sherman</title>
+  <meta name="description" content="I recently moved my blog from Medium to static generation with Hugo &amp; hosting with Netlify.">
+  <meta name="author" content="Matt Sherman">
+  <link href="/css/style.css?3" rel="stylesheet">
+  
+  <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/img/favicon-16x16.png">
+  <link rel="apple-touch-icon" href="/img/apple-touch-icon.png">
+
+  <meta name="generator" content="Hugo 0.40.3">
+
+  <link rel="alternate" type="application/atom+xml" href="/index.xml" title="clipperhouse.com">
+
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:creator" content="@clipperhouse" />
+<meta name="twitter:site" content="@clipperhouse" />
+<meta name="twitter:title" content="How to move from Medium to static hosting with Jekyll or Hugo · Matt Sherman">
+
+<meta name="twitter:description" content="I recently moved my blog from Medium to static generation with Hugo &amp; hosting with Netlify.">
+<meta name="twitter:image" content="https://clipperhouse.com/img/apple-touch-icon.png" />
+
+</head>
+<body class="single ">
+  <header class="header">
+    
+    <p class="title"><a href="/">clipperhouse.com</a></p>
+    
+    <button class="menu-toggle" type="button"></button>
+    <nav class="menu">
+      <ul>
+        
+        
+        <li class="">
+          <a href="/about/">about</a>
+        </li>
+        
+      </ul>
+    </nav>
+  </header>
+
+  <script type="text/javascript">
+    function toggleMenu() {
+        var menu = document.querySelector('nav.menu');
+        menu.style.display = menu.style.display == "none" ? "block" : "none";
+    }
+    document.querySelector('button.menu-toggle').onclick = toggleMenu;
+  </script>
+  <main class="main">
+
+<article class="post post-view">
+  <header class="post-header">
+  <h1 class="post-title"><a href="https://clipperhouse.com/how-to-move-from-medium-to-static-hosting-with-jekyll-or-hugo/">How to move from Medium to static hosting with Jekyll or Hugo</a></h1>
+  <p class="post-meta">Published by Matt Sherman · May 24, 2018</p>
+</header>
+<div class="post-content">
+  
+
+<p>I recently moved <a href="http://clipperhouse.netlify.com/">my blog</a> from Medium to static generation with Hugo &amp; hosting with Netlify. I prefer static hosting for performance reasons, and because Markdown is so nice.</p>
+
+<p>This approach is good for people who are comfortable with Git and other dev tools. It’s not great if you like UI’s that (say) Medium or Wordpress provides.</p>
+
+<h3 id="0-get-familiar-with-hugo-or-jekyll">0: Get familiar with Hugo or Jekyll</h3>
+
+<p>Out of scope of this article is how to use <a href="https://gohugo.io/getting-started/">Hugo</a>, <a href="https://jekyllrb.com/docs/quickstart/">Jekyll</a> or <a href="https://www.netlify.com">Netlify</a>. That’s what their docs are for! I suggest you get up and running with “Hello, world” using those platforms before continuing.</p>
+
+<blockquote>
+<p>I happen to prefer Hugo, it’s super fast and I like Go. I like Netlify because the static hosting is automagic (triggered via Git).</p>
+</blockquote>
+
+<h3 id="1-export-from-medium">1: Export from Medium</h3>
+
+<p>First, download your articles from <a href="https://medium.com/me/export">your Medium export page</a>, and expand the .zip file. (It takes a second, they email when it’s ready.)</p>
+
+<p>Once downloaded and expanded, you should see a list of HTML files.</p>
+
+<h3 id="2-convert-to-markdown">2: Convert to Markdown</h3>
+
+<p>Your Medium HTML pages need to be converted to Markdown. I <a href="https://gist.github.com/clipperhouse/010d4666892807afee16ba7711b41401">wrote a script</a> (in Go) that worked for me. Copy it into a local file on your computer.</p>
+
+<blockquote>
+<p>You’ll need to <a href="https://golang.org/doc/install">set up Go</a>. If that’s not for you, <a href="https://www.google.com/search?q=convert+medium+to+markdown">here are some other options</a>.</p>
+</blockquote>
+
+<p>In that script, you’ll need to change the <code>src</code> and <code>dest</code> variables. <code>src</code> is the folder with your Medium HTML files; <code>dest</code> is where you want the new Markdown files to end up. Then, <code>go run main.go</code>.</p>
+
+<p>You should see a folder full of <code>.md</code> files in the <code>dest</code> folder. Move those into the content folder of Hugo/Jekyll and you should be on your way. If not&hellip;</p>
+
+<h3 id="happy-to-help">Happy to help</h3>
+
+<p>I learned a bunch during this project and am happy to help. Ping me <a href="https://mobile.twitter.com/clipperhouse">@clipperhouse</a>.</p>
+
+  <hr>
+  <small style="color:#999">
+      The source code for this page is <a href="https://github.com/clipperhouse/netlify/blob/master/content/how-to-move-from-medium-to-static-hosting-with-jekyll-or-hugo.md">here</a>.
+  </small>
+</div>
+<footer class="post-footer">
+  
+  
+</footer>
+</article>
+
+</main>
+
+</body>
+</html>
+

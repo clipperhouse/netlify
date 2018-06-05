@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-8534189-2"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-8534189-2');
+  </script>
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="renderer" content="webkit">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <title>“Built-in” jQuery (and how IE can get some dev cred) · Matt Sherman</title>
+  <meta name="description" content="I’ve mentioned in the past that jQuery is an API as much as it is a set of functions.">
+  <meta name="author" content="Matt Sherman">
+  <link href="/css/style.css?3" rel="stylesheet">
+  
+  <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/img/favicon-16x16.png">
+  <link rel="apple-touch-icon" href="/img/apple-touch-icon.png">
+
+  <meta name="generator" content="Hugo 0.40.3">
+
+  <link rel="alternate" type="application/atom+xml" href="/index.xml" title="clipperhouse.com">
+
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:creator" content="@clipperhouse" />
+<meta name="twitter:site" content="@clipperhouse" />
+<meta name="twitter:title" content="“Built-in” jQuery (and how IE can get some dev cred) · Matt Sherman">
+
+<meta name="twitter:description" content="I’ve mentioned in the past that jQuery is an API as much as it is a set of functions.">
+<meta name="twitter:image" content="https://clipperhouse.com/img/apple-touch-icon.png" />
+
+</head>
+<body class="single ">
+  <header class="header">
+    
+    <p class="title"><a href="/">clipperhouse.com</a></p>
+    
+    <button class="menu-toggle" type="button"></button>
+    <nav class="menu">
+      <ul>
+        
+        
+        <li class="">
+          <a href="/about/">about</a>
+        </li>
+        
+      </ul>
+    </nav>
+  </header>
+
+  <script type="text/javascript">
+    function toggleMenu() {
+        var menu = document.querySelector('nav.menu');
+        menu.style.display = menu.style.display == "none" ? "block" : "none";
+    }
+    document.querySelector('button.menu-toggle').onclick = toggleMenu;
+  </script>
+  <main class="main">
+
+<article class="post post-view">
+  <header class="post-header">
+  <h1 class="post-title"><a href="https://clipperhouse.com/builtin-jquery-and-how-ie-can-get-some-dev-cred/">“Built-in” jQuery (and how IE can get some dev cred)</a></h1>
+  <p class="post-meta">Published by Matt Sherman · June 15, 2009</p>
+</header>
+<div class="post-content">
+  <p>I’ve mentioned in the past that <a href="http://clipperhouse.com/blog/post/Hammering-the-DOM.aspx">jQuery is an API</a> as much as it is a set of functions. As syntaxes go, it’s very nice — consistent, logical, readable.</p>
+
+<p>What are the chances that one of the browser makers will announce “native” support for jQuery in their next version? What would this even mean?</p>
+
+<p>Well, for starters, I think it would mean that the jQuery selector syntax would be understood by the browser as a <a href="http://clipperhouse.com/blog/post/jQuery-performance-tips.aspx">DOM query language</a>. Browsers have made incremental steps in this direction: <a href="https://developer.mozilla.org/en/DOM/element.getElementsByTagName">getElementsByTagName</a> and <a href="http://www.quirksmode.org/blog/archives/2008/05/getelementsbycl.html">getElementsByClassName</a>, for example. Still not generalized enough, IMHO.</p>
+
+<p>The next step would be support for <a href="http://ejohn.org/blog/css-animations-and-javascript/">CSS transitions</a>. Tell the browser three things: beginning state, end state and how to get there (easing). Right now, jQuery achieves animation by asking the browser to <a href="/blog/post/Hammering-the-DOM.aspx">redraw the DOM a hundred times</a>. Yikes. We can feel IE struggling in the form of less-than-smooth animations.</p>
+
+<p>Today’s machines can do 60 frames/sec of 3D rendering. Shouldn’t the browser be able to smoothly fade in a paragraph of text without spiking the CPU?</p>
+
+<p>Announcing these two things, while working closely with John Resig to make sure they serve the jQ community, would be a great way for Microsoft get a little cred for IE 9. Maybe even leapfrog the current jQ and go straight to <a href="http://sizzlejs.com/">Sizzle</a>.</p>
+
+  <hr>
+  <small style="color:#999">
+      The source code for this page is <a href="https://github.com/clipperhouse/netlify/blob/master/content/builtin-jquery-and-how-ie-can-get-some-dev-cred.md">here</a>.
+  </small>
+</div>
+<footer class="post-footer">
+  
+  
+</footer>
+</article>
+
+</main>
+
+</body>
+</html>
+

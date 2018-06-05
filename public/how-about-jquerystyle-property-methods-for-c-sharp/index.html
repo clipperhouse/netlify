@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-8534189-2"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-8534189-2');
+  </script>
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="renderer" content="webkit">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <title>How about jQuery-style “property methods” for C#? · Matt Sherman</title>
+  <meta name="description" content="Here’s an idiom that I think would be useful in C#: “property methods” in the style of jQuery.">
+  <meta name="author" content="Matt Sherman">
+  <link href="/css/style.css?3" rel="stylesheet">
+  
+  <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/img/favicon-16x16.png">
+  <link rel="apple-touch-icon" href="/img/apple-touch-icon.png">
+
+  <meta name="generator" content="Hugo 0.40.3">
+
+  <link rel="alternate" type="application/atom+xml" href="/index.xml" title="clipperhouse.com">
+
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:creator" content="@clipperhouse" />
+<meta name="twitter:site" content="@clipperhouse" />
+<meta name="twitter:title" content="How about jQuery-style “property methods” for C#? · Matt Sherman">
+
+<meta name="twitter:description" content="Here’s an idiom that I think would be useful in C#: “property methods” in the style of jQuery.">
+<meta name="twitter:image" content="https://clipperhouse.com/img/apple-touch-icon.png" />
+
+</head>
+<body class="single ">
+  <header class="header">
+    
+    <p class="title"><a href="/">clipperhouse.com</a></p>
+    
+    <button class="menu-toggle" type="button"></button>
+    <nav class="menu">
+      <ul>
+        
+        
+        <li class="">
+          <a href="/about/">about</a>
+        </li>
+        
+      </ul>
+    </nav>
+  </header>
+
+  <script type="text/javascript">
+    function toggleMenu() {
+        var menu = document.querySelector('nav.menu');
+        menu.style.display = menu.style.display == "none" ? "block" : "none";
+    }
+    document.querySelector('button.menu-toggle').onclick = toggleMenu;
+  </script>
+  <main class="main">
+
+<article class="post post-view">
+  <header class="post-header">
+  <h1 class="post-title"><a href="https://clipperhouse.com/how-about-jquerystyle-property-methods-for-c-sharp/">How about jQuery-style “property methods” for C#?</a></h1>
+  <p class="post-meta">Published by Matt Sherman · February 23, 2010</p>
+</header>
+<div class="post-content">
+  <p>Here’s an idiom that I think would be useful in C#: “property methods” in the style of jQuery.</p>
+
+<p>There are many methods in jQ — html(), val(), width() — that are getters when they are called without an argument, and setters when they are. This makes for some very nice fluent code:
+$(“#someElement”).width(“100px”).html(“hello there”);<br />
+window.alert(“The width of #someElement is ” + $(“#someElement”).width());</p>
+
+<p>I’d love to be able to do this in C#, to bring in some of that fluency and terseness. For example, I currently have to write:
+myPerson.FirstName = “Joe”;<br />
+myPerson.LastName = “Smith”;<br />
+myPerson.ZipCode = “12345”;</p>
+
+<p>The code smell here is that I refer to myPerson 3 times. Don’t you just wanna say “Yeah, I get it, myPerson, sheesh.” Wouldn’t it be better to write:
+myPerson.FirstName(“Joe”).LastName(“Smith”).ZipCode(“12345”);</p>
+
+<p>Of course I could implement the above with overloads and private fields. But I shouldn’t need to do that much notation.</p>
+
+<p>I think it can be done in C# without new keywords. Simply allow methods to have get and set bodies:
+public class Person<br />
+{<br />
+public string FirstName() { get; set ; }<br />
+public string LastName () { get; set ; }<br />
+public string ZipCode () { get; set ; }<br />
+}</p>
+
+<p>The compiler would interpret these much like regular properties, backed by (automagical) private fields, with the caveat that a passed value invokes <em>set</em>. <strong>The setter returns the parent object</strong>, giving us the fluency.</p>
+
+<p>And as with properties, you could add bodies to get and set as you desire, where the <em>value</em> argument is implied for <em>set</em>.</p>
+
+<p>Overall, this is the equivalent of:
+public class Person<br />
+{<br />
+public string FirstName() // getter<br />
+{<br />
+ return _FirstName;<br />
+}public Person FirstName(string value) // setter<br />
+{<br />
+ _FirstName = value;<br />
+ return this; // the fluent bit<br />
+}private string _FirstName; // backing store</p>
+
+<p>//…and repeat for each property<br />
+}</p>
+
+<p>Again, I <em>could</em> write my classes this way. But that would be so much boilerplate, uninformative code. Please compiler, do it for me.</p>
+
+  <hr>
+  <small style="color:#999">
+      The source code for this page is <a href="https://github.com/clipperhouse/netlify/blob/master/content/how-about-jquerystyle-property-methods-for-c-sharp.md">here</a>.
+  </small>
+</div>
+<footer class="post-footer">
+  
+  
+</footer>
+</article>
+
+</main>
+
+</body>
+</html>
+

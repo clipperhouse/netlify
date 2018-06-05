@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-8534189-2"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-8534189-2');
+  </script>
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="renderer" content="webkit">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <title>Imagine CSS evolved as a programming language · Matt Sherman</title>
+  <meta name="description" content="I’ve gotten reasonably good with CSS, but I often find myself feeling that certain concepts are conflated or a bit ad hoc.">
+  <meta name="author" content="Matt Sherman">
+  <link href="/css/style.css?3" rel="stylesheet">
+  
+  <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/img/favicon-16x16.png">
+  <link rel="apple-touch-icon" href="/img/apple-touch-icon.png">
+
+  <meta name="generator" content="Hugo 0.40.3">
+
+  <link rel="alternate" type="application/atom+xml" href="/index.xml" title="clipperhouse.com">
+
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:creator" content="@clipperhouse" />
+<meta name="twitter:site" content="@clipperhouse" />
+<meta name="twitter:title" content="Imagine CSS evolved as a programming language · Matt Sherman">
+
+<meta name="twitter:description" content="I’ve gotten reasonably good with CSS, but I often find myself feeling that certain concepts are conflated or a bit ad hoc.">
+<meta name="twitter:image" content="https://clipperhouse.com/img/apple-touch-icon.png" />
+
+</head>
+<body class="single ">
+  <header class="header">
+    
+    <p class="title"><a href="/">clipperhouse.com</a></p>
+    
+    <button class="menu-toggle" type="button"></button>
+    <nav class="menu">
+      <ul>
+        
+        
+        <li class="">
+          <a href="/about/">about</a>
+        </li>
+        
+      </ul>
+    </nav>
+  </header>
+
+  <script type="text/javascript">
+    function toggleMenu() {
+        var menu = document.querySelector('nav.menu');
+        menu.style.display = menu.style.display == "none" ? "block" : "none";
+    }
+    document.querySelector('button.menu-toggle').onclick = toggleMenu;
+  </script>
+  <main class="main">
+
+<article class="post post-view">
+  <header class="post-header">
+  <h1 class="post-title"><a href="https://clipperhouse.com/imagine-css-evolved-as-a-programming-language/">Imagine CSS evolved as a programming language</a></h1>
+  <p class="post-meta">Published by Matt Sherman · June 16, 2009</p>
+</header>
+<div class="post-content">
+  <p>I’ve gotten reasonably good with CSS, but I often find myself feeling that certain concepts are conflated or a bit ad hoc.</p>
+
+<p>CSS does two <em>separate</em> things:</p>
+
+<ul>
+<li>Defines a set of visual attributes as a “style”</li>
+<li>Specifies the DOM elements to which those styles are to be applied</li>
+</ul>
+
+<p>These are different ideas, IMHO. For example, I’d like to define a color palette in once place, and then apply it in different ways throughout in my style library.</p>
+
+<p>What if I want to apply a primary brand color to my links and also to the background of my header? I need to specify it in two places — and then track down all those places if the palette changes. Ditto if I decide that my standard margin needs to go from 10 to 15.</p>
+
+<p>There are ways of doing reuse and encapsulation in regular CSS, but they are not intuitive. Do my DOM elements inherit styles from their parents? Do styles inherit attributes from one another? It seems like I need to implement the logic anew for each case — violating <a href="http://en.wikipedia.org/wiki/Don%27t_repeat_yourself">DRY</a>. And the “logic” is spread across CSS and the DOM.</p>
+
+<p>So I’m intrigued by this thing called <a href="http://lesscss.org/">LESS</a>. It’s a CSS “compiler” that allows you to express your styles with things like variables and hierarchy, in a quasi-CSS syntax. Then it converts that syntax to real CSS for the browser. For example:
+<code>@brand_color: #4D926F;</code><code>#header {  
+  color: @brand_color;  
+}</code><code>h2 {  
+  color: @brand_color;  
+}</code><code>That’s very readable to me and the reuse is obvious. How about this:</code><code>#header {  
+  color: red;  
+  a {  
+    font-weight: bold;  
+    text-decoration: none;  
+  }  
+}</code><code>That looks a lot like inheritance. It’s terse and intuitive.</code><code>LESS is written in Ruby and it requires you to pre-process your CSS before you deploy. So…who’s gonna port it to .Net (IronRuby?) and turn it into a HttpHandler?</code><code>:)</code><code>--</code><code>PS: this sort of thing could greatly simplify skinning, too</code></p>
+
+  <hr>
+  <small style="color:#999">
+      The source code for this page is <a href="https://github.com/clipperhouse/netlify/blob/master/content/imagine-css-evolved-as-a-programming-language.md">here</a>.
+  </small>
+</div>
+<footer class="post-footer">
+  
+  
+</footer>
+</article>
+
+</main>
+
+</body>
+</html>
+

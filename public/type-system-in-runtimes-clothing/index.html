@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-8534189-2"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-8534189-2');
+  </script>
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="renderer" content="webkit">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <title>A type system in runtime’s clothing · Matt Sherman</title>
+  <meta name="description" content="Any sufficiently complicated C or Fortran program contains an ad hoc, informally-specified, bug-ridden, slow implementation of half of Common Lisp.">
+  <meta name="author" content="Matt Sherman">
+  <link href="/css/style.css?3" rel="stylesheet">
+  
+  <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/img/favicon-16x16.png">
+  <link rel="apple-touch-icon" href="/img/apple-touch-icon.png">
+
+  <meta name="generator" content="Hugo 0.40.3">
+
+  <link rel="alternate" type="application/atom+xml" href="/index.xml" title="clipperhouse.com">
+
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:creator" content="@clipperhouse" />
+<meta name="twitter:site" content="@clipperhouse" />
+<meta name="twitter:title" content="A type system in runtime’s clothing · Matt Sherman">
+
+<meta name="twitter:description" content="Any sufficiently complicated C or Fortran program contains an ad hoc, informally-specified, bug-ridden, slow implementation of half of Common Lisp.">
+<meta name="twitter:image" content="https://clipperhouse.com/img/apple-touch-icon.png" />
+
+</head>
+<body class="single ">
+  <header class="header">
+    
+    <p class="title"><a href="/">clipperhouse.com</a></p>
+    
+    <button class="menu-toggle" type="button"></button>
+    <nav class="menu">
+      <ul>
+        
+        
+        <li class="">
+          <a href="/about/">about</a>
+        </li>
+        
+      </ul>
+    </nav>
+  </header>
+
+  <script type="text/javascript">
+    function toggleMenu() {
+        var menu = document.querySelector('nav.menu');
+        menu.style.display = menu.style.display == "none" ? "block" : "none";
+    }
+    document.querySelector('button.menu-toggle').onclick = toggleMenu;
+  </script>
+  <main class="main">
+
+<article class="post post-view">
+  <header class="post-header">
+  <h1 class="post-title"><a href="https://clipperhouse.com/type-system-in-runtimes-clothing/">A type system in runtime’s clothing</a></h1>
+  <p class="post-meta">Published by Matt Sherman · August 25, 2014</p>
+</header>
+<div class="post-content">
+  <p>Any sufficiently complicated C or Fortran program contains an ad hoc, informally-specified, bug-ridden, slow implementation of half of Common Lisp. — <a href="http://en.wikipedia.org/wiki/Greenspun%27s_tenth_rule">Greenspun</a></p>
+
+<p>I am reminded of this quote when I see a common pattern in data stores, especially RDBMS. It’s a key-value pattern, along the lines of:
+<code>Columns: IDType | ID | Value</code></p>
+
+<p>…combined with application code which branches on the IDType column. The Value (and heck, the identifier) are interpreted differently based on the type.</p>
+
+<p>This is a fine pattern depending on one’s goals. But it’s important to understand the choice one is making here: <strong>we’ve created a dynamic type system</strong>. Those if’s and switch’s are type resolution, happening at runtime.</p>
+
+<p>With a RDBMS, a table typically maps to a single type, say “Person”. One can completely express the shape of that entity in code, requiring no conditionals at runtime. Values flow into known slots.</p>
+
+<p>Using the pattern at top, by contrast, one might create a “Documents” table. IDType might be “PDF” or “Section” or whatever; the Value may be a complex payload or a reference to another entity.</p>
+
+<p>And it can work great. As a key-value store, the store is “dumb”: meaning happens in code. This can give you great performance and a lot of presentation choices at runtime.</p>
+
+<p>But one gives up a large class of static (compile-time) type guarantees; one inevitably will do “type” checks at runtime, to combat newly-possible <a href="https://www.google.com/webhp?sourceid=chrome-instant&amp;amp;ion=1&amp;amp;espv=2&amp;amp;ie=UTF-8#q=make%20illegal%20states%20unrepresentable">illegal states</a>.</p>
+
+<p>Too often, such code looks like an <em>ad hoc, informally-specified, slow</em> type system.</p>
+
+<p>The upshot is, it’s a trade-off between safety and flexibility, exactly as with static and dynamic type systems. If one chooses the latter, plan on accounting for legal and illegal states in application code — and be clear about guarantees the system will and won’t offer.</p>
+
+  <hr>
+  <small style="color:#999">
+      The source code for this page is <a href="https://github.com/clipperhouse/netlify/blob/master/content/type-system-in-runtimes-clothing.md">here</a>.
+  </small>
+</div>
+<footer class="post-footer">
+  
+  
+</footer>
+</article>
+
+</main>
+
+</body>
+</html>
+

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-8534189-2"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-8534189-2');
+  </script>
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="renderer" content="webkit">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <title>Windows virtual machines get competitive · Matt Sherman</title>
+  <meta name="description" content="Rackspace has announced that they are getting into the Windows virtual machine bizness. I’ve been waiting for this market to heat up, and have competition drive down some prices.">
+  <meta name="author" content="Matt Sherman">
+  <link href="/css/style.css?3" rel="stylesheet">
+  
+  <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/img/favicon-16x16.png">
+  <link rel="apple-touch-icon" href="/img/apple-touch-icon.png">
+
+  <meta name="generator" content="Hugo 0.40.3">
+
+  <link rel="alternate" type="application/atom+xml" href="/index.xml" title="clipperhouse.com">
+
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:creator" content="@clipperhouse" />
+<meta name="twitter:site" content="@clipperhouse" />
+<meta name="twitter:title" content="Windows virtual machines get competitive · Matt Sherman">
+
+<meta name="twitter:description" content="Rackspace has announced that they are getting into the Windows virtual machine bizness. I’ve been waiting for this market to heat up, and have competition drive down some prices.">
+<meta name="twitter:image" content="https://clipperhouse.com/img/apple-touch-icon.png" />
+
+</head>
+<body class="single ">
+  <header class="header">
+    
+    <p class="title"><a href="/">clipperhouse.com</a></p>
+    
+    <button class="menu-toggle" type="button"></button>
+    <nav class="menu">
+      <ul>
+        
+        
+        <li class="">
+          <a href="/about/">about</a>
+        </li>
+        
+      </ul>
+    </nav>
+  </header>
+
+  <script type="text/javascript">
+    function toggleMenu() {
+        var menu = document.querySelector('nav.menu');
+        menu.style.display = menu.style.display == "none" ? "block" : "none";
+    }
+    document.querySelector('button.menu-toggle').onclick = toggleMenu;
+  </script>
+  <main class="main">
+
+<article class="post post-view">
+  <header class="post-header">
+  <h1 class="post-title"><a href="https://clipperhouse.com/windows-virtual-machines-get-competitive/">Windows virtual machines get competitive</a></h1>
+  <p class="post-meta">Published by Matt Sherman · November 11, 2009</p>
+</header>
+<div class="post-content">
+  <p>Rackspace has <a href="http://www.rackspacecloud.com/blog/2009/11/11/cloud-servers-for-windows-beta-coming-in-early-2010/">announced</a> that they are getting into the Windows virtual machine bizness. I’ve been waiting for this market to heat up, and have competition drive down some prices.</p>
+
+<p>RAM is everything, and the service providers usually make this the main spec you pay for. In virtual environments, it’s even more important since disk I/O tends to be especially slow — you want to keep as much in RAM as possible.</p>
+
+<p>A quick price comparison. Let’s say you want a 4GB instance. <strong>Rackspace</strong> seems to be offering it at around <strong>$230</strong>/month (24 hours x 30 days x $0.32 per hour).</p>
+
+<p>At <strong>GoGrid</strong> (my current vendor), paying <a href="http://www.gogrid.com/cloud-hosting/pricing.php">by the hour</a> would net out to around <strong>$547</strong>/month. With a <a href="http://www.gogrid.com/cloud-hosting/cloud-hosting-plans.php">pre-paid plan</a>, for $199/month you can get the equivalent of 3.5G of RAM (they calculate in GB-hours). Extrapolating to 4G would put us at approximately <strong>$227</strong>/month — so that’s very close to Rackspace.</p>
+
+<p>(To date I’ve been paying around $99/month for 1G at GoGrid).</p>
+
+<p>Over at <strong>Amazon</strong>, their <a href="http://aws.amazon.com/ec2/#pricing">large Windows instance</a> offers 7.5G for around $345/month. If we apply that pricing to 4G, it comes out to <strong>$184</strong>. Not bad! But since they don’t offer a 4G instance, you’d effectively be buying two of them to get that price. Their small instance (1.7G) would cost the equivalent of around <strong>$204</strong> if you extrapolated out to 4G.</p>
+
+<p><strong>MaximumASP</strong> is <a href="http://www.maximumasp.com/products/virtualDedicated/default.aspx">offering</a> a 2G plan for $198/month or the equivalent of <strong>$396</strong> for 4G. (They don’t offer such a plan but I am using the number for apples-to-apples.) That seems uncompetitive based on the above.</p>
+
+<p><strong>SoftLayer</strong> <a href="http://softlayer.com/cloudlayer_computing.html">offers</a> a 4G plan for <strong>$219</strong>/month ($199 for the instance + $20 for Windows). That’s in line with the others.</p>
+
+<p>I encourage you to check my math by visiting these sites. Another important caveat is that these plans vary in terms of included storage and bandwidth (and manageability), so it’s not always a like-for-like comparison.</p>
+
+<p>Overall, it looks to be considerably cheaper than when I first started playing with virtual hosts a year ago.</p>
+
+<p>Virtual servers are not for everyone — in my limited experience I find that performance can be inconsistent. And slow disk I/O will limit the applications where you’d want to go virtual.</p>
+
+<p>And, in the Windows world, horizontal scaling is still not that common, so the attraction of being able to spin up a lot of servers on demand might not mean much to you.</p>
+
+<p>On the upside, you really do get yourself out of the hardware business by taking a virtual approach. You can spin up new machines and kill ’em just as quickly. And you keep capital expenses minimal.</p>
+
+<p>—</p>
+
+<p>Update 12 Nov: Kevin Babcock points out <strong>VPSLand</strong>, which <a href="http://vpsland.com/windowsplans.html">offers</a> a 3GB plan for $78, the equivalent of <strong>$104</strong>/month for 4G. Wow, that’s cheap.</p>
+
+<p><strong>SosftSys</strong> <a href="http://www.softsyshosting.com/Windows-VPS-HyperV.aspx">offers</a> a 2GB plan for $125, so that’s the equivalent of <strong>$250</strong>/mo.</p>
+
+  <hr>
+  <small style="color:#999">
+      The source code for this page is <a href="https://github.com/clipperhouse/netlify/blob/master/content/windows-virtual-machines-get-competitive.md">here</a>.
+  </small>
+</div>
+<footer class="post-footer">
+  
+  
+</footer>
+</article>
+
+</main>
+
+</body>
+</html>
+
