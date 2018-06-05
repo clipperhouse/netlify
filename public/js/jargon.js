@@ -1,37 +1,34 @@
-(function () {
-    var textForm = $('#text-form');
-    var textRadios = textForm.find('input[name=format]');
-    var textInput = textForm.find('textarea');
-    var textExamples = $('#text-examples');
-    var textResult = $('#text-result');
-
-    textForm.on('submit', function (e) {
-        var url = this.action;
-        var data = $(this).serialize();
-        $.ajax({
-            type: 'POST',
-            url: url,             
-            crossDomain: false,
-            data: data,
-            success: update
-        });
-        e.preventDefault();
+(function() {
+  $("form").on("submit", function(e) {
+    var url = this.action;
+    var data = $(this).serialize();
+    var result = $(this).find(".result");
+    $.ajax({
+      type: "POST",
+      url: url,
+      crossDomain: false,
+      data: data,
+      success: function(html) {
+        result.html(html);
+        html ? result.show() : result.hide();
+      }
     });
+    e.preventDefault();
+  });
 
-    function update(html) {
-        textResult.html(html);
-        html ? textResult.show() : textResult.hide();
-    }
+  var radios = $("input[name=format]");
+  var examples = $("#text-examples");
+  radios.on("change", function(e) {
+    var ex = examples.find("#" + this.id);
+    var form = $(this.form);
+    var input = form.find("textarea");
+    var result = form.find(".result");
+    input.val(ex.text().trim());
+    result.html("").hide();
+  });
+  radios.first().click();
 
-    textRadios.on('change', function (e) {
-        var ex = textExamples.find('#' + this.id);
-        textInput.val(ex.text().trim());
-        textResult.html('').hide();
-    });
-
-    textRadios.first().click();
-
-    if (location.hostname == 'localhost') {
-        textForm.attr('action', '//localhost:8080/text')
-    }
+  if (location.hostname == "localhost") {
+    $("form").attr("action", "//localhost:8080");
+  }
 })();

@@ -9,13 +9,11 @@ js:
 - "/js/jargon.js"
 ---
 
-[Jargon](https://github.com/clipperhouse/jargon) is a Go package with tokenizers and lemmatizers. It’s useful for identifying, and optionally replacing, canonical terms in text.
-
-The default implementation is based on a dictionary of tags and synonyms from Stack Overflow. I’ve put together a playground below.
+Jargon is a Go package with tokenizers and lemmatizers. It’s useful for identifying, and optionally replacing, canonical terms in text. [Source](https://github.com/clipperhouse/jargon).
 
 ### Text
 
-<form action="//jargon-demo.appspot.com/text" method="POST" id="text-form">
+<form action="//jargon-demo.appspot.com" method="POST" id="text-form">
     <span class="hint">
         Examples:
     </span>
@@ -35,17 +33,28 @@ The default implementation is based on a dictionary of tags and synonyms from St
     <textarea class="code" id="text" name="text" rows="6"></textarea>
 
     <div>
-        <button type="submit">👉 Lemmatize</button>
+        <button type="submit">👉 Lemmatize text</button>
     </div>
+
+    <div class="pre code result"></div>
 </form>
-
-<div id="text-result" class="pre code result">
-</div>
-
 
 ### HTML
 
-Coming soon.
+<form action="//jargon-demo.appspot.com" method="POST" id="text-form">
+    <textarea class="code" name="html" rows="6">We can lemmatize HTML, but only the text nodes.
+
+<!— Comments are left verbatim even if terms like Ruby are within them. True for tags and attributes as well. -->
+
+<p class="rails">Hi! Let's talk Rails and SQL.</p>
+</textarea>
+
+    <div>
+        <button type="submit">👉 Lemmatize HTML</button>
+    </div>
+
+    <div id="html-result" class="pre code result"></div>
+</form>
 
 <div id="text-examples" class="examples">
     <div id="prose">
