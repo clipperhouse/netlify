@@ -70,8 +70,8 @@
     var parts = location.href.split('-');
     var attempt = parts.slice(0, parts.length-1).join('-');
     var a = $('<a>').attr('href', attempt).text(attempt);
-    var p = $('<p>').append(a);
-    $(document.body).append(p);
+    var p = $('<p>').css('text-align', 'center').text('This page might be found at ').append(a);
+    $('main').append(p);
 </script>
 
 
