@@ -5,12 +5,3 @@ https://clipperhouse.netlify.com/* https://clipperhouse.com/:splat 302!
 http://clipperhouse.netlify.com/* https://clipperhouse.com/:splat 302!
 
 /blog/* /:splat 302
-
-# Old Medium URLs, truncate last bit
-/:part1-:part2-:part3-:part4-:part5-:part6-:part7-:part8   /:part1-:part2-:part3-:part4-:part5-:part6-:part7 302
-/:part1-:part2-:part3-:part4-:part5-:part6-:part7   /:part1-:part2-:part3-:part4-:part5-:part6 302
-/:part1-:part2-:part3-:part4-:part5-:part6   /:part1-:part2-:part3-:part4-:part5 302
-/:part1-:part2-:part3-:part4-:part5   /:part1-:part2-:part3-:part4 302
-/:part1-:part2-:part3-:part4   /:part1-:part2-:part3 302
-/:part1-:part2-:part3   /:part1-:part2 302
-/:part1-:part2   /:part1 302
