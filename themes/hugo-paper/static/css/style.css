@@ -456,6 +456,15 @@ button {
   width: 100%;
 }
 
+button:hover {
+  border-color: #999;
+}
+
+button:active {
+  color: inherit;
+  background-color: #fafafa;
+}
+
 input[type=search]{
   -webkit-appearance: textfield;
   appearance: textfield;
