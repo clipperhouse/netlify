@@ -1,40 +1,25 @@
 ---
-title: "About"
-date: 2018-06-01
-draft: true
+title: "Championship"
+date: 2018-06-11
 ---
+Engineering and product managers often talk about “ownership” of features, when what we want is **championship**. When we orient ourselves around _assignment_ of tasks, we ship a worse product.
 
+We should want individuals to choose projects that they will **champion**, i.e., for which they are **advocates**. This is better for the individual, better for the user, better for the company – and it keeps us managers accountable.
 
-Engineering and product organizations often talk about “ownership” of features, and I think this is mediocre. It sounds like a burden. When we orient ourselves around *assigning* work – a natural, traditional orientation – we leave money on the table.
+### Intrinsic motivation
 
-We managers should want individual contributors to work only on projects that they **champion**. This is not simply good for developers; it keeps us managers accountable…
+People do better work when they are intrinsically motivated. In engineering, this means better correctness, better performance, more edge cases discovered and addressed. We incentivise craftsmanship: when the implementer cares, the user gets a better product.
 
-### 1: Better product
+In my unscientific observation, *championed* work ships product that is 2× better than “assigned” work. This makes for happier, more invested developers, who stick around.
 
-What motivated me to implement this on my team at Stack: **intrinsic motivation** makes for better product. Probably 2× better.
+### Keeping managers accountable
 
-Because the engineer *wants* the project to ship, a better product will ship. The performance will be better, the tests will be better, more edge cases will be discovered and handled.
+When deciding priorities, we managers are more hand-wavy than we’d like to think. Championship provides a empirical test for our hypotheses.
 
-Intrinsically-motivated – championed! – work ships better product than “assigned” work. Synonmously, this makes for happier, more invested developers.
+What if we’ve proposed a project and declared its priority, and yet found no takers? The absence of a champion is an opportunity to **debug our beliefs**.
 
-### 2: Accountable managers
-
-When deciding priorities, we managers are more hand-wavy than we’d like to think. A championship standard provides a initial, empirical test for our hypotheses.
-
-What if we’ve queued up a project and declared its priority, and yet found no takers? Excellent question.
-
-### 3: Debugging
-
-The absence of a champion for a project can mean many things. It’s an opportunity to debug our beliefs.
-
-- Did we commit to other things that we called priorities, therefore making this new priority…not?
-- Did we explain ourselves poorly? Persuasion is an obligation of leadership.
 - Did our idea just fail its first market test – with a friendly audience, no less?
+- Did we fail to persuade? Persuasion is an obligation of leadership.
+- Did we commit to other priorities, therefore making this new priority…not?
 
-## How we did it at Stack Overflow
-
-On my team at Stack, developers would choose to champion projects at the beginning of each sprint. This is the planning process; there is no “assignment”.
-
-Leading up to each sprint planning session, the product managers queue up possible projects for the sprint. It’s on them to make each candidate clear, compelling and specific enough to make decision about.
-
-Pitching, socialization and advocacy is encouraged! Then, during the planning meeting, each project seeks a champion.
+Up next, how we did it on my team at Stack Overflow.

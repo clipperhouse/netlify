@@ -6,10 +6,19 @@
     <description>Recent content on clipperhouse.com</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 29 May 2018 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 11 Jun 2018 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://clipperhouse.com/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Championship</title>
+      <link>https://clipperhouse.com/championship/</link>
+      <pubDate>Mon, 11 Jun 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://clipperhouse.com/championship/</guid>
+      <description>Engineering and product managers often talk about “ownership” of features, when what we want is championship.</description>
+    </item>
     
     <item>
       <title>Static file hosting with active content</title>
