@@ -4,6 +4,8 @@ date: 2017-01-01
 style: "app"
 ---
 
+![Alikewise logo](/img/alikewise_logo.png)
+
 ### Thank you
 
 As of December 2016 we have shut down Alikewise.com. We are thrilled with the response to the site and we hope you found romance, or at least a good read.
