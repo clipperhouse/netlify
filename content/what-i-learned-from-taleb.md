@@ -36,4 +36,4 @@ But the time I got to year 8 (having read _The Black Swan_), I started seeing th
 
 - **Tail risk** (which no one could see): I stay for five years, my skills atrophy, _and then_ company has a bad year and my job goes away.
 
-Long story short, I summoned the courage to quit and start a dating site (using the new technology). It didn’t make any money. But that experience qualified me to work at Stack Overflow, which leveled-up my career in countless ways.
+Long story short, I summoned the courage to quit and start a [dating site](/alikewise/) (using the new technology). It didn’t make any money. But that experience qualified me to work at Stack Overflow, which leveled-up my career in countless ways.
