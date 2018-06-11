@@ -10,7 +10,7 @@ We should want individuals to choose projects that they will **champion**, i.e.,
 
 We do better work when we are intrinsically motivated. In engineering, this means better correctness, better performance, more edge cases discovered and addressed. We incentivise craftsmanship: when the implementer cares, the user gets a better product.
 
-In my unscientific observation, *championed* work ships product that is 2× better than assigned work.
+My (decidedly unscientific) heuristic is that *championed* work ships product that is 2× better than assigned work. 
 
 And it makes for happier, more invested developers, who stick around.
 
@@ -24,4 +24,4 @@ What if we’ve proposed a project and declared its priority, and yet found no t
 - Did we fail to persuade? Persuasion is an obligation of leadership.
 - Did we commit to other priorities, therefore making this new priority…not?
 
-Up next, [how we did it on my team at Stack Overflow](/championship-in-practice/).
+This all sounds idealistic, I know! What about unglamorous projects like tech debt and compliance? Up next, [how it worked on my team at Stack Overflow](/championship-in-practice/).
