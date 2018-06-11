@@ -24,4 +24,4 @@ What if we’ve proposed a project and declared its priority, and yet found no t
 - Did we fail to persuade? Persuasion is an obligation of leadership.
 - Did we commit to other priorities, therefore making this new priority…not?
 
-Up next, how we did it on my team at Stack Overflow.
+Up next, [how we did it on my team at Stack Overflow](/championship-in-practice/).
