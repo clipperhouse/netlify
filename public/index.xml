@@ -6,10 +6,19 @@
     <description>Recent content on clipperhouse.com</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 11 Jun 2018 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 12 Jun 2018 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://clipperhouse.com/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Championship in practice (at Stack Overflow)</title>
+      <link>https://clipperhouse.com/championship-in-practice/</link>
+      <pubDate>Tue, 12 Jun 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://clipperhouse.com/championship-in-practice/</guid>
+      <description>This is a follow-on to my introductory post on championship, please give that a read for background.</description>
+    </item>
     
     <item>
       <title>Championship</title>
@@ -27,15 +36,6 @@
       
       <guid>https://clipperhouse.com/what-i-learned-from-taleb/</guid>
       <description>On the occasion of reading Nassim Taleb’s latest book, an anecdote about how he influenced a career decision of mine.</description>
-    </item>
-    
-    <item>
-      <title>Championship in practice (at Stack Overflow)</title>
-      <link>https://clipperhouse.com/championship-in-practice/</link>
-      <pubDate>Sun, 10 Jun 2018 00:00:00 +0000</pubDate>
-      
-      <guid>https://clipperhouse.com/championship-in-practice/</guid>
-      <description>This is a follow-on to my introductory post on championship, please give that a read for background.</description>
     </item>
     
     <item>
@@ -657,10 +657,10 @@ Depending on the scenario, and this is a matter of taste, CoffeeScript is more e
     
     <item>
       <title>Two, billion-dollar UI mistakes in Windows 8</title>
-      <link>https://clipperhouse.com/two-billiondollar-ui-mistakes-in-windows-8/</link>
+      <link>https://clipperhouse.com/two-billion-dollar-ui-mistakes-in-windows-8/</link>
       <pubDate>Wed, 01 Aug 2012 18:22:14 +0000</pubDate>
       
-      <guid>https://clipperhouse.com/two-billiondollar-ui-mistakes-in-windows-8/</guid>
+      <guid>https://clipperhouse.com/two-billion-dollar-ui-mistakes-in-windows-8/</guid>
       <description>I am very interested in Windows 8 both as a user and as a tech industry watcher.</description>
     </item>
     
@@ -843,15 +843,6 @@ Depending on the scenario, and this is a matter of taste, CoffeeScript is more e
       
       <guid>https://clipperhouse.com/why-cant-mobile-apps-have-urls/</guid>
       <description>Dave Winer laments that mobile apps are not universally addressable via a locator like a URL.</description>
-    </item>
-    
-    <item>
-      <title>Hack for viewing WSJ stories</title>
-      <link>https://clipperhouse.com/hack-for-viewing-wsj-stories/</link>
-      <pubDate>Fri, 04 Nov 2011 15:08:34 +0000</pubDate>
-      
-      <guid>https://clipperhouse.com/hack-for-viewing-wsj-stories/</guid>
-      <description>The Wall Street Journal restricts access to some stories — as when it will show you the first paragraph or two as a “Subscribe Content Preview”.</description>
     </item>
     
     <item>
@@ -1589,15 +1580,6 @@ Schneier: that’s not what privacy is for</description>
       
       <guid>https://clipperhouse.com/wtf-intel/</guid>
       <description>One would think, after announcing the product in July, that Intel might be shipping its next-gen solid state hard drives.</description>
-    </item>
-    
-    <item>
-      <title>Yup, Microsoft is focusing on Javascript</title>
-      <link>https://clipperhouse.com/yup-microsoft-is-focusing-on-javascript/</link>
-      <pubDate>Wed, 18 Nov 2009 12:06:50 +0000</pubDate>
-      
-      <guid>https://clipperhouse.com/yup-microsoft-is-focusing-on-javascript/</guid>
-      <description>So Microsoft announced IE9 today, and yes they are looking at probably a big Javascript performance increase, like I figured.</description>
     </item>
     
     <item>

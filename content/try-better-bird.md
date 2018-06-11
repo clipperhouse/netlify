@@ -2,13 +2,12 @@
 title: "Try “Better Bird”"
 date: 2012-02-28T18:21:18.000Z
 author: "Matt Sherman"
-
 ---
 
-I created a [Chrome extension](https://chrome.google.com/webstore/detail/dolfbfbhjniibjlmpebhdkjanjlcnolp?hl=en-US) to fix what I think are some rough edges and poor choices in the Twitter web app. Have a look:
+I created a [Chrome extension](//chrome.google.com/webstore/detail/dolfbfbhjniibjlmpebhdkjanjlcnolp?hl=en-US) to fix what I think are some rough edges and poor choices in the Twitter web app. Have a look:
 
 
-![image](http://clipperhouse.files.wordpress.com/2012/02/screen1.png)
+![image](//clipperhouse.files.wordpress.com/2012/02/screen1.png)
 
 
 
@@ -21,4 +20,4 @@ Some things it does:
 
 Each of these things is configurable. My design intention is to subtly help but otherwise stay out of the way.
 
-Let me know what you think, or (better yet) leave a review on the Chrome Web Store. It’s [here](https://chrome.google.com/webstore/detail/dolfbfbhjniibjlmpebhdkjanjlcnolp?hl=en).
+Let me know what you think, or (better yet) leave a review on the Chrome Web Store. It’s [here](//chrome.google.com/webstore/detail/dolfbfbhjniibjlmpebhdkjanjlcnolp?hl=en).

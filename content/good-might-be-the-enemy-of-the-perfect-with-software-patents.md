@@ -5,13 +5,13 @@ author: "Matt Sherman"
 
 ---
 
-I have a few concerns, relating to unintended consequences, with a proposed [loser-pays bill](http://arstechnica.com/tech-policy/2012/08/bill-would-force-patent-trolls-to-pay-defendants-legal-bills/) on software patents.
+I have a few concerns, relating to unintended consequences, with a proposed [loser-pays bill](//arstechnica.com/tech-policy/2012/08/bill-would-force-patent-trolls-to-pay-defendants-legal-bills/) on software patents.
 
 I quite like the idea of loser-pays, and it is the standard in many parts of the world. And I certainly don’t like the current state of affairs with software patents. But the intended narrowness of the bill may make things worse.
 
 Firstly, it attempts to define a software patent as anything that might be implemented on a computer. But think about the ideas that might be “implemented” on a computer. Any process, any design for a device. Such ambiguity tells me that litigation will in fact become more involved, and therefore more expensive, in arguing this point.
 
-Remember, my (shall we say) skepticism about regulation comes from the fact that law is, above all else, [gameable](http://clipperhouse.com/2011/07/17/laws-are-not-turing-complete/). Regulation does not serve as rules of the road, as one hopes. Rather, it is one more input into a complex system.
+Remember, my (shall we say) skepticism about regulation comes from the fact that law is, above all else, [gameable](/law-is-not-turing-complete/). Regulation does not serve as rules of the road, as one hopes. Rather, it is one more input into a complex system.
 
 My second bit of concern about this bill is that it is based on the standard that the “patent did not have a reasonable likelihood of succeeding”. If that’s the case, why was the case heard in the first place? The case succeeds, or it doesn’t.
 
@@ -24,4 +24,4 @@ I can’t help but think that an increase in ambiguity is a favor to litigants. 
 Laws are standards. Here’s why we keep making more:
 
 
-![image](http://imgs.xkcd.com/comics/standards.png)
+![image](//imgs.xkcd.com/comics/standards.png)

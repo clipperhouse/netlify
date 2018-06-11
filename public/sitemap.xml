@@ -3,17 +3,17 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://clipperhouse.com/championship-in-practice/</loc>
+    <lastmod>2018-06-12T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://clipperhouse.com/championship/</loc>
     <lastmod>2018-06-11T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://clipperhouse.com/what-i-learned-from-taleb/</loc>
-    <lastmod>2018-06-10T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://clipperhouse.com/championship-in-practice/</loc>
     <lastmod>2018-06-10T00:00:00+00:00</lastmod>
   </url>
   
@@ -353,7 +353,7 @@
   </url>
   
   <url>
-    <loc>https://clipperhouse.com/two-billiondollar-ui-mistakes-in-windows-8/</loc>
+    <loc>https://clipperhouse.com/two-billion-dollar-ui-mistakes-in-windows-8/</loc>
     <lastmod>2012-08-01T18:22:14+00:00</lastmod>
   </url>
   
@@ -455,11 +455,6 @@
   <url>
     <loc>https://clipperhouse.com/why-cant-mobile-apps-have-urls/</loc>
     <lastmod>2011-12-14T03:23:02+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://clipperhouse.com/hack-for-viewing-wsj-stories/</loc>
-    <lastmod>2011-11-04T15:08:34+00:00</lastmod>
   </url>
   
   <url>
@@ -865,11 +860,6 @@
   <url>
     <loc>https://clipperhouse.com/wtf-intel/</loc>
     <lastmod>2009-11-19T09:14:21+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://clipperhouse.com/yup-microsoft-is-focusing-on-javascript/</loc>
-    <lastmod>2009-11-18T12:06:50+00:00</lastmod>
   </url>
   
   <url>
@@ -1499,7 +1489,7 @@
   
   <url>
     <loc>https://clipperhouse.com/</loc>
-    <lastmod>2018-06-11T00:00:00+00:00</lastmod>
+    <lastmod>2018-06-12T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   

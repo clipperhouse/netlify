@@ -1,6 +1,6 @@
 ---
 title: "Championship in practice (at Stack Overflow)"
-date: 2018-06-10
+date: 2018-06-12
 author: "Matt Sherman"
 ---
 
