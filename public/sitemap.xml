@@ -1483,8 +1483,21 @@
   </url>
   
   <url>
+    <loc>https://clipperhouse.com/station/kdfc/</loc>
+  </url>
+  
+  <url>
+    <loc>https://clipperhouse.com/station/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://clipperhouse.com/tags/</loc>
     <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://clipperhouse.com/station/wqxr/</loc>
   </url>
   
   <url>
