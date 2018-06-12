@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Classicals on clipperhouse.com</title>
+    <link>https://clipperhouse.com/classical/</link>
+    <description>Recent content in Classicals on clipperhouse.com</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    
+	<atom:link href="https://clipperhouse.com/classical/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>KDFC</title>
+      <link>https://clipperhouse.com/classical/kdfc/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://clipperhouse.com/classical/kdfc/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>WFMT</title>
+      <link>https://clipperhouse.com/classical/wfmt/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://clipperhouse.com/classical/wfmt/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>WQXR</title>
+      <link>https://clipperhouse.com/classical/wqxr/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://clipperhouse.com/classical/wqxr/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1478,17 +1478,17 @@
   </url>
   
   <url>
+    <loc>https://clipperhouse.com/classical/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://clipperhouse.com/gen/</loc>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://clipperhouse.com/station/kdfc/</loc>
-  </url>
-  
-  <url>
-    <loc>https://clipperhouse.com/station/</loc>
-    <priority>0</priority>
+    <loc>https://clipperhouse.com/classical/kdfc/</loc>
   </url>
   
   <url>
@@ -1497,7 +1497,11 @@
   </url>
   
   <url>
-    <loc>https://clipperhouse.com/station/wqxr/</loc>
+    <loc>https://clipperhouse.com/classical/wfmt/</loc>
+  </url>
+  
+  <url>
+    <loc>https://clipperhouse.com/classical/wqxr/</loc>
   </url>
   
   <url>

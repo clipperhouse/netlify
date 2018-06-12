@@ -2694,19 +2694,28 @@ Rich: UN committees. Reach: entrepeneurs. Advantage: reach.</description>
     
     <item>
       <title>KDFC</title>
-      <link>https://clipperhouse.com/station/kdfc/</link>
+      <link>https://clipperhouse.com/classical/kdfc/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://clipperhouse.com/station/kdfc/</guid>
+      <guid>https://clipperhouse.com/classical/kdfc/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>WFMT</title>
+      <link>https://clipperhouse.com/classical/wfmt/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://clipperhouse.com/classical/wfmt/</guid>
       <description></description>
     </item>
     
     <item>
       <title>WQXR</title>
-      <link>https://clipperhouse.com/station/wqxr/</link>
+      <link>https://clipperhouse.com/classical/wqxr/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://clipperhouse.com/station/wqxr/</guid>
+      <guid>https://clipperhouse.com/classical/wqxr/</guid>
       <description></description>
     </item>
     
