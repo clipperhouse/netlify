@@ -1,0 +1,26 @@
+{{ partial "header.html" . }}
+<link href="/css/classical.css" rel="stylesheet">
+
+<header class="list-header">
+    <h1 class="list-title">classical radio</h1>
+</header>
+      
+{{ $paginator := .Paginate (where .Pages ".Params.type" "!=" "page") (index .Site.Params "paginate" | default 10) }}
+{{ if gt $paginator.TotalPages 0 }}
+{{ range $index, $page := $paginator.Pages }}
+<article class="post post-view post-entry">
+    <h1 class="post-title">
+        <a href="{{ .Permalink }}">
+            {{ .Title }}
+            <small> {{ .Params.station.location }} </small>            
+        </a>
+    </h1>
+</article>
+{{ end }}
+{{ end }}
+
+<link rel="prefetch" href="https://code.jquery.com/jquery-3.3.1.min.js">
+<link rel="prefetch" href="/js/mediaelement/mediaelement-and-player.js">
+<link rel="prefetch" href="/js/classical.js">
+
+{{ partial "footer.html" . }}
