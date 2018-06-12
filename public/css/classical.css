@@ -1,18 +1,18 @@
 
 .me-plugin,
-.mejs-mediaelement,
+.mejs__mediaelement,
 audio,
 embed {
   width: 0;
   height: 0;
 }
-.mejs-container {
+.mejs__container {
   margin: 1em 0;
 }
-.mejs-offscreen {
+.mejs__offscreen {
   display: none;
 }
-.mejs-playpause-button button {
+.mejs__playpause-button button {
   border: 0;
   border-radius: 50%;
   background-repeat: no-repeat;
@@ -24,7 +24,7 @@ embed {
   margin-bottom: 10px;
   display: block;
 }
-.mejs-playpause-button.mejs-pause button {
+.mejs__playpause-button.mejs__pause button {
   background-position: -120px 0;
 }
 #control {
