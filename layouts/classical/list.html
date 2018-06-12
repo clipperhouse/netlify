@@ -4,20 +4,56 @@
 <header class="list-header">
     <h1 class="list-title">classical radio</h1>
 </header>
-      
+
 {{ $paginator := .Paginate (where .Pages ".Params.type" "!=" "page") (index .Site.Params "paginate" | default 10) }}
 {{ if gt $paginator.TotalPages 0 }}
 {{ range $index, $page := $paginator.Pages }}
 <article class="post post-view post-entry">
-    <h1 class="post-title">
+    <h2 class="post-title">
         <a href="{{ .Permalink }}">
             {{ .Title }}
             <small> {{ .Params.station.location }} </small>            
         </a>
-    </h1>
+    </h2>
 </article>
 {{ end }}
 {{ end }}
+
+<article class="post-entry post-view post-content">
+    <br>
+
+    <h4>What’s this?</h4>
+
+    <p>
+        This is a pet project by <a href="/about/">Matt Sherman</a>, to provide a simple, distraction-free way of listening to my favorite classical stations. Maybe they’re your favorites too.
+    </p>
+
+    <p>
+        I’m partial to terrestrial, local radio with real DJs telling you about the weather.
+    </p>
+    
+    <h4>It doesn’t have my favorite station.</h4>
+
+    <p>Let me know! mwsherman@gmail.com or @clipperhouse.</p>
+
+    <h4>
+        It doesn’t display the titles of the pieces.
+    </h4>
+
+    <p>
+        The DJ will tell you.
+    </p>
+</article>
+
+#### 
+
+
+#### 
+
+
+It doesn’t display the album covers.
+
+Guys with powdered wigs standing next to spinets, you mean? Lang Lang’s $400 haircut? I can do without.
 
 <link rel="prefetch" href="https://code.jquery.com/jquery-3.3.1.min.js">
 <link rel="prefetch" href="/js/mediaelement/mediaelement-and-player.js">
