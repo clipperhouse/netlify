@@ -16,6 +16,9 @@ h1 {
 .post-entry {
   padding-bottom: 0;
 }
+.station {
+  cursor: pointer;
+}
 .me-plugin,
 .mejs__mediaelement,
 embed {

@@ -1,20 +1,24 @@
 {{ partial "header.html" . }}
 <link href="/css/classical.css" rel="stylesheet">
 
-<header class="list-header">
-    <h1 class="list-title">classical radio</h1>
-</header>
+<div class="post-entry">
+    <audio type="audio/mpeg" id="player"></audio>
+</div>
 
 {{ $paginator := .Paginate (where .Pages ".Params.type" "!=" "page") (index .Site.Params "paginate" | default 10) }} 
 {{ if gt $paginator.TotalPages 0 }} 
 {{ range $index, $page := $paginator.Pages }}
 <article class="post post-view post-entry">
-    <h2 class="post-title">
-        <a href="{{ .Permalink }}">
-            {{ .Title }}
-            <small> {{ .Params.station.location }} </small>
-        </a>
-    </h2>
+    <div class="station" data-src="{{ .Params.station.stream_url }}">
+        <h2 class="post-title">
+                {{ .Title }}
+                <small> {{ .Params.station.location }} </small>
+        </h2>
+
+        <p class="status">
+            <small>Click to play</small>
+        </p>    
+    </div>
 </article>
 {{ end }}
 {{ end }}
@@ -55,8 +59,8 @@
     </p>
 </article>
 
-<link rel="prefetch" href="https://code.jquery.com/jquery-3.3.1.min.js">
-<link rel="prefetch" href="/js/mediaelement/mediaelement-and-player.js">
-<link rel="prefetch" href="/js/classical.js"> 
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script src="/js/mediaelement/mediaelement-and-player.js"></script>
+<script src="/js/classical.js"></script>
 
 {{ partial "footer.html" . }}
