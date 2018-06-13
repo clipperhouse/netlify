@@ -1,27 +1,21 @@
 {{ partial "header.html" . }}
-<link href="/css/classical.css" rel="stylesheet">
-
-<div class="post-entry">
-    <audio type="audio/mpeg" id="player"></audio>
-</div>
 
 {{ $paginator := .Paginate (where .Pages ".Params.type" "!=" "page") (index .Site.Params "paginate" | default 10) }} 
 {{ if gt $paginator.TotalPages 0 }} 
 {{ range $index, $page := $paginator.Pages }}
 <article class="post post-view post-entry">
-    <div class="station" data-src="{{ .Params.station.stream_url }}">
+    <div class="station" id="{{ .Title }}" data-src="{{ .Params.station.stream_url }}">
         <h2 class="post-title">
                 {{ .Title }}
                 <small> {{ .Params.station.location }} </small>
         </h2>
-
-        <p class="status">
-            <small>Click to play</small>
-        </p>    
     </div>
 </article>
 {{ end }}
 {{ end }}
+
+<audio type="audio/mpeg" id="audio"></audio>
+<div id="wrapper"><button id="control">loading...</button></div>
 
 <article class="post-entry post-view post-content">
     <br>
@@ -58,9 +52,5 @@
         Guys with powdered wigs standing next to spinets, you mean? Lang Lang’s $400 haircut? I can do without.
     </p>
 </article>
-
-<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-<script src="/js/mediaelement/mediaelement-and-player.js"></script>
-<script src="/js/classical.js"></script>
 
 {{ partial "footer.html" . }}

@@ -1473,12 +1473,11 @@
   </url>
   
   <url>
-    <loc>https://clipperhouse.com/categories/</loc>
-    <priority>0</priority>
+    <loc>https://clipperhouse.com/classical/</loc>
   </url>
   
   <url>
-    <loc>https://clipperhouse.com/classical/</loc>
+    <loc>https://clipperhouse.com/categories/</loc>
     <priority>0</priority>
   </url>
   

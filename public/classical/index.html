@@ -15,10 +15,11 @@
   <meta name="renderer" content="webkit">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-  <title></title>
+  <title>A simple classical radio player · Matt Sherman</title>
   <meta name="description" content="">
   <meta name="author" content="Matt Sherman">
   <link href="/css/style.css?3" rel="stylesheet">
+  <link href="/css/classical.css" rel="stylesheet">
   
   <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/img/favicon-16x16.png">
@@ -65,81 +66,59 @@
   </script>
   <main class="main">
 
-<link href="/css/classical.css" rel="stylesheet">
-
-<div class="post-entry">
-    <audio type="audio/mpeg" id="player"></audio>
-</div>
 
  
  
 
 <article class="post post-view post-entry">
-    <div class="station" data-src="https://18323.live.streamtheworld.com/KDFCFMAAC.aac">
+    <div class="station" id="KDFC" data-src="https://18323.live.streamtheworld.com/KDFCFMAAC.aac">
         <h2 class="post-title">
                 KDFC
                 <small> San Francisco </small>
         </h2>
-
-        <p class="status">
-            <small>Click to play</small>
-        </p>    
     </div>
 </article>
 
 <article class="post post-view post-entry">
-    <div class="station" data-src="https://kpbs-classical.streamguys1.com/kpbs-classical">
+    <div class="station" id="KPBS" data-src="https://kpbs-classical.streamguys1.com/kpbs-classical">
         <h2 class="post-title">
                 KPBS
                 <small> San Diego </small>
         </h2>
-
-        <p class="status">
-            <small>Click to play</small>
-        </p>    
     </div>
 </article>
 
 <article class="post post-view post-entry">
-    <div class="station" data-src="https://audio.wgbh.org:8204/classical-hi">
+    <div class="station" id="WCRB" data-src="https://audio.wgbh.org:8204/classical-hi">
         <h2 class="post-title">
                 WCRB
                 <small> Boston </small>
         </h2>
-
-        <p class="status">
-            <small>Click to play</small>
-        </p>    
     </div>
 </article>
 
 <article class="post post-view post-entry">
-    <div class="station" data-src="http://stream.wfmt.com/main">
+    <div class="station" id="WFMT" data-src="http://stream.wfmt.com/main">
         <h2 class="post-title">
                 WFMT
                 <small> Chicago </small>
         </h2>
-
-        <p class="status">
-            <small>Click to play</small>
-        </p>    
     </div>
 </article>
 
 <article class="post post-view post-entry">
-    <div class="station" data-src="https://stream.wqxr.org/wqxr-web">
+    <div class="station" id="WQXR" data-src="https://stream.wqxr.org/wqxr-web">
         <h2 class="post-title">
                 WQXR
                 <small> New York City </small>
         </h2>
-
-        <p class="status">
-            <small>Click to play</small>
-        </p>    
     </div>
 </article>
 
 
+
+<audio type="audio/mpeg" id="audio"></audio>
+<div id="wrapper"><button id="control">loading...</button></div>
 
 <article class="post-entry post-view post-content">
     <br>
@@ -177,12 +156,10 @@
     </p>
 </article>
 
-<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-<script src="/js/mediaelement/mediaelement-and-player.js"></script>
-<script src="/js/classical.js"></script>
-
 
 </main>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="/js/classical.js"></script>
 
 </body>
 </html>
