@@ -1,17 +1,14 @@
 {{ partial "header.html" . }}
 
-{{ $paginator := .Paginate (where .Pages ".Params.type" "!=" "page") (index .Site.Params "paginate" | default 10) }} 
-{{ if gt $paginator.TotalPages 0 }} 
-{{ range $index, $page := $paginator.Pages }}
+{{ range $index, $station := .Params.stations }}
 <article class="post post-view post-entry">
-    <div class="station" id="{{ .Title }}" data-src="{{ .Params.station.stream_url }}">
+    <div class="station" id="{{ .name }}" data-src="{{ .stream_url }}">
         <h2 class="post-title">
-                {{ .Title }}
-                <small> {{ .Params.station.location }} </small>
+                {{ .name }}
+                <small> {{ .location }} </small>
         </h2>
     </div>
 </article>
-{{ end }}
 {{ end }}
 
 <audio type="audio/mpeg" id="audio"></audio>
