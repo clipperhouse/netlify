@@ -1502,10 +1502,6 @@
   </url>
   
   <url>
-    <loc>https://clipperhouse.com/gen/typewriters/</loc>
-  </url>
-  
-  <url>
     <loc>https://clipperhouse.com/gen/force/</loc>
   </url>
   
@@ -1519,6 +1515,10 @@
   
   <url>
     <loc>https://clipperhouse.com/gen/stringer/</loc>
+  </url>
+  
+  <url>
+    <loc>https://clipperhouse.com/gen/typewriters/</loc>
   </url>
   
 </urlset>

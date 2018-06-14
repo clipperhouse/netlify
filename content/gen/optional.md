@@ -1,8 +1,6 @@
 ---
-layout: default
 title: "gen: optional typewriters"
-path: "/optional"
-order: 3
+style: "app"
 ---
 
 Here are a few optional [typewriters](/gen/typewriters/) I've created. They are not built into [gen](/gen/), but can be added as follows.

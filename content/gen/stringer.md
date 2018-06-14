@@ -1,6 +1,6 @@
-
 ---
 title: "gen: stringer"
+style: "app"
 ---
 
 The `stringer` [typewriter](/gen/typewriters/) is a fork of Rob Pike’s [tool](https://godoc.org/golang.org/x/tools/cmd/stringer) of the same name, which generates readable strings for consts. It is built into gen by default.

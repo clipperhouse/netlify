@@ -14,30 +14,42 @@ I am a founder, engineering manager and developer in NYC. I recently decided to 
 
 For now, I am looking for interesting people to meet and collaborate with. Ideas:
 
-- Data science, and NLP in particular. I see opportunities for turning unstructured text into humane applications.
+- Data science, and NLP in particular. I see opportunities in extracting features from unstructured text.
 - Fixing niche problems with domain experts. There is a remarkable amount of friction/entropy within industries and across systems, that people will pay to fix.
 
 ### Engineering Manager
 
-Most recently, I was Engineering Manager at Stack Overflow, overseeing the team building the Talent product. I have a lot to say about building and managing product teams. Hiring and performance evaluation are specialties.
+Most recently, I was Engineering Manager at Stack Overflow, overseeing the team building the Talent product. A few essays about management:
+
+- [Championship](/championship/)
+- [The makings of a strategy](makings-of-a-strategy/)
+- [Lore](/lore/)
+- [Time well spent](/time-well-spent/)
 
 ### Developer
 
-I like Go and C#, and high-performance web applications. I am currently working on a tokenizer and lemmatizer in Go, called [Jargon](https://github.com/clipperhouse/jargon). I created package for generics for Go, called [gen](/gen/). I built [Stack Overflow tag correlations](/stack-correlations/).
+I like Go and C#, and high-performance web applications.
 
-### Explainer
+- I am working on a tokenizer and lemmatizer in Go, called [Jargon](/jargon/).
+- I created a package for generics for Go, called [gen](/gen/overview/).
+- I built [Stack Overflow tag correlations](/stack-correlations/).
+- All of the engineering for [Alikewise](/alikewise/).
+- A fun little [classical radio player](/classical/).
+- And of course, a lot of the code in Stack Overflow Talent.
 
-Non-technical folks appreciate my ability to explain technology and how to get things done when working with engineers. At Stack Overflow, this meant working with salespeople and technical recruiters.
+### A nerd for non-nerds
+
+Non-technical folks appreciate my ability to explain technology and how to get things done with engineers. At Stack Overflow, this often meant salespeople and technical recruiters.
 
 ### Founder
 
-I founded and led engineering for [Alikewise](/alikewise), a dating site based on books.
+I founded and led engineering for [Alikewise](/alikewise/), a dating site based on books.
 
 ### Contact
 
-I am on Twitter [@clipperhouse](https://mobile.twitter.com/@clipperhouse). Happy to chat.
+I am on Twitter [@clipperhouse](https://mobile.twitter.com/@clipperhouse).
 
-I am also reachable at mwsherman@gmail.com and +1 415 516-5121.
+I am reachable at mwsherman@gmail.com and +1 415 516-5121.
 
 Here’s [my LinkedIn](https://linkedin.com/in/clipperhouse).
 

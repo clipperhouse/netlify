@@ -15,8 +15,8 @@
   <meta name="renderer" content="webkit">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-  <title>gen: TypeWriters · Matt Sherman</title>
-  <meta name="description" content="gen is driven by &ldquo;type writers&rdquo; &ndash; packages which are responsible for interpreting the annotated tags and turning them into generated code.">
+  <title>gen: type writers · Matt Sherman</title>
+  <meta name="description" content="gen is driven by “type writers” – packages which are responsible for interpreting the annotated tags and turning them into generated code.">
   <meta name="author" content="Matt Sherman">
   <link href="/css/style.css?3" rel="stylesheet">
   
@@ -33,14 +33,14 @@
 <meta name="twitter:creator" content="@clipperhouse" />
 <meta name="twitter:site" content="@clipperhouse" />
 <meta property="og:url" content="https://clipperhouse.com/gen/typewriters/" />
-<meta name="twitter:title" content="gen: TypeWriters · Matt Sherman" />
-<meta property="og:title" content="gen: TypeWriters · Matt Sherman" />
-<meta name="twitter:description" content="gen is driven by &ldquo;type writers&rdquo; &ndash; packages which are responsible for interpreting the annotated tags and turning them into generated code." />
-<meta property="og:description" content="gen is driven by &ldquo;type writers&rdquo; &ndash; packages which are responsible for interpreting the annotated tags and turning them into generated code." />
+<meta name="twitter:title" content="gen: type writers · Matt Sherman" />
+<meta property="og:title" content="gen: type writers · Matt Sherman" />
+<meta name="twitter:description" content="gen is driven by “type writers” – packages which are responsible for interpreting the annotated tags and turning them into generated code." />
+<meta property="og:description" content="gen is driven by “type writers” – packages which are responsible for interpreting the annotated tags and turning them into generated code." />
 <meta name="twitter:image" content="https://clipperhouse.com/img/apple-touch-icon.png" />
 <meta property="og:image" content="https://clipperhouse.com/img/apple-touch-icon.png" />
 </head>
-<body class="single ">
+<body class="single app">
   <header class="header">
     
     <p class="title"><a href="/">clipperhouse.com</a></p>
@@ -69,19 +69,19 @@
 
 <article class="post post-view">
   <header class="post-header">
-  <h1 class="post-title"><a href="https://clipperhouse.com/gen/typewriters/">gen: TypeWriters</a></h1>
+  <h1 class="post-title"><a href="https://clipperhouse.com/gen/typewriters/">gen: type writers</a></h1>
   <p class="post-meta">Published by Matt Sherman · January 1, 0001</p>
 </header>
 <div class="post-content">
   
 
-<p><a href="/gen/">gen</a> is driven by &ldquo;type writers&rdquo; &ndash; packages which are responsible for interpreting the annotated tags and turning them into generated code.</p>
+<p><a href="/gen/">gen</a> is driven by “type writers” – packages which are responsible for interpreting the annotated tags and turning them into generated code.</p>
 
 <p>gen includes two built-in TypeWriters:</p>
 
 <h4 id="slice"><code>slice</code></h4>
 
-<p>The <code>slice</code> typewriter generates functional convenience methods that will look familiar to users of C#&rsquo;s LINQ or JavaScript&rsquo;s Array methods. It is intended to save you some loops, using a &ldquo;pass a function&rdquo; pattern. It offers grouping, filtering, ad-hoc sorts and projections. <a href="/gen/slice/">Details and docs&hellip;</a></p>
+<p>The <code>slice</code> typewriter generates functional convenience methods that will look familiar to users of C#’s LINQ or JavaScript&rsquo;s Array methods. It is intended to save you some loops, using a “pass a function” pattern. It offers grouping, filtering, ad-hoc sorts and projections. <a href="/gen/slice/">Details and docs&hellip;</a></p>
 
 <h4 id="stringer"><code>stringer</code></h4>
 
@@ -96,19 +96,19 @@
 
 <h3 id="adding-third-party-typewriters">Adding third-party TypeWriters</h3>
 
-<p>TypeWriters can be implemented by third-parties and used at &ldquo;gen time&rdquo;. To use a third-party typewriter, <code>cd</code> into the root of your package and type (for example):</p>
+<p>TypeWriters can be implemented by third-parties and used at “gen time”. To use a third-party typewriter, <code>cd</code> into the root of your package and type (for example):</p>
 
 <pre><code>gen add github.com/clipperhouse/set
 </code></pre>
 
-<p>This will create a <code>_gen.go</code> file. Have a look at it &ndash; it should contain imports for the built-in slice (above) and your new typewriter.</p>
+<p>This will create a <code>_gen.go</code> file. Have a look at it – it should contain imports for the built-in slice (above) and your new typewriter.</p>
 
 <p>Confirm it by typing:</p>
 
 <pre><code>gen list
 </code></pre>
 
-<p>To ensure you&rsquo;ve got your third-party packages locally, type:</p>
+<p>To ensure you’ve got your third-party packages locally, type:</p>
 
 <pre><code>gen get
 </code></pre>

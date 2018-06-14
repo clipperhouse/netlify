@@ -1,14 +1,15 @@
 ---
-title: "gen: TypeWriters"
+title: "gen: type writers"
+style: "app"
 ---
 
-[gen](/gen/) is driven by "type writers" -- packages which are responsible for interpreting the annotated tags and turning them into generated code.
+[gen](/gen/) is driven by “type writers” – packages which are responsible for interpreting the annotated tags and turning them into generated code.
 
 gen includes two built-in TypeWriters:
 
 #### `slice`
 
-The `slice` typewriter generates functional convenience methods that will look familiar to users of C#'s LINQ or JavaScript's Array methods. It is intended to save you some loops, using a "pass a function" pattern. It offers grouping, filtering, ad-hoc sorts and projections. [Details and docs...](/gen/slice/)
+The `slice` typewriter generates functional convenience methods that will look familiar to users of C#’s LINQ or JavaScript's Array methods. It is intended to save you some loops, using a “pass a function” pattern. It offers grouping, filtering, ad-hoc sorts and projections. [Details and docs...](/gen/slice/)
 
 #### `stringer`
 
@@ -22,17 +23,17 @@ To view the currently-available typewriters, `cd` into your package and type:
 
 ### Adding third-party TypeWriters
 
-TypeWriters can be implemented by third-parties and used at "gen time". To use a third-party typewriter, `cd` into the root of your package and type (for example):
+TypeWriters can be implemented by third-parties and used at “gen time”. To use a third-party typewriter, `cd` into the root of your package and type (for example):
 
 	gen add github.com/clipperhouse/set
 
-This will create a `_gen.go` file. Have a look at it -- it should contain imports for the built-in slice (above) and your new typewriter.
+This will create a `_gen.go` file. Have a look at it – it should contain imports for the built-in slice (above) and your new typewriter.
 
 Confirm it by typing:
 
 	gen list
 
-To ensure you've got your third-party packages locally, type:
+To ensure you’ve got your third-party packages locally, type:
 
 	gen get
 

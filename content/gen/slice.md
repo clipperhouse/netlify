@@ -1,5 +1,6 @@
 ---
 title: "gen: slice typewriter"
+style: "app"
 ---
 
 The `slice` typewriter is built into [`gen`](/gen/) by default. It generates functional convenience methods that will look familiar to users of C#'s LINQ or JavaScript's Array methods. It is intended to save you some loops, using a "pass a function" pattern. It offers easier ad-hoc sorts.

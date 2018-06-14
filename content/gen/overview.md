@@ -1,5 +1,6 @@
 ---
 title: "gen: Type-driven code generation for Go"
+style: "app"
 ---
 
 **gen** is an attempt to bring some generics-like functionality to Go. It uses type annotations to add "of T" functionality to your packages.

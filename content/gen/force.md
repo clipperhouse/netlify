@@ -1,5 +1,6 @@
 ---
 title: "gen: force flag"
+style: "app"
 ---
 
 ### Tolerating type errors

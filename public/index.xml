@@ -2702,15 +2702,6 @@ Rich: UN committees. Reach: entrepeneurs. Advantage: reach.</description>
     </item>
     
     <item>
-      <title>gen: TypeWriters</title>
-      <link>https://clipperhouse.com/gen/typewriters/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://clipperhouse.com/gen/typewriters/</guid>
-      <description>gen is driven by &amp;ldquo;type writers&amp;rdquo; &amp;ndash; packages which are responsible for interpreting the annotated tags and turning them into generated code.</description>
-    </item>
-    
-    <item>
       <title>gen: force flag</title>
       <link>https://clipperhouse.com/gen/force/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -2744,6 +2735,15 @@ Rich: UN committees. Reach: entrepeneurs. Advantage: reach.</description>
       
       <guid>https://clipperhouse.com/gen/stringer/</guid>
       <description>The stringer typewriter is a fork of Rob Pike’s tool of the same name, which generates readable strings for consts.</description>
+    </item>
+    
+    <item>
+      <title>gen: type writers</title>
+      <link>https://clipperhouse.com/gen/typewriters/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://clipperhouse.com/gen/typewriters/</guid>
+      <description>gen is driven by “type writers” – packages which are responsible for interpreting the annotated tags and turning them into generated code.</description>
     </item>
     
   </channel>
