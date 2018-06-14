@@ -20,6 +20,8 @@ $(function(){
 	var current;
 
 	$(document).on('click', '.station', function(e) {
+		e.stopPropagation();
+
 		var station = $(this);
 
 		if (current && station.attr('id') === current.attr('id')) {
@@ -27,17 +29,18 @@ $(function(){
 		}
 
 		current = station;
+
 		audio.pause();
 		audio.src = station.data('src');
 
 		var c = $(control);
 
-		c.slideUp(200, function(){
+		c.slideUp(250, function(){
 			audio.play();
 			station.after(control);
 			c.slideDown();
 		});
 
 		e.preventDefault();
-	});	
+	});
 });
