@@ -24,6 +24,8 @@
 #wrapper {
   display: none;
   overflow-y: hidden;
+  height: 140px;
+  width: 120px;
 }
 
 .post-entry {
