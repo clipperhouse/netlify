@@ -22,9 +22,9 @@ For now, I am looking for interesting people to meet and collaborate with. Ideas
 Most recently, I was Engineering Manager at Stack Overflow, overseeing the team building the Talent product. A few essays about management:
 
 - [Championship](/championship/)
+- [Bugs are a failure of prediction](/bugs-are-a-failure-of-prediction/)
 - [The makings of a strategy](makings-of-a-strategy/)
 - [Lore](/lore/)
-- [Time well spent](/time-well-spent/)
 
 ### Developer
 
