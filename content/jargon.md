@@ -11,7 +11,7 @@ js:
 
 Jargon is a Go package with tokenizers and lemmatizers. It’s useful for identifying, and optionally replacing, canonical terms in text. [Source](https://github.com/clipperhouse/jargon).
 
-<form action="//jargon-demo.appspot.com" method="POST" id="text-form">
+<form action="https://jargon-demo.appspot.com" method="POST">
     <span class="hint">
         Examples:
     </span>
