@@ -46,9 +46,18 @@ body.list {
   background-color: transparent;
 }
 
-.station {
+.station, #what {
   cursor: pointer;
   display: inline-block;
+  border: none;
+}
+
+#what {
+  margin-top: 40px;
+}
+
+#faq {
+  display: none;
 }
 
 h1 small,

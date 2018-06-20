@@ -43,4 +43,14 @@ $(function(){
 
 		e.preventDefault();
 	});
+
+	var faq = $('#faq');
+	$(document).on('click', '#what', function(e){
+		e.stopPropagation();
+		faq.toggle();
+		$('html, body').animate({
+			scrollTop: $(this).offset().top
+		}, 1000);
+		e.preventDefault();
+	});
 });
