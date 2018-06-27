@@ -2,7 +2,7 @@ baseURL = "https://clipperhouse.com"
 languageCode = "en-us"
 title = "clipperhouse.com"
 theme = "hugo-paper"
-summaryLength = 16
+summaryLength = 12
 
 [params]
   author = "Matt Sherman"
