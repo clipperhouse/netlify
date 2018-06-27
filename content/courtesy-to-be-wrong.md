@@ -20,7 +20,7 @@ In a traditional view, you might think a management team should aim to have fewe
 
 Many managers perfect the art of never being particularly wrong (or right). Let’s call this style Carl.
 
-Carl is highly  [agreeable](https://work.qz.com/1309735/adam-grant-the-best-employees-are-not-the-agreeable-ones/), but at the end of the day, he does little that risks being wrong. His ideas are fine and useful, but it’s hard to test outcomes of these beliefs.
+Carl is highly  [agreeable](https://work.qz.com/1309735/adam-grant-the-best-employees-are-not-the-agreeable-ones/), but at the end of the day, he does little that risks being wrong. His ideas are fine and useful, but it’s hard to test outcomes of his beliefs.
 
 Unlike Jan, Carl will never be particularly accountable – and, synonymously, makes little difference to the organization. I find this uncourteous.
 
@@ -50,7 +50,7 @@ These questions might split 95 / 5, and are therefore uninformative.
 - Should you correct people on grammar?
 - Who did you vote for?
 
-In these cases, you might imagine something closer to a 50 / 50 split, and therefore having a fighting chance of learning something.
+In these cases, we might imagine something closer to a 50 / 50 split, and therefore having a fighting chance of learning something.
 
 As managers, we should ask ourselves if we are making assertions that anyone could possibly disagree with. If an idea is about as divisive as puppies, we might be working with a Carl.
 
