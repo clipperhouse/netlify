@@ -53,3 +53,7 @@ These questions might split 95 / 5, and are therefore uninformative.
 In these cases, you might imagine something closer to a 50 / 50 split, and therefore having a fighting chance of learning something.
 
 As managers, we should ask ourselves if we are making assertions that anyone could possibly disagree with. If an idea is about as divisive as puppies, we might be working with a Carl.
+
+--
+
+_Thanks to Bret Copeland and Scott Carleton for feedback on drafts of this essay._
