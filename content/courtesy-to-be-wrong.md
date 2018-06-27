@@ -28,7 +28,7 @@ Unlike Jan, Carl will never be particularly accountable – and, synonymously, m
 
 Before we can know an idea’s merit, we must understand its [falsifiability](https://en.wikipedia.org/wiki/Falsifiability). Jan values falsifiability where Carl does not.
 
-When an idea is falsifiable, we can bring evidence to bear. In turn, observable evidence allows others in the organization to contribute – to analyze, criticize, and refine. The harder an idea is to pin down, the harder it is to collaborate on, and the more we spin our wheels.
+When an idea is falsifiable, we can bring evidence to bear. In turn, observable evidence allows others in the organization to contribute – to analyze, criticize, and refine. The harder an idea is to pin down, the harder it is to collaborate on.
 
 The best organizations aim for falsifiable outcomes first, and positive outcomes second.
 
