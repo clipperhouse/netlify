@@ -6,10 +6,19 @@
     <description>Recent content on clipperhouse.com</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 12 Jun 2018 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 27 Jun 2018 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://clipperhouse.com/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Having the courtesy to be wrong</title>
+      <link>https://clipperhouse.com/courtesy-to-be-wrong/</link>
+      <pubDate>Wed, 27 Jun 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://clipperhouse.com/courtesy-to-be-wrong/</guid>
+      <description>One characteristic I see in accountable managers is having the courtesy to be wrong.</description>
+    </item>
     
     <item>
       <title>Championship in practice (at Stack Overflow)</title>
@@ -53,7 +62,7 @@
       <pubDate>Sun, 27 May 2018 00:00:00 +0000</pubDate>
       
       <guid>https://clipperhouse.com/about/</guid>
-      <description>Hi, I’m Matt I am a founder, engineering manager and developer in NYC. I recently decided to leave Stack Overflow, and am taking some time to find my next thing.</description>
+      <description>Hi, I’m Matt I am a founder, engineering manager and developer in NYC.</description>
     </item>
     
     <item>
@@ -98,7 +107,7 @@
       <pubDate>Mon, 18 Sep 2017 21:41:19 +0000</pubDate>
       
       <guid>https://clipperhouse.com/toward-less-injection/</guid>
-      <description>Here’s a habit that may help to reduce the complexity of your dependency injection tree. Ask yourself: how much of an injected dependency are you actually using?</description>
+      <description>Here’s a habit that may help to reduce the complexity of your dependency injection tree.</description>
     </item>
     
     <item>
@@ -125,7 +134,7 @@
       <pubDate>Thu, 07 Apr 2016 15:54:41 +0000</pubDate>
       
       <guid>https://clipperhouse.com/time-well-spent/</guid>
-      <description>Critical to developer and company success is the idea of time well spent. Optimistically, the company’s and the dev’s incentives are aligned in this regard.</description>
+      <description>Critical to developer and company success is the idea of time well spent.</description>
     </item>
     
     <item>
@@ -134,8 +143,7 @@
       <pubDate>Thu, 10 Mar 2016 20:02:56 +0000</pubDate>
       
       <guid>https://clipperhouse.com/decker-for-a-prettier-twitter/</guid>
-      <description>I made a Chrome extension which makes Twitter.com’s UX more tolerable, called decker. It:
- Widens the content area and removes the columns with “Trends” and “Who to follow”, etc.</description>
+      <description>I made a Chrome extension which makes Twitter.com’s UX more tolerable, called decker.</description>
     </item>
     
     <item>
@@ -180,7 +188,7 @@
       <pubDate>Mon, 07 Sep 2015 22:08:57 +0000</pubDate>
       
       <guid>https://clipperhouse.com/three-outcomes-of-the-adpocalypse/</guid>
-      <description>It appears that Internet advertising is going through a bit of a shakeout. Ad blocking is becoming more pervasive (perhaps 30% of users), and a study by Google indicates that as many as 50% of ad “impressions” are never actually put in front of a human being.</description>
+      <description>It appears that Internet advertising is going through a bit of a shakeout.</description>
     </item>
     
     <item>
@@ -189,8 +197,7 @@
       <pubDate>Mon, 20 Apr 2015 21:13:18 +0000</pubDate>
       
       <guid>https://clipperhouse.com/improve-the-median-not-the-mean/</guid>
-      <description>I like seeing Google Fiber prompt incumbent dinosaurs into boosting speeds. It’s great.
-But: it doesn’t matter much.</description>
+      <description>I like seeing Google Fiber prompt incumbent dinosaurs into boosting speeds. It’s great.</description>
     </item>
     
     <item>
@@ -208,7 +215,7 @@ But: it doesn’t matter much.</description>
       <pubDate>Fri, 03 Apr 2015 19:03:15 +0000</pubDate>
       
       <guid>https://clipperhouse.com/statements-are-statements-and-expressions-are-expressions-in-go/</guid>
-      <description>I got trolled by a facetious article on Go on April 1. But it did trigger a conversation about why Go doesn’t do certain things other languages do.</description>
+      <description>I got trolled by a facetious article on Go on April 1.</description>
     </item>
     
     <item>
@@ -235,7 +242,7 @@ But: it doesn’t matter much.</description>
       <pubDate>Tue, 03 Feb 2015 23:17:14 +0000</pubDate>
       
       <guid>https://clipperhouse.com/legacy-ad-industry-is-wrong-about-ad-blockers/</guid>
-      <description>I was recently directed to a couple of papers on browser ad-blocking software (here and here). They are not so much alarmist as they are self-serving and hindered by status quo bias.</description>
+      <description>I was recently directed to a couple of papers on browser ad-blocking software (here and here).</description>
     </item>
     
     <item>
@@ -263,7 +270,7 @@ Say you have a text template, and that template is intended to output Go code.</
       <pubDate>Sun, 16 Nov 2014 19:16:36 +0000</pubDate>
       
       <guid>https://clipperhouse.com/yes-net-neutrality-is-conservative.-thats-the-problem./</guid>
-      <description>Fred Wilson makes the argument (here and here) that net neutrality is a conservative idea. That’s correct, and that’s the problem.</description>
+      <description>Fred Wilson makes the argument (here and here) that net neutrality is a conservative idea.</description>
     </item>
     
     <item>
@@ -272,8 +279,7 @@ Say you have a text template, and that template is intended to output Go code.</
       <pubDate>Tue, 14 Oct 2014 00:41:55 +0000</pubDate>
       
       <guid>https://clipperhouse.com/my-security-and-privacy-tools/</guid>
-      <description>A quick list of the things I use to improve my web experience:
-HTTPS Everywhere – Does its best to detect whether a site offers HTTPS, and switches to that if so.</description>
+      <description>A quick list of the things I use to improve my web experience:</description>
     </item>
     
     <item>
@@ -291,7 +297,7 @@ HTTPS Everywhere – Does its best to detect whether a site offers HTTPS, and sw
       <pubDate>Mon, 25 Aug 2014 00:17:39 +0000</pubDate>
       
       <guid>https://clipperhouse.com/hierarchy-and-orthogonality-in-c-sharp-and-go/</guid>
-      <description>Prompted by this question I got to thinking about methods in C# and Go. It’s another example, I realized, of Go’s (logical) insistence on orthogonality and (stylistic) insistence on flatness/lack of hierarchy.</description>
+      <description>Prompted by this question I got to thinking about methods in C# and Go.</description>
     </item>
     
     <item>
@@ -379,7 +385,7 @@ HTTPS Everywhere – Does its best to detect whether a site offers HTTPS, and sw
       <pubDate>Mon, 31 Mar 2014 16:15:30 +0000</pubDate>
       
       <guid>https://clipperhouse.com/web-components-have-we-not-been-here-before/</guid>
-      <description>Addy Osmani describes Web Components, of which an important part is custom tags. The promise: In one word, a future with Web Components is declarative.</description>
+      <description>Addy Osmani describes Web Components, of which an important part is custom tags.</description>
     </item>
     
     <item>
@@ -388,7 +394,7 @@ HTTPS Everywhere – Does its best to detect whether a site offers HTTPS, and sw
       <pubDate>Sun, 30 Mar 2014 18:05:25 +0000</pubDate>
       
       <guid>https://clipperhouse.com/nesting-is-state/</guid>
-      <description>There are stylistic debates about how much nesting or indentation one should choose in code. This slide and the one that follows illustrate the issue well.</description>
+      <description>There are stylistic debates about how much nesting or indentation one should choose in code.</description>
     </item>
     
     <item>
@@ -397,7 +403,7 @@ HTTPS Everywhere – Does its best to detect whether a site offers HTTPS, and sw
       <pubDate>Sun, 23 Mar 2014 17:11:46 +0000</pubDate>
       
       <guid>https://clipperhouse.com/ben-horowitz-on-wagefixing/</guid>
-      <description>I am really, really enjoying Ben Horowitz’s The Hard Thing About Hard Things. It’s blunt and refreshing, and lives up to its title.</description>
+      <description>I am really, really enjoying Ben Horowitz’s The Hard Thing About Hard Things.</description>
     </item>
     
     <item>
@@ -415,7 +421,7 @@ HTTPS Everywhere – Does its best to detect whether a site offers HTTPS, and sw
       <pubDate>Sat, 15 Mar 2014 20:12:03 +0000</pubDate>
       
       <guid>https://clipperhouse.com/how-i-optimize-conversations/</guid>
-      <description>I had a realization some years ago in working with a person at a previous firm. After many interactions, I noticed that my productivity, my happiness, my motivation consistently were diminished after dealing with them.</description>
+      <description>I had a realization some years ago in working with a person at a previous firm.</description>
     </item>
     
     <item>
@@ -460,7 +466,7 @@ HTTPS Everywhere – Does its best to detect whether a site offers HTTPS, and sw
       <pubDate>Sun, 15 Dec 2013 19:20:56 +0000</pubDate>
       
       <guid>https://clipperhouse.com/publishers-and-ssl/</guid>
-      <description>Here’s a good article about why news sites on the web are slow to embrace SSL. The short answer is, the advertising services they use are not prepared to support it.</description>
+      <description>Here’s a good article about why news sites on the web are slow to embrace SSL.</description>
     </item>
     
     <item>
@@ -496,8 +502,7 @@ HTTPS Everywhere – Does its best to detect whether a site offers HTTPS, and sw
       <pubDate>Sat, 24 Aug 2013 19:23:44 +0000</pubDate>
       
       <guid>https://clipperhouse.com/language-and-social-signaling/</guid>
-      <description>I like language. I came to it causally at first, and more formally of late.
-I’ve always been amused by out-of-fashion terminology (I say “good lord” a lot) and like the feeling of choosing words a bit differently than others might.</description>
+      <description>I like language. I came to it causally at first, and more formally of late.</description>
     </item>
     
     <item>
@@ -506,7 +511,7 @@ I’ve always been amused by out-of-fashion terminology (I say “good lord” a
       <pubDate>Sun, 11 Aug 2013 21:05:23 +0000</pubDate>
       
       <guid>https://clipperhouse.com/1.6-percent-of-what/</guid>
-      <description>The NSA has published a paper claiming that it “touches” only 1.6% of Internet traffic. Now, 1.</description>
+      <description>The NSA has published a paper claiming that it “touches” only 1.6% of Internet traffic.</description>
     </item>
     
     <item>
@@ -533,8 +538,7 @@ I’ve always been amused by out-of-fashion terminology (I say “good lord” a
       <pubDate>Sun, 16 Jun 2013 18:17:10 +0000</pubDate>
       
       <guid>https://clipperhouse.com/ocd-is-id-high-standards-are-ego/</guid>
-      <description>As programmers, we have a powerful tool that we deploy often: OCD.
-While the name connotes a ‘disorder’, certain obsessive behaviors make for very effective programmers.</description>
+      <description>As programmers, we have a powerful tool that we deploy often: OCD.</description>
     </item>
     
     <item>
@@ -552,7 +556,7 @@ While the name connotes a ‘disorder’, certain obsessive behaviors make for v
       <pubDate>Mon, 03 Jun 2013 01:54:15 +0000</pubDate>
       
       <guid>https://clipperhouse.com/for-want-of-parens-in-ruby/</guid>
-      <description>Ruby is beautiful in many ways. The opportunities to create tight, readable code are impressive. More than other languages, it affords the opportunity to make code look like what it does.</description>
+      <description>Ruby is beautiful in many ways. The opportunities to create tight, readable code are impressive.</description>
     </item>
     
     <item>
@@ -561,7 +565,7 @@ While the name connotes a ‘disorder’, certain obsessive behaviors make for v
       <pubDate>Sun, 02 Jun 2013 17:36:37 +0000</pubDate>
       
       <guid>https://clipperhouse.com/fasctimidating/</guid>
-      <description>Chris Baus laments that developers are rarely impressed by other developers. It’s often true. But why are developers hard to (outwardly) impress?</description>
+      <description>Chris Baus laments that developers are rarely impressed by other developers. It’s often true.</description>
     </item>
     
     <item>
@@ -697,7 +701,7 @@ Depending on the scenario, and this is a matter of taste, CoffeeScript is more e
       <pubDate>Sun, 01 Apr 2012 22:32:18 +0000</pubDate>
       
       <guid>https://clipperhouse.com/conservative-and-liberal/</guid>
-      <description>The ideas of conservative and liberal have become very confused, and in many cases exactly backwards. Let’s try to understand them — as adjectives instead of nouns — and strip them of some connotations.</description>
+      <description>The ideas of conservative and liberal have become very confused, and in many cases exactly backwards.</description>
     </item>
     
     <item>
@@ -742,7 +746,7 @@ Depending on the scenario, and this is a matter of taste, CoffeeScript is more e
       <pubDate>Sat, 03 Mar 2012 06:05:41 +0000</pubDate>
       
       <guid>https://clipperhouse.com/nobody-cares-about-channels/</guid>
-      <description>There are rumors afoot that Apple will offer TV channels as apps in an upcoming release. This might work as an interim idea, but it has no legs long-term.</description>
+      <description>There are rumors afoot that Apple will offer TV channels as apps in an upcoming release.</description>
     </item>
     
     <item>
@@ -769,7 +773,7 @@ Depending on the scenario, and this is a matter of taste, CoffeeScript is more e
       <pubDate>Sun, 26 Feb 2012 17:43:14 +0000</pubDate>
       
       <guid>https://clipperhouse.com/craigslist-can-help-fix-the-nyc-apartment-market/</guid>
-      <description>As I’ve written in the past, there are several unique inefficiencies to the Manhattan apartment market. Many can’t be helped in the short term, owing to an endemically tight market.</description>
+      <description>As I’ve written in the past, there are several unique inefficiencies to the Manhattan apartment market.</description>
     </item>
     
     <item>
@@ -787,7 +791,7 @@ Depending on the scenario, and this is a matter of taste, CoffeeScript is more e
       <pubDate>Sat, 04 Feb 2012 15:44:41 +0000</pubDate>
       
       <guid>https://clipperhouse.com/disrupting-the-nyc-rental-information-market/</guid>
-      <description>The Manhattan apartment rental market is unique, as anyone who has experienced it will tell you. The very low vacancy rate (high demand) allows for behavior that other markets don’t bear.</description>
+      <description>The Manhattan apartment rental market is unique, as anyone who has experienced it will tell you.</description>
     </item>
     
     <item>
@@ -851,7 +855,7 @@ Depending on the scenario, and this is a matter of taste, CoffeeScript is more e
       <pubDate>Sun, 30 Oct 2011 21:49:09 +0000</pubDate>
       
       <guid>https://clipperhouse.com/binary-web/</guid>
-      <description>It’s easy to see the web as sets of advances that come in waves. The first was its emergence as a consumer (and corporate) phenomenon, starting with Netscape and continuing through Internet Explorer 6 (which, we often forget, was the first “legitimate” browser for many businesses).</description>
+      <description>It’s easy to see the web as sets of advances that come in waves.</description>
     </item>
     
     <item>
@@ -896,7 +900,7 @@ Depending on the scenario, and this is a matter of taste, CoffeeScript is more e
       <pubDate>Sun, 19 Jun 2011 20:40:36 +0000</pubDate>
       
       <guid>https://clipperhouse.com/implicit-vs.-explicit-social-graphs/</guid>
-      <description>There are two kinds of social graphs in the world, explicit and implicit. The explicit ones are the most rare and give their owners disproportionate market values.</description>
+      <description>There are two kinds of social graphs in the world, explicit and implicit.</description>
     </item>
     
     <item>
@@ -996,7 +1000,7 @@ Depending on the scenario, and this is a matter of taste, CoffeeScript is more e
       <pubDate>Thu, 04 Nov 2010 05:26:00 +0000</pubDate>
       
       <guid>https://clipperhouse.com/ben-bernankes-list-of-economic-participants/</guid>
-      <description>Bernanke: “The Federal Reserve cannot solve all the economy’s problems on its own. That will take time and the combined efforts of many parties, including the central bank, Congress, the administration, regulators and the private sector.</description>
+      <description>Bernanke: “The Federal Reserve cannot solve all the economy’s problems on its own.</description>
     </item>
     
     <item>
@@ -1032,7 +1036,7 @@ Depending on the scenario, and this is a matter of taste, CoffeeScript is more e
       <pubDate>Tue, 07 Sep 2010 16:44:00 +0000</pubDate>
       
       <guid>https://clipperhouse.com/avoiding-magic-strings-in-jquery-c-sharp-and-asp.net-mvc/</guid>
-      <description>The longer I program, the less tolerance I have for “magic strings”. You might be familiar with them — they are strings that have programmatic meaning but are trapped between quotes in another language.</description>
+      <description>The longer I program, the less tolerance I have for “magic strings”.</description>
     </item>
     
     <item>
@@ -1077,7 +1081,7 @@ Depending on the scenario, and this is a matter of taste, CoffeeScript is more e
       <pubDate>Fri, 18 Jun 2010 07:44:17 +0000</pubDate>
       
       <guid>https://clipperhouse.com/https-is-the-least-of-your-problems/</guid>
-      <description>It’s cool that the EFF is offering a Firefox extension to use SSL where it’s available. I prefer to encrypt things too, but really, that’s the least of your problems.</description>
+      <description>It’s cool that the EFF is offering a Firefox extension to use SSL where it’s available.</description>
     </item>
     
     <item>
@@ -1086,8 +1090,7 @@ Depending on the scenario, and this is a matter of taste, CoffeeScript is more e
       <pubDate>Sun, 06 Jun 2010 17:05:20 +0000</pubDate>
       
       <guid>https://clipperhouse.com/stacking-up/</guid>
-      <description>I am happy to announce that I’ve taken a job over at Stack Overflow.
-I’ve been a reader and admirer of Joel and Jeff for some years now, so I am thrilled to be working alongside them.</description>
+      <description>I am happy to announce that I’ve taken a job over at Stack Overflow.</description>
     </item>
     
     <item>
@@ -1132,7 +1135,7 @@ I’ve been a reader and admirer of Joel and Jeff for some years now, so I am th
       <pubDate>Thu, 29 Apr 2010 17:46:30 +0000</pubDate>
       
       <guid>https://clipperhouse.com/standards-why/</guid>
-      <description>There has been some fun stuff today following Steve Jobs missive on Flash and standards. Joe Hewitt (former Facebook and Mozilla dev and rock star): How it should go: browsers innovate differently, users pick the best one, later W3C standardizes what users chose, losing browsers conform.</description>
+      <description>There has been some fun stuff today following Steve Jobs missive on Flash and standards.</description>
     </item>
     
     <item>
@@ -1150,7 +1153,7 @@ I’ve been a reader and admirer of Joel and Jeff for some years now, so I am th
       <pubDate>Tue, 27 Apr 2010 09:07:36 +0000</pubDate>
       
       <guid>https://clipperhouse.com/epistemology-in-everyday-life/</guid>
-      <description>In school, (cough) years ago, I did a bit of epistemology. It’s the study of knowledge. It asks the questions “why do we know that?</description>
+      <description>In school, (cough) years ago, I did a bit of epistemology. It’s the study of knowledge.</description>
     </item>
     
     <item>
@@ -1168,7 +1171,7 @@ I’ve been a reader and admirer of Joel and Jeff for some years now, so I am th
       <pubDate>Sun, 25 Apr 2010 12:17:16 +0000</pubDate>
       
       <guid>https://clipperhouse.com/dear-facebook-let-us-define-the-relationships/</guid>
-      <description>We’ve begun implementing some of Facebook’s Open Graph on Alikewise, my dating startup. By Dare Obasanjo’s definition, books are our main “social object”.</description>
+      <description>We’ve begun implementing some of Facebook’s Open Graph on Alikewise, my dating startup.</description>
     </item>
     
     <item>
@@ -1204,7 +1207,7 @@ I’ve been a reader and admirer of Joel and Jeff for some years now, so I am th
       <pubDate>Wed, 17 Mar 2010 08:24:00 +0000</pubDate>
       
       <guid>https://clipperhouse.com/artificial-distinction-between-content-and-delivery/</guid>
-      <description>In the arguments over net neutrality, the discussion is often around “content” vs “delivery”. The concern is that the delivery people (ISPs) might cut off or otherwise extort the content people.</description>
+      <description>In the arguments over net neutrality, the discussion is often around “content” vs “delivery”.</description>
     </item>
     
     <item>
@@ -1213,8 +1216,7 @@ I’ve been a reader and admirer of Joel and Jeff for some years now, so I am th
       <pubDate>Tue, 16 Mar 2010 13:01:19 +0000</pubDate>
       
       <guid>https://clipperhouse.com/jquery-appears-to-be-incompatible-with-ie9-preview/</guid>
-      <description>It would appear that jQuery (1.4.2) is not compatible with the new IE9 preview:
-Looks like the .</description>
+      <description>It would appear that jQuery (1.4.2) is not compatible with the new IE9 preview:</description>
     </item>
     
     <item>
@@ -1241,7 +1243,7 @@ Looks like the .</description>
       <pubDate>Tue, 23 Feb 2010 10:55:01 +0000</pubDate>
       
       <guid>https://clipperhouse.com/few-more-reasons-to-use-progressive-enhancement/</guid>
-      <description>Progressive Enhancement is a methodology where a web application is developed in layers. Each layer works correctly on its own, and additional layers on top enhance the user experience.</description>
+      <description>Progressive Enhancement is a methodology where a web application is developed in layers.</description>
     </item>
     
     <item>
@@ -1304,7 +1306,7 @@ Looks like the .</description>
       <pubDate>Wed, 13 Jan 2010 09:54:29 +0000</pubDate>
       
       <guid>https://clipperhouse.com/breach-by-design/</guid>
-      <description>It appears that the hack against Google was perpetrated via their law enforcement compliance system. As an eminent group of security experts argued in 2008, the trend toward building surveillance capability into telecommunications architecture amounts to a breach-by-design, and a serious security risk.</description>
+      <description>It appears that the hack against Google was perpetrated via their law enforcement compliance system.</description>
     </item>
     
     <item>
@@ -1367,8 +1369,7 @@ Looks like the .</description>
       <pubDate>Wed, 30 Dec 2009 18:51:21 +0000</pubDate>
       
       <guid>https://clipperhouse.com/how-about-implied-interfaces-in-c-sharp/</guid>
-      <description>I took a look at Google’s new language, Go. Some interesting stuff in there.
-One idea in Go that would be especially handy in C# is implied interfaces.</description>
+      <description>I took a look at Google’s new language, Go. Some interesting stuff in there.</description>
     </item>
     
     <item>
@@ -1395,7 +1396,7 @@ One idea in Go that would be especially handy in C# is implied interfaces.</desc
       <pubDate>Mon, 21 Dec 2009 20:16:51 +0000</pubDate>
       
       <guid>https://clipperhouse.com/att-etc-etc/</guid>
-      <description>AT&amp;amp;T etc etc According to Gizmodo, AT&amp;amp;T comes out #1 for data performance. My interest is two-fold.</description>
+      <description>AT&amp;amp;T etc etc According to Gizmodo, AT&amp;amp;T comes out #1 for data performance.</description>
     </item>
     
     <item>
@@ -1422,8 +1423,7 @@ One idea in Go that would be especially handy in C# is implied interfaces.</desc
       <pubDate>Thu, 17 Dec 2009 09:35:49 +0000</pubDate>
       
       <guid>https://clipperhouse.com/john-resig-jquery-talk/</guid>
-      <description>Very interesting (if-you’re-a-nerd) talk by John Resig. It’s real geek stuff but the takeaways are:
- John is very serious about testing, tracing and benchmarking for jQuery (and frameworks in general).</description>
+      <description>Very interesting (if-you’re-a-nerd) talk by John Resig. It’s real geek stuff but the takeaways are:</description>
     </item>
     
     <item>
@@ -1432,8 +1432,7 @@ One idea in Go that would be especially handy in C# is implied interfaces.</desc
       <pubDate>Wed, 16 Dec 2009 12:02:00 +0000</pubDate>
       
       <guid>https://clipperhouse.com/tegra-notebooks-wanted/</guid>
-      <description>I would love to see notebooks based on Nvidia’s insane Tegra chip:
-The above can drive 720p HDMI output from a friggin’ handheld.</description>
+      <description>I would love to see notebooks based on Nvidia’s insane Tegra chip:</description>
     </item>
     
     <item>
@@ -1451,7 +1450,7 @@ The above can drive 720p HDMI output from a friggin’ handheld.</description>
       <pubDate>Wed, 16 Dec 2009 08:06:00 +0000</pubDate>
       
       <guid>https://clipperhouse.com/amazons-core-competency-pricing./</guid>
-      <description>I think it’s quite brilliant that Amazon has introduced spot pricing for servers. Great way to exploit unutilized CPUs and bring prices down.</description>
+      <description>I think it’s quite brilliant that Amazon has introduced spot pricing for servers.</description>
     </item>
     
     <item>
@@ -1488,8 +1487,7 @@ Can servers really fail that spectacularly? I mean, yes of course they can but s
       <pubDate>Thu, 10 Dec 2009 08:26:49 +0000</pubDate>
       
       <guid>https://clipperhouse.com/schneier-and-schmidt/</guid>
-      <description>Schmidt: if you’re not doing anything wrong, you have no need for privacy
-Schneier: that’s not what privacy is for</description>
+      <description>Schmidt: if you’re not doing anything wrong, you have no need for privacy</description>
     </item>
     
     <item>
@@ -1507,7 +1505,7 @@ Schneier: that’s not what privacy is for</description>
       <pubDate>Sun, 06 Dec 2009 11:11:17 +0000</pubDate>
       
       <guid>https://clipperhouse.com/logic-as-data-and-a-case-where-strong-typing-impeded-learning/</guid>
-      <description>These days, I am doing a lot of Javascript, or more accurately, a lot of jQuery. A concept I have gotten comfortable with is the idea of passing logic as data.</description>
+      <description>These days, I am doing a lot of Javascript, or more accurately, a lot of jQuery.</description>
     </item>
     
     <item>
@@ -1525,7 +1523,7 @@ Schneier: that’s not what privacy is for</description>
       <pubDate>Wed, 02 Dec 2009 20:09:00 +0000</pubDate>
       
       <guid>https://clipperhouse.com/gold-mine-for-stackoverflow/</guid>
-      <description>This is a gold mine for Joel and Jeff over at StackOverflow: careers. It’s something I thought of a while ago, and I am sure the SO guys were ahead of me by a millennium.</description>
+      <description>This is a gold mine for Joel and Jeff over at StackOverflow: careers.</description>
     </item>
     
     <item>
@@ -1552,7 +1550,7 @@ Schneier: that’s not what privacy is for</description>
       <pubDate>Mon, 23 Nov 2009 21:22:50 +0000</pubDate>
       
       <guid>https://clipperhouse.com/wizards-in-asp.net-mvc-being-selective-with-modelstate/</guid>
-      <description>So, there are many ways to skin the cat we called form validation. With a wizard-style application, it requires some nuance.</description>
+      <description>So, there are many ways to skin the cat we called form validation.</description>
     </item>
     
     <item>
@@ -1570,7 +1568,7 @@ Schneier: that’s not what privacy is for</description>
       <pubDate>Thu, 19 Nov 2009 09:32:23 +0000</pubDate>
       
       <guid>https://clipperhouse.com/unsolicited-iphone-suggestions-sharp2-internet-radio/</guid>
-      <description>Since moving from Cali to NY, I’ve come to miss my favorite radio station, KDFC. They rule, especially Hoyt Smith on my clock radio in the morning.</description>
+      <description>Since moving from Cali to NY, I’ve come to miss my favorite radio station, KDFC.</description>
     </item>
     
     <item>
@@ -1615,7 +1613,7 @@ Schneier: that’s not what privacy is for</description>
       <pubDate>Tue, 17 Nov 2009 12:07:09 +0000</pubDate>
       
       <guid>https://clipperhouse.com/unsolicited-iphone-suggestions-sharp1-email/</guid>
-      <description>OK, so a friend is raving about his Droid phone, and it sounds quite cool. The Palm Pre has some good ideas too.</description>
+      <description>OK, so a friend is raving about his Droid phone, and it sounds quite cool.</description>
     </item>
     
     <item>
@@ -1651,7 +1649,7 @@ Schneier: that’s not what privacy is for</description>
       <pubDate>Thu, 12 Nov 2009 09:05:11 +0000</pubDate>
       
       <guid>https://clipperhouse.com/google-closure-based-on-naive-serverside-notions/</guid>
-      <description>I rely on libraries (mostly jQuery) instead of writing a lot of serious JavaScript these days. I mean, of course I am writing JavaScript but the libraries allow me to stay in “script space” — small procedure bits that are scripts as opposed to applications.</description>
+      <description>I rely on libraries (mostly jQuery) instead of writing a lot of serious JavaScript these days.</description>
     </item>
     
     <item>
@@ -1660,7 +1658,7 @@ Schneier: that’s not what privacy is for</description>
       <pubDate>Wed, 11 Nov 2009 16:19:00 +0000</pubDate>
       
       <guid>https://clipperhouse.com/windows-virtual-machines-get-competitive/</guid>
-      <description>Rackspace has announced that they are getting into the Windows virtual machine bizness. I’ve been waiting for this market to heat up, and have competition drive down some prices.</description>
+      <description>Rackspace has announced that they are getting into the Windows virtual machine bizness.</description>
     </item>
     
     <item>
@@ -1787,7 +1785,7 @@ It seems to be Google’s attempt to step into the Java/C# space.</description>
       <pubDate>Mon, 12 Oct 2009 16:38:24 +0000</pubDate>
       
       <guid>https://clipperhouse.com/solving-the-n1-problem-in-linq-to-sql-using-projection/</guid>
-      <description>Rick Strahl has a nice solution for mitigating the n+1 problem in Linq to SQL. The n+1 problem is a situation where, as you iterate over a set of query results in a list view, one or more additional database queries are fired for each row in the list.</description>
+      <description>Rick Strahl has a nice solution for mitigating the n+1 problem in Linq to SQL.</description>
     </item>
     
     <item>
@@ -1842,7 +1840,7 @@ Like Jeff Atwood, I consider end-user performance to be a feature.</description>
       <pubDate>Wed, 16 Sep 2009 11:38:00 +0000</pubDate>
       
       <guid>https://clipperhouse.com/dullest-blog/</guid>
-      <description>I navigated on my computer to the web site called “The dullest blog in the world”. I was mildly amused for several minutes.</description>
+      <description>I navigated on my computer to the web site called “The dullest blog in the world”.</description>
     </item>
     
     <item>
@@ -1888,7 +1886,7 @@ People are throwing things at you and yelling “horn high yo”.</description>
       <pubDate>Wed, 09 Sep 2009 19:14:00 +0000</pubDate>
       
       <guid>https://clipperhouse.com/scale-means-reversing-your-thinking-on-the-database/</guid>
-      <description>There are only a small number of sites in the world that require truly tremendous scale. Usually, this is referred to as “web scale”, and describes a site where the data is user-generated and highly dynamic.</description>
+      <description>There are only a small number of sites in the world that require truly tremendous scale.</description>
     </item>
     
     <item>
@@ -1925,8 +1923,7 @@ People are throwing things at you and yelling “horn high yo”.</description>
       
       <guid>https://clipperhouse.com/quickie-geek-quiz-sharp3/</guid>
       <description>Alright, today’s geek question relates to branding:
-Which company trademarked the brand name “Heroin”?
-Bonus: under what circumstances did they lose that trademark?</description>
+Which company trademarked the brand name “Heroin”?</description>
     </item>
     
     <item>
@@ -1954,7 +1951,7 @@ So, it was 90+ degrees in NY and I went for a run.</description>
       <pubDate>Mon, 24 Aug 2009 14:19:00 +0000</pubDate>
       
       <guid>https://clipperhouse.com/quickie-geek-quiz-sharp2/</guid>
-      <description>OK, I might or might not give out a prize like last time. Times are tight, y’know.</description>
+      <description>OK, I might or might not give out a prize like last time.</description>
     </item>
     
     <item>
@@ -1963,7 +1960,7 @@ So, it was 90+ degrees in NY and I went for a run.</description>
       <pubDate>Tue, 18 Aug 2009 08:02:49 +0000</pubDate>
       
       <guid>https://clipperhouse.com/chair-in-the-sky/</guid>
-      <description>In a few years this will seem quaint, but I am posting this from 30,000 feet. Gogo wi-fi on Virgin America, it actually seems to work.</description>
+      <description>In a few years this will seem quaint, but I am posting this from 30,000 feet.</description>
     </item>
     
     <item>
@@ -1981,7 +1978,7 @@ So, it was 90+ degrees in NY and I went for a run.</description>
       <pubDate>Tue, 11 Aug 2009 08:59:00 +0000</pubDate>
       
       <guid>https://clipperhouse.com/tell-me-your-favorite-expression-for-dead/</guid>
-      <description>I was amused by this article’s title. So I’ve decided to compile clever expressions for “dead”. Tell me your faves in the comments below.</description>
+      <description>I was amused by this article’s title. So I’ve decided to compile clever expressions for “dead”.</description>
     </item>
     
     <item>
@@ -1999,8 +1996,7 @@ So, it was 90+ degrees in NY and I went for a run.</description>
       <pubDate>Mon, 10 Aug 2009 15:28:00 +0000</pubDate>
       
       <guid>https://clipperhouse.com/quickie-geek-quiz-sharp1/</guid>
-      <description>OK, $10 on iTunes or Amazon for the first person to answer this:
-What keyword in C# is derived from a person’s name, and who is that person?</description>
+      <description>OK, $10 on iTunes or Amazon for the first person to answer this:</description>
     </item>
     
     <item>
@@ -2090,7 +2086,7 @@ What keyword in C# is derived from a person’s name, and who is that person?</d
       <pubDate>Sat, 25 Jul 2009 23:35:00 +0000</pubDate>
       
       <guid>https://clipperhouse.com/meetings-are-error-states/</guid>
-      <description>Paul Graham explores the difference between the maker’s schedule and the manager’s schedule. People that know me have heard me say that “meetings are the opposite of work”.</description>
+      <description>Paul Graham explores the difference between the maker’s schedule and the manager’s schedule.</description>
     </item>
     
     <item>
@@ -2108,7 +2104,7 @@ What keyword in C# is derived from a person’s name, and who is that person?</d
       <pubDate>Tue, 21 Jul 2009 21:17:57 +0000</pubDate>
       
       <guid>https://clipperhouse.com/how-to-tell-the-new-intel-ssds-from-the-old-ones/</guid>
-      <description>Intel today announced faster and cheaper versions of their very impressive solid state hard drives (SSDs). I didn’t see any ship dates so I guess they are making their way into the sales channel now.</description>
+      <description>Intel today announced faster and cheaper versions of their very impressive solid state hard drives (SSDs).</description>
     </item>
     
     <item>
@@ -2135,7 +2131,7 @@ What keyword in C# is derived from a person’s name, and who is that person?</d
       <pubDate>Wed, 15 Jul 2009 10:27:00 +0000</pubDate>
       
       <guid>https://clipperhouse.com/google-maps-goes-physical-gavin-newsom-doing-product-endorsements/</guid>
-      <description>Walking to my client’s place this morning, I couldn’t help but wonder what-the-hell-is-that? as I approached the cafe:</description>
+      <description>Walking to my client’s place this morning, I couldn’t help but wonder what-the-hell-is-that?</description>
     </item>
     
     <item>
@@ -2225,7 +2221,7 @@ What keyword in C# is derived from a person’s name, and who is that person?</d
       <pubDate>Mon, 06 Jul 2009 17:43:00 +0000</pubDate>
       
       <guid>https://clipperhouse.com/why-is-a-social-security-number-considered-a-secret/</guid>
-      <description>Identity theft boggles my mind a bit. It’s no mystery why criminal enterprises attempt it. It’s a mystery that we have systems where public information is used for security.</description>
+      <description>Identity theft boggles my mind a bit. It’s no mystery why criminal enterprises attempt it.</description>
     </item>
     
     <item>
@@ -2234,7 +2230,7 @@ What keyword in C# is derived from a person’s name, and who is that person?</d
       <pubDate>Wed, 01 Jul 2009 12:31:00 +0000</pubDate>
       
       <guid>https://clipperhouse.com/use-case-the-metric-system-or-all-that-useless-beauty/</guid>
-      <description>Ah, nothing gets international rivalry boiling like soccer football and the metric system. One wonders why the metric system hasn’t taken off here in the US.</description>
+      <description>Ah, nothing gets international rivalry boiling like soccer football and the metric system.</description>
     </item>
     
     <item>
@@ -2270,7 +2266,7 @@ What keyword in C# is derived from a person’s name, and who is that person?</d
       <pubDate>Thu, 25 Jun 2009 20:53:00 +0000</pubDate>
       
       <guid>https://clipperhouse.com/network-network-network-network-or-network/</guid>
-      <description>I love how Vista offers me so many choices in getting on the interwebs. I can:</description>
+      <description>I love how Vista offers me so many choices in getting on the interwebs.</description>
     </item>
     
     <item>
@@ -2297,8 +2293,7 @@ What keyword in C# is derived from a person’s name, and who is that person?</d
       <pubDate>Wed, 17 Jun 2009 12:04:00 +0000</pubDate>
       
       <guid>https://clipperhouse.com/iphone-activation-servers-overwhelmed/</guid>
-      <description>I am upgrading my iPhone 3G to the 3.0 software but am getting this:
-Anyone else?</description>
+      <description>I am upgrading my iPhone 3G to the 3.0 software but am getting this:</description>
     </item>
     
     <item>
@@ -2352,7 +2347,7 @@ Anyone else?</description>
       <pubDate>Tue, 09 Jun 2009 11:54:00 +0000</pubDate>
       
       <guid>https://clipperhouse.com/more-jquery-performance-tips-11-keystrokes-buy-you-10x/</guid>
-      <description>Dave Ward has a very extensive post (with benchmarks) on jQuery selector optimization. Really interesting stuff — the lesson is, the more specific your query, the faster it executes.</description>
+      <description>Dave Ward has a very extensive post (with benchmarks) on jQuery selector optimization.</description>
     </item>
     
     <item>
@@ -2370,7 +2365,7 @@ Anyone else?</description>
       <pubDate>Sat, 06 Jun 2009 21:56:00 +0000</pubDate>
       
       <guid>https://clipperhouse.com/url-shortener-for-asp.net/</guid>
-      <description>If you use Twitter, you are familiar with URL shortening services like bit.ly and tinyurl.com. They are useful for saving characters in the space-limited messages that Twitter allows.</description>
+      <description>If you use Twitter, you are familiar with URL shortening services like bit.</description>
     </item>
     
     <item>
@@ -2379,7 +2374,7 @@ Anyone else?</description>
       <pubDate>Sat, 06 Jun 2009 21:32:00 +0000</pubDate>
       
       <guid>https://clipperhouse.com/windows-live-writer-works-great-with-blogengine.net/</guid>
-      <description>Just experimenting a bit with using Windows Live Writer as a publishing tool for BlogEngine.Net. So far, it works really nicely.</description>
+      <description>Just experimenting a bit with using Windows Live Writer as a publishing tool for BlogEngine.</description>
     </item>
     
     <item>
@@ -2407,7 +2402,7 @@ blip.tv [http://blip.tv/play/g8s2gYbdKZfJDA]</description>
       <pubDate>Thu, 04 Jun 2009 21:49:00 +0000</pubDate>
       
       <guid>https://clipperhouse.com/highslide-as-asp.net-control/</guid>
-      <description>Dave Ward has updated his ASP.net implementation of Highslide, a very nice ajax-y photo browser. I like the idea of encapsulating javascript into controls, btw.</description>
+      <description>Dave Ward has updated his ASP.net implementation of Highslide, a very nice ajax-y photo browser.</description>
     </item>
     
     <item>
@@ -2426,8 +2421,7 @@ They are all quite logical if you are used to selecting from data sets or file h
       <pubDate>Mon, 01 Jun 2009 14:38:00 +0000</pubDate>
       
       <guid>https://clipperhouse.com/gm-mens-wearhouse-tootsie-roll/</guid>
-      <description>For perspective, here are a few companies whose market cap is greater than GM:
- Cracker Barrel Papa John’s Men’s Wearhouse Rent-A-Center Earthlink Tootsie Roll  </description>
+      <description>For perspective, here are a few companies whose market cap is greater than GM:</description>
     </item>
     
     <item>
@@ -2445,7 +2439,7 @@ They are all quite logical if you are used to selecting from data sets or file h
       <pubDate>Tue, 26 May 2009 19:58:00 +0000</pubDate>
       
       <guid>https://clipperhouse.com/new-build-of-jquery-controls-1.0.3433/</guid>
-      <description>There’s a new build of my ASP.net jQuery Controls, with a couple of conveniences. Details are in the Version History.</description>
+      <description>There’s a new build of my ASP.net jQuery Controls, with a couple of conveniences.</description>
     </item>
     
     <item>
@@ -2454,7 +2448,7 @@ They are all quite logical if you are used to selecting from data sets or file h
       <pubDate>Sun, 24 May 2009 12:08:00 +0000</pubDate>
       
       <guid>https://clipperhouse.com/can-haz-mifi/</guid>
-      <description>This portable 3G-to-Wifi hotspot looks really great. Apparently Verizon and Sprint will offer it. The size is amazing — they claim it’s equivalent to “8 stacked credit cards”.</description>
+      <description>This portable 3G-to-Wifi hotspot looks really great. Apparently Verizon and Sprint will offer it.</description>
     </item>
     
     <item>
@@ -2481,7 +2475,7 @@ They are all quite logical if you are used to selecting from data sets or file h
       <pubDate>Wed, 20 May 2009 13:08:00 +0000</pubDate>
       
       <guid>https://clipperhouse.com/subscription-music-consolidation/</guid>
-      <description>I am a fan of subscription music services. I consider music a service, not a product. I am not interested in keeping track of what I own and where it’s stored.</description>
+      <description>I am a fan of subscription music services. I consider music a service, not a product.</description>
     </item>
     
     <item>
@@ -2535,7 +2529,7 @@ They are all quite logical if you are used to selecting from data sets or file h
       <pubDate>Thu, 14 May 2009 18:43:00 +0000</pubDate>
       
       <guid>https://clipperhouse.com/nulls-and-knowledge/</guid>
-      <description>Eric Lippert has a worthwhile post about what nulls are and why we use them. I like reading Eric because I think we think alike — computer languages are languages, with grammar and semantics.</description>
+      <description>Eric Lippert has a worthwhile post about what nulls are and why we use them.</description>
     </item>
     
     <item>
@@ -2562,7 +2556,7 @@ They are all quite logical if you are used to selecting from data sets or file h
       <pubDate>Fri, 01 May 2009 18:19:00 +0000</pubDate>
       
       <guid>https://clipperhouse.com/webclient-fiddler-and-ssl/</guid>
-      <description>I am developing a credit card authorization library which uses the WebClient class. In addition, I am using the excellent Fiddler to watch the requests and responses.</description>
+      <description>I am developing a credit card authorization library which uses the WebClient class.</description>
     </item>
     
     <item>
@@ -2580,7 +2574,7 @@ They are all quite logical if you are used to selecting from data sets or file h
       <pubDate>Fri, 24 Apr 2009 12:30:00 +0000</pubDate>
       
       <guid>https://clipperhouse.com/just-getting-started/</guid>
-      <description>Welcome to ClipperHouse.com. It’s a place for my work and thoughts and stuff. There are lots of blank spots but you’ll see them filled in soon.</description>
+      <description>Welcome to ClipperHouse.com. It’s a place for my work and thoughts and stuff.</description>
     </item>
     
     <item>
@@ -2598,7 +2592,7 @@ They are all quite logical if you are used to selecting from data sets or file h
       <pubDate>Tue, 03 Jun 2008 17:17:49 +0000</pubDate>
       
       <guid>https://clipperhouse.com/long-game-on-metered-pricing-free-shipping/</guid>
-      <description>Time-Warner cable has begun to roll out its metered pricing plan in Beaumont, Texas. Alley Insider says it won’t work, and Mike Arrington declares it a moral outrage.</description>
+      <description>Time-Warner cable has begun to roll out its metered pricing plan in Beaumont, Texas.</description>
     </item>
     
     <item>
@@ -2635,7 +2629,7 @@ They are all quite logical if you are used to selecting from data sets or file h
       
       <guid>https://clipperhouse.com/entrepeneurs-vs-bureacrats/</guid>
       <description>A great story about TJ Rodgers’ personal green revolution.
-Rich: UN committees. Reach: entrepeneurs. Advantage: reach.</description>
+Rich: UN committees. Reach: entrepeneurs.</description>
     </item>
     
     <item>
@@ -2653,7 +2647,7 @@ Rich: UN committees. Reach: entrepeneurs. Advantage: reach.</description>
       <pubDate>Sun, 10 Feb 2008 22:04:01 +0000</pubDate>
       
       <guid>https://clipperhouse.com/what-advertising-means/</guid>
-      <description>Whenever I see a new ad for a product or industry, I am relieved and encouraged. Why?</description>
+      <description>Whenever I see a new ad for a product or industry, I am relieved and encouraged.</description>
     </item>
     
     <item>
@@ -2680,7 +2674,7 @@ Rich: UN committees. Reach: entrepeneurs. Advantage: reach.</description>
       <pubDate>Fri, 01 Feb 2008 20:10:46 +0000</pubDate>
       
       <guid>https://clipperhouse.com/what-we-have-are-multiple-broadband-strategies-this-is-a-good-thing/</guid>
-      <description>Over at Ars, the normally reasonable Nate misses the point on a national broadband strategy. He despairs over the fact that “we”, meaning the government, have no broadband strategy.</description>
+      <description>Over at Ars, the normally reasonable Nate misses the point on a national broadband strategy.</description>
     </item>
     
     <item>
@@ -2707,7 +2701,7 @@ Rich: UN committees. Reach: entrepeneurs. Advantage: reach.</description>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://clipperhouse.com/gen/force/</guid>
-      <description>Tolerating type errors gen operates by parsing and type-checking your source code. The correctness of your code will affect gen&amp;rsquo;s ability to operate.</description>
+      <description>Tolerating type errors gen operates by parsing and type-checking your source code.</description>
     </item>
     
     <item>
