@@ -24,15 +24,15 @@ Carl is highly  [agreeable](https://work.qz.com/1309735/adam-grant-the-best-empl
 
 Unlike Jan, Carl will never be particularly accountable – and, synonymously, makes little difference to the organization. I find this uncourteous.
 
-### Falsifiability
+### Falsifiable
 
 Before we can know an idea’s merit, we must understand its [falsifiability](https://en.wikipedia.org/wiki/Falsifiability). Jan values falsifiability where Carl does not.
 
-When an idea is falsifiable, we can bring evidence to bear. In turn, observable evidence allows others in the organization to contribute – to analyze, criticize, and refine. The harder an idea is to pin down, the harder it is to collaborate on.
+When an idea is falsifiable, we can bring evidence to bear. In turn, observable evidence allows others in the organization to contribute – to analyze, criticize, and refine. The harder an idea is to pin down, the harder it is to make progress.
 
-The best organizations aim for falsifiable outcomes first, and positive outcomes second.
+The best organizations aim for **falsifiable outcomes first**, and positive outcomes second.
 
-### Divisive is informative
+### Divisive
 
 A falsifiable belief is often a **divisive** one. I got this notion from Chris Coyne, a founder of OKCupid: divisive questions have high information content; anodyne questions, not so much.
 
