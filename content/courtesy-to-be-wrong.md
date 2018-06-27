@@ -1,10 +1,7 @@
 ---
-title: "The courtesy to be wrong"
+title: "Having the courtesy to be wrong"
 date: 2018-06-27
 author: "Matt Sherman"
-tags:
-- epistemology
-- management
 ---
 
 One characteristic I see in accountable managers is having **the courtesy to be wrong**.
@@ -17,7 +14,7 @@ Now, I disagreed with parts of her strategy (easy in hindsight!), but I respecte
 
 She had the courtesy to be wrong.
 
-In a traditional view, you might think a management team should aim to have fewer Jan’s – her belief didn’t work out – but most teams have a bigger problem.
+In a traditional view, you might think a management team should aim to have fewer Jan’s – her strategy didn’t work out! – but most teams have a bigger problem.
 
 ### Meet Carl
 
@@ -33,7 +30,7 @@ Before we can know an idea’s merit, we must understand its [falsifiability](ht
 
 When an idea is falsifiable, it means we can bring evidence to bear. In turn, visible evidence allows others in the organization to contribute – to analyze, criticize, and refine. The harder an idea is to pin down, the harder it is to collaborate on.
 
-So much of an organization’s success is ‘compounding interest’ – we improve by a few %, absorb lessons, and repeat. The best organizations aim for falsifiable outcomes first, and positive outcomes second.
+The best organizations aim for falsifiable outcomes first, and positive outcomes second.
 
 ### Divisive is informative
 
@@ -53,6 +50,6 @@ These questions might split 95 / 5, and are therefore uninformative.
 - Should you correct people on grammar?
 - Who did you vote for?
 
-In these cases, you might imagine something closer to a 50 / 50 split, and therefore have a fighting chance of learning something.
+In these cases, you might imagine something closer to a 50 / 50 split, and therefore having a fighting chance of learning something.
 
 As managers, we should ask ourselves if we are making assertions that anyone could possibly disagree with. If an idea is about as divisive as puppies, we might be working with a Carl.
