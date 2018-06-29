@@ -19,3 +19,5 @@ To use, mark up a type for which you have consts, using Rob’s example:
 	)
 
 Then simply `gen` your package, as normal. You should see a new file, `pill_stringer.go`, containing the String method for your type.
+
+[← back to gen overview](/gen/overview/)

@@ -7,6 +7,8 @@ style: "app"
 
 gen generates code for your types, at development time, using the command line. It is not an import; the generated source becomes part of your package and takes no external dependencies.
 
+[Source](https://github.com/clipperhouse/gen)
+
 ## Quick start
 
 Start by installing Go, [setting up paths](http://golang.org/doc/code.html), etc. Then:

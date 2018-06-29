@@ -566,3 +566,6 @@ Example:
 		return p.Manufacturer == "Apple"
 	}
 	wishlist := products.Where(shiny)
+
+
+[← back to gen overview](/gen/overview/)

@@ -61,3 +61,5 @@ The best thing to do is have a look at an existing implementation, [Set](https:/
 By convention, the name of the typewriter is the name of the tag that it uses. Type `gen list` to see the name of the typewriters available in your current package.
 
 The [typewriter package](https://github.com/clipperhouse/typewriter) handles tag parsing and type evaluation, and passes this information to your typewriter. It offers some conveniences for text templating, as well.
+
+[← back to gen overview](/gen/overview/)

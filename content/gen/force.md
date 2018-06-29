@@ -27,3 +27,5 @@ Officially gen considers "force" mode to be unspecified behavior. There are many
 However, for certain classes of type-check errors, `-f` is a good way to get yourself out of a jam.
 
 *Here's a bit of [background discussion](https://github.com/clipperhouse/gen/issues/77).*
+
+[← back to gen overview](/gen/overview/)

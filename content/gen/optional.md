@@ -45,3 +45,5 @@ To use:
 	type MyType struct{}
 
 Implements strongly-typed operations on circular lists, based on [golang.org/pkg/container/ring](https://golang.org/pkg/container/ring). API documentation is available at that link. Parameters and return values that would be interface{} in the golang implementation will instead use your type in the gen implementation.
+
+[← back to gen overview](/gen/overview/)
