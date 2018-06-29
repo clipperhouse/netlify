@@ -43,4 +43,10 @@
   function htmlDecode(value){
     return $('<div/>').html(value).text();
   }
+
+  // ping for health
+  var ping = $("form").attr("action") + "/_ah/health";
+  $.get(ping, function(data){
+    console.log(data);
+  });
 })();
