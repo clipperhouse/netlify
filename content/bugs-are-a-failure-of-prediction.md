@@ -21,13 +21,13 @@ When we test code, we test our predictions of what the code will do.
 
 ### Complexity
 
-Humans form a mental model of what a piece of code will do. That mental model is limited in size. To the extent that understanding a piece of code requires understanding other, possibly far away, pieces of code, we make forming an accurate mental model more difficult.
+Humans form a mental model of what a piece of code will do. To the extent that understanding a piece of code requires understanding other, possibly far away, pieces of code, we make forming an accurate mental model more difficult.
 
 Code becomes unpredictable by humans when it taxes our mental models.
 
 ### Playing computer
 
-Some rare programmers can look at a piece of code and know what it will do. Most of us can’t. Instead, we make educated guesses.
+A few rare programmers can look at a piece of code and know what it will do. Most of us can’t. Instead, we make educated guesses.
 
 The computer (the compiler, the environment) is the unambiguous decider of what the code will do. When we think we know what a piece of code will do, we are playing computer.
 
