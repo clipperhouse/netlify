@@ -185,11 +185,9 @@ pre code {
 /* Post
 ------------------------------ */
 .post-meta {
-  margin-top: 5px;
+  padding-top: .5em;
+  padding-bottom: .5em;
   color: rgba(0, 0, 0, .4);
-  font-size: 15px;
-  letter-spacing: .5px;
-  display: none;
 }
 .post-header .post-meta {
   display: block;
@@ -367,6 +365,10 @@ pre code {
 }
 .post-content iframe {
   max-width: 100%;
+}
+.post-content #tombstone {
+  font-size: 24px;
+  color: rgba(0, 0, 0, .6);
 }
 .post-view .post-tags {
   margin-bottom: 30px;
