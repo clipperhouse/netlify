@@ -189,10 +189,7 @@ pre code {
   padding-bottom: .5em;
   color: rgba(0, 0, 0, .4);
 }
-.post-header .post-meta {
-  display: block;
-}
-.app .post-header .post-meta {
+.app .post-meta {
   display: none;
 }
 /* First entry */
