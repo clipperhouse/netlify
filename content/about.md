@@ -14,7 +14,7 @@ I am a founder, engineering manager and developer in NYC. I recently decided to 
 
 For now, I am looking for interesting people to meet and collaborate with. Ideas:
 
-- Data science, and NLP in particular. I see opportunities in extracting features from unstructured text.
+- Data science, and NLP in particular. I see opportunities in extracting features from unstructured text. [Here’s one idea](https://docs.google.com/document/d/1lqMYoLtqeu6q2Q_ToI_f5hHMV4tNULtgL9jVizhE7SA/edit?usp=sharing).
 - Fixing niche problems with domain experts. There is a remarkable amount of friction/entropy within industries and across systems, that people will pay to fix.
 
 ### Engineering Manager
