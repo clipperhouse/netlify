@@ -44,8 +44,8 @@
     return $('<div/>').html(value).text();
   }
 
-  // ping for health
-  var ping = $("form").attr("action") + "/_ah/health";
+  // ping for warmup
+  var ping = $("form").attr("action") + "/jargon/text";
   $.get(ping, function(data){
     console.log(data);
   });
