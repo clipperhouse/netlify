@@ -37,21 +37,19 @@ I like Go and C#, and high-performance web applications.
 - A fun little [classical radio player](/classical/).
 - And of course, a lot of the code in Stack Overflow Talent.
 
-### A nerd for non-nerds
-
-Non-technical folks appreciate my ability to explain technology and how to get things done with engineers. At Stack Overflow, this often meant salespeople and technical recruiters.
-
 ### Founder
 
 I founded and led engineering for [Alikewise](/alikewise/), a dating site based on books.
 
-### Contact
+### Explainer
 
-I am on Twitter [@clipperhouse](https://mobile.twitter.com/@clipperhouse).
+Non-technical folks appreciate my ability to explain technology, and how to get things done with engineers. At Stack Overflow, this meant salespeople and technical recruiters.
+
+### Contact
 
 I am reachable at mwsherman@gmail.com and +1 415 516-5121.
 
-Here’s [my LinkedIn](https://linkedin.com/in/clipperhouse).
+I am on Twitter at [@clipperhouse](https://mobile.twitter.com/@clipperhouse). Here’s [my LinkedIn](https://linkedin.com/in/clipperhouse).
 
 
 <style>
