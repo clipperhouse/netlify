@@ -6,10 +6,19 @@
     <description>Recent content on clipperhouse.com</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 27 Jun 2018 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 19 Jul 2018 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://clipperhouse.com/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Does TypeScript make for more performant JavaScript?</title>
+      <link>https://clipperhouse.com/does-typescript-make-for-more-performant-javascript/</link>
+      <pubDate>Thu, 19 Jul 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://clipperhouse.com/does-typescript-make-for-more-performant-javascript/</guid>
+      <description>I have a theory that the use of TypeScript de facto makes for more performant JavaScript, by making the runtime’s “type prediction” more accurate.</description>
+    </item>
     
     <item>
       <title>Having the courtesy to be wrong</title>

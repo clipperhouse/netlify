@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-8534189-2"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-8534189-2');
+  </script>
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="renderer" content="webkit">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <title>Does TypeScript make for more performant JavaScript? · Matt Sherman</title>
+  <meta name="description" content="I have a theory that the use of TypeScript de facto makes for more performant JavaScript, by making the runtime’s “type prediction” more accurate.">
+  <meta name="author" content="Matt Sherman">
+  <link href="/css/style.css?3" rel="stylesheet">
+  
+  <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/img/favicon-16x16.png">
+  <link rel="apple-touch-icon" href="/img/apple-touch-icon.png">
+
+  <meta name="generator" content="Hugo 0.43">
+
+  <link rel="alternate" type="application/atom+xml" href="/index.xml" title="clipperhouse.com">
+
+
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:creator" content="@clipperhouse" />
+<meta name="twitter:site" content="@clipperhouse" />
+<meta property="og:url" content="https://clipperhouse.com/does-typescript-make-for-more-performant-javascript/" />
+<meta name="twitter:title" content="Does TypeScript make for more performant JavaScript? · Matt Sherman" />
+<meta property="og:title" content="Does TypeScript make for more performant JavaScript? · Matt Sherman" />
+<meta name="twitter:description" content="I have a theory that the use of TypeScript de facto makes for more performant JavaScript, by making the runtime’s “type prediction” more accurate." />
+<meta property="og:description" content="I have a theory that the use of TypeScript de facto makes for more performant JavaScript, by making the runtime’s “type prediction” more accurate." />
+<meta name="twitter:image" content="https://clipperhouse.com/img/apple-touch-icon.png" />
+<meta property="og:image" content="https://clipperhouse.com/img/apple-touch-icon.png" />
+</head>
+<body class="single ">
+  <header class="header">
+    
+    <p class="title"><a href="/">clipperhouse.com</a></p>
+    
+    <button class="menu-toggle" type="button"></button>
+    <nav class="menu">
+      <ul>
+        
+        
+        <li class="">
+          <a href="/about/">about</a>
+        </li>
+        
+      </ul>
+    </nav>
+  </header>
+
+  <script type="text/javascript">
+    function toggleMenu() {
+        var menu = document.querySelector('nav.menu');
+        menu.style.display = menu.style.display == "none" ? "block" : "none";
+    }
+    document.querySelector('button.menu-toggle').onclick = toggleMenu;
+  </script>
+  <main class="main">
+
+<article class="post post-view">
+  <header class="post-header">
+  <h1 class="post-title"><a href="https://clipperhouse.com/does-typescript-make-for-more-performant-javascript/">Does TypeScript make for more performant JavaScript?</a></h1>
+</header>
+<div class="post-content">
+  <p>I have a theory that the use of TypeScript <em>de facto</em> makes for more performant JavaScript, by making the runtime’s “type prediction” more accurate.</p>
+
+<p>TypeScript’s static types are erased at compile time, of course, and are not present at runtime. But I suspect that we get a performance benefit anyway. Hear me out.</p>
+
+<p>At runtime, a JavaScript variable can be any type – number, object, string, etc.</p>
+
+<p>As an optimization, if I understand correctly, JavaScript runtimes (such as V8) do their best to predict types, based on runtime observation. If a variable – say, a function parameter – turns out to be a number most of the time, V8 will predict a number type for subsequent invocations.</p>
+
+<p>If this assumption turns out to be wrong, V8 will back out of the predicted branch, and handle it correctly. But if the assumption is correct, we get a performance benefit. A hot path, so to speak.</p>
+
+<p>My hypothesis is that the use of TypeScript by the developer makes correct predictions <strong>more likely</strong>.</p>
+
+<p>By typing a function parameter as <code>number</code>, we prevent <em>ourselves</em> from passing some other type to that function call. So V8’s type prediction turns out to be more accurate, more often, thanks to the discipline enforced at development time.</p>
+
+</div>
+<footer class="post-footer">
+  
+
+  <p class="post-meta">Published by Matt Sherman on July 19, 2018. <a href="https://mobile.twitter.com/clipperhouse">Find me at @clipperhouse</a>.
+  </p>
+
+</footer>
+</article>
+
+</main>
+
+</body>
+</html>
+
