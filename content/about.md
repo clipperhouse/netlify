@@ -49,7 +49,7 @@ Non-technical folks appreciate my ability to explain technology, and how to get 
 
 I am reachable at mwsherman@gmail.com and +1 415 516-5121.
 
-I am on Twitter at [@clipperhouse](https://mobile.twitter.com/@clipperhouse). Here’s [my LinkedIn](https://linkedin.com/in/clipperhouse).
+I am on Twitter at [@clipperhouse](https://mobile.twitter.com/@clipperhouse). Here’s [my GitHub](https://github.com/clipperhouse) and [my LinkedIn](https://linkedin.com/in/clipperhouse).
 
 
 <style>
