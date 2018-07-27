@@ -2,7 +2,6 @@
 title: "Query expansions in Stack Overflow Talent"
 date: 2018-07-26
 author: "Matt Sherman"
-draft: true
 ---
 
 Stack Overflow Talent aims to connect the right company with the right developer. We call this a two-sided market – developers on one side and recruiters on the other.
