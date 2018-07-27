@@ -76,7 +76,7 @@
 
 <p>Stack Overflow Talent aims to connect the right company with the right developer. We call this a two-sided market – developers on one side and recruiters on the other.</p>
 
-<p>One challenge is that the recruiter side of the market is not always technical. Many clients struggle to understand technology skill sets and ecosystems.</p>
+<p>One challenge is that the recruiter side of the market is <strong>not always technical</strong>. Many clients struggle to understand technology skill sets and ecosystems.</p>
 
 <p>This is understandable! It’s a jungle of jargon (a jargle?) out there, and those of us on the inside don’t realize how inscrutable it all is.</p>
 
@@ -112,13 +112,17 @@
 
 <h3 id="query-expansions-v2">Query expansions, v2</h3>
 
-<p>We solved some obvious problems, but one can see the limits in the above approach. We are crudely substituting literal text, not tokens. Substrings are a problem, as are n-grams.</p>
+<p>We solved some obvious problems, but one can see the limits in the above approach. Substrings are a problem, as are n-grams.</p>
 
-<p>The next step was to move this logic down into the query-parsing infrastructure. By doing so, we operate on a real syntax tree, with real tokens, and avoid “stringy” edge cases. We added a <a href="https://www.benjamin.pizza/posts/2017-11-13-recursion-without-recursion.html">simple library</a> for making substitutions, and eliminated regex.</p>
+<p>The next step was to move this logic down into the <strong>query-parsing infrastructure</strong>. By doing so, we operate on a real syntax tree, with real tokens, and avoid “stringy” edge cases. We added a <a href="https://www.benjamin.pizza/posts/2017-11-13-recursion-without-recursion.html">simple library</a> for making substitutions, and eliminated regex.</p>
 
-<p>As of this writing, we offer query expansions for a few dozen common search terms (examples below). The result is that the customer success team needs to give clients ‘tips and tricks’ less often, demos by salespeople are more impressive, and most importantly, developers are more likely to be found by the right companies.</p>
+<p>As of this writing, we offer query expansions for a few dozen common search terms (examples below). The result is that the customer success team needs to recommend ‘tips and tricks’ less often; demos by salespeople are more impressive; and most importantly, developers are more likely to be found by the right companies.</p>
 
-<h3 id="appendix-example-query-expansions">Appendix: example query expansions</h3>
+<p><em>Thanks to <a href="https://www.benjamin.pizza">Benjamin Hodgson</a> for contributing to this essay.</em></p>
+
+<p>&ndash;</p>
+
+<h4 id="appendix-example-query-expansions">Appendix: example query expansions</h4>
 
 <p><em>A non-exhaustive list, for illustration.</em></p>
 
@@ -143,8 +147,6 @@
 <p><code>data science/ML/AI → (probability or predictive or r or ggplot or pandas or neural network or…)</code></p>
 
 <p><code>distributed → (kafka or spark or hadoop or mapreduce or cockroachdb or concurrency or mvcc or…)</code></p>
-
-<p><em>Thanks to <a href="https://www.benjamin.pizza">Benjamin Hodgson</a> for contributing to this essay.</em></p>
 
 </div>
 <footer class="post-footer">

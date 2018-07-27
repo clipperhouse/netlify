@@ -6,7 +6,7 @@ author: "Matt Sherman"
 
 Stack Overflow Talent aims to connect the right company with the right developer. We call this a two-sided market – developers on one side and recruiters on the other.
 
-One challenge is that the recruiter side of the market is not always technical. Many clients struggle to understand technology skill sets and ecosystems.
+One challenge is that the recruiter side of the market is **not always technical**. Many clients struggle to understand technology skill sets and ecosystems.
 
 This is understandable! It’s a jungle of jargon (a jargle?) out there, and those of us on the inside don’t realize how inscrutable it all is.
 
@@ -42,13 +42,17 @@ In turn, we repeated this process for other common search terms: sysadmin, mobil
 
 ### Query expansions, v2
 
-We solved some obvious problems, but one can see the limits in the above approach. We are crudely substituting literal text, not tokens. Substrings are a problem, as are n-grams.
+We solved some obvious problems, but one can see the limits in the above approach. Substrings are a problem, as are n-grams.
 
-The next step was to move this logic down into the query-parsing infrastructure. By doing so, we operate on a real syntax tree, with real tokens, and avoid “stringy” edge cases. We added a [simple library](https://www.benjamin.pizza/posts/2017-11-13-recursion-without-recursion.html) for making substitutions, and eliminated regex.
+The next step was to move this logic down into the **query-parsing infrastructure**. By doing so, we operate on a real syntax tree, with real tokens, and avoid “stringy” edge cases. We added a [simple library](https://www.benjamin.pizza/posts/2017-11-13-recursion-without-recursion.html) for making substitutions, and eliminated regex.
 
-As of this writing, we offer query expansions for a few dozen common search terms (examples below). The result is that the customer success team needs to give clients ‘tips and tricks’ less often, demos by salespeople are more impressive, and most importantly, developers are more likely to be found by the right companies.
+As of this writing, we offer query expansions for a few dozen common search terms (examples below). The result is that the customer success team needs to recommend ‘tips and tricks’ less often; demos by salespeople are more impressive; and most importantly, developers are more likely to be found by the right companies.
 
-### Appendix: example query expansions
+_Thanks to [Benjamin Hodgson](https://www.benjamin.pizza) for contributing to this essay._
+
+--
+
+#### Appendix: example query expansions
 
 _A non-exhaustive list, for illustration._
 
@@ -74,5 +78,3 @@ _A non-exhaustive list, for illustration._
 
 `distributed → (kafka or spark or hadoop or mapreduce or cockroachdb or concurrency or mvcc or…)`
 
-
-_Thanks to [Benjamin Hodgson](https://www.benjamin.pizza) for contributing to this essay._
