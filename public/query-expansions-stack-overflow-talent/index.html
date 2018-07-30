@@ -84,9 +84,7 @@
 
 <p>The candidate database uses Elastic on the back end. Elastic is pretty good out of the box, but like other databases, it’s quite literal – to get a match, you have to search for <strong>precise terms</strong> that appear in developer stories.</p>
 
-<p>We observed that recruiters’ search terms didn’t always meet this standard. For example, ‘front end’ is a common search, as are ‘mobile’ and ‘.Net’.</p>
-
-<p>Some developers use those terms in their developer stories. But more often, skills are expressed more granularly.</p>
+<p>We observed that recruiters’ search terms didn’t always meet this standard. For example, ‘front end’ is a common search, as are ‘mobile’ and ‘.Net’. Some developers use those terms in their developer stories, but more often, skills are expressed more granularly.</p>
 
 <p><em>We</em> know that an Angular expert is a front end person; we know that iOS implies mobile, and that C# is .Net – but databases such as Elastic do not.</p>
 
@@ -94,21 +92,17 @@
 
 <h3 id="query-expansions-v1">Query expansions, v1</h3>
 
-<p>We asked our customer success folks: how do you advise clients to find (e.g.) front end developers? The response was ‘search instead for HTML, CSS, JavaScript, React, Bootstrap…’ etc.</p>
+<p>We asked our customer success folks: how do you advise clients to find (e.g.) front end developers? The response was ‘search instead for HTML, CSS, JavaScript, React, Bootstrap…’.</p>
 
 <p>Great advice. But shouldn’t the system already know this?</p>
 
 <p>So we made the system know that. The first implementation (by me) was crude as could be, in order to test the theory as cheaply as possible.</p>
 
-<p>We intercepted the raw query text and literally did a string replace: <code>s/front end/html javascript css react bootstrap/</code> etc.</p>
-
-<p>Queries are <strong>expanded</strong> into richer search terms (invisibly to the end user):</p>
-
-<p><code>front end → (html5 or javascript or css or dom or typescript or sass or …)</code></p>
+<p>We intercepted the raw query text and literally did a string replace: <code>s/front end/html javascript css react bootstrap/</code>. In this way, <strong>queries are expanded</strong> into richer search terms (invisibly to the end user).</p>
 
 <p>We eyeballed the search results, got feedback from the customer success team, and put it into production. The results, while anecdotal, were positive.</p>
 
-<p>In turn, we repeated this process for other common search terms: sysadmin, mobile, data science. We used some regex to tolerate minor variations.</p>
+<p>In turn, we repeated this process for other common search terms: sysadmin, mobile, data science. We sprinkled in some regex to tolerate minor variations.</p>
 
 <h3 id="query-expansions-v2">Query expansions, v2</h3>
 
@@ -116,7 +110,7 @@
 
 <p>The next step was to move this logic down into the <strong>query-parsing infrastructure</strong>. By doing so, we operate on a real syntax tree, with real tokens, and avoid “stringy” edge cases. We added a <a href="https://www.benjamin.pizza/posts/2017-11-13-recursion-without-recursion.html">simple library</a> for making substitutions, and eliminated regex.</p>
 
-<p>As of this writing, we offer query expansions for a few dozen common search terms (examples below). The result is that the customer success team needs to recommend ‘tips and tricks’ less often; demos by salespeople are more impressive; and most importantly, developers are more likely to be found by the right companies.</p>
+<p>As of this writing, Stack Overflow Talent offers query expansions for a few dozen common search terms (examples below). The result is that the customer success team needs to recommend ‘tips and tricks’ less often; demos by salespeople are more impressive; and most importantly, developers are more likely to be found by the right companies.</p>
 
 <p><em>Thanks to <a href="https://www.benjamin.pizza">Benjamin Hodgson</a> for contributing to this essay.</em></p>
 
