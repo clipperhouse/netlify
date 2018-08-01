@@ -40,6 +40,14 @@ We solved some obvious problems, but one can see the limits in the above approac
 
 The next step was to move this logic down into the **query-parsing infrastructure**. By doing so, we operate on a real syntax tree, with real tokens, and avoid “stringy” edge cases. We added a [simple library](https://www.benjamin.pizza/posts/2017-11-13-recursion-without-recursion.html) for making substitutions, and eliminated regex.
 
+### Trade-offs
+
+There is a bit of a performance hit in the database with long `OR` statements, on the order of 10% if I recall. We consider this acceptable for the improvement in user outcomes.
+
+A further optimization might be to move expansions into Elastic itself, by writing an [analyzer](https://www.elastic.co/guide/en/elasticsearch/reference/current/analysis-analyzers.html). Think of it as an ‘expansion in reverse’: when (say) ‘css’ is detected in a document, tag the document with the term ‘front end’, which can be indexed and searched efficiently.
+
+### Outcome
+
 As of this writing, Stack Overflow Talent offers query expansions for a few dozen common search terms (examples below). The result is that the customer success team needs to recommend ‘tips and tricks’ less often; demos by salespeople are more impressive; and most importantly, developers are more likely to be found by the right companies.
 
 _Thanks to [Benjamin Hodgson](https://www.benjamin.pizza) for contributing to this essay._
