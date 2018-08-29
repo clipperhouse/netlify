@@ -348,7 +348,7 @@ pre code {
   text-align: left;
 }
 .post-content blockquote {
-  margin: 0 0 0 -23px;
+  margin: 0 0 20px -23px;
   padding: 0 0 0 20px;
   color: rgba(0, 0, 0, .6);
   font-style: italic;
