@@ -51,7 +51,3 @@ complex = complex64 | complex128
 These look a lot like **union types**. `int8` gets unioned into `integer` which gets unioned into `numeric`, etc.
 
 Another way to think of type classes is as **interfaces for operators**. Imagine that the `+` operator were an `Add()` method instead. The `numeric` type above is a lot like an `Adder` interface.
-
-### Inferable?
-
-It appears that type classes are inferable at compile time, even without declaring them – if we call a generic Sum with a non-numeric type, we can know that, yes?
