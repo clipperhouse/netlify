@@ -91,13 +91,18 @@
 }
 </code></pre>
 
-<p>&hellip;where <code>numeric</code> is a typeclass (defined below). In fact, the <code>go/types</code> package already <a href="https://github.com/golang/go/blob/master/src/go/types/predicates.go">defines many type classes</a>, without using that terminology.</p>
+<p>or</p>
+
+<pre><code>type Set(type T comparable) []T
+</code></pre>
+
+<p>&hellip;where <code>numeric</code> and <code>comparable</code> are typeclasses, defined below. In fact, the <code>go/types</code> package already <a href="https://github.com/golang/go/blob/master/src/go/types/predicates.go">defines many type classes</a>, without using that terminology.</p>
 
 <p>Instead of covering the full design space of what generics can do, we focus on an intuitive set of typeclasses that meets a broad set of needs.</p>
 
 <h3 id="typeclasses">Typeclasses</h3>
 
-<pre><code>numeric = integer | float | complex	
+<pre><code>numeric = integer | float | complex
   // supports +, -, *, / operators, enabling generic Sum, Average, etc
 
 comparable = [requires logic]

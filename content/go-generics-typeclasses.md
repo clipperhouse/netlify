@@ -22,14 +22,20 @@ func Sum(type T numeric)(x []T) T {
 }
 ```
 
-...where `numeric` is a typeclass (defined below). In fact, the `go/types` package already [defines many type classes](https://github.com/golang/go/blob/master/src/go/types/predicates.go), without using that terminology.
+or
+
+```
+type Set(type T comparable) []T
+```
+
+...where `numeric` and `comparable` are typeclasses, defined below. In fact, the `go/types` package already [defines many type classes](https://github.com/golang/go/blob/master/src/go/types/predicates.go), without using that terminology.
 
 Instead of covering the full design space of what generics can do, we focus on an intuitive set of typeclasses that meets a broad set of needs.
 
 ### Typeclasses
 
 ```
-numeric = integer | float | complex	
+numeric = integer | float | complex
   // supports +, -, *, / operators, enabling generic Sum, Average, etc
 
 comparable = [requires logic]
