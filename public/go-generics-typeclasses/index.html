@@ -15,7 +15,7 @@
   <meta name="renderer" content="webkit">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-  <title>Generics as builtin typeclasses (in Go) · Matt Sherman</title>
+  <title>Generics as builtin typeclasses · Matt Sherman</title>
   <meta name="description" content="I love the debate around the generics proposal for Go 2.">
   <meta name="author" content="Matt Sherman">
   <link href="/css/style.css?3" rel="stylesheet">
@@ -33,8 +33,8 @@
 <meta name="twitter:creator" content="@clipperhouse" />
 <meta name="twitter:site" content="@clipperhouse" />
 <meta property="og:url" content="https://clipperhouse.com/go-generics-typeclasses/" />
-<meta name="twitter:title" content="Generics as builtin typeclasses (in Go) · Matt Sherman" />
-<meta property="og:title" content="Generics as builtin typeclasses (in Go) · Matt Sherman" />
+<meta name="twitter:title" content="Generics as builtin typeclasses · Matt Sherman" />
+<meta property="og:title" content="Generics as builtin typeclasses · Matt Sherman" />
 <meta name="twitter:description" content="I love the debate around the generics proposal for Go 2." />
 <meta property="og:description" content="I love the debate around the generics proposal for Go 2." />
 <meta name="twitter:image" content="https://clipperhouse.com/img/apple-touch-icon.png" />
@@ -69,22 +69,18 @@
 
 <article class="post post-view">
   <header class="post-header">
-  <h1 class="post-title"><a href="https://clipperhouse.com/go-generics-typeclasses/">Generics as builtin typeclasses (in Go)</a></h1>
+  <h1 class="post-title"><a href="https://clipperhouse.com/go-generics-typeclasses/">Generics as builtin typeclasses</a></h1>
 </header>
 <div class="post-content">
   
 
 <p>I love the debate around the <a href="https://go.googlesource.com/proposal/+/master/design/go2draft-generics-overview.md">generics proposal for Go 2</a>.</p>
 
-<p>In the spirit of Go&rsquo;s ‘good enough’ type system, here&rsquo;s a thought experiment for a ‘good enough’ generics. I think we can get 80% of the power for 20% of the complexity.</p>
+<p>In the spirit of Go&rsquo;s ‘good enough’ type system, here&rsquo;s a thought experiment for ‘good enough’ generics. I think we can get 80% of the power for 20% of the complexity.</p>
 
-<p>(‘Good enough’ is a compliment – I come from a C# and find the simplicity of Go’s type system refreshing.)</p>
+<p>(‘Good enough’ is a compliment – I come from a C# background and find the simplicity of Go’s type system refreshing.)</p>
 
-<h3 id="typeclasses">Typeclasses</h3>
-
-<p>I propose that the first version of Go’s generics consist of a finite-but-thorough set of <strong>builtin type classes</strong>, instead of user-defined contracts.</p>
-
-<p>Usage might look like:</p>
+<p>I propose that the first version of Go’s generics consist of a finite-but-thorough set of <strong>builtin type classes</strong>, instead of user-defined contracts. Usage might look like:</p>
 
 <pre><code>func Sum(type T numeric)(x []T) T {
 	var total T
@@ -95,16 +91,18 @@
 }
 </code></pre>
 
-<p>&hellip;where <code>numeric</code> is a typeclass (defined below). In fact, the <code>go/types</code> library already <a href="https://github.com/golang/go/blob/master/src/go/types/predicates.go">defines many type classes</a>, without using that terminology.</p>
+<p>&hellip;where <code>numeric</code> is a typeclass (defined below). In fact, the <code>go/types</code> package already <a href="https://github.com/golang/go/blob/master/src/go/types/predicates.go">defines many type classes</a>, without using that terminology.</p>
 
-<p>Inspired by <code>go/types</code>, here’s a set of typeclasses that might meet a broad set of needs.</p>
+<p>Instead of covering the full design space of what generics can do, we focus on an intuitive set of typeclasses that meets a broad set of needs.</p>
+
+<h3 id="typeclasses">Typeclasses</h3>
 
 <pre><code>numeric = integer | float | complex	
   // supports +, -, *, / operators, enabling generic Sum, Average, etc
 
 comparable = [requires logic]
-   // supports == operator, enabling generic Set. logic at:
-   // https://github.com/golang/go/blob/master/src/go/types/predicates.go#L81
+   // supports == operator, enabling generic Set
+   // Defined here: https://golang.org/ref/spec#Comparison_operators
 
 orderable = integer | float | string
   // supports &lt; and &gt; operators, enabling generic Min, Max, Sort
@@ -120,11 +118,11 @@ complex = complex64 | complex128
 
 <p>These look a lot like <strong>union types</strong>. <code>int8</code> gets unioned into <code>integer</code> which gets unioned into <code>numeric</code>, etc.</p>
 
-<p>Another way to think of type classes is as <strong>interfaces for infix operators</strong>. Imagine that the <code>+</code> operator were an <code>Add()</code> method instead. The <code>numeric</code> type above is a lot like an <code>Adder</code> interface.</p>
+<p>Another way to think of type classes is as <strong>interfaces for operators</strong>. Imagine that the <code>+</code> operator were an <code>Add()</code> method instead. The <code>numeric</code> type above is a lot like an <code>Adder</code> interface.</p>
 
-<h3 id="inferrable">Inferrable?</h3>
+<h3 id="inferable">Inferable?</h3>
 
-<p>It appears that type classes are inferrable at compile time, even without declaring them – if we call a generic Sum with a non-numeric type, we can know that, no?</p>
+<p>It appears that type classes are inferable at compile time, even without declaring them – if we call a generic Sum with a non-numeric type, we can know that, yes?</p>
 
 </div>
 <footer class="post-footer">
