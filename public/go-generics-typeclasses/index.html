@@ -119,9 +119,32 @@ float = float32 | float64
 complex = complex64 | complex128
 </code></pre>
 
-<h3 id="what-these-remind-me-of">What these remind me of</h3>
+<h3 id="assignability">Assignability</h3>
 
-<p>These look a lot like <strong>union types</strong>. <code>int8</code> gets unioned into <code>integer</code> which gets unioned into <code>numeric</code>, etc.</p>
+<p>Typeclasses are not assignable types, they are (optional) constraints on generic type declarations.</p>
+
+<pre><code>// Wrong
+type Foo struct {
+	Age numeric
+}
+
+// Right
+type Foo(type T numeric) struct {
+	Age T
+}
+
+// Constructor example
+func NewFoo(type T numeric)(age T) Foo(T) {
+	foo := Foo(T) {
+		Age : age,
+	}
+	return foo
+}
+</code></pre>
+
+<h3 id="what-this-reminds-me-of">What this reminds me of</h3>
+
+<p>Typeclasses look a lot like <strong>union types</strong>. <code>int8</code> gets unioned into <code>integer</code> which gets unioned into <code>numeric</code>, etc.</p>
 
 <p>Another way to think of type classes is as <strong>interfaces for operators</strong>. Imagine that the <code>+</code> operator were an <code>Add()</code> method instead. The <code>numeric</code> type above is a lot like an <code>Adder</code> interface.</p>
 

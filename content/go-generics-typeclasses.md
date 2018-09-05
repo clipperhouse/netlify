@@ -52,8 +52,32 @@ float = float32 | float64
 complex = complex64 | complex128
 ```
 
-### What these remind me of
+### Assignability
 
-These look a lot like **union types**. `int8` gets unioned into `integer` which gets unioned into `numeric`, etc.
+Typeclasses are not assignable types, they are (optional) constraints on generic type declarations.
+
+```
+// Wrong
+type Foo struct {
+	Age numeric
+}
+
+// Right
+type Foo(type T numeric) struct {
+	Age T
+}
+
+// Constructor example
+func NewFoo(type T numeric)(age T) Foo(T) {
+	foo := Foo(T) {
+		Age : age,
+	}
+	return foo
+}
+```
+
+### What this reminds me of
+
+Typeclasses look a lot like **union types**. `int8` gets unioned into `integer` which gets unioned into `numeric`, etc.
 
 Another way to think of type classes is as **interfaces for operators**. Imagine that the `+` operator were an `Add()` method instead. The `numeric` type above is a lot like an `Adder` interface.
