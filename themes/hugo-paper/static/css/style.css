@@ -71,9 +71,12 @@ pre, .pre {
   padding: 16px;
   border-radius: 5px;
   white-space: pre-wrap;
+  overflow-x: auto;
 }
 pre code {
   font-size: inherit;
+  white-space: pre;
+  word-wrap: normal;
 }
 /* Header
 ============================================================= */
