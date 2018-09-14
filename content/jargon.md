@@ -2,6 +2,7 @@
 title: "Jargon demo"
 date: 2018-05-18
 style: "app"
+draft: true
 css:
 - "/css/jargon.css"
 js:
