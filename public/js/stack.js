@@ -117,7 +117,12 @@
 				location.href = ui.item.href;
 			},
 			autoFocus: true,
-			delay: 200
+			delay: 200,
+			open: function (result) {	// https://stackoverflow.com/a/32817003/70613
+				if (navigator.userAgent.match(/(iPod|iPhone|iPad)/)) {
+					$('.ui-autocomplete').off('menufocus hover mouseover');
+				}
+			}
 		});
 
 		input.focus();
