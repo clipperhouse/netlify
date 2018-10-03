@@ -834,12 +834,12 @@ body .ui-tooltip {
 }
 
 .ui-menu {
-    box-shadow: rgba(128, 128, 128, .5) 1px 1px 10px;
+    box-shadow: rgba(90, 200, 250, .8) 1px 1px 10px;
     border-radius: 0 0 3px 3px;
 }
 
 .ui-menu .ui-menu-item-wrapper {
-    padding: 6px;
+    padding: 10px 10px;
     font-size: 16px;
 }
 
@@ -847,5 +847,5 @@ body .ui-tooltip {
 .ui-menu .ui-state-active {
 	margin: 0;
     cursor: pointer;
-    background-color: #e0eaf1;
+    background-color:  rgba(90, 200, 250, .25);
 }

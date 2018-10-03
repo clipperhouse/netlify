@@ -16,7 +16,7 @@ js:
 A tool to discover correlations between technologies on Stack Exchange sites. Start typing a tag name below, or click one of the popular ones.
 
 <div id="form">
-    <input name="tag" id="tag" type="search" /><br />
+    <input name="tag" id="tag" type="search" autocapitalize="none" autocorrect="off" /><br />
     <span id="popular">
         Popular: &nbsp;<a href="#stackoverflow/javascript" class="tag">javascript</a>
         <a href="#stackoverflow/java" class="tag">java</a>

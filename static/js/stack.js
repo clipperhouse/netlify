@@ -96,7 +96,7 @@
 		// set up autocomplete
 		input.autocomplete({
 			source: function (request, response) {
-				getJSONCached(urls.api_tags(state.site, request.term), function (data) {
+				getJSONCached(urls.api_tags(state.site, request.term.toLowerCase()), function (data) {
 					var results = [];
 					var items = data.items;
 					var len = items.length;
