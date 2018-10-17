@@ -3,6 +3,9 @@ title: "About"
 description: "What I am looking for next"
 date: 2018-05-27
 style: "app"
+js:
+- "https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"
+- "/js/tech-talk.js"
 ---
 
 
@@ -45,7 +48,9 @@ I founded and led engineering for [Alikewise](/alikewise/), a dating site based 
 
 Non-technical folks appreciate my ability to explain technology, and how to get things done with engineers. At Stack Overflow, this meant salespeople and technical recruiters.
 
-I offer this expertise on a consulting basis, for your teams. [Learn more...](/tech-talk/)
+I offer this expertise on a consulting basis, for your teams.
+
+<button href="/tech-talk/"> Learn more... </button>
 
 ### Contact
 
@@ -63,9 +68,15 @@ I am on Twitter at [@clipperhouse](https://mobile.twitter.com/@clipperhouse). He
     opacity: .9;
 }
 
-.post-content p:first-of-type img {
+.post-content p:first-of-type img { 
     width: 120px;
     border-radius: 50%;
     border: 1px solid #999;
+}
+
+button {
+    width: auto;
+    background-color: #007AFF;
+    color: white;
 }
 </style>

@@ -70,7 +70,7 @@ Matt is reachable at mwsherman@gmail.com and +1 415-516-5121. Feel free to get i
     border: 1px solid #999;
 }
 
-input[type=submit], button {
+button {
     width: auto;
     background-color: #007AFF;
     color: white;
