@@ -6,10 +6,19 @@
     <description>Recent content on clipperhouse.com</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 04 Sep 2018 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 17 Oct 2018 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://clipperhouse.com/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Tech talk for recruiters and salespeople</title>
+      <link>https://clipperhouse.com/tech-talk/</link>
+      <pubDate>Wed, 17 Oct 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://clipperhouse.com/tech-talk/</guid>
+      <description>The world of technology can be overwhelming — so much jargon and ever-changing markets.</description>
+    </item>
     
     <item>
       <title>Generics as builtin typeclasses</title>
