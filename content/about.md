@@ -45,6 +45,8 @@ I founded and led engineering for [Alikewise](/alikewise/), a dating site based 
 
 Non-technical folks appreciate my ability to explain technology, and how to get things done with engineers. At Stack Overflow, this meant salespeople and technical recruiters.
 
+I offer this expertise on a consulting basis, for your teams. [Learn more...](/tech-talk/)
+
 ### Contact
 
 I am reachable at mwsherman@gmail.com and +1 415 516-5121.

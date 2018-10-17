@@ -46,6 +46,8 @@ Evaluating a technical resume is difficult and time-consuming. Matt will work wi
 
 Matt Sherman is a veteran engineering manager, most recently at Stack Overflow. There, he developed many of the recruitment, management and employee review processes — and has strong opinions on doing them right. [Learn more...](/about/)
 
+Matt is reachable at mwsherman@gmail.com and +1 415-516-5121. Feel free to get in touch.
+
 
 <style>
 .post-content p:first-of-type {
