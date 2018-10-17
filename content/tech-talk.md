@@ -3,6 +3,9 @@ title: "Tech talk for recruiters and salespeople"
 date: 2018-10-17
 author: "Matt Sherman"
 style: "app"
+js:
+- "https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"
+- "/js/tech-talk.js"
 ---
 
 ![Matt Sherman](https://pbs.twimg.com/profile_images/557247446649036800/JSalo08u_400x400.jpeg)
@@ -44,10 +47,13 @@ Evaluating a technical resume is difficult and time-consuming. Matt will work wi
 
 ### About Matt
 
-Matt Sherman is a veteran engineering manager, most recently at Stack Overflow. There, he developed many of the recruitment, management and employee review processes — and has strong opinions on doing them right. [Learn more...](/about/)
+Matt Sherman is a veteran engineering manager, most recently at Stack Overflow. There, he developed many of the recruitment, management and employee review processes — and has strong opinions on doing them right.
+
+Matt created the “ask a nerd” program at Stack, connecting salespeople and clients to technical experts.
+
+<button href="/about/"> Learn more... </button>
 
 Matt is reachable at mwsherman@gmail.com and +1 415-516-5121. Feel free to get in touch.
-
 
 <style>
 .post-content p:first-of-type {
@@ -62,5 +68,11 @@ Matt is reachable at mwsherman@gmail.com and +1 415-516-5121. Feel free to get i
     width: 120px;
     border-radius: 50%;
     border: 1px solid #999;
+}
+
+input[type=submit], button {
+    width: auto;
+    background-color: #007AFF;
+    color: white;
 }
 </style>
