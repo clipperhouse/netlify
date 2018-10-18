@@ -9,7 +9,7 @@ js:
 - "/js/jargon.js"
 ---
 
-Jargon is a Go package with tokenizers and lemmatizers. It’s useful for identifying, and optionally replacing, canonical terms in text. [Source](https://github.com/clipperhouse/jargon).
+Jargon is a Go package with tokenizers and lemmatizers. It’s useful for identifying, and optionally replacing, canonical terms in text. [Source & docs](https://github.com/clipperhouse/jargon).
 
 <form action="/api/jargon/" method="POST">
     <span class="hint">
