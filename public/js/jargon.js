@@ -18,7 +18,7 @@
 
   var radios = $("input[name=format]");
   var examples = $("#examples");
-  radios.on("change", function(e) {
+  radios.on("click", function(e) {
     var ex = examples.find("#" + this.id);
     var form = $(this.form);
     var input = form.find("textarea");
@@ -29,8 +29,8 @@
     result.html("").hide();
   });
 
-  setTimeout(function(){
-    radios.first().click();
+  setTimeout(() => {
+    radios.first().click();    
   }, 1);
 
   if (location.hostname == "localhost") {
