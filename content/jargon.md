@@ -16,7 +16,7 @@ Jargon is a Go package with tokenizers and lemmatizers. It’s useful for identi
         Examples:
     </span>
     <label for="prose">
-        <input type="radio" id="prose" name="format" value="text">
+        <input type="radio" id="prose" name="format" value="text" checked>
         Text
     </label>
     <label for="html">

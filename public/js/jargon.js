@@ -28,10 +28,13 @@
     input.val(htmlDecode(val));
     result.html("").hide();
   });
-  radios.first().click();
+
+  setTimeout(function(){
+    radios.first().click();
+  }, 1);
 
   if (location.hostname == "localhost") {
-    $("form").attr("action", "//localhost:8080");
+    $("form").attr("action", "//localhost:8080/");
   }
 
   function htmlEncode(value){
@@ -45,7 +48,7 @@
   }
 
   // ping for warmup
-  var ping = $("form").attr("action") + "/jargon/text";
+  var ping = $("form").attr("action") + $('input[name=format]:checked').val();
   $.get(ping, function(data){
     console.log(data);
   });
