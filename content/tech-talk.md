@@ -12,7 +12,7 @@ js:
 
 The world of technology can be overwhelming — so much jargon and an ever-changing landscape.
 
-If you’re a non-technical person in a technical field, **knowledge and credibility** matter a lot; leveling-up one’s understanding makes one more competitive.
+If you’re in a technical field, **knowledge and credibility** matter a lot; leveling-up one’s understanding makes one more competitive.
 
 [Matt Sherman](/about/) specializes in explaining this landscape to folks in non-technical roles, especially  recruiting and sales.
 
@@ -23,9 +23,9 @@ Matt offers an introductory tour to get a handle on technology jargon and ecosys
 - What do programmers do exactly?
 - Why are there so many programming languages?
 - What is Java? Is it the same as JavaScript?
+- What is ‘front-end’ vs ‘back-end’?
 - What is a database?
 - What do data scientists do?
-- What is ‘front-end’ vs ‘back-end’?
 - What is devops?
 
 This interactive session takes around an hour, and is customized for the audience. It is intended to be conversational, with lots of detours for audience questions. [Here’s a preview.](https://youtu.be/oGWGzkEHnQU)
