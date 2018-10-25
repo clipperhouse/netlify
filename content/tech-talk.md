@@ -12,7 +12,9 @@ js:
 
 The world of technology can be overwhelming — so much jargon and an ever-changing landscape.
 
-[Matt Sherman](/about/) specializes in explaining this landscape to folks in non-technical roles, especially technical recruiting and sales.
+If you’re a non-technical person in a technical field, **knowledge and credibility** matter a lot; leveling-up one’s understanding makes one more competitive.
+
+[Matt Sherman](/about/) specializes in explaining this landscape to folks in non-technical roles, especially  recruiting and sales.
 
 ## Whirlwind tour
 
@@ -30,9 +32,9 @@ This interactive session takes around an hour, and is customized for the audienc
 
 ## Tech recruiting boot camp
 
-You’ve been asked to hire technical people: engineers, data scientists, systems administrators. It’s a tough job in a competitive market.
+You’ve been asked to hire technical people: engineers, data scientists, systems administrators. It’s a challenging task in a competitive market.
 
-Matt will work with you to understand this landscape, and most importantly, to improve your credibility with candidates. We’ll develop your strategies for attracting the right talent.
+Matt will work with you to understand the technical talent landscape, to improve your credibility with candidates. We’ll develop your strategies for attracting the right applicants.
 
 ## Job listings workshop
 
@@ -56,7 +58,7 @@ Evaluating a technical resume is difficult and time-consuming. Matt will work wi
 
 ### About Matt
 
-Matt Sherman is a veteran engineering manager, most recently at Stack Overflow. There, he developed many of the recruitment, management and employee review processes — and has strong opinions on doing them right.
+Matt Sherman is a veteran engineering manager and programmer, most recently at Stack Overflow. There, he developed many of the recruitment, management and employee review processes — and has strong opinions on doing them right.
 
 Matt created the “ask a nerd” program at Stack, connecting salespeople and clients to technical experts.
 
