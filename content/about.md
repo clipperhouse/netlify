@@ -1,5 +1,5 @@
 ---
-title: "About"
+title: "Hi, I’m Matt"
 description: "What I am looking for next"
 date: 2018-05-27
 style: "app"
@@ -8,10 +8,7 @@ js:
 - "/js/tech-talk.js"
 ---
 
-
-![Matt Sherman](https://pbs.twimg.com/profile_images/557247446649036800/JSalo08u_400x400.jpeg)
-
-### Hi, I’m Matt
+![Matt Sherman](https://pbs.twimg.com/profile_images/557247446649036800/JSalo08u_400x400.jpeg#photo)
 
 I am a founder, engineering manager and developer in NYC. I recently decided to leave Stack Overflow, and am taking some time to find my next thing. I’d like to start something new or join something small.
 
@@ -60,15 +57,12 @@ I am on Twitter at [@clipperhouse](https://mobile.twitter.com/@clipperhouse). He
 
 
 <style>
-.post-content p:first-of-type {
-    float:right;
-    margin-left: 2em;
+img[src$='#photo'] {
+    float: right;
+    margin: 0 0 2em 2em;
     position: relative;
     top: 30px;
     opacity: .9;
-}
-
-.post-content p:first-of-type img { 
     width: 120px;
     border-radius: 50%;
     border: 1px solid #999;

@@ -10,9 +10,9 @@ js:
 
 ![Matt Sherman](https://pbs.twimg.com/profile_images/557247446649036800/JSalo08u_400x400.jpeg#photo)
 
-The world of technology can be overwhelming — so much jargon and ever-changing markets.
+The world of technology can be overwhelming — so much jargon and an ever-changing landscape.
 
-[Matt Sherman](/about/) specializes in explaining the technical landscape to folks in non-technical roles, especially technical recruiting and sales.
+[Matt Sherman](/about/) specializes in explaining this landscape to folks in non-technical roles, especially technical recruiting and sales.
 
 ## Whirlwind tour
 
@@ -67,8 +67,8 @@ Matt is reachable at mwsherman@gmail.com and +1 415-516-5121. Feel free to get i
 <style>
 
 img[src$='#photo'] {
-    float:right;
-    margin-left: 2em;
+    float: right;
+    margin: 0 0 2em 2em;
     position: relative;
     top: 30px;
     opacity: .9;
