@@ -16,7 +16,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
   <title>Jargon demo · Matt Sherman</title>
-  <meta name="description" content="Jargon is a Go package with tokenizers and lemmatizers. It’s useful for identifying, and optionally replacing, canonical terms in text.">
+  <meta name="description" content="Jargon is a Go package with tokenizers and lemmatizers. Source &amp; docs.">
   <meta name="author" content="Matt Sherman">
   <link href="/css/style.css?3" rel="stylesheet">
   <link href="/css/jargon.css" rel="stylesheet">
@@ -36,8 +36,8 @@
 <meta property="og:url" content="https://clipperhouse.com/jargon/" />
 <meta name="twitter:title" content="Jargon demo · Matt Sherman" />
 <meta property="og:title" content="Jargon demo · Matt Sherman" />
-<meta name="twitter:description" content="Jargon is a Go package with tokenizers and lemmatizers. It’s useful for identifying, and optionally replacing, canonical terms in text." />
-<meta property="og:description" content="Jargon is a Go package with tokenizers and lemmatizers. It’s useful for identifying, and optionally replacing, canonical terms in text." />
+<meta name="twitter:description" content="Jargon is a Go package with tokenizers and lemmatizers. Source &amp; docs." />
+<meta property="og:description" content="Jargon is a Go package with tokenizers and lemmatizers. Source &amp; docs." />
 <meta name="twitter:image" content="https://clipperhouse.com/img/apple-touch-icon.png" />
 <meta property="og:image" content="https://clipperhouse.com/img/apple-touch-icon.png" />
 </head>
@@ -73,7 +73,7 @@
   <h1 class="post-title"><a href="https://clipperhouse.com/jargon/">Jargon demo</a></h1>
 </header>
 <div class="post-content">
-  <p>Jargon is a Go package with tokenizers and lemmatizers. It’s useful for identifying, and optionally replacing, canonical terms in text. <a href="https://github.com/clipperhouse/jargon">Source &amp; docs</a>.</p>
+  <p>Jargon is a Go package with tokenizers and lemmatizers. <a href="https://github.com/clipperhouse/jargon">Source &amp; docs</a>.</p>
 
 <form action="/api/jargon/" method="POST">
     <span class="hint">
@@ -96,10 +96,10 @@
         CSV
     </label>
 
-    <textarea class="code" id="text" name="text" rows="8"></textarea>
+    <textarea class="code" id="text" name="text" rows="11"></textarea>
 
     <div>
-        <button type="submit">👉 Lemmatize</button>
+        <button type="submit">Click to lemmatize</button>
     </div>
 
     <div class="pre code result"></div>
@@ -107,11 +107,13 @@
 
 <div id="examples" class="examples">
     <div id="prose">
-We can lemmatize plain prose, perhaps a technical job listing:
+Jargon picks out known terms (lemmas) from technical text, for example:
 
-We are looking for experienced Rails developers, with experience in HTML 5 and T-SQL.
+We are looking for experienced Rails developers, with experience in NodeJS and Obj C.
 
-Experience with ObjC and cpp and vue and React  Native is a plus.
+The result is consistent, canonical terminology — allowing for better analysis like NLP. Jargon uses tags and synonyms from StackOverflow, and implements ‘insensitivity’ to spaces, hyphens, dots and case.
+
+Source data might use ’react’, ‘React.js’ or ‘React  JS’ or ‘REACTJS’, but we are confident they get converted to one string.
     </div>
     <div id="html">
 We can lemmatize HTML, but only the text nodes.
@@ -136,6 +138,18 @@ The parsing rules work well for JSON:
 ]}
     </div>
 </div>
+
+<style>
+    form button {
+        border: 0;
+        background-color: rgba(0, 122, 255, .8);
+        color: white;
+    }
+
+    form textarea {
+        border-color: rgba(0, 122, 255, .8);
+    }
+</style>
 
 </div>
 <footer class="post-footer">

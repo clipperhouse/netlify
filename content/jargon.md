@@ -9,7 +9,7 @@ js:
 - "/js/jargon.js"
 ---
 
-Jargon is a Go package with tokenizers and lemmatizers. It’s useful for identifying, and optionally replacing, canonical terms in text. [Source & docs](https://github.com/clipperhouse/jargon).
+Jargon is a Go package with tokenizers and lemmatizers. [Source & docs](https://github.com/clipperhouse/jargon).
 
 <form action="/api/jargon/" method="POST">
     <span class="hint">
@@ -32,10 +32,10 @@ Jargon is a Go package with tokenizers and lemmatizers. It’s useful for identi
         CSV
     </label>
 
-    <textarea class="code" id="text" name="text" rows="8"></textarea>
+    <textarea class="code" id="text" name="text" rows="11"></textarea>
 
     <div>
-        <button type="submit">👉 Lemmatize</button>
+        <button type="submit">Click to lemmatize</button>
     </div>
 
     <div class="pre code result"></div>
@@ -43,11 +43,13 @@ Jargon is a Go package with tokenizers and lemmatizers. It’s useful for identi
 
 <div id="examples" class="examples">
     <div id="prose">
-We can lemmatize plain prose, perhaps a technical job listing:
+Jargon picks out known terms (lemmas) from technical text, for example:
 
-We are looking for experienced Rails developers, with experience in HTML 5 and T-SQL.
+We are looking for experienced Rails developers, with experience in NodeJS and Obj C.
 
-Experience with ObjC and cpp and vue and React  Native is a plus.
+The result is consistent, canonical terminology — allowing for better analysis like NLP. Jargon uses tags and synonyms from StackOverflow, and implements ‘insensitivity’ to spaces, hyphens, dots and case.
+
+Source data might use ’react’, ‘React.js’ or ‘React  JS’ or ‘REACTJS’, but we are confident they get converted to one string.
     </div>
     <div id="html">
 We can lemmatize HTML, but only the text nodes.
@@ -72,3 +74,15 @@ The parsing rules work well for JSON:
 ]}
     </div>
 </div>
+
+<style>
+    form button {
+        border: 0;
+        background-color: rgba(0, 122, 255, .8);
+        color: white;
+    }
+
+    form textarea {
+        border-color: rgba(0, 122, 255, .8);
+    }
+</style>
