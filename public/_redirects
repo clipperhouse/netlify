@@ -6,4 +6,4 @@ http://clipperhouse.netlify.com/* https://clipperhouse.com/:splat 302!
 
 /blog/* /:splat 302
 
-/api/jargon/*  https://jargon-demo-219616.appspot.com/:splat  200
+/api/jargon/*  https://jargon.appspot.com/:splat  200
