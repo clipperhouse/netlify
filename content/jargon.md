@@ -5,7 +5,7 @@ style: "app"
 css:
 - "/css/jargon.css"
 js:
-- "https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"
+- "https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"
 - "/js/jargon.js"
 ---
 

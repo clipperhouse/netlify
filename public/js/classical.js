@@ -19,29 +19,28 @@ $(function(){
 
 	var current;
 
-	$(document).on('click', '.station', function(e) {
-		e.stopPropagation();
+	document.querySelectorAll('.station').forEach(station => {
+		station.addEventListener('click', e => {
+			e.stopPropagation();
+			if (current && station.getAttribute('id') === current.getAttribute('id')) {
+				return;
+			}
 
-		var station = $(this);
+			current = station;
 
-		if (current && station.attr('id') === current.attr('id')) {
-			return;
-		}
-
-		current = station;
-
-		audio.pause();
-		audio.src = station.data('src');
-
-		var c = $(control);
-
-		c.slideUp(250, function(){
-			audio.play();
-			station.after(control);
-			c.slideDown();
+			audio.pause();
+			audio.src = station.getAttribute('data-src');
+	
+			var c = $(control);
+	
+			c.slideUp(250, function(){
+				audio.play();
+				station.after(control);
+				c.slideDown();
+			});
+	
+			e.preventDefault();
 		});
-
-		e.preventDefault();
 	});
 
 	var faq = $('#faq');
