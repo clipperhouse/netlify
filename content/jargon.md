@@ -42,37 +42,45 @@ Jargon is a Go package with tokenizers and lemmatizers. [Source & docs](https://
 </form>
 
 <div id="examples" class="examples">
-    <div id="prose">
-Jargon picks out known terms (lemmas) from technical text, for example:
+<div id="prose">
 
-We are looking for experienced Rails developers, with experience in NodeJS and Obj C.
+    Jargon picks out known terms (lemmas) from technical text, for example:
 
-The result is consistent, canonical terminology — allowing for better analysis like NLP. Jargon uses tags and synonyms from StackOverflow, and implements ‘insensitivity’ to spaces, hyphens, dots and case.
+    We are looking for experienced Rails developers, with experience in NodeJS and Obj C.
 
-Source data might use ’react’, ‘React.js’ or ‘React  JS’ or ‘REACTJS’, but we are confident they get converted to one string.
-    </div>
-    <div id="html">
-We can lemmatize HTML, but only the text nodes.
+    The result is consistent, canonical terminology — allowing for better analysis like NLP. Jargon uses tags and synonyms from StackOverflow, and implements insensitivity to spaces, hyphens, dots and case.
 
-<!— Comments are left verbatim even if terms like Ruby are within them. True for tags and attributes as well. -->
+    Source data might use react, React.js or React  JS or REACTJS, but we are confident they get converted to one string.
 
-<p class="rails">Hi! Let's talk Rails and SQL.</p>
-    </div>
-    <div id="csv">
-The parsing rules work well for comma separated files:
+</div>
+<div id="html">
 
-Name,Skills,Years
-Jane Doe,"c sharp, ecma script",6
-Foo Bar,"aspnet mvc R NodeJS", 7.5
-    </div>
-    <div id="json">
-The parsing rules work well for JSON:
+    We can lemmatize HTML, but only the text nodes.
 
-{[
+    <!— Comments are left verbatim even if terms like Ruby are within them. True for tags and attributes as well. -->
+
+    <p class="rails">Hi! Let's talk Rails and SQL.</p>
+
+</div>
+<div id="csv">
+
+    The parsing rules work well for comma separated files:
+
+    Name,Skills,Years
+    Jane Doe,"c sharp, ecma script",6
+    Foo Bar,"aspnet mvc R NodeJS", 7.5
+
+</div>
+<div id="json">
+
+    The parsing rules work well for JSON:
+
+    {[
     "name": "Microsoft Access",
     "name": "X Code"
-]}
-    </div>
+    ]}
+    
+</div>
 </div>
 
 <style>

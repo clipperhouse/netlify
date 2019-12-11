@@ -101,30 +101,41 @@
 <div class="pre code result"></div>
 </form>
 <div id="examples" class="examples">
-    <div id="prose">
-Jargon picks out known terms (lemmas) from technical text, for example:
-<p>We are looking for experienced Rails developers, with experience in NodeJS and Obj C.</p>
-<p>The result is consistent, canonical terminology — allowing for better analysis like NLP. Jargon uses tags and synonyms from StackOverflow, and implements ‘insensitivity’ to spaces, hyphens, dots and case.</p>
-<p>Source data might use ’react’, ‘React.js’ or ‘React  JS’ or ‘REACTJS’, but we are confident they get converted to one string.
+<div id="prose">
+<pre><code>Jargon picks out known terms (lemmas) from technical text, for example:
+
+We are looking for experienced Rails developers, with experience in NodeJS and Obj C.
+
+The result is consistent, canonical terminology — allowing for better analysis like NLP. Jargon uses tags and synonyms from StackOverflow, and implements insensitivity to spaces, hyphens, dots and case.
+
+Source data might use react, React.js or React  JS or REACTJS, but we are confident they get converted to one string.
+</code></pre>
 </div>
 <div id="html">
-We can lemmatize HTML, but only the text nodes.</p>
-<p>&lt;!— Comments are left verbatim even if terms like Ruby are within them. True for tags and attributes as well. &ndash;&gt;</p>
-<p class="rails">Hi! Let's talk Rails and SQL.</p>
-    </div>
-    <div id="csv">
-The parsing rules work well for comma separated files:
-<p>Name,Skills,Years
-Jane Doe,&ldquo;c sharp, ecma script&rdquo;,6
-Foo Bar,&ldquo;aspnet mvc R NodeJS&rdquo;, 7.5
+<pre><code>We can lemmatize HTML, but only the text nodes.
+
+&lt;!— Comments are left verbatim even if terms like Ruby are within them. True for tags and attributes as well. --&gt;
+
+&lt;p class=&quot;rails&quot;&gt;Hi! Let's talk Rails and SQL.&lt;/p&gt;
+</code></pre>
+</div>
+<div id="csv">
+<pre><code>The parsing rules work well for comma separated files:
+
+Name,Skills,Years
+Jane Doe,&quot;c sharp, ecma script&quot;,6
+Foo Bar,&quot;aspnet mvc R NodeJS&quot;, 7.5
+</code></pre>
 </div>
 <div id="json">
-The parsing rules work well for JSON:</p>
-<p>{[
-&ldquo;name&rdquo;: &ldquo;Microsoft Access&rdquo;,
-&ldquo;name&rdquo;: &ldquo;X Code&rdquo;
+<pre><code>The parsing rules work well for JSON:
+
+{[
+&quot;name&quot;: &quot;Microsoft Access&quot;,
+&quot;name&quot;: &quot;X Code&quot;
 ]}
-</div></p>
+</code></pre>
+</div>
 </div>
 <style>
     form button {

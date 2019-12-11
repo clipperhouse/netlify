@@ -475,7 +475,7 @@ input[type=search]{
 a[href^='https://github.com'] {
   padding-right: 22px;
   padding-left: 2px;
-  background-image: url(https://assets-cdn.github.com/favicon.ico);
+  background-image: url(https://github.githubassets.com/favicon.ico);
   background-repeat: no-repeat;
   background-position: right center;
   background-size: 18px 18px;

@@ -19,11 +19,11 @@
   var radios = $("input[name=format]");
   var examples = $("#examples");
   radios.on("click", function(e) {
-    var ex = examples.find("#" + this.id);
+    var ex = examples.find("#" + this.id).find("code");
     var form = $(this.form);
     var input = form.find("textarea");
     var result = form.find(".result");
-    var val = htmlEncode(ex.html().trim())
+    var val = ex.html().trim();
     
     input.val(htmlDecode(val));
     result.html("").hide();
@@ -34,13 +34,7 @@
   }, 1);
 
   if (location.hostname == "localhost") {
-    $("form").attr("action", "//localhost:8080/");
-  }
-
-  function htmlEncode(value){
-    //create a in-memory div, set it's inner text(which jQuery automatically encodes)
-    //then grab the encoded contents back out.  The div never exists on the page.
-    return $('<div/>').text(value).html();
+   $("form").attr("action", "//localhost:8080/");
   }
 
   function htmlDecode(value){
