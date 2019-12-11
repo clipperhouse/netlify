@@ -73,54 +73,14 @@
 </header>
 <div class="post-content">
   <p>There are stylistic debates about how much nesting or indentation one should choose in code. <a href="http://talks.golang.org/2013/bestpractices.slide#3">This slide</a> and the <a href="http://talks.golang.org/2013/bestpractices.slide#4">one that follows</a> illustrate the issue well. The slide refers to “cognitive load” without explaining, and it occurs to me that <strong>nesting is state</strong>.</p>
-
 <p>In the first example, if we want to debug around the highlighted line, what do we need to keep in mind?
-<code>func (g *Gopher) WriteTo(w io.Writer) (size int64, err error) {  
-    err = binary.Write(w, binary.LittleEndian, int32(len(g.Name)))  
-    if err == nil {  
-        size += 4  
-        var n int  
-        n, err = w.Write([]byte(g.Name))  
-        size += int64(n)  
-        if err == nil {  
-            err = binary.Write(w, binary.LittleEndian, int64(g.AgeYears))  
-            if err == nil {  
-                size += 4  
-            }  
-            return  
-        }  
-        return  
-    }  
-    return  
-}</code></p>
-
+<code>func (g *Gopher) WriteTo(w io.Writer) (size int64, err error) {   err = binary.Write(w, binary.LittleEndian, int32(len(g.Name)))   if err == nil {   size += 4   var n int   n, err = w.Write([]byte(g.Name))   size += int64(n)   if err == nil {   err = binary.Write(w, binary.LittleEndian, int64(g.AgeYears))   if err == nil {   size += 4   }   return   }   return   }   return   }</code></p>
 <p>Answer: <em>the truth of each of the if statements that precede it.</em> Each of those bits of truth is a piece of state. Now look at the alternative:
-<code>func (g *Gopher) WriteTo(w io.Writer) (size int64, err error) {  
-    err = binary.Write(w, binary.LittleEndian, int32(len(g.Name)))  
-    if err != nil {  
-        return  
-    }  
-    size += 4  
-    n, err := w.Write([]byte(g.Name))  
-    size += int64(n)  
-    if err != nil {  
-        return  
-    }  
-    err = binary.Write(w, binary.LittleEndian, int64(g.AgeYears))  
-    if err == nil {  
-        size += 4  
-    }  
-    return  
-}</code></p>
-
+<code>func (g *Gopher) WriteTo(w io.Writer) (size int64, err error) {   err = binary.Write(w, binary.LittleEndian, int32(len(g.Name)))   if err != nil {   return   }   size += 4   n, err := w.Write([]byte(g.Name))   size += int64(n)   if err != nil {   return   }   err = binary.Write(w, binary.LittleEndian, int64(g.AgeYears))   if err == nil {   size += 4   }   return   }</code></p>
 <p>In this case, the highlighted line “cares” very little about what came before — all it needs to know is that we got there.</p>
-
 <p>The flattening of the hierarchy plus lots of return-on-fail can be thought of as “shedding” state. I call this pattern “fail fast”: by the time you get to the bottom of the code, you really only need one piece of “state”, which is “we’ve gotten this far successfully”. You can forget the past.</p>
-
 <p>Of course, the logic of these two examples is equivalent. I am speaking of the mental model — the list of “non-local” things that must be kept in mind when working with a local piece of code.</p>
-
 <p>And for me, “list of non-local things” is a good definition of “state”.</p>
-
 <p><a href="https://news.ycombinator.com/item?id=7497134"><em>discuss on hacker news</em></a></p>
 
 </div>

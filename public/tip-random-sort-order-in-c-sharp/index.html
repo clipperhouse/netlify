@@ -73,29 +73,23 @@
 </header>
 <div class="post-content">
   <p>I wanted to randomize the display of a List on <a href="http://alikewise.com/">my site</a> — meaning I would retrieve (say) 20 records, but display only 5, chosen at random. I was imagining a loop that generates a bunch of random indexes, which I use to individually pull elements from the list. Yuck.</p>
-
 <p>The solution I <a href="http://wiki.evident.nl/Default.aspx?Page=Random-sort-order-Csharp">found</a> is much more elegant — two lines! To randomize your list, simply:
-var rnd = new Random();<br />
+var rnd = new Random();<br>
 myList = myList.OrderBy(x =&gt; rnd.Next()).ToList();</p>
-
 <p>To take <em>n</em> random elements:
-var rnd = new Random();<br />
+var rnd = new Random();<br>
 myList = myList.OrderBy(x =&gt; rnd.Next()).Take(n).ToList();</p>
-
 <p>If you’d like to encapsulate it, you might use extension methods:
-public static IEnumerable&lt;T&gt; OrderByRandom&lt;T&gt;(this IEnumerable&lt;T&gt; source)<br />
-{<br />
- var rnd = new Random();<br />
- return source.OrderBy(x =&gt; rnd.Next());<br />
+public static IEnumerable&lt;T&gt; OrderByRandom&lt;T&gt;(this IEnumerable&lt;T&gt; source)<br>
+{<br>
+var rnd = new Random();<br>
+return source.OrderBy(x =&gt; rnd.Next());<br>
 }</p>
-
-<p>public static IEnumerable&lt;T&gt; TakeRandom&lt;T&gt;(this IEnumerable&lt;T&gt; source, int n)<br />
-{<br />
- return source.OrderByRandom().Take(n);<br />
+<p>public static IEnumerable&lt;T&gt; TakeRandom&lt;T&gt;(this IEnumerable&lt;T&gt; source, int n)<br>
+{<br>
+return source.OrderByRandom().Take(n);<br>
 }</p>
-
 <p>Hope this helps.</p>
-
 <p><em>Note: be careful with IEnumerable here — because it behaves</em> <a href="http://blogs.msdn.com/ericwhite/pages/Lazy-Evaluation-_2800_and-in-contrast_2C00_-Eager-Evaluation_2900_.aspx"><em>lazily</em></a><em>, it can cause the randomization to happen multiple times, depending on how you call it. Better to “realize” it using ToList().</em></p>
 
 </div>

@@ -72,20 +72,13 @@
   <h1 class="post-title"><a href="https://clipperhouse.com/speeding-up-localhost-in-visual-studio/">Speeding up localhost in Visual Studio</a></h1>
 </header>
 <div class="post-content">
-  
-
-<p>I recently put a new <a href="http://www.amazon.com/gp/product/B002IJA1EG?ie=UTF8&amp;amp;tag=clipperhouse-20&amp;amp;linkCode=as2&amp;amp;camp=1789&amp;amp;creative=390957&amp;amp;creativeASIN=B002IJA1EG">SSD</a> in my system (yay!) and did a clean install of Windows 7, Visual Studio, etc. I found that when viewing my web app on localhost (using the Cassini web server built into VS), it was very slow. This was true across browsers.</p>
-
+  <p>I recently put a new <a href="http://www.amazon.com/gp/product/B002IJA1EG?ie=UTF8&amp;tag=clipperhouse-20&amp;linkCode=as2&amp;camp=1789&amp;creative=390957&amp;creativeASIN=B002IJA1EG">SSD</a> in my system (yay!) and did a clean install of Windows 7, Visual Studio, etc. I found that when viewing my web app on localhost (using the Cassini web server built into VS), it was very slow. This was true across browsers.</p>
 <p>Turns out it’s a DNS thing — the lookup for “localhost” was apparently going out to the DNS server, a waste. You can easily “short-circuit” this by modifying your hosts file. It’s in the C:\Windows\System32\drivers\etc folder.</p>
-
 <p>Simply un-comment the localhost entry at the bottom of that file, like so:
-`# localhost name resolution is handled within DNS itself.<br />
- <strong>127.0.0.1       localhost</strong></p>
-
-<h1 id="1-localhost">::1             localhost`</h1>
-
+`# localhost name resolution is handled within DNS itself.<br>
+<strong>127.0.0.1       localhost</strong></p>
+<h1 id="1-------------localhost">::1             localhost`</h1>
 <p>It made things lickety-split for me.</p>
-
 <p><em>Tip: you’ll need to run Notepad as an administrator to modify the file.</em></p>
 
 </div>

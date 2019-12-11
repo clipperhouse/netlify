@@ -73,45 +73,17 @@
 </header>
 <div class="post-content">
   <p>Prompted by <a href="https://groups.google.com/d/msg/golang-nuts/aJ6JiiIusqg/TJM09vOkv9YJ">this question</a> I got to thinking about methods in C# and Go. It’s another example, I realized, of Go’s (logical) insistence on orthogonality and (stylistic) insistence on flatness/lack of hierarchy.</p>
-
 <p>Go does not allow methods to be defined within a struct (ersatz class) definition. Instead of this, where the method lives in the declaration:
-<code>type Foo struct {  
-    Count, Price int  
-    Total() int {     // nope  
-        return Count * Price  
-    }  
-}</code></p>
-
+<code>type Foo struct {   Count, Price int   Total() int {     // nope   return Count * Price   }   }</code></p>
 <p>…one writes this:
-<code>type Foo struct {  
-    Count, Price int  
-}</code><code>func (f Foo) Total() int {  
-    return f.Count * f.Price  
-}</code></p>
-
+<code>type Foo struct {   Count, Price int   }``func (f Foo) Total() int {   return f.Count * f.Price   }</code></p>
 <p>Which is to say, the method is its own free-standing declaration.</p>
-
 <p>In C#, you have a choice of doing either (eliding access modifiers):
-<code>struct Foo {  
-    int Count;  
-    int Price;  
-    int Total() {  
-        return Count * Price;  
-    }  
-}</code></p>
-
+<code>struct Foo {   int Count;   int Price;   int Total() {   return Count * Price;   }   }</code></p>
 <p>&hellip;or, using extension methods (eliding the outer class):
-<code>struct Foo {  
-    int Count;  
-    int Price;  
-}</code><code>int Total(this Foo foo) {  
-    return foo.Count * foo.Price;  
-}</code></p>
-
+<code>struct Foo {   int Count;   int Price;   }``int Total(this Foo foo) {   return foo.Count * foo.Price;   }</code></p>
 <p>Go achieves two things in this design decision. First, orthogonality: there is <em>one</em> way to write a method.</p>
-
-<p>Second, a matter of taste perhaps, there is less hierarchy in Go. Methods are just funcs alongside all the others; they don&#39;t represent a new level of &#34;indentation&#34; or membership.</p>
-
+<p>Second, a matter of taste perhaps, there is less hierarchy in Go. Methods are just funcs alongside all the others; they don't represent a new level of &quot;indentation&quot; or membership.</p>
 <p>There are other design justifications described in the above link, but these advantages are the ones that jump out for me.</p>
 
 </div>

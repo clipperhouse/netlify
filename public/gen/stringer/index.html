@@ -73,9 +73,7 @@
 </header>
 <div class="post-content">
   <p>The <code>stringer</code> <a href="/gen/typewriters/">typewriter</a> is a fork of Rob Pike’s <a href="https://godoc.org/golang.org/x/tools/cmd/stringer">tool</a> of the same name, which generates readable strings for consts. It is built into gen by default.</p>
-
 <p>To use, mark up a type for which you have consts, using Rob’s example:</p>
-
 <pre><code>// +gen stringer
 type Pill int
 
@@ -87,9 +85,7 @@ const (
     Acetaminophen = Paracetamol
 )
 </code></pre>
-
 <p>Then simply <code>gen</code> your package, as normal. You should see a new file, <code>pill_stringer.go</code>, containing the String method for your type.</p>
-
 <p><a href="/gen/overview/">← back to gen overview</a></p>
 
 </div>

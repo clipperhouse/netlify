@@ -72,46 +72,25 @@
   <h1 class="post-title"><a href="https://clipperhouse.com/few-more-reasons-to-use-progressive-enhancement/">A few more reasons to use Progressive Enhancement</a></h1>
 </header>
 <div class="post-content">
-  
-
-<p><a href="http://www.alistapart.com/articles/understandingprogressiveenhancement">Progressive Enhancement</a> is a methodology where a web application is developed in layers. Each layer works correctly on its own, and additional layers on top enhance the user experience.</p>
-
+  <p><a href="http://www.alistapart.com/articles/understandingprogressiveenhancement">Progressive Enhancement</a> is a methodology where a web application is developed in layers. Each layer works correctly on its own, and additional layers on top enhance the user experience.</p>
 <p>The justifications for Progressive Enhancement are usually around graceful degradation — people using older technologies are not left out in the cold, while better technologies are exploited for more cutting edge users.</p>
-
 <p>Those are fine things, but there are more compelling reasons to use PE, in my opinion.</p>
-
 <h4 id="easier-to-develop"><strong>Easier to develop</strong></h4>
-
 <p>When developing a modern web app, we’ll likely want to use Ajax, to make efficient and responsive UIs. Great!</p>
-
 <p>But what if something breaks? The user clicks and nothing happens. Is it a Javascript error, a CSS thing, or is the problem on the backend?</p>
-
 <p>We avoid this mystery by <strong>separating concerns</strong>.</p>
-
 <p>First, we develop a web app that works reliably without Ajax. We focus on the HTML experience — buttons that submit forms and links that navigate to real URLs. A back button that works!</p>
-
 <p>We work it to the point that we know the server-side is reliable, and <strong>ship it</strong>.</p>
-
 <p>Now let’s sprinkle Ajax on top. Intercept clicks and submits, and route them to your Ajax bits. During this process, if something doesn’t work, we can say with reasonable confidence that the problem is client-side.</p>
-
 <p>(Tip: use the same “end point” on the server for both Ajax and traditional requests. In MVC, this would be the controller action URL. Vary vary the end point’s <em>response</em> depending on the request type — a partial instead of a full layout, say.)</p>
-
-<h4 id="robust-against-humans-using-a-failure-prone-language"><strong>Robust against humans using a failure-prone language</strong></h4>
-
+<h4 id="robust-against-humans-using-a-failureprone-language"><strong>Robust against humans using a failure-prone language</strong></h4>
 <p>Proponents of PE will tell you that you need to support users that don’t have Javascript enabled. That’s valid. But it’s also an edge case.</p>
-
 <p>The greater danger is that <em>our</em> Javascript will have bugs. In most browsers, this simply means that the JS will stop executing without notice. What happens then?</p>
-
 <p>If we’ve authored the non-JS experience correctly and separately, then the experience should fall back to a plain HTML experience. Graceful degradation is an insurance policy for <em>our</em> shortcomings, too.</p>
-
 <h4 id="division-of-labor"><strong>Division of labor</strong></h4>
-
 <p>Each of these layers (JS, HTML, server) is a specialty. If our site gets big, we might have separate people working on each. Make sure the jQuery person and the Django person can work independently.</p>
-
 <h4 id="now-keep-up-the-discipline"><strong>Now keep up the discipline</strong></h4>
-
 <p>Over time, it’s easy to forget the HTML experience, since your Ajax stuff works so well. Remember, each time you want to add a new feature, stick with the above methodology.</p>
-
 <p>Turn off JS in your browser. Develop the feature. Test it thoroughly. Then, turn JS back on and delight your users.</p>
 
 </div>

@@ -72,36 +72,20 @@
   <h1 class="post-title"><a href="https://clipperhouse.com/toward-less-injection/">Toward less injection</a></h1>
 </header>
 <div class="post-content">
-  
-
-<p>Here’s a habit that may help to reduce the complexity of your dependency injection tree. Ask yourself: <strong>how much of an injected dependency</strong> are you actually using?</p>
-
+  <p>Here’s a habit that may help to reduce the complexity of your dependency injection tree. Ask yourself: <strong>how much of an injected dependency</strong> are you actually using?</p>
 <p>The conversation goes like this…</p>
-
 <h4 id="i-need-to-inject-an-httpcontext">I need to inject an <code>HttpContext</code></h4>
-
 <p>Great. Why? Because we need to read a cookie. So really….</p>
-
 <h4 id="ah-ok-i-only-need-to-inject-an-httprequest">Ah, OK I only need to inject an <code>HttpRequest</code></h4>
-
 <p>Better! But seriously, are you only looking at cookies?</p>
-
-<h4 id="right-i-only-ever-touch-request-cookies-which-is-of-type-httpcookiecollection">Right, I only ever touch <code>Request.Cookies</code>, which is of type <code>HttpCookieCollection</code></h4>
-
+<h4 id="right-i-only-ever-touch-requestcookies-which-is-of-type-httpcookiecollection">Right, I only ever touch <code>Request.Cookies</code>, which is of type <code>HttpCookieCollection</code></h4>
 <p>Now we are getting somewhere! You only need an <code>HttpCookieCollection</code>. That’s a pretty simple data type.</p>
-
 <p>If that’s all you need, you don’t need to <em>inject</em> it at all — just pass it as an <strong>argument</strong> to the method that needs it.</p>
-
 <p>Further, you likely don’t need to mock it (in the mocking-framework sense) for testing. Just <code>new</code> one up and add some test values. Nice!</p>
-
 <p>–</p>
-
 <p>You could push it further and say, OK, which of <a href="https://msdn.microsoft.com/en-us/library/system.web.httpcookiecollection%28v=vs.110%29.aspx">CookieCollection’s methods</a> am I actually using? Is there an <strong>smaller type</strong> that I could accept, maybe an <code>IEnumerable&lt;HttpCookie&gt;</code>? How about just the <code>HttpCookie</code>, no collection at all? A <code>string</code>, even?</p>
-
 <p>The smaller the interface, the easier the mock — though there may be a trade-off in asking the caller to do more work.</p>
-
 <p>–</p>
-
 <p>Now: does your service have state, or more precisely, do its methods depend on the service’s state? If not, the method can — and likely should — be static. One less dependency on injection, one hopes.</p>
 
 </div>

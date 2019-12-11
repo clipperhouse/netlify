@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Gens on clipperhouse.com</title>
@@ -11,21 +11,12 @@
     
     
     <item>
-      <title>gen: Type-driven code generation for Go</title>
-      <link>https://clipperhouse.com/gen/overview/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://clipperhouse.com/gen/overview/</guid>
-      <description>gen is an attempt to bring some generics-like functionality to Go. It uses type annotations to add &amp;ldquo;of T&amp;rdquo; functionality to your packages.</description>
-    </item>
-    
-    <item>
       <title>gen: force flag</title>
       <link>https://clipperhouse.com/gen/force/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://clipperhouse.com/gen/force/</guid>
-      <description>Tolerating type errors gen operates by parsing and type-checking your source code.</description>
+      <description>Tolerating type errors gen operates by parsing and type-checking your source code. The correctness of your code will affect gen&#39;s ability to operate.</description>
     </item>
     
     <item>
@@ -34,7 +25,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://clipperhouse.com/gen/optional/</guid>
-      <description>Here are a few optional typewriters I&amp;rsquo;ve created. They are not built into gen, but can be added as follows.</description>
+      <description>Here are a few optional typewriters I&#39;ve created. They are not built into gen, but can be added as follows.</description>
     </item>
     
     <item>
@@ -43,7 +34,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://clipperhouse.com/gen/slice/</guid>
-      <description>The slice typewriter is built into gen by default. It generates functional convenience methods that will look familiar to users of C#&amp;rsquo;s LINQ or JavaScript&amp;rsquo;s Array methods.</description>
+      <description>The slice typewriter is built into gen by default. It generates functional convenience methods that will look familiar to users of C#&amp;lsquo;s LINQ or JavaScript&#39;s Array methods.</description>
     </item>
     
     <item>
@@ -62,6 +53,15 @@
       
       <guid>https://clipperhouse.com/gen/typewriters/</guid>
       <description>gen is driven by “type writers” – packages which are responsible for interpreting the annotated tags and turning them into generated code.</description>
+    </item>
+    
+    <item>
+      <title>gen: Type-driven code generation for Go</title>
+      <link>https://clipperhouse.com/gen/overview/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://clipperhouse.com/gen/overview/</guid>
+      <description>gen is an attempt to bring some generics-like functionality to Go. It uses type annotations to add &amp;ldquo;of T&amp;rdquo; functionality to your packages.</description>
     </item>
     
   </channel>

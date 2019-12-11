@@ -73,21 +73,14 @@
 </header>
 <div class="post-content">
   <p>I am working on a <a href="https://github.com/clipperhouse/gen">tool</a> for generics-like functionality in Go. Despite what you may have heard, Go does have generic functionality, in that you can create (e.g.) methods which operate on any type, by using interface{} — the interface that all types implement. For example, you can do something like:</p>
-
-<p>func DoSomething(interface{}) interface{} {<br />
-…<br />
+<p>func DoSomething(interface{}) interface{} {<br>
+…<br>
 }</p>
-
 <p>…where both the input parameter and the output return value are interface{}. It’s quite flexible. The very nice <a href="https://github.com/ahmetalpbalkan/go-linq">go-linq</a> operates this way, as do data structure packages like <a href="https://github.com/fatih/set">Set</a>. That they will accept any type, and can return any type, meets a definition of generic.</p>
-
 <p>The trouble is, the user will (in all likelihood) need to cast return values into types to do something meaningful. If they use such a function to, say, filter a slice of int, the user will need to cast the resulting values back to int to proceed.</p>
-
 <p>There is an <a href="http://en.wikipedia.org/wiki/Robustness_principle">adage</a> in programming that one should be liberal in what one accepts, and conservative with what one emits. The above pattern only gets the first part right. The input parameter is liberal, but unfortunately so is the return value.</p>
-
 <p>This burdens the user with figuring out the nature of the output. It’s more code, and less safety.</p>
-
 <p>For me, static typing means exploiting type information to make guarantees at compile time. Without traditional generics, we must resort to doing some of what (IMHO) is the type system’s job.</p>
-
 <p>So one of the motivations of <a href="https://github.com/clipperhouse/gen">gen</a> is to deal with that return value on the right-hand side of the above code sample — to bring it into the realm of known types that the compiler (and the user) can reliably exploit.</p>
 
 </div>

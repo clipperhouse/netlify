@@ -73,22 +73,14 @@
 </header>
 <div class="post-content">
   <p>Generating numbers that are truly random is quite difficult. Every random number needs to be based on some starting place — the time of day in milliseconds, perhaps. As such it’s actually a predictable number; it’s <a href="http://en.wikipedia.org/wiki/Determinism">deterministic</a>, even if a regular human won’t realistically guess it.</p>
-
 <p>For most of what we do, we create a pseudo-random number — one that is random enough for our purposes. Yet I’ve experienced situations where the “pseudo” part becomes very apparent.</p>
-
 <p>For example, when generating test data, I will have a loop which quickly picks x number of records out of a hat. The problem is, that little bit of code will execute within a millisecond — so I find that I often pick out records that are quite close to one another. You think you’ve shuffled the cards, and yet you draw the 2, 3 and 4 of clubs right off the bat.</p>
-
 <p>It’s a hard problem. The challenge is finding a function that varies unpredictably each time you ask for a random number.</p>
-
 <p>Today I came across a web service that <a href="http://www.random.org/clients/http/">offers such a thing</a> — random.org. They use all sorts of crazy techniques to ensure variability.</p>
-
 <p>If we want, say, 10 numbers in the range from 1 to 6, we use:</p>
-
 <p>Hitting this from C# would be pretty trivial with <a href="http://msdn.microsoft.com/en-us/library/system.net.webclient.aspx">WebClient</a> or some such. Neat!</p>
-
 <p>—</p>
-
-<p><em>PS, inspired by this post:</em> <a href="http://stackoverflow.com/questions/1234094/how-can-i-generate-truly-not-pseudo-random-numbers-with-c"><em>http://stackoverflow.com/questions/1234094/how-can-i-generate-truly-not-pseudo-random-numbers-with-c</em></a></p>
+<p><em>PS, inspired by this post:</em> <a href="http://stackoverflow.com/questions/1234094/how-can-i-generate-truly-not-pseudo-random-numbers-with-c">_<a href="http://stackoverflow.com/questions/1234094/how-can-i-generate-truly-not-pseudo-random-numbers-with-c_">http://stackoverflow.com/questions/1234094/how-can-i-generate-truly-not-pseudo-random-numbers-with-c_</a></a></p>
 
 </div>
 <footer class="post-footer">

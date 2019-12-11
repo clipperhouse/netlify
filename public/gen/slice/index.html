@@ -16,7 +16,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
   <title>gen: slice typewriter · Matt Sherman</title>
-  <meta name="description" content="The slice typewriter is built into gen by default. It generates functional convenience methods that will look familiar to users of C#&rsquo;s LINQ or JavaScript&rsquo;s Array methods.">
+  <meta name="description" content="The slice typewriter is built into gen by default. It generates functional convenience methods that will look familiar to users of C#&lsquo;s LINQ or JavaScript&#39;s Array methods.">
   <meta name="author" content="Matt Sherman">
   <link href="/css/style.css?3" rel="stylesheet">
   
@@ -35,8 +35,8 @@
 <meta property="og:url" content="https://clipperhouse.com/gen/slice/" />
 <meta name="twitter:title" content="gen: slice typewriter · Matt Sherman" />
 <meta property="og:title" content="gen: slice typewriter · Matt Sherman" />
-<meta name="twitter:description" content="The slice typewriter is built into gen by default. It generates functional convenience methods that will look familiar to users of C#&rsquo;s LINQ or JavaScript&rsquo;s Array methods." />
-<meta property="og:description" content="The slice typewriter is built into gen by default. It generates functional convenience methods that will look familiar to users of C#&rsquo;s LINQ or JavaScript&rsquo;s Array methods." />
+<meta name="twitter:description" content="The slice typewriter is built into gen by default. It generates functional convenience methods that will look familiar to users of C#&lsquo;s LINQ or JavaScript&#39;s Array methods." />
+<meta property="og:description" content="The slice typewriter is built into gen by default. It generates functional convenience methods that will look familiar to users of C#&lsquo;s LINQ or JavaScript&#39;s Array methods." />
 <meta name="twitter:image" content="https://clipperhouse.com/img/apple-touch-icon.png" />
 <meta property="og:image" content="https://clipperhouse.com/img/apple-touch-icon.png" />
 </head>
@@ -72,34 +72,22 @@
   <h1 class="post-title"><a href="https://clipperhouse.com/gen/slice/">gen: slice typewriter</a></h1>
 </header>
 <div class="post-content">
-  
-
-<p>The <code>slice</code> typewriter is built into <a href="/gen/"><code>gen</code></a> by default. It generates functional convenience methods that will look familiar to users of C#&rsquo;s LINQ or JavaScript&rsquo;s Array methods. It is intended to save you some loops, using a &ldquo;pass a function&rdquo; pattern. It offers easier ad-hoc sorts.</p>
-
+  <p>The <code>slice</code> typewriter is built into <a href="/gen/"><code>gen</code></a> by default. It generates functional convenience methods that will look familiar to users of C#&lsquo;s LINQ or JavaScript's Array methods. It is intended to save you some loops, using a &ldquo;pass a function&rdquo; pattern. It offers easier ad-hoc sorts.</p>
 <p>The annotation looks like:</p>
-
 <pre><code>// +gen slice:&quot;Where,GroupBy[int],Any&quot;
 type Example struct {}
 </code></pre>
-
 <p>(<code>Example</code> is used as a placeholder for your type.)</p>
-
 <p>A new type, <code>ExampleSlice</code>, is generated and becomes the receiver for the methods below.</p>
-
-<h3 id="aggregate-t">Aggregate[T]</h3>
-
+<h3 id="aggregatet">Aggregate[T]</h3>
 <p>Iterates over a slice, operating on each element while maintaining ‘state’. Comparable to LINQ’s Aggregate or underscore’s reduce.</p>
-
 <p>Signature:</p>
-
 <pre><code>func (ExampleSlice) AggregateT(func(T, Example) T) T
 </code></pre>
-
 <p>Example:</p>
-
 <pre><code>// +gen slice:&quot;Aggregate[string]&quot;
 type Employee struct{
-    Name       string
+    Name 	   string
     Department string
 }
 
@@ -118,18 +106,12 @@ join := func(state string, e Employee) string {
 
 employees.AggregateString(join) // =&gt; &quot;Alice, Bob, Carly&quot;
 </code></pre>
-
 <h3 id="all">All</h3>
-
 <p>Returns true if every element returns true for passed func. Comparable to LINQ’s All or underscore’s every.</p>
-
 <p>Signature:</p>
-
 <pre><code>func (ExampleSlice) All(func(Example) bool) bool
 </code></pre>
-
 <p>Example:</p>
-
 <pre><code>// +gen slice:&quot;All&quot;
 type Person struct {
     Name    string
@@ -148,18 +130,12 @@ here := func(p Person) bool {
 
 gang.All(here) // =&gt; false, Bob didn't make it
 </code></pre>
-
 <h3 id="any">Any</h3>
-
 <p>Returns true if one or more elements returns true for passed func. Comparable to LINQ’s Any or underscore’s some.</p>
-
 <p>Signature:</p>
-
 <pre><code>func (ExampleSlice) Any(func(Example) bool) bool
 </code></pre>
-
 <p>Example:</p>
-
 <pre><code>// +gen slice:&quot;Any&quot;
 type Person struct {
     Name string
@@ -177,18 +153,12 @@ bueller := func(p Person) bool {
 
 people.Any(bueller) // =&gt; true
 </code></pre>
-
 <h3 id="average">Average</h3>
-
 <p>Sums over all elements of the slice and divides by len. Returns an error on an empty slice. Comparable to LINQ’s Average.</p>
-
 <p>Signature:</p>
-
 <pre><code>func (ExampleSlice) Average() Example  // Example must be a numeric type
 </code></pre>
-
 <p>Example:</p>
-
 <pre><code>// +gen slice:&quot;Average&quot;
 type Celsius float64
 
@@ -196,18 +166,12 @@ temps := CelsiusSlice{15.1, -2, 3.6}
 
 temps.Average() // =&gt; 5.567, nil
 </code></pre>
-
-<h3 id="average-t">Average[T]</h3>
-
+<h3 id="averaget">Average[T]</h3>
 <p>Returns the average <strong>projected</strong> value of a slice, where the projection is defined by a passed func. Returns an error on an empty slice.</p>
-
 <p>Signature:</p>
-
 <pre><code>func (ExampleSlice) AverageT(func(Example) T) (T, error)  // T must be a numeric type
 </code></pre>
-
 <p>Example:</p>
-
 <pre><code>// +gen slice:&quot;Average[int]&quot;
 type Player struct {
     Name   string
@@ -226,18 +190,12 @@ points := func(p Player) int {
 
 players.AverageInt(points) // =&gt; 250, nil
 </code></pre>
-
 <h3 id="count">Count</h3>
-
 <p>Returns an int representing the number of elements which return true for passed func. Comparable to LINQ’s Count.</p>
-
 <p>Signature:</p>
-
 <pre><code>func (ExampleSlice) Count(func(Example) bool) int
 </code></pre>
-
 <p>Example:</p>
-
 <pre><code>// +gen slice:&quot;Count&quot;
 type Monster struct {
     Name  string
@@ -258,16 +216,11 @@ werewolf := func(m Monster) bool {
 
 monsters.Count(werewolf) // =&gt; 2 (Bob &amp; Carly)
 </code></pre>
-
 <h3 id="distinct">Distinct</h3>
-
 <p>Returns a new slice representing unique elements. Comparable to LINQ’s Distinct or underscore’s uniq.</p>
-
 <pre><code>func (ExampleSlice) Distinct() ExampleSlice
 </code></pre>
-
 <p>Example:</p>
-
 <pre><code>// +gen slice:&quot;Distinct&quot;
 type Hipster struct {
     FavoriteBand string
@@ -284,20 +237,13 @@ hipsters := HipsterSlice {
 
 hipsters.Distinct() // =&gt; [{&quot;Neutral Milk Hotel&quot;, true, true}]
 </code></pre>
-
 <p>Distinct is supported only for types that support <a href="https://golang.org/doc/go1#equality">equality</a>. Bear in mind that pointers and values have different notions of equality, and therefore distinctness.</p>
-
 <h3 id="distinctby">DistinctBy</h3>
-
 <p>Returns a new slice representing unique elements, where equality is defined by a passed func.</p>
-
 <p>Signature:</p>
-
 <pre><code>func (ExampleSlice) DistinctBy(func(Example, Example) bool) ExampleSlice
 </code></pre>
-
 <p>Example:</p>
-
 <pre><code>// +gen slice:&quot;DistinctBy&quot;
 type Hipster struct {
     FavoriteBand string
@@ -317,18 +263,12 @@ band := func(a Hipster, b Hipster) bool {
 
 hipsters.DistinctBy(band) // =&gt; [{&quot;Neutral Milk Hotel&quot;, true}, {&quot;Death Cab for Cutie&quot;, true}, {&quot;You Probably Haven’t Heard of Them&quot;, true}]
 </code></pre>
-
 <h3 id="first">First</h3>
-
 <p>Returns first element which returns true for passed func. Returns error if no elements satisfy the func. Comparable to LINQ’s First or underscore’s find.</p>
-
 <p>Signature:</p>
-
 <pre><code>func (ExampleSlice) First(func(Example) bool) (Example, error)
 </code></pre>
-
 <p>Example:</p>
-
 <pre><code>// +gen slice:&quot;First&quot;
 type Customer struct {
     Name string
@@ -347,18 +287,12 @@ come := func(c Customer) bool {
 
 served, err := customers.First(come) // =&gt; {&quot;Bob&quot;, true}, nil
 </code></pre>
-
-<h3 id="groupby-t">GroupBy[T]</h3>
-
+<h3 id="groupbyt">GroupBy[T]</h3>
 <p>Groups elements into a map keyed by T. Comparable to LINQ’s GroupBy or underscore’s groupBy.</p>
-
 <p>Signature:</p>
-
 <pre><code>func (ExampleSlice) GroupByT (func(Example) T) map[T]ExampleSlice // =&gt; T must support equality
 </code></pre>
-
 <p>Example:</p>
-
 <pre><code>// +gen slice:&quot;GroupBy[int]&quot;
 type Movie struct {
     Title string
@@ -379,18 +313,12 @@ year := func(m Movie) int {
 
 movies.GroupByInt(year) // =&gt; { 1996: [{&quot;Independence Day&quot;, 1996}, {&quot;Fargo&quot;, 1996}], 2008: [{&quot;Iron Man&quot;, 2008}, {&quot;WALL-E&quot;, 2008}], 2012: [{&quot;Django Unchained&quot;, 2012}] }
 </code></pre>
-
 <h3 id="max">Max</h3>
-
 <p>Returns the maximum value of a slice. Returns an error when invoked on an empty slice, an invalid operation. Comparable to LINQ’s Max.</p>
-
 <p>Signature:</p>
-
 <pre><code>func (ExampleSlice) Max() (Example, error) // =&gt; Example must be an ordered type
 </code></pre>
-
 <p>Example:</p>
-
 <pre><code>// +gen slice:&quot;Max&quot;
 type Price float64
 
@@ -398,20 +326,13 @@ prices := PriceSlice{12.34, 43.21, 23.45}
 
 prices.Max() // =&gt; 43.21
 </code></pre>
-
 <p><code>Max</code> is only supported for ‘<a href="http://godoc.org/code.google.com/p/go.tools/go/types#BasicInfo">ordered</a>’ types, i.e. those that support less than/greater than.</p>
-
-<h3 id="max-t">Max[T]</h3>
-
+<h3 id="maxt">Max[T]</h3>
 <p>Returns the maximum projected value of a slice, where the projection is defined by a passed func. Returns an error when invoked on an empty slice, an invalid operation. Comparable to LINQ’s Max.</p>
-
 <p>Signature:</p>
-
 <pre><code>func (ExampleSlice) MaxT(func(Example) T) (T, error) // =&gt; T must be an ordered type
 </code></pre>
-
 <p>Example:</p>
-
 <pre><code>// +gen slice:&quot;Max[Dollars]&quot;
 type Movie struct {
     Title     string
@@ -434,18 +355,12 @@ box := func(e Employee) Dollars {
 
 movies.MaxDollars(box) // =&gt; 9000000
 </code></pre>
-
 <h3 id="maxby">MaxBy</h3>
-
 <p>Returns the element containing the maximum value, when compared to other elements using a passed func defining ‘less’. Returns an error when invoked on an empty slice, considered an invalid operation.</p>
-
 <p>Signature:</p>
-
 <pre><code>func (ExampleSlice) MaxBy(func(Example, Example) bool) (Example, error)
 </code></pre>
-
 <p>Example:</p>
-
 <pre><code>// +gen slice:&quot;MaxBy&quot;
 type Rectangle struct {
     Width, Height int
@@ -467,18 +382,12 @@ area := func(a, b Rectangle) bool {
 
 rectangles.MaxBy(area) // =&gt; {6, 7}
 </code></pre>
-
 <h3 id="min">Min</h3>
-
 <p>Returns the minimum value of a slice. Returns an error when invoked on an empty slice, an invalid operation. Comparable to LINQ’s Min.</p>
-
 <p>Signature:</p>
-
 <pre><code>func (ExampleSlice) Min() (Example, error) // =&gt; Example must be an ordered type
 </code></pre>
-
 <p>Example:</p>
-
 <pre><code>// +gen slice:&quot;Min&quot;
 type Price float64
 
@@ -486,20 +395,13 @@ prices := PriceSlice{12.34, 43.21, 23.45}
 
 prices.Min() // =&gt; 12.34
 </code></pre>
-
 <p><code>Min</code> is only supported for ‘<a href="http://godoc.org/code.google.com/p/go.tools/go/types#BasicInfo">ordered</a>’ types, i.e. those that support less than/greater than.</p>
-
-<h3 id="min-t">Min[T]</h3>
-
+<h3 id="mint">Min[T]</h3>
 <p>Returns the minimum projected value of a slice, where the projection is defined by a passed func. Returns an error when invoked on an empty slice, an invalid operation. Comparable to LINQ’s Min.</p>
-
 <p>Signature:</p>
-
 <pre><code>func (ExampleSlice) MinT(func(Example) T) (T, error) // =&gt; T must be an ordered type
 </code></pre>
-
 <p>Example:</p>
-
 <pre><code>// +gen slice:&quot;Min[Dollars]&quot;
 type Movie struct {
     Title     string
@@ -522,18 +424,12 @@ box := func(e Employee) Dollars {
 
 movies.MinDollars(box) // =&gt; 1000000
 </code></pre>
-
 <h3 id="minby">MinBy</h3>
-
 <p>Returns the element containing the minimum value, when compared to other elements using a passed func defining ‘less’. Returns an error when invoked on an empty slice, considered an invalid operation.</p>
-
 <p>Signature:</p>
-
 <pre><code>func (ExampleSlice) MinBy(func(Example, Example) bool) (Example, error)
 </code></pre>
-
 <p>Example:</p>
-
 <pre><code>// +gen slice:&quot;MinBy&quot;
 type Rectangle struct {
     Width, Height int
@@ -555,18 +451,12 @@ area := func(a, b Rectangle) bool {
 
 rectangles.MinBy(area) // =&gt; {2, 3}
 </code></pre>
-
-<h3 id="select-t">Select[T]</h3>
-
+<h3 id="selectt">Select[T]</h3>
 <p>Returns a projected slice given a func which maps Example to T. Comparable to LINQ’s Select or underscore’s map.</p>
-
 <p>Signature:</p>
-
 <pre><code>func (ExampleSlice) Select(func(Example) T) []T
 </code></pre>
-
 <p>Example:</p>
-
 <pre><code>// +gen slice:&quot;Select[int]&quot;
 type Player struct {
     Name   string
@@ -585,18 +475,12 @@ points := func(p Player) int {
 
 players.SelectInt(points) // =&gt; [450, 100, 200]
 </code></pre>
-
 <h3 id="shuffle">Shuffle</h3>
-
 <p>Returns a new slice with the elements in a random order. Comparable to underscore’s shuffle.</p>
-
 <p>Signature:</p>
-
 <pre><code>func (ExampleSlice) Shuffle() ExampleSlice
 </code></pre>
-
 <p>Example:</p>
-
 <pre><code>// +gen slice:&quot;Shuffle&quot;
 type Rating int
 
@@ -604,18 +488,12 @@ ratings := RatingSlice{1, 2, 3, 4, 5, 6}
 
 ratings.Shuffle() // =&gt; {3, 6, 1, 2, 4, 5}
 </code></pre>
-
 <h3 id="sort">Sort</h3>
-
 <p>Returns a new slice whose elements are sorted.</p>
-
 <p>Signature:</p>
-
 <pre><code>func (ExampleSlice) Sort() ExampleSlice
 </code></pre>
-
 <p>Example:</p>
-
 <pre><code>// +gen slice:&quot;Sort,SortDesc&quot;
 type Rating int
 
@@ -624,22 +502,14 @@ ratings := RatingSlice{5, 7, 2, 1, 9, 2}
 ratings.Sort() // =&gt; {1, 2, 2, 5, 7, 9}
 ratings.SortDesc() // =&gt; {9, 7, 5, 2, 2, 1}
 </code></pre>
-
 <p><code>SortDesc</code> and <code>IsSorted(Desc)</code> are also available, and should be self-explanatory.</p>
-
 <p>Sort uses Go’s sort package by implementing the interface required to use it. It is only supported for types that can be compared greater than or less than one another (‘ordered’ in Go terminology).</p>
-
 <h3 id="sortby">SortBy</h3>
-
 <p>Returns a new slice whose elements are sorted based on a func defining ‘less’. The less func takes two elements, and returns true if the first element is less than the second element.</p>
-
 <p>Signature:</p>
-
 <pre><code>func (ExampleSlice) SortBy(func(Example, Example) bool) ExampleSlice
 </code></pre>
-
 <p>Example:</p>
-
 <pre><code>// +gen slice:&quot;SortBy&quot;
 type Movie struct {
     Title string
@@ -663,24 +533,17 @@ yearThenTitle := func(a, b Movie) bool {
 
 movies.SortBy(yearThenTitle) // =&gt; [{&quot;Fargo&quot;, 1996}, &quot;Independence Day&quot;, 1996}, {&quot;Iron Man&quot;, 2008}, {&quot;WALL-E&quot;, 2008}, {&quot;Django Unchained&quot;, 2012}]
 </code></pre>
-
 <p><code>SortByDesc</code> and <code>IsSortedBy(Desc)</code> are also available, and should be self-explanatory.</p>
-
 <h3 id="where">Where</h3>
-
 <p>Returns a new slice whose elements return true for passed func. Comparable to LINQ’s <a href="http://msdn.microsoft.com/en-us/library/bb534803(v=vs.110).aspx">Where</a> and JavaScript’s <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter">filter</a>.</p>
-
 <pre><code>func (rcv ExampleSlice) Where(fn func(Example) bool) ExampleSlice
 </code></pre>
-
 <p>Example:</p>
-
 <pre><code>shiny := func(p Product) bool {
     return p.Manufacturer == &quot;Apple&quot;
 }
 wishlist := products.Where(shiny)
 </code></pre>
-
 <p><a href="/gen/overview/">← back to gen overview</a></p>
 
 </div>

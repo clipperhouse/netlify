@@ -73,24 +73,16 @@
 </header>
 <div class="post-content">
   <p>I took a look at Google’s new language, Go. Some interesting stuff in there.</p>
-
 <p>One idea in Go that would be especially handy in C# is <a href="http://golang.org/doc/go_lang_faq.html#inheritance">implied interfaces</a>. What does this mean?</p>
-
 <p>Well, in C# you are accustomed to Interfaces. It’s a description of a type, without an implementation. I won’t go into <a href="http://www.c-sharpcorner.com/UploadFile/rmcochran/csharp_interrfaces03052006095933AM/csharp_interrfaces.aspx">why</a> they are a good idea (think loose coupling).</p>
-
 <p>A class (aka a Type) is said to satisfy an interface if it includes all the interface’s elements. So perhaps your IPerson interface requires FirstName and LastName properties. Then, when you implement an actual Person in C#, you will:</p>
-
 <ol>
 <li>Declare that the class implements IPerson (public class Person : IPerson)</li>
 <li>Implement IPerson’s properties in Person (public string FirstName { get; set; }, etc)</li>
 </ol>
-
 <p>Those who have become accustomed to C#’s <a href="http://msdn.microsoft.com/en-us/library/bb383973.aspx">var</a> keyword might recognize something here. By simply looking at the properties of Person, <strong>the compiler has all the information it needs</strong> to infer that Person implements IPerson. Why should I have to say so explicitly? <strong>Step #1 is logically superfluous.</strong></p>
-
 <p>Therefore I would like to see the interface declaration become <em>optional</em>.</p>
-
 <p>You <em>might</em> choose to keep it in there as a convenience. For example, Visual Studio offers some nice tools to help you implement Interfaces. It might be nice to “state your intention” of implementing an interface, so that the compiler will stop you until you do — giving you red flags earlier. Error messages might be made more informative as a result. (That said, the tooling in VS could help you with implicit interfaces, too.)</p>
-
 <p>But, unless I am missing something, the “: IPerson”syntax is not logically necessary. In the spirit of a more terse and “dynamic” style in C#, implicit interfaces would be a nice win.</p>
 
 </div>

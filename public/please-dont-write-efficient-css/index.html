@@ -73,49 +73,33 @@
 </header>
 <div class="post-content">
   <p>Contra <a href="http://css-tricks.com/efficiently-rendering-css/">many</a> <a href="http://developer.mozilla.org/en/Writing_Efficient_CSS">smart</a> <a href="http://code.google.com/speed/page-speed/docs/rendering.html">people</a>, I am going to make a contrarian request: <strong>please do not attempt to optimize your CSS for performance</strong>. Instead, please optimize for correctness, specificity and maintainability.</p>
-
 <p>A quick bit of philosophical background. CSS is a <em>declarative</em> language, not unlike HTML and (basic) SQL. It is designed to describe what you want, but not how to execute it. Thus, declarative languages have no verbs — only nouns and adjectives.</p>
-
 <p>Second-guessing how a browser will execute your nouns is a) a shot in the dark and b) a misuse of the language. You’re trying to micromanage without verbs. It reeks of <a href="http://stackoverflow.com/questions/211414/is-premature-optimization-really-the-root-of-all-evil">premature optimization</a>. And your optimizations may not be optimal in the future, or across different browsers.</p>
-
 <p>More importantly, a user is more likely to notice something that’s <em>wrong</em> as opposed to something that’s only 99% as fast as it could be. (And if it takes you an extra 15 minutes to locate and fix a bug, they’ll notice that too.)</p>
-
 <p>Instead, think of CSS like other programming. This means you should focus on:</p>
-
 <p><strong><em>Separating concerns:</em></strong> You should be able to modify style without modifying HTML.</p>
-
 <p><strong><em>Managing scope:</em></strong> Local style changes should not affect other parts of your application.</p>
-
 <p><em>Optimized for scope:</em>
-#home .advertisement h3.vendor { … }<br />
+#home .advertisement h3.vendor { … }<br>
 #productreview h3.vendor { … }</p>
-
 <p><em>Optimized for “performance”:</em>
 h3.vendor { … }</p>
-
 <p><strong><em>Correct semantics:</em></strong> Classes and id’s of HTML elements should describe what they are, not how they look.
 class=”mediumheader red” class=”storytitle featured”</p>
-
 <p><strong><em>Brevity:</em></strong> Write the least amount of code for the task at hand (aka <a href="http://en.wikipedia.org/wiki/You_ain%27t_gonna_need_it">YAGNI</a>).</p>
-
 <p><em>Optimized for brevity:</em>
-&lt;div class=”story”&gt;&lt;h2&gt;My title&lt;/h2&gt;&lt;p&gt;The description&lt;/p&gt;&lt;/div&gt;<br />
-div.story { … }<br />
-div.story &gt; h2 { … }<br />
+&lt;div class=”story”&gt;&lt;h2&gt;My title&lt;/h2&gt;&lt;p&gt;The description&lt;/p&gt;&lt;/div&gt;<br>
+div.story { … }<br>
+div.story &gt; h2 { … }<br>
 div.story &gt; h2 + p { … }</p>
-
 <p>Optimized for “performance”:
-&lt;div class=”story”&gt;&lt;h2 class=”storytitle”&gt;My title&lt;/h2&gt;&lt;p class=”storydescription”&gt;The description&lt;/p&gt;&lt;/div&gt;<br />
-div.story { … }<br />
-h2.storytitle { … }<br />
+&lt;div class=”story”&gt;&lt;h2 class=”storytitle”&gt;My title&lt;/h2&gt;&lt;p class=”storydescription”&gt;The description&lt;/p&gt;&lt;/div&gt;<br>
+div.story { … }<br>
+h2.storytitle { … }<br>
 p.storydescription { … }</p>
-
 <p>I believe that following these rules will actually achieve higher CSS performance in the long run. Writing 10 smart rules will probably perform better than 50 micro-optimized rules. Adding classes and id’s only for the sake of CSS performance will probably cost more than it saves.</p>
-
 <p>And remember, computers are fast and cheap. Programmers, by comparison, are expensive and slow. :)</p>
-
 <p>—</p>
-
 <p><strong>Addendum:</strong> Another way to think of it is that CSS is a query language. That’s why they call them “selectors”. More rules = more queries. Keeping queries as few and as specific as possible should give the best results, just like SQL.</p>
 
 </div>

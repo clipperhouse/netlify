@@ -73,46 +73,27 @@
 </header>
 <div class="post-content">
   <p>Computer screens have not changed much over the last 20 years, relative to other technologies like processing power and bandwidth. Yes, panels are better in many ways in terms of color accuracy and “resolution”. But most applications are designed around an assumption of 72 or 96 pixels per inch.</p>
-
 <p>I put “resolution” in quotes because, while screens have inched up in absolute pixels-per-inch, we are not using those pixels effectively.</p>
-
 <p>Each increase of 10% is not enough to justify a change in assumptions about how applications interact with the screen. <strong>The incrementalism is the problem.</strong></p>
-
 <p>Apple has had a rare opportunity with its iPhone. When switching over to the Retina Display of the iPhone 4, with exactly twice the resolution of its predecessor, Apple was able to dictate to its captive application vendors, <em>deal with it</em>. <strong>It’s time for the computer industry as a whole to make the same move.</strong></p>
-
 <p>How did Apple manage this transition? They supported previous-generation applications by simply stretching pixels. The user experience was not dramatically different — older apps might look a little blurry — while allowing new applications to take advantage of the hardware. Nothing <em>broke</em>, while new apps raised the quality bar.</p>
-
 <p><strong>We can do the same with the PC.</strong> By approaching this transition as an industry, though a standards body, we can make a quantum step forward in terms of on-screen quality and user experience.</p>
-
 <p>While I don’t have much to say about native apps, but here’s how it might work in web browsers.</p>
-
 <p><strong>Typography</strong></p>
-
 <p>Many web sites specify their typography in pixels, despite good advice to the contrary. A new “pixel-doubled” browser would simply double CSS pixel sizes, unless otherwise instructed. Old sites would not break.</p>
-
 <p>Then, as time permits, a site publisher could:</p>
-
 <ul>
 <li>Improve the CSS to use true typographical concepts like <em>em</em>, or,</li>
 <li>If they must, add a newly-defined META tag to instruct the browser to respect the CSS pixels (though this would be a bit silly)</li>
 </ul>
-
 <p><strong>Images &amp; video (ie, raster images)</strong></p>
-
 <p>Similarly, browsers would simply double the pixel size of images in the browser by default. They might appears stretched on close inspection, but really they shouldn’t look worse than they did on a traditional-resolution screen.</p>
-
 <p>(When you hit full-screen mode on that Hulu video, your computer is already doing something similar.)</p>
-
 <p>Site publishers could then update their IMG tags with a new src2 attribute — this file would be handled in literal pixels, in most cases backed with a higher-res asset.</p>
-
 <p><strong>Dynamic &amp; vector graphics</strong></p>
-
 <p>True vector images would not struggle with this, as they are already are resolution-independent. The element in the DOM in which they reside would follow the rules as above — rendered at double the pixels unless otherwise instructed.</p>
-
 <p>Elements such as &lt;canvas&gt; would follow the same rules as raster images above — doubled by default — while adding an attribute or meta tag which communicates “I recognize that we are at double-resolution, my code understands that, render exactly the pixels I specify”.</p>
-
 <p>Even better, for programmatic images, expose the presence of pixel-doubling via a Javascript environment property. Then the script could could <a href="http://engineeredweb.com/blog/09/10/operating-features-not-browser-versions">test for capabilities</a> and do its own math. (Tedious, I realize, but such accommodations are necessary with every new capability.)</p>
-
 <p>If this isn’t done by the industry, some PC vendor (hmm, wonder who) might go ahead and do it anyway. I’d be OK with that. But it would be nice for everyone to be on board.</p>
 
 </div>

@@ -16,7 +16,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
   <title>gen: optional typewriters · Matt Sherman</title>
-  <meta name="description" content="Here are a few optional typewriters I&rsquo;ve created. They are not built into gen, but can be added as follows.">
+  <meta name="description" content="Here are a few optional typewriters I&#39;ve created. They are not built into gen, but can be added as follows.">
   <meta name="author" content="Matt Sherman">
   <link href="/css/style.css?3" rel="stylesheet">
   
@@ -35,8 +35,8 @@
 <meta property="og:url" content="https://clipperhouse.com/gen/optional/" />
 <meta name="twitter:title" content="gen: optional typewriters · Matt Sherman" />
 <meta property="og:title" content="gen: optional typewriters · Matt Sherman" />
-<meta name="twitter:description" content="Here are a few optional typewriters I&rsquo;ve created. They are not built into gen, but can be added as follows." />
-<meta property="og:description" content="Here are a few optional typewriters I&rsquo;ve created. They are not built into gen, but can be added as follows." />
+<meta name="twitter:description" content="Here are a few optional typewriters I&#39;ve created. They are not built into gen, but can be added as follows." />
+<meta property="og:description" content="Here are a few optional typewriters I&#39;ve created. They are not built into gen, but can be added as follows." />
 <meta name="twitter:image" content="https://clipperhouse.com/img/apple-touch-icon.png" />
 <meta property="og:image" content="https://clipperhouse.com/img/apple-touch-icon.png" />
 </head>
@@ -72,57 +72,35 @@
   <h1 class="post-title"><a href="https://clipperhouse.com/gen/optional/">gen: optional typewriters</a></h1>
 </header>
 <div class="post-content">
-  
-
-<p>Here are a few optional <a href="/gen/typewriters/">typewriters</a> I&rsquo;ve created. They are not built into <a href="/gen/">gen</a>, but can be added as follows.</p>
-
+  <p>Here are a few optional <a href="/gen/typewriters/">typewriters</a> I've created. They are not built into <a href="/gen/">gen</a>, but can be added as follows.</p>
 <h3 id="set">Set</h3>
-
 <p>To add:</p>
-
 <pre><code>gen add github.com/clipperhouse/set
 </code></pre>
-
 <p>To use:</p>
-
 <pre><code>// +gen set
 type MyType struct{}
 </code></pre>
-
 <p>Implements a strongly-typed set with common <a href="http://godoc.org/github.com/deckarep/golang-set">operations</a> (Union, Difference, etc). Items stored within it are unordered and unique.</p>
-
 <p>The implementation is based on <a href="https://github.com/deckarep/golang-set">github.com/deckarep/golang-set</a>, with permission. API documentation is available here. Parameters and return values that would be <code>interface{}</code> in the @deckarep implementation will instead use your type in the gen implementation.</p>
-
 <h3 id="list">List</h3>
-
 <p>To add:</p>
-
 <pre><code>gen add github.com/clipperhouse/linkedlist
 </code></pre>
-
 <p>To use:</p>
-
 <pre><code>// +gen list
 type MyType struct{}
 </code></pre>
-
 <p>Implements a strongly-typed, doubly-linked list, based on <a href="https://golang.org/pkg/container/list">golang.org/pkg/container/list</a>. API documentation is available at that link. Parameters and return values that would be interface{} in the golang implementation will instead use your type in the gen implementation.</p>
-
 <h3 id="ring">Ring</h3>
-
 <p>To add:</p>
-
 <pre><code>gen add github.com/clipperhouse/ring
 </code></pre>
-
 <p>To use:</p>
-
 <pre><code>// +gen ring
 type MyType struct{}
 </code></pre>
-
 <p>Implements strongly-typed operations on circular lists, based on <a href="https://golang.org/pkg/container/ring">golang.org/pkg/container/ring</a>. API documentation is available at that link. Parameters and return values that would be interface{} in the golang implementation will instead use your type in the gen implementation.</p>
-
 <p><a href="/gen/overview/">← back to gen overview</a></p>
 
 </div>

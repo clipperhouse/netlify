@@ -74,82 +74,41 @@
 </header>
 <div class="post-content">
   <p>Jargon is a Go package with tokenizers and lemmatizers. <a href="https://github.com/clipperhouse/jargon">Source &amp; docs</a>.</p>
+<!-- raw HTML omitted -->
+<pre><code>&lt;textarea class=&quot;code&quot; id=&quot;text&quot; name=&quot;text&quot; rows=&quot;11&quot;&gt;&lt;/textarea&gt;
 
-<form action="/api/jargon/" method="POST">
-    <span class="hint">
-        Examples:
-    </span>
-    <label for="prose">
-        <input type="radio" id="prose" name="format" value="text" checked>
-        Text
-    </label>
-    <label for="html">
-        <input type="radio" id="html" name="format" value="html">
-        HTML
-    </label>
-    <label for="json">
-        <input type="radio" id="json" name="format" value="text">
-        JSON
-    </label>
-    <label for="csv">
-        <input type="radio" id="csv" name="format" value="text">
-        CSV
-    </label>
+&lt;div&gt;
+    &lt;button type=&quot;submit&quot;&gt;Click to lemmatize&lt;/button&gt;
+&lt;/div&gt;
 
-    <textarea class="code" id="text" name="text" rows="11"></textarea>
-
-    <div>
-        <button type="submit">Click to lemmatize</button>
-    </div>
-
-    <div class="pre code result"></div>
-</form>
-
-<div id="examples" class="examples">
-    <div id="prose">
-Jargon picks out known terms (lemmas) from technical text, for example:
-
-We are looking for experienced Rails developers, with experience in NodeJS and Obj C.
-
-The result is consistent, canonical terminology — allowing for better analysis like NLP. Jargon uses tags and synonyms from StackOverflow, and implements ‘insensitivity’ to spaces, hyphens, dots and case.
-
-Source data might use ’react’, ‘React.js’ or ‘React  JS’ or ‘REACTJS’, but we are confident they get converted to one string.
-    </div>
-    <div id="html">
-We can lemmatize HTML, but only the text nodes.
-
-<!— Comments are left verbatim even if terms like Ruby are within them. True for tags and attributes as well. -->
-
-<p class="rails">Hi! Let's talk Rails and SQL.</p>
-    </div>
-    <div id="csv">
-The parsing rules work well for comma separated files:
-
-Name,Skills,Years
-Jane Doe,"c sharp, ecma script",6
-Foo Bar,"aspnet mvc R NodeJS", 7.5
-    </div>
-    <div id="json">
-The parsing rules work well for JSON:
-
-{[
-    "name": "Microsoft Access",
-    "name": "X Code"
+&lt;div class=&quot;pre code result&quot;&gt;&lt;/div&gt;
+</code></pre>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<p>We are looking for experienced Rails developers, with experience in NodeJS and Obj C.</p>
+<p>The result is consistent, canonical terminology — allowing for better analysis like NLP. Jargon uses tags and synonyms from StackOverflow, and implements ‘insensitivity’ to spaces, hyphens, dots and case.</p>
+<p>Source data might use ’react’, ‘React.js’ or ‘React  JS’ or ‘REACTJS’, but we are confident they get converted to one string.
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+We can lemmatize HTML, but only the text nodes.</p>
+<p>&lt;!— Comments are left verbatim even if terms like Ruby are within them. True for tags and attributes as well. &ndash;&gt;</p>
+<!-- raw HTML omitted -->
+<p>Name,Skills,Years
+Jane Doe,&ldquo;c sharp, ecma script&rdquo;,6
+Foo Bar,&ldquo;aspnet mvc R NodeJS&rdquo;, 7.5
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+The parsing rules work well for JSON:</p>
+<p>{[
+&ldquo;name&rdquo;: &ldquo;Microsoft Access&rdquo;,
+&ldquo;name&rdquo;: &ldquo;X Code&rdquo;
 ]}
-    </div>
-</div>
-
-<style>
-    form button {
-        border: 0;
-        background-color: rgba(0, 122, 255, .8);
-        color: white;
-    }
-
-    form textarea {
-        border-color: rgba(0, 122, 255, .8);
-    }
-</style>
+<!-- raw HTML omitted --></p>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<blockquote>
+</blockquote>
 
 </div>
 <footer class="post-footer">

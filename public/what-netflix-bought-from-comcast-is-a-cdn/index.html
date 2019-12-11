@@ -73,35 +73,20 @@
 </header>
 <div class="post-content">
   <p>With the hubbub about net neutrality, fast lanes and Netflix, I though I would illustrate what we are dealing with technologically.</p>
-
 <p>Netflix’s deal with Comcast is called “interconnect” or “peering”. It’s part of the wholesale, or B2B, side of the Internet.</p>
-
 <p>Traditionally, Netflix would buy “transit” from a third-party like Cogent. Cogent, in turn, would make a deal with consumer ISPs such as Comcast, Verizon, Time Warner, et al, and thereby deliver Netflix’s bits to consumers.</p>
-
-<p><img src="//clipperhouse.files.wordpress.com/2014/05/cdn6.png?w=625" alt="cdn" /></p>
-
+<p><img src="//clipperhouse.files.wordpress.com/2014/05/cdn6.png?w=625" alt="cdn"></p>
 <p>What happened in this instance, however, is that Netflix decided to skip Cogent and connect directly to Comcast (and <a href="//www.vox.com/cards/network-neutrality/how-does-netflixs-recent-peering-dispute-with-comcast-affect-net">Verizon</a>), and to pay for the connection. The term for this is “paid interconnect”. We call it this because in many instances, interconnect is done without an exchange of money — those circumstances are called “settlement-free”.</p>
-
 <p>Netflix’s arrangement with Comcast been called a fast lane, and it is. But it is technologically indistinguishable from a CDN, which most of us are familiar with, and which have been around for a long time.</p>
-
 <p>As you can see from the diagram above, a CDN and paid interconnect are the same thing. Bits — Netflix’s video content in this case — are allowed ingress to Comcast’s network. By being on a CDN, or using paid interconnect, the buyer is given a privileged place on Comcast’s network, in exchange for money.</p>
-
 <p>I can understand the upset that people have over the Netflix arrangement. I completely agree that Comcast et al are monopolies, and their <a href="//www.vox.com/2014/5/5/5683642/five-big-internet-providers-are-slowing-down-internet-access-until">behavior</a> reflects that. (I am on Time Warner and can point you to the grey hairs I acquired when dealing with them.)</p>
-
 <p>But I also believe being upset about these monopolies is being conflated with being upset about fast lanes. We have fast lanes, have had for a while, and use them happily in exchange for money.</p>
-
 <p>If we wish to prohibit fast lanes, then we wish to prohibit CDNs. It might be the right thing to do, given the state of local ISP monopolies. But let’s articulate what it is we want.</p>
-
 <p><a href="//news.ycombinator.com/item?id=7713468"><em>discuss on hacker news</em></a></p>
-
 <p><strong>Updates 11 May</strong></p>
-
 <p>I’ve updated the image above to note that Netflix must also replicate its content to the CDN cache. The replication is not bandwidth-intensive the way consumer delivery is; once Netflix delivers a movie to the CDN it can be delivered to consumers hundreds of times without going back to Netflix’s servers.</p>
-
 <p>Also, the diagram above refers to a CDN where a cache server is on the premises of the last-mile ISP. One can also imagine a third-party CDN off-premises:</p>
-
-<p><img src="//clipperhouse.files.wordpress.com/2014/05/cdn31.png?w=625" alt="cdn3" /></p>
-
+<p><img src="//clipperhouse.files.wordpress.com/2014/05/cdn31.png?w=625" alt="cdn3"></p>
 <p>The basic logic does not change: if there is a high volume of bandwidth being delivered to the last mile, the ingress to Comcast’s network still needs to accommodate; it’s a fast lane with more middlemen.</p>
 
 </div>

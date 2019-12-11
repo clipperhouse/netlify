@@ -73,51 +73,38 @@
 </header>
 <div class="post-content">
   <p>I found a nice technique for automatically displaying the SVN revision number in the footer of a web site. It is based in <a href="http://ccnet.thoughtworks.com/">CruiseControl.Net</a>.</p>
-
 <p>Why would I do this? Well, we don’t have a strict version numbering convention for our app. We roll out incremental builds all the time. This falls under the technique of “continuous integration”, or in Google’s case, “eternal beta”. So it’s easier just to have the app give itself an incremental version number each time, that corresponds with our build process.</p>
-
-<p>First, go get the SVN revision labeller and follow the instructions: <a href="http://code.google.com/p/svnrevisionlabeller/">http://code.google.com/p/svnrevisionlabeller/</a></p>
-
+<p>First, go get the SVN revision labeller and follow the instructions: <a href="http://code.google.com/p/svnrevisionlabeller/"><a href="http://code.google.com/p/svnrevisionlabeller/">http://code.google.com/p/svnrevisionlabeller/</a></a></p>
 <p>This will automatically write the revision number in the .state file associated with your CruiseControl project. This file is usually stored at C:\Program Files\CruiseControl.NET\server[ProjectName].state</p>
-
 <p>It’s just an XML file, so you can read the contents. Using a bit of Linq to XML, I am able to grab that data on the fly:</p>
-
-<p>[code:c#]using System.Xml.Linq;<br />
+<p>[code:c#]using System.Xml.Linq;<br>
 using System.IO;</p>
-
-<p>public string GetRevisionLabel()<br />
-{<br />
- string result = String.Empty;<br />
- string stateFilePath = “C:\Program Files\CruiseControl.NET\server\MyProject.state”;<br />
- if (HttpContext.Current.Application[“BuildLabel”] != null)<br />
- {<br />
- result = (string)HttpContext.Current.Application[“BuildLabel”];<br />
- }<br />
- else if (File.Exists(stateFilePath))<br />
- {<br />
- XDocument stateFileRoot = XDocument.Load(stateFilePath);</p>
-
-<p>var q = (from label in stateFileRoot.Descendants(“Label”)<br />
- select (string)label).SingleOrDefault();</p>
-
-<p>if (q != null)<br />
- {<br />
- result = q.ToString();<br />
- HttpContext.Current.Application[“BuildLabel”] = result;<br />
- }<br />
- }<br />
- return result;<br />
+<p>public string GetRevisionLabel()<br>
+{<br>
+string result = String.Empty;<br>
+string stateFilePath = “C:\Program Files\CruiseControl.NET\server\MyProject.state”;<br>
+if (HttpContext.Current.Application[“BuildLabel”] != null)<br>
+{<br>
+result = (string)HttpContext.Current.Application[“BuildLabel”];<br>
+}<br>
+else if (File.Exists(stateFilePath))<br>
+{<br>
+XDocument stateFileRoot = XDocument.Load(stateFilePath);</p>
+<p>var q = (from label in stateFileRoot.Descendants(“Label”)<br>
+select (string)label).SingleOrDefault();</p>
+<p>if (q != null)<br>
+{<br>
+result = q.ToString();<br>
+HttpContext.Current.Application[“BuildLabel”] = result;<br>
+}<br>
+}<br>
+return result;<br>
 }[/code]</p>
-
 <p>Now display it wherever you like. In this case, you can see that I cache it for performance and easy access.</p>
-
 <p>Security note: you might not want your web process reaching into the Program Files folder. I copy the .state files to App_Data as part of the build process, and query them there.</p>
-
 <p>Hope this helps.</p>
-
 <p>— —</p>
-
-<p>Inspired by: <a href="http://stackoverflow.com/questions/913904/why-would-a-site-display-svn-version-and-what-are-the-advantages">http://stackoverflow.com/questions/913904/why-would-a-site-display-svn-version-and-what-are-the-advantages</a></p>
+<p>Inspired by: <a href="http://stackoverflow.com/questions/913904/why-would-a-site-display-svn-version-and-what-are-the-advantages"><a href="http://stackoverflow.com/questions/913904/why-would-a-site-display-svn-version-and-what-are-the-advantages">http://stackoverflow.com/questions/913904/why-would-a-site-display-svn-version-and-what-are-the-advantages</a></a></p>
 
 </div>
 <footer class="post-footer">

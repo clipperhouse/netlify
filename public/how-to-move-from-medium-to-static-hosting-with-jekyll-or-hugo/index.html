@@ -72,40 +72,24 @@
   <h1 class="post-title"><a href="https://clipperhouse.com/how-to-move-from-medium-to-static-hosting-with-jekyll-or-hugo/">How to move from Medium to static hosting with Jekyll or Hugo</a></h1>
 </header>
 <div class="post-content">
-  
-
-<p>I recently moved <a href="http://clipperhouse.netlify.com/">my blog</a> from Medium to static generation with Hugo &amp; hosting with Netlify. I prefer static hosting for performance reasons, and because Markdown is so nice.</p>
-
+  <p>I recently moved <a href="http://clipperhouse.netlify.com/">my blog</a> from Medium to static generation with Hugo &amp; hosting with Netlify. I prefer static hosting for performance reasons, and because Markdown is so nice.</p>
 <p>This approach is good for people who are comfortable with Git and other dev tools. It’s not great if you like UI’s that (say) Medium or Wordpress provides.</p>
-
 <h3 id="0-get-familiar-with-hugo-or-jekyll">0: Get familiar with Hugo or Jekyll</h3>
-
 <p>Out of scope of this article is how to use <a href="https://gohugo.io/getting-started/">Hugo</a>, <a href="https://jekyllrb.com/docs/quickstart/">Jekyll</a> or <a href="https://www.netlify.com">Netlify</a>. That’s what their docs are for! I suggest you get up and running with “Hello, world” using those platforms before continuing.</p>
-
 <blockquote>
 <p>I happen to prefer Hugo, it’s super fast and I like Go. I like Netlify because the static hosting is automagic (triggered via Git).</p>
 </blockquote>
-
 <h3 id="1-export-from-medium">1: Export from Medium</h3>
-
 <p>First, download your articles from <a href="https://medium.com/me/export">your Medium export page</a>, and expand the .zip file. (It takes a second, they email when it’s ready.)</p>
-
 <p>Once downloaded and expanded, you should see a list of HTML files.</p>
-
 <h3 id="2-convert-to-markdown">2: Convert to Markdown</h3>
-
 <p>Your Medium HTML pages need to be converted to Markdown. I <a href="https://gist.github.com/clipperhouse/010d4666892807afee16ba7711b41401">wrote a script</a> (in Go) that worked for me. Copy it into a local file on your computer.</p>
-
 <blockquote>
 <p>You’ll need to <a href="https://golang.org/doc/install">set up Go</a>. If that’s not for you, <a href="https://www.google.com/search?q=convert+medium+to+markdown">here are some other options</a>.</p>
 </blockquote>
-
 <p>In that script, you’ll need to change the <code>src</code> and <code>dest</code> variables. <code>src</code> is the folder with your Medium HTML files; <code>dest</code> is where you want the new Markdown files to end up. Then, <code>go run main.go</code>.</p>
-
 <p>You should see a folder full of <code>.md</code> files in the <code>dest</code> folder. Move those into the content folder of Hugo/Jekyll and you should be on your way. If not&hellip;</p>
-
 <h3 id="happy-to-help">Happy to help</h3>
-
 <p>I learned a bunch during this project and am happy to help. Ping me <a href="https://mobile.twitter.com/clipperhouse">@clipperhouse</a>.</p>
 
 </div>

@@ -72,52 +72,28 @@
   <h1 class="post-title"><a href="https://clipperhouse.com/bugs-are-a-failure-of-prediction/">Bugs are a failure of prediction</a></h1>
 </header>
 <div class="post-content">
-  
-
-<p>We think of bugs as flaws in code. This is incorrect, or at best, banal.</p>
-
+  <p>We think of bugs as flaws in code. This is incorrect, or at best, banal.</p>
 <p>Rather, the essential definition of a bug is that we <strong>failed to predict</strong> what a piece of code would do.</p>
-
 <p>See, smart programmers wrote the code. Other smart programmers looked at the code. It went into production, and did the wrong thing.</p>
-
 <p>We thought it would do the right thing. The prediction was wrong. So let’s focus not on the broken code, but on improving our predictions.</p>
-
 <h3 id="tests">Tests</h3>
-
 <p>I like tests not for safety, per se, but because they require us to articulate what a piece of code should do. Further, they require us to interact with our code from the outside (you know, like a user). Safety is a side effect of these two things.</p>
-
 <p>When we test code, we test our predictions of what the code will do.</p>
-
 <h3 id="complexity">Complexity</h3>
-
 <p>Humans form a mental model of what a piece of code will do. To the extent that understanding a piece of code requires understanding other, possibly far away, pieces of code, we make forming an accurate mental model more difficult.</p>
-
 <p>Code becomes unpredictable by humans when it taxes our mental models.</p>
-
 <h3 id="playing-computer">Playing computer</h3>
-
 <p>A few rare programmers can look at a piece of code and know what it will do. Most of us can’t. Instead, we make educated guesses.</p>
-
 <p>The computer (the compiler, the environment) is the unambiguous decider of what the code will do. When we think we know what a piece of code will do, we are playing computer.</p>
-
 <p>The computer is better at playing computer than the human mind. A prediction about what a piece of code will do, short of executing it, is folly.</p>
-
 <h3 id="readability">“Readability”</h3>
-
 <p>Prediction is more likely when a piece of code looks like what it does. This is a very subjective idea, of course.</p>
-
 <p>The best measure is: how often would a programmer <em>new to this code</em> make correct predictions about how it behaves?</p>
-
 <p>This is an argument about abstractions, of course. One person’s “spare me the details” is another’s “too much magic”.</p>
-
 <p>What we call “readability” is in fact predictability.</p>
-
 <p>—</p>
-
 <p>None of these are new ideas. They are mostly best practices, and we believe they lead to higher quality software.</p>
-
 <p>These practices work, however, not because they “improve code”. Rather, they improve <em>human understanding</em> of code. That distinction is the essence of predicting bugs.</p>
-
 <p><a href="https://news.ycombinator.com/item?id=9017793"><em>discuss on hacker news</em></a></p>
 
 </div>

@@ -73,17 +73,11 @@
 </header>
 <div class="post-content">
   <p>I have a theory that the use of TypeScript <em>de facto</em> makes for more performant JavaScript, by making the runtime’s “type prediction” more accurate.</p>
-
 <p>TypeScript’s static types are erased at compile time, of course, and are not present at runtime. But I suspect that we get a performance benefit anyway. Hear me out.</p>
-
 <p>At runtime, a JavaScript variable can be any type – number, object, string, etc.</p>
-
 <p>As an optimization, if I understand correctly, JavaScript runtimes (such as V8) do their best to predict types, based on runtime observation. If a variable – say, a function parameter – turns out to be a number most of the time, V8 will predict a number type for subsequent invocations.</p>
-
 <p>If this assumption turns out to be wrong, V8 will back out of the predicted branch, and handle it correctly. But if the assumption is correct, we get a performance benefit. A hot path, so to speak.</p>
-
 <p>My hypothesis is that the use of TypeScript by the developer makes correct predictions <strong>more likely</strong>.</p>
-
 <p>By typing a function parameter as <code>number</code>, we prevent <em>ourselves</em> from passing some other type to that function call. So V8’s type prediction turns out to be more accurate, more often, thanks to the discipline enforced at development time.</p>
 
 </div>

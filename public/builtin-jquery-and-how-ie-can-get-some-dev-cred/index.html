@@ -73,15 +73,10 @@
 </header>
 <div class="post-content">
   <p>I’ve mentioned in the past that <a href="http://clipperhouse.com/blog/post/Hammering-the-DOM.aspx">jQuery is an API</a> as much as it is a set of functions. As syntaxes go, it’s very nice — consistent, logical, readable.</p>
-
 <p>What are the chances that one of the browser makers will announce “native” support for jQuery in their next version? What would this even mean?</p>
-
 <p>Well, for starters, I think it would mean that the jQuery selector syntax would be understood by the browser as a <a href="http://clipperhouse.com/blog/post/jQuery-performance-tips.aspx">DOM query language</a>. Browsers have made incremental steps in this direction: <a href="https://developer.mozilla.org/en/DOM/element.getElementsByTagName">getElementsByTagName</a> and <a href="http://www.quirksmode.org/blog/archives/2008/05/getelementsbycl.html">getElementsByClassName</a>, for example. Still not generalized enough, IMHO.</p>
-
 <p>The next step would be support for <a href="http://ejohn.org/blog/css-animations-and-javascript/">CSS transitions</a>. Tell the browser three things: beginning state, end state and how to get there (easing). Right now, jQuery achieves animation by asking the browser to <a href="/blog/post/Hammering-the-DOM.aspx">redraw the DOM a hundred times</a>. Yikes. We can feel IE struggling in the form of less-than-smooth animations.</p>
-
 <p>Today’s machines can do 60 frames/sec of 3D rendering. Shouldn’t the browser be able to smoothly fade in a paragraph of text without spiking the CPU?</p>
-
 <p>Announcing these two things, while working closely with John Resig to make sure they serve the jQ community, would be a great way for Microsoft get a little cred for IE 9. Maybe even leapfrog the current jQ and go straight to <a href="http://sizzlejs.com/">Sizzle</a>.</p>
 
 </div>

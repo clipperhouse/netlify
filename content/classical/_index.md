@@ -6,7 +6,7 @@ stations:
     stream_url: "https://stream.wqxr.org/wqxr-web"
     location: "New York City"
   - name : "KDFC"
-    stream_url: "https://18323.live.streamtheworld.com/KDFCFMAAC.aac"
+    stream_url: "https://18303.live.streamtheworld.com/KDFCFMAAC.aac"
     location: "San Francisco"
   - name : "WFMT"
     stream_url: "http://stream.wfmt.com/main"

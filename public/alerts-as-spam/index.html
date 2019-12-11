@@ -73,25 +73,15 @@
 </header>
 <div class="post-content">
   <p>I went to a talk last night by John Allspaw at Etsy, about alerts and how they are hard to get right.</p>
-
 <p>The short story is, signal-to-noise. Most alerting systems don’t <em>alert</em>, because they are largely false-positive. Due to sheer volume, the recipients of those alerts start inventing their own subjective algorithm as to what deserves attention.</p>
-
 <p>Those human factors are the hard part. Alerts require serious design, and need to be designed with the knowledge that they will be consumed in the context of several other alerting systems.</p>
-
 <p>(By my definition, anything feed-like is an alerting system if you let it be. Error logs, emails, Twitter.)</p>
-
 <p>If an alert does not require action, why was I alerted? It’s literally spam at that point.</p>
-
 <p>It’s understandable why we put up with this. A false positive is low cost, but a false-negative (the alert you needed but didn’t get) is high cost. So we err on the side of <em>more</em>.</p>
-
 <p>See the problem? Bad alerts become non-alerts, but there are some we can’t afford to miss. Conundrum.</p>
-
 <p>Solutions include semi-obvious things like improved UI, where the alert tells you why it alerted and what it expects you to do. Graphs. Sounds. There are interesting ideas.</p>
-
 <p>My idea is that <em>change</em> is what we care about, and what we should work to define. That means calculating not just levels of (say) RAM usage, but velocity, acceleration, and even <a href="http://en.wikipedia.org/wiki/Jerk_%28physics%29">jerk</a>.</p>
-
 <p>I also think there is an opportunity for ML-type learning within the alert system. Every alert you get, you respond ‘useful’ or ‘not’. Then you <a href="http://en.wikipedia.org/wiki/Statistical_classification">classify</a>. Not unlike spam.</p>
-
 <p><a href="https://news.ycombinator.com/item?id=5712834"><em>discuss on hacker news</em></a></p>
 
 </div>

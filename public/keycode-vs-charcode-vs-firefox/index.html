@@ -73,25 +73,12 @@
 </header>
 <div class="post-content">
   <p>I am working on a filtered HTML field. The idea is to only allow alphanumeric characters to be typed, and have all other keystrokes ignored.</p>
-
 <p>I am using the <a href="http://docs.jquery.com/Events/keypress">keypress event</a> in jQuery to capture the keystrokes — my function returns true for valid characters (which simply passes the event to the field) and false for everything else (which kills the event before it can “reach” the field).</p>
-
 <p>The behavior was fine in IE and Chrome, but not in Firefox. My script was suppressing the arrow keys in only that browser. Certainly, a user should be able to arrow back and forth within the field they are editing.</p>
-
 <p>The problem is twofold. First, different browsers fire the keypress event for some keystrokes, but not all. Chrome and IE didn’t fire the event when using the arrow keys, while Firefox did. Secondly, the keystroke’s value will appear in e.keyCode property in some browsers, but in the e.charCode property in others. Jeez Louise.</p>
-
 <p>This <a href="http://www.quirksmode.org/js/keys.html">quirksmode article</a> turned out to be a lifesaver. He exhaustively catalogs the differences across browsers, and provides a very valuable little test app (scroll to the bottom of that page).</p>
-
 <p>So, short story long, here is a simple script that I ended up with, I hope it’s useful to you.
-<code>$(&amp;#34;#username&amp;#34;).keypress(function(e) {  
-    var k = e.keyCode || e.charCode;  
-    var c = e.charCode;  
-    var isArrow = (c == 0 &amp;amp;&amp;amp; k &amp;gt;= 37 &amp;amp;&amp;amp; k &amp;lt;= 40);  
-    var isSpecial = ((k == 8) || (k == 9) || (k == 127)) || isArrow;    // backspace, tab, delete  
-    var isOK = (k &amp;gt;= 48 &amp;amp;&amp;amp; k &amp;lt;= 57) || (k &amp;gt;= 65 &amp;amp;&amp;amp; k &amp;lt;= 90) || (k &amp;gt;= 97 &amp;amp;&amp;amp; k &amp;lt;= 122);  // letters and numbers  
-    return isOK || isSpecial;  
-});</code></p>
-
+<code>$(&amp;#34;#username&amp;#34;).keypress(function(e) {   var k = e.keyCode || e.charCode;   var c = e.charCode;   var isArrow = (c == 0 &amp;amp;&amp;amp; k &amp;gt;= 37 &amp;amp;&amp;amp; k &amp;lt;= 40);   var isSpecial = ((k == 8) || (k == 9) || (k == 127)) || isArrow;	// backspace, tab, delete   var isOK = (k &amp;gt;= 48 &amp;amp;&amp;amp; k &amp;lt;= 57) || (k &amp;gt;= 65 &amp;amp;&amp;amp; k &amp;lt;= 90) || (k &amp;gt;= 97 &amp;amp;&amp;amp; k &amp;lt;= 122);  // letters and numbers   return isOK || isSpecial;   });</code></p>
 <p>It hasn’t been exhaustively tested, but is in the “works for me” stage right now. Let me know if it’s helpful.</p>
 
 </div>

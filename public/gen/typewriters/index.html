@@ -72,73 +72,42 @@
   <h1 class="post-title"><a href="https://clipperhouse.com/gen/typewriters/">gen: type writers</a></h1>
 </header>
 <div class="post-content">
-  
-
-<p><a href="/gen/">gen</a> is driven by “type writers” – packages which are responsible for interpreting the annotated tags and turning them into generated code.</p>
-
+  <p><a href="/gen/">gen</a> is driven by “type writers” – packages which are responsible for interpreting the annotated tags and turning them into generated code.</p>
 <p>gen includes two built-in TypeWriters:</p>
-
 <h4 id="slice"><code>slice</code></h4>
-
-<p>The <code>slice</code> typewriter generates functional convenience methods that will look familiar to users of C#’s LINQ or JavaScript&rsquo;s Array methods. It is intended to save you some loops, using a “pass a function” pattern. It offers grouping, filtering, ad-hoc sorts and projections. <a href="/gen/slice/">Details and docs&hellip;</a></p>
-
+<p>The <code>slice</code> typewriter generates functional convenience methods that will look familiar to users of C#’s LINQ or JavaScript's Array methods. It is intended to save you some loops, using a “pass a function” pattern. It offers grouping, filtering, ad-hoc sorts and projections. <a href="/gen/slice/">Details and docs&hellip;</a></p>
 <h4 id="stringer"><code>stringer</code></h4>
-
 <p>The <code>stringer</code> typewriter is a fork of Rob Pike’s <a href="https://godoc.org/golang.org/x/tools/cmd/stringer">tool</a> of the same name, which generates readable strings for consts. <a href="/gen/stringer/">Details and docs&hellip;</a></p>
-
 <h3 id="listing-typewriters">Listing typewriters</h3>
-
 <p>To view the currently-available typewriters, <code>cd</code> into your package and type:</p>
-
 <pre><code>gen list
 </code></pre>
-
-<h3 id="adding-third-party-typewriters">Adding third-party TypeWriters</h3>
-
+<h3 id="adding-thirdparty-typewriters">Adding third-party TypeWriters</h3>
 <p>TypeWriters can be implemented by third-parties and used at “gen time”. To use a third-party typewriter, <code>cd</code> into the root of your package and type (for example):</p>
-
 <pre><code>gen add github.com/clipperhouse/set
 </code></pre>
-
 <p>This will create a <code>_gen.go</code> file. Have a look at it – it should contain imports for the built-in slice (above) and your new typewriter.</p>
-
 <p>Confirm it by typing:</p>
-
 <pre><code>gen list
 </code></pre>
-
 <p>To ensure you’ve got your third-party packages locally, type:</p>
-
 <pre><code>gen get
 </code></pre>
-
 <p>Now use the third-party tag (<code>set</code> in this case) to your type annotation:</p>
-
 <pre><code>// +gen set slice:&quot;Where,Count,GroupBy[string]&quot;
 type MyType struct {}
 </code></pre>
-
 <p>And run gen on your package:</p>
-
 <pre><code>gen
 </code></pre>
-
 <p>You should have a new file <code>mytype_set.go</code>. Third-parties are responsible for the quality and documentation of their typewriters, of course.</p>
-
 <p>To <strong>remove</strong> a typewriter, simply remove the import from the <code>_gen.go</code> file.</p>
-
 <h3 id="implementing-typewriters">Implementing TypeWriters</h3>
-
 <p>You can create your own typewriter by implementing <a href="http://godoc.org/github.com/clipperhouse/typewriter#Interface">typewriter.Interface</a>.</p>
-
-<p>Typewriters follow the pattern of formats in the <a href="http://blog.golang.org/go-image-package#TOC_5.">image package</a> of Go&rsquo;s standard library. They are registered via an <code>init()</code> method.</p>
-
+<p>Typewriters follow the pattern of formats in the <a href="http://blog.golang.org/go-image-package#TOC_5.">image package</a> of Go's standard library. They are registered via an <code>init()</code> method.</p>
 <p>The best thing to do is have a look at an existing implementation, <a href="https://github.com/clipperhouse/set">Set</a> is straightforward.</p>
-
 <p>By convention, the name of the typewriter is the name of the tag that it uses. Type <code>gen list</code> to see the name of the typewriters available in your current package.</p>
-
 <p>The <a href="https://github.com/clipperhouse/typewriter">typewriter package</a> handles tag parsing and type evaluation, and passes this information to your typewriter. It offers some conveniences for text templating, as well.</p>
-
 <p><a href="/gen/overview/">← back to gen overview</a></p>
 
 </div>

@@ -73,55 +73,39 @@
 </header>
 <div class="post-content">
   <p>An important concept in MVC is that Views are meant to be “dumb” — and by that I mean, your View should only care about outputting a user interface, and should know very little about business logic.</p>
-
 <p>You want this for a few reasons. For example, you might create alternate Views for different kinds of output, such as for a mobile device. You shouldn’t have to re-implement any business logic to do that.</p>
-
 <p>And down the road, when your logic inevitably changes, you shouldn’t have to worry about changing it in more than one place. Not only is that tedious and time-consuming, but you open up the risk of having inconsistent behavior. It violates <a href="http://en.wikipedia.org/wiki/Don%27t_repeat_yourself">DRY</a>.</p>
-
 <p>How might this happen? Here’s an example.</p>
-
 <p>Let’s say you have a social app which displays user profiles. If a user is looking at their own profile, you might want to offer them a link to edit it. So your View would have something like:</p>
-
-<p>&lt;% if (Model.DisplayedUser == Model.LoggedInUser) { %&gt;<br />
-&lt;a href=”url_of_edit_screen”&gt;edit this profile&lt;/a&gt;<br />
+<p>&lt;% if (Model.DisplayedUser == Model.LoggedInUser) { %&gt;<br>
+&lt;a href=”url_of_edit_screen”&gt;edit this profile&lt;/a&gt;<br>
 &lt;% } %&gt;</p>
-
 <p>Simple enough, and it might not raise any red flags at the time. Then, however, you realize that administrators should be able to edit profiles as well. Now your View code becomes:</p>
-
-<p>&lt;% if (Model.DisplayedUser == Model.LoggedInUser || Request.User.IsInRole(“Administrator”)) { %&gt;<br />
-&lt;a href=”url_of_edit_screen”&gt;edit this profile&lt;/a&gt;<br />
+<p>&lt;% if (Model.DisplayedUser == Model.LoggedInUser || Request.User.IsInRole(“Administrator”)) { %&gt;<br>
+&lt;a href=”url_of_edit_screen”&gt;edit this profile&lt;/a&gt;<br>
 &lt;% } %&gt;</p>
-
 <p>See where this is going? A month later, you realize that “moderators” need the same ability. And if a profile has been suspended, perhaps the user should no longer see that link. And maybe you want to offer a “preview” mode, where the link is hidden. Etc.</p>
-
 <p>Your View is now handling business logic. It becomes unreadable and untestable, and you are blurring the <a href="http://consultingblogs.emc.com/jamesbroome/archive/2009/08/24/asp-net-mvc-separation-of-concerns-amongst-team-members.aspx">separation of concerns</a>.</p>
-
 <p>The best way to avoid this is, first, <a href="http://www.superexpert.com/blog/archive/2009/04/13/asp.net-mvc-tip-50-ndash-create-view-models.aspx">have a ViewModel</a> (the above code already assumes that). Second, add properties to that ViewModel that describe only <strong>what the View should show, without regard for why</strong>. The usage becomes:</p>
-
-<p>&lt;% if (Model.EnableEditLink) { %&gt;<br />
-&lt;a href=”url_of_edit_screen”&gt;edit this profile&lt;/a&gt;<br />
+<p>&lt;% if (Model.EnableEditLink) { %&gt;<br>
+&lt;a href=”url_of_edit_screen”&gt;edit this profile&lt;/a&gt;<br>
 &lt;% } %&gt;</p>
-
 <p>Now, your View doesn’t know anything about Users, Roles or anything like that. It’s simply <strong>following orders</strong> that describe what to output. For Views, <strong>ignorance is bliss</strong>.</p>
-
 <p>Meanwhile, back in your ViewModel class, the property might be something like:</p>
-
-<p>public class ProfileViewModel<br />
-{<br />
- public bool EnableEditLink {<br />
- get<br />
- {<br />
- bool display = (this.DisplayedUser == this.LoggedInUser)<br />
- || Request.User.IsInRole(“Administrator”)<br />
- &amp;&amp; !UserAccountIsSuspended<br />
- &amp;&amp; !IsPreviewMode;<br />
- return display;<br />
- }<br />
- }<br />
+<p>public class ProfileViewModel<br>
+{<br>
+public bool EnableEditLink {<br>
+get<br>
+{<br>
+bool display = (this.DisplayedUser == this.LoggedInUser)<br>
+|| Request.User.IsInRole(“Administrator”)<br>
+&amp;&amp; !UserAccountIsSuspended<br>
+&amp;&amp; !IsPreviewMode;<br>
+return display;<br>
+}<br>
+}<br>
 }</p>
-
 <p>(Another practical benefit: <strong>you can’t set a breakpoint in a View</strong>. By encapsulating the logic in the ViewModel, you can debug and write tests to your heart’s content.)</p>
-
 <p>So next time you need to put an if-then in your View, resist the urge to let the View make the decision. No matter how simple, push the logic back into the ViewModel, where it belongs.</p>
 
 </div>

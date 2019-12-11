@@ -73,23 +73,15 @@
 </header>
 <div class="post-content">
   <p>I’ve come to really enjoy using the “var” keyword in C#. Although it’s been <a href="http://haacked.com/archive/2009/08/31/7-stages-of-language-keyword-grief.aspx">written about</a> many times, I want to clarify what it is.</p>
-
 <p>C# is a strongly-typed language, which means that every variable you declare must have a specified type. You must say it’s an integer or a string or a Thing. “var” does not change that.</p>
-
 <p>“var” looks a lot like the var in Javascript. Javascript is not strongly-typed, so you don’t have to say what “x” represents. Maybe it’s an integer at the moment and a string later. You don’t have to decide.</p>
-
 <p>But let’s be clear: var in C# has nothing to do with var in Javascript. <strong>C#’s “var” is a syntactic shortcut, and nothing more.</strong> Your variable is still strongly typed.</p>
-
 <p>Here is a typical piece of C# code:
 <code>List&amp;lt;Thing&amp;gt; myThingList = new List&amp;lt;Thing&amp;gt;();</code></p>
-
 <p>Notice something redundant in there? We said List&lt;Thing&gt; twice.</p>
-
 <p>Since the right side of that assignment <em>will always result in a List&lt;Thing&gt;,</em> why do we need to say so on the left side? Thus:
 <code>var myThingList = new List&amp;lt;Thing&amp;gt;();</code></p>
-
 <p>The compiler knows that myThingList will always be a List&lt;Thing&gt;. So it can unambiguously (strongly) type it as such. No need for us to spell it out.</p>
-
 <p>So I find that var is a nice thing for more terse code. And if I decide that myThingList should actually be an array, I just need to change it one place.</p>
 
 </div>

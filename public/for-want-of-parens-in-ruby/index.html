@@ -73,42 +73,26 @@
 </header>
 <div class="post-content">
   <p>Ruby is beautiful in many ways. The opportunities to create tight, readable code are impressive. More than other languages, it affords the opportunity to make code look like what it does.</p>
-
 <p>One syntactic wart, however, is functions. I’ll make an analogy with JavaScript, where
 <code>myFunction()</code></p>
-
 <p><em>executes</em> myFunction, while
 <code>myFunction</code></p>
-
 <p>is a variable that <em>refers</em> to the function, that can be passed as, say, a callback. In Ruby, parentheses around method arguments are optional, such that
 <code>my_thing.do_something one_argument, another_argument</code></p>
-
 <p>is the same as
 <code>my_thing.do_something(one_argument, another_argument)</code></p>
-
 <p>I can understand this as a cosmetic choice — fewer delimiters, less noise. However, it makes passing functions as arguments unfortunately ugly.</p>
-
 <p>Because there is no distinction between parens and not, simply referring to a function becomes non-trivial. As a result, if one wants to use a functional style, there are hoops.</p>
-
 <p>Now, I’m a noob (Nuby?) so there’s no doubt that I am missing something idiomatic. But I see no fewer than 4 ways in Ruby to pass a function, none of which strike me as pretty. There are blocks, which are good for anonymous functions, such as:
 <code>array.map{ |x| x * 2 }</code></p>
-
 <p>That ain’t bad, but naming and reusing it is less than obvious. (Again, I’m a noob, correct me.) Another approach is a do block:
-<code>form_for my_model do |f|  
- f.stuff  
- f.things  
-end</code></p>
-
+<code>form_for my_model do |f|   f.stuff   f.things   end</code></p>
 <p>There are Proc’s which explicitly say, make this a function:
 <code>my_func = Proc.new { |x| x * 2 }</code></p>
-
 <p>And not least, a lambda keyword:
 <code>my_lamb = lambda { |x| x * 2 }</code></p>
-
 <p>Further, for lack of parens, we can’t simply my_func(5), we have to my_func.call(5).</p>
-
 <p>There are subtle and <a href="http://www.robertsosinski.com/2008/12/21/understanding-ruby-blocks-procs-and-lambdas/">reasonable differences</a> for these things. A method is not a proc, is not a lambda. And there are <a href="http://ruby-doc.org/core-2.0/Proc.html">idioms</a> for hiding the ugly.</p>
-
 <p>But for a language a beautiful as Ruby, and for a person coming from C# or JavaScript, this is surprisingly baroque.</p>
 
 </div>

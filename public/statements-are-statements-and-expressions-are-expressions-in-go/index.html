@@ -16,7 +16,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
   <title>Statements are statements, and expressions are expressions (in Go) · Matt Sherman</title>
-  <meta name="description" content="I got trolled by a facetious article on Go on April 1.">
+  <meta name="description" content="I got trolled by a facetious article on Go on April 1. But it did trigger a conversation about why Go doesn’t do certain things other languages do.">
   <meta name="author" content="Matt Sherman">
   <link href="/css/style.css?3" rel="stylesheet">
   
@@ -35,8 +35,8 @@
 <meta property="og:url" content="https://clipperhouse.com/statements-are-statements-and-expressions-are-expressions-in-go/" />
 <meta name="twitter:title" content="Statements are statements, and expressions are expressions (in Go) · Matt Sherman" />
 <meta property="og:title" content="Statements are statements, and expressions are expressions (in Go) · Matt Sherman" />
-<meta name="twitter:description" content="I got trolled by a facetious article on Go on April 1." />
-<meta property="og:description" content="I got trolled by a facetious article on Go on April 1." />
+<meta name="twitter:description" content="I got trolled by a facetious article on Go on April 1. But it did trigger a conversation about why Go doesn’t do certain things other languages do." />
+<meta property="og:description" content="I got trolled by a facetious article on Go on April 1. But it did trigger a conversation about why Go doesn’t do certain things other languages do." />
 <meta name="twitter:image" content="https://clipperhouse.com/img/apple-touch-icon.png" />
 <meta property="og:image" content="https://clipperhouse.com/img/apple-touch-icon.png" />
 </head>
@@ -72,84 +72,47 @@
   <h1 class="post-title"><a href="https://clipperhouse.com/statements-are-statements-and-expressions-are-expressions-in-go/">Statements are statements, and expressions are expressions (in Go)</a></h1>
 </header>
 <div class="post-content">
-  
-
-<p>I got <a href="https://twitter.com/clipperhouse/status/583393327757860864">trolled</a> by a facetious article on Go on April 1. But it did trigger a conversation about why Go doesn’t do certain things other languages do.</p>
-
+  <p>I got <a href="https://twitter.com/clipperhouse/status/583393327757860864">trolled</a> by a facetious article on Go on April 1. But it did trigger a conversation about why Go doesn’t do certain things other languages do.</p>
 <p>The answer, in several cases, is that Go chooses to make a clear distinction between expressions and statements. It chooses not to conflate them.</p>
-
 <p>By way of definition, an expression is a thing that has (returns) a value. A statement is an imperative command to <em>do something</em>, but itself does not have a value.</p>
-
 <p>I’ll use C# by way of comparison.</p>
-
 <h4 id="increment-operators">Increment operators</h4>
-
 <p>Most C-family languages have an operator like a++, which says “increment the value of a value by 1”.</p>
-
 <p>In some languages, this expression has a return value. In Go, it does not.</p>
-
 <p><strong>C#</strong></p>
-
-<pre><code class="language-c#">var a = 5;  
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c#" data-lang="c#"><span style="color:#66d9ef">var</span> a = <span style="color:#ae81ff">5</span>;  
 Console.WriteLine(a++);  
-// prints 5 (though a is now valued at 6)
-</code></pre>
-
-<p><strong>Go</strong></p>
-
-<pre><code class="language-go">a := 5  
-fmt.Println(a++)  
-// syntax error: unexpected ++
-</code></pre>
-
-<p>To be clear, <code>a++</code> is a valid statement in Go; it increments by 1. It does not, however, return a value, avoiding error-prone patterns like <code>if (a++ == 6) { …</code></p>
-
+<span style="color:#75715e">// prints 5 (though a is now valued at 6)
+</span></code></pre></div><p><strong>Go</strong></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#a6e22e">a</span> <span style="color:#f92672">:=</span> <span style="color:#ae81ff">5</span>  
+<span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#a6e22e">a</span><span style="color:#f92672">++</span>)  
+<span style="color:#75715e">// syntax error: unexpected ++
+</span></code></pre></div><p>To be clear, <code>a++</code> is a valid statement in Go; it increments by 1. It does not, however, return a value, avoiding error-prone patterns like <code>if (a++ == 6) { …</code></p>
 <h4 id="assignment">Assignment</h4>
-
 <p>In C#, assignments have return values.</p>
-
 <p><strong>C#</strong></p>
-
-<pre><code class="language-c#">int a;  
-Console.WriteLine(a = 5);  
-// prints 5
-</code></pre>
-
-<p>The expression <code>a = 5</code> has a return value of 5. Further shenanigans:</p>
-
-<pre><code class="language-c#">int a;  
-Console.WriteLine((a = 5) == 5);  
-// prints True
-</code></pre>
-
-<p>The expression <code>(a = 5)</code> returns a value of 5, which is then compared to 5.</p>
-
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c#" data-lang="c#"><span style="color:#66d9ef">int</span> a;  
+Console.WriteLine(a = <span style="color:#ae81ff">5</span>);  
+<span style="color:#75715e">// prints 5
+</span></code></pre></div><p>The expression <code>a = 5</code> has a return value of 5. Further shenanigans:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c#" data-lang="c#"><span style="color:#66d9ef">int</span> a;  
+Console.WriteLine((a = <span style="color:#ae81ff">5</span>) == <span style="color:#ae81ff">5</span>);  
+<span style="color:#75715e">// prints True
+</span></code></pre></div><p>The expression <code>(a = 5)</code> returns a value of 5, which is then compared to 5.</p>
 <p><strong>Go</strong></p>
-
 <p>In Go, assignments are statements.</p>
-
-<pre><code class="language-go">a := 5  
-fmt.Println(a = 6)  
-// syntax error: unexpected =
-</code></pre>
-
-<p><code>a = 6</code> is a valid assignment statement. It is not, however, an expression (and thus can’t be evaluated and printed).</p>
-
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#a6e22e">a</span> <span style="color:#f92672">:=</span> <span style="color:#ae81ff">5</span>  
+<span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#a6e22e">a</span> = <span style="color:#ae81ff">6</span>)  
+<span style="color:#75715e">// syntax error: unexpected =
+</span></code></pre></div><p><code>a = 6</code> is a valid assignment statement. It is not, however, an expression (and thus can’t be evaluated and printed).</p>
 <h4 id="ternaries">Ternaries</h4>
-
 <p>You are probably familiar with an expression like <code>condition ? value : other</code>. It’s generally understood as syntactic sugar for an if-else statement, with a return value.</p>
-
 <p><strong>C#</strong></p>
-
-<pre><code class="language-c#">var temp = 50;  
-Console.WriteLine(temp &amp;gt; 30 ? “warm” : “cold”);  
-// prints warm
-</code></pre>
-
-<p><strong>Go</strong></p>
-
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c#" data-lang="c#"><span style="color:#66d9ef">var</span> temp = <span style="color:#ae81ff">5</span><span style="color:#ae81ff">0</span>;  
+Console.WriteLine(temp &amp;gt; <span style="color:#ae81ff">3</span><span style="color:#ae81ff">0</span> ? <span style="color:#960050;background-color:#1e0010">“</span>warm<span style="color:#960050;background-color:#1e0010">”</span> : <span style="color:#960050;background-color:#1e0010">“</span>cold<span style="color:#960050;background-color:#1e0010">”</span>);  
+<span style="color:#75715e">// prints warm
+</span></code></pre></div><p><strong>Go</strong></p>
 <p>Go doesn’t have ternaries! Reason being, it’s sugar for an if-else, and if-else’s are statements, not expressions.</p>
-
 <p>You may be detecting a pattern here: Go prefers orthogonality over sugar. There are classes of (human) error that result from a statement also being an expression, and Go chooses to make that class of error less likely.</p>
 
 </div>

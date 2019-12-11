@@ -76,35 +76,20 @@ Depending on the scenario, and this is a matter of taste, CoffeeScript is more e
 </header>
 <div class="post-content">
   <p>I use CoffeeScript <a href="https://github.com/clipperhouse/classicalrad.io">here</a> and <a href="https://github.com/clipperhouse/BetterBird">there</a>. And JavaScript everywhere else.</p>
-
 <p>Depending on the scenario, and this is a matter of taste, CoffeeScript is more elegant, readable, and usable.</p>
-
 <p>When offering this notion, inevitably there is a complaint about “debugging.” CS is generating code, it’s a layer of abstraction, which will lead to frustration, etc.</p>
-
 <p>The question is, compared to what? When JavaScript is not behaving as you wish, what do you do?</p>
-
 <p>You debug it. You log, you hit breakpoints, and most importantly, you build a mental model of how the program is behaving.</p>
-
 <p>Did you learn about truthiness and ‘this’ in JS by <em>logic</em>? Ex post facto maybe. But you debugged your way to that understanding.</p>
-
 <p>CoffeeScript is identical in this regard. It has syntax, and semantics. You write code, see what it does, change it, see what it does. You build a mental model.</p>
-
 <p>CoffeeScript doesn’t make a program easier to debug; it also doesn’t make it harder. Semantics. Behavior. Mental model. Rinse and repeat.</p>
-
 <p>What CoffeeScript does do, in my experience, it make trivial debugging less likely.</p>
-
 <p>Because it’s whitespace-significant, you are unlikely to miss a closing brace. Because it has sensible iterators, you are not going to fuck it up Google it for the 50th time. Because it has ?, you are not going to choose among false, falsy, null, undefined, typeof, instanceof. For the 50th time.</p>
-
 <p>Maybe I’m projecting. I am sure you’re adept with the above issues. You’ve memorized them over time, hammered JS’s behaviors into your head, experimented and built a robust mental model. Which is great!</p>
-
 <p>But there might be a bit of <a href="http://www.youtube.com/watch?v=ekeELle5g-o"><em>challenge accepted</em></a> in there, if we’re honest. JS is tedious and idiosyncratic — which is how normals see programming in general. Our ability to reason through that stuff to make something useful is where we derive our reward.</p>
-
 <p>For me, and more so over time, shipping is where I derive my reward. Correctness is rewarding. Code that looks like what it does, is rewarding. So CoffeeScript, for me, is rewarding.</p>
-
 <p>—</p>
-
 <p>A couple of addenda — in terms of the ‘taste’ thing, I’ve settled on CS on the server (if using node) and plain JS on the client. The difference is that the latter requires a build step while the former does not. coffee app.coffee just works, no hint of JS.</p>
-
 <p>And source maps are a nice tool, so I can imagine that objection to the CS abstraction. Looks like CS got <a href="http://coffeescript.org/#source-maps">support</a> for that as well, but haven’t yet tried it.</p>
 
 </div>
