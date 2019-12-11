@@ -75,33 +75,30 @@
 <div class="post-content">
   <p>Jargon is a Go package with tokenizers and lemmatizers. <a href="https://github.com/clipperhouse/jargon">Source &amp; docs</a>.</p>
 <form action="/api/jargon/" method="POST">
-    <span class="hint">
-        Examples:
-    </span>
-    <label for="prose">
-        <input type="radio" id="prose" name="format" value="text" checked>
-        Text
-    </label>
-    <label for="html">
-        <input type="radio" id="html" name="format" value="html">
-        HTML
-    </label>
-    <label for="json">
-        <input type="radio" id="json" name="format" value="text">
-        JSON
-    </label>
-    <label for="csv">
-        <input type="radio" id="csv" name="format" value="text">
-        CSV
-    </label>
-<pre><code>&lt;textarea class=&quot;code&quot; id=&quot;text&quot; name=&quot;text&quot; rows=&quot;11&quot;&gt;&lt;/textarea&gt;
-
-&lt;div&gt;
-    &lt;button type=&quot;submit&quot;&gt;Click to lemmatize&lt;/button&gt;
-&lt;/div&gt;
-
-&lt;div class=&quot;pre code result&quot;&gt;&lt;/div&gt;
-</code></pre>
+<span class="hint">
+    Examples:
+</span>
+<label for="prose">
+    <input type="radio" id="prose" name="format" value="text" checked>
+    Text
+</label>
+<label for="html">
+    <input type="radio" id="html" name="format" value="html">
+    HTML
+</label>
+<label for="json">
+    <input type="radio" id="json" name="format" value="text">
+    JSON
+</label>
+<label for="csv">
+    <input type="radio" id="csv" name="format" value="text">
+    CSV
+</label>
+<p><textarea class="code" id="text" name="text" rows="11"></textarea></p>
+<div>
+    <button type="submit">Click to lemmatize</button>
+</div>
+<div class="pre code result"></div>
 </form>
 <div id="examples" class="examples">
     <div id="prose">

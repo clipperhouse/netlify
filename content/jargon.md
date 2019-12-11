@@ -12,33 +12,33 @@ js:
 Jargon is a Go package with tokenizers and lemmatizers. [Source & docs](https://github.com/clipperhouse/jargon).
 
 <form action="/api/jargon/" method="POST">
-    <span class="hint">
-        Examples:
-    </span>
-    <label for="prose">
-        <input type="radio" id="prose" name="format" value="text" checked>
-        Text
-    </label>
-    <label for="html">
-        <input type="radio" id="html" name="format" value="html">
-        HTML
-    </label>
-    <label for="json">
-        <input type="radio" id="json" name="format" value="text">
-        JSON
-    </label>
-    <label for="csv">
-        <input type="radio" id="csv" name="format" value="text">
-        CSV
-    </label>
+<span class="hint">
+    Examples:
+</span>
+<label for="prose">
+    <input type="radio" id="prose" name="format" value="text" checked>
+    Text
+</label>
+<label for="html">
+    <input type="radio" id="html" name="format" value="html">
+    HTML
+</label>
+<label for="json">
+    <input type="radio" id="json" name="format" value="text">
+    JSON
+</label>
+<label for="csv">
+    <input type="radio" id="csv" name="format" value="text">
+    CSV
+</label>
 
-    <textarea class="code" id="text" name="text" rows="11"></textarea>
+<textarea class="code" id="text" name="text" rows="11"></textarea>
 
-    <div>
-        <button type="submit">Click to lemmatize</button>
-    </div>
+<div>
+    <button type="submit">Click to lemmatize</button>
+</div>
 
-    <div class="pre code result"></div>
+<div class="pre code result"></div>
 </form>
 
 <div id="examples" class="examples">
