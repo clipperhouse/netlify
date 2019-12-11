@@ -108,7 +108,7 @@ In the spirit of Go&#39;s ‘good enough’ type system, here&#39;s a thought ex
       <pubDate>Sun, 27 May 2018 00:00:00 +0000</pubDate>
       
       <guid>https://clipperhouse.com/about/</guid>
-      <description>I am a founder, engineering manager and developer in NYC. I recently decided to leave Stack Overflow, and am taking some time to find my next thing.</description>
+      <description>img[src$=&#39;#photo&#39;] { float: right; margin: 0 0 2em 2em; position: relative; top: 30px; opacity: .</description>
     </item>
     
     <item>

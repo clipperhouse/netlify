@@ -8,6 +8,26 @@ js:
 - "/js/tech-talk.js"
 ---
 
+<style>
+img[src$='#photo'] {
+    float: right;
+    margin: 0 0 2em 2em;
+    position: relative;
+    top: 30px;
+    opacity: .9;
+    width: 120px;
+    border-radius: 50%;
+    border: 1px solid #999;
+}
+
+button {
+    width: auto;
+    background-color: #007AFF;
+    color: white;
+}
+</style>
+
+
 ![Matt Sherman](https://pbs.twimg.com/profile_images/557247446649036800/JSalo08u_400x400.jpeg#photo)
 
 I am a founder, engineering manager and developer in NYC. I recently decided to leave Stack Overflow, and am taking some time to find my next thing. I’d like to start something new or join something small.
@@ -54,23 +74,3 @@ I offer this expertise on a consulting basis, for your teams.
 I am reachable at mwsherman@gmail.com and +1 415 516-5121.
 
 I am on Twitter at [@clipperhouse](https://mobile.twitter.com/@clipperhouse). Here’s [my GitHub](https://github.com/clipperhouse) and [my LinkedIn](https://linkedin.com/in/clipperhouse).
-
-
-<style>
-img[src$='#photo'] {
-    float: right;
-    margin: 0 0 2em 2em;
-    position: relative;
-    top: 30px;
-    opacity: .9;
-    width: 120px;
-    border-radius: 50%;
-    border: 1px solid #999;
-}
-
-button {
-    width: auto;
-    background-color: #007AFF;
-    color: white;
-}
-</style>

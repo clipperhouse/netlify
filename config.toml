@@ -13,3 +13,6 @@ summaryLength = 12
     identifier = "about"
     name = "about"
     url = "/about/"
+
+[markup.goldmark.renderer]
+unsafe = true
