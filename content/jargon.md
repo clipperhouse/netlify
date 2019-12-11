@@ -79,18 +79,6 @@ Jargon is a Go package with tokenizers and lemmatizers. [Source & docs](https://
     "name": "Microsoft Access",
     "name": "X Code"
     ]}
-    
+
 </div>
 </div>
-
-<style>
-    form button {
-        border: 0;
-        background-color: rgba(0, 122, 255, .8);
-        color: white;
-    }
-
-    form textarea {
-        border-color: rgba(0, 122, 255, .8);
-    }
-</style>
