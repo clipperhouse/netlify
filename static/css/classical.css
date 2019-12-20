@@ -52,12 +52,16 @@ body.list {
   border: none;
 }
 
+.hide {
+  display: none;
+}
+
 #what {
   margin-top: 40px;
 }
 
-#faq {
-  display: none;
+.clickable {
+  cursor: pointer;
 }
 
 h1 small,

@@ -1,55 +1,62 @@
-$(function(){
-
-	var control = document.getElementById('wrapper');
-	control.addEventListener('click', function() { 
-		audio.paused ? audio.play() : audio.pause();
-	}, true);
-
-	var audio = document.getElementById('audio');
-	audio.addEventListener('playing', function() { 
-		control.classList.add('playing');
-		control.classList.remove('waiting');
-	}, true);
-	audio.addEventListener('pause', function() {
-		control.classList.remove('playing');
-	}, true);
-	audio.addEventListener('waiting', function() {
-		control.classList.add('waiting');
-	}, true);
-
-	var current;
-
-	document.querySelectorAll('.station').forEach(station => {
-		station.addEventListener('click', e => {
-			e.stopPropagation();
-			if (current && station.getAttribute('id') === current.getAttribute('id')) {
-				return;
-			}
-
-			current = station;
-
-			audio.pause();
-			audio.src = station.getAttribute('data-src');
-	
-			var c = $(control);
-	
-			c.slideUp(250, function(){
-				audio.play();
-				station.after(control);
-				c.slideDown();
-			});
-	
-			e.preventDefault();
-		});
-	});
-
-	var faq = $('#faq');
-	$(document).on('click', '#what', function(e){
-		e.stopPropagation();
-		faq.toggle();
-		$('html, body').animate({
-			scrollTop: $(this).offset().top
-		}, 1000);
-		e.preventDefault();
-	});
-});
+"use strict";
+(function () {
+    const faq = document.getElementById('faq');
+    const what = document.getElementById('what');
+    if (faq && what) {
+        faq.classList.add('hide');
+        what.addEventListener('click', e => {
+            e.stopPropagation();
+            faq.classList.toggle('hide');
+        });
+        what.classList.add('clickable');
+    }
+    const control = document.getElementById('wrapper');
+    if (!control) {
+        return;
+    }
+    const audio = document.getElementById('audio');
+    if (!audio) {
+        return;
+    }
+    control.addEventListener('click', () => {
+        audio.paused ? audio.play() : audio.pause();
+    });
+    audio.addEventListener('playing', () => {
+        control.classList.add('playing');
+        control.classList.remove('waiting');
+    });
+    audio.addEventListener('pause', () => {
+        control.classList.remove('playing');
+    });
+    audio.addEventListener('waiting', () => {
+        control.classList.add('waiting');
+    });
+    let stations = Array();
+    for (const el of document.querySelectorAll('.station')) {
+        const src = el.getAttribute('data-src');
+        if (!src) {
+            console.log('station ' + el.id + ' lacks a data-src attribute');
+            continue;
+        }
+        const station = { el, src };
+        stations.push(station);
+    }
+    const $c = $(control);
+    let current;
+    for (const station of stations) {
+        station.el.addEventListener('click', e => {
+            e.stopPropagation();
+            if (current && station.el.id === current.el.id) {
+                return;
+            }
+            current = station;
+            audio.pause();
+            audio.src = station.src;
+            $c.slideUp(250, () => {
+                audio.play();
+                station.el.after(control);
+                $c.slideDown();
+            });
+        });
+    }
+})();
