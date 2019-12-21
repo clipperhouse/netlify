@@ -3,10 +3,10 @@ title: "Jargon demo"
 date: 2018-05-18
 style: "app"
 css:
-- "/css/jargon.css"
+- "css/jargon.css"
 js:
 - "https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"
-- "/js/jargon.js"
+- "js/jargon.js"
 ---
 
 Jargon is a Go package with tokenizers and lemmatizers. [Source & docs](https://github.com/clipperhouse/jargon).

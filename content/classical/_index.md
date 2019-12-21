@@ -18,8 +18,8 @@ stations:
     stream_url: "https://kpbs-classical.streamguys1.com/kpbs-classical"
     location: "San Diego"
 css:
-- "/css/classical.css"
+- "css/classical.css"
 js:
 - "https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"
-- "/js/classical.js"
+- "js/classical.js"
 ---

@@ -3,13 +3,13 @@ title: "Stack Overflow tag correlations"
 date: 2018-05-26
 style: "app"
 css:
-- "/css/stack.css"
-- "/css/jquery-ui.css"
+- "css/stack.css"
+- "css/jquery-ui.css"
 js:
 - "https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"
 - "https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"
 - "https://cdnjs.cloudflare.com/ajax/libs/mustache.js/2.3.0/mustache.min.js"
-- "/js/stack.js?1"
+- "js/stack.js"
 
 ---
 

@@ -32,7 +32,7 @@
         control.classList.add('waiting');
     });
     let stations = Array();
-    for (const el of document.querySelectorAll('.station')) {
+    for (const el of document.getElementsByClassName('station')) {
         const src = el.getAttribute('data-src');
         if (!src) {
             console.log('station ' + el.id + ' lacks a data-src attribute');
@@ -45,13 +45,14 @@
     let current;
     for (const station of stations) {
         station.el.addEventListener('click', e => {
+            var _a;
             e.stopPropagation();
-            if (current && station.el.id === current.el.id) {
+            if (((_a = current) === null || _a === void 0 ? void 0 : _a.el.id) === station.el.id) {
                 return;
             }
             current = station;
             audio.pause();
-            audio.src = station.src;
+            audio.src = current.src;
             $c.slideUp(250, () => {
                 audio.play();
                 station.el.after(control);

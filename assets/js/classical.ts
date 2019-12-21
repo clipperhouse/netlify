@@ -41,7 +41,7 @@
 
 	let stations = Array<Station>();
 
-	for (const el of document.querySelectorAll('.station')) {
+	for (const el of document.getElementsByClassName('station')) {
 		const src = el.getAttribute('data-src');
 		if (!src) {
 			console.log('station ' + el.id + ' lacks a data-src attribute')
@@ -59,11 +59,11 @@
 		station.el.addEventListener('click', e => {
 			e.stopPropagation();
 
-			if (current && station.el.id === current.el.id) { return; }
+			if (current?.el.id === station.el.id) { return; }
 			current = station;
 
 			audio.pause();
-			audio.src = station.src;
+			audio.src = current.src;
 
 			$c.slideUp(250, () => {
 				audio.play();

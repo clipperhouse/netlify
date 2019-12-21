@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="{{ .Site.LanguageCode }}">
+
 <head>
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-8534189-2"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
+    function gtag() { dataLayer.push(arguments); }
     gtag('js', new Date());
 
     gtag('config', 'UA-8534189-2');
@@ -17,9 +18,9 @@
 
   <title>
     {{- if .IsHome }}
-      {{- .Site.Title }} · {{ .Site.Params.author -}}
+    {{- .Site.Title }} · {{ .Site.Params.author -}}
     {{- else }}
-      {{- .Title }} · {{ .Params.author | default .Site.Params.author -}}
+    {{- .Title }} · {{ .Params.author | default .Site.Params.author -}}
     {{ end -}}
   </title>
 
@@ -31,9 +32,11 @@
   <meta name="author" content="{{ .Site.Params.author }}">
   {{ end -}}
 
-  <link href="/css/style.css?3" rel="stylesheet">
+  {{ $css := resources.Get "css/style.css" | fingerprint }}
+  <link href="{{ $css.RelPermalink }}" rel="stylesheet">
   {{ range .Params.css -}}
-  <link href="{{ . }}" rel="stylesheet">
+  {{ $css := resources.Get . | fingerprint }}
+  <link href="{{ $css.Permalink }}" rel="stylesheet">
   {{ end }}
   <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/img/favicon-16x16.png">
@@ -44,27 +47,28 @@
   <link rel="alternate" type="application/atom+xml" href="/index.xml" title="{{ .Site.Title }}">
 
 
-<meta name="twitter:card" content="summary" />
-<meta name="twitter:creator" content="@clipperhouse" />
-<meta name="twitter:site" content="@clipperhouse" />
-<meta property="og:url" content="{{ .Permalink }}" />
-{{- if .IsHome }}
-<meta name="twitter:title" content="{{- .Site.Title }} · {{ .Site.Params.author -}}" />
-<meta property="og:title" content="{{- .Site.Title }} · {{ .Site.Params.author -}}" />
-{{- else if eq .Kind "page" }}
-<meta name="twitter:title" content="{{- .Title }} · {{ .Params.author | default .Site.Params.author -}}" />
-<meta property="og:title" content="{{- .Title }} · {{ .Params.author | default .Site.Params.author -}}" />
-{{- end }}
-{{- if eq .Kind "page" }}
-<meta name="twitter:description" content="{{ .Params.description | default .Summary }}" />
-<meta property="og:description" content="{{ .Params.description | default .Summary }}" />
-{{- else }}
-<meta name="description" content="{{ .Site.Params.description }}" />
-<meta property="og:description" content="{{ .Site.Params.description }}" />
-{{- end }}
-<meta name="twitter:image" content="{{ .Site.BaseURL }}/img/apple-touch-icon.png" />
-<meta property="og:image" content="{{ .Site.BaseURL }}/img/apple-touch-icon.png" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:creator" content="@clipperhouse" />
+  <meta name="twitter:site" content="@clipperhouse" />
+  <meta property="og:url" content="{{ .Permalink }}" />
+  {{- if .IsHome }}
+  <meta name="twitter:title" content="{{- .Site.Title }} · {{ .Site.Params.author -}}" />
+  <meta property="og:title" content="{{- .Site.Title }} · {{ .Site.Params.author -}}" />
+  {{- else if eq .Kind "page" }}
+  <meta name="twitter:title" content="{{- .Title }} · {{ .Params.author | default .Site.Params.author -}}" />
+  <meta property="og:title" content="{{- .Title }} · {{ .Params.author | default .Site.Params.author -}}" />
+  {{- end }}
+  {{- if eq .Kind "page" }}
+  <meta name="twitter:description" content="{{ .Params.description | default .Summary }}" />
+  <meta property="og:description" content="{{ .Params.description | default .Summary }}" />
+  {{- else }}
+  <meta name="description" content="{{ .Site.Params.description }}" />
+  <meta property="og:description" content="{{ .Site.Params.description }}" />
+  {{- end }}
+  <meta name="twitter:image" content="{{ .Site.BaseURL }}/img/apple-touch-icon.png" />
+  <meta property="og:image" content="{{ .Site.BaseURL }}/img/apple-touch-icon.png" />
 </head>
+
 <body class="{{if eq .Kind `page` }}single{{else}}list{{end}} {{ .Params.style }}">
   <header class="header">
     {{ if .IsHome }}
@@ -87,8 +91,8 @@
 
   <script type="text/javascript">
     function toggleMenu() {
-        var menu = document.querySelector('nav.menu');
-        menu.style.display = menu.style.display == "none" ? "block" : "none";
+      var menu = document.querySelector('nav.menu');
+      menu.style.display = menu.style.display == "none" ? "block" : "none";
     }
     document.querySelector('button.menu-toggle').onclick = toggleMenu;
   </script>

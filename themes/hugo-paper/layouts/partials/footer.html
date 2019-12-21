@@ -1,7 +1,12 @@
-
 </main>
 {{ range .Params.js -}}
+{{ if hasPrefix . "http" }}
 <script src="{{ . }}"></script>
+{{ else }}
+{{ $js := resources.Get . | fingerprint }}
+<script src="{{ $js.RelPermalink }}"></script>
+{{ end }}
 {{ end }}
 </body>
+
 </html>

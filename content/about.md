@@ -5,7 +5,7 @@ date: 2018-05-27
 style: "app"
 js:
 - "https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"
-- "/js/tech-talk.js"
+- "js/tech-talk.js"
 ---
 
 <style>

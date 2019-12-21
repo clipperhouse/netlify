@@ -4,8 +4,8 @@ date: 2018-10-17
 author: "Matt Sherman"
 style: "app"
 js:
-- "https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"
-- "/js/tech-talk.js"
+- "https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"
+- "js/tech-talk.js"
 ---
 
 ![Matt Sherman](https://pbs.twimg.com/profile_images/557247446649036800/JSalo08u_400x400.jpeg#photo)
