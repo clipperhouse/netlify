@@ -65,11 +65,11 @@
         "version": "3e0a459888f32b42138d5a39f706ff2d55d500ab1031e0988b5568b0f67c2303",
         "signature": "3e0a459888f32b42138d5a39f706ff2d55d500ab1031e0988b5568b0f67c2303"
       },
-      "./public/js/classical.ts": {
-        "version": "29d16fa665247507d5aa867eeff51d36ea64f65a1f14b8def2ea194086455f91",
+      "./assets/js/classical.ts": {
+        "version": "4d0e23a726be99fa9962a744e9275a389400d25c71f5a1048b866bdb36bac8cc",
         "signature": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
       },
-      "./static/js/classical.ts": {
+      "./public/js/classical.ts": {
         "version": "29d16fa665247507d5aa867eeff51d36ea64f65a1f14b8def2ea194086455f91",
         "signature": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
       },
@@ -107,6 +107,8 @@
       "alwaysStrict": true,
       "noUnusedLocals": true,
       "noUnusedParameters": true,
+      "noImplicitReturns": true,
+      "noFallthroughCasesInSwitch": true,
       "project": "./tsconfig.json",
       "watch": true,
       "configFilePath": "./tsconfig.json"
@@ -130,8 +132,8 @@
       ]
     },
     "semanticDiagnosticsPerFile": [
+      "./assets/js/classical.ts",
       "./public/js/classical.ts",
-      "./static/js/classical.ts",
       "./node_modules/@types/jquery/jquerystatic.d.ts",
       "./node_modules/@types/jquery/jquery.d.ts",
       "./node_modules/@types/jquery/misc.d.ts",
