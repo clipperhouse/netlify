@@ -54,7 +54,7 @@ Built by <a href="http://clipperhouse.com/about/">Matt Sherman</a> using the <a 
 </script>
 
 <script id="popular-tmpl" type="text/template">
-	Popular on {{site.name}}
+	Popular on {{site.name}}:
     {{#tags}}
         <a class="tag" title="View correlations for “{{name}}”" href="#{{site.api_site_parameter}}/{{encodedName}}">{{name}}</a>
     {{/tags}}
