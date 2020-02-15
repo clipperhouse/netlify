@@ -52,7 +52,13 @@ Built by <a href="http://clipperhouse.com/about/">Matt Sherman</a> using the <a 
 <script id="correlations-tmpl" type="text/template">
     {{#correlations}}
         <a class="tag" title="View correlations for “{{tag}}”" href="{{href}}">{{tag}}</a>
-        <span class="c">{{correlation}}</span><br />
+		{{#first}}
+			appears on {{correlation}} of <span class="tag">{{parent}}</span> questions
+		{{/first}}
+		{{^first}}
+			{{correlation}}
+		{{/first}}
+		<br />
     {{/correlations}}
 </script>
 

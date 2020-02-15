@@ -82,7 +82,13 @@ e.g., <a href="#stackoverflow/coffeescript">CoffeeScript</a> questions often inv
 <script id="correlations-tmpl" type="text/template">
     {{#correlations}}
         <a class="tag" title="View correlations for “{{tag}}”" href="{{href}}">{{tag}}</a>
-        <span class="c">{{correlation}}</span><br />
+		{{#first}}
+			appears on {{correlation}} of <span class="tag">{{parent}}</span> questions
+		{{/first}}
+		{{^first}}
+			{{correlation}}
+		{{/first}}
+		<br />
     {{/correlations}}
 </script>
 <script id="popular-tmpl" type="text/template">
@@ -124,7 +130,7 @@ e.g., <a href="#stackoverflow/coffeescript">CoffeeScript</a> questions often inv
 	
 
 		
-		<script src="/js/stack.f07d9b91c8cdcea388faea4a36eb8cab54367aebffe4431ecee77e74db996876.js" integrity="sha256-8H2bkcjNzqOI&#43;upKNuuMq1Q2euv/5EMezud&#43;dNuZaHY="></script>
+		<script src="/js/stack.b6ea9c9ff2f88eeeb22f7e641de59ea709a983895f5c073e400dd832970c67b3.js" integrity="sha256-tuqcn/L4ju6yL35kHeWepwmpg4lfXAc&#43;QA3YMpcMZ7M="></script>
 	
 
 </html>
