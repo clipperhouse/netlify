@@ -4,8 +4,9 @@ date: 2018-05-26
 style: "app"
 css:
 - "css/stack.css"
+- "css/jquery-ui.css"
 js:
-- "https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"
+- "https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"
 - "https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"
 - "https://cdnjs.cloudflare.com/ajax/libs/mustache.js/3.1.0/mustache.min.js"
 - "js/stack.js"
@@ -17,8 +18,7 @@ A tool to discover correlations between tags on Stack Exchange sites. Start typi
 <div id="form">
     <input name="tag" id="tag" type="search" autocapitalize="none" autocorrect="off" />
     <span id="popular">
-		Popular:
-		<a class="tag">&nbsp;</a>
+		Popular on <span class="site-name">Stack Overflow</span>:
 		<a class="tag">&nbsp;</a>
 		<a class="tag">&nbsp;</a>
 		<a class="tag">&nbsp;</a>
@@ -40,39 +40,6 @@ This works for all Stack Exchange sites. Select a different one below:
     <a href="#cooking">Seasoned Advice</a>
     <a href="#gamedev">Game Development</a>
     <a href="#photo">Photography</a>
-    <a href="#stats">Cross Validated</a>
-    <a href="#math">Mathematics</a>
-    <a href="#diy">Home Improvement</a>
-    <a href="#gis">Geographic Information Systems</a>
-    <a href="#tex">TeX - LaTeX</a>
-    <a href="#askubuntu">Ask Ubuntu</a>
-    <a href="#money">Personal Finance &amp; Money</a>
-    <a href="#english">English Language &amp; Usage</a>
-    <a href="#stackapps">Stack Apps</a>
-    <a href="#ux">User Experience</a>
-    <a href="#unix">Unix &amp; Linux</a>
-    <a href="#wordpress">WordPress Development</a>
-    <a href="#cstheory">Theoretical Computer Science</a>
-    <a href="#apple">Ask Different</a>
-    <a href="#rpg">Role-playing Games</a>
-    <a href="#bicycles">Bicycles</a>
-    <a href="#softwareengineering">Software Engineering</a>
-    <a href="#electronics">Electrical Engineering</a>
-    <a href="#android">Android Enthusiasts</a>
-    <a href="#physics">Physics</a>
-    <a href="#security">Information Security</a>
-    <a href="#graphicdesign">Graphic Design</a>
-    <a href="#dba">Database Administrators</a>
-    <a href="#scifi">Science Fiction &amp; Fantasy</a>
-    <a href="#codereview">Code Review</a>
-    <a href="#codegolf">Programming Puzzles &amp; Code Golf</a>
-    <a href="#quant">Quantitative Finance</a>
-    <a href="#skeptics">Skeptics</a>
-    <a href="#drupal">Drupal Answers</a>
-    <a href="#mechanics">Motor Vehicle Maintenance &amp; Repair</a>
-    <a href="#sharepoint">SharePoint</a>
-    <a href="#music">Music: Practice &amp; Theory</a>
-    <a href="#judaism">Mi Yodeya</a>
 </p>
 
 ### Details
