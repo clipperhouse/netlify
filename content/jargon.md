@@ -32,11 +32,9 @@ Jargon is a Go package with tokenizers and lemmatizers. [Source & docs](https://
     CSV
 </label>
 
-<textarea class="code" id="text" name="text" rows="11"></textarea>
+<textarea class="code" id="text" name="text" rows="8"></textarea>
 
-<div>
-    <button type="submit">Click to lemmatize</button>
-</div>
+<button type="submit">Click to lemmatize</button>
 
 <div class="pre code result"></div>
 </form>

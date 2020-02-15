@@ -1,5 +1,5 @@
 {{ define "main" }}
-	<main class="single">
+	<main class="single{{ with .Params.style }} {{.}}{{ end }}">
 		<article>
 			<h1>{{ .Title }}</h1>
 			<div>
@@ -20,7 +20,6 @@
 					<a href="{{ .Permalink }}" class="next">{{ .Title }} →</a>
 				{{ end }}
 			</p>
-
 		</div>
 	</main>
 {{ end }}
