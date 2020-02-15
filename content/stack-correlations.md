@@ -17,10 +17,13 @@ A tool to discover correlations between tags on Stack Exchange sites. Start typi
 
 <div id="form">
     <input name="tag" id="tag" type="search" autocapitalize="none" autocorrect="off" />
-    <span id="popular">
-		Popular on <span class="site-name">Stack Overflow</span>:
-		<a class="tag">&nbsp;</a>
-    </span>
+	<span id="popular">
+		Popular on Stack Overflow:
+			<a class="tag" title="View correlations for “javascript”" href="#stackoverflow/javascript">javascript</a>
+			<a class="tag" title="View correlations for “java”" href="#stackoverflow/java">java</a>
+			<a class="tag" title="View correlations for “c#”" href="#stackoverflow/c%23">c#</a>
+			<a class="tag" title="View correlations for “python”" href="#stackoverflow/python">python</a>
+	</span>
 </div>
 
 <div id="correlations"></div>
