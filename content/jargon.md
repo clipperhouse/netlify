@@ -11,7 +11,7 @@ js:
 
 Jargon is a Go package with tokenizers and lemmatizers. [Source & docs](https://github.com/clipperhouse/jargon).
 
-<form action="/api/jargon/" method="POST">
+<form action="https://clipperhouse.com/api/jargon/" method="POST">
 <span class="hint">
     Examples:
 </span>
