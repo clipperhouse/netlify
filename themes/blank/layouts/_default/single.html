@@ -1,0 +1,14 @@
+{{ define "main" }}
+	<main class="single">
+		<article>
+			<h1>{{ .Title }}</h1>
+			<div>
+				{{ .Content }}
+			</div>
+		</article>
+		<p class="post-meta">
+			{{- if or .Params.author .Site.Params.author -}}Published by {{ .Params.author | default .Site.Params.author }} on {{ end }}
+			{{- .Date.Format "January 2, 2006" -}}. <a href="https://mobile.twitter.com/clipperhouse">Find me at @clipperhouse</a>.
+		</p>			
+	</main>
+{{ end }}
