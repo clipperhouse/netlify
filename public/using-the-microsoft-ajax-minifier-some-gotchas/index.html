@@ -1,95 +1,66 @@
 <!DOCTYPE html>
 <html lang="en-us">
-
 <head>
-  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-8534189-2"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() { dataLayer.push(arguments); }
-    gtag('js', new Date());
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Using the Microsoft Ajax Minifier, some gotcha’s</title>
+	
+	<meta name="author" content="Matt Sherman">
 
-    gtag('config', 'UA-8534189-2');
-  </script>
+	
+	<link href="/css/normalize.f4d7e8250f8f124f8b7d087e5e260766a34b079fddc43e7b20d8c18ca1e92e51.css" rel="stylesheet">
 
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="renderer" content="webkit">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	
+	<link href="/css/skeleton.09b82130c4ba09fa45b20e9845ce089b8e1ad26a3b102e16901feea242e35ac1.css" rel="stylesheet">
+	
+	
+	<link href="/css/style.957ee09559919d8fb5774e0ff59d59fc278d5e52eeccd0f93c4dbabddc248176.css" rel="stylesheet">
+	
+	
+	
 
-  <title>Using the Microsoft Ajax Minifier, some gotcha’s · Matt Sherman</title>
-  <meta name="description" content="I am playing with the Microsoft Ajax Minifier, which removes whitespace from your Javascripts for quicker download.">
-  <meta name="author" content="Matt Sherman">
-  
-  <link href="/css/style.9d3a33a28e12fa810b8ad9dad35d8bc7c08fcdb6949a981199b85c49e3c28422.css" rel="stylesheet">
-  
-  <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/img/favicon-16x16.png">
-  <link rel="apple-touch-icon" href="/img/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="/img/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="/img/favicon-16x16.png">
+	<link rel="apple-touch-icon" href="/img/apple-touch-icon.png">
 
-  <meta name="generator" content="Hugo">
-
-  <link rel="alternate" type="application/atom+xml" href="/index.xml" title="clipperhouse.com">
-
-
-  <meta name="twitter:card" content="summary" />
-  <meta name="twitter:creator" content="@clipperhouse" />
-  <meta name="twitter:site" content="@clipperhouse" />
-  <meta property="og:url" content="https://clipperhouse.com/using-the-microsoft-ajax-minifier-some-gotchas/" />
-  <meta name="twitter:title" content="Using the Microsoft Ajax Minifier, some gotcha’s · Matt Sherman" />
-  <meta property="og:title" content="Using the Microsoft Ajax Minifier, some gotcha’s · Matt Sherman" />
-  <meta name="twitter:description" content="I am playing with the Microsoft Ajax Minifier, which removes whitespace from your Javascripts for quicker download." />
-  <meta property="og:description" content="I am playing with the Microsoft Ajax Minifier, which removes whitespace from your Javascripts for quicker download." />
-  <meta name="twitter:image" content="https://clipperhouse.com/img/apple-touch-icon.png" />
-  <meta property="og:image" content="https://clipperhouse.com/img/apple-touch-icon.png" />
 </head>
-
-<body class="single ">
-  <header class="header">
-    
-    <p class="title"><a href="/">clipperhouse.com</a></p>
-    
-    <button class="menu-toggle" type="button"></button>
-    <nav class="menu">
-      <ul>
-        
-        
-        <li class="">
-          <a href="/about/">about</a>
-        </li>
-        
-      </ul>
-    </nav>
-  </header>
-
-  <script type="text/javascript">
-    function toggleMenu() {
-      var menu = document.querySelector('nav.menu');
-      menu.style.display = menu.style.display == "none" ? "block" : "none";
-    }
-    document.querySelector('button.menu-toggle').onclick = toggleMenu;
-  </script>
-  <main class="main">
-<article class="post post-view">
-  <header class="post-header">
-  <h1 class="post-title"><a href="https://clipperhouse.com/using-the-microsoft-ajax-minifier-some-gotchas/">Using the Microsoft Ajax Minifier, some gotcha’s</a></h1>
+<body>
+	<header>
+	<h4>
+		<a href="https://clipperhouse.com">clipperhouse.com</a>
+	</h4>
+	<nav>
+		<a href="/about/">about</a>
+		<span class="sep">·</span>
+		<a href="/jargon/">jargon</a>
+		<span class="sep">·</span>
+		<a href="/gen/overview/">gen</a>
+		<span class="sep">·</span>
+		<a href="/stack-correlations/">tag correlations</a>
+	</nav>
 </header>
-<div class="post-content">
-  <p>I am playing with the <a href="http://aspnet.codeplex.com/Release/ProjectReleases.aspx?ReleaseId=35893">Microsoft Ajax Minifier</a>, which removes whitespace from your Javascripts for quicker download. Stephen Walther has a <a href="http://stephenwalther.com/blog/archive/2009/10/16/using-the-new-microsoft-ajax-minifier.aspx">nice how-to</a>.</p>
+
+	
+	<main class="single">
+		<article>
+			<h1>Using the Microsoft Ajax Minifier, some gotcha’s</h1>
+			<div>
+				<p>I am playing with the <a href="http://aspnet.codeplex.com/Release/ProjectReleases.aspx?ReleaseId=35893">Microsoft Ajax Minifier</a>, which removes whitespace from your Javascripts for quicker download. Stephen Walther has a <a href="http://stephenwalther.com/blog/archive/2009/10/16/using-the-new-microsoft-ajax-minifier.aspx">nice how-to</a>.</p>
 <p>In my case, I am using the MSBuild task, which will minimize your Javascripts on build. Works great on my machine. But here’s the gotcha: if you have a build server that does not have the Minifier installed, your build will fail.</p>
 <p>What to do? In my case, I updated Stephen’s MSBuild code with a Condition such that the task will only run under the Debug configuration. Thus, if your build server uses the Release configuration (as it should), the task will be ignored and your build won’t fail.</p>
 <p>Here’s Stephen’s original code:
 <code>&amp;lt;Import Project=&amp;#34;$(MSBuildExtensionsPath)\Microsoft\MicrosoftAjax\ajaxmin.tasks&amp;#34; /&amp;gt;``&amp;lt;Target Name=&amp;#34;AfterBuild&amp;#34;&amp;gt;``&amp;lt;ItemGroup&amp;gt;``&amp;lt;JS Include=&amp;#34;**\*.js&amp;#34; Exclude=&amp;#34;**\*.min.js;Scripts\*.js&amp;#34; /&amp;gt;``&amp;lt;/ItemGroup&amp;gt;``&amp;lt;AjaxMin SourceFiles=&amp;#34;@(JS)&amp;#34; SourceExtensionPattern=&amp;#34;\.js$&amp;#34; TargetExtension=&amp;#34;.min.js&amp;#34; /&amp;gt;``&amp;lt;/Target&amp;gt;``And here are my adjustments, note the Condition attributes:``&amp;lt;Import Project=&amp;#34;$(MSBuildExtensionsPath)\Microsoft\MicrosoftAjax\ajaxmin.tasks&amp;#34;    **Condition=&amp;#34; &amp;#39;$(Configuration)|$(Platform)&amp;#39; == &amp;#39;Debug|AnyCPU&amp;#39; &amp;#34;** /&amp;gt;``&amp;lt;Target Name=&amp;#34;AfterBuild&amp;#34;   **Condition=&amp;#34; &amp;#39;$(Configuration)|$(Platform)&amp;#39; == &amp;#39;Debug|AnyCPU&amp;#39; &amp;#34;**&amp;gt;``&amp;lt;ItemGroup&amp;gt;``&amp;lt;JS Include=&amp;#34;**\*.js&amp;#34; Exclude=&amp;#34;**\*.min.js;Scripts\*.js&amp;#34; /&amp;gt;``&amp;lt;/ItemGroup&amp;gt;``&amp;lt;AjaxMin SourceFiles=&amp;#34;@(JS)&amp;#34; SourceExtensionPattern=&amp;#34;\.js$&amp;#34; TargetExtension=&amp;#34;.min.js&amp;#34; /&amp;gt;``&amp;lt;/Target&amp;gt;``Hope this helps!</code></p>
 
-</div>
-<footer class="post-footer">
-  
+			</div>
+		</article>
+		<p class="post-meta">Published by Matt Sherman on November 20, 2009. <a href="https://mobile.twitter.com/clipperhouse">Find me at @clipperhouse</a>.
+		</p>			
+	</main>
 
-  <p class="post-meta">Published by Matt Sherman on November 20, 2009. <a href="https://mobile.twitter.com/clipperhouse">Find me at @clipperhouse</a>.
-  </p>
-
+	<footer>
+	<p>&copy; 2020</p>
 </footer>
-</article>
-</main>
 
 </body>
 

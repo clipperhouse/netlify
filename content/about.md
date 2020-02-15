@@ -43,7 +43,7 @@ Most recently, I was Engineering Manager at Stack Overflow, overseeing the team 
 
 - [Championship](/championship/)
 - [Bugs are a failure of prediction](/bugs-are-a-failure-of-prediction/)
-- [The makings of a strategy](makings-of-a-strategy/)
+- [The makings of a strategy](/makings-of-a-strategy/)
 - [Lore](/lore/)
 
 ### Developer

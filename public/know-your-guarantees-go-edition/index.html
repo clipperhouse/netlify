@@ -1,80 +1,52 @@
 <!DOCTYPE html>
 <html lang="en-us">
-
 <head>
-  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-8534189-2"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() { dataLayer.push(arguments); }
-    gtag('js', new Date());
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Know your guarantees, Go edition</title>
+	
+	<meta name="author" content="Matt Sherman">
 
-    gtag('config', 'UA-8534189-2');
-  </script>
+	
+	<link href="/css/normalize.f4d7e8250f8f124f8b7d087e5e260766a34b079fddc43e7b20d8c18ca1e92e51.css" rel="stylesheet">
 
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="renderer" content="webkit">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	
+	<link href="/css/skeleton.09b82130c4ba09fa45b20e9845ce089b8e1ad26a3b102e16901feea242e35ac1.css" rel="stylesheet">
+	
+	
+	<link href="/css/style.957ee09559919d8fb5774e0ff59d59fc278d5e52eeccd0f93c4dbabddc248176.css" rel="stylesheet">
+	
+	
+	
 
-  <title>Know your guarantees, Go edition · Matt Sherman</title>
-  <meta name="description" content="I was directed to a thread about a poor soul who started a project in Go, eventually had to hand it off to the community, and discovered that his original source no longer compiled, due to third-party dependencies having changed.">
-  <meta name="author" content="Matt Sherman">
-  
-  <link href="/css/style.9d3a33a28e12fa810b8ad9dad35d8bc7c08fcdb6949a981199b85c49e3c28422.css" rel="stylesheet">
-  
-  <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/img/favicon-16x16.png">
-  <link rel="apple-touch-icon" href="/img/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="/img/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="/img/favicon-16x16.png">
+	<link rel="apple-touch-icon" href="/img/apple-touch-icon.png">
 
-  <meta name="generator" content="Hugo">
-
-  <link rel="alternate" type="application/atom+xml" href="/index.xml" title="clipperhouse.com">
-
-
-  <meta name="twitter:card" content="summary" />
-  <meta name="twitter:creator" content="@clipperhouse" />
-  <meta name="twitter:site" content="@clipperhouse" />
-  <meta property="og:url" content="https://clipperhouse.com/know-your-guarantees-go-edition/" />
-  <meta name="twitter:title" content="Know your guarantees, Go edition · Matt Sherman" />
-  <meta property="og:title" content="Know your guarantees, Go edition · Matt Sherman" />
-  <meta name="twitter:description" content="I was directed to a thread about a poor soul who started a project in Go, eventually had to hand it off to the community, and discovered that his original source no longer compiled, due to third-party dependencies having changed." />
-  <meta property="og:description" content="I was directed to a thread about a poor soul who started a project in Go, eventually had to hand it off to the community, and discovered that his original source no longer compiled, due to third-party dependencies having changed." />
-  <meta name="twitter:image" content="https://clipperhouse.com/img/apple-touch-icon.png" />
-  <meta property="og:image" content="https://clipperhouse.com/img/apple-touch-icon.png" />
 </head>
-
-<body class="single ">
-  <header class="header">
-    
-    <p class="title"><a href="/">clipperhouse.com</a></p>
-    
-    <button class="menu-toggle" type="button"></button>
-    <nav class="menu">
-      <ul>
-        
-        
-        <li class="">
-          <a href="/about/">about</a>
-        </li>
-        
-      </ul>
-    </nav>
-  </header>
-
-  <script type="text/javascript">
-    function toggleMenu() {
-      var menu = document.querySelector('nav.menu');
-      menu.style.display = menu.style.display == "none" ? "block" : "none";
-    }
-    document.querySelector('button.menu-toggle').onclick = toggleMenu;
-  </script>
-  <main class="main">
-<article class="post post-view">
-  <header class="post-header">
-  <h1 class="post-title"><a href="https://clipperhouse.com/know-your-guarantees-go-edition/">Know your guarantees, Go edition</a></h1>
+<body>
+	<header>
+	<h4>
+		<a href="https://clipperhouse.com">clipperhouse.com</a>
+	</h4>
+	<nav>
+		<a href="/about/">about</a>
+		<span class="sep">·</span>
+		<a href="/jargon/">jargon</a>
+		<span class="sep">·</span>
+		<a href="/gen/overview/">gen</a>
+		<span class="sep">·</span>
+		<a href="/stack-correlations/">tag correlations</a>
+	</nav>
 </header>
-<div class="post-content">
-  <p>I was directed to a thread about a <a href="http://forums.thedailywtf.com/forums/t/27755.aspx">poor soul</a> who started a project in Go, eventually had to hand it off to the community, and discovered that his original source no longer compiled, due to third-party dependencies having changed. Key quote:
+
+	
+	<main class="single">
+		<article>
+			<h1>Know your guarantees, Go edition</h1>
+			<div>
+				<p>I was directed to a thread about a <a href="http://forums.thedailywtf.com/forums/t/27755.aspx">poor soul</a> who started a project in Go, eventually had to hand it off to the community, and discovered that his original source no longer compiled, due to third-party dependencies having changed. Key quote:
 Not even the original programmer, with the original files on his original dev machine, can compile the source anymore.</p>
 <p>I feel for the guy. Unfortunately, the above quote is not correct. He didn’t have all of the original files. He only had his own.</p>
 <p>See, he took dependencies on third-party code he doesn’t control. That’s a fundamental choice to make. It is a fundamental characteristic of his program (and his dev process).</p>
@@ -94,16 +66,15 @@ Not even the original programmer, with the original files on his original dev ma
 <p>Remember: everything about third-party code is a decision about trust. Waving the wand of “versioned dependencies” doesn’t change that. In fact, it might fool us into seeing guarantees that don’t exist.</p>
 <p><a href="https://news.ycombinator.com/item?id=8028216"><em>discuss on hacker news</em></a></p>
 
-</div>
-<footer class="post-footer">
-  
+			</div>
+		</article>
+		<p class="post-meta">Published by Matt Sherman on July 12, 2014. <a href="https://mobile.twitter.com/clipperhouse">Find me at @clipperhouse</a>.
+		</p>			
+	</main>
 
-  <p class="post-meta">Published by Matt Sherman on July 12, 2014. <a href="https://mobile.twitter.com/clipperhouse">Find me at @clipperhouse</a>.
-  </p>
-
+	<footer>
+	<p>&copy; 2020</p>
 </footer>
-</article>
-</main>
 
 </body>
 

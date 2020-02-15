@@ -1,80 +1,52 @@
 <!DOCTYPE html>
 <html lang="en-us">
-
 <head>
-  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-8534189-2"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() { dataLayer.push(arguments); }
-    gtag('js', new Date());
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>De facto immutability</title>
+	
+	<meta name="author" content="Matt Sherman">
 
-    gtag('config', 'UA-8534189-2');
-  </script>
+	
+	<link href="/css/normalize.f4d7e8250f8f124f8b7d087e5e260766a34b079fddc43e7b20d8c18ca1e92e51.css" rel="stylesheet">
 
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="renderer" content="webkit">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	
+	<link href="/css/skeleton.09b82130c4ba09fa45b20e9845ce089b8e1ad26a3b102e16901feea242e35ac1.css" rel="stylesheet">
+	
+	
+	<link href="/css/style.957ee09559919d8fb5774e0ff59d59fc278d5e52eeccd0f93c4dbabddc248176.css" rel="stylesheet">
+	
+	
+	
 
-  <title>De facto immutability · Matt Sherman</title>
-  <meta name="description" content="Another in a series of posts wherein I spitball about things that computer scientists already know, but have only just occurred to me.">
-  <meta name="author" content="Matt Sherman">
-  
-  <link href="/css/style.9d3a33a28e12fa810b8ad9dad35d8bc7c08fcdb6949a981199b85c49e3c28422.css" rel="stylesheet">
-  
-  <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/img/favicon-16x16.png">
-  <link rel="apple-touch-icon" href="/img/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="/img/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="/img/favicon-16x16.png">
+	<link rel="apple-touch-icon" href="/img/apple-touch-icon.png">
 
-  <meta name="generator" content="Hugo">
-
-  <link rel="alternate" type="application/atom+xml" href="/index.xml" title="clipperhouse.com">
-
-
-  <meta name="twitter:card" content="summary" />
-  <meta name="twitter:creator" content="@clipperhouse" />
-  <meta name="twitter:site" content="@clipperhouse" />
-  <meta property="og:url" content="https://clipperhouse.com/de-facto-immutability/" />
-  <meta name="twitter:title" content="De facto immutability · Matt Sherman" />
-  <meta property="og:title" content="De facto immutability · Matt Sherman" />
-  <meta name="twitter:description" content="Another in a series of posts wherein I spitball about things that computer scientists already know, but have only just occurred to me." />
-  <meta property="og:description" content="Another in a series of posts wherein I spitball about things that computer scientists already know, but have only just occurred to me." />
-  <meta name="twitter:image" content="https://clipperhouse.com/img/apple-touch-icon.png" />
-  <meta property="og:image" content="https://clipperhouse.com/img/apple-touch-icon.png" />
 </head>
-
-<body class="single ">
-  <header class="header">
-    
-    <p class="title"><a href="/">clipperhouse.com</a></p>
-    
-    <button class="menu-toggle" type="button"></button>
-    <nav class="menu">
-      <ul>
-        
-        
-        <li class="">
-          <a href="/about/">about</a>
-        </li>
-        
-      </ul>
-    </nav>
-  </header>
-
-  <script type="text/javascript">
-    function toggleMenu() {
-      var menu = document.querySelector('nav.menu');
-      menu.style.display = menu.style.display == "none" ? "block" : "none";
-    }
-    document.querySelector('button.menu-toggle').onclick = toggleMenu;
-  </script>
-  <main class="main">
-<article class="post post-view">
-  <header class="post-header">
-  <h1 class="post-title"><a href="https://clipperhouse.com/de-facto-immutability/">De facto immutability</a></h1>
+<body>
+	<header>
+	<h4>
+		<a href="https://clipperhouse.com">clipperhouse.com</a>
+	</h4>
+	<nav>
+		<a href="/about/">about</a>
+		<span class="sep">·</span>
+		<a href="/jargon/">jargon</a>
+		<span class="sep">·</span>
+		<a href="/gen/overview/">gen</a>
+		<span class="sep">·</span>
+		<a href="/stack-correlations/">tag correlations</a>
+	</nav>
 </header>
-<div class="post-content">
-  <p><em>Another in a series of posts wherein I spitball about things that computer scientists already know, but have only just occurred to me.</em></p>
+
+	
+	<main class="single">
+		<article>
+			<h1>De facto immutability</h1>
+			<div>
+				<p><em>Another in a series of posts wherein I spitball about things that computer scientists already know, but have only just occurred to me.</em></p>
 <p>Browsing the new <a href="https://developer.apple.com/library/prerelease/ios/documentation/Swift/Conceptual/Swift_Programming_Language/GuidedTour.html#//apple_ref/doc/uid/TP40014097-CH2-XID_1">Swift docs</a> reveals that immutability is given pretty high billing. There are two keywords for variable declaration/assignment: let and var.</p>
 <p>The former declares an immutable value; the latter a mutable one. The former is used much more often in the examples, providing a hint about the intentions of the designers.</p>
 <p>The first thing I like about this is that the programmer is encouraged to default to immutable. It’s a nudge which suggests, when using var, that perhaps they should think about why they are doing that. It feels exceptional and just a little unsafe. Could this code be rearranged to avoid it?</p>
@@ -86,16 +58,15 @@
 <p>Would be interested to know which languages exploit these ideas, or if there are logical problems with them that I’ve missed.</p>
 <p><a href="https://news.ycombinator.com/item?id=7855306"><em>discuss on hacker news</em></a></p>
 
-</div>
-<footer class="post-footer">
-  
+			</div>
+		</article>
+		<p class="post-meta">Published by Matt Sherman on June 5, 2014. <a href="https://mobile.twitter.com/clipperhouse">Find me at @clipperhouse</a>.
+		</p>			
+	</main>
 
-  <p class="post-meta">Published by Matt Sherman on June 5, 2014. <a href="https://mobile.twitter.com/clipperhouse">Find me at @clipperhouse</a>.
-  </p>
-
+	<footer>
+	<p>&copy; 2020</p>
 </footer>
-</article>
-</main>
 
 </body>
 

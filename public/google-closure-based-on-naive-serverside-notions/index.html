@@ -1,80 +1,52 @@
 <!DOCTYPE html>
 <html lang="en-us">
-
 <head>
-  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-8534189-2"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() { dataLayer.push(arguments); }
-    gtag('js', new Date());
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Google Closure based on naive server-side notions?</title>
+	
+	<meta name="author" content="Matt Sherman">
 
-    gtag('config', 'UA-8534189-2');
-  </script>
+	
+	<link href="/css/normalize.f4d7e8250f8f124f8b7d087e5e260766a34b079fddc43e7b20d8c18ca1e92e51.css" rel="stylesheet">
 
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="renderer" content="webkit">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	
+	<link href="/css/skeleton.09b82130c4ba09fa45b20e9845ce089b8e1ad26a3b102e16901feea242e35ac1.css" rel="stylesheet">
+	
+	
+	<link href="/css/style.957ee09559919d8fb5774e0ff59d59fc278d5e52eeccd0f93c4dbabddc248176.css" rel="stylesheet">
+	
+	
+	
 
-  <title>Google Closure based on naive server-side notions? · Matt Sherman</title>
-  <meta name="description" content="I rely on libraries (mostly jQuery) instead of writing a lot of serious JavaScript these days.">
-  <meta name="author" content="Matt Sherman">
-  
-  <link href="/css/style.9d3a33a28e12fa810b8ad9dad35d8bc7c08fcdb6949a981199b85c49e3c28422.css" rel="stylesheet">
-  
-  <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/img/favicon-16x16.png">
-  <link rel="apple-touch-icon" href="/img/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="/img/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="/img/favicon-16x16.png">
+	<link rel="apple-touch-icon" href="/img/apple-touch-icon.png">
 
-  <meta name="generator" content="Hugo">
-
-  <link rel="alternate" type="application/atom+xml" href="/index.xml" title="clipperhouse.com">
-
-
-  <meta name="twitter:card" content="summary" />
-  <meta name="twitter:creator" content="@clipperhouse" />
-  <meta name="twitter:site" content="@clipperhouse" />
-  <meta property="og:url" content="https://clipperhouse.com/google-closure-based-on-naive-serverside-notions/" />
-  <meta name="twitter:title" content="Google Closure based on naive server-side notions? · Matt Sherman" />
-  <meta property="og:title" content="Google Closure based on naive server-side notions? · Matt Sherman" />
-  <meta name="twitter:description" content="I rely on libraries (mostly jQuery) instead of writing a lot of serious JavaScript these days." />
-  <meta property="og:description" content="I rely on libraries (mostly jQuery) instead of writing a lot of serious JavaScript these days." />
-  <meta name="twitter:image" content="https://clipperhouse.com/img/apple-touch-icon.png" />
-  <meta property="og:image" content="https://clipperhouse.com/img/apple-touch-icon.png" />
 </head>
-
-<body class="single ">
-  <header class="header">
-    
-    <p class="title"><a href="/">clipperhouse.com</a></p>
-    
-    <button class="menu-toggle" type="button"></button>
-    <nav class="menu">
-      <ul>
-        
-        
-        <li class="">
-          <a href="/about/">about</a>
-        </li>
-        
-      </ul>
-    </nav>
-  </header>
-
-  <script type="text/javascript">
-    function toggleMenu() {
-      var menu = document.querySelector('nav.menu');
-      menu.style.display = menu.style.display == "none" ? "block" : "none";
-    }
-    document.querySelector('button.menu-toggle').onclick = toggleMenu;
-  </script>
-  <main class="main">
-<article class="post post-view">
-  <header class="post-header">
-  <h1 class="post-title"><a href="https://clipperhouse.com/google-closure-based-on-naive-serverside-notions/">Google Closure based on naive server-side notions?</a></h1>
+<body>
+	<header>
+	<h4>
+		<a href="https://clipperhouse.com">clipperhouse.com</a>
+	</h4>
+	<nav>
+		<a href="/about/">about</a>
+		<span class="sep">·</span>
+		<a href="/jargon/">jargon</a>
+		<span class="sep">·</span>
+		<a href="/gen/overview/">gen</a>
+		<span class="sep">·</span>
+		<a href="/stack-correlations/">tag correlations</a>
+	</nav>
 </header>
-<div class="post-content">
-  <p>I rely on libraries (mostly jQuery) instead of writing a lot of serious JavaScript these days. I mean, of course I am writing JavaScript but the libraries allow me to stay in “script space” — small procedure bits that are <em>scripts</em> as opposed to applications.</p>
+
+	
+	<main class="single">
+		<article>
+			<h1>Google Closure based on naive server-side notions?</h1>
+			<div>
+				<p>I rely on libraries (mostly jQuery) instead of writing a lot of serious JavaScript these days. I mean, of course I am writing JavaScript but the libraries allow me to stay in “script space” — small procedure bits that are <em>scripts</em> as opposed to applications.</p>
 <p>But I do like to keep an eye on best practices, and <a href="http://www.sitepoint.com/blogs/2009/11/12/google-closure-how-not-to-write-javascript/">this article</a> offers some great tips from an experienced JS library developer.</p>
 <p>He offers them in the context of ripping Google’s new Closure library — he says it’s evident that it was done by Java people without much real-world JavaScript experience. In other words, Closure appears to be based on the naive assumptions of a server developer.</p>
 <p>This is understandable if it’s true that these are Java developers behind Closure. Java is a compiled and garbage-collected language. Poor coding patterns may be optimized away at compile-time. The behavior of Java’s garbage collector is known science, so if you manage scope well, you should have no trouble.</p>
@@ -82,16 +54,15 @@
 <p>JavaScript, however, can’t rely on any of these assumptions. Your users will be on a variety of browsers, with widely varying JS performance. Sloppy code may or may not get optimized. Who knows how good the memory management is. And other libraries can change your code, intentionally or otherwise.</p>
 <p>It’s the difference between knowns and unknowns. On the server (Java), you have 100% control of the environment. On the client (JavaScript), you have almost none. These are very different ways of thinking.</p>
 
-</div>
-<footer class="post-footer">
-  
+			</div>
+		</article>
+		<p class="post-meta">Published by Matt Sherman on November 12, 2009. <a href="https://mobile.twitter.com/clipperhouse">Find me at @clipperhouse</a>.
+		</p>			
+	</main>
 
-  <p class="post-meta">Published by Matt Sherman on November 12, 2009. <a href="https://mobile.twitter.com/clipperhouse">Find me at @clipperhouse</a>.
-  </p>
-
+	<footer>
+	<p>&copy; 2020</p>
 </footer>
-</article>
-</main>
 
 </body>
 

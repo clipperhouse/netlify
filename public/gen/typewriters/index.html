@@ -1,90 +1,62 @@
 <!DOCTYPE html>
 <html lang="en-us">
-
 <head>
-  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-8534189-2"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() { dataLayer.push(arguments); }
-    gtag('js', new Date());
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>gen: type writers</title>
+	
+	<meta name="author" content="Matt Sherman">
 
-    gtag('config', 'UA-8534189-2');
-  </script>
+	
+	<link href="/css/normalize.f4d7e8250f8f124f8b7d087e5e260766a34b079fddc43e7b20d8c18ca1e92e51.css" rel="stylesheet">
 
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="renderer" content="webkit">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	
+	<link href="/css/skeleton.09b82130c4ba09fa45b20e9845ce089b8e1ad26a3b102e16901feea242e35ac1.css" rel="stylesheet">
+	
+	
+	<link href="/css/style.957ee09559919d8fb5774e0ff59d59fc278d5e52eeccd0f93c4dbabddc248176.css" rel="stylesheet">
+	
+	
+	
 
-  <title>gen: type writers · Matt Sherman</title>
-  <meta name="description" content="gen is driven by “type writers” – packages which are responsible for interpreting the annotated tags and turning them into generated code.">
-  <meta name="author" content="Matt Sherman">
-  
-  <link href="/css/style.9d3a33a28e12fa810b8ad9dad35d8bc7c08fcdb6949a981199b85c49e3c28422.css" rel="stylesheet">
-  
-  <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/img/favicon-16x16.png">
-  <link rel="apple-touch-icon" href="/img/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="/img/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="/img/favicon-16x16.png">
+	<link rel="apple-touch-icon" href="/img/apple-touch-icon.png">
 
-  <meta name="generator" content="Hugo">
-
-  <link rel="alternate" type="application/atom+xml" href="/index.xml" title="clipperhouse.com">
-
-
-  <meta name="twitter:card" content="summary" />
-  <meta name="twitter:creator" content="@clipperhouse" />
-  <meta name="twitter:site" content="@clipperhouse" />
-  <meta property="og:url" content="https://clipperhouse.com/gen/typewriters/" />
-  <meta name="twitter:title" content="gen: type writers · Matt Sherman" />
-  <meta property="og:title" content="gen: type writers · Matt Sherman" />
-  <meta name="twitter:description" content="gen is driven by “type writers” – packages which are responsible for interpreting the annotated tags and turning them into generated code." />
-  <meta property="og:description" content="gen is driven by “type writers” – packages which are responsible for interpreting the annotated tags and turning them into generated code." />
-  <meta name="twitter:image" content="https://clipperhouse.com/img/apple-touch-icon.png" />
-  <meta property="og:image" content="https://clipperhouse.com/img/apple-touch-icon.png" />
 </head>
-
-<body class="single app">
-  <header class="header">
-    
-    <p class="title"><a href="/">clipperhouse.com</a></p>
-    
-    <button class="menu-toggle" type="button"></button>
-    <nav class="menu">
-      <ul>
-        
-        
-        <li class="">
-          <a href="/about/">about</a>
-        </li>
-        
-      </ul>
-    </nav>
-  </header>
-
-  <script type="text/javascript">
-    function toggleMenu() {
-      var menu = document.querySelector('nav.menu');
-      menu.style.display = menu.style.display == "none" ? "block" : "none";
-    }
-    document.querySelector('button.menu-toggle').onclick = toggleMenu;
-  </script>
-  <main class="main">
-<article class="post post-view">
-  <header class="post-header">
-  <h1 class="post-title"><a href="https://clipperhouse.com/gen/typewriters/">gen: type writers</a></h1>
+<body>
+	<header>
+	<h4>
+		<a href="https://clipperhouse.com">clipperhouse.com</a>
+	</h4>
+	<nav>
+		<a href="/about/">about</a>
+		<span class="sep">·</span>
+		<a href="/jargon/">jargon</a>
+		<span class="sep">·</span>
+		<a href="/gen/overview/">gen</a>
+		<span class="sep">·</span>
+		<a href="/stack-correlations/">tag correlations</a>
+	</nav>
 </header>
-<div class="post-content">
-  <p><a href="/gen/">gen</a> is driven by “type writers” – packages which are responsible for interpreting the annotated tags and turning them into generated code.</p>
+
+	
+	<main class="single">
+		<article>
+			<h1>gen: type writers</h1>
+			<div>
+				<p><a href="/gen/">gen</a> is driven by “type writers” – packages which are responsible for interpreting the annotated tags and turning them into generated code.</p>
 <p>gen includes two built-in TypeWriters:</p>
 <h4 id="slice"><code>slice</code></h4>
-<p>The <code>slice</code> typewriter generates functional convenience methods that will look familiar to users of C#’s LINQ or JavaScript's Array methods. It is intended to save you some loops, using a “pass a function” pattern. It offers grouping, filtering, ad-hoc sorts and projections. <a href="/gen/slice/">Details and docs&hellip;</a></p>
+<p>The <code>slice</code> typewriter generates functional convenience methods that will look familiar to users of C#’s LINQ or JavaScript&rsquo;s Array methods. It is intended to save you some loops, using a “pass a function” pattern. It offers grouping, filtering, ad-hoc sorts and projections. <a href="/gen/slice/">Details and docs&hellip;</a></p>
 <h4 id="stringer"><code>stringer</code></h4>
 <p>The <code>stringer</code> typewriter is a fork of Rob Pike’s <a href="https://godoc.org/golang.org/x/tools/cmd/stringer">tool</a> of the same name, which generates readable strings for consts. <a href="/gen/stringer/">Details and docs&hellip;</a></p>
 <h3 id="listing-typewriters">Listing typewriters</h3>
 <p>To view the currently-available typewriters, <code>cd</code> into your package and type:</p>
 <pre><code>gen list
 </code></pre>
-<h3 id="adding-thirdparty-typewriters">Adding third-party TypeWriters</h3>
+<h3 id="adding-third-party-typewriters">Adding third-party TypeWriters</h3>
 <p>TypeWriters can be implemented by third-parties and used at “gen time”. To use a third-party typewriter, <code>cd</code> into the root of your package and type (for example):</p>
 <pre><code>gen add github.com/clipperhouse/set
 </code></pre>
@@ -106,22 +78,21 @@ type MyType struct {}
 <p>To <strong>remove</strong> a typewriter, simply remove the import from the <code>_gen.go</code> file.</p>
 <h3 id="implementing-typewriters">Implementing TypeWriters</h3>
 <p>You can create your own typewriter by implementing <a href="http://godoc.org/github.com/clipperhouse/typewriter#Interface">typewriter.Interface</a>.</p>
-<p>Typewriters follow the pattern of formats in the <a href="http://blog.golang.org/go-image-package#TOC_5.">image package</a> of Go's standard library. They are registered via an <code>init()</code> method.</p>
+<p>Typewriters follow the pattern of formats in the <a href="http://blog.golang.org/go-image-package#TOC_5.">image package</a> of Go&rsquo;s standard library. They are registered via an <code>init()</code> method.</p>
 <p>The best thing to do is have a look at an existing implementation, <a href="https://github.com/clipperhouse/set">Set</a> is straightforward.</p>
 <p>By convention, the name of the typewriter is the name of the tag that it uses. Type <code>gen list</code> to see the name of the typewriters available in your current package.</p>
 <p>The <a href="https://github.com/clipperhouse/typewriter">typewriter package</a> handles tag parsing and type evaluation, and passes this information to your typewriter. It offers some conveniences for text templating, as well.</p>
 <p><a href="/gen/overview/">← back to gen overview</a></p>
 
-</div>
-<footer class="post-footer">
-  
+			</div>
+		</article>
+		<p class="post-meta">Published by Matt Sherman on January 1, 0001. <a href="https://mobile.twitter.com/clipperhouse">Find me at @clipperhouse</a>.
+		</p>			
+	</main>
 
-  <p class="post-meta">Published by Matt Sherman on January 1, 0001. <a href="https://mobile.twitter.com/clipperhouse">Find me at @clipperhouse</a>.
-  </p>
-
+	<footer>
+	<p>&copy; 2020</p>
 </footer>
-</article>
-</main>
 
 </body>
 

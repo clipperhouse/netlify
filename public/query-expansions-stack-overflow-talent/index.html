@@ -1,80 +1,52 @@
 <!DOCTYPE html>
 <html lang="en-us">
-
 <head>
-  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-8534189-2"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() { dataLayer.push(arguments); }
-    gtag('js', new Date());
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Query expansions in Stack Overflow Talent</title>
+	
+	<meta name="author" content="Matt Sherman">
 
-    gtag('config', 'UA-8534189-2');
-  </script>
+	
+	<link href="/css/normalize.f4d7e8250f8f124f8b7d087e5e260766a34b079fddc43e7b20d8c18ca1e92e51.css" rel="stylesheet">
 
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="renderer" content="webkit">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	
+	<link href="/css/skeleton.09b82130c4ba09fa45b20e9845ce089b8e1ad26a3b102e16901feea242e35ac1.css" rel="stylesheet">
+	
+	
+	<link href="/css/style.957ee09559919d8fb5774e0ff59d59fc278d5e52eeccd0f93c4dbabddc248176.css" rel="stylesheet">
+	
+	
+	
 
-  <title>Query expansions in Stack Overflow Talent · Matt Sherman</title>
-  <meta name="description" content="Stack Overflow Talent aims to connect the right company with the right developer.">
-  <meta name="author" content="Matt Sherman">
-  
-  <link href="/css/style.9d3a33a28e12fa810b8ad9dad35d8bc7c08fcdb6949a981199b85c49e3c28422.css" rel="stylesheet">
-  
-  <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/img/favicon-16x16.png">
-  <link rel="apple-touch-icon" href="/img/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="/img/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="/img/favicon-16x16.png">
+	<link rel="apple-touch-icon" href="/img/apple-touch-icon.png">
 
-  <meta name="generator" content="Hugo">
-
-  <link rel="alternate" type="application/atom+xml" href="/index.xml" title="clipperhouse.com">
-
-
-  <meta name="twitter:card" content="summary" />
-  <meta name="twitter:creator" content="@clipperhouse" />
-  <meta name="twitter:site" content="@clipperhouse" />
-  <meta property="og:url" content="https://clipperhouse.com/query-expansions-stack-overflow-talent/" />
-  <meta name="twitter:title" content="Query expansions in Stack Overflow Talent · Matt Sherman" />
-  <meta property="og:title" content="Query expansions in Stack Overflow Talent · Matt Sherman" />
-  <meta name="twitter:description" content="Stack Overflow Talent aims to connect the right company with the right developer." />
-  <meta property="og:description" content="Stack Overflow Talent aims to connect the right company with the right developer." />
-  <meta name="twitter:image" content="https://clipperhouse.com/img/apple-touch-icon.png" />
-  <meta property="og:image" content="https://clipperhouse.com/img/apple-touch-icon.png" />
 </head>
-
-<body class="single ">
-  <header class="header">
-    
-    <p class="title"><a href="/">clipperhouse.com</a></p>
-    
-    <button class="menu-toggle" type="button"></button>
-    <nav class="menu">
-      <ul>
-        
-        
-        <li class="">
-          <a href="/about/">about</a>
-        </li>
-        
-      </ul>
-    </nav>
-  </header>
-
-  <script type="text/javascript">
-    function toggleMenu() {
-      var menu = document.querySelector('nav.menu');
-      menu.style.display = menu.style.display == "none" ? "block" : "none";
-    }
-    document.querySelector('button.menu-toggle').onclick = toggleMenu;
-  </script>
-  <main class="main">
-<article class="post post-view">
-  <header class="post-header">
-  <h1 class="post-title"><a href="https://clipperhouse.com/query-expansions-stack-overflow-talent/">Query expansions in Stack Overflow Talent</a></h1>
+<body>
+	<header>
+	<h4>
+		<a href="https://clipperhouse.com">clipperhouse.com</a>
+	</h4>
+	<nav>
+		<a href="/about/">about</a>
+		<span class="sep">·</span>
+		<a href="/jargon/">jargon</a>
+		<span class="sep">·</span>
+		<a href="/gen/overview/">gen</a>
+		<span class="sep">·</span>
+		<a href="/stack-correlations/">tag correlations</a>
+	</nav>
 </header>
-<div class="post-content">
-  <p>Stack Overflow Talent aims to connect the right company with the right developer. We call this a two-sided market – developers on one side and recruiters on the other.</p>
+
+	
+	<main class="single">
+		<article>
+			<h1>Query expansions in Stack Overflow Talent</h1>
+			<div>
+				<p>Stack Overflow Talent aims to connect the right company with the right developer. We call this a two-sided market – developers on one side and recruiters on the other.</p>
 <p>One challenge is that the recruiter side of the market is <strong>not always technical</strong>. Many clients struggle to understand technology skill sets and ecosystems.</p>
 <p>This is understandable! It’s a jungle of jargon (a jargle?) out there, and those of us on the inside don’t realize how inscrutable it all is.</p>
 <p>This plays out in Stack Overflow’s candidate database, a product offered to recruiters to search for candidates of different skills. (Developers can <a href="https://stackoverflow.com/users/jobsearch/current">opt in</a> to this database with their developer story.)</p>
@@ -92,7 +64,7 @@
 <h3 id="query-expansions-v2">Query expansions, v2</h3>
 <p>We solved some obvious problems, but one can see the limits in the above approach. Substrings are a problem, as are n-grams.</p>
 <p>The next step was to move this logic down into the <strong>query-parsing infrastructure</strong>. By doing so, we operate on a real syntax tree, with real tokens, and avoid “stringy” edge cases. We added a <a href="https://www.benjamin.pizza/posts/2017-11-13-recursion-without-recursion.html">simple library</a> for making substitutions, and eliminated regex.</p>
-<h3 id="tradeoffs">Trade-offs</h3>
+<h3 id="trade-offs">Trade-offs</h3>
 <p>There is a bit of a performance hit in the database with long <code>OR</code> statements, on the order of 10% if I recall. We consider this acceptable for the improvement in user outcomes.</p>
 <p>A further optimization might be to move expansions into Elastic itself, by writing an <a href="https://www.elastic.co/guide/en/elasticsearch/reference/current/analysis-analyzers.html">analyzer</a>. Think of it as an ‘expansion in reverse’: when (say) ‘css’ is detected in a document, tag the document with the term ‘front end’, which can be indexed and searched efficiently.</p>
 <h3 id="outcome">Outcome</h3>
@@ -113,16 +85,15 @@
 <p><code>data science/ML/AI → (probability or predictive or r or ggplot or pandas or neural network or…)</code></p>
 <p><code>distributed → (kafka or spark or hadoop or mapreduce or cockroachdb or concurrency or mvcc or…)</code></p>
 
-</div>
-<footer class="post-footer">
-  
+			</div>
+		</article>
+		<p class="post-meta">Published by Matt Sherman on July 26, 2018. <a href="https://mobile.twitter.com/clipperhouse">Find me at @clipperhouse</a>.
+		</p>			
+	</main>
 
-  <p class="post-meta">Published by Matt Sherman on July 26, 2018. <a href="https://mobile.twitter.com/clipperhouse">Find me at @clipperhouse</a>.
-  </p>
-
+	<footer>
+	<p>&copy; 2020</p>
 </footer>
-</article>
-</main>
 
 </body>
 

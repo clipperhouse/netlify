@@ -1,6 +1,5 @@
 ---
 title: "A simple classical radio player"
-style: "app"
 stations:
   - name : "WQXR"
     stream_url: "https://stream.wqxr.org/wqxr-web"

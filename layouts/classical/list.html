@@ -1,4 +1,4 @@
-{{ partial "header.html" . }}
+{{ define "main" }}
 
 {{ range $index, $station := .Params.stations }}
 <article class="post post-view post-entry">
@@ -52,4 +52,4 @@
 
 </article>
 
-{{ partial "footer.html" . }}
+{{ end }}

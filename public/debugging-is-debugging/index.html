@@ -1,83 +1,52 @@
 <!DOCTYPE html>
 <html lang="en-us">
-
 <head>
-  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-8534189-2"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() { dataLayer.push(arguments); }
-    gtag('js', new Date());
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Debugging is debugging</title>
+	
+	<meta name="author" content="Matt Sherman">
 
-    gtag('config', 'UA-8534189-2');
-  </script>
+	
+	<link href="/css/normalize.f4d7e8250f8f124f8b7d087e5e260766a34b079fddc43e7b20d8c18ca1e92e51.css" rel="stylesheet">
 
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="renderer" content="webkit">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	
+	<link href="/css/skeleton.09b82130c4ba09fa45b20e9845ce089b8e1ad26a3b102e16901feea242e35ac1.css" rel="stylesheet">
+	
+	
+	<link href="/css/style.957ee09559919d8fb5774e0ff59d59fc278d5e52eeccd0f93c4dbabddc248176.css" rel="stylesheet">
+	
+	
+	
 
-  <title>Debugging is debugging · Matt Sherman</title>
-  <meta name="description" content="I use CoffeeScript here and there. And JavaScript everywhere else.
-Depending on the scenario, and this is a matter of taste, CoffeeScript is more elegant, readable, and usable.">
-  <meta name="author" content="Matt Sherman">
-  
-  <link href="/css/style.9d3a33a28e12fa810b8ad9dad35d8bc7c08fcdb6949a981199b85c49e3c28422.css" rel="stylesheet">
-  
-  <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/img/favicon-16x16.png">
-  <link rel="apple-touch-icon" href="/img/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="/img/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="/img/favicon-16x16.png">
+	<link rel="apple-touch-icon" href="/img/apple-touch-icon.png">
 
-  <meta name="generator" content="Hugo">
-
-  <link rel="alternate" type="application/atom+xml" href="/index.xml" title="clipperhouse.com">
-
-
-  <meta name="twitter:card" content="summary" />
-  <meta name="twitter:creator" content="@clipperhouse" />
-  <meta name="twitter:site" content="@clipperhouse" />
-  <meta property="og:url" content="https://clipperhouse.com/debugging-is-debugging/" />
-  <meta name="twitter:title" content="Debugging is debugging · Matt Sherman" />
-  <meta property="og:title" content="Debugging is debugging · Matt Sherman" />
-  <meta name="twitter:description" content="I use CoffeeScript here and there. And JavaScript everywhere else.
-Depending on the scenario, and this is a matter of taste, CoffeeScript is more elegant, readable, and usable." />
-  <meta property="og:description" content="I use CoffeeScript here and there. And JavaScript everywhere else.
-Depending on the scenario, and this is a matter of taste, CoffeeScript is more elegant, readable, and usable." />
-  <meta name="twitter:image" content="https://clipperhouse.com/img/apple-touch-icon.png" />
-  <meta property="og:image" content="https://clipperhouse.com/img/apple-touch-icon.png" />
 </head>
-
-<body class="single ">
-  <header class="header">
-    
-    <p class="title"><a href="/">clipperhouse.com</a></p>
-    
-    <button class="menu-toggle" type="button"></button>
-    <nav class="menu">
-      <ul>
-        
-        
-        <li class="">
-          <a href="/about/">about</a>
-        </li>
-        
-      </ul>
-    </nav>
-  </header>
-
-  <script type="text/javascript">
-    function toggleMenu() {
-      var menu = document.querySelector('nav.menu');
-      menu.style.display = menu.style.display == "none" ? "block" : "none";
-    }
-    document.querySelector('button.menu-toggle').onclick = toggleMenu;
-  </script>
-  <main class="main">
-<article class="post post-view">
-  <header class="post-header">
-  <h1 class="post-title"><a href="https://clipperhouse.com/debugging-is-debugging/">Debugging is debugging</a></h1>
+<body>
+	<header>
+	<h4>
+		<a href="https://clipperhouse.com">clipperhouse.com</a>
+	</h4>
+	<nav>
+		<a href="/about/">about</a>
+		<span class="sep">·</span>
+		<a href="/jargon/">jargon</a>
+		<span class="sep">·</span>
+		<a href="/gen/overview/">gen</a>
+		<span class="sep">·</span>
+		<a href="/stack-correlations/">tag correlations</a>
+	</nav>
 </header>
-<div class="post-content">
-  <p>I use CoffeeScript <a href="https://github.com/clipperhouse/classicalrad.io">here</a> and <a href="https://github.com/clipperhouse/BetterBird">there</a>. And JavaScript everywhere else.</p>
+
+	
+	<main class="single">
+		<article>
+			<h1>Debugging is debugging</h1>
+			<div>
+				<p>I use CoffeeScript <a href="https://github.com/clipperhouse/classicalrad.io">here</a> and <a href="https://github.com/clipperhouse/BetterBird">there</a>. And JavaScript everywhere else.</p>
 <p>Depending on the scenario, and this is a matter of taste, CoffeeScript is more elegant, readable, and usable.</p>
 <p>When offering this notion, inevitably there is a complaint about “debugging.” CS is generating code, it’s a layer of abstraction, which will lead to frustration, etc.</p>
 <p>The question is, compared to what? When JavaScript is not behaving as you wish, what do you do?</p>
@@ -94,16 +63,15 @@ Depending on the scenario, and this is a matter of taste, CoffeeScript is more e
 <p>A couple of addenda — in terms of the ‘taste’ thing, I’ve settled on CS on the server (if using node) and plain JS on the client. The difference is that the latter requires a build step while the former does not. coffee app.coffee just works, no hint of JS.</p>
 <p>And source maps are a nice tool, so I can imagine that objection to the CS abstraction. Looks like CS got <a href="http://coffeescript.org/#source-maps">support</a> for that as well, but haven’t yet tried it.</p>
 
-</div>
-<footer class="post-footer">
-  
+			</div>
+		</article>
+		<p class="post-meta">Published by Matt Sherman on March 17, 2013. <a href="https://mobile.twitter.com/clipperhouse">Find me at @clipperhouse</a>.
+		</p>			
+	</main>
 
-  <p class="post-meta">Published by Matt Sherman on March 17, 2013. <a href="https://mobile.twitter.com/clipperhouse">Find me at @clipperhouse</a>.
-  </p>
-
+	<footer>
+	<p>&copy; 2020</p>
 </footer>
-</article>
-</main>
 
 </body>
 

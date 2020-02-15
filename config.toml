@@ -1,7 +1,7 @@
 baseURL = "https://clipperhouse.com"
 languageCode = "en-us"
 title = "clipperhouse.com"
-theme = "hugo-paper"
+theme = "blank"
 summaryLength = 12
 
 [params]

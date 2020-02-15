@@ -4,9 +4,9 @@ date: 2018-08-29
 author: "Matt Sherman"
 ---
 
-{{< tweet 1034093429507141639 >}}
+I think the replication & open science movement is great. I come from an epistemological, first-principles sort of mindset, and so I find this very encouraging:
 
-I think the replication & open science movement is great. I come from an irritatingly epistemological, first-principles sort of mindset, and so I find the above very encouraging.
+{{< tweet 1034093429507141639 >}}
 
 We should conclude that **saying true things is hard**. Here’s why.
 

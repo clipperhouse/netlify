@@ -16,7 +16,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://clipperhouse.com/gen/force/</guid>
-      <description>Tolerating type errors gen operates by parsing and type-checking your source code. The correctness of your code will affect gen&#39;s ability to operate.</description>
+      <description>Tolerating type errors gen operates by parsing and type-checking your source code. The correctness of your code will affect gen&amp;rsquo;s ability to operate.</description>
     </item>
     
     <item>
@@ -25,7 +25,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://clipperhouse.com/gen/optional/</guid>
-      <description>Here are a few optional typewriters I&#39;ve created. They are not built into gen, but can be added as follows.</description>
+      <description>Here are a few optional typewriters I&amp;rsquo;ve created. They are not built into gen, but can be added as follows.</description>
     </item>
     
     <item>
@@ -34,7 +34,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://clipperhouse.com/gen/slice/</guid>
-      <description>The slice typewriter is built into gen by default. It generates functional convenience methods that will look familiar to users of C#&amp;lsquo;s LINQ or JavaScript&#39;s Array methods.</description>
+      <description>The slice typewriter is built into gen by default. It generates functional convenience methods that will look familiar to users of C#&amp;lsquo;s LINQ or JavaScript&amp;rsquo;s Array methods.</description>
     </item>
     
     <item>

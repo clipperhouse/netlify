@@ -1,80 +1,52 @@
 <!DOCTYPE html>
 <html lang="en-us">
-
 <head>
-  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-8534189-2"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() { dataLayer.push(arguments); }
-    gtag('js', new Date());
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Please don’t write “efficient” CSS</title>
+	
+	<meta name="author" content="Matt Sherman">
 
-    gtag('config', 'UA-8534189-2');
-  </script>
+	
+	<link href="/css/normalize.f4d7e8250f8f124f8b7d087e5e260766a34b079fddc43e7b20d8c18ca1e92e51.css" rel="stylesheet">
 
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="renderer" content="webkit">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	
+	<link href="/css/skeleton.09b82130c4ba09fa45b20e9845ce089b8e1ad26a3b102e16901feea242e35ac1.css" rel="stylesheet">
+	
+	
+	<link href="/css/style.957ee09559919d8fb5774e0ff59d59fc278d5e52eeccd0f93c4dbabddc248176.css" rel="stylesheet">
+	
+	
+	
 
-  <title>Please don’t write “efficient” CSS · Matt Sherman</title>
-  <meta name="description" content="Contra many smart people, I am going to make a contrarian request: please do not attempt to optimize your CSS for performance.">
-  <meta name="author" content="Matt Sherman">
-  
-  <link href="/css/style.9d3a33a28e12fa810b8ad9dad35d8bc7c08fcdb6949a981199b85c49e3c28422.css" rel="stylesheet">
-  
-  <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/img/favicon-16x16.png">
-  <link rel="apple-touch-icon" href="/img/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="/img/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="/img/favicon-16x16.png">
+	<link rel="apple-touch-icon" href="/img/apple-touch-icon.png">
 
-  <meta name="generator" content="Hugo">
-
-  <link rel="alternate" type="application/atom+xml" href="/index.xml" title="clipperhouse.com">
-
-
-  <meta name="twitter:card" content="summary" />
-  <meta name="twitter:creator" content="@clipperhouse" />
-  <meta name="twitter:site" content="@clipperhouse" />
-  <meta property="og:url" content="https://clipperhouse.com/please-dont-write-efficient-css/" />
-  <meta name="twitter:title" content="Please don’t write “efficient” CSS · Matt Sherman" />
-  <meta property="og:title" content="Please don’t write “efficient” CSS · Matt Sherman" />
-  <meta name="twitter:description" content="Contra many smart people, I am going to make a contrarian request: please do not attempt to optimize your CSS for performance." />
-  <meta property="og:description" content="Contra many smart people, I am going to make a contrarian request: please do not attempt to optimize your CSS for performance." />
-  <meta name="twitter:image" content="https://clipperhouse.com/img/apple-touch-icon.png" />
-  <meta property="og:image" content="https://clipperhouse.com/img/apple-touch-icon.png" />
 </head>
-
-<body class="single ">
-  <header class="header">
-    
-    <p class="title"><a href="/">clipperhouse.com</a></p>
-    
-    <button class="menu-toggle" type="button"></button>
-    <nav class="menu">
-      <ul>
-        
-        
-        <li class="">
-          <a href="/about/">about</a>
-        </li>
-        
-      </ul>
-    </nav>
-  </header>
-
-  <script type="text/javascript">
-    function toggleMenu() {
-      var menu = document.querySelector('nav.menu');
-      menu.style.display = menu.style.display == "none" ? "block" : "none";
-    }
-    document.querySelector('button.menu-toggle').onclick = toggleMenu;
-  </script>
-  <main class="main">
-<article class="post post-view">
-  <header class="post-header">
-  <h1 class="post-title"><a href="https://clipperhouse.com/please-dont-write-efficient-css/">Please don’t write “efficient” CSS</a></h1>
+<body>
+	<header>
+	<h4>
+		<a href="https://clipperhouse.com">clipperhouse.com</a>
+	</h4>
+	<nav>
+		<a href="/about/">about</a>
+		<span class="sep">·</span>
+		<a href="/jargon/">jargon</a>
+		<span class="sep">·</span>
+		<a href="/gen/overview/">gen</a>
+		<span class="sep">·</span>
+		<a href="/stack-correlations/">tag correlations</a>
+	</nav>
 </header>
-<div class="post-content">
-  <p>Contra <a href="http://css-tricks.com/efficiently-rendering-css/">many</a> <a href="http://developer.mozilla.org/en/Writing_Efficient_CSS">smart</a> <a href="http://code.google.com/speed/page-speed/docs/rendering.html">people</a>, I am going to make a contrarian request: <strong>please do not attempt to optimize your CSS for performance</strong>. Instead, please optimize for correctness, specificity and maintainability.</p>
+
+	
+	<main class="single">
+		<article>
+			<h1>Please don’t write “efficient” CSS</h1>
+			<div>
+				<p>Contra <a href="http://css-tricks.com/efficiently-rendering-css/">many</a> <a href="http://developer.mozilla.org/en/Writing_Efficient_CSS">smart</a> <a href="http://code.google.com/speed/page-speed/docs/rendering.html">people</a>, I am going to make a contrarian request: <strong>please do not attempt to optimize your CSS for performance</strong>. Instead, please optimize for correctness, specificity and maintainability.</p>
 <p>A quick bit of philosophical background. CSS is a <em>declarative</em> language, not unlike HTML and (basic) SQL. It is designed to describe what you want, but not how to execute it. Thus, declarative languages have no verbs — only nouns and adjectives.</p>
 <p>Second-guessing how a browser will execute your nouns is a) a shot in the dark and b) a misuse of the language. You’re trying to micromanage without verbs. It reeks of <a href="http://stackoverflow.com/questions/211414/is-premature-optimization-really-the-root-of-all-evil">premature optimization</a>. And your optimizations may not be optimal in the future, or across different browsers.</p>
 <p>More importantly, a user is more likely to notice something that’s <em>wrong</em> as opposed to something that’s only 99% as fast as it could be. (And if it takes you an extra 15 minutes to locate and fix a bug, they’ll notice that too.)</p>
@@ -104,16 +76,15 @@ p.storydescription { … }</p>
 <p>—</p>
 <p><strong>Addendum:</strong> Another way to think of it is that CSS is a query language. That’s why they call them “selectors”. More rules = more queries. Keeping queries as few and as specific as possible should give the best results, just like SQL.</p>
 
-</div>
-<footer class="post-footer">
-  
+			</div>
+		</article>
+		<p class="post-meta">Published by Matt Sherman on May 31, 2010. <a href="https://mobile.twitter.com/clipperhouse">Find me at @clipperhouse</a>.
+		</p>			
+	</main>
 
-  <p class="post-meta">Published by Matt Sherman on May 31, 2010. <a href="https://mobile.twitter.com/clipperhouse">Find me at @clipperhouse</a>.
-  </p>
-
+	<footer>
+	<p>&copy; 2020</p>
 </footer>
-</article>
-</main>
 
 </body>
 

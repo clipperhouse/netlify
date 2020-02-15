@@ -43,3 +43,6 @@ h1.post-title > a {
   margin-bottom: 1.7em;
   font-size: 95%;
 }
+input[type=search] {
+	width: 100%;
+}
