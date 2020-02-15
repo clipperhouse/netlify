@@ -4,7 +4,8 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>Stack Overflow tag correlations</title>
+	<title>Stack Overflow tag correlations · Matt Sherman</title>
+
 	
 	<meta name="author" content="Matt Sherman">
 
@@ -15,12 +16,10 @@
 	<link href="/css/skeleton.09b82130c4ba09fa45b20e9845ce089b8e1ad26a3b102e16901feea242e35ac1.css" rel="stylesheet">
 	
 	
-	<link href="/css/style.060e13737167b1fda4b243b289f52983c61faa4f2c9a10e9fc3e8f4def49f751.css" rel="stylesheet">
+	<link href="/css/style.e8ac768bebb1edca9768967562653ea67e83f83816cb9a0c92e7217b829cbbe4.css" rel="stylesheet">
 	
 	
 		<link href="/css/stack.d1ed09499b1628472deb9c73d8a0c790090f38c579cc7868d5a64c06ee6dcd0e.css" rel="stylesheet">
-	
-		<link href="/css/jquery-ui.88a5b721b8d835c0faeb09d22cd7c06e7b737ea4ad8a482c659766d42036bc7c.css" rel="stylesheet">
 	
 	
 
@@ -50,19 +49,20 @@
 		<article>
 			<h1>Stack Overflow tag correlations</h1>
 			<div>
-				<p>A tool to discover correlations between technologies on Stack Exchange sites. Start typing a tag name below, or click one of the popular ones.</p>
+				<p>A tool to discover correlations between tags on Stack Exchange sites. Start typing a tag name below, or click one of the popular ones.</p>
 <div id="form">
-    <input name="tag" id="tag" type="search" autocapitalize="none" autocorrect="off" /><br />
+    <input name="tag" id="tag" type="search" autocapitalize="none" autocorrect="off" />
     <span id="popular">
-        Popular: &nbsp;<a href="#stackoverflow/javascript" class="tag">javascript</a>
-        <a href="#stackoverflow/java" class="tag">java</a>
-        <a href="#stackoverflow/c%23" class="tag">c#</a>
-        <a href="#stackoverflow/php" class="tag">php</a>
-        <a href="#stackoverflow/android" class="tag">android</a>
+		Popular:
+		<a class="tag">&nbsp;</a>
+		<a class="tag">&nbsp;</a>
+		<a class="tag">&nbsp;</a>
+		<a class="tag">&nbsp;</a>
+		<a class="tag">&nbsp;</a>
     </span>
 </div>
 <div id="correlations"></div>
-<p>This works for all Stack Exchange sites. Select a different one below if you like.</p>
+<p>This works for all Stack Exchange sites. Select a different one below:</p>
 <p id="menu">
     <a href="#stackoverflow" class="selected">Stack Overflow</a>
     <a href="#serverfault">Server Fault</a>
@@ -136,7 +136,7 @@ e.g., <a href="#stackoverflow/coffeescript">CoffeeScript</a> questions often inv
 		<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
 	
 
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/2.3.0/mustache.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/3.1.0/mustache.min.js"></script>
 	
 
 		

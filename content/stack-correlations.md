@@ -4,31 +4,31 @@ date: 2018-05-26
 style: "app"
 css:
 - "css/stack.css"
-- "css/jquery-ui.css"
 js:
 - "https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"
 - "https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"
-- "https://cdnjs.cloudflare.com/ajax/libs/mustache.js/2.3.0/mustache.min.js"
+- "https://cdnjs.cloudflare.com/ajax/libs/mustache.js/3.1.0/mustache.min.js"
 - "js/stack.js"
 
 ---
 
-A tool to discover correlations between technologies on Stack Exchange sites. Start typing a tag name below, or click one of the popular ones.
+A tool to discover correlations between tags on Stack Exchange sites. Start typing a tag name below, or click one of the popular ones.
 
 <div id="form">
-    <input name="tag" id="tag" type="search" autocapitalize="none" autocorrect="off" /><br />
+    <input name="tag" id="tag" type="search" autocapitalize="none" autocorrect="off" />
     <span id="popular">
-        Popular: &nbsp;<a href="#stackoverflow/javascript" class="tag">javascript</a>
-        <a href="#stackoverflow/java" class="tag">java</a>
-        <a href="#stackoverflow/c%23" class="tag">c#</a>
-        <a href="#stackoverflow/php" class="tag">php</a>
-        <a href="#stackoverflow/android" class="tag">android</a>
+		Popular:
+		<a class="tag">&nbsp;</a>
+		<a class="tag">&nbsp;</a>
+		<a class="tag">&nbsp;</a>
+		<a class="tag">&nbsp;</a>
+		<a class="tag">&nbsp;</a>
     </span>
 </div>
 
 <div id="correlations"></div>
 
-This works for all Stack Exchange sites. Select a different one below if you like.
+This works for all Stack Exchange sites. Select a different one below:
 
 <p id="menu">
     <a href="#stackoverflow" class="selected">Stack Overflow</a>
