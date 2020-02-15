@@ -57,9 +57,6 @@
     <span id="popular">
 		Popular on <span class="site-name">Stack Overflow</span>:
 		<a class="tag">&nbsp;</a>
-		<a class="tag">&nbsp;</a>
-		<a class="tag">&nbsp;</a>
-		<a class="tag">&nbsp;</a>
     </span>
 </div>
 <div id="correlations"></div>
@@ -85,6 +82,12 @@ e.g., <a href="#stackoverflow/coffeescript">CoffeeScript</a> questions often inv
         <span class="c">{{correlation}}</span><br />
     {{/correlations}}
 </script>
+<script id="popular-tmpl" type="text/template">
+	Popular on {{site.name}}
+    {{#tags}}
+        <a class="tag" title="View correlations for “{{name}}”" href="#{{site.api_site_parameter}}/{{encodedName}}">{{name}}</a>
+    {{/tags}}
+</script>
 
 			</div>
 		</article>
@@ -108,7 +111,7 @@ e.g., <a href="#stackoverflow/coffeescript">CoffeeScript</a> questions often inv
 	
 
 		
-		<script src="/js/stack.7fb2318821705865345546ede57c89e9463217f55dc1efe0efdfb34202115ab9.js" integrity="sha256-f7IxiCFwWGU0VUbt5XyJ6UYyF/Vdwe/g79&#43;zQgIRWrk="></script>
+		<script src="/js/stack.5aec1a31210ef2d906d2570edc2609639957a108f6e8f87f7e07b020672b49ec.js" integrity="sha256-WuwaMSEO8tkG0lcO3CYJY5lXoQj26Ph/fgewIGcrSew="></script>
 	
 
 </html>

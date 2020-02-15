@@ -203,11 +203,21 @@
 	var loadPopularTags = function (site) {
 		getJSON(urls.api_tags_popular(site), function (data) {
 			const tmpl = $('#popular-tmpl').html();
-			data.items.forEach((item) => { item.encodedName = encodeURIComponent(item.name); });
+			data.items.forEach((i) => { i.encodedName = encodeURIComponent(i.name); });
 			const tmplData = { site: site, tags: data.items };
 			const html = Mustache.to_html(tmpl, tmplData);
 
 			popular.html(html);
+
+			// const tags = popular.find('a.tag');
+
+			// for (let i = 0; i < tags.length; i++) {
+			// 	const tag = tags[i];
+			// 	const item = data.items[i];
+			// 	tag.innerText = item.name;
+			// 	tag.href = '#' + state.site.api_site_parameter + '/' + encodeURIComponent(item.name);
+			// }
+			// popular.css('visibility', 'visible').show();
 		});
 	};
 

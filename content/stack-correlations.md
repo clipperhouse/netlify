@@ -20,9 +20,6 @@ A tool to discover correlations between tags on Stack Exchange sites. Start typi
     <span id="popular">
 		Popular on <span class="site-name">Stack Overflow</span>:
 		<a class="tag">&nbsp;</a>
-		<a class="tag">&nbsp;</a>
-		<a class="tag">&nbsp;</a>
-		<a class="tag">&nbsp;</a>
     </span>
 </div>
 
@@ -54,4 +51,11 @@ Built by <a href="http://clipperhouse.com/about/">Matt Sherman</a> using the <a 
         <a class="tag" title="View correlations for “{{tag}}”" href="{{href}}">{{tag}}</a>
         <span class="c">{{correlation}}</span><br />
     {{/correlations}}
+</script>
+
+<script id="popular-tmpl" type="text/template">
+	Popular on {{site.name}}
+    {{#tags}}
+        <a class="tag" title="View correlations for “{{name}}”" href="#{{site.api_site_parameter}}/{{encodedName}}">{{name}}</a>
+    {{/tags}}
 </script>
