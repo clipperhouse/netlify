@@ -25,7 +25,7 @@ I’ll translate them into management terms:
 *   Insisting on iteration and communication
 *   Knowing each developers’ strengths, motivations and desires for the future
 
-#### Aligned interests
+### Aligned interests
 
 There’s a classic idea of the [principal-agent problem](http://en.wikipedia.org/wiki/Principal%E2%80%93agent_problem), where one works to align an employee’s interest with the company’s. We are lucky in tech that, imho, our interests are very similar.
 
@@ -35,7 +35,7 @@ This rarified place on the hierarchy means that devs can choose to do things tha
 
 Guess what? The company wants these things as well. The company wants products to ship, to be useful, and to sell.
 
-#### Time as a hypothesis
+### Time as a hypothesis
 
 Most organizations are _merely OK_ at using employees’ time well. Even in tech, with all our rigor and openness, it’s possible to spend hundreds of developer hours with little to show.
 
