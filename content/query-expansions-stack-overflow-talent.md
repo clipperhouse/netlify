@@ -58,25 +58,27 @@ _Thanks to [Benjamin Hodgson](https://www.benjamin.pizza) for contributing to th
 
 _A non-exhaustive list, for illustration._
 
-`front end → (html5 or javascript or css or dom or angular or typescript or…)`
+```
+front end → (html5 or javascript or css or dom or angular or typescript or…)
 
-`mobile → (ios or android or swift or objective-c or react-native or xcode or…)`
+mobile → (ios or android or swift or objective-c or react-native or xcode or…)
 
-`full stack → (ruby on rails or asp.net or django or spring or mvc or flask or…)`
+full stack → (ruby on rails or asp.net or django or spring or mvc or flask or…)
 
-`sysadmin/devops → (sre or networking or dns or docker or cisco or iptables or…)`
+sysadmin/devops → (sre or networking or dns or docker or cisco or iptables or…)
 
-`security → (encryption or infosec or owasp or harden or pki or kerberos or…)`
+security → (encryption or infosec or owasp or harden or pki or kerberos or…)
 
-`embedded → (arm or rtos or microcontroller or qnx or wind river or asic or fpga or verilog or…)`
+embedded → (arm or rtos or microcontroller or qnx or wind river or asic or fpga or verilog or…)
 
-`kernel → (operating system or interrupt or scheduler or mutex or semaphore or userland or…)`
+kernel → (operating system or interrupt or scheduler or mutex or semaphore or userland or…)
 
-`cloud → (aws or ec2 or s3 or azure or gcp or kubernetes or…)`
+cloud → (aws or ec2 or s3 or azure or gcp or kubernetes or…)
 
-`fintech → (quant or trading or banking or goldman or two sigma or bloomberg or jane street or…)`
+fintech → (quant or trading or banking or goldman or two sigma or bloomberg or jane street or…)
 
-`data science/ML/AI → (probability or predictive or r or ggplot or pandas or neural network or…)`
+data science/ML/AI → (probability or predictive or r or ggplot or pandas or neural network or…)
 
-`distributed → (kafka or spark or hadoop or mapreduce or cockroachdb or concurrency or mvcc or…)`
+distributed → (kafka or spark or hadoop or mapreduce or cockroachdb or concurrency or mvcc or…)
 
+```
