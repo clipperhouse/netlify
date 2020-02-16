@@ -4,18 +4,16 @@ description: "What I am looking for next"
 date: 2018-05-27
 style: "app"
 js:
-- "https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"
+- "https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"
 - "js/tech-talk.js"
 ---
 
 <style>
 img[src$='#photo'] {
     float: right;
-    margin: 0 0 2em 2em;
-    position: relative;
-    top: 30px;
+    margin: 0 1em 2em 2em;
     opacity: .9;
-    width: 120px;
+    width: 100px;
     border-radius: 50%;
     border: 1px solid #999;
 }
