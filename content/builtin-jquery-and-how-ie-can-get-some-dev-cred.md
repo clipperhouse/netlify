@@ -1,6 +1,6 @@
 ---
 title: "“Built-in” jQuery (and how IE can get some dev cred)"
-date: 2009-06-15T13:27:00.000Z
+date: 2009-06-15
 author: "Matt Sherman"
 
 ---

@@ -1,6 +1,6 @@
 ---
 title: "What if ‘source code’ were a serialized syntax tree?"
-date: 2013-04-04T02:41:46.000Z
+date: 2013-04-04
 author: "Matt Sherman"
 
 ---

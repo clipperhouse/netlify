@@ -1,6 +1,6 @@
 ---
 title: "How to tell the new Intel SSDs from the old ones"
-date: 2009-07-21T21:17:57.000Z
+date: 2009-07-21
 author: "Matt Sherman"
 
 ---

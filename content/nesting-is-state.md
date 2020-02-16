@@ -1,6 +1,6 @@
 ---
 title: "Nesting is state"
-date: 2014-03-30T18:05:25.000Z
+date: 2014-03-30
 author: "Matt Sherman"
 
 ---

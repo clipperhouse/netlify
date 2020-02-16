@@ -1,6 +1,6 @@
 ---
 title: "{less} CSS for .Net"
-date: 2009-12-04T15:47:00.000Z
+date: 2009-12-04
 author: "Matt Sherman"
 
 ---

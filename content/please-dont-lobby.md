@@ -1,6 +1,6 @@
 ---
 title: "Please don’t lobby"
-date: 2011-12-19T15:45:36.000Z
+date: 2011-12-19
 author: "Matt Sherman"
 ---
 

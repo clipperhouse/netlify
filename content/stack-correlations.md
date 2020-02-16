@@ -17,13 +17,13 @@ A tool to discover correlations between tags on Stack Exchange sites. Start typi
 
 <div id="form">
     <input name="tag" id="tag" type="search" autocapitalize="none" autocorrect="off" />
-	<span id="popular">
+	<div id="popular">
 		Popular:
 			<a class="tag" title="View correlations for “javascript”" href="#stackoverflow/javascript">javascript</a>
 			<a class="tag" title="View correlations for “java”" href="#stackoverflow/java">java</a>
 			<a class="tag" title="View correlations for “c#”" href="#stackoverflow/c%23">c#</a>
 			<a class="tag" title="View correlations for “python”" href="#stackoverflow/python">python</a>
-	</span>
+	</div>
 </div>
 
 <div id="correlations"></div>
@@ -64,7 +64,9 @@ Built by <a href="http://clipperhouse.com/about/">Matt Sherman</a> using the <a 
 
 <script id="popular-tmpl" type="text/template">
 	Popular:
+	<div>
     {{#tags}}
         <a class="tag" title="View correlations for “{{name}}”" href="#{{site.api_site_parameter}}/{{encodedName}}">{{name}}</a>
-    {{/tags}}
+	{{/tags}}
+	</div>
 </script>

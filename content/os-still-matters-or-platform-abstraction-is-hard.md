@@ -1,6 +1,6 @@
 ---
 title: "The OS still matters, or, platform abstraction is hard"
-date: 2009-06-04T23:50:00.000Z
+date: 2009-06-04
 author: "Matt Sherman"
 
 ---

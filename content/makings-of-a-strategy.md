@@ -1,6 +1,6 @@
 ---
 title: "The makings of a strategy"
-date: 2018-05-02T14:31:10.280Z
+date: 2018-05-02
 author: "Matt Sherman"
 
 ---

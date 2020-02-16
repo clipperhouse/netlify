@@ -1,6 +1,6 @@
 ---
 title: "The emergence of Big Data (2.0)"
-date: 2009-11-16T10:07:00.000Z
+date: 2009-11-16
 author: "Matt Sherman"
 
 ---

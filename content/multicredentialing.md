@@ -1,6 +1,6 @@
 ---
 title: "Multi-credentialing"
-date: 2013-10-28T01:25:53.000Z
+date: 2013-10-28
 author: "Matt Sherman"
 
 ---

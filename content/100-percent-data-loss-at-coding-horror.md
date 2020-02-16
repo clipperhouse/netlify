@@ -1,6 +1,6 @@
 ---
 title: "100% data loss at Coding Horror??"
-date: 2009-12-11T13:55:00.000Z
+date: 2009-12-11
 author: "Matt Sherman"
 
 ---

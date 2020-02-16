@@ -1,6 +1,6 @@
 ---
 title: "The new wave of self-shorteners"
-date: 2009-07-07T21:59:18.000Z
+date: 2009-07-07
 author: "Matt Sherman"
 
 ---

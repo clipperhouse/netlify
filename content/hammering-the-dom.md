@@ -1,6 +1,6 @@
 ---
 title: "Hammering the DOM"
-date: 2009-04-28T18:18:00.000Z
+date: 2009-04-28
 author: "Matt Sherman"
 
 ---

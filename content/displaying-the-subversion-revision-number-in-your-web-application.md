@@ -1,6 +1,6 @@
 ---
 title: "Displaying the Subversion revision number in your web application"
-date: 2009-05-26T22:28:00.000Z
+date: 2009-05-26
 author: "Matt Sherman"
 
 ---

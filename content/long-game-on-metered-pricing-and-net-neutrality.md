@@ -1,6 +1,6 @@
 ---
 title: "The long game on metered pricing and Net Neutrality"
-date: 2008-01-28T00:52:32.000Z
+date: 2008-01-28
 author: "Matt Sherman"
 
 ---

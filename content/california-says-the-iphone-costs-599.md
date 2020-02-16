@@ -1,6 +1,6 @@
 ---
 title: "California says the iPhone costs $599"
-date: 2009-10-22T12:48:00.000Z
+date: 2009-10-22
 author: "Matt Sherman"
 
 ---

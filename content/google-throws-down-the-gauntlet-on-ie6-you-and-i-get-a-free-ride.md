@@ -1,6 +1,6 @@
 ---
 title: "Google throws down the gauntlet on IE6; you and I get a free ride"
-date: 2010-01-29T16:04:00.000Z
+date: 2010-01-29
 author: "Matt Sherman"
 
 ---

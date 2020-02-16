@@ -1,6 +1,6 @@
 ---
 title: "The scourge of paid prioritization"
-date: 2010-12-22T07:35:34.000Z
+date: 2010-12-22
 author: "Matt Sherman"
 
 ---

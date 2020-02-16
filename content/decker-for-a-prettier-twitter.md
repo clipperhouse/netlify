@@ -1,6 +1,6 @@
 ---
 title: "Decker, for a prettier Twitter"
-date: 2016-03-10T20:02:56.000Z
+date: 2016-03-10
 author: "Matt Sherman"
 
 ---

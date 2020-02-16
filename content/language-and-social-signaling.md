@@ -1,6 +1,6 @@
 ---
 title: "Language and social signaling"
-date: 2013-08-24T19:23:44.000Z
+date: 2013-08-24
 author: "Matt Sherman"
 
 ---

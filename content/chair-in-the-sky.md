@@ -1,6 +1,6 @@
 ---
 title: "Chair in the sky"
-date: 2009-08-18T08:02:49.000Z
+date: 2009-08-18
 author: "Matt Sherman"
 
 ---

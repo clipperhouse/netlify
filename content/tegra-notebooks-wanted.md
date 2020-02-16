@@ -1,6 +1,6 @@
 ---
 title: "Tegra notebooks wanted"
-date: 2009-12-16T12:02:00.000Z
+date: 2009-12-16
 author: "Matt Sherman"
 
 ---

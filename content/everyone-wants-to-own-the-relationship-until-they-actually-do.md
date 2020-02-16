@@ -1,6 +1,6 @@
 ---
 title: "Everyone wants to “own the relationship”, until they actually do"
-date: 2010-01-08T22:40:00.000Z
+date: 2010-01-08
 author: "Matt Sherman"
 
 ---

@@ -1,6 +1,6 @@
 <article>
 	<a href="{{ .Permalink }}">
-		<h3>{{ .Title }}</h3>
+		<h2>{{ .Title }}</h2>
 		<p>
 			{{ .Summary | plainify | htmlUnescape }}{{ if .Truncated }}..{{ end }}
 		</p>

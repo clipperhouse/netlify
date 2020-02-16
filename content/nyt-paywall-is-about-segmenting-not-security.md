@@ -1,6 +1,6 @@
 ---
 title: "The NYT paywall is about segmenting, not security"
-date: 2011-06-26T23:37:14.000Z
+date: 2011-06-26
 author: "Matt Sherman"
 
 ---

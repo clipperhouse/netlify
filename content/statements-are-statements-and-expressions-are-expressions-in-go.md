@@ -1,6 +1,6 @@
 ---
 title: "Statements are statements, and expressions are expressions (in Go)"
-date: 2015-04-03T19:03:15.000Z
+date: 2015-04-03
 author: "Matt Sherman"
 ---
 
@@ -20,7 +20,7 @@ In some languages, this expression has a return value. In Go, it does not.
 
 **C#**
 
-```c#
+```
 var a = 5;  
 Console.WriteLine(a++);  
 // prints 5 (though a is now valued at 6)
@@ -28,7 +28,7 @@ Console.WriteLine(a++);
 
 **Go**
 
-```go
+```
 a := 5  
 fmt.Println(a++)  
 // syntax error: unexpected ++
@@ -42,7 +42,7 @@ In C#, assignments have return values.
 
 **C#**
 
-```c#
+```
 int a;  
 Console.WriteLine(a = 5);  
 // prints 5
@@ -50,7 +50,7 @@ Console.WriteLine(a = 5);
 
 The expression `a = 5` has a return value of 5. Further shenanigans:
 
-```c#
+```
 int a;  
 Console.WriteLine((a = 5) == 5);  
 // prints True
@@ -62,7 +62,7 @@ The expression `(a = 5)` returns a value of 5, which is then compared to 5.
 
 In Go, assignments are statements.
 
-```go
+```
 a := 5  
 fmt.Println(a = 6)  
 // syntax error: unexpected =
@@ -76,7 +76,7 @@ You are probably familiar with an expression like `condition ? value : other`. I
 
 **C#**
 
-```c#
+```
 var temp = 50;  
 Console.WriteLine(temp &gt; 30 ? “warm” : “cold”);  
 // prints warm

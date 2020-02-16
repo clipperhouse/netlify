@@ -1,6 +1,6 @@
 ---
 title: "Is the VP of Monetizing Synergy off today?"
-date: 2009-07-17T12:44:00.000Z
+date: 2009-07-17
 author: "Matt Sherman"
 
 ---

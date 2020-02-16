@@ -1,6 +1,6 @@
 ---
 title: "Dear Facebook: let us define the relationships"
-date: 2010-04-25T12:17:16.000Z
+date: 2010-04-25
 author: "Matt Sherman"
 
 ---

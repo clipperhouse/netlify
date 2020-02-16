@@ -1,6 +1,6 @@
 ---
 title: "Implicit vs. explicit social graphs"
-date: 2011-06-19T20:40:36.000Z
+date: 2011-06-19
 author: "Matt Sherman"
 
 ---

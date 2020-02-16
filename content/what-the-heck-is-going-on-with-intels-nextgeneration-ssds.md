@@ -1,6 +1,6 @@
 ---
 title: "What the heck is going on with Intel’s next-generation SSDs?"
-date: 2009-09-14T17:11:00.000Z
+date: 2009-09-14
 author: "Matt Sherman"
 
 ---

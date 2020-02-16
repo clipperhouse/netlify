@@ -13,10 +13,10 @@
 	<link href="/css/normalize.f4d7e8250f8f124f8b7d087e5e260766a34b079fddc43e7b20d8c18ca1e92e51.css" rel="stylesheet">
 
 	
-	<link href="/css/skeleton.09b82130c4ba09fa45b20e9845ce089b8e1ad26a3b102e16901feea242e35ac1.css" rel="stylesheet">
+	<link href="/css/skeleton.fe835f755cb02ff20af143d9976ed3a50a1450caba26e1c0356b07fdbef2b4f9.css" rel="stylesheet">
 	
 	
-	<link href="/css/style.da72a1e9b72ec96b9b8b2a43393ef4b99dc410a290576fb643bd0a16a2aa6de0.css" rel="stylesheet">
+	<link href="/css/style.85ed35e80ea5c7721501a45105687b845247da3213ddf794d5eebc400d01befb.css" rel="stylesheet">
 	
 	
 	
@@ -28,9 +28,7 @@
 </head>
 <body>
 	<header>
-	<h4>
-		<a href="https://clipperhouse.com">clipperhouse.com</a>
-	</h4>
+	<a href="https://clipperhouse.com">clipperhouse.com</a>
 	<nav>
 		<a href="/about/">about</a>
 		<span class="sep">·</span>
@@ -63,27 +61,27 @@
 <p>One great way of avoiding null is to have a better definition of non-existence. For example, where we might be tempted to define non-existence as null, let’s define it as <strong>a collection of length zero</strong>. <a href="https://en.wikipedia.org/wiki/Option_type">Option type</a> implementations often look like this.</p>
 <p>In C#, “by ID” database calls will typically return null if such a record does not exist. In LINQ, it’s expressed as a FirstOrDefault or SingleOrDefault, which return null on “not found”. Or, one can call First or Single methods which throw on same. I consider both to be bad semantics.</p>
 <p>Rather, consider a pattern based on an explicit Boolean for existence, and where <strong>null is not in our vocabulary</strong>:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c#" data-lang="c#">Thing t;  
-<span style="color:#66d9ef">if</span> (!TryThingById(<span style="color:#ae81ff">1</span><span style="color:#ae81ff">2</span><span style="color:#ae81ff">3</span><span style="color:#ae81ff">4</span><span style="color:#ae81ff">5</span>, <span style="color:#66d9ef">out</span> t)) {  
-    <span style="color:#66d9ef">return</span> <span style="color:#e6db74">&#34;Sorry, not found!&#34;</span>;  
+<pre><code>Thing t;  
+if (!TryThingById(12345, out t)) {  
+    return &quot;Sorry, not found!&quot;;  
 } 
-<span style="color:#75715e">// …do as you wish with t, without worrying about null
-</span></code></pre></div><p>The Try pseudocode would look something like:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c#" data-lang="c#"><span style="color:#66d9ef">bool</span> TryThingById(<span style="color:#66d9ef">int</span> id, <span style="color:#66d9ef">out</span> Thing t) {  
-    <span style="color:#66d9ef">var</span> rows = DB.Query(<span style="color:#e6db74">&#34;select * from Things where ID = ?&#34;</span>, id);  
-    <span style="color:#66d9ef">if</span> (rows.Length == <span style="color:#ae81ff">0</span>) {  
-        <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">false</span>; <span style="color:#75715e">// t is indeed null but should be irrelevant  
-</span><span style="color:#75715e"></span>    }  
-    <span style="color:#66d9ef">if</span> (rows.Length == <span style="color:#ae81ff">1</span>) {  
-        t = rows[<span style="color:#ae81ff">0</span>];  
-        <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">true</span>;  
+// …do as you wish with t, without worrying about null
+</code></pre><p>The Try pseudocode would look something like:</p>
+<pre><code>bool TryThingById(int id, out Thing t) {  
+    var rows = DB.Query(&quot;select * from Things where ID = ?&quot;, id);  
+    if (rows.Length == 0) {  
+        return false; // t is indeed null but should be irrelevant  
     }  
-    <span style="color:#66d9ef">throw</span>; <span style="color:#75715e">// there’s a database problem  
-</span><span style="color:#75715e"></span>}
-</code></pre></div><p>I believe this code follows our Principles above: we don’t pass a null, and we don’t branch on one either.</p>
+    if (rows.Length == 1) {  
+        t = rows[0];  
+        return true;  
+    }  
+    throw; // there’s a database problem  
+}
+</code></pre><p>I believe this code follows our Principles above: we don’t pass a null, and we don’t branch on one either.</p>
 <p>A common idiom in C# is to use <strong>optional parameters</strong>, with null as the default value:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c#" data-lang="c#"><span style="color:#66d9ef">void</span> Foo(<span style="color:#66d9ef">int</span> id, Bar bar = <span style="color:#66d9ef">null</span>, Baz baz = <span style="color:#66d9ef">null</span>)
-</code></pre></div><p>When I see a method signature like this, I have $5 that says the method’s implementation branches on those parameters. Which means that parameters are no longer just values, but are control flow. Bad semantics.</p>
+<pre><code>void Foo(int id, Bar bar = null, Baz baz = null)
+</code></pre><p>When I see a method signature like this, I have $5 that says the method’s implementation branches on those parameters. Which means that parameters are no longer just values, but are control flow. Bad semantics.</p>
 <p>Instead, consider creating several methods with good names, and which <strong>accept and require only the parameters they use</strong> – no more optionals. “Branching” is done via method resolution, about which we can more easily reason.</p>
 <hr>
 <p>What’s nice about the above code is that nulls are not mentioned, or even relevant. Of <em>course</em> a caller can do the wrong thing, but now the word “null” sticks out as a code smell.</p>

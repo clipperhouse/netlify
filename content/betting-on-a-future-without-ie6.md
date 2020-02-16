@@ -1,6 +1,6 @@
 ---
 title: "Betting on a future without IE6"
-date: 2009-11-30T20:39:00.000Z
+date: 2009-11-30
 author: "Matt Sherman"
 
 ---

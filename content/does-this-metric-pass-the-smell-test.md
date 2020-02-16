@@ -1,6 +1,6 @@
 ---
 title: "Does this metric pass the smell test?"
-date: 2009-10-23T00:15:15.000Z
+date: 2009-10-23
 author: "Matt Sherman"
 
 ---

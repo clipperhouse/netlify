@@ -1,6 +1,6 @@
 ---
 title: "URL shortener for ASP.net"
-date: 2009-06-06T21:56:00.000Z
+date: 2009-06-06
 author: "Matt Sherman"
 
 ---

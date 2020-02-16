@@ -1,6 +1,6 @@
 ---
 title: "Lore"
-date: 2016-03-10T16:39:52.000Z
+date: 2016-03-10
 author: "Matt Sherman"
 
 ---

@@ -1,6 +1,6 @@
 ---
 title: "Design is information"
-date: 2011-03-23T06:48:11.000Z
+date: 2011-03-23
 author: "Matt Sherman"
 
 ---

@@ -1,6 +1,6 @@
 ---
 title: "Somewhere in Brussels, some buggy whips need gilding"
-date: 2008-02-28T22:27:54.000Z
+date: 2008-02-28
 author: "Matt Sherman"
 
 ---

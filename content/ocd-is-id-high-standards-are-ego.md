@@ -1,6 +1,6 @@
 ---
 title: "OCD is id, high standards are ego"
-date: 2013-06-16T18:17:10.000Z
+date: 2013-06-16
 author: "Matt Sherman"
 
 ---

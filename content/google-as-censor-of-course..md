@@ -1,6 +1,6 @@
 ---
 title: "Google as censor? Of course."
-date: 2009-06-21T22:18:39.000Z
+date: 2009-06-21
 author: "Matt Sherman"
 
 ---

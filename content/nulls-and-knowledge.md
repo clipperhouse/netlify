@@ -1,6 +1,6 @@
 ---
 title: "Nulls and knowledge"
-date: 2009-05-14T18:43:00.000Z
+date: 2009-05-14
 author: "Matt Sherman"
 
 ---

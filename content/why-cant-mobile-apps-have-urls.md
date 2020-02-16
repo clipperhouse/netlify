@@ -1,6 +1,6 @@
 ---
 title: "Why can’t mobile apps have URLs?"
-date: 2011-12-14T03:23:02.000Z
+date: 2011-12-14
 author: "Matt Sherman"
 
 ---

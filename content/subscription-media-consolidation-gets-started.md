@@ -1,6 +1,6 @@
 ---
 title: "Subscription media consolidation gets started"
-date: 2009-07-13T12:11:00.000Z
+date: 2009-07-13
 author: "Matt Sherman"
 
 ---

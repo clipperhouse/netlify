@@ -1,6 +1,6 @@
 ---
 title: "Hierarchy and orthogonality in C# and Go"
-date: 2014-08-25T00:17:39.000Z
+date: 2014-08-25
 author: "Matt Sherman"
 
 ---

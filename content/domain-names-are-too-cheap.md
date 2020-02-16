@@ -1,6 +1,6 @@
 ---
 title: "Domain names are too cheap"
-date: 2009-06-28T12:21:00.000Z
+date: 2009-06-28
 author: "Matt Sherman"
 
 ---

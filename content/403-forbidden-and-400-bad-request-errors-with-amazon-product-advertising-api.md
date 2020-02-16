@@ -1,6 +1,6 @@
 ---
 title: "403 Forbidden (and 400 Bad Request) errors with Amazon Product Advertising API"
-date: 2009-08-01T16:05:23.000Z
+date: 2009-08-01
 author: "Matt Sherman"
 
 ---

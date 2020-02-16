@@ -1,6 +1,6 @@
 ---
 title: "KPIs are software"
-date: 2016-10-28T15:52:42.907Z
+date: 2016-10-28
 author: "Matt Sherman"
 
 ---

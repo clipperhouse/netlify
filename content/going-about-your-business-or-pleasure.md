@@ -1,6 +1,6 @@
 ---
 title: "Going about your business, or pleasure"
-date: 2011-06-30T23:50:08.000Z
+date: 2011-06-30
 author: "Matt Sherman"
 
 ---

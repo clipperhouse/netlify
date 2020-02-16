@@ -1,6 +1,6 @@
 ---
 title: "This way madness lies (thankfully)"
-date: 2012-05-28T17:08:35.000Z
+date: 2012-05-28
 author: "Matt Sherman"
 
 ---

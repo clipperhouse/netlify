@@ -1,6 +1,6 @@
 ---
 title: "Epistemology and human factors: deal with ‘em"
-date: 2013-06-20T22:05:06.000Z
+date: 2013-06-20
 author: "Matt Sherman"
 
 ---

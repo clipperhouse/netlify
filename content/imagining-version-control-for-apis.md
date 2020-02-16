@@ -1,6 +1,6 @@
 ---
 title: "Imagining version control for APIs"
-date: 2015-12-21T00:49:04.000Z
+date: 2015-12-21
 author: "Matt Sherman"
 
 ---

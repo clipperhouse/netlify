@@ -1,6 +1,6 @@
 ---
 title: "Birthday suggestion"
-date: 2009-06-27T00:13:56.000Z
+date: 2009-06-27
 author: "Matt Sherman"
 
 ---

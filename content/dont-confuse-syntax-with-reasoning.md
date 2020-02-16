@@ -1,6 +1,6 @@
 ---
 title: "Don’t confuse syntax with reasoning"
-date: 2010-03-14T21:21:00.000Z
+date: 2010-03-14
 author: "Matt Sherman"
 
 ---

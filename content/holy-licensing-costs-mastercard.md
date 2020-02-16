@@ -1,6 +1,6 @@
 ---
 title: "Holy licensing costs, MasterCard"
-date: 2009-07-14T20:38:57.000Z
+date: 2009-07-14
 author: "Matt Sherman"
 
 ---

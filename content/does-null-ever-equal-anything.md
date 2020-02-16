@@ -1,6 +1,6 @@
 ---
 title: "Does null ever equal anything?"
-date: 2009-05-15T13:47:00.000Z
+date: 2009-05-15
 author: "Matt Sherman"
 
 ---

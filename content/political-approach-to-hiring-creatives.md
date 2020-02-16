@@ -1,6 +1,6 @@
 ---
 title: "A political approach to hiring creatives"
-date: 2012-09-08T18:14:10.000Z
+date: 2012-09-08
 author: "Matt Sherman"
 
 ---

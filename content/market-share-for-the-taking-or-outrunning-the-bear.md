@@ -1,6 +1,6 @@
 ---
 title: "Market share for the taking, or, outrunning the bear"
-date: 2010-10-11T17:31:00.000Z
+date: 2010-10-11
 author: "Matt Sherman"
 
 ---

@@ -13,10 +13,10 @@
 	<link href="/css/normalize.f4d7e8250f8f124f8b7d087e5e260766a34b079fddc43e7b20d8c18ca1e92e51.css" rel="stylesheet">
 
 	
-	<link href="/css/skeleton.09b82130c4ba09fa45b20e9845ce089b8e1ad26a3b102e16901feea242e35ac1.css" rel="stylesheet">
+	<link href="/css/skeleton.fe835f755cb02ff20af143d9976ed3a50a1450caba26e1c0356b07fdbef2b4f9.css" rel="stylesheet">
 	
 	
-	<link href="/css/style.da72a1e9b72ec96b9b8b2a43393ef4b99dc410a290576fb643bd0a16a2aa6de0.css" rel="stylesheet">
+	<link href="/css/style.85ed35e80ea5c7721501a45105687b845247da3213ddf794d5eebc400d01befb.css" rel="stylesheet">
 	
 	
 		<link href="/css/stack.b3833796e848d2bd0f50a1f8329568a5fdc9af4356c190c8133345c1727d4166.css" rel="stylesheet">
@@ -32,9 +32,7 @@
 </head>
 <body>
 	<header>
-	<h4>
-		<a href="https://clipperhouse.com">clipperhouse.com</a>
-	</h4>
+	<a href="https://clipperhouse.com">clipperhouse.com</a>
 	<nav>
 		<a href="/about/">about</a>
 		<span class="sep">·</span>
@@ -54,13 +52,13 @@
 				<p>A tool to discover correlations between tags on Stack Exchange sites. Start typing a tag name below, or click one of the popular ones.</p>
 <div id="form">
     <input name="tag" id="tag" type="search" autocapitalize="none" autocorrect="off" />
-	<span id="popular">
+	<div id="popular">
 		Popular:
 			<a class="tag" title="View correlations for “javascript”" href="#stackoverflow/javascript">javascript</a>
 			<a class="tag" title="View correlations for “java”" href="#stackoverflow/java">java</a>
 			<a class="tag" title="View correlations for “c#”" href="#stackoverflow/c%23">c#</a>
 			<a class="tag" title="View correlations for “python”" href="#stackoverflow/python">python</a>
-	</span>
+	</div>
 </div>
 <div id="correlations"></div>
 <p>This works for all Stack Exchange sites. Select a different one below:</p>
@@ -93,9 +91,11 @@ e.g., <a href="#stackoverflow/coffeescript">CoffeeScript</a> questions often inv
 </script>
 <script id="popular-tmpl" type="text/template">
 	Popular:
+	<div>
     {{#tags}}
         <a class="tag" title="View correlations for “{{name}}”" href="#{{site.api_site_parameter}}/{{encodedName}}">{{name}}</a>
-    {{/tags}}
+	{{/tags}}
+	</div>
 </script>
 
 			</div>

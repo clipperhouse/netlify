@@ -1,6 +1,6 @@
 ---
 title: "This is what a non-neutral net looks like"
-date: 2011-02-01T07:06:51.000Z
+date: 2011-02-01
 author: "Matt Sherman"
 
 ---

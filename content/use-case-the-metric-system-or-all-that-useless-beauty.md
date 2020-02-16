@@ -1,6 +1,6 @@
 ---
 title: "Use case: the metric system, or, all that useless beauty"
-date: 2009-07-01T12:31:00.000Z
+date: 2009-07-01
 author: "Matt Sherman"
 
 ---

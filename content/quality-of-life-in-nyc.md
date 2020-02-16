@@ -1,6 +1,6 @@
 ---
 title: "Quality of life in NYC"
-date: 2011-12-30T00:36:33.000Z
+date: 2011-12-30
 author: "Matt Sherman"
 
 ---

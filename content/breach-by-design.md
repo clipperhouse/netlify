@@ -1,6 +1,6 @@
 ---
 title: "Breach by design"
-date: 2010-01-13T09:54:29.000Z
+date: 2010-01-13
 author: "Matt Sherman"
 
 ---

@@ -1,6 +1,6 @@
 ---
 title: "IE6 users and status-conscious creative directors"
-date: 2009-10-23T01:48:12.000Z
+date: 2009-10-23
 author: "Matt Sherman"
 
 ---

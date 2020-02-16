@@ -1,6 +1,6 @@
 ---
 title: "Google Closure based on naive server-side notions?"
-date: 2009-11-12T09:05:11.000Z
+date: 2009-11-12
 author: "Matt Sherman"
 
 ---

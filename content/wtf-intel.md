@@ -1,6 +1,6 @@
 ---
 title: "WTF Intel?"
-date: 2009-11-19T09:14:21.000Z
+date: 2009-11-19
 author: "Matt Sherman"
 
 ---

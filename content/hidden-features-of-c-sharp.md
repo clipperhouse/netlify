@@ -1,6 +1,6 @@
 ---
 title: "Hidden features of C#"
-date: 2009-05-16T23:55:00.000Z
+date: 2009-05-16
 author: "Matt Sherman"
 
 ---

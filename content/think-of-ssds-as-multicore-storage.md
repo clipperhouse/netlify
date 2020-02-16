@@ -1,6 +1,6 @@
 ---
 title: "Think of SSDs as multi-core storage"
-date: 2009-10-18T17:16:00.000Z
+date: 2009-10-18
 author: "Matt Sherman"
 
 ---

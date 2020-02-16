@@ -1,6 +1,6 @@
 ---
 title: "A couple of easy wins with SQL indexes"
-date: 2010-10-17T12:14:00.000Z
+date: 2010-10-17
 author: "Matt Sherman"
 
 ---

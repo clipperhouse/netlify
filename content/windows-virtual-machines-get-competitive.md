@@ -1,6 +1,6 @@
 ---
 title: "Windows virtual machines get competitive"
-date: 2009-11-11T16:19:00.000Z
+date: 2009-11-11
 author: "Matt Sherman"
 
 ---

@@ -1,6 +1,6 @@
 ---
 title: "A type system in runtime’s clothing"
-date: 2014-08-25T23:19:31.000Z
+date: 2014-08-25
 author: "Matt Sherman"
 
 ---

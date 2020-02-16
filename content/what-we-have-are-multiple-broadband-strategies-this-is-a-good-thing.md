@@ -1,6 +1,6 @@
 ---
 title: "What we have are multiple broadband strategies; this is a good thing"
-date: 2008-02-01T20:10:46.000Z
+date: 2008-02-01
 author: "Matt Sherman"
 
 ---

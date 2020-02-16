@@ -1,6 +1,6 @@
 ---
 title: "Ad blocking, like piracy, is a market phenomenon"
-date: 2013-01-07T04:07:36.000Z
+date: 2013-01-07
 author: "Matt Sherman"
 
 ---

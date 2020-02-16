@@ -1,6 +1,6 @@
 ---
 title: "Your phone is faster than Amtrak’s wifi"
-date: 2013-01-11T15:18:18.000Z
+date: 2013-01-11
 author: "Matt Sherman"
 
 ---

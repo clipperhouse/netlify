@@ -1,6 +1,6 @@
 ---
 title: "Three outcomes of the adpocalypse"
-date: 2015-09-07T22:08:57.959Z
+date: 2015-09-07
 author: "Matt Sherman"
 
 ---

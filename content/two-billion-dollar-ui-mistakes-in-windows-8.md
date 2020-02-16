@@ -1,6 +1,6 @@
 ---
 title: "Two, billion-dollar UI mistakes in Windows 8"
-date: 2012-08-01T18:22:14.000Z
+date: 2012-08-01
 author: "Matt Sherman"
 ---
 

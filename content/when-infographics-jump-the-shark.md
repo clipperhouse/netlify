@@ -1,6 +1,6 @@
 ---
 title: "When “infographics” jump the shark"
-date: 2010-07-10T09:22:00.000Z
+date: 2010-07-10
 author: "Matt Sherman"
 
 ---

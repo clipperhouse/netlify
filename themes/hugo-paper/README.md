@@ -24,7 +24,7 @@ Paper is a responsive simple & clean Hugo theme.
 
 Inside the folder of your Hugo site run:
 
-```bash
+```
 $ cd themes
 $ git clone https://github.com/nanxiaobei/hugo-paper
 ```

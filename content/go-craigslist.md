@@ -1,6 +1,6 @@
 ---
 title: "Go craigslist"
-date: 2009-05-20T10:17:00.000Z
+date: 2009-05-20
 author: "Matt Sherman"
 
 ---

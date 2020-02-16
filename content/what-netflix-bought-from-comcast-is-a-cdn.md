@@ -1,6 +1,6 @@
 ---
 title: "What Netflix bought from Comcast is a CDN"
-date: 2014-05-08T00:40:39.000Z
+date: 2014-05-08
 author: "Matt Sherman"
 ---
 

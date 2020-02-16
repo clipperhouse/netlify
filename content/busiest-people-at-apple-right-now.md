@@ -1,6 +1,6 @@
 ---
 title: "The busiest people at Apple right now…"
-date: 2010-07-13T21:00:00.000Z
+date: 2010-07-13
 author: "Matt Sherman"
 
 ---

@@ -1,6 +1,6 @@
 ---
 title: "New release of gen"
-date: 2014-01-26T17:33:53.000Z
+date: 2014-01-26
 author: "Matt Sherman"
 
 ---

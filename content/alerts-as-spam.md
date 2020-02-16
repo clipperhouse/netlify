@@ -1,6 +1,6 @@
 ---
 title: "Alerts as spam"
-date: 2013-05-15T15:42:05.000Z
+date: 2013-05-15
 author: "Matt Sherman"
 
 ---

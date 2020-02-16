@@ -1,6 +1,6 @@
 ---
 title: "Unsolicited iPhone suggestions #2: internet radio"
-date: 2009-11-19T09:32:23.000Z
+date: 2009-11-19
 author: "Matt Sherman"
 
 ---

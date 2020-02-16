@@ -1,6 +1,6 @@
 ---
 title: "Tell me your favorite expression for “dead”"
-date: 2009-08-11T08:59:00.000Z
+date: 2009-08-11
 author: "Matt Sherman"
 
 ---

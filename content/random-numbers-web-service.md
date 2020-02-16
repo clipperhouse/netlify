@@ -1,6 +1,6 @@
 ---
 title: "Random numbers web service"
-date: 2009-08-05T21:46:00.000Z
+date: 2009-08-05
 author: "Matt Sherman"
 
 ---

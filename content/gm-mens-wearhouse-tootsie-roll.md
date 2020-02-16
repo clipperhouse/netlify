@@ -1,6 +1,6 @@
 ---
 title: "GM + Men’s Wearhouse = Tootsie Roll"
-date: 2009-06-01T14:38:00.000Z
+date: 2009-06-01
 author: "Matt Sherman"
 
 ---

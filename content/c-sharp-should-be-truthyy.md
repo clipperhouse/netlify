@@ -1,6 +1,6 @@
 ---
 title: "C# should be truthy-y"
-date: 2012-03-04T05:41:45.000Z
+date: 2012-03-04
 author: "Matt Sherman"
 
 ---

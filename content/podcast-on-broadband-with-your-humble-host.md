@@ -1,6 +1,6 @@
 ---
 title: "Podcast on broadband with your humble host"
-date: 2008-02-07T22:57:22.000Z
+date: 2008-02-07
 author: "Matt Sherman"
 
 ---

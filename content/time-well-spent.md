@@ -1,6 +1,6 @@
 ---
 title: "Time well spent"
-date: 2016-04-07T15:54:41.000Z
+date: 2016-04-07
 author: "Matt Sherman"
 
 ---

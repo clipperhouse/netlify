@@ -1,6 +1,6 @@
 ---
 title: "Free shipping: getting closer"
-date: 2009-04-03T04:05:46.000Z
+date: 2009-04-03
 author: "Matt Sherman"
 
 ---

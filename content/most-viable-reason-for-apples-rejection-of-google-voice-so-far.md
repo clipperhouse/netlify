@@ -1,6 +1,6 @@
 ---
 title: "The most viable reason for Apple’s rejection of Google Voice (so far)"
-date: 2009-08-04T12:11:59.000Z
+date: 2009-08-04
 author: "Matt Sherman"
 
 ---

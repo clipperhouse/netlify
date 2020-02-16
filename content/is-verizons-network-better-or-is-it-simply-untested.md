@@ -1,6 +1,6 @@
 ---
 title: "Is Verizon’s network better, or is it simply untested?"
-date: 2009-10-21T15:56:00.000Z
+date: 2009-10-21
 author: "Matt Sherman"
 
 ---

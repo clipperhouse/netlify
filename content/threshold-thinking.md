@@ -1,6 +1,6 @@
 ---
 title: "Threshold thinking"
-date: 2014-02-18T21:25:06.000Z
+date: 2014-02-18
 author: "Matt Sherman"
 
 ---

@@ -1,6 +1,6 @@
 ---
 title: "StackOverflow == Facebook * .0001"
-date: 2009-10-13T13:12:00.000Z
+date: 2009-10-13
 author: "Matt Sherman"
 
 ---

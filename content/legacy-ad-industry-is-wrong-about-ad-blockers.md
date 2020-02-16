@@ -1,6 +1,6 @@
 ---
 title: "The legacy ad industry is wrong about ad blockers"
-date: 2015-02-03T23:17:14.000Z
+date: 2015-02-03
 author: "Matt Sherman"
 
 ---

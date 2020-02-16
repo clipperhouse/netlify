@@ -1,6 +1,6 @@
 ---
 title: "A failure of empathy"
-date: 2012-03-07T00:10:06.000Z
+date: 2012-03-07
 author: "Matt Sherman"
 
 ---

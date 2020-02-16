@@ -1,6 +1,6 @@
 ---
 title: "John Resig jQuery talk"
-date: 2009-12-17T09:35:49.000Z
+date: 2009-12-17
 author: "Matt Sherman"
 
 ---

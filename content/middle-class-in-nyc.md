@@ -1,6 +1,6 @@
 ---
 title: "Middle class in NYC"
-date: 2014-05-04T16:15:54.000Z
+date: 2014-05-04
 author: "Matt Sherman"
 
 ---

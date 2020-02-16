@@ -1,6 +1,6 @@
 ---
 title: "The two edges of “culture fit”"
-date: 2014-07-01T15:00:01.000Z
+date: 2014-07-01
 author: "Matt Sherman"
 
 ---

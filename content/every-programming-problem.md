@@ -1,6 +1,6 @@
 ---
 title: "Every programming problem…"
-date: 2011-03-19T20:46:00.000Z
+date: 2011-03-19
 author: "Matt Sherman"
 
 ---

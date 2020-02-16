@@ -1,6 +1,6 @@
 ---
 title: "Quickie geek quiz #1"
-date: 2009-08-10T15:28:00.000Z
+date: 2009-08-10
 author: "Matt Sherman"
 
 ---

@@ -1,6 +1,6 @@
 ---
 title: "The biggest threat to your rights? Scarcity."
-date: 2008-03-01T06:20:45.000Z
+date: 2008-03-01
 author: "Matt Sherman"
 
 ---

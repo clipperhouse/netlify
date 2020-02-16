@@ -1,6 +1,6 @@
 ---
 title: "What is a “programmer”?"
-date: 2009-06-14T01:33:00.000Z
+date: 2009-06-14
 author: "Matt Sherman"
 
 ---

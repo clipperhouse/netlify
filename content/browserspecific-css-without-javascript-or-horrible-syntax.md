@@ -1,6 +1,6 @@
 ---
 title: "Browser-specific CSS without Javascript or horrible syntax"
-date: 2009-12-07T03:09:00.000Z
+date: 2009-12-07
 author: "Matt Sherman"
 
 ---

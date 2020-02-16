@@ -1,6 +1,6 @@
 ---
 title: "Your site doesn’t need a novel progress indicator"
-date: 2013-09-18T14:32:10.000Z
+date: 2013-09-18
 author: "Matt Sherman"
 ---
 

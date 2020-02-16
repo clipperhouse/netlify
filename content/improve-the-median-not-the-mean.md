@@ -1,6 +1,6 @@
 ---
 title: "Improve the median, not the mean"
-date: 2015-04-20T21:13:18.000Z
+date: 2015-04-20
 author: "Matt Sherman"
 
 ---

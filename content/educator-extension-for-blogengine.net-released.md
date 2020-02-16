@@ -1,6 +1,6 @@
 ---
 title: "Educator extension for BlogEngine.net released"
-date: 2009-05-19T14:39:00.000Z
+date: 2009-05-19
 author: "Matt Sherman"
 
 ---

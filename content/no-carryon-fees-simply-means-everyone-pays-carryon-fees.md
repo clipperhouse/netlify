@@ -1,6 +1,6 @@
 ---
 title: "“No carry-on fees” simply means everyone pays carry-on fees"
-date: 2010-04-20T08:52:00.000Z
+date: 2010-04-20
 author: "Matt Sherman"
 
 ---

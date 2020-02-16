@@ -1,6 +1,6 @@
 ---
 title: "Word nerdism #1: Make mine a medium"
-date: 2009-10-19T01:28:58.000Z
+date: 2009-10-19
 author: "Matt Sherman"
 
 ---

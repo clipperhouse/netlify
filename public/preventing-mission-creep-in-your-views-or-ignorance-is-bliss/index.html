@@ -13,10 +13,10 @@
 	<link href="/css/normalize.f4d7e8250f8f124f8b7d087e5e260766a34b079fddc43e7b20d8c18ca1e92e51.css" rel="stylesheet">
 
 	
-	<link href="/css/skeleton.09b82130c4ba09fa45b20e9845ce089b8e1ad26a3b102e16901feea242e35ac1.css" rel="stylesheet">
+	<link href="/css/skeleton.fe835f755cb02ff20af143d9976ed3a50a1450caba26e1c0356b07fdbef2b4f9.css" rel="stylesheet">
 	
 	
-	<link href="/css/style.da72a1e9b72ec96b9b8b2a43393ef4b99dc410a290576fb643bd0a16a2aa6de0.css" rel="stylesheet">
+	<link href="/css/style.85ed35e80ea5c7721501a45105687b845247da3213ddf794d5eebc400d01befb.css" rel="stylesheet">
 	
 	
 	
@@ -28,9 +28,7 @@
 </head>
 <body>
 	<header>
-	<h4>
-		<a href="https://clipperhouse.com">clipperhouse.com</a>
-	</h4>
+	<a href="https://clipperhouse.com">clipperhouse.com</a>
 	<nav>
 		<a href="/about/">about</a>
 		<span class="sep">·</span>
@@ -52,35 +50,35 @@
 <p>And down the road, when your logic inevitably changes, you shouldn’t have to worry about changing it in more than one place. Not only is that tedious and time-consuming, but you open up the risk of having inconsistent behavior. It violates <a href="http://en.wikipedia.org/wiki/Don%27t_repeat_yourself">DRY</a>.</p>
 <p>How might this happen? Here’s an example.</p>
 <p>Let’s say you have a social app which displays user profiles. If a user is looking at their own profile, you might want to offer them a link to edit it. So your View would have something like:</p>
-<p>&lt;% if (Model.DisplayedUser == Model.LoggedInUser) { %&gt;<br>
-&lt;a href=”url_of_edit_screen”&gt;edit this profile&lt;/a&gt;<br>
-&lt;% } %&gt;</p>
-<p>Simple enough, and it might not raise any red flags at the time. Then, however, you realize that administrators should be able to edit profiles as well. Now your View code becomes:</p>
-<p>&lt;% if (Model.DisplayedUser == Model.LoggedInUser || Request.User.IsInRole(“Administrator”)) { %&gt;<br>
-&lt;a href=”url_of_edit_screen”&gt;edit this profile&lt;/a&gt;<br>
-&lt;% } %&gt;</p>
-<p>See where this is going? A month later, you realize that “moderators” need the same ability. And if a profile has been suspended, perhaps the user should no longer see that link. And maybe you want to offer a “preview” mode, where the link is hidden. Etc.</p>
+<pre><code>&amp;lt;% if (Model.DisplayedUser == Model.LoggedInUser) { %&amp;gt;  
+&amp;lt;a href=”url_of_edit_screen”&amp;gt;edit this profile&amp;lt;/a&amp;gt;  
+&amp;lt;% } %&amp;gt;
+</code></pre><p>Simple enough, and it might not raise any red flags at the time. Then, however, you realize that administrators should be able to edit profiles as well. Now your View code becomes:</p>
+<pre><code>&amp;lt;% if (Model.DisplayedUser == Model.LoggedInUser || Request.User.IsInRole(“Administrator”)) { %&amp;gt;  
+&amp;lt;a href=”url_of_edit_screen”&amp;gt;edit this profile&amp;lt;/a&amp;gt;  
+&amp;lt;% } %&amp;gt;
+</code></pre><p>See where this is going? A month later, you realize that “moderators” need the same ability. And if a profile has been suspended, perhaps the user should no longer see that link. And maybe you want to offer a “preview” mode, where the link is hidden. Etc.</p>
 <p>Your View is now handling business logic. It becomes unreadable and untestable, and you are blurring the <a href="http://consultingblogs.emc.com/jamesbroome/archive/2009/08/24/asp-net-mvc-separation-of-concerns-amongst-team-members.aspx">separation of concerns</a>.</p>
 <p>The best way to avoid this is, first, <a href="http://www.superexpert.com/blog/archive/2009/04/13/asp.net-mvc-tip-50-ndash-create-view-models.aspx">have a ViewModel</a> (the above code already assumes that). Second, add properties to that ViewModel that describe only <strong>what the View should show, without regard for why</strong>. The usage becomes:</p>
-<p>&lt;% if (Model.EnableEditLink) { %&gt;<br>
-&lt;a href=”url_of_edit_screen”&gt;edit this profile&lt;/a&gt;<br>
-&lt;% } %&gt;</p>
-<p>Now, your View doesn’t know anything about Users, Roles or anything like that. It’s simply <strong>following orders</strong> that describe what to output. For Views, <strong>ignorance is bliss</strong>.</p>
+<pre><code>&amp;lt;% if (Model.EnableEditLink) { %&amp;gt;  
+&amp;lt;a href=”url_of_edit_screen”&amp;gt;edit this profile&amp;lt;/a&amp;gt;  
+&amp;lt;% } %&amp;gt;
+</code></pre><p>Now, your View doesn’t know anything about Users, Roles or anything like that. It’s simply <strong>following orders</strong> that describe what to output. For Views, <strong>ignorance is bliss</strong>.</p>
 <p>Meanwhile, back in your ViewModel class, the property might be something like:</p>
-<p>public class ProfileViewModel<br>
-{<br>
-public bool EnableEditLink {<br>
-get<br>
-{<br>
-bool display = (this.DisplayedUser == this.LoggedInUser)<br>
-|| Request.User.IsInRole(“Administrator”)<br>
-&amp;&amp; !UserAccountIsSuspended<br>
-&amp;&amp; !IsPreviewMode;<br>
-return display;<br>
-}<br>
-}<br>
-}</p>
-<p>(Another practical benefit: <strong>you can’t set a breakpoint in a View</strong>. By encapsulating the logic in the ViewModel, you can debug and write tests to your heart’s content.)</p>
+<pre><code>public class ProfileViewModel  
+{  
+ public bool EnableEditLink {  
+ get  
+ {  
+ bool display = (this.DisplayedUser == this.LoggedInUser)  
+ || Request.User.IsInRole(“Administrator”)  
+ &amp;amp;&amp;amp; !UserAccountIsSuspended  
+ &amp;amp;&amp;amp; !IsPreviewMode;  
+ return display;  
+ }  
+ }  
+}
+</code></pre><p>(Another practical benefit: <strong>you can’t set a breakpoint in a View</strong>. By encapsulating the logic in the ViewModel, you can debug and write tests to your heart’s content.)</p>
 <p>So next time you need to put an if-then in your View, resist the urge to let the View make the decision. No matter how simple, push the logic back into the ViewModel, where it belongs.</p>
 
 			</div>
@@ -93,7 +91,7 @@ return display;<br>
 					<a href="https://clipperhouse.com/att-etc-etc/" class="prev">← AT&amp;T etc etc</a>
 				
 				
-					<a href="https://clipperhouse.com/man-sticks-it-to-the-man-or-the-countryclub-revolt-or-whiteys-revenge/" class="next">The Man sticks it to The Man; or, the Country-club Revolt; or, Whitey’s Revenge →</a>
+					<a href="https://clipperhouse.com/john-resig-jquery-talk/" class="next">John Resig jQuery talk →</a>
 				
 			</p>
 		</div>

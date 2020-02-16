@@ -1,6 +1,6 @@
 ---
 title: "The good might be the enemy of the perfect with software patents"
-date: 2012-08-02T02:44:34.000Z
+date: 2012-08-02
 author: "Matt Sherman"
 
 ---

@@ -1,6 +1,6 @@
 ---
 title: "Google music previews songs based on lyrics"
-date: 2009-11-12T09:46:20.000Z
+date: 2009-11-12
 author: "Matt Sherman"
 
 ---

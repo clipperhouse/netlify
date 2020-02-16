@@ -1,6 +1,6 @@
 ---
 title: "Please don’t write “efficient” CSS"
-date: 2010-05-31T06:34:00.000Z
+date: 2010-05-31
 author: "Matt Sherman"
 
 ---

@@ -1,6 +1,6 @@
 ---
 title: "Mayor at the movies"
-date: 2009-06-05T22:32:00.000Z
+date: 2009-06-05
 author: "Matt Sherman"
 
 ---

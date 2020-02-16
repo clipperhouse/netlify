@@ -1,6 +1,6 @@
 ---
 title: "Bugs are a failure of prediction"
-date: 2015-02-07T23:12:58.000Z
+date: 2015-02-07
 author: "Matt Sherman"
 
 ---

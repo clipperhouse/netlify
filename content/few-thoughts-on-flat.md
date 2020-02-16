@@ -1,6 +1,6 @@
 ---
 title: "A few thoughts on flat"
-date: 2013-06-12T19:27:18.000Z
+date: 2013-06-12
 author: "Matt Sherman"
 
 ---

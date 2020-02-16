@@ -1,6 +1,6 @@
 ---
 title: "What is Google going to do with On2?"
-date: 2009-08-05T22:41:44.000Z
+date: 2009-08-05
 author: "Matt Sherman"
 
 ---

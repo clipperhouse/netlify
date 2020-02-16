@@ -1,6 +1,6 @@
 ---
 title: "Resolution vs “real estate”"
-date: 2012-06-12T03:05:59.000Z
+date: 2012-06-12
 author: "Matt Sherman"
 
 ---

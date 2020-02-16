@@ -1,6 +1,6 @@
 ---
 title: "Using the Microsoft Ajax Minifier, some gotcha’s"
-date: 2009-11-20T15:08:00.000Z
+date: 2009-11-20
 author: "Matt Sherman"
 
 ---

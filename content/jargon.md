@@ -15,6 +15,8 @@ Jargon is a Go package with tokenizers and lemmatizers. [Source & docs](https://
 <span class="hint">
     Examples:
 </span>
+
+<div id="labels">
 <label for="prose">
     <input type="radio" id="prose" name="format" value="text" checked>
     Text
@@ -31,6 +33,7 @@ Jargon is a Go package with tokenizers and lemmatizers. [Source & docs](https://
     <input type="radio" id="csv" name="format" value="text">
     CSV
 </label>
+</div>
 
 <textarea class="code" id="text" name="text" rows="8"></textarea>
 

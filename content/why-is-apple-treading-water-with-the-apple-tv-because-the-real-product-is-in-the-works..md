@@ -1,6 +1,6 @@
 ---
 title: "Why is Apple treading water with the Apple TV? Because the real product is in the works."
-date: 2009-10-30T18:23:00.000Z
+date: 2009-10-30
 author: "Matt Sherman"
 
 ---

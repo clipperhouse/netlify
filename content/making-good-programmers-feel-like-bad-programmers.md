@@ -1,6 +1,6 @@
 ---
 title: "Making good programmers feel like bad programmers"
-date: 2009-07-24T11:19:28.000Z
+date: 2009-07-24
 author: "Matt Sherman"
 ---
 

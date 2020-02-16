@@ -1,6 +1,6 @@
 ---
 title: "The artificial distinction between “content” and “delivery”"
-date: 2010-03-17T08:24:00.000Z
+date: 2010-03-17
 author: "Matt Sherman"
 
 ---

@@ -1,6 +1,6 @@
 ---
 title: "Conservative and liberal"
-date: 2012-04-01T22:32:18.000Z
+date: 2012-04-01
 author: "Matt Sherman"
 
 ---

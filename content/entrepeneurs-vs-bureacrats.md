@@ -1,6 +1,6 @@
 ---
 title: "Entrepeneurs vs bureacrats"
-date: 2008-02-15T21:06:14.000Z
+date: 2008-02-15
 author: "Matt Sherman"
 
 ---

@@ -1,6 +1,6 @@
 ---
 title: "How about implied interfaces in C#?"
-date: 2009-12-30T18:51:21.000Z
+date: 2009-12-30
 author: "Matt Sherman"
 
 ---

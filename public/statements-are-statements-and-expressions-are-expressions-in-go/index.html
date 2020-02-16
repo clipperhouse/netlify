@@ -13,10 +13,10 @@
 	<link href="/css/normalize.f4d7e8250f8f124f8b7d087e5e260766a34b079fddc43e7b20d8c18ca1e92e51.css" rel="stylesheet">
 
 	
-	<link href="/css/skeleton.09b82130c4ba09fa45b20e9845ce089b8e1ad26a3b102e16901feea242e35ac1.css" rel="stylesheet">
+	<link href="/css/skeleton.fe835f755cb02ff20af143d9976ed3a50a1450caba26e1c0356b07fdbef2b4f9.css" rel="stylesheet">
 	
 	
-	<link href="/css/style.da72a1e9b72ec96b9b8b2a43393ef4b99dc410a290576fb643bd0a16a2aa6de0.css" rel="stylesheet">
+	<link href="/css/style.85ed35e80ea5c7721501a45105687b845247da3213ddf794d5eebc400d01befb.css" rel="stylesheet">
 	
 	
 	
@@ -28,9 +28,7 @@
 </head>
 <body>
 	<header>
-	<h4>
-		<a href="https://clipperhouse.com">clipperhouse.com</a>
-	</h4>
+	<a href="https://clipperhouse.com">clipperhouse.com</a>
 	<nav>
 		<a href="/about/">about</a>
 		<span class="sep">·</span>
@@ -55,38 +53,38 @@
 <p>Most C-family languages have an operator like a++, which says “increment the value of a value by 1”.</p>
 <p>In some languages, this expression has a return value. In Go, it does not.</p>
 <p><strong>C#</strong></p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c#" data-lang="c#"><span style="color:#66d9ef">var</span> a = <span style="color:#ae81ff">5</span>;  
+<pre><code>var a = 5;  
 Console.WriteLine(a++);  
-<span style="color:#75715e">// prints 5 (though a is now valued at 6)
-</span></code></pre></div><p><strong>Go</strong></p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#a6e22e">a</span> <span style="color:#f92672">:=</span> <span style="color:#ae81ff">5</span>  
-<span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#a6e22e">a</span><span style="color:#f92672">++</span>)  
-<span style="color:#75715e">// syntax error: unexpected ++
-</span></code></pre></div><p>To be clear, <code>a++</code> is a valid statement in Go; it increments by 1. It does not, however, return a value, avoiding error-prone patterns like <code>if (a++ == 6) { …</code></p>
+// prints 5 (though a is now valued at 6)
+</code></pre><p><strong>Go</strong></p>
+<pre><code>a := 5  
+fmt.Println(a++)  
+// syntax error: unexpected ++
+</code></pre><p>To be clear, <code>a++</code> is a valid statement in Go; it increments by 1. It does not, however, return a value, avoiding error-prone patterns like <code>if (a++ == 6) { …</code></p>
 <h4 id="assignment">Assignment</h4>
 <p>In C#, assignments have return values.</p>
 <p><strong>C#</strong></p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c#" data-lang="c#"><span style="color:#66d9ef">int</span> a;  
-Console.WriteLine(a = <span style="color:#ae81ff">5</span>);  
-<span style="color:#75715e">// prints 5
-</span></code></pre></div><p>The expression <code>a = 5</code> has a return value of 5. Further shenanigans:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c#" data-lang="c#"><span style="color:#66d9ef">int</span> a;  
-Console.WriteLine((a = <span style="color:#ae81ff">5</span>) == <span style="color:#ae81ff">5</span>);  
-<span style="color:#75715e">// prints True
-</span></code></pre></div><p>The expression <code>(a = 5)</code> returns a value of 5, which is then compared to 5.</p>
+<pre><code>int a;  
+Console.WriteLine(a = 5);  
+// prints 5
+</code></pre><p>The expression <code>a = 5</code> has a return value of 5. Further shenanigans:</p>
+<pre><code>int a;  
+Console.WriteLine((a = 5) == 5);  
+// prints True
+</code></pre><p>The expression <code>(a = 5)</code> returns a value of 5, which is then compared to 5.</p>
 <p><strong>Go</strong></p>
 <p>In Go, assignments are statements.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#a6e22e">a</span> <span style="color:#f92672">:=</span> <span style="color:#ae81ff">5</span>  
-<span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#a6e22e">a</span> = <span style="color:#ae81ff">6</span>)  
-<span style="color:#75715e">// syntax error: unexpected =
-</span></code></pre></div><p><code>a = 6</code> is a valid assignment statement. It is not, however, an expression (and thus can’t be evaluated and printed).</p>
+<pre><code>a := 5  
+fmt.Println(a = 6)  
+// syntax error: unexpected =
+</code></pre><p><code>a = 6</code> is a valid assignment statement. It is not, however, an expression (and thus can’t be evaluated and printed).</p>
 <h4 id="ternaries">Ternaries</h4>
 <p>You are probably familiar with an expression like <code>condition ? value : other</code>. It’s generally understood as syntactic sugar for an if-else statement, with a return value.</p>
 <p><strong>C#</strong></p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c#" data-lang="c#"><span style="color:#66d9ef">var</span> temp = <span style="color:#ae81ff">5</span><span style="color:#ae81ff">0</span>;  
-Console.WriteLine(temp &amp;gt; <span style="color:#ae81ff">3</span><span style="color:#ae81ff">0</span> ? <span style="color:#960050;background-color:#1e0010">“</span>warm<span style="color:#960050;background-color:#1e0010">”</span> : <span style="color:#960050;background-color:#1e0010">“</span>cold<span style="color:#960050;background-color:#1e0010">”</span>);  
-<span style="color:#75715e">// prints warm
-</span></code></pre></div><p><strong>Go</strong></p>
+<pre><code>var temp = 50;  
+Console.WriteLine(temp &amp;gt; 30 ? “warm” : “cold”);  
+// prints warm
+</code></pre><p><strong>Go</strong></p>
 <p>Go doesn’t have ternaries! Reason being, it’s sugar for an if-else, and if-else’s are statements, not expressions.</p>
 <p>You may be detecting a pattern here: Go prefers orthogonality over sugar. There are classes of (human) error that result from a statement also being an expression, and Go chooses to make that class of error less likely.</p>
 

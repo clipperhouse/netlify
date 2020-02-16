@@ -1,6 +1,6 @@
 ---
 title: "The Paris Hilton problem"
-date: 2009-11-04T07:15:57.000Z
+date: 2009-11-04
 author: "Matt Sherman"
 
 ---

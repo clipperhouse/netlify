@@ -1,6 +1,6 @@
 ---
 title: "The trouble with interfaces in Go"
-date: 2014-02-04T03:35:38.000Z
+date: 2014-02-04
 author: "Matt Sherman"
 
 ---

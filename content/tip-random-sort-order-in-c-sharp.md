@@ -1,6 +1,6 @@
 ---
 title: "Tip: random sort order in C#"
-date: 2010-04-28T09:37:00.000Z
+date: 2010-04-28
 author: "Matt Sherman"
 
 ---

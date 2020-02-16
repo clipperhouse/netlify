@@ -1,6 +1,6 @@
 ---
 title: "Yes, net neutrality is conservative. That’s the problem."
-date: 2014-11-16T19:16:36.000Z
+date: 2014-11-16
 author: "Matt Sherman"
 
 ---

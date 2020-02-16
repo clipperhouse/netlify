@@ -1,6 +1,6 @@
 ---
 title: "AT&T etc etc"
-date: 2009-12-21T20:16:51.000Z
+date: 2009-12-21
 author: "Matt Sherman"
 
 ---

@@ -1,6 +1,6 @@
 ---
 title: "Uncanny valley tech recruiting"
-date: 2015-01-22T19:52:41.000Z
+date: 2015-01-22
 author: "Matt Sherman"
 
 ---

@@ -1,6 +1,6 @@
 ---
 title: "Is Wolfram Alpha too clever by half?"
-date: 2009-07-11T23:05:00.000Z
+date: 2009-07-11
 author: "Matt Sherman"
 
 ---

@@ -1,6 +1,6 @@
 ---
 title: "My security and privacy tools"
-date: 2014-10-14T00:41:55.517Z
+date: 2014-10-14
 author: "Matt Sherman"
 
 ---

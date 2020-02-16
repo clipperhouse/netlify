@@ -1,6 +1,6 @@
 ---
 title: "Wi-fi cafes in NYC"
-date: 2009-12-15T10:23:06.000Z
+date: 2009-12-15
 author: "Matt Sherman"
 
 ---

@@ -1,6 +1,6 @@
 ---
 title: "Logic as data, and a case where strong typing impeded learning"
-date: 2009-12-06T11:11:17.000Z
+date: 2009-12-06
 author: "Matt Sherman"
 
 ---

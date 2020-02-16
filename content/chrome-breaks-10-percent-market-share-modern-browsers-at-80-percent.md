@@ -1,6 +1,6 @@
 ---
 title: "Chrome breaks 10% market share; modern browsers at 80%"
-date: 2011-02-01T11:19:00.000Z
+date: 2011-02-01
 author: "Matt Sherman"
 
 ---

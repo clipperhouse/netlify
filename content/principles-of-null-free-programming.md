@@ -1,6 +1,6 @@
 ---
 title: "Principles of null-free programming"
-date: 2016-03-02T19:35:42.000Z
+date: 2016-03-02
 author: "Matt Sherman"
 
 ---
@@ -32,7 +32,7 @@ In C#, “by ID” database calls will typically return null if such a record do
 
 Rather, consider a pattern based on an explicit Boolean for existence, and where **null is not in our vocabulary**:
 
-```c#
+```
 Thing t;  
 if (!TryThingById(12345, out t)) {  
     return "Sorry, not found!";  
@@ -42,7 +42,7 @@ if (!TryThingById(12345, out t)) {
 
 The Try pseudocode would look something like:
 
-```c#
+```
 bool TryThingById(int id, out Thing t) {  
     var rows = DB.Query("select * from Things where ID = ?", id);  
     if (rows.Length == 0) {  
@@ -60,7 +60,7 @@ I believe this code follows our Principles above: we don’t pass a null, and we
 
 A common idiom in C# is to use **optional parameters**, with null as the default value:
 
-```c#
+```
 void Foo(int id, Bar bar = null, Baz baz = null)
 ```
 

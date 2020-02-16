@@ -1,6 +1,6 @@
 ---
 title: "Another reason publishers should adopt SSL: referrers"
-date: 2014-01-22T21:58:47.000Z
+date: 2014-01-22
 author: "Matt Sherman"
 
 ---

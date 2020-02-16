@@ -1,6 +1,6 @@
 ---
 title: "Scale means reversing your thinking on the database"
-date: 2009-09-09T19:14:00.000Z
+date: 2009-09-09
 author: "Matt Sherman"
 
 ---

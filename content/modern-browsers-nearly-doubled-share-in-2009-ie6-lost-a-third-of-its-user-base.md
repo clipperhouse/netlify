@@ -1,6 +1,6 @@
 ---
 title: "“Modern browsers” nearly doubled share in 2009; IE6 lost a third of its user base"
-date: 2010-01-01T16:49:00.000Z
+date: 2010-01-01
 author: "Matt Sherman"
 
 ---

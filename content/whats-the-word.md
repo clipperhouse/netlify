@@ -1,6 +1,6 @@
 ---
 title: "What’s the word…?"
-date: 2009-09-03T14:28:00.000Z
+date: 2009-09-03
 author: "Matt Sherman"
 
 ---

@@ -1,6 +1,6 @@
 ---
 title: "How I optimize conversations"
-date: 2014-03-15T20:12:03.000Z
+date: 2014-03-15
 author: "Matt Sherman"
 
 ---

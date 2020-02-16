@@ -1,6 +1,6 @@
 ---
 title: "The friction constituency"
-date: 2012-01-18T03:35:46.000Z
+date: 2012-01-18
 author: "Matt Sherman"
 
 ---

@@ -1,6 +1,6 @@
 ---
 title: "For want of parens in Ruby"
-date: 2013-06-03T01:54:15.000Z
+date: 2013-06-03
 author: "Matt Sherman"
 
 ---

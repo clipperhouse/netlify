@@ -1,6 +1,6 @@
 ---
 title: "The dullest blog"
-date: 2009-09-16T11:38:00.000Z
+date: 2009-09-16
 author: "Matt Sherman"
 
 ---

@@ -1,6 +1,6 @@
 ---
 title: "Known and unknown unknowns"
-date: 2009-07-19T13:01:00.000Z
+date: 2009-07-19
 author: "Matt Sherman"
 
 ---

@@ -1,6 +1,6 @@
 ---
 title: "A simple way that Apple can improve iPhone battery life and user experience"
-date: 2009-10-08T12:19:23.000Z
+date: 2009-10-08
 author: "Matt Sherman"
 
 ---

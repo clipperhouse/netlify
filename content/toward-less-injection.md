@@ -1,6 +1,6 @@
 ---
 title: "Toward less injection"
-date: 2017-09-18T21:41:19.159Z
+date: 2017-09-18
 author: "Matt Sherman"
 ---
 

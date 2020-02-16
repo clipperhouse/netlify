@@ -1,6 +1,6 @@
 ---
 title: "Teevee on the peecee"
-date: 2009-11-14T11:22:53.000Z
+date: 2009-11-14
 author: "Matt Sherman"
 
 ---

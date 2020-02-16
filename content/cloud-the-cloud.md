@@ -1,6 +1,6 @@
 ---
 title: "The cloud! The cloud!"
-date: 2009-06-11T15:07:00.000Z
+date: 2009-06-11
 author: "Matt Sherman"
 
 ---

@@ -1,6 +1,6 @@
 ---
 title: "An idea for bookifying the web"
-date: 2014-04-19T19:16:25.000Z
+date: 2014-04-19
 author: "Matt Sherman"
 
 ---

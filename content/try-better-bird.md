@@ -1,6 +1,6 @@
 ---
 title: "Try “Better Bird”"
-date: 2012-02-28T18:21:18.000Z
+date: 2012-02-28
 author: "Matt Sherman"
 ---
 

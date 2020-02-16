@@ -1,6 +1,6 @@
 ---
 title: "Avoiding “magic strings” in jQuery, C# and ASP.net MVC"
-date: 2010-09-07T16:44:00.000Z
+date: 2010-09-07
 author: "Matt Sherman"
 
 ---

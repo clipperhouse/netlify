@@ -1,6 +1,6 @@
 ---
 title: "Publishers and SSL"
-date: 2013-12-15T19:20:56.000Z
+date: 2013-12-15
 author: "Matt Sherman"
 
 ---

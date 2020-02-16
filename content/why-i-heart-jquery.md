@@ -1,6 +1,6 @@
 ---
 title: "Why I heart jQuery"
-date: 2009-09-01T21:46:00.000Z
+date: 2009-09-01
 author: "Matt Sherman"
 
 ---

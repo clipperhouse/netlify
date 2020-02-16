@@ -1,6 +1,6 @@
 ---
 title: "Demand first, then supply"
-date: 2008-02-17T19:26:29.000Z
+date: 2008-02-17
 author: "Matt Sherman"
 
 ---
