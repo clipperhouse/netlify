@@ -78,7 +78,7 @@ You are probably familiar with an expression like `condition ? value : other`. I
 
 ```
 var temp = 50;  
-Console.WriteLine(temp &gt; 30 ? “warm” : “cold”);  
+Console.WriteLine(temp > 30 ? "warm" : "cold");  
 // prints warm
 ```
 

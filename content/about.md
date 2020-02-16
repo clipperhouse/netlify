@@ -8,24 +8,6 @@ js:
 - "js/tech-talk.js"
 ---
 
-<style>
-img[src$='#photo'] {
-    float: right;
-    margin: 0 1em 2em 2em;
-    opacity: .9;
-    width: 100px;
-    border-radius: 50%;
-    border: 1px solid #999;
-}
-
-button {
-    width: auto;
-    background-color: #007AFF;
-    color: white;
-}
-</style>
-
-
 ![Matt Sherman](https://pbs.twimg.com/profile_images/557247446649036800/JSalo08u_400x400.jpeg#photo)
 
 I am a founder, engineering manager and developer in NYC. I recently decided to leave Stack Overflow, and am taking some time to find my next thing. I’d like to start something new or join something small.
@@ -39,25 +21,25 @@ For now, I am looking for interesting people to meet and collaborate with. Ideas
 
 Most recently, I was Engineering Manager at Stack Overflow, overseeing the team building the Talent product. A few essays about management:
 
-- [Championship](/championship/)
-- [Bugs are a failure of prediction](/bugs-are-a-failure-of-prediction/)
-- [The makings of a strategy](/makings-of-a-strategy/)
-- [Lore](/lore/)
+- [Championship]({{< relref "championship.md" >}})
+- [Bugs are a failure of prediction]({{< relref "bugs-are-a-failure-of-prediction.md" >}})
+- [The makings of a strategy]({{< relref "makings-of-a-strategy.md" >}})
+- [Lore]({{< relref "lore.md" >}})
 
 ### Developer
 
 I like Go and C#, and high-performance web applications.
 
-- I am working on a tokenizer and lemmatizer in Go, called [Jargon](/jargon/).
-- I created a package for generics for Go, called [gen](/gen/overview/).
-- I built [Stack Overflow tag correlations](/stack-correlations/).
-- All of the engineering for [Alikewise](/alikewise/).
-- A fun little [classical radio player](/classical/).
+- I am working on a tokenizer and lemmatizer in Go, called [Jargon]({{< relref "jargon.md" >}}).
+- I created a package for generics for Go, called [gen](/{{< relref "gen/overview.md" >}}).
+- I built [Stack Overflow tag correlations]({{< relref "stack-correlations.md" >}}).
+- All of the engineering for [Alikewise]({{< relref "alikewise.md" >}}).
+- A fun little [classical radio player]({{< relref "classical/_index.md" >}}).
 - And of course, a lot of the code in Stack Overflow Talent.
 
 ### Founder
 
-I founded and led engineering for [Alikewise](/alikewise/), a dating site based on books.
+I founded and led engineering for [Alikewise]({{< relref "alikewise.md" >}}), a dating site based on books.
 
 ### Explainer
 
@@ -65,7 +47,7 @@ Non-technical folks appreciate my ability to explain technology, and how to get 
 
 I offer this expertise on a consulting basis, for your teams.
 
-<button href="/tech-talk/"> Learn more... </button>
+<button href="{{< relref "tech-talk.md" >}}"> Learn more... </button>
 
 ### Contact
 

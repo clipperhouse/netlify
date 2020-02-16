@@ -62,27 +62,6 @@ Matt Sherman is a veteran engineering manager and programmer, most recently at S
 
 Matt created the “ask a nerd” program at Stack, connecting salespeople and clients to technical experts.
 
-<button href="/about/"> Learn more about Matt… </button>
+<button href="{{< relref "about.md" >}}"> Learn more about Matt… </button>
 
 Matt is reachable at mwsherman@gmail.com and +1 415-516-5121. Feel free to get in touch.
-
-<style>
-
-img[src$='#photo'] {
-    float: right;
-    margin: 0 0 2em 2em;
-    position: relative;
-    top: 30px;
-    opacity: .9;
-    width: 120px;
-    border-radius: 50%;
-    border: 1px solid #999;
-}
-
-button {
-    width: auto;
-    background-color: #007AFF;
-    color: white;
-}
-
-</style>

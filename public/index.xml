@@ -108,7 +108,7 @@ In the spirit of Go&amp;rsquo;s ‘good enough’ type system, here&amp;rsquo;s 
       <pubDate>Sun, 27 May 2018 00:00:00 +0000</pubDate>
       
       <guid>https://clipperhouse.com/about/</guid>
-      <description>img[src$=&#39;#photo&#39;] { float: right; margin: 0 1em 2em 2em; opacity: .9; width: 100px; border-radius: 50%; border: 1px solid #999; } button { width: auto; background-color: #007AFF; color: white; }  I am a founder, engineering manager and developer in NYC.</description>
+      <description>I am a founder, engineering manager and developer in NYC. I recently decided to leave Stack Overflow, and am taking some time to find my next thing.</description>
     </item>
     
     <item>
