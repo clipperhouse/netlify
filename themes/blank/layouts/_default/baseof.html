@@ -15,20 +15,20 @@
 	{{ with .Site.Params.description }}<meta name="description" content="{{ . }}">{{ end }}
 	{{ with .Site.Params.author }}<meta name="author" content="{{ . }}">{{ end }}
 
-	{{ $css := resources.Get "css/normalize.css" | fingerprint }}
+	{{ $css := resources.Get "css/normalize.css" | fingerprint -}}
 	<link href="{{ $css.RelPermalink }}" rel="stylesheet">
 
-	{{ $css := resources.Get "css/skeleton.css" | fingerprint }}
+	{{ $css := resources.Get "css/skeleton.css" | fingerprint -}}
 	<link href="{{ $css.RelPermalink }}" rel="stylesheet">
 	
-	{{ $css := resources.Get "css/style.css" | fingerprint }}
+	{{ $css := resources.Get "css/style.css" | fingerprint -}}
 	<link href="{{ $css.RelPermalink }}" rel="stylesheet">
 	
-	{{ range .Params.css -}}
+	{{- range .Params.css }}
 		{{ $css := resources.Get . | fingerprint }}
 		<link href="{{ $css.RelPermalink }}" rel="stylesheet">
-	{{ end }}
-	{{ with .OutputFormats.Get "RSS" -}}
+	{{- end }}
+	{{- with .OutputFormats.Get "RSS" -}}
 		{{ printf `<link rel="%s" type="%s" href="%s" title="%s">` .Rel .MediaType.Type .RelPermalink $.Site.Title | safeHTML }}
 	{{- end }}
 
