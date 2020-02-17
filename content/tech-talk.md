@@ -3,9 +3,6 @@ title: "Tech talk for recruiters and salespeople"
 date: 2018-10-17
 author: "Matt Sherman"
 style: "app"
-js:
-- "https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"
-- "js/tech-talk.js"
 ---
 
 ![Matt Sherman](https://pbs.twimg.com/profile_images/557247446649036800/JSalo08u_400x400.jpeg#photo)
@@ -14,7 +11,7 @@ The world of technology can be overwhelming — so much jargon and an ever-chang
 
 If you’re in a technical field, **knowledge and credibility** matter a lot; leveling-up one’s understanding makes one more competitive.
 
-[Matt Sherman](/about/) specializes in explaining this landscape to folks in non-technical roles, especially  recruiting and sales.
+[Matt Sherman]({{< relref "about.md">}}) specializes in explaining this landscape to folks in non-technical roles, especially  recruiting and sales.
 
 ## Whirlwind tour
 
@@ -62,6 +59,6 @@ Matt Sherman is a veteran engineering manager and programmer, most recently at S
 
 Matt created the “ask a nerd” program at Stack, connecting salespeople and clients to technical experts.
 
-<button href="{{< relref "about.md" >}}"> Learn more about Matt… </button>
+[Learn more about Matt…]({{< relref "about.md" >}})
 
 Matt is reachable at mwsherman@gmail.com and +1 415-516-5121. Feel free to get in touch.

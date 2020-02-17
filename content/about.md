@@ -3,9 +3,6 @@ title: "Hi, I’m Matt"
 description: "What I am looking for next"
 date: 2018-05-27
 style: "app"
-js:
-- "https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"
-- "js/tech-talk.js"
 ---
 
 ![Matt Sherman](https://pbs.twimg.com/profile_images/557247446649036800/JSalo08u_400x400.jpeg#photo)
@@ -47,7 +44,7 @@ Non-technical folks appreciate my ability to explain technology, and how to get 
 
 I offer this expertise on a consulting basis, for your teams.
 
-<button href="{{< relref "tech-talk.md" >}}"> Learn more... </button>
+[Learn more about consulting...]({{< relref "tech-talk.md" >}})
 
 ### Contact
 
