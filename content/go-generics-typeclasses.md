@@ -6,7 +6,7 @@ author: "Matt Sherman"
 
 I love the debate around the [generics proposal for Go 2](https://go.googlesource.com/proposal/+/master/design/go2draft-generics-overview.md).
 
-In the spirit of Go's ‘good enough’ type system, here's a thought experiment for ‘good enough’ generics. I think we can get 80% of the power for 20% of the complexity.
+In the spirit of Go’s ‘good enough’ type system, here’s a thought experiment for ‘good enough’ generics. I think we can get 80% of the power for 20% of the complexity.
 
 (‘Good enough’ is a compliment – I come from a C# background and find the simplicity of Go’s type system refreshing.)
 

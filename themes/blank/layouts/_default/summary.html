@@ -2,7 +2,7 @@
 	<a href="{{ .Permalink }}">
 		<h2>{{ .Title }}</h2>
 		<p>
-			{{ .Summary | plainify }}{{ if .Truncated }}..{{ end }}
+			{{ .Summary | plainify | htmlUnescape }}{{ if .Truncated }}..{{ end }}
 		</p>
 	</a>
 </article>
