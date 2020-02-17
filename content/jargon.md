@@ -39,7 +39,8 @@ Jargon is a Go package with tokenizers and lemmatizers. [Source & docs](https://
 
 <button type="submit">Click to lemmatize</button>
 
-<div class="pre code result"></div>
+<pre><code class="result"></code></pre>
+
 </form>
 
 <div id="examples" class="examples">
