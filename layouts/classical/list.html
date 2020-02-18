@@ -1,9 +1,11 @@
 {{ define "main" }}
 
+<h1>Classical radio</h1>
+<p>Select a station to listen:</p>
 {{ range $index, $station := .Params.stations }}
-<article class="post post-view post-entry">
+<article>
     <div class="station" id="{{ .name }}" data-src="{{ .stream_url }}">
-        <h2 class="post-title">
+        <h2>
             {{ .name }}
             <small> {{ .location }} </small>
         </h2>
