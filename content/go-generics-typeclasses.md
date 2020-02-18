@@ -2,6 +2,7 @@
 title: "Generics as builtin typeclasses"
 date: 2018-09-04
 author: "Matt Sherman"
+summary: "In the spirit of Go’s ‘good enough’ type system, here’s a thought experiment for ‘good enough’ generics..."
 ---
 
 I love the debate around the [generics proposal for Go 2](https://go.googlesource.com/proposal/+/master/design/go2draft-generics-overview.md).

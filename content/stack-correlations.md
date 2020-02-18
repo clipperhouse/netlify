@@ -6,11 +6,10 @@ css:
 - "css/stack.css"
 - "css/jquery-ui.css"
 js:
-- "https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"
-- "https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"
+- "https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"
+- "https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"
 - "https://cdnjs.cloudflare.com/ajax/libs/mustache.js/3.1.0/mustache.min.js"
 - "js/stack.js"
-
 ---
 
 A tool to discover correlations between tags on Stack Exchange sites. Start typing a tag name below, or click one of the popular ones.
