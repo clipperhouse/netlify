@@ -1,6 +1,7 @@
 <header>
-	<a href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a>
 	<nav>
+		<a href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a>
+		<span class="sep">·</span>
 		<a href="{{ relref . "about.md" }}">about</a>
 		<span class="sep">·</span>
 		<a href="{{ relref . "jargon.md" }}">jargon</a>
@@ -8,5 +9,7 @@
 		<a href="{{ relref . "gen/overview.md" }}">gen</a>
 		<span class="sep">·</span>
 		<a href="{{ relref . "stack-correlations.md" }}">tag correlations</a>
+		<span class="sep">·</span>
+		<a href="{{ relref . "classical/_index.md" }}">classical radio</a>
 	</nav>
 </header>
