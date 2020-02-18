@@ -15,18 +15,18 @@ js:
 A tool to discover correlations between tags on Stack Exchange sites. Start typing a tag name below, or click one of the popular ones.
 
 <form>
-    <input name="tag" id="tag" placeholder="type a tag name here" type="search" autocapitalize="none" autocorrect="off" />
-</form>
-
-<div id="popular">
+<input name="tag" id="tag" placeholder="type a tag name here" type="search" autocapitalize="none" autocorrect="off" />
+<p id="popular">
 	Popular:
 		<a class="tag" title="View correlations for “javascript”" href="#stackoverflow/javascript">javascript</a>
 		<a class="tag" title="View correlations for “java”" href="#stackoverflow/java">java</a>
 		<a class="tag" title="View correlations for “c#”" href="#stackoverflow/c%23">c#</a>
 		<a class="tag" title="View correlations for “python”" href="#stackoverflow/python">python</a>
-</div>
+</p>
 
-<div id="correlations"></div>
+<p id="correlations"></p>
+</form>
+
 
 This works for all Stack Exchange sites. Select a different one below:
 
