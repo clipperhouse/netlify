@@ -15,8 +15,7 @@
 	{{ with .Site.Params.description }}<meta name="description" content="{{ . }}">{{ end }}
 	{{ with .Site.Params.author }}<meta name="author" content="{{ . }}">{{ end }}
 
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha256-l85OmPOjvil/SOvVt3HnSSjzF1TUMyT9eV0c2BzEGzU=" crossorigin="anonymous" />	
-	{{ $csss := slice "css/style.css" }}
+	{{ $csss := slice "css/normalize.css" "css/style.css" }}
 	{{ range $csss -}}
 		{{ $css := resources.Get . | fingerprint }}
 		<link href="{{ $css.RelPermalink }}" rel="stylesheet">
