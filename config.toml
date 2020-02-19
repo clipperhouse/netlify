@@ -7,12 +7,5 @@ summaryLength = 12
 [params]
   author = "Matt Sherman"
 
-[menu]
-
-  [[menu.main]]
-    identifier = "about"
-    name = "about"
-    url = "/about/"
-
 [markup.goldmark.renderer]
 unsafe = true

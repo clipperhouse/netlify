@@ -30,17 +30,6 @@
 		{{ end }}
 	{{- end }}
 
-	{{ range .Params.js -}}
-		{{ if hasPrefix . "http" }}
-			<script src="{{ . }}" defer></script>
-		{{ else }}
-			{{ with print "js/" . ".js" }}
-				{{ $js := resources.Get . | fingerprint }}
-				<script src="{{ $js.RelPermalink }}" integrity="{{ $js.Data.Integrity }}" defer></script>
-			{{ end }}
-		{{ end }}
-	{{ end }}
-
 	{{ with .OutputFormats.Get "RSS" -}}
 		{{ printf `<link rel="%s" type="%s" href="%s" title="%s">` .Rel .MediaType.Type .RelPermalink $.Site.Title | safeHTML }}
 	{{- end }}
@@ -48,11 +37,21 @@
 	<link rel="icon" type="image/png" sizes="32x32" href="/img/favicon-32x32.png">
 	<link rel="icon" type="image/png" sizes="16x16" href="/img/favicon-16x16.png">
 	<link rel="apple-touch-icon" href="/img/apple-touch-icon.png">
-
 </head>
 <body>
 	{{ partial "header" . }}
 	{{ block "main" . }}{{ end }}
 	{{ partial "footer" . }}
+
+	{{ range .Params.js -}}
+		{{ if hasPrefix . "http" }}
+			<script src="{{ . }}" defer></script>
+		{{ else }}
+			{{ with print "js/" . ".js" }}
+				{{ $js := resources.Get . | minify | fingerprint }}
+				<script src="{{ $js.RelPermalink }}" integrity="{{ $js.Data.Integrity }}" defer></script>
+			{{ end }}
+		{{ end }}
+	{{ end }}
 </body>
 </html>
