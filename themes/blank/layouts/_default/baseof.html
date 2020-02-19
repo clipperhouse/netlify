@@ -15,16 +15,31 @@
 	{{ with .Site.Params.description }}<meta name="description" content="{{ . }}">{{ end }}
 	{{ with .Site.Params.author }}<meta name="author" content="{{ . }}">{{ end }}
 
-	{{ $csss := slice "css/normalize.css" "css/style.css" }}
+	{{ $csss := slice "normalize" "style" }}
 	{{ range $csss -}}
-		{{ $css := resources.Get . | fingerprint }}
-		<link href="{{ $css.RelPermalink }}" rel="stylesheet">
+		{{ with print "css/" . ".css" }}
+			{{ $css := resources.Get . | fingerprint }}
+			<link href="{{ $css.RelPermalink }}" rel="stylesheet">
+		{{ end }}
 	{{- end }}
 
 	{{ range .Params.css -}}
-		{{ $css := resources.Get . | fingerprint }}
-		<link href="{{ $css.RelPermalink }}" rel="stylesheet">
+		{{ with print "css/" . ".css" }}
+			{{ $css := resources.Get . | fingerprint }}
+			<link href="{{ $css.RelPermalink }}" rel="stylesheet">
+		{{ end }}
 	{{- end }}
+
+	{{ range .Params.js -}}
+		{{ if hasPrefix . "http" }}
+			<script src="{{ . }}" defer></script>
+		{{ else }}
+			{{ with print "js/" . ".js" }}
+				{{ $js := resources.Get . | fingerprint }}
+				<script src="{{ $js.RelPermalink }}" integrity="{{ $js.Data.Integrity }}" defer></script>
+			{{ end }}
+		{{ end }}
+	{{ end }}
 
 	{{ with .OutputFormats.Get "RSS" -}}
 		{{ printf `<link rel="%s" type="%s" href="%s" title="%s">` .Rel .MediaType.Type .RelPermalink $.Site.Title | safeHTML }}
@@ -40,12 +55,4 @@
 	{{ block "main" . }}{{ end }}
 	{{ partial "footer" . }}
 </body>
-{{ range .Params.js -}}
-	{{ if hasPrefix . "http" }}
-		<script src="{{ . }}"></script>
-	{{ else }}
-		{{ $js := resources.Get . | fingerprint }}
-		<script src="{{ $js.RelPermalink }}" integrity="{{ $js.Data.Integrity }}"></script>
-	{{ end }}
-{{ end }}
 </html>
