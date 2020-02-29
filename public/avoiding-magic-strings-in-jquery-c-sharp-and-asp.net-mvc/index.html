@@ -58,7 +58,7 @@
 <li>They are tedious, hard to read, and hard to maintain — i.e., a waste of a smart programmer’s time</li>
 </ul>
 <p>I’ve learned a few ways of avoiding these problems. Most of the techniques come down to being disciplined about <a href="http://en.wikipedia.org/wiki/Separation_of_concerns">separation of concerns</a>.</p>
-<h4 id="javascript-jquery-and-html">Javascript (jQuery) and HTML</h4>
+<h3 id="javascript-jquery-and-html">Javascript (jQuery) and HTML</h3>
 <p>How many times have you seen something like…
 $(“body”).append(‘&lt;div class=”highlight” id=”’ + newid + ‘”&gt;” + message + ‘&lt;/div&gt;’);</p>
 <p>That new div might or might not appear in the browser. See the syntax error? You might have to squint. And imagine, god forbid, that we need to nest an element inside that div.</p>
@@ -68,7 +68,7 @@ $(“body”).append(‘&lt;div class=”highlight” id=”’ + newid + ‘”
 var newdiv = $(“&lt;div /&gt;”).addClass(“highlight”).attr(“id”, newid).html(message);<br>
 $(“body”).append(newdiv);</p>
 <p>That first bit creates a jQuery <em>object</em> that can accept the methods that follow. We avoid worrying about matching up the closing tags &amp; attribute quotes, counting apostrophes — and squinting.</p>
-<h4 id="c-html-and-urls">C#, HTML and URLs</h4>
+<h3 id="c-html-and-urls">C#, HTML and URLs</h3>
 <p>There are places where you might want to dynamically create markup in your executable code. This leads us down the same road as above.</p>
 <p>(Again, you would hope your HTML lives elsewhere, but-if-you-must…)</p>
 <p>C# has classes which can help here. The first is <a href="http://msdn.microsoft.com/en-us/library/system.web.mvc.tagbuilder_members.aspx">TagBuilder</a>, and it has a style similar to the jQuery thing above:
@@ -86,7 +86,7 @@ var url = new UriBuilder(Request.Url);<br>
 url.Scheme = Uri.UriSchemeHttps;</p>
 <p>Then just call ToString() when you need the full URL as a string.</p>
 <p>Want to find out the fully qualified host name, without parsing? That’s simply the url.Host property. The querystring is .Query. You get it. Not a substring() or indexOf() in sight.</p>
-<h4 id="aspnet-mvc">ASP.net MVC</h4>
+<h3 id="aspnet-mvc">ASP.net MVC</h3>
 <p>…is wonderful, IMHO. But there can be a lot o’ magic strings. This allows us to work fluidly, as if we are in a dynamic language. But, speaking for myself, I want to know when I’ve fat-fingered something before runtime.</p>
 <p>There is a great third-party tool called <a href="http://mvccontrib.codeplex.com/wikipage?title=T4MVC">T4MVC</a> by the brilliant <a href="http://blogs.msdn.com/b/davidebb/">David Ebbo</a>. Long story short, it gives you strongly-typed helpers such as:
 &lt;%= Html.ActionLink(“view my profile”, MVC.Profile.Detail(some_user_id)) %&gt;</p>

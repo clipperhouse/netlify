@@ -11,13 +11,13 @@ While many aspects of the platform are, imho, technologically ahead of its compe
 
 It needn’t be this way. Microsoft can do a small handful of things to make Visual Studio relevant to these trends, by reducing the unresolved pain points one experiences across all platforms. My ideas:
 
-#### Best-of-breed IDE for dynamic frameworks, especially Ruby on Rails.
+### Best-of-breed IDE for dynamic frameworks, especially Ruby on Rails.
 
 I haven’t seen anyone crack the nut of code completion for methods and properties that are _likely to exist at runtime_. Rails’ conventions are pretty clear, and it seems to me that Intellisense should be able to use this information to offer hints and save keystrokes.
 
 At the very least, VS should do basic syntax coloring for Ruby and Python out of box, with Intellisense for core keywords — just as they did with jQuery.
 
-#### Workflow and GUI support for the major source control systems: Git, SVN and Mercurial.
+### Workflow and GUI support for the major source control systems: Git, SVN and Mercurial.
 
 Command lines suck. There, I said it. I consider them a failure of imagination. Which is to say, I think of workflows visually, and I wish the tools were with me.
 

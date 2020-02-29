@@ -13,7 +13,7 @@ What I imagine is this: a program that examines a program’s API for changes, a
 
 Instead of a whole program being described as a version, **each callable API** (endpoint, method, etc) gets its _own_ version. We, the consumer, know when Foo() has changed while Bar() has not; API versioning becomes granular.
 
-#### Black box
+### Black box
 
 One way me might go about this is black box versioning, by which I mean the versioner can **interact** with an API, but knows nothing of its underlying implementation.
 
@@ -25,7 +25,7 @@ Such a system could prove the existence of changes, but could not prove the abse
 
 Even with such limitations, it would be a substantial improvement over the status quo of human-imagined “versions”.
 
-#### White box
+### White box
 
 This gets interesting. What if the versioner didn’t simply call the API as an outsider, but could inspect the **source code** comprising the API?
 
@@ -39,7 +39,7 @@ One representation that comes to mind is [SSA](https://en.wikipedia.org/wiki/Sta
 
 Such a versioner would likely need to be language specific (though perhaps it could exploit common IR’s like LLVM).
 
-#### Conclusion
+### Conclusion
 
 This really intrigues me and I haven’t come across logical show-stoppers yet. Such a system would only need to be an improvement over the status quo, but not perfect.
 

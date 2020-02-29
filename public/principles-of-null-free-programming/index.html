@@ -50,7 +50,7 @@
 			<div>
 				<p>Nulls are a notorious source of bugs in many programming languages. Here, I sketch out a way to avoid them, using C# for illustration.</p>
 <p>To be clear, this post is intended as <strong>habits for human programmers</strong>; it is specifically <em>not</em> about static analysis or language features.</p>
-<h4 id="principles">Principles</h4>
+<h3 id="principles">Principles</h3>
 <p>I submit that we can avoid a large majority of null-related errors if we follow these two principles:</p>
 <ul>
 <li>Passing a null is a programming error</li>
@@ -60,7 +60,7 @@
 <p>I submit that null is the <strong>absence of meaning</strong>. It is not a <em>de facto</em> Boolean describing existence. Rather, it should be treated non-deterministically.</p>
 <p>This implies that <strong>most functions should not “handle” null</strong>. Because null is the absence of meaning, we can not use it to make a decision.</p>
 <p>When a method receives a null, and throws, it should be interpreted as a <strong>bug in the caller</strong>. (Admirably, C#’s LINQ methods do this.)</p>
-<h4 id="some-patterns">Some patterns</h4>
+<h3 id="some-patterns">Some patterns</h3>
 <p>One great way of avoiding null is to have a better definition of non-existence. For example, where we might be tempted to define non-existence as null, let’s define it as <strong>a collection of length zero</strong>. <a href="https://en.wikipedia.org/wiki/Option_type">Option type</a> implementations often look like this.</p>
 <p>In C#, “by ID” database calls will typically return null if such a record does not exist. In LINQ, it’s expressed as a FirstOrDefault or SingleOrDefault, which return null on “not found”. Or, one can call First or Single methods which throw on same. I consider both to be bad semantics.</p>
 <p>Rather, consider a pattern based on an explicit Boolean for existence, and where <strong>null is not in our vocabulary</strong>:</p>

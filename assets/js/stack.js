@@ -20,12 +20,6 @@
 		api_tags_related: function (site, tag) {
 			return api_base_url + 'tags/' + encodeURIComponent(tag) + '/related?site=' + site.api_site_parameter + '&pagesize=8&filter=!n9Z4Y*b7KJ' + api_key_param;
 		},
-		site_tag: function (site, tag) {
-			return site.site_url.replace('http:', '') + '/tags/' + encodeURIComponent(tag) + '/info';
-		},
-		wikipedia_search: function (tag) {
-			return '//en.wikipedia.org/w/index.php?search=' + encodeURIComponent(tag.replace(/\-/g, ' ').replace('#', ' sharp').replace('-', ' '));
-		},
 	};
 
 	const round = function (num, dec) {
@@ -45,7 +39,7 @@
 	const menu = $("#menu");
 	const header = $('h1');
 	const site_name = $('span.site-name');
-	const input = $('input[name=tag]');
+	const input = $('input[name=search]');
 	const results = $('#correlations');
 	const popular = $('#popular');
 
@@ -159,7 +153,7 @@
 		} else {
 			// clear it out
 			await loadPopularTags(state.site);
-			input.val('');
+			input.val('').focus();
 			results.html('');
 			$('html').animate({ scrollTop: 0 });
 		}

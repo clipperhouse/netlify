@@ -52,7 +52,7 @@
 <p>The answer, in several cases, is that Go chooses to make a clear distinction between expressions and statements. It chooses not to conflate them.</p>
 <p>By way of definition, an expression is a thing that has (returns) a value. A statement is an imperative command to <em>do something</em>, but itself does not have a value.</p>
 <p>I’ll use C# by way of comparison.</p>
-<h4 id="increment-operators">Increment operators</h4>
+<h3 id="increment-operators">Increment operators</h3>
 <p>Most C-family languages have an operator like a++, which says “increment the value of a value by 1”.</p>
 <p>In some languages, this expression has a return value. In Go, it does not.</p>
 <p><strong>C#</strong></p>
@@ -64,7 +64,7 @@ Console.WriteLine(a++);
 fmt.Println(a++)  
 // syntax error: unexpected ++
 </code></pre><p>To be clear, <code>a++</code> is a valid statement in Go; it increments by 1. It does not, however, return a value, avoiding error-prone patterns like <code>if (a++ == 6) { …</code></p>
-<h4 id="assignment">Assignment</h4>
+<h3 id="assignment">Assignment</h3>
 <p>In C#, assignments have return values.</p>
 <p><strong>C#</strong></p>
 <pre><code>int a;  
@@ -81,7 +81,7 @@ Console.WriteLine((a = 5) == 5);
 fmt.Println(a = 6)  
 // syntax error: unexpected =
 </code></pre><p><code>a = 6</code> is a valid assignment statement. It is not, however, an expression (and thus can’t be evaluated and printed).</p>
-<h4 id="ternaries">Ternaries</h4>
+<h3 id="ternaries">Ternaries</h3>
 <p>You are probably familiar with an expression like <code>condition ? value : other</code>. It’s generally understood as syntactic sugar for an if-else statement, with a return value.</p>
 <p><strong>C#</strong></p>
 <pre><code>var temp = 50;  

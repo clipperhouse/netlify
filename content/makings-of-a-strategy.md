@@ -27,12 +27,12 @@ The strategy offers a clear picture of success, and a **time frame** by which it
 
 A good strategy is a **hypothesis**. Another word for “accountable” is **testable**.
 
-We lose some bets; this is normal and good. We make decide to double down or to cut losses, and we do so crisply.
+We lose some bets; this is normal and good. We may decide to double down or to cut losses, and we do so crisply.
 
 ### Researched
 
 A strategy is expected to do its homework. We **talk to users** and their proxies.
 
-We engage with data scientists — not for the numbers, but for epistemology. The data scientists I know are great at turning **philosophies into hypotheses**. They describe what is knowable, and what is not, and why that’s OK.
+We engage with data scientists — not for the numbers, but for the epistemology. The data scientists I know are great at turning **philosophies into hypotheses**. They describe what is knowable, and what is not, and why that’s OK.
 
 We characterize **uncertainty**. When we make assumptions, we label them as such, and we don’t mistake them for facts. We [understand Bayes](https://en.wikipedia.org/wiki/Bayesian_inference).

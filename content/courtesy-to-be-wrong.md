@@ -38,14 +38,14 @@ A falsifiable belief is often a **divisive** one. I got this notion from Chris C
 
 OKCupid’s ideal was to ask its users questions with a 50 / 50 (divisive!) split of answers. This offers more signal for matching.
 
-#### Bad questions (examples mine):
+### Bad questions (examples mine):
 
 - Is ice cream delicious?
 - Are puppies cute?
 
 These questions might split 95 / 5, and are therefore uninformative.
 
-#### Better questions:
+### Better questions:
 
 - Should you correct people on grammar?
 - Who did you vote for?

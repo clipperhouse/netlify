@@ -9,7 +9,7 @@ Data science (your definition here) is a necessity not just for “data” proje
 
 These things sounds like what we pay managers for, and they are. Many managers are metrics driven, to their credit. Data science adds a new dimension, and managers who are not conversant in it will be…not good managers.
 
-#### Ending conflict
+### Ending conflict
 
 We’ve all been in long arguments about what the best feature is. Why are they such long arguments? Because they are dogmatic and subjective.
 

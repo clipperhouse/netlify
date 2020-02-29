@@ -58,13 +58,13 @@ Type `gen help`:
 
 ## FAQ
 
-#### Why?
+### Why?
 
 The goal of gen is not just to offer conveniences, but stronger typing. By generating strongly-typed methods and containers, we avoid having to use `interface{}`s, type assertions and reflection.
 
 We gain compile-time safety and (perhaps) performance.
 
-#### Codegen, really?
+### Codegen, really?
 
 Yes! It felt a bit dirty to us at the beginning, too. But it turns out that a lot of actual generics implementations look a lot like code generation -- you just don’t see it. (Compilers and JITs do it for you.)
 
@@ -74,23 +74,23 @@ You get all the usual compiler checks and optimizations, of course, so gen won�
 
 gen is a *tool* that helps the developer produce code on their local workstation, alongside their text editor and utilities.
 
-#### Is there a video?
+### Is there a video?
 
 [Glad you asked, yes.](https://www.youtube.com/watch?v=KY8OXFi3CDU)
 
-#### Wait, is this `go generate`?
+### Wait, is this `go generate`?
 
 No, [that’s](https://docs.google.com/document/d/1V03LUfjSADDooDMhe-_K59EgpTEm3V8uvQRuNMAEnjg/edit) different (and very cool). `go generate` will run any command and is intended to obviate `make` files and such. `gen` is specifically about codegen for types.
 
 The two tools are complementary.
 
-#### Can I run gen on the server?
+### Can I run gen on the server?
 
 Like as part of the build? Sure, but that’s not what it’s designed around so we don’t recommend it.
 
 It’s a local dev tool, not a platform or (shudder) a framework. Run it locally, test it, and commit the generated code to the repo.
 
-#### What if my code is incorrect?
+### What if my code is incorrect?
 
 gen parses and type-checks your source code. Having correct, buildable source code before you begin is important.
 

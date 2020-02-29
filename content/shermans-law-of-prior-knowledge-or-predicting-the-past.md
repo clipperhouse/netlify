@@ -5,7 +5,7 @@ author: "Matt Sherman"
 
 ---
 
-#### “When a disaster happens, large or small, there is a 100% chance that a headline will be written claiming ignored warnings.”
+### “When a disaster happens, large or small, there is a 100% chance that a headline will be written claiming ignored warnings.”
 
 I’ve come to realize, that’s the narrative. It’s always the narrative, and the details of the incident matter little.
 

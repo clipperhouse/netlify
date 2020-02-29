@@ -7,7 +7,7 @@ author: "Matt Sherman"
 
 So, we have December browser numbers, giving us complete year of browser stats for 2009 [[browsers](http://marketshare.hitslink.com/browser-market-share.aspx?qprid=1&amp;qpdt=1&amp;qpct=4&amp;qptimeframe=M&amp;qpsp=119&amp;qpnp=13) | [browser versions](http://marketshare.hitslink.com/browser-market-share.aspx?qprid=3&amp;qpdt=1&amp;qpct=4&amp;qptimeframe=M&amp;qpsp=119&amp;qpnp=13)]. Here are a few observations.
 
-#### The year
+### The year
 
 If we consider “modern browsers” to be IE8, Firefox (all versions), Safari (all) and Chrome (all) and Opera (throw ’em a bone), then overall **in 2009, the market share for modern browsers increased from 29.5% to 57.0%** — nearly double. This is great news: a real majority of web users are now using very capable browsers.
 
@@ -15,7 +15,7 @@ Approximately 20 percentage points of the increase are attributable to IE8 —
 
 The [problematic](/blog/post/Betting-on-a-future-without-IE6.aspx) IE6 lost 13 percentage points, or **around 38% of its user base**.
 
-#### The month
+### The month
 
 In December, IE 6 continued its loss of around 1 percentage point per month. The sum of IE7’s and IE8’s market share has remained the same, so overall IE has lost 1 percentage point, all due to IE6.* This means that **IE6 users are not upgrading to more current IE versions** — they are moving to other browsers. IE8 took about 1 1/2 percentage points from IE7.
 

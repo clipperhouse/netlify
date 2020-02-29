@@ -50,11 +50,11 @@
 			<div>
 				<p>Here’s a habit that may help to reduce the complexity of your dependency injection tree. Ask yourself: <strong>how much of an injected dependency</strong> are you actually using?</p>
 <p>The conversation goes like this…</p>
-<h4 id="i-need-to-inject-an-httpcontext">I need to inject an <code>HttpContext</code></h4>
+<h3 id="i-need-to-inject-an-httpcontext">I need to inject an <code>HttpContext</code></h3>
 <p>Great. Why? Because we need to read a cookie. So really….</p>
-<h4 id="ah-ok-i-only-need-to-inject-an-httprequest">Ah, OK I only need to inject an <code>HttpRequest</code></h4>
+<h3 id="ah-ok-i-only-need-to-inject-an-httprequest">Ah, OK I only need to inject an <code>HttpRequest</code></h3>
 <p>Better! But seriously, are you only looking at cookies?</p>
-<h4 id="right-i-only-ever-touch-requestcookies-which-is-of-type-httpcookiecollection">Right, I only ever touch <code>Request.Cookies</code>, which is of type <code>HttpCookieCollection</code></h4>
+<h3 id="right-i-only-ever-touch-requestcookies-which-is-of-type-httpcookiecollection">Right, I only ever touch <code>Request.Cookies</code>, which is of type <code>HttpCookieCollection</code></h3>
 <p>Now we are getting somewhere! You only need an <code>HttpCookieCollection</code>. That’s a pretty simple data type.</p>
 <p>If that’s all you need, you don’t need to <em>inject</em> it at all — just pass it as an <strong>argument</strong> to the method that needs it.</p>
 <p>Further, you likely don’t need to mock it (in the mocking-framework sense) for testing. Just <code>new</code> one up and add some test values. Nice!</p>

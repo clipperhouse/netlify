@@ -7,11 +7,11 @@ style: "app"
 
 gen includes two built-in TypeWriters:
 
-#### `slice`
+### `slice`
 
 The `slice` typewriter generates functional convenience methods that will look familiar to users of C#’s LINQ or JavaScript's Array methods. It is intended to save you some loops, using a “pass a function” pattern. It offers grouping, filtering, ad-hoc sorts and projections. [Details and docs...](/gen/slice/)
 
-#### `stringer`
+### `stringer`
 
 The `stringer` typewriter is a fork of Rob Pike’s [tool](https://godoc.org/golang.org/x/tools/cmd/stringer) of the same name, which generates readable strings for consts. [Details and docs...](/gen/stringer/)
 

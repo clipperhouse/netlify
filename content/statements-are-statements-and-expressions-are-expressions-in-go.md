@@ -12,7 +12,7 @@ By way of definition, an expression is a thing that has (returns) a value. A sta
 
 I’ll use C# by way of comparison.
 
-#### Increment operators
+### Increment operators
 
 Most C-family languages have an operator like a++, which says “increment the value of a value by 1”.
 
@@ -36,7 +36,7 @@ fmt.Println(a++)
 
 To be clear, `a++` is a valid statement in Go; it increments by 1. It does not, however, return a value, avoiding error-prone patterns like `if (a++ == 6) { …`
 
-#### Assignment
+### Assignment
 
 In C#, assignments have return values.
 
@@ -70,7 +70,7 @@ fmt.Println(a = 6)
 
 `a = 6` is a valid assignment statement. It is not, however, an expression (and thus can’t be evaluated and printed).
 
-#### Ternaries
+### Ternaries
 
 You are probably familiar with an expression like `condition ? value : other`. It’s generally understood as syntactic sugar for an if-else statement, with a return value.
 

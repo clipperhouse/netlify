@@ -11,7 +11,7 @@ The justifications for Progressive Enhancement are usually around graceful degra
 
 Those are fine things, but there are more compelling reasons to use PE, in my opinion.
 
-#### **Easier to develop**
+### **Easier to develop**
 
 When developing a modern web app, we’ll likely want to use Ajax, to make efficient and responsive UIs. Great!
 
@@ -27,7 +27,7 @@ Now let’s sprinkle Ajax on top. Intercept clicks and submits, and route them t
 
 (Tip: use the same “end point” on the server for both Ajax and traditional requests. In MVC, this would be the controller action URL. Vary vary the end point’s _response_ depending on the request type — a partial instead of a full layout, say.)
 
-#### **Robust against humans using a failure-prone language**
+### **Robust against humans using a failure-prone language**
 
 Proponents of PE will tell you that you need to support users that don’t have Javascript enabled. That’s valid. But it’s also an edge case.
 
@@ -35,11 +35,11 @@ The greater danger is that _our_ Javascript will have bugs. In most browsers, th
 
 If we’ve authored the non-JS experience correctly and separately, then the experience should fall back to a plain HTML experience. Graceful degradation is an insurance policy for _our_ shortcomings, too.
 
-#### **Division of labor**
+### **Division of labor**
 
 Each of these layers (JS, HTML, server) is a specialty. If our site gets big, we might have separate people working on each. Make sure the jQuery person and the Django person can work independently.
 
-#### **Now keep up the discipline**
+### **Now keep up the discipline**
 
 Over time, it’s easy to forget the HTML experience, since your Ajax stuff works so well. Remember, each time you want to add a new feature, stick with the above methodology.
 

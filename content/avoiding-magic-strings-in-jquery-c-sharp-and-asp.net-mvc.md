@@ -19,7 +19,7 @@ The problems are clear:
 
 I’ve learned a few ways of avoiding these problems. Most of the techniques come down to being disciplined about [separation of concerns](http://en.wikipedia.org/wiki/Separation_of_concerns).
 
-#### Javascript (jQuery) and HTML
+### Javascript (jQuery) and HTML
 
 How many times have you seen something like…
 $(“body”).append(‘&lt;div class=”highlight” id=”’ + newid + ‘”&gt;” + message + ‘&lt;/div&gt;’);
@@ -36,7 +36,7 @@ $(“body”).append(newdiv);
 
 That first bit creates a jQuery _object_ that can accept the methods that follow. We avoid worrying about matching up the closing tags &amp; attribute quotes, counting apostrophes — and squinting.
 
-#### C#, HTML and URLs
+### C#, HTML and URLs
 
 There are places where you might want to dynamically create markup in your executable code. This leads us down the same road as above.
 
@@ -64,7 +64,7 @@ Then just call ToString() when you need the full URL as a string.
 
 Want to find out the fully qualified host name, without parsing? That’s simply the url.Host property. The querystring is .Query. You get it. Not a substring() or indexOf() in sight.
 
-#### ASP.net MVC
+### ASP.net MVC
 
 …is wonderful, IMHO. But there can be a lot o’ magic strings. This allows us to work fluidly, as if we are in a dynamic language. But, speaking for myself, I want to know when I’ve fat-fingered something before runtime.
 

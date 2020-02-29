@@ -9,7 +9,7 @@ Nulls are a notorious source of bugs in many programming languages. Here, I sket
 
 To be clear, this post is intended as **habits for human programmers**; it is specifically _not_ about static analysis or language features.
 
-#### Principles
+### Principles
 
 I submit that we can avoid a large majority of null-related errors if we follow these two principles:
 
@@ -24,7 +24,7 @@ This implies that **most functions should not “handle” null**. Because null 
 
 When a method receives a null, and throws, it should be interpreted as a **bug in the caller**. (Admirably, C#’s LINQ methods do this.)
 
-#### Some patterns
+### Some patterns
 
 One great way of avoiding null is to have a better definition of non-existence. For example, where we might be tempted to define non-existence as null, let’s define it as **a collection of length zero**. [Option type](https://en.wikipedia.org/wiki/Option_type) implementations often look like this.
 

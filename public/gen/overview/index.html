@@ -85,23 +85,23 @@ gen watch     Watch the current directory for file changes, run gen
 gen help      Print usage.
 </code></pre>
 <h2 id="faq">FAQ</h2>
-<h4 id="why">Why?</h4>
+<h3 id="why">Why?</h3>
 <p>The goal of gen is not just to offer conveniences, but stronger typing. By generating strongly-typed methods and containers, we avoid having to use <code>interface{}</code>s, type assertions and reflection.</p>
 <p>We gain compile-time safety and (perhaps) performance.</p>
-<h4 id="codegen-really">Codegen, really?</h4>
+<h3 id="codegen-really">Codegen, really?</h3>
 <p>Yes! It felt a bit dirty to us at the beginning, too. But it turns out that a lot of actual generics implementations look a lot like code generation &ndash; you just don’t see it. (Compilers and JITs do it for you.)</p>
 <p>Code generation removes mystery. It’s just code, right there in your package. Read it. The history goes in your repo like everything else.</p>
 <p>You get all the usual compiler checks and optimizations, of course, so gen won’t introduce surprises in production.</p>
 <p>gen is a <em>tool</em> that helps the developer produce code on their local workstation, alongside their text editor and utilities.</p>
-<h4 id="is-there-a-video">Is there a video?</h4>
+<h3 id="is-there-a-video">Is there a video?</h3>
 <p><a href="https://www.youtube.com/watch?v=KY8OXFi3CDU">Glad you asked, yes.</a></p>
-<h4 id="wait-is-this-go-generate">Wait, is this <code>go generate</code>?</h4>
+<h3 id="wait-is-this-go-generate">Wait, is this <code>go generate</code>?</h3>
 <p>No, <a href="https://docs.google.com/document/d/1V03LUfjSADDooDMhe-_K59EgpTEm3V8uvQRuNMAEnjg/edit">that’s</a> different (and very cool). <code>go generate</code> will run any command and is intended to obviate <code>make</code> files and such. <code>gen</code> is specifically about codegen for types.</p>
 <p>The two tools are complementary.</p>
-<h4 id="can-i-run-gen-on-the-server">Can I run gen on the server?</h4>
+<h3 id="can-i-run-gen-on-the-server">Can I run gen on the server?</h3>
 <p>Like as part of the build? Sure, but that’s not what it’s designed around so we don’t recommend it.</p>
 <p>It’s a local dev tool, not a platform or (shudder) a framework. Run it locally, test it, and commit the generated code to the repo.</p>
-<h4 id="what-if-my-code-is-incorrect">What if my code is incorrect?</h4>
+<h3 id="what-if-my-code-is-incorrect">What if my code is incorrect?</h3>
 <p>gen parses and type-checks your source code. Having correct, buildable source code before you begin is important.</p>
 <p>That said, there are classes of errors that gen can optionally tolerate, via the <code>-f</code> (force) flag. <a href="/gen/force/">Learn more&hellip;</a></p>
 

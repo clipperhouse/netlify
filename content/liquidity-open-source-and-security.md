@@ -7,7 +7,7 @@ author: "Matt Sherman"
 
 Jeff has a [thoughtful post](http://blog.codinghorror.com/given-enough-money-all-bugs-are-shallow/) about open source, security and incentives. A few points stood out to me.
 
-#### Liquidity
+### Liquidity
 
 First, the “all bugs are shallow” idea is a bit idealistic, as he points out. What comes to mind for me is Joel’s [Hitting the High Notes](http://www.joelonsoftware.com/articles/HighNotes.html). Tens of thousands of average developers will not pick up a bug that only experts would recognize, and adding another ten thousand won’t help.
 
@@ -19,7 +19,7 @@ For example, casinos doing millions of bets with known probabilities have smooth
 
 An open source project with an audience _not_ in the millions, less so. At some point moving right, the graph will **discretely drop to zero**. That zero represents “the number of people smart enough to identify difficult bugs”.
 
-#### Incentives
+### Incentives
 
 Second, we consider incentives. Jeff explores the idea that paying for bugs may both be necessary and risky.
 
@@ -35,7 +35,7 @@ I’ll stretch the analogy. The person next to you on the plane might be a terro
 
 But it’s more likely that, if they showed up where you showed up, they simply want the same things you do.
 
-#### Cheaper
+### Cheaper
 
 What if security becomes too cheap to meter? Which is to say, what happens if improving software quality requires a lot fewer humans?
 

@@ -8,15 +8,15 @@ Here’s a habit that may help to reduce the complexity of your dependency injec
 
 The conversation goes like this…
 
-#### I need to inject an `HttpContext`
+### I need to inject an `HttpContext`
 
 Great. Why? Because we need to read a cookie. So really….
 
-#### Ah, OK I only need to inject an `HttpRequest`
+### Ah, OK I only need to inject an `HttpRequest`
 
 Better! But seriously, are you only looking at cookies?
 
-#### Right, I only ever touch `Request.Cookies`, which is of type `HttpCookieCollection`
+### Right, I only ever touch `Request.Cookies`, which is of type `HttpCookieCollection`
 
 Now we are getting somewhere! You only need an `HttpCookieCollection`. That’s a pretty simple data type.
 

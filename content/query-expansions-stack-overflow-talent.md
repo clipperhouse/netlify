@@ -54,7 +54,7 @@ _Thanks to [Benjamin Hodgson](https://www.benjamin.pizza) for contributing to th
 
 --
 
-#### Appendix: example query expansions
+### Appendix: example query expansions
 
 _A non-exhaustive list, for illustration._
 
