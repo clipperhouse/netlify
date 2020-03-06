@@ -107,6 +107,14 @@
 		menu.html(temp.html());
 	};
 
+	doc.on('click', 'a[href^="#"]', async function (e) {
+		e.preventDefault();
+		const href = $(this).attr('href');
+		const newState = parseUrl(href);
+		history.replaceState({}, '', href);
+		await transition(newState);
+	});
+
 	const pop = async function () {
 		const newState = parseUrl(location.href);
 		await transition(newState);
