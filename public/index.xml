@@ -6,19 +6,10 @@
     <description>Recent content on clipperhouse.com</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 17 Oct 2018 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 04 Sep 2018 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://clipperhouse.com/index.xml" rel="self" type="application/rss+xml" />
     
-    
-    <item>
-      <title>Tech talk for recruiters and salespeople</title>
-      <link>https://clipperhouse.com/tech-talk/</link>
-      <pubDate>Wed, 17 Oct 2018 00:00:00 +0000</pubDate>
-      
-      <guid>https://clipperhouse.com/tech-talk/</guid>
-      <description>The world of technology can be overwhelming — so much jargon and an ever-changing landscape.</description>
-    </item>
     
     <item>
       <title>Generics as builtin typeclasses</title>
@@ -144,6 +135,15 @@
       
       <guid>https://clipperhouse.com/makings-of-a-strategy/</guid>
       <description>A product process is typically something like Strategy → Discovery → Specification → Build → Delivery.</description>
+    </item>
+    
+    <item>
+      <title>Tech talk for recruiters and salespeople</title>
+      <link>https://clipperhouse.com/tech-talk/</link>
+      <pubDate>Tue, 17 Oct 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://clipperhouse.com/tech-talk/</guid>
+      <description>The world of technology can be overwhelming — so much jargon and an ever-changing landscape.</description>
     </item>
     
     <item>

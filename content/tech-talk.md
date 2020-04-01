@@ -1,6 +1,6 @@
 ---
 title: "Tech talk for recruiters and salespeople"
-date: 2018-10-17
+date: 2017-10-17
 author: "Matt Sherman"
 style: "app"
 ---
