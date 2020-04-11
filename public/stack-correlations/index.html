@@ -88,7 +88,7 @@ e.g., <a href="#stackoverflow/coffeescript">CoffeeScript</a> questions often inv
 <p>Built by <a href="http://clipperhouse.com/about/">Matt Sherman</a> using the <a href="http://api.stackexchange.com">Stack Exchange API</a> (all client-side). The source is <a href="https://github.com/clipperhouse/stack-correlation">on GitHub</a>.</p>
 <script id="correlations-tmpl" type="text/template">
     {{#correlations}}
-        <a class="tag" title="View correlations for “{{tag}}”" href="{{href}}">{{tag}}</a>
+        <a class="tag" title="View correlations for “{{tag}}”" href="{{href}}" data-turbolinks="false">{{tag}}</a>
 		{{#first}}
 			appears on {{correlation}} of <span class="tag">{{parent}}</span> questions
 		{{/first}}
@@ -102,7 +102,7 @@ e.g., <a href="#stackoverflow/coffeescript">CoffeeScript</a> questions often inv
 	Popular:
 	<div>
     {{#tags}}
-        <a class="tag" title="View correlations for “{{name}}”" href="#{{site.api_site_parameter}}/{{encodedName}}">{{name}}</a>
+        <a class="tag" title="View correlations for “{{name}}”" href="#{{site.api_site_parameter}}/{{encodedName}}" data-turbolinks="false">{{name}}</a>
 	{{/tags}}
 	</div>
 </script>
@@ -149,7 +149,7 @@ e.g., <a href="#stackoverflow/coffeescript">CoffeeScript</a> questions often inv
 	
 			
 				
-				<script src="/js/stack.min.5343ce66c497be0520bffb4a0632e6c9dc9bfe2e2275482963f86c8a694ee865.js" integrity="sha256-U0POZsSXvgUgv/tKBjLmydyb/i4idUgpY/hsimlO6GU=" defer></script>
+				<script src="/js/stack.min.ef3b8857e1cc625a2b3a16f5b7a4047c5d1991835be6199400ba22bb4c968e6b.js" integrity="sha256-7zuIV&#43;HMYlorOhb1t6QEfF0ZkYNb5hmUALoiu0yWjms=" defer></script>
 			
 		
 	

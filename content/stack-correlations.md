@@ -52,7 +52,7 @@ Built by <a href="http://clipperhouse.com/about/">Matt Sherman</a> using the <a 
 
 <script id="correlations-tmpl" type="text/template">
     {{#correlations}}
-        <a class="tag" title="View correlations for “{{tag}}”" href="{{href}}">{{tag}}</a>
+        <a class="tag" title="View correlations for “{{tag}}”" href="{{href}}" data-turbolinks="false">{{tag}}</a>
 		{{#first}}
 			appears on {{correlation}} of <span class="tag">{{parent}}</span> questions
 		{{/first}}
@@ -67,7 +67,7 @@ Built by <a href="http://clipperhouse.com/about/">Matt Sherman</a> using the <a 
 	Popular:
 	<div>
     {{#tags}}
-        <a class="tag" title="View correlations for “{{name}}”" href="#{{site.api_site_parameter}}/{{encodedName}}">{{name}}</a>
+        <a class="tag" title="View correlations for “{{name}}”" href="#{{site.api_site_parameter}}/{{encodedName}}" data-turbolinks="false">{{name}}</a>
 	{{/tags}}
 	</div>
 </script>

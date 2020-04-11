@@ -100,6 +100,7 @@
 		sites.forEach((site) => {
 			const a = $('<a>')
 				.attr('href', '#' + site.api_site_parameter)
+				.attr('data-turbolinks', 'false')
 				.html(site.name)
 				.css('background-image', 'url(' + site.icon_url + ')');
 			temp.append(a).append('\n');
