@@ -23,12 +23,9 @@
 		{{ end }}
 	{{- end }}
 
-	{{ range .Params.css -}}
-		{{ with print "css/" . ".css" }}
-			{{ $css := resources.Get . | fingerprint }}
-			<link href="{{ $css.RelPermalink }}" rel="stylesheet">
-		{{ end }}
-	{{- end }}
+
+	{{ $js := resources.Get "js/turbolinks.js" | fingerprint }}
+	<script src="{{ $js.RelPermalink }}" integrity="{{ $js.Data.Integrity }}" defer></script>
 
 	{{ with .OutputFormats.Get "RSS" -}}
 		{{ printf `<link rel="%s" type="%s" href="%s" title="%s">` .Rel .MediaType.Type .RelPermalink $.Site.Title | safeHTML }}
@@ -39,6 +36,12 @@
 	<link rel="apple-touch-icon" href="/img/apple-touch-icon.png">
 </head>
 <body>
+	{{ range .Params.css -}}
+		{{ with print "css/" . ".css" }}
+			{{ $css := resources.Get . | fingerprint }}
+			<link href="{{ $css.RelPermalink }}" rel="stylesheet">
+		{{ end }}
+	{{- end }}
 	{{ partial "header" . }}
 	{{ block "main" . }}{{ end }}
 	{{ partial "footer" . }}
