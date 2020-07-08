@@ -8,7 +8,7 @@ stations:
     stream_url: "https://18303.live.streamtheworld.com/KDFCFMAAC.aac"
     location: "San Francisco"
   - name : "WFMT"
-    stream_url: "http://stream.wfmt.com/main"
+    stream_url: "https://stream.wfmt.com/main"
     location: "Chicago"
   - name : "WCRB"
     stream_url: "https://audio.wgbh.org:8204/classical-hi"

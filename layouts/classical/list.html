@@ -4,12 +4,12 @@
 <p>Select a station to listen:</p>
 {{ range $index, $station := .Params.stations }}
 <article>
-    <div class="station" id="{{ .name }}" data-src="{{ .stream_url }}">
-        <h2>
-            {{ .name }}
-            <small> {{ .location }} </small>
-        </h2>
-    </div>
+	<div class="station" id="{{ .name }}" data-src="{{ .stream_url }}">
+		<h2>
+			{{ .name }}
+			<small> {{ .location }} </small>
+		</h2>
+	</div>
 </article>
 {{ end }}
 
@@ -17,41 +17,46 @@
 <div id="wrapper"><button id="control">loading...</button></div>
 
 <article>
-    <h2 id="what">What’s this about?</h2>
+	<h2 id="what">What’s this about?</h2>
 
-    <div id="faq">
-        <p>
-            This is a pet project by
-            <a href="/about/">Matt Sherman</a>, to provide a simple, distraction-free way of listening to my favorite
-            classical stations. Maybe
-            they’re your favorites too.
-        </p>
+	<div id="faq">
+		<p>
+			This is a pet project by
+			<a href="/about/">Matt Sherman</a>, to provide a simple, distraction-free way of listening to my favorite
+			classical stations. Maybe
+			they’re your favorites too.
+		</p>
 
-        <p>
-            I’m partial to terrestrial, local radio with real DJs telling you about the weather.
-        </p>
+		<p>
+			I’m partial to terrestrial, local radio with real DJs telling you about the weather.
+		</p>
 
-        <h3>It doesn’t have my favorite station.</h3>
+		<h3>It doesn’t have my favorite station.</h3>
 
-        <p>Let me know! mwsherman@gmail.com or <a href="https://mobile.twitter.com/clipperhouse">@clipperhouse</a>.</p>
+		<p>Let me know! mwsherman@gmail.com or <a href="https://mobile.twitter.com/clipperhouse">@clipperhouse</a>.</p>
 
-        <h3>
-            It doesn’t display the titles of the pieces.
-        </h3>
+		<h3>
+			It doesn’t display the titles of the pieces.
+		</h3>
 
-        <p>
-            The DJ will tell you.
-        </p>
+		<p>
+			The DJ will tell you.
+		</p>
 
-        <h3>
-            It doesn’t display the album covers.
-        </h3>
+		<h3>
+			It doesn’t display the album covers.
+		</h3>
 
-        <p>
-            Guys in powdered wigs standing next to spinets, you mean? Lang Lang’s $400 haircut?
-        </p>
-    </div>
+		<p>
+			Guys in powdered wigs standing next to spinets, you mean? Lang Lang’s $400 haircut?
+		</p>
+	</div>
 
 </article>
+
+
+{{ range $index, $station := .Params.stations }}
+<link rel="preconnect" href="{{ .stream_url }}">
+{{ end }}
 
 {{ end }}
