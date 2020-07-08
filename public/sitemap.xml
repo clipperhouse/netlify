@@ -3,11 +3,6 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://clipperhouse.com/</loc>
-    <lastmod>2018-09-04T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://clipperhouse.com/go-generics-typeclasses/</loc>
     <lastmod>2018-09-04T00:00:00+00:00</lastmod>
   </url>
@@ -1513,6 +1508,10 @@
   
   <url>
     <loc>https://clipperhouse.com/categories/</loc>
+  </url>
+  
+  <url>
+    <loc>https://clipperhouse.com/</loc>
   </url>
   
   <url>
