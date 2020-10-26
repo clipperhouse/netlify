@@ -16,7 +16,7 @@ Great. Why? Because we need to read a cookie. So really….
 
 Better! But seriously, are you only looking at cookies?
 
-### Right, I only ever touch `Request.Cookies`, which is of type `HttpCookieCollection`
+### Right, I only ever touch `Request.Cookies`
 
 Now we are getting somewhere! You only need an `HttpCookieCollection`. That’s a pretty simple data type.
 

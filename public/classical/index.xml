@@ -5,10 +5,6 @@
     <link>https://clipperhouse.com/classical/</link>
     <description>Recent content in A simple classical radio player on clipperhouse.com</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    
-	<atom:link href="https://clipperhouse.com/classical/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <language>en-us</language><atom:link href="https://clipperhouse.com/classical/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>
