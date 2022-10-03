@@ -52,19 +52,19 @@
 <p>Say you have a text template, and that template is intended to output Go code. You’d like to pass a data structure into the template, and have the structure appear in the template as its own value literal.</p>
 <p>There is a printf format string verb that does just this: <code>%#v</code></p>
 <p>Let’s say you have a template like: <code>p := {{.}}</code>, where <code>{{.}}</code> represents the passed-in data. Let’s say the data is a struct.</p>
-<pre><code>type Person struct {  
+<pre tabindex="0"><code>type Person struct {  
 	Name string  
 	Age int  
 }
 
-person := Person{&quot;Jane&quot;, 30}  
+person := Person{&#34;Jane&#34;, 30}  
 </code></pre><p>In order to have the output work as we wish, we make this modification to the template:</p>
-<pre><code>p := {{ printf &quot;%#v&quot; . }}
+<pre tabindex="0"><code>p := {{ printf &#34;%#v&#34; . }}
 </code></pre><p>&hellip;which means “call <code>printf</code> with the format string <code>%#v</code> and the value <code>.</code>, which represents the passed data”.</p>
 <p>We execute the template along the lines of:
 <code>tmpl.Execute(w, person)</code> (Where tmpl is the compiled template, and <code>w</code> is an <code>io.Writer</code>)</p>
 <p>The resulting output will be:</p>
-<pre><code>p := pkg.Person{Name:&quot;Jane&quot;, Age:30}
+<pre tabindex="0"><code>p := pkg.Person{Name:&#34;Jane&#34;, Age:30}
 </code></pre><p>&hellip;where <code>pkg</code> is your package name. Thats valid Go code which in turn can be executed. Neat.</p>
 <p>Here’s a <a href="http://play.golang.org/p/7lF_UmL2Qt">runnable version</a> on the Go playground.</p>
 

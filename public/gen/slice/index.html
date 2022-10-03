@@ -63,14 +63,14 @@ type Example struct {}
 <p>Example:</p>
 <pre><code>// +gen slice:&quot;Aggregate[string]&quot;
 type Employee struct{
-    Name 	   string
-    Department string
+	Name 	   string
+	Department string
 }
 
 employees := EmployeeSlice {
-    {&quot;Alice&quot;, &quot;Accounting&quot;},
-    {&quot;Bob&quot;, &quot;Back Office&quot;},
-    {&quot;Carly&quot;, &quot;Containers&quot;},
+	{&quot;Alice&quot;, &quot;Accounting&quot;},
+	{&quot;Bob&quot;, &quot;Back Office&quot;},
+	{&quot;Carly&quot;, &quot;Containers&quot;},
 }
 
 join := func(state string, e Employee) string {
@@ -90,14 +90,14 @@ employees.AggregateString(join) // =&gt; &quot;Alice, Bob, Carly&quot;
 <p>Example:</p>
 <pre><code>// +gen slice:&quot;All&quot;
 type Person struct {
-    Name    string
-    Present bool
+	Name    string
+	Present bool
 }
 
 gang := PersonSlice {
-    {&quot;Alice&quot;, true},
-    {&quot;Bob&quot;, false},
-    {&quot;Carly&quot;, true},
+	{&quot;Alice&quot;, true},
+	{&quot;Bob&quot;, false},
+	{&quot;Carly&quot;, true},
 }
 
 here := func(p Person) bool {
@@ -114,13 +114,13 @@ gang.All(here) // =&gt; false, Bob didn't make it
 <p>Example:</p>
 <pre><code>// +gen slice:&quot;Any&quot;
 type Person struct {
-    Name string
+	Name string
 }
 
 people := PersonSlice {
-    {&quot;Bueller&quot;},
-    {&quot;Spicoli&quot;},
-    {&quot;Mr. Hand&quot;},
+	{&quot;Bueller&quot;},
+	{&quot;Spicoli&quot;},
+	{&quot;Mr. Hand&quot;},
 }
 
 bueller := func(p Person) bool {
@@ -150,18 +150,18 @@ temps.Average() // =&gt; 5.567, nil
 <p>Example:</p>
 <pre><code>// +gen slice:&quot;Average[int]&quot;
 type Player struct {
-    Name   string
-    Points int
+	Name   string
+	Points int
 }
 
 players := PlayerSlice {
-    {&quot;Alice&quot;, 450},
-    {&quot;Bob&quot;, 100},
-    {&quot;Carly&quot;, 200},
+	{&quot;Alice&quot;, 450},
+	{&quot;Bob&quot;, 100},
+	{&quot;Carly&quot;, 200},
 }
 
 points := func(p Player) int {
-    return p.Points
+	return p.Points
 }
 
 players.AverageInt(points) // =&gt; 250, nil
@@ -174,20 +174,20 @@ players.AverageInt(points) // =&gt; 250, nil
 <p>Example:</p>
 <pre><code>// +gen slice:&quot;Count&quot;
 type Monster struct {
-    Name  string
-    Furry bool
-    Fangs int
+	Name  string
+	Furry bool
+	Fangs int
 }
 
 monsters := MonsterSlice {
-    {&quot;Alice&quot;, false, 0},
-    {&quot;Bob&quot;, true, 4},
-    {&quot;Carly&quot;, true, 2},
-    {&quot;Dave&quot;, false, 2},
+	{&quot;Alice&quot;, false, 0},
+	{&quot;Bob&quot;, true, 4},
+	{&quot;Carly&quot;, true, 2},
+	{&quot;Dave&quot;, false, 2},
 }
 
 werewolf := func(m Monster) bool {
-    return m.Fangs &gt; 0 &amp;&amp; m.Furry
+	return m.Fangs &gt; 0 &amp;&amp; m.Furry
 }
 
 monsters.Count(werewolf) // =&gt; 2 (Bob &amp; Carly)
@@ -199,16 +199,16 @@ monsters.Count(werewolf) // =&gt; 2 (Bob &amp; Carly)
 <p>Example:</p>
 <pre><code>// +gen slice:&quot;Distinct&quot;
 type Hipster struct {
-    FavoriteBand string
-    Mustachioed  bool
-    Bepectacled  bool
+	FavoriteBand string
+	Mustachioed  bool
+	Bepectacled  bool
 }
 
 hipsters := HipsterSlice {
-    {&quot;Neutral Milk Hotel&quot;, true, true},
-    {&quot;Neutral Milk Hotel&quot;, true, true},
-    {&quot;Neutral Milk Hotel&quot;, true, true},
-    {&quot;Neutral Milk Hotel&quot;, true, true},
+	{&quot;Neutral Milk Hotel&quot;, true, true},
+	{&quot;Neutral Milk Hotel&quot;, true, true},
+	{&quot;Neutral Milk Hotel&quot;, true, true},
+	{&quot;Neutral Milk Hotel&quot;, true, true},
 }
 
 hipsters.Distinct() // =&gt; [{&quot;Neutral Milk Hotel&quot;, true, true}]
@@ -222,15 +222,15 @@ hipsters.Distinct() // =&gt; [{&quot;Neutral Milk Hotel&quot;, true, true}]
 <p>Example:</p>
 <pre><code>// +gen slice:&quot;DistinctBy&quot;
 type Hipster struct {
-    FavoriteBand string
-    Mustachioed  bool
+	FavoriteBand string
+	Mustachioed  bool
 }
 
 hipsters := HipsterSlice {
-    {&quot;Neutral Milk Hotel&quot;, true},
-    {&quot;Death Cab for Cutie&quot;, true},
-    {&quot;You Probably Haven’t Heard of Them&quot;, true},
-    {&quot;Neutral Milk Hotel&quot;, false},
+	{&quot;Neutral Milk Hotel&quot;, true},
+	{&quot;Death Cab for Cutie&quot;, true},
+	{&quot;You Probably Haven’t Heard of Them&quot;, true},
+	{&quot;Neutral Milk Hotel&quot;, false},
 }
 
 band := func(a Hipster, b Hipster) bool {
@@ -247,14 +247,14 @@ hipsters.DistinctBy(band) // =&gt; [{&quot;Neutral Milk Hotel&quot;, true}, {&qu
 <p>Example:</p>
 <pre><code>// +gen slice:&quot;First&quot;
 type Customer struct {
-    Name string
-    Here bool
+	Name string
+	Here bool
 }
 
 customers := CustomerSlice {
-    {&quot;Alice&quot;, false},
-    {&quot;Bob&quot;, true},
-    {&quot;Carly&quot;, true},
+	{&quot;Alice&quot;, false},
+	{&quot;Bob&quot;, true},
+	{&quot;Carly&quot;, true},
 }
 
 come := func(c Customer) bool {
@@ -271,20 +271,20 @@ served, err := customers.First(come) // =&gt; {&quot;Bob&quot;, true}, nil
 <p>Example:</p>
 <pre><code>// +gen slice:&quot;GroupBy[int]&quot;
 type Movie struct {
-    Title string
-    Year  int
+	Title string
+	Year  int
 }
 
 movies := MovieSlice {
-    {&quot;Independence Day&quot;, 1996},
-    {&quot;Iron Man&quot;, 2008},
-    {&quot;Fargo&quot;, 1996},
-    {&quot;Django Unchained&quot;, 2012},
-    {&quot;WALL-E&quot;, 2008},
+	{&quot;Independence Day&quot;, 1996},
+	{&quot;Iron Man&quot;, 2008},
+	{&quot;Fargo&quot;, 1996},
+	{&quot;Django Unchained&quot;, 2012},
+	{&quot;WALL-E&quot;, 2008},
 }
 
 year := func(m Movie) int {
-    return m.Year
+	return m.Year
 }
 
 movies.GroupByInt(year) // =&gt; { 1996: [{&quot;Independence Day&quot;, 1996}, {&quot;Fargo&quot;, 1996}], 2008: [{&quot;Iron Man&quot;, 2008}, {&quot;WALL-E&quot;, 2008}], 2012: [{&quot;Django Unchained&quot;, 2012}] }
@@ -311,22 +311,22 @@ prices.Max() // =&gt; 43.21
 <p>Example:</p>
 <pre><code>// +gen slice:&quot;Max[Dollars]&quot;
 type Movie struct {
-    Title     string
-    BoxOffice Dollars
+	Title     string
+	BoxOffice Dollars
 }
 
 type Dollars int
 
 movies := MovieSlice {
-    {&quot;Independence Day&quot;, 1000000},
-    {&quot;Iron Man&quot;, 5000000},
-    {&quot;Fargo&quot;, 3000000},
-    {&quot;Django Unchained&quot;, 9000000},
-    {&quot;WALL-E&quot;, 4000000},
+	{&quot;Independence Day&quot;, 1000000},
+	{&quot;Iron Man&quot;, 5000000},
+	{&quot;Fargo&quot;, 3000000},
+	{&quot;Django Unchained&quot;, 9000000},
+	{&quot;WALL-E&quot;, 4000000},
 }
 
 box := func(e Employee) Dollars {
-    return e.BoxOffice
+	return e.BoxOffice
 }
 
 movies.MaxDollars(box) // =&gt; 9000000
@@ -339,17 +339,17 @@ movies.MaxDollars(box) // =&gt; 9000000
 <p>Example:</p>
 <pre><code>// +gen slice:&quot;MaxBy&quot;
 type Rectangle struct {
-    Width, Height int
+	Width, Height int
 }
 
 func (r Rectangle) Area() int {
-    return r.Width * r.Height
+	return r.Width * r.Height
 }
 
 rectangles := RectangleSlice{
-    {5, 4},
-    {6, 7},
-    {2, 3},
+	{5, 4},
+	{6, 7},
+	{2, 3},
 }
 
 area := func(a, b Rectangle) bool {
@@ -380,22 +380,22 @@ prices.Min() // =&gt; 12.34
 <p>Example:</p>
 <pre><code>// +gen slice:&quot;Min[Dollars]&quot;
 type Movie struct {
-    Title     string
-    BoxOffice Dollars
+	Title     string
+	BoxOffice Dollars
 }
 
 type Dollars int
 
 movies := MovieSlice {
-    {&quot;Independence Day&quot;, 1000000},
-    {&quot;Iron Man&quot;, 5000000},
-    {&quot;Fargo&quot;, 3000000},
-    {&quot;Django Unchained&quot;, 9000000},
-    {&quot;WALL-E&quot;, 4000000},
+	{&quot;Independence Day&quot;, 1000000},
+	{&quot;Iron Man&quot;, 5000000},
+	{&quot;Fargo&quot;, 3000000},
+	{&quot;Django Unchained&quot;, 9000000},
+	{&quot;WALL-E&quot;, 4000000},
 }
 
 box := func(e Employee) Dollars {
-    return e.BoxOffice
+	return e.BoxOffice
 }
 
 movies.MinDollars(box) // =&gt; 1000000
@@ -408,17 +408,17 @@ movies.MinDollars(box) // =&gt; 1000000
 <p>Example:</p>
 <pre><code>// +gen slice:&quot;MinBy&quot;
 type Rectangle struct {
-    Width, Height int
+	Width, Height int
 }
 
 func (r Rectangle) Area() int {
-    return r.Width * r.Height
+	return r.Width * r.Height
 }
 
 rectangles := RectangleSlice{
-    {5, 4},
-    {6, 7},
-    {2, 3},
+	{5, 4},
+	{6, 7},
+	{2, 3},
 }
 
 area := func(a, b Rectangle) bool {
@@ -435,18 +435,18 @@ rectangles.MinBy(area) // =&gt; {2, 3}
 <p>Example:</p>
 <pre><code>// +gen slice:&quot;Select[int]&quot;
 type Player struct {
-    Name   string
-    Points int
+	Name   string
+	Points int
 }
 
 players := PlayerSlice {
-    {&quot;Alice&quot;, 450},
-    {&quot;Bob&quot;, 100},
-    {&quot;Carly&quot;, 200},
+	{&quot;Alice&quot;, 450},
+	{&quot;Bob&quot;, 100},
+	{&quot;Carly&quot;, 200},
 }
 
 points := func(p Player) int {
-    return p.Points
+	return p.Points
 }
 
 players.SelectInt(points) // =&gt; [450, 100, 200]
@@ -488,23 +488,23 @@ ratings.SortDesc() // =&gt; {9, 7, 5, 2, 2, 1}
 <p>Example:</p>
 <pre><code>// +gen slice:&quot;SortBy&quot;
 type Movie struct {
-    Title string
-    Year  int
+	Title string
+	Year  int
 }
 
 movies := MovieSlice {
-    {&quot;Independence Day&quot;, 1996},
-    {&quot;Iron Man&quot;, 2008},
-    {&quot;Fargo&quot;, 1996},
-    {&quot;Django Unchained&quot;, 2012},
-    {&quot;WALL-E&quot;, 2008},
+	{&quot;Independence Day&quot;, 1996},
+	{&quot;Iron Man&quot;, 2008},
+	{&quot;Fargo&quot;, 1996},
+	{&quot;Django Unchained&quot;, 2012},
+	{&quot;WALL-E&quot;, 2008},
 }
 
 yearThenTitle := func(a, b Movie) bool {
-    if a.Year == b.Year {
-        return a.Title &lt; b.Title
-    }
-    return a.Year &lt; b.Year
+	if a.Year == b.Year {
+		return a.Title &lt; b.Title
+	}
+	return a.Year &lt; b.Year
 }
 
 movies.SortBy(yearThenTitle) // =&gt; [{&quot;Fargo&quot;, 1996}, &quot;Independence Day&quot;, 1996}, {&quot;Iron Man&quot;, 2008}, {&quot;WALL-E&quot;, 2008}, {&quot;Django Unchained&quot;, 2012}]
@@ -516,7 +516,7 @@ movies.SortBy(yearThenTitle) // =&gt; [{&quot;Fargo&quot;, 1996}, &quot;Independ
 </code></pre>
 <p>Example:</p>
 <pre><code>shiny := func(p Product) bool {
-    return p.Manufacturer == &quot;Apple&quot;
+	return p.Manufacturer == &quot;Apple&quot;
 }
 wishlist := products.Where(shiny)
 </code></pre>

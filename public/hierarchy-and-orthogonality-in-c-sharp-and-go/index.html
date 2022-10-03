@@ -50,14 +50,14 @@
 			<div>
 				<p>Prompted by <a href="https://groups.google.com/d/msg/golang-nuts/aJ6JiiIusqg/TJM09vOkv9YJ">this question</a> I got to thinking about methods in C# and Go. It’s another example, I realized, of Go’s (logical) insistence on orthogonality and (stylistic) insistence on flatness/lack of hierarchy.</p>
 <p>Go does not allow methods to be defined within a struct (ersatz class) definition. Instead of this, where the method lives in the declaration:</p>
-<pre><code>type Foo struct {  
+<pre tabindex="0"><code>type Foo struct {  
     Count, Price int  
     Total() int {     // nope  
         return Count * Price  
     }  
 }
 </code></pre><p>…one writes this:</p>
-<pre><code>type Foo struct {  
+<pre tabindex="0"><code>type Foo struct {  
     Count, Price int  
 }
 
@@ -66,7 +66,7 @@ func (f Foo) Total() int {
 }
 </code></pre><p>Which is to say, the method is its own free-standing declaration.</p>
 <p>In C#, you have a choice of doing either (eliding access modifiers):</p>
-<pre><code>struct Foo {  
+<pre tabindex="0"><code>struct Foo {  
     int Count;  
     int Price;  
     int Total() {  
@@ -74,7 +74,7 @@ func (f Foo) Total() int {
     }  
 }
 </code></pre><p>&hellip;or, using extension methods (eliding the outer class):</p>
-<pre><code>struct Foo {  
+<pre tabindex="0"><code>struct Foo {  
     int Count;  
     int Price;  
 }

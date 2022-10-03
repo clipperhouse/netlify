@@ -56,36 +56,36 @@
 <p>Most C-family languages have an operator like a++, which says “increment the value of a value by 1”.</p>
 <p>In some languages, this expression has a return value. In Go, it does not.</p>
 <p><strong>C#</strong></p>
-<pre><code>var a = 5;  
+<pre tabindex="0"><code>var a = 5;  
 Console.WriteLine(a++);  
 // prints 5 (though a is now valued at 6)
 </code></pre><p><strong>Go</strong></p>
-<pre><code>a := 5  
+<pre tabindex="0"><code>a := 5  
 fmt.Println(a++)  
 // syntax error: unexpected ++
 </code></pre><p>To be clear, <code>a++</code> is a valid statement in Go; it increments by 1. It does not, however, return a value, avoiding error-prone patterns like <code>if (a++ == 6) { …</code></p>
 <h3 id="assignment">Assignment</h3>
 <p>In C#, assignments have return values.</p>
 <p><strong>C#</strong></p>
-<pre><code>int a;  
+<pre tabindex="0"><code>int a;  
 Console.WriteLine(a = 5);  
 // prints 5
 </code></pre><p>The expression <code>a = 5</code> has a return value of 5. Further shenanigans:</p>
-<pre><code>int a;  
+<pre tabindex="0"><code>int a;  
 Console.WriteLine((a = 5) == 5);  
 // prints True
 </code></pre><p>The expression <code>(a = 5)</code> returns a value of 5, which is then compared to 5.</p>
 <p><strong>Go</strong></p>
 <p>In Go, assignments are statements.</p>
-<pre><code>a := 5  
+<pre tabindex="0"><code>a := 5  
 fmt.Println(a = 6)  
 // syntax error: unexpected =
 </code></pre><p><code>a = 6</code> is a valid assignment statement. It is not, however, an expression (and thus can’t be evaluated and printed).</p>
 <h3 id="ternaries">Ternaries</h3>
 <p>You are probably familiar with an expression like <code>condition ? value : other</code>. It’s generally understood as syntactic sugar for an if-else statement, with a return value.</p>
 <p><strong>C#</strong></p>
-<pre><code>var temp = 50;  
-Console.WriteLine(temp &gt; 30 ? &quot;warm&quot; : &quot;cold&quot;);  
+<pre tabindex="0"><code>var temp = 50;  
+Console.WriteLine(temp &gt; 30 ? &#34;warm&#34; : &#34;cold&#34;);  
 // prints warm
 </code></pre><p><strong>Go</strong></p>
 <p>Go doesn’t have ternaries! Reason being, it’s sugar for an if-else, and if-else’s are statements, not expressions.</p>

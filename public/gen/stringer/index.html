@@ -54,11 +54,11 @@
 type Pill int
 
 const (
-    Placebo Pill = iota
-    Aspirin
-    Ibuprofen
-    Paracetamol
-    Acetaminophen = Paracetamol
+	Placebo Pill = iota
+	Aspirin
+	Ibuprofen
+	Paracetamol
+	Acetaminophen = Paracetamol
 )
 </code></pre>
 <p>Then simply <code>gen</code> your package, as normal. You should see a new file, <code>pill_stringer.go</code>, containing the String method for your type.</p>

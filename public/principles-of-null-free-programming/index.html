@@ -64,14 +64,14 @@
 <p>One great way of avoiding null is to have a better definition of non-existence. For example, where we might be tempted to define non-existence as null, let’s define it as <strong>a collection of length zero</strong>. <a href="https://en.wikipedia.org/wiki/Option_type">Option type</a> implementations often look like this.</p>
 <p>In C#, “by ID” database calls will typically return null if such a record does not exist. In LINQ, it’s expressed as a FirstOrDefault or SingleOrDefault, which return null on “not found”. Or, one can call First or Single methods which throw on same. I consider both to be bad semantics.</p>
 <p>Rather, consider a pattern based on an explicit Boolean for existence, and where <strong>null is not in our vocabulary</strong>:</p>
-<pre><code>Thing t;  
+<pre tabindex="0"><code>Thing t;  
 if (!TryThingById(12345, out t)) {  
-    return &quot;Sorry, not found!&quot;;  
+    return &#34;Sorry, not found!&#34;;  
 } 
 // …do as you wish with t, without worrying about null
 </code></pre><p>The Try pseudocode would look something like:</p>
-<pre><code>bool TryThingById(int id, out Thing t) {  
-    var rows = DB.Query(&quot;select * from Things where ID = ?&quot;, id);  
+<pre tabindex="0"><code>bool TryThingById(int id, out Thing t) {  
+    var rows = DB.Query(&#34;select * from Things where ID = ?&#34;, id);  
     if (rows.Length == 0) {  
         return false; // t is indeed null but should be irrelevant  
     }  
@@ -83,7 +83,7 @@ if (!TryThingById(12345, out t)) {
 }
 </code></pre><p>I believe this code follows our Principles above: we don’t pass a null, and we don’t branch on one either.</p>
 <p>A common idiom in C# is to use <strong>optional parameters</strong>, with null as the default value:</p>
-<pre><code>void Foo(int id, Bar bar = null, Baz baz = null)
+<pre tabindex="0"><code>void Foo(int id, Bar bar = null, Baz baz = null)
 </code></pre><p>When I see a method signature like this, I have $5 that says the method’s implementation branches on those parameters. Which means that parameters are no longer just values, but are control flow. Bad semantics.</p>
 <p>Instead, consider creating several methods with good names, and which <strong>accept and require only the parameters they use</strong> – no more optionals. “Branching” is done via method resolution, about which we can more easily reason.</p>
 <hr>

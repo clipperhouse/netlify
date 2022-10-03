@@ -952,7 +952,7 @@ Depending on the scenario, and this is a matter of taste, CoffeeScript is more e
       
       <guid>https://clipperhouse.com/every-programming-problem/</guid>
       <description>…can be entirely described in these four dimensions:
- Cache: The browser is a cache for a web page, whose canonical version lives on a server.</description>
+Cache: The browser is a cache for a web page, whose canonical version lives on a server.</description>
     </item>
     
     <item>
@@ -2720,6 +2720,15 @@ Rich: UN committees. Reach: entrepeneurs.</description>
     </item>
     
     <item>
+      <title>Clipperhouse</title>
+      <link>https://clipperhouse.com/clipperhouse/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://clipperhouse.com/clipperhouse/</guid>
+      <description>I was directed to a thread about a poor soul who started a project in Go, eventually had to hand it off to the community, and discovered that his original source no longer compiled, due to third-party dependencies having changed.</description>
+    </item>
+    
+    <item>
       <title>gen: force flag</title>
       <link>https://clipperhouse.com/gen/force/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -2771,6 +2780,33 @@ Rich: UN committees. Reach: entrepeneurs.</description>
       
       <guid>https://clipperhouse.com/gen/overview/</guid>
       <description>gen is an attempt to bring some generics-like functionality to Go. It uses type annotations to add &amp;ldquo;of T&amp;rdquo; functionality to your packages.</description>
+    </item>
+    
+    <item>
+      <title>Interruptible</title>
+      <link>https://clipperhouse.com/interruptible/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://clipperhouse.com/interruptible/</guid>
+      <description>There are two categories of job in a startup: those where interruptibility is a feature, and those where it is a bug.</description>
+    </item>
+    
+    <item>
+      <title>Managers must do data science</title>
+      <link>https://clipperhouse.com/managers-must-do-data-science/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://clipperhouse.com/managers-must-do-data-science/</guid>
+      <description>Data science (your definition here) is a necessity not just for “data” projects but for management.</description>
+    </item>
+    
+    <item>
+      <title>The more interesting game</title>
+      <link>https://clipperhouse.com/more-interesting-game/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://clipperhouse.com/more-interesting-game/</guid>
+      <description>At Stack, I play a lot of ping pong with my coworkers. I win with some regularity, but my technique is not especially aggressive, or even correct.</description>
     </item>
     
   </channel>

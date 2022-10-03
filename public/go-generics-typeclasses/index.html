@@ -52,7 +52,7 @@
 <p>In the spirit of Go’s ‘good enough’ type system, here’s a thought experiment for ‘good enough’ generics. I think we can get 80% of the power for 20% of the complexity.</p>
 <p>(‘Good enough’ is a compliment – I come from a C# background and find the simplicity of Go’s type system refreshing.)</p>
 <p>I propose that the first version of Go’s generics consist of a finite-but-thorough set of <strong>builtin type classes</strong>, instead of user-defined contracts. Usage might look like:</p>
-<pre><code>func Sum(type T numeric)(x []T) T {
+<pre tabindex="0"><code>func Sum(type T numeric)(x []T) T {
 	var total T
 	for _, v := range x {
 		total += v
@@ -60,11 +60,11 @@
 	return total
 }
 </code></pre><p>or</p>
-<pre><code>type Set(type T comparable) []T
+<pre tabindex="0"><code>type Set(type T comparable) []T
 </code></pre><p>&hellip;where <code>numeric</code> and <code>comparable</code> are typeclasses, defined below. In fact, the <code>go/types</code> package already <a href="https://github.com/golang/go/blob/master/src/go/types/predicates.go">defines many type classes</a>, without using that terminology.</p>
 <p>Instead of covering the full design space of what generics can do, we focus on an intuitive set of typeclasses that meets a broad set of needs.</p>
 <h3 id="typeclasses">Typeclasses</h3>
-<pre><code>numeric = integer | float | complex
+<pre tabindex="0"><code>numeric = integer | float | complex
   // supports +, -, *, / operators, enabling generic Sum, Average, etc
 
 comparable = [requires logic]
@@ -81,7 +81,7 @@ float = float32 | float64
 complex = complex64 | complex128
 </code></pre><h3 id="assignability">Assignability</h3>
 <p>Typeclasses are not assignable types, they are (optional) constraints on generic type declarations.</p>
-<pre><code>// Wrong
+<pre tabindex="0"><code>// Wrong
 type Foo struct {
 	Age numeric
 }
