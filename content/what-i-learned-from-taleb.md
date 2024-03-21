@@ -1,7 +1,6 @@
 ---
 title: "A career decision influenced by Nassim Taleb"
 date: 2018-06-10
-author: "Matt Sherman"
 ---
 
 On the occasion of reading Nassim Taleb’s [latest book](https://www.amazon.com/Skin-Game-Hidden-Asymmetries-Daily/dp/042528462X/), an anecdote about how he influenced a career decision of mine.

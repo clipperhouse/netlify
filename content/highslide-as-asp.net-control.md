@@ -1,7 +1,6 @@
 ---
 title: "Highslide as ASP.net control"
 date: 2009-06-04
-author: "Matt Sherman"
 
 ---
 

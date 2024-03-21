@@ -1,7 +1,6 @@
 ---
 title: "Quickie geek quiz #3"
 date: 2009-08-31
-author: "Matt Sherman"
 
 ---
 

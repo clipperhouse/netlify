@@ -1,7 +1,6 @@
 ---
 title: "Please don’t lobby"
 date: 2011-12-19
-author: "Matt Sherman"
 ---
 
 I agree with Clay Johnson that the our industry’s [ignorance of Congress](//www.informationdiet.com/blog/read/dear-internet-its-no-longer-ok-to-not-know-how-congress-works-) might be greater than Congress’ ignorance of the Internet. He comes to the conclusion that we need to lobby more.

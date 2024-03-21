@@ -1,7 +1,6 @@
 ---
 title: "What legacy politicians actually fear"
 date: 2012-01-18
-author: "Matt Sherman"
 
 ---
 

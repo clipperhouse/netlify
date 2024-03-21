@@ -1,7 +1,6 @@
 ---
 title: "Does TypeScript make for more performant JavaScript?"
 date: 2018-07-19
-author: "Matt Sherman"
 ---
 
 I have a theory that the use of TypeScript _de facto_ makes for more performant JavaScript, by making the runtime’s “type prediction” more accurate.

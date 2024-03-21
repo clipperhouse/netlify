@@ -1,7 +1,6 @@
 ---
 title: "Know your guarantees, Go edition"
 date: 2014-07-12
-author: "Matt Sherman"
 
 ---
 

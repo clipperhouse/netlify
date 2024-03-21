@@ -1,7 +1,6 @@
 ---
 title: "Your phone is faster than Amtrak’s wifi"
 date: 2013-01-11
-author: "Matt Sherman"
 
 ---
 

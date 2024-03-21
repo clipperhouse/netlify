@@ -1,7 +1,6 @@
 ---
 title: "Internet diversity & cut cables"
 date: 2008-02-04
-author: "Matt Sherman"
 
 ---
 

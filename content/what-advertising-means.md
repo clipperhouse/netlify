@@ -1,7 +1,6 @@
 ---
 title: "What advertising means"
 date: 2008-02-10
-author: "Matt Sherman"
 
 ---
 

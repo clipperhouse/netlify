@@ -1,7 +1,6 @@
 ---
 title: "Stacking up"
 date: 2010-06-06
-author: "Matt Sherman"
 
 ---
 

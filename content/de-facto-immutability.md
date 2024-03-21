@@ -1,7 +1,6 @@
 ---
 title: "De facto immutability"
 date: 2014-06-05
-author: "Matt Sherman"
 
 ---
 

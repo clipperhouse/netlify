@@ -1,7 +1,6 @@
 ---
 title: "jQuery appears to be incompatible with IE9 preview"
 date: 2010-03-16
-author: "Matt Sherman"
 
 ---
 

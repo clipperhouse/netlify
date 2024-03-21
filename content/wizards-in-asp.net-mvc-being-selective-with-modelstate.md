@@ -1,7 +1,6 @@
 ---
 title: "Wizards in ASP.Net MVC: being selective with ModelState"
 date: 2009-11-23
-author: "Matt Sherman"
 
 ---
 

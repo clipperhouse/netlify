@@ -1,7 +1,6 @@
 ---
 title: "Web Components: have we not been here before?"
 date: 2014-03-31
-author: "Matt Sherman"
 
 ---
 

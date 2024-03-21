@@ -1,7 +1,6 @@
 ---
 title: "New build of jQuery Controls [1.0.3429]"
 date: 2009-05-23
-author: "Matt Sherman"
 
 ---
 

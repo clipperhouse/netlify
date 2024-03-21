@@ -1,7 +1,6 @@
 ---
 title: "iPhone activation servers overwhelmed?"
 date: 2009-06-17
-author: "Matt Sherman"
 
 ---
 

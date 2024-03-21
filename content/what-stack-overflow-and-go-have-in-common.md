@@ -1,7 +1,6 @@
 ---
 title: "What Stack Overflow and Go have in common"
 date: 2014-03-21
-author: "Matt Sherman"
 
 ---
 

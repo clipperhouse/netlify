@@ -1,7 +1,6 @@
 ---
 title: "Why is Intel having so much trouble shipping its solid-state drives?"
 date: 2009-11-29
-author: "Matt Sherman"
 
 ---
 

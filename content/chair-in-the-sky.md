@@ -1,7 +1,6 @@
 ---
 title: "Chair in the sky"
 date: 2009-08-18
-author: "Matt Sherman"
 
 ---
 

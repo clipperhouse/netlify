@@ -1,7 +1,6 @@
 ---
 title: "Alikewise learnings #1: DIY PR"
 date: 2010-08-11
-author: "Matt Sherman"
 
 ---
 

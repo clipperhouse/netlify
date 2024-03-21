@@ -1,7 +1,6 @@
 ---
 title: "Principles of null-free programming"
 date: 2016-03-02
-author: "Matt Sherman"
 
 ---
 

@@ -1,7 +1,6 @@
 ---
 title: "Dear tech journalists: please announce a one-year, self-imposed Apple embargo"
 date: 2010-04-26
-author: "Matt Sherman"
 
 ---
 

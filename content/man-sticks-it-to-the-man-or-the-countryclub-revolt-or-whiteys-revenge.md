@@ -1,7 +1,6 @@
 ---
 title: "The Man sticks it to The Man; or, the Country-club Revolt; or, Whitey’s Revenge"
 date: 2009-12-17
-author: "Matt Sherman"
 
 ---
 

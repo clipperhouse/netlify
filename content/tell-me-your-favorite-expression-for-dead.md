@@ -1,7 +1,6 @@
 ---
 title: "Tell me your favorite expression for “dead”"
 date: 2009-08-11
-author: "Matt Sherman"
 
 ---
 

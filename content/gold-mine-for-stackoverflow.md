@@ -1,7 +1,6 @@
 ---
 title: "A gold mine for StackOverflow"
 date: 2009-12-02
-author: "Matt Sherman"
 
 ---
 

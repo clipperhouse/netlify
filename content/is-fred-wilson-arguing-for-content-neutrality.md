@@ -1,7 +1,6 @@
 ---
 title: "Is Fred Wilson arguing for “Content Neutrality”?"
 date: 2010-10-17
-author: "Matt Sherman"
 
 ---
 

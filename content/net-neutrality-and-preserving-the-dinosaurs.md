@@ -1,7 +1,6 @@
 ---
 title: "Net neutrality and preserving the dinosaurs"
 date: 2010-02-22
-author: "Matt Sherman"
 
 ---
 

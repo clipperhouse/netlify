@@ -1,7 +1,6 @@
 ---
 title: "A few thoughts on flat"
 date: 2013-06-12
-author: "Matt Sherman"
 
 ---
 

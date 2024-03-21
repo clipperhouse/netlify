@@ -1,7 +1,6 @@
 ---
 title: "Does this metric pass the smell test?"
 date: 2009-10-23
-author: "Matt Sherman"
 
 ---
 

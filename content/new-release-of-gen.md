@@ -1,7 +1,6 @@
 ---
 title: "New release of gen"
 date: 2014-01-26
-author: "Matt Sherman"
 
 ---
 

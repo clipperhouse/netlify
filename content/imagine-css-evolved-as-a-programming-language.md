@@ -1,7 +1,6 @@
 ---
 title: "Imagine CSS evolved as a programming language"
 date: 2009-06-16
-author: "Matt Sherman"
 
 ---
 

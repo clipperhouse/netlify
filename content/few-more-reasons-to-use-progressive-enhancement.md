@@ -1,7 +1,6 @@
 ---
 title: "A few more reasons to use Progressive Enhancement"
 date: 2010-02-23
-author: "Matt Sherman"
 
 ---
 

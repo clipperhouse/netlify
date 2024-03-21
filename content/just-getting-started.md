@@ -1,7 +1,6 @@
 ---
 title: "Just getting started"
 date: 2009-04-24
-author: "Matt Sherman"
 
 ---
 

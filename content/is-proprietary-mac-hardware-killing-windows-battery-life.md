@@ -1,7 +1,6 @@
 ---
 title: "Is proprietary Mac hardware killing Windows battery life?"
 date: 2009-07-31
-author: "Matt Sherman"
 
 ---
 

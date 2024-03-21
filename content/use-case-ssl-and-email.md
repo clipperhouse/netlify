@@ -1,7 +1,6 @@
 ---
 title: "Use case: SSL and email"
 date: 2009-06-17
-author: "Matt Sherman"
 
 ---
 

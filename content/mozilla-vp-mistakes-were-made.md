@@ -1,7 +1,6 @@
 ---
 title: "Mozilla VP: “mistakes were made”"
 date: 2009-10-19
-author: "Matt Sherman"
 
 ---
 

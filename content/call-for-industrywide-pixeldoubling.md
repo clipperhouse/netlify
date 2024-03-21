@@ -1,7 +1,6 @@
 ---
 title: "A call for industry-wide pixel-doubling"
 date: 2011-01-18
-author: "Matt Sherman"
 
 ---
 

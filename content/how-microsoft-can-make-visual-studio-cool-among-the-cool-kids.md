@@ -1,7 +1,6 @@
 ---
 title: "How Microsoft can make Visual Studio cool among the cool kids"
 date: 2011-02-01
-author: "Matt Sherman"
 
 ---
 

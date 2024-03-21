@@ -1,7 +1,6 @@
 ---
 title: "NYC doesn’t need to be Silicon Valley"
 date: 2014-04-28
-author: "Matt Sherman"
 
 ---
 

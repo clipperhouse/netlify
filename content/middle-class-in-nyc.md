@@ -1,7 +1,6 @@
 ---
 title: "Middle class in NYC"
 date: 2014-05-04
-author: "Matt Sherman"
 
 ---
 

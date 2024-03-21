@@ -1,7 +1,6 @@
 ---
 title: "The quaintness of “content” vs “infrastructure”"
 date: 2012-08-02
-author: "Matt Sherman"
 
 ---
 

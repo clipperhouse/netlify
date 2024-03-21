@@ -1,7 +1,6 @@
 ---
 title: "Clipperhouse"
 date: 
-author: "Matt Sherman"
 draft: true
 ---
 

@@ -1,7 +1,6 @@
 ---
 title: "The “var” thing"
 date: 2009-09-04
-author: "Matt Sherman"
 
 ---
 

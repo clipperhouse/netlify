@@ -1,7 +1,6 @@
 ---
 title: "Unsolicited iPhone suggestions #1: email"
 date: 2009-11-17
-author: "Matt Sherman"
 
 ---
 

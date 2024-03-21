@@ -1,7 +1,6 @@
 ---
 title: "The Internet is not a public commons, and it is not Beetlejuice"
 date: 2010-12-24
-author: "Matt Sherman"
 
 ---
 

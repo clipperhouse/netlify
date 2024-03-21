@@ -1,7 +1,6 @@
 ---
 title: "Preserving the back button on Ajax pages"
 date: 2010-01-19
-author: "Matt Sherman"
 
 ---
 

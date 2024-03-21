@@ -1,7 +1,6 @@
 ---
 title: "Solving the n+1 problem in Linq to SQL, using projection"
 date: 2009-10-12
-author: "Matt Sherman"
 
 ---
 

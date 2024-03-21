@@ -1,7 +1,6 @@
 ---
 title: "Will Microsoft “subsidize” Zune HD pricing?"
 date: 2009-08-13
-author: "Matt Sherman"
 
 ---
 

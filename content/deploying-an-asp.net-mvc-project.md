@@ -1,7 +1,6 @@
 ---
 title: "Deploying an ASP.net MVC project"
 date: 2009-09-10
-author: "Matt Sherman"
 
 ---
 

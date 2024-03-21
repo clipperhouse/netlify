@@ -1,7 +1,6 @@
 ---
 title: "URL shortener for ASP.net"
 date: 2009-06-06
-author: "Matt Sherman"
 
 ---
 

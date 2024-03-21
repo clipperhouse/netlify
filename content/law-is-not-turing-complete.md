@@ -1,7 +1,6 @@
 ---
 title: "The law is not Turing complete"
 date: 2011-07-17
-author: "Matt Sherman"
 
 ---
 

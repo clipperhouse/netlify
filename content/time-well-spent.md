@@ -1,7 +1,6 @@
 ---
 title: "Time well spent"
 date: 2016-04-07
-author: "Matt Sherman"
 
 ---
 

@@ -1,7 +1,6 @@
 ---
 title: "Three ways the new iOS ad blocking hurts Google"
 date: 2015-09-18
-author: "Matt Sherman"
 
 ---
 

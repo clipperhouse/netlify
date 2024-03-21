@@ -1,7 +1,6 @@
 ---
 title: "64-bitness: what it is and what it ain’t"
 date: 2009-06-12
-author: "Matt Sherman"
 
 ---
 

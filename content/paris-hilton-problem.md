@@ -1,7 +1,6 @@
 ---
 title: "The Paris Hilton problem"
 date: 2009-11-04
-author: "Matt Sherman"
 
 ---
 

@@ -1,7 +1,6 @@
 ---
 title: "HTTPS is the least of your problems"
 date: 2010-06-18
-author: "Matt Sherman"
 
 ---
 

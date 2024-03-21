@@ -1,7 +1,6 @@
 ---
 title: "Google as censor? Of course."
 date: 2009-06-21
-author: "Matt Sherman"
 
 ---
 

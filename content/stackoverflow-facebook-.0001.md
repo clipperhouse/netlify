@@ -1,7 +1,6 @@
 ---
 title: "StackOverflow == Facebook * .0001"
 date: 2009-10-13
-author: "Matt Sherman"
 
 ---
 

@@ -1,7 +1,6 @@
 ---
 title: "keyCode vs charCode vs Firefox"
 date: 2009-11-17
-author: "Matt Sherman"
 
 ---
 

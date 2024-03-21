@@ -1,7 +1,6 @@
 ---
 title: "Mayor at the movies"
 date: 2009-06-05
-author: "Matt Sherman"
 
 ---
 

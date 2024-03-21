@@ -1,7 +1,6 @@
 ---
 title: "The inorganic app"
 date: 2012-03-12
-author: "Matt Sherman"
 
 ---
 

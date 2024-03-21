@@ -1,7 +1,6 @@
 ---
 title: "Your bottleneck is you, or, why I’ve stopped worrying about performance"
 date: 2009-09-16
-author: "Matt Sherman"
 
 ---
 

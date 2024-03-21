@@ -1,7 +1,6 @@
 ---
 title: "Epistemology in everyday life"
 date: 2010-04-27
-author: "Matt Sherman"
 
 ---
 

@@ -1,7 +1,6 @@
 ---
 title: "Questions about the Apple tablet that no one is answering yet"
 date: 2009-12-30
-author: "Matt Sherman"
 
 ---
 

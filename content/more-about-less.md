@@ -1,7 +1,6 @@
 ---
 title: "More about {less}"
 date: 2009-06-30
-author: "Matt Sherman"
 
 ---
 

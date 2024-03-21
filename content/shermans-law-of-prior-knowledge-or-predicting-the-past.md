@@ -1,7 +1,6 @@
 ---
 title: "Sherman’s law of prior knowledge, or, predicting the past"
 date: 2010-07-15
-author: "Matt Sherman"
 
 ---
 

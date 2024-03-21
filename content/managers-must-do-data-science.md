@@ -1,7 +1,6 @@
 ---
 title: "Managers must do data science"
 date: 
-author: "Matt Sherman"
 draft: true
 ---
 

@@ -1,7 +1,6 @@
 ---
 title: "Preventing mission creep in your Views, or, ignorance is bliss"
 date: 2009-12-19
-author: "Matt Sherman"
 
 ---
 

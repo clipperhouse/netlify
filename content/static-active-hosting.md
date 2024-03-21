@@ -1,7 +1,6 @@
 ---
 title: "Static file hosting with active content"
 date: 2018-05-29
-author: "Matt Sherman"
 ---
 
 The combination of [Hugo & Netlify]({{< relref "how-to-move-from-medium-to-static-hosting-with-jekyll-or-hugo.md" >}}) to host my blog has turned out to make [easy things easy, and hard things possible](https://www.quora.com/What-is-the-origin-of-the-phrase-make-the-easy-things-easy-and-the-hard-things-possible).

@@ -1,7 +1,6 @@
 ---
 title: "Incidence of compulsion"
 date: 2013-07-18
-author: "Matt Sherman"
 
 ---
 

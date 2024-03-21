@@ -6,14 +6,13 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<title>
 		{{- if .IsHome }}
-			{{- .Site.Title }} · {{ .Site.Params.author -}}
+			{{- .Site.Title }}
 		{{- else }}
-			{{- .Title }} · {{ .Params.author | default .Site.Params.author -}}
+			{{- .Title }}
 		{{ end -}}
 	</title>
 
 	{{ with .Site.Params.description }}<meta name="description" content="{{ . }}">{{ end }}
-	{{ with .Site.Params.author }}<meta name="author" content="{{ . }}">{{ end }}
 
 	{{ $csss := slice "normalize" "style" }}
 	{{ range $csss -}}

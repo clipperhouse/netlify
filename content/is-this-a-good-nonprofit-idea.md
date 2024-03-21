@@ -1,7 +1,6 @@
 ---
 title: "Is this a good “non-profit” idea?"
 date: 2009-12-27
-author: "Matt Sherman"
 
 ---
 

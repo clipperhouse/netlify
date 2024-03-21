@@ -1,7 +1,6 @@
 ---
 title: "Fluency"
 date: 2012-06-09
-author: "Matt Sherman"
 
 ---
 

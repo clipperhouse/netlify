@@ -1,7 +1,6 @@
 ---
 title: "Windows virtual machines get competitive"
 date: 2009-11-11
-author: "Matt Sherman"
 
 ---
 

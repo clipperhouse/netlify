@@ -1,7 +1,6 @@
 ---
 title: "A prediction of EU hypocrisy"
 date: 2009-07-07
-author: "Matt Sherman"
 
 ---
 

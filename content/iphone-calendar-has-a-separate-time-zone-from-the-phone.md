@@ -1,7 +1,6 @@
 ---
 title: "The iPhone calendar has a separate time zone from the phone"
 date: 2009-11-17
-author: "Matt Sherman"
 
 ---
 

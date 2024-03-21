@@ -1,7 +1,6 @@
 ---
 title: "Progress bars cannot be accurate"
 date: 2013-10-23
-author: "Matt Sherman"
 
 ---
 

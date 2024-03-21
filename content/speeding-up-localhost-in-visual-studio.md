@@ -1,7 +1,6 @@
 ---
 title: "Speeding up localhost in Visual Studio"
 date: 2009-12-16
-author: "Matt Sherman"
 
 ---
 

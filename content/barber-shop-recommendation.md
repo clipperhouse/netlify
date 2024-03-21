@@ -1,7 +1,6 @@
 ---
 title: "Barber shop recommendation"
 date: 2009-08-27
-author: "Matt Sherman"
 
 ---
 

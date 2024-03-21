@@ -1,7 +1,6 @@
 ---
 title: "What’s next for Better Bird?"
 date: 2012-03-18
-author: "Matt Sherman"
 
 ---
 

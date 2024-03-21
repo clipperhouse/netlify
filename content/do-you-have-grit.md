@@ -1,7 +1,6 @@
 ---
 title: "Do you have “grit”?"
 date: 2009-08-02
-author: "Matt Sherman"
 
 ---
 

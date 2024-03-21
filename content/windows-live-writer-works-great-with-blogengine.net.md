@@ -1,7 +1,6 @@
 ---
 title: "Windows Live Writer works great with BlogEngine.Net"
 date: 2009-06-06
-author: "Matt Sherman"
 
 ---
 

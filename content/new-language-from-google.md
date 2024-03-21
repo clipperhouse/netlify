@@ -1,7 +1,6 @@
 ---
 title: "A new language from Google"
 date: 2009-11-10
-author: "Matt Sherman"
 
 ---
 

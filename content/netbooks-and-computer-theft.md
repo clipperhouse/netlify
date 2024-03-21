@@ -1,7 +1,6 @@
 ---
 title: "Netbooks and computer theft"
 date: 2010-01-11
-author: "Matt Sherman"
 
 ---
 

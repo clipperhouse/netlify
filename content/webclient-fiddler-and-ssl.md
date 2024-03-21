@@ -1,7 +1,6 @@
 ---
 title: "WebClient, Fiddler and SSL"
 date: 2009-05-01
-author: "Matt Sherman"
 
 ---
 

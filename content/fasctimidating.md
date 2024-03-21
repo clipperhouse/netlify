@@ -1,7 +1,6 @@
 ---
 title: "Fasctimidating"
 date: 2013-06-02
-author: "Matt Sherman"
 
 ---
 

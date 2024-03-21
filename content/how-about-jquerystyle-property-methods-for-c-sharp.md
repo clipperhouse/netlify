@@ -1,7 +1,6 @@
 ---
 title: "How about jQuery-style “property methods” for C#?"
 date: 2010-02-23
-author: "Matt Sherman"
 
 ---
 

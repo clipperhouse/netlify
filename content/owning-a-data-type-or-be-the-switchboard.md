@@ -1,7 +1,6 @@
 ---
 title: "Owning a data type, or, be the switchboard"
 date: 2012-02-11
-author: "Matt Sherman"
 
 ---
 

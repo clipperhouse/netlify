@@ -1,7 +1,6 @@
 ---
 title: "The iPhone needs multi-tasking, stat"
 date: 2009-07-11
-author: "Matt Sherman"
 
 ---
 

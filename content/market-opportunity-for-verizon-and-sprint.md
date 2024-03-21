@@ -1,7 +1,6 @@
 ---
 title: "A market opportunity for Verizon and Sprint"
 date: 2009-08-01
-author: "Matt Sherman"
 
 ---
 

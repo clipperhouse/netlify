@@ -1,7 +1,6 @@
 ---
 title: "Why is a Social Security Number considered a secret?"
 date: 2009-07-06
-author: "Matt Sherman"
 
 ---
 

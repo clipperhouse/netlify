@@ -1,7 +1,6 @@
 ---
 title: "Is Google building an anti-spam empire?, or, size matters"
 date: 2009-09-16
-author: "Matt Sherman"
 
 ---
 

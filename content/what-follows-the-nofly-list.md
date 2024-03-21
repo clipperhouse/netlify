@@ -1,7 +1,6 @@
 ---
 title: "What follows the “no-fly” list?"
 date: 2010-01-07
-author: "Matt Sherman"
 
 ---
 

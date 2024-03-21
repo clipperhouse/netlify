@@ -1,7 +1,6 @@
 ---
 title: "How to move from Medium to static hosting with Jekyll or Hugo"
 date: 2018-05-24
-author: "Matt Sherman"
 ---
 
 I recently moved [my blog](http://clipperhouse.netlify.com/) from Medium to static generation with Hugo & hosting with Netlify. I prefer static hosting for performance reasons, and because Markdown is so nice.

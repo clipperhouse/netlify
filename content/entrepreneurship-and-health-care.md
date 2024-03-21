@@ -1,7 +1,6 @@
 ---
 title: "Entrepreneurship and health care"
 date: 2010-03-23
-author: "Matt Sherman"
 
 ---
 

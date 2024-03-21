@@ -1,7 +1,6 @@
 ---
 title: "Can Google Chrome OS get traction?"
 date: 2009-07-07
-author: "Matt Sherman"
 
 ---
 

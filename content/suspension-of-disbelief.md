@@ -1,7 +1,6 @@
 ---
 title: "Suspension of disbelief"
 date: 2012-02-29
-author: "Matt Sherman"
 
 ---
 

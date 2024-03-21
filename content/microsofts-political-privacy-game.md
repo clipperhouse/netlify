@@ -1,7 +1,6 @@
 ---
 title: "Microsoft’s political privacy game"
 date: 2012-08-08
-author: "Matt Sherman"
 
 ---
 

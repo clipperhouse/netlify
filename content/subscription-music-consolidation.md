@@ -1,7 +1,6 @@
 ---
 title: "Subscription music consolidation"
 date: 2009-05-20
-author: "Matt Sherman"
 
 ---
 

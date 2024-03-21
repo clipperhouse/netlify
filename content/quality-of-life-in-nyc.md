@@ -1,7 +1,6 @@
 ---
 title: "Quality of life in NYC"
 date: 2011-12-30
-author: "Matt Sherman"
 
 ---
 

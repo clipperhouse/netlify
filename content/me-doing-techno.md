@@ -1,7 +1,6 @@
 ---
 title: "Me doing techno"
 date: 2011-12-15
-author: "Matt Sherman"
 
 ---
 

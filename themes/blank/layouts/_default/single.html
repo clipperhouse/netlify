@@ -7,19 +7,17 @@
 			</div>
 		</article>
 		<div class="post-meta">
-			<p>—</p>
 			<p>
-				{{- if or .Params.author .Site.Params.author -}}Published by {{ .Params.author | default .Site.Params.author }} on {{ end }}
-				{{- .Date.Format "January 2, 2006" -}}
+				Published {{ .Date.Format "January 2, 2006" -}}
 			</p>
-			<p>
+			<!-- <p>
 				{{ with .NextInSection }}
 					<a href="{{ .Permalink }}" class="prev">← {{ .Title }}</a>
 				{{ end }}
 				{{ with .PrevInSection }}
 					<a href="{{ .Permalink }}" class="next">{{ .Title }} →</a>
 				{{ end }}
-			</p>
+			</p> -->
 		</div>
 	</main>
 {{ end }}

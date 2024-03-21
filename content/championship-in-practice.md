@@ -1,7 +1,6 @@
 ---
 title: "Championship in practice (at Stack Overflow)"
 date: 2018-06-12
-author: "Matt Sherman"
 ---
 
 This is a follow-on to my [introductory post on championship](/championship/), please give that a read for background.

@@ -1,7 +1,6 @@
 ---
 title: "The flagship strategy of mobile phones — Microsoft needs one"
 date: 2009-11-02
-author: "Matt Sherman"
 
 ---
 

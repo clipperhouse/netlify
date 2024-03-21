@@ -1,7 +1,6 @@
 ---
 title: "Disrupting the NYC rental information market"
 date: 2012-02-04
-author: "Matt Sherman"
 
 ---
 

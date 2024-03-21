@@ -1,7 +1,6 @@
 ---
 title: "Leopard : Snow Leopard :: Vista : Windows 7"
 date: 2009-06-08
-author: "Matt Sherman"
 
 ---
 

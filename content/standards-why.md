@@ -1,7 +1,6 @@
 ---
 title: "Standards: why?"
 date: 2010-04-29
-author: "Matt Sherman"
 
 ---
 

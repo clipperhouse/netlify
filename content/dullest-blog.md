@@ -1,7 +1,6 @@
 ---
 title: "The dullest blog"
 date: 2009-09-16
-author: "Matt Sherman"
 
 ---
 

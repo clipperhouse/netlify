@@ -1,7 +1,6 @@
 ---
 title: "Amazon’s core competency? Pricing."
 date: 2009-12-16
-author: "Matt Sherman"
 
 ---
 

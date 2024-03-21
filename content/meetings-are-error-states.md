@@ -1,7 +1,6 @@
 ---
 title: "Meetings are error states"
 date: 2009-07-25
-author: "Matt Sherman"
 
 ---
 

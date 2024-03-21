@@ -1,7 +1,6 @@
 ---
 title: "When Apple aligns with a carrier, act II"
 date: 2009-10-07
-author: "Matt Sherman"
 
 ---
 

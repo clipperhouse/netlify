@@ -1,7 +1,6 @@
 ---
 title: "A thought experiment: serial vs parallel"
 date: 2009-09-19
-author: "Matt Sherman"
 
 ---
 

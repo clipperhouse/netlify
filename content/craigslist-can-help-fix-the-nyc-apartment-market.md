@@ -1,7 +1,6 @@
 ---
 title: "Craigslist can help fix the NYC apartment market"
 date: 2012-02-26
-author: "Matt Sherman"
 
 ---
 

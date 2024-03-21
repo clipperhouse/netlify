@@ -1,7 +1,6 @@
 ---
 title: "Javastrict"
 date: 2009-05-22
-author: "Matt Sherman"
 
 ---
 

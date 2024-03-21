@@ -1,7 +1,6 @@
 ---
 title: "Firefox has a user base; does it have a future?"
 date: 2009-05-13
-author: "Matt Sherman"
 
 ---
 

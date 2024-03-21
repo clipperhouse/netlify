@@ -1,7 +1,6 @@
 ---
 title: "Two, billion-dollar UI mistakes in Windows 8"
 date: 2012-08-01
-author: "Matt Sherman"
 ---
 
 I am very interested in Windows 8 both as a user and as a tech industry watcher. Big bet, big changes.

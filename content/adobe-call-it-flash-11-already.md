@@ -1,7 +1,6 @@
 ---
 title: "Adobe: call it Flash 11 already"
 date: 2010-04-29
-author: "Matt Sherman"
 
 ---
 

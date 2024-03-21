@@ -1,7 +1,6 @@
 ---
 title: "Ben Horowitz on wage-fixing"
 date: 2014-03-23
-author: "Matt Sherman"
 
 ---
 

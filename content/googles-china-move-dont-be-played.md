@@ -1,7 +1,6 @@
 ---
 title: "Google’s China move: don’t be played"
 date: 2010-01-12
-author: "Matt Sherman"
 
 ---
 

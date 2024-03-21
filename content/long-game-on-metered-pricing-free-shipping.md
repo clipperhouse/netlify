@@ -1,7 +1,6 @@
 ---
 title: "The long game on metered pricing: free shipping"
 date: 2008-06-03
-author: "Matt Sherman"
 
 ---
 

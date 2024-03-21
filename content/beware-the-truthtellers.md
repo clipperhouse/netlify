@@ -1,7 +1,6 @@
 ---
 title: "Beware the truth-tellers"
 date: 2010-06-04
-author: "Matt Sherman"
 
 ---
 

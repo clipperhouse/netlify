@@ -1,7 +1,6 @@
 ---
 title: "Can haz Mifi?"
 date: 2009-05-24
-author: "Matt Sherman"
 
 ---
 

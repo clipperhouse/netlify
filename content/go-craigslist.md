@@ -1,7 +1,6 @@
 ---
 title: "Go craigslist"
 date: 2009-05-20
-author: "Matt Sherman"
 
 ---
 

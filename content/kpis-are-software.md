@@ -1,7 +1,6 @@
 ---
 title: "KPIs are software"
 date: 2016-10-28
-author: "Matt Sherman"
 
 ---
 

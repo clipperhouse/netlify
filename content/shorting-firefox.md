@@ -1,7 +1,6 @@
 ---
 title: "Shorting Firefox"
 date: 2009-12-10
-author: "Matt Sherman"
 
 ---
 

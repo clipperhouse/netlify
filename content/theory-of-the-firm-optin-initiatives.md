@@ -1,7 +1,6 @@
 ---
 title: "Theory of the firm: opt-in initiatives"
 date: 2015-03-08
-author: "Matt Sherman"
 
 ---
 

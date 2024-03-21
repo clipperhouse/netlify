@@ -1,7 +1,6 @@
 ---
 title: "How a savvy landlord would handle Airbnb"
 date: 2014-06-21
-author: "Matt Sherman"
 
 ---
 

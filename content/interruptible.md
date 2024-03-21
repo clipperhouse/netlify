@@ -1,7 +1,6 @@
 ---
 title: "Interruptible"
 date: 
-author: "Matt Sherman"
 draft: true
 ---
 

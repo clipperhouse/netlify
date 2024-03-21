@@ -1,7 +1,6 @@
 ---
 title: "The DOM is a data source, query it wisely"
 date: 2009-06-02
-author: "Matt Sherman"
 
 ---
 

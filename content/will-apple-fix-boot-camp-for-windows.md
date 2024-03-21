@@ -1,7 +1,6 @@
 ---
 title: "Will Apple fix Boot Camp for Windows?"
 date: 2009-10-22
-author: "Matt Sherman"
 
 ---
 

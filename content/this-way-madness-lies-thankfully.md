@@ -1,7 +1,6 @@
 ---
 title: "This way madness lies (thankfully)"
 date: 2012-05-28
-author: "Matt Sherman"
 
 ---
 

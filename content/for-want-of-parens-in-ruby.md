@@ -1,7 +1,6 @@
 ---
 title: "For want of parens in Ruby"
 date: 2013-06-03
-author: "Matt Sherman"
 
 ---
 

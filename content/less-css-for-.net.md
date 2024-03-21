@@ -1,7 +1,6 @@
 ---
 title: "{less} CSS for .Net"
 date: 2009-12-04
-author: "Matt Sherman"
 
 ---
 

@@ -1,7 +1,6 @@
 ---
 title: "Programmers and “productivity”"
 date: 2009-12-25
-author: "Matt Sherman"
 
 ---
 

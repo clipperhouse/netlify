@@ -1,7 +1,6 @@
 ---
 title: "Unsolicited iPhone suggestions #2: internet radio"
 date: 2009-11-19
-author: "Matt Sherman"
 
 ---
 

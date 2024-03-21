@@ -1,7 +1,6 @@
 ---
 title: "Will Apple emulate the “Kindle everywhere” strategy?"
 date: 2010-01-19
-author: "Matt Sherman"
 
 ---
 

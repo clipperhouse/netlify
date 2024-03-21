@@ -1,7 +1,6 @@
 ---
 title: "The Googlebot runs Javascript"
 date: 2009-07-26
-author: "Matt Sherman"
 
 ---
 

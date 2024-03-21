@@ -1,7 +1,6 @@
 ---
 title: "Labor costs make way for Maslow"
 date: 2012-12-09
-author: "Matt Sherman"
 
 ---
 

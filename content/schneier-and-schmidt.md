@@ -1,7 +1,6 @@
 ---
 title: "Schneier and Schmidt"
 date: 2009-12-10
-author: "Matt Sherman"
 
 ---
 

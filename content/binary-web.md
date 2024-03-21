@@ -1,7 +1,6 @@
 ---
 title: "The binary web"
 date: 2011-10-30
-author: "Matt Sherman"
 
 ---
 

@@ -1,7 +1,6 @@
 ---
 title: "Embedding a struct declaration in a text template in Go"
 date: 2015-01-31
-author: "Matt Sherman"
 
 ---
 

@@ -1,7 +1,6 @@
 ---
 title: "Threshold thinking"
 date: 2014-02-18
-author: "Matt Sherman"
 
 ---
 

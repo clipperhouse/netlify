@@ -1,7 +1,6 @@
 ---
 title: "Network, network, network, network or network?"
 date: 2009-06-25
-author: "Matt Sherman"
 
 ---
 

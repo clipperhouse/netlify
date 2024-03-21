@@ -1,7 +1,6 @@
 ---
 title: "Liquidity, open source and security"
 date: 2015-04-04
-author: "Matt Sherman"
 
 ---
 

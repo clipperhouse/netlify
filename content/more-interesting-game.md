@@ -1,7 +1,6 @@
 ---
 title: "The more interesting game"
 date: 
-author: "Matt Sherman"
 draft: true
 ---
 

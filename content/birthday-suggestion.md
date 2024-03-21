@@ -1,7 +1,6 @@
 ---
 title: "Birthday suggestion"
 date: 2009-06-27
-author: "Matt Sherman"
 
 ---
 

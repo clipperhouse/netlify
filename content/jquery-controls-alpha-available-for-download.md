@@ -1,7 +1,6 @@
 ---
 title: "jQuery controls alpha available for download"
 date: 2009-05-04
-author: "Matt Sherman"
 
 ---
 

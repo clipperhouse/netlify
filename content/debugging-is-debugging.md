@@ -1,7 +1,6 @@
 ---
 title: "Debugging is debugging"
 date: 2013-03-17
-author: "Matt Sherman"
 
 ---
 

@@ -1,7 +1,6 @@
 ---
 title: "Nulls and knowledge"
 date: 2009-05-14
-author: "Matt Sherman"
 
 ---
 

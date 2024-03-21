@@ -1,7 +1,6 @@
 ---
 title: "The point at which your project becomes bigger than your head"
 date: 2010-03-23
-author: "Matt Sherman"
 
 ---
 

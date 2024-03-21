@@ -1,7 +1,6 @@
 ---
 title: "It’s the data, not the algorithm"
 date: 2009-08-30
-author: "Matt Sherman"
 
 ---
 

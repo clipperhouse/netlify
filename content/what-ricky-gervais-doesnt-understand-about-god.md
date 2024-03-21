@@ -1,7 +1,6 @@
 ---
 title: "What Ricky Gervais doesn’t understand about God"
 date: 2010-12-19
-author: "Matt Sherman"
 
 ---
 

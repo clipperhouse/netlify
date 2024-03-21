@@ -1,7 +1,6 @@
 ---
 title: "Having the courtesy to be wrong"
 date: 2018-06-27
-author: "Matt Sherman"
 ---
 
 One characteristic I see in accountable managers is having **the courtesy to be wrong**.

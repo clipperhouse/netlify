@@ -1,7 +1,6 @@
 ---
 title: "Teevee on the peecee"
 date: 2009-11-14
-author: "Matt Sherman"
 
 ---
 

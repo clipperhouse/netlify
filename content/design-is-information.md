@@ -1,7 +1,6 @@
 ---
 title: "Design is information"
 date: 2011-03-23
-author: "Matt Sherman"
 
 ---
 

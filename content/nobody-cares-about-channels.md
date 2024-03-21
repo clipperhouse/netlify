@@ -1,7 +1,6 @@
 ---
 title: "Nobody cares about “channels”"
 date: 2012-03-03
-author: "Matt Sherman"
 
 ---
 

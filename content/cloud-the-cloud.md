@@ -1,7 +1,6 @@
 ---
 title: "The cloud! The cloud!"
 date: 2009-06-11
-author: "Matt Sherman"
 
 ---
 

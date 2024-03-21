@@ -1,7 +1,6 @@
 ---
 title: "Killer app for the Zune HD: Tivo for radio"
 date: 2009-08-10
-author: "Matt Sherman"
 
 ---
 

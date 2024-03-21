@@ -1,7 +1,6 @@
 ---
 title: "Fixing the jQuery “jump” on slide"
 date: 2011-02-10
-author: "Matt Sherman"
 
 ---
 

@@ -1,7 +1,6 @@
 ---
 title: "Regulation, incumbency, haves and have-nots"
 date: 2008-02-14
-author: "Matt Sherman"
 
 ---
 

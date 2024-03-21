@@ -1,7 +1,6 @@
 ---
 title: "More jQuery performance tips: 11 keystrokes buy you 10x"
 date: 2009-06-09
-author: "Matt Sherman"
 
 ---
 

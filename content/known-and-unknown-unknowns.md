@@ -1,7 +1,6 @@
 ---
 title: "Known and unknown unknowns"
 date: 2009-07-19
-author: "Matt Sherman"
 
 ---
 

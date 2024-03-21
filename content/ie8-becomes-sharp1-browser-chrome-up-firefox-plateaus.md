@@ -1,7 +1,6 @@
 ---
 title: "IE8 becomes #1 browser, Chrome up, Firefox plateaus"
 date: 2010-02-01
-author: "Matt Sherman"
 
 ---
 

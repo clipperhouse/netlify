@@ -1,7 +1,6 @@
 ---
 title: "Inversion of scarcity"
 date: 2011-06-26
-author: "Matt Sherman"
 
 ---
 

@@ -1,7 +1,6 @@
 ---
 title: "Compile-time checking of views in ASP.Net MVC"
 date: 2009-09-19
-author: "Matt Sherman"
 
 ---
 

@@ -1,7 +1,6 @@
 ---
 title: "Javascript is now strategic for Microsoft"
 date: 2009-07-14
-author: "Matt Sherman"
 
 ---
 
