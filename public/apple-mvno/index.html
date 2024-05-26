@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Apple as MVNO for LLMs
+		</title>
+
+	
+
+	
+	
+			
+			<link href="/css/normalize.580818700724d42d7fcc4979b0197971fca1c6d2e0286769237a0ac897df5512.css" rel="stylesheet">
+		
+			
+			<link href="/css/style.6f8e6e0e4af8fd32b52a8082c6fd47e8ef5b62d94bc7cd9d43d1aad5004d5387.css" rel="stylesheet">
+		
+
+	
+
+	
+
+	<link rel="icon" type="image/png" sizes="32x32" href="/img/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="/img/favicon-16x16.png">
+	<link rel="apple-touch-icon" href="/img/apple-touch-icon.png">
+</head>
+<body>
+	<header>
+	<nav>
+		<a href="https://clipperhouse.com/">clipperhouse.com</a>
+		<span class="sep">·</span>
+		<a href="/jargon/">jargon</a>
+		<span class="sep">·</span>
+		<a href="/gen/overview/">gen</a>
+		<span class="sep">·</span>
+		<a href="/stack-correlations/">tag correlations</a>
+		<span class="sep">·</span>
+		<a href="/classical/">classical radio</a>
+	</nav>
+</header>
+
+	
+	<main class="single">
+		<article>
+			<h1>Apple as MVNO for LLMs</h1>
+			<div>
+				<p>It&rsquo;s expected that Apple will be improving Siri in the upcoming iOS 18, exploiting the progress that Large Language Models (LLMs) have made over the past year or so. How might they do it?</p>
+<p>I trust and hope that Apple will continue their tradition of starting with the user experience, and working back to the technological ingredients to achive that. So I trust and hope that Siri won&rsquo;t merely be a wrapper for ChatGPT et al.</p>
+<p>What if Apple were to see Siri as analogous to an <a href="https://en.wikipedia.org/wiki/Mobile_virtual_network_operator">MVNO</a> (Mobile Virtual Network Operator) for LLMs?</p>
+<p>Instead of committing to a single LLM provider (OpenAI, Google, Anthropic, Meta), Apple could instead treat Siri as a front-end to many such providers.</p>
+<h2 id="easy-wins">Easy wins</h2>
+<p>Currently, when Siri doesn&rsquo;t have its own good answer for a user query, it punts to web search. So an easy win would be to punt to an LLM in those situations, or perhaps better, RAG. Eminently doable and a likely improvement over the status quo.</p>
+<p>Siri might choose to round-robin between LLMs, and track user success by provider. They might give users the option of choosing the provider, as Safari and Chrome offer for web search.</p>
+<h2 id="epistemic-improvements">Epistemic improvements</h2>
+<p>I suspect Apple does not yet see any one of the LLM providers as mature enough to provide the polished Apple experience. Hallucinations, overconfidence, etc.</p>
+<p>This is where the MVNO analogy comes in. For a user query, Apple could query several LLMs at once. Then, compare each response for similarity. (This comparision would also be done by a language model!)</p>
+<p>Where these independent responses largely agree, Siri could offer epistemic confidence in its results. Where the responses are too different, Siri could choose to communicate that to the user in the form of &ldquo;hmm, I am getting different stories here&rdquo;.</p>
+<p>Over time, Apple would learn about the performance of each LLM, and choose dynamically. In the MVNO analogy, choose the provider with the most bars.</p>
+
+			</div>
+		</article>
+		<div class="post-meta">
+			<p>
+				Published May 26, 2024</p>
+			
+		</div>
+	</main>
+
+	<footer>
+
+</footer>
+
+
+	
+</body>
+</html>
