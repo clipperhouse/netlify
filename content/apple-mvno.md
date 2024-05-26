@@ -5,7 +5,7 @@ date: 2024-05-26
 
 It's expected that Apple will be improving Siri in the upcoming iOS 18, exploiting the progress that Large Language Models (LLMs) have made over the past year or so. How might they do it?
 
-I trust and hope that Apple will continue their tradition of starting with the user experience, and working back to the technological ingredients to achive that. So I trust and hope that Siri won't merely be a wrapper for ChatGPT et al.
+I trust and hope that Apple will continue their tradition of starting with the user experience, and working back to the technological ingredients to achieve that. So I trust and hope that Siri won't merely be a wrapper for ChatGPT et al.
 
 What if Apple were to see Siri as analogous to an [MVNO](https://en.wikipedia.org/wiki/Mobile_virtual_network_operator) (Mobile Virtual Network Operator) for LLMs?
 
@@ -21,7 +21,7 @@ Siri might choose to round-robin between LLMs, and track user success by provide
 
 I suspect Apple does not yet see any one of the LLM providers as mature enough to provide the polished Apple experience. Hallucinations, overconfidence, etc.
 
-This is where the MVNO analogy comes in. For a user query, Apple could query several LLMs at once. Then, compare each response for similarity. (This comparision would also be done by a language model!)
+This is where the MVNO analogy comes in. For a user query, Apple could query several LLMs at once. Then, compare each response for similarity. (This comparison would also be done by a language model!)
 
 Where these independent responses largely agree, Siri could offer epistemic confidence in its results. Where the responses are too different, Siri could choose to communicate that to the user in the form of "hmm, I am getting different stories here".
 
