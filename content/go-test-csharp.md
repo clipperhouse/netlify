@@ -3,9 +3,9 @@ title: "Go-style “alongside” testing in C# and .Net Core"
 date: 2024-06-12
 ---
 
-I move between Go and C#, and one idiom I like in Go is tests living alongside the things they are testing, right in the same project. In addition to style preference, it allows testing internal functions. It appears to me that in the .Net world, having a separate test project is expected.
+I move between Go and C#, and one idiom I like in Go is tests living alongside the things they are testing, right in the same project. In addition to style preference, it (IMHO) more easily allows testing internal functions. In the .Net world, having a [separate test project](https://stackoverflow.com/questions/358196/c-sharp-internal-access-modifier-when-doing-unit-testing) is traditional.
 
-To achieve this in .Net, one must a) make the tests discoverable by a test runner, and b) optionally-but-desirably, ensure that the test files and frameworks don't get compiled into Release builds. 
+To achieve the Go style in .Net, one must a) make the tests discoverable by a test runner, and b) optionally-but-desirably, ensure that the test files and frameworks don't get compiled into Release builds. 
 
 This is configured in the `.csproj` file. If you'd like to cut to the chase, have a look at [this example](https://github.com/clipperhouse/uax29.net/blob/main/uax29/uax29.csproj).
 
