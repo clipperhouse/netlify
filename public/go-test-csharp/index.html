@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Go-style “alongside” testing in C# and .Net Core
+		</title>
+
+	
+
+	
+	
+			
+			<link href="/css/normalize.580818700724d42d7fcc4979b0197971fca1c6d2e0286769237a0ac897df5512.css" rel="stylesheet">
+		
+			
+			<link href="/css/style.2697af6c372ee608035f6cb6675ec4caaed1afb18b94a763db00113f4f6e78b4.css" rel="stylesheet">
+		
+
+	
+
+	
+
+	<link rel="icon" type="image/png" sizes="32x32" href="/img/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="/img/favicon-16x16.png">
+	<link rel="apple-touch-icon" href="/img/apple-touch-icon.png">
+</head>
+<body>
+	<header>
+	<nav>
+		<a href="https://clipperhouse.com/">clipperhouse.com</a>
+		<span class="sep">·</span>
+		<a href="/jargon/">jargon</a>
+		<span class="sep">·</span>
+		<a href="/gen/overview/">gen</a>
+		<span class="sep">·</span>
+		<a href="/stack-correlations/">tag correlations</a>
+		<span class="sep">·</span>
+		<a href="/classical/">classical radio</a>
+	</nav>
+</header>
+
+	
+	<main class="single">
+		<article>
+			<h1>Go-style “alongside” testing in C# and .Net Core</h1>
+			<div>
+				<p>I move between Go and C#, and one idiom I like in Go is tests living alongside the things they are testing, right in the same project. In addition to style preference, it allows testing internal functions. It appears to me that in the .Net world, having a separate test project is expected.</p>
+<p>To achieve this in .Net, one must a) make the tests discoverable by a test runner, and b) optionally-but-desirably, ensure that the test files and frameworks don&rsquo;t get compiled into Release builds.</p>
+<p>This is configured in the <code>.csproj</code> file. If you&rsquo;d like to cut to the chase, have a look at <a href="https://github.com/clipperhouse/uax29.net/blob/main/uax29/uax29.csproj">this example</a>.</p>
+<h3 id="details">Details</h3>
+<p>To make the tests discoverable by the test runner, but only in Debug mode:</p>
+<pre tabindex="0"><code>&lt;PropertyGroup Condition=&#34;&#39;$(Configuration)&#39; != &#39;Release&#39;&#34;&gt;
+  &lt;IsTestProject&gt;true&lt;/IsTestProject&gt;
+&lt;/PropertyGroup&gt;
+</code></pre><p>To exclude the test files from being compiled in the Release build, using a naming convention:</p>
+<pre tabindex="0"><code>&lt;ItemGroup Condition=&#34;&#39;$(Configuration)&#39; == &#39;Release&#39;&#34;&gt;
+  &lt;None Remove=&#34;*.Test.cs&#34; /&gt;
+  &lt;Compile Remove=&#34;*.Test.cs&#34; /&gt;
+&lt;/ItemGroup&gt;
+</code></pre><p>To exclude the test frameworks (packages) from being compiled into the Release build:</p>
+<pre tabindex="0"><code>&lt;ItemGroup Condition=&#34;&#39;$(Configuration)&#39; != &#39;Release&#39;&#34;&gt;
+  &lt;PackageReference Include=&#34;coverlet.collector&#34; Version=&#34;6.0.0&#34; /&gt;
+  &lt;PackageReference Include=&#34;Microsoft.NET.Test.Sdk&#34; Version=&#34;17.8.0&#34; /&gt;
+  &lt;PackageReference Include=&#34;NUnit&#34; Version=&#34;4.1.0&#34; /&gt;
+  &lt;PackageReference Include=&#34;NUnit.Analyzers&#34; Version=&#34;3.9.0&#34; /&gt;
+  &lt;PackageReference Include=&#34;NUnit3TestAdapter&#34; Version=&#34;4.5.0&#34; /&gt;
+  &lt;Using Include=&#34;NUnit.Framework&#34; /&gt;
+&lt;/ItemGroup&gt;
+</code></pre><p>The items will vary based on what frameworks &amp; versions you are using, and of course you can choose your own naming conventions.</p>
+<h3 id="gut-checks">Gut checks</h3>
+<p>For my project, I confirmed with ILSpy that NUnit does not appear in the Release binary, but does appear in the Debug binary. When running tests in Debug mode, I see all ~5800 tests, while in Release mode, I see no tests executed. I have not discovered any gotchas so far, but let me know if you do.</p>
+
+			</div>
+		</article>
+		<div class="post-meta">
+			<p>
+				Published June 12, 2024</p>
+			
+		</div>
+	</main>
+
+	<footer>
+    <p>
+        <a href="/">Home</a>
+        &nbsp;
+        <a href="https://x.com/clipperhouse">𝕏</a>
+        &nbsp;
+        <a href="https://github.com/clipperhouse"> </a>
+    </p>
+</footer>
+
+	
+</body>
+</html>

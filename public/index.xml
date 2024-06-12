@@ -6,8 +6,15 @@
     <description>Recent content on clipperhouse.com</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 26 May 2024 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 12 Jun 2024 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://clipperhouse.com/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Go-style “alongside” testing in C# and .Net Core</title>
+      <link>https://clipperhouse.com/go-test-csharp/</link>
+      <pubDate>Wed, 12 Jun 2024 00:00:00 +0000</pubDate>
+      <guid>https://clipperhouse.com/go-test-csharp/</guid>
+      <description>I move between Go and C#, and one idiom I like in Go is tests living alongside the things they are testing, right in the same project.</description>
+    </item>
     <item>
       <title>Apple as MVNO for LLMs</title>
       <link>https://clipperhouse.com/apple-mvno/</link>
