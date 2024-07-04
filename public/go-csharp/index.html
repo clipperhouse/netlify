@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Moving between Go and C#
+		</title>
+
+	
+
+	
+	
+			
+			<link href="/css/normalize.580818700724d42d7fcc4979b0197971fca1c6d2e0286769237a0ac897df5512.css" rel="stylesheet">
+		
+			
+			<link href="/css/style.2697af6c372ee608035f6cb6675ec4caaed1afb18b94a763db00113f4f6e78b4.css" rel="stylesheet">
+		
+
+	
+
+	
+
+	<link rel="icon" type="image/png" sizes="32x32" href="/img/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="/img/favicon-16x16.png">
+	<link rel="apple-touch-icon" href="/img/apple-touch-icon.png">
+</head>
+<body>
+	<header>
+	<nav>
+		<a href="https://clipperhouse.com/">clipperhouse.com</a>
+		<span class="sep">·</span>
+		<a href="/jargon/">jargon</a>
+		<span class="sep">·</span>
+		<a href="/gen/overview/">gen</a>
+		<span class="sep">·</span>
+		<a href="/stack-correlations/">tag correlations</a>
+		<span class="sep">·</span>
+		<a href="/classical/">classical radio</a>
+	</nav>
+</header>
+
+	
+	<main class="single">
+		<article>
+			<h1>Moving between Go and C#</h1>
+			<div>
+				<p>I&rsquo;ve spent ~equal parts of my career writing Go and C#. Here are some things I&rsquo;ve learned about moving between these languages.</p>
+<h3 id="accessibilityvisibility">Accessibility/visibility</h3>
+<p>In Go, members of a package or struct are either exported or not. Uppercase means exported and visible outside the package. Lowercase means only visible inside the package/struct.</p>
+<p>In C#, these equivalents are <code>public</code> and <code>internal</code>/<code>private</code>. <code>internal</code> means package-scoped; <code>private</code> is narrower than that.</p>
+<p>If you want C# to feel like Go, use the <code>public</code> modifier for exported, and <code>internal</code> where you would use Go&rsquo;s unexported. C# has further modifiers if you wanna get into it.</p>
+<h3 id="statics--instances">Statics &amp; instances</h3>
+<p>In Go, anything defined at the top level of a package (methods, properties) has ~the same semantics as C#&rsquo;s <code>static</code>. Go uses the unfortunate term &ldquo;global&rdquo; for this, but it&rsquo;s better understood package-scoped, and static for callers.</p>
+<p>Go has structs &amp; methods that of course can be instantiated, like C#&rsquo;s classes (and structs).</p>
+<p>In C#, there are references type (aka classes). In Go, there are types, and then one can choose to make a reference to it.</p>
+<p>C# has special constructor methods with their own semantics. In Go, one just writes a plain method that does the constructing. This is also true of getters and setters. Go doesn&rsquo;t have them, just use plain methods.</p>
+<h3 id="slices-and-arrays">Slices and arrays</h3>
+<p>In Go, the distinction between &ldquo;array&rdquo; and &ldquo;slice&rdquo; is mostly abstracted away. One declares a slice and appends to it. The backing array is automatically allocated (and resized as necessary).</p>
+<p>A slice is a <strong>view into the backing array</strong>, though by-and-large you don&rsquo;t think about it. <a href="https://go.dev/blog/slices-intro">Here are the details</a>.</p>
+<p>This is most similar to C#&rsquo;s <code>List</code>, in that it also automatically allocates and re-allocates (resizes) as needed.</p>
+<p>C# does have arrays of course. You have to allocate them yourself. A gotcha I ran into: if you slice into an array in C#, like <code>myArray[1..5]</code>, you will <strong>allocate a new array</strong>.</p>
+<p>C# now has <code>Span&lt;T&gt;</code> which is very much like Go&rsquo;s slices. They are small, lightweight structs that represent a view into the backing array. Really nice.</p>
+<p>A gotcha in both languages: if you have a view into a backing array (Go slice or C# span), and you mutate the backing array, unpredictable things will happen. It&rsquo;s really easy to do this in both languages.</p>
+<p>Your best bet is to ensure that writes to the array happen first, and then hand it off to the reading logic, and ne&rsquo;er the two should be intertwined. In C#, <code>ReadOnlySpan&lt;T&gt;</code> offers some protection. I wish Go had that.</p>
+<h3 id="namespaces">Namespaces</h3>
+<p>Go doesn&rsquo;t have namespaces, the package is the namespace. Go also doesn&rsquo;t have static classes, which in C# are <em>de facto</em> namespaces. Go will generally annoy if one tries to create deep namespace hierarchies. Instead, in Go, one is encouraged make subfolders (which are packages).</p>
+<h3 id="testing">Testing</h3>
+<p>In C#, it&rsquo;s idiomatic to have a separate project (package) for testing. In Go, it&rsquo;s idiomatic for tests to live in the same package. When in Rome.</p>
+<p>In Go, the advantage of tests in the same package is the ability to test internal methods. <a href="https://stackoverflow.com/questions/358196/c-sharp-internal-access-modifier-when-doing-unit-testing">Here&rsquo;s</a> the idiomatic way of testing internal methods that in C#.</p>
+<p>Or, you can try my crazy little way of doing <a href="/go-test-csharp/">Go-style &ldquo;alongside&rdquo; testing in C#</a>. I like it so far.</p>
+<h3 id="benchmarking--jits">Benchmarking &amp; JITs</h3>
+<p>Benchmarking in C# is a little more difficult, as the runtime has a JIT. This means that the performance of a routine will change (for the better usually) over time, as the hot path is optimized by the JIT.</p>
+<p>The downside is that C# benchmarking must account for this. Out of the box, BenchmarkDotNet takes care of this for you &ndash; it goes through warmup phases in an attempt to replicate a long-running (JITted) process. Takes a while.</p>
+<p>Go is ahead-of-time compiled, and so benchmarks are straightforward and fast. Despite this, find some amount of variance between Go&rsquo;s benchmarking runs. You&rsquo;ll likely want to increase running time or sample sizes.</p>
+
+			</div>
+		</article>
+		<div class="post-meta">
+			<p>
+				Published July 4, 2024</p>
+			
+		</div>
+	</main>
+
+	<footer>
+    <p>
+        <a href="/">Home</a>
+        &nbsp;
+        <a href="https://x.com/clipperhouse">𝕏</a>
+        &nbsp;
+        <a href="https://github.com/clipperhouse"> </a>
+    </p>
+</footer>
+
+	
+</body>
+</html>

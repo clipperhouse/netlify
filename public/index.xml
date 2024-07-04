@@ -6,8 +6,15 @@
     <description>Recent content on clipperhouse.com</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 12 Jun 2024 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 04 Jul 2024 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://clipperhouse.com/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Moving between Go and C#</title>
+      <link>https://clipperhouse.com/go-csharp/</link>
+      <pubDate>Thu, 04 Jul 2024 00:00:00 +0000</pubDate>
+      <guid>https://clipperhouse.com/go-csharp/</guid>
+      <description>I&amp;rsquo;ve spent ~equal parts of my career writing Go and C#. Here are some things I&amp;rsquo;ve learned about moving between these languages.</description>
+    </item>
     <item>
       <title>Go-style “alongside” testing in C# and .Net Core</title>
       <link>https://clipperhouse.com/go-test-csharp/</link>
