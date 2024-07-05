@@ -1,5 +1,5 @@
 ---
-title: "Moving between Go and C#"
+title: "Tips for moving between Go and C#"
 date: 2024-07-04
 ---
 
@@ -7,7 +7,7 @@ I've spent ~equal parts of my career writing Go and C#. Here are some things I'v
 
 ### Accessibility/visibility
 
-In Go, members of a package or struct are either exported or not. Uppercase means exported and visible outside the package. Lowercase means only visible inside the package/struct.
+In Go, members of a package or struct are either exported or not (by using upper or lower case names).
 
 In C#, these equivalents are `public` and `internal`/`private`. `internal` means package-scoped; `private` is narrower than that.
 
@@ -19,7 +19,7 @@ In Go, anything defined at the top level of a package (methods, properties) has 
 
 Go has structs & methods that of course can be instantiated, like C#'s classes (and structs).
 
-In C#, there are references type (aka classes). In Go, there are types, and then one can choose to make a reference to it.
+In C#, there are reference types (aka classes) and value types (structs, primitives). In Go, there are only value types, and then one can choose to make a reference to the value. You will do this if you want to the object to be mutable or to maintain state.
 
 C# has special constructor methods with their own semantics. In Go, one just writes a plain method that does the constructing. This is also true of getters and setters. Go doesn't have them, just use plain methods.
 
@@ -31,7 +31,7 @@ A slice is a **view into the backing array**, though by-and-large you don't thin
 
 This is most similar to C#'s `List`, in that it also automatically allocates and re-allocates (resizes) as needed.
 
-C# does have arrays of course. You have to allocate them yourself. A gotcha I ran into: if you slice into an array in C#, like `myArray[1..5]`, you will **allocate a new array**.
+C# does have arrays of course. You can allocate them yourself. A gotcha I ran into: if you slice into an array in C#, like `myArray[1..5]`, you will **allocate a new array**.
 
 C# now has `Span<T>` which is very much like Go's slices. They are small, lightweight structs that represent a view into the backing array. Really nice.
 
@@ -45,9 +45,9 @@ Go doesn't have namespaces, the package is the namespace. Go also doesn't have s
 
 ### Testing
 
-In C#, it's idiomatic to have a separate project (package) for testing. In Go, it's idiomatic for tests to live in the same package. When in Rome.
+In C#, it's idiomatic to have a separate project for testing. In Go, it's idiomatic for tests to live in the same package. When in Rome.
 
-In Go, the advantage of tests in the same package is the ability to test internal methods. [Here's](https://stackoverflow.com/questions/358196/c-sharp-internal-access-modifier-when-doing-unit-testing) the idiomatic way of testing internal methods that in C#.
+In Go, the advantage of tests in the same package is the ability to test internal methods. [Here's](https://stackoverflow.com/questions/358196/c-sharp-internal-access-modifier-when-doing-unit-testing) the idiomatic way of testing internal methods in C#.
 
 Or, you can try my crazy little way of doing [Go-style "alongside" testing in C#]({{< relref "go-test-csharp.md" >}}). I like it so far.
 
@@ -57,4 +57,4 @@ Benchmarking in C# is a little more difficult, as the runtime has a JIT. This me
 
 The downside is that C# benchmarking must account for this. Out of the box, BenchmarkDotNet takes care of this for you -- it goes through warmup phases in an attempt to replicate a long-running (JITted) process. Takes a while.
 
-Go is ahead-of-time compiled, and so benchmarks are straightforward and fast. Despite this, find some amount of variance between Go's benchmarking runs. You'll likely want to increase running time or sample sizes.
+Go is ahead-of-time compiled, and so benchmarks are straightforward and fast, but basic. For rigorous statistics, consider [benchstat](https://pkg.go.dev/golang.org/x/perf/cmd/benchstat).
