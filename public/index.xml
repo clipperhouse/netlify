@@ -13,7 +13,7 @@
       <link>https://clipperhouse.com/go-csharp/</link>
       <pubDate>Thu, 04 Jul 2024 00:00:00 +0000</pubDate>
       <guid>https://clipperhouse.com/go-csharp/</guid>
-      <description>I&amp;rsquo;ve spent ~equal parts of my career writing Go and C#. Here are some things I&amp;rsquo;ve learned about moving between these languages.</description>
+      <description>Recently, I&amp;rsquo;ve implemented a Unicode tokenizer in in Go and in C#, and my career has been ~equally divided between those languages.</description>
     </item>
     <item>
       <title>Go-style “alongside” testing in C# and .Net Core</title>

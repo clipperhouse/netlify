@@ -46,26 +46,30 @@
 		<article>
 			<h1>Tips for moving between Go and C#</h1>
 			<div>
-				<p>I&rsquo;ve spent ~equal parts of my career writing Go and C#. Here are some things I&rsquo;ve learned about moving between these languages.</p>
-<h3 id="accessibilityvisibility">Accessibility/visibility</h3>
-<p>In Go, members of a package or struct are either exported or not (by using upper or lower case names).</p>
-<p>In C#, these equivalents are <code>public</code> and <code>internal</code>/<code>private</code>. <code>internal</code> means package-scoped; <code>private</code> is narrower than that.</p>
-<p>If you want C# to feel like Go, use the <code>public</code> modifier for exported, and <code>internal</code> where you would use Go&rsquo;s unexported. C# has further modifiers if you wanna get into it.</p>
+				<p>Recently, I&rsquo;ve implemented a Unicode tokenizer in <a href="https://github.com/clipperhouse/uax29">in Go</a> and <a href="https://github.com/clipperhouse/uax29.net">in C#</a>, and my career has been ~equally divided between those languages. Here are some tips moving between them.</p>
 <h3 id="statics--instances">Statics &amp; instances</h3>
-<p>In Go, anything defined at the top level of a package (methods, properties) has ~the same semantics as C#&rsquo;s <code>static</code>. Go uses the unfortunate term &ldquo;global&rdquo; for this, but it&rsquo;s better understood package-scoped, and static for callers.</p>
-<p>Go has structs &amp; methods that of course can be instantiated, like C#&rsquo;s classes (and structs).</p>
-<p>In C#, there are reference types (aka classes) and value types (structs, primitives). In Go, there are only value types, and then one can choose to make a reference to the value. You will do this if you want to the object to be mutable or to maintain state.</p>
-<p>C# has special constructor methods with their own semantics. In Go, one just writes a plain method that does the constructing. This is also true of getters and setters. Go doesn&rsquo;t have them, just use plain methods.</p>
+<p>In Go, properties and methods defined at the top level of a package have ~the same semantics as C#&rsquo;s <code>static</code>. Go uses the unfortunate term &ldquo;global&rdquo; for this, but it&rsquo;s better understood package-scoped, and static for callers.</p>
+<p>In C#, there are reference types (classes) and value types (structs, primitives). In Go, there are only value types, and then one can choose to make a reference (pointer) to the value. You will do this if you want to the object to be mutable or to maintain state.</p>
+<p>C# classes have constructor methods with their own semantics. In Go, one just writes a plain method that does the constructing. This is also true of getters and setters. Go doesn&rsquo;t have them, just use plain methods.</p>
+<h3 id="overloads">Overloads</h3>
+<p>C# allows several methods to have the same name but different parameters. Those unique signatures are enough to infer which of the same-named methods to call. This can make for a nice API for the caller.</p>
+<p>Go doesn&rsquo;t have overloads. If a method takes different parameters, it needs a different name.</p>
+<p>Default values are a form of overload, btw. C# offers them, Go does not.</p>
+<h3 id="namespaces">Namespaces</h3>
+<p>Go doesn&rsquo;t have explicit namespaces as C# does. In Go, the package is the namespace. Go also doesn&rsquo;t have static classes, which in C# are <em>de facto</em> namespaces.</p>
+<p>Go will generally resist if one tries to create deep namespace hierarchies. Instead, in Go, one is encouraged make subfolders (which are packages). This is a nudge toward <a href="https://en.wikipedia.org/wiki/Composition_over_inheritance">compostion over inheritance</a>.</p>
 <h3 id="slices-and-arrays">Slices and arrays</h3>
 <p>In Go, the distinction between &ldquo;array&rdquo; and &ldquo;slice&rdquo; is mostly abstracted away. One declares a slice and appends to it. The backing array is automatically allocated (and resized as necessary).</p>
 <p>A slice is a <strong>view into the backing array</strong>, though by-and-large you don&rsquo;t think about it. <a href="https://go.dev/blog/slices-intro">Here are the details</a>.</p>
 <p>This is most similar to C#&rsquo;s <code>List</code>, in that it also automatically allocates and re-allocates (resizes) as needed.</p>
 <p>C# does have arrays of course. You can allocate them yourself. A gotcha I ran into: if you slice into an array in C#, like <code>myArray[1..5]</code>, you will <strong>allocate a new array</strong>.</p>
 <p>C# now has <code>Span&lt;T&gt;</code> which is very much like Go&rsquo;s slices. They are small, lightweight structs that represent a view into the backing array. Really nice.</p>
-<p>A gotcha in both languages: if you have a view into a backing array (Go slice or C# span), and you mutate the backing array, unpredictable things will happen. It&rsquo;s really easy to do this in both languages.</p>
+<p>A gotcha in both languages: if you have a view into a backing array (Go slice or C# span), and you mutate the backing array, you may find yourself unpleasantly surprised. It&rsquo;s really easy to do this in both languages.</p>
 <p>Your best bet is to ensure that writes to the array happen first, and then hand it off to the reading logic, and ne&rsquo;er the two should be intertwined. In C#, <code>ReadOnlySpan&lt;T&gt;</code> offers some protection. I wish Go had that.</p>
-<h3 id="namespaces">Namespaces</h3>
-<p>Go doesn&rsquo;t have namespaces, the package is the namespace. Go also doesn&rsquo;t have static classes, which in C# are <em>de facto</em> namespaces. Go will generally annoy if one tries to create deep namespace hierarchies. Instead, in Go, one is encouraged make subfolders (which are packages).</p>
+<h3 id="accessibilityvisibility">Accessibility/visibility</h3>
+<p>In Go, members of a package or struct are either exported or not (by using upper or lower case names).</p>
+<p>In C#, these equivalents are <code>public</code> and <code>internal</code>/<code>private</code>. <code>internal</code> means package-scoped; <code>private</code> is narrower than that.</p>
+<p>If you want C# to feel like Go, use the <code>public</code> modifier for exported, and <code>internal</code> for unexported. C# has further modifiers if you wanna get into it.</p>
 <h3 id="testing">Testing</h3>
 <p>In C#, it&rsquo;s idiomatic to have a separate project for testing. In Go, it&rsquo;s idiomatic for tests to live in the same package. When in Rome.</p>
 <p>In Go, the advantage of tests in the same package is the ability to test internal methods. <a href="https://stackoverflow.com/questions/358196/c-sharp-internal-access-modifier-when-doing-unit-testing">Here&rsquo;s</a> the idiomatic way of testing internal methods in C#.</p>
