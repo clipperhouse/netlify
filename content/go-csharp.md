@@ -15,7 +15,7 @@ C# classes have constructor methods with their own semantics. In Go, one just wr
 
 ### Overloads
 
-C# allows several methods to have the same name but different parameters. Those unique signatures are enough to infer which of the same-named methods to call. This can make for a nice API for the caller.
+C# allows several methods to have the same name but different parameters. Those unique signatures are enough to infer which of the same-named methods to call.
 
 Go doesn't have overloads. If a method takes different parameters, it needs a different name.
 
