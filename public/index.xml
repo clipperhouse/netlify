@@ -6,8 +6,15 @@
     <description>Recent content on clipperhouse.com</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 04 Jul 2024 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 25 Jul 2024 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://clipperhouse.com/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>C# (almost) has implicit interfaces</title>
+      <link>https://clipperhouse.com/c-sharp-implicit-interfaces/</link>
+      <pubDate>Thu, 25 Jul 2024 00:00:00 +0000</pubDate>
+      <guid>https://clipperhouse.com/c-sharp-implicit-interfaces/</guid>
+      <description>Background: I move between Go and C# a lot, and like to compare them</description>
+    </item>
     <item>
       <title>Tips for moving between Go and C#</title>
       <link>https://clipperhouse.com/go-csharp/</link>

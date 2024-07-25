@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>C# (almost) has implicit interfaces
+		</title>
+
+	
+
+	
+	
+			
+			<link href="/css/normalize.580818700724d42d7fcc4979b0197971fca1c6d2e0286769237a0ac897df5512.css" rel="stylesheet">
+		
+			
+			<link href="/css/style.29c8a453699adb43c27c67f018bec88d852a118e6a13ec20e4e3b2c790d88c61.css" rel="stylesheet">
+		
+
+	
+
+	
+
+	<link rel="icon" type="image/png" sizes="32x32" href="/img/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="/img/favicon-16x16.png">
+	<link rel="apple-touch-icon" href="/img/apple-touch-icon.png">
+</head>
+<body>
+	<header>
+	<nav>
+		<a href="https://clipperhouse.com/">clipperhouse.com</a>
+		<span class="sep">·</span>
+		<a href="/jargon/">jargon</a>
+		<span class="sep">·</span>
+		<a href="/gen/overview/">gen</a>
+		<span class="sep">·</span>
+		<a href="/stack-correlations/">tag correlations</a>
+		<span class="sep">·</span>
+		<a href="/classical/">classical radio</a>
+	</nav>
+</header>
+
+	
+	<main class="single">
+		<article>
+			<h1>C# (almost) has implicit interfaces</h1>
+			<div>
+				<p><em>Background: I move between Go and C# a lot, and like to <a href="/go-csharp/">compare them</a></em></p>
+<p>Go has <a href="https://go.dev/tour/methods/10">implicit interfaces</a>, which means that a type implements an interface <em>iff</em> it satisfies that interface. It&rsquo;s not declared. It&rsquo;s simply something that the type system determines is true or false, as needed.</p>
+<p>When I first heard this, I though it was clever and I was a bit enamored (having come from a C# background). Now, I think implicit interfaces are simply, obviously right. Satisfying an interface is a characteristic, not an assertion.</p>
+<blockquote>
+<p>There is an <a href="https://stackoverflow.com/questions/31753282/go-how-to-explicitly-state-that-a-structure-is-implementing-an-interface">idiom in Go</a> for making such declarations explcit, if only to signal intent and avoid regressions.</p>
+</blockquote>
+<p>C#, on the other hand, has explicit interfaces, by design. It&rsquo;s a fine choice, but I have found myself wishing to classify types that have a shared method signature, but do not share an interface.</p>
+<p>For example, C#&rsquo;s <code>Stream</code> and <code>StreamReader</code> have identical <code>Read</code> methods &ndash; but no <code>Reader</code> interface declared. I have a type that I wish to accept <code>Stream</code> or <code>StreamReader</code>. What to do?</p>
+<p>Well, I realized I don&rsquo;t care about the <em>types</em>, per se, I care about their <code>Read</code> methods.</p>
+<p>Turns out, if one wants &ldquo;implicit interfaces&rdquo; in C#, one can use generic delegates. <a href="https://github.com/clipperhouse/uax29.net/blob/main/uax29/Buffer.cs">Here&rsquo;s one called <code>Read&lt;T&gt;</code></a>.</p>
+<p><code>Stream.Read&lt;byte&gt;</code> matches that delegate, as does <code>StreamReader.Read&lt;char&gt;</code>. So my type can accept both.</p>
+<p>A delegate is just a function signature, and a method &ldquo;implicitly implements&rdquo; the delegate or doesn&rsquo;t, regardless of whether one declares it.</p>
+
+			</div>
+		</article>
+		<div class="post-meta">
+			<p>
+				Published July 25, 2024</p>
+			
+		</div>
+	</main>
+
+	<footer>
+    <p>
+        <a href="/">Home</a>
+        &nbsp;
+        <a href="https://x.com/clipperhouse">𝕏</a>
+        &nbsp;
+        <a href="https://github.com/clipperhouse"> </a>
+    </p>
+</footer>
+
+	
+</body>
+</html>
