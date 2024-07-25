@@ -5,9 +5,9 @@ date: 2024-07-25
 
 _Background: I move between Go and C# a lot, and like to [compare them]({{< relref "go-csharp.md" >}})_
 
-Go has [implicit interfaces](https://go.dev/tour/methods/10), which means that a type implements an interface _iff_ it satisfies that interface. It's not declared. It's simply something that the type system determines is true or false, as needed.
+Go has [implicit interfaces](https://go.dev/tour/methods/10), which means that a type implements an interface _iff_ it satisfies that interface. It's not declared. It's simply something that the type system determines to be true or false, as needed.
 
-When I first heard this, I though it was clever and I was a bit enamored (having come from a C# background). Now, I think implicit interfaces are simply, obviously right. Satisfying an interface is a characteristic, not an assertion.
+I though it was clever, and I was a bit enamored when I first heard it (having come from a C# background). Now, I think implicit interfaces are simply, obviously right. Satisfying an interface is a characteristic, not an assertion.
 
 > There is an [idiom in Go](https://stackoverflow.com/questions/31753282/go-how-to-explicitly-state-that-a-structure-is-implementing-an-interface) for making such declarations explcit, if only to signal intent and avoid regressions.
 
