@@ -85,7 +85,7 @@ This happens with air, and with water, too. Your car is hitting millions of air 
 
 We call these collisions air resistance, or friction. We usually want less of it. Car manufacturers design their cars so that they will hit less air.
 
-Sometimes we want more friction. Think about the soles of your snow boots.
+Sometimes we want more friction. Think parachutes, or the soles of your snow boots.
 
 Friction causes things to become hotter. Speed gets turned into heat. Usually, it's not much heat, and we don't notice it. Things that fall from space, like meteors and Space Shuttles, definitely do feel the heat.
 
