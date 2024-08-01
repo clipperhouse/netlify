@@ -3,7 +3,7 @@ title: "90% of physics in 900 words"
 date: 2024-08-01
 ---
 
-I had a physics professor who said the most important skill in science was to be able to characterize a system approximately and quickly. Be approximately right instead of precisely wrong. This has stuck with me.
+I had a physics professor who said the most important skill in science was to be able to characterize a system quickly. Be approximately right instead of precisely wrong. This has stuck with me.
 
 Anyway, here's physics for non-scientists, who wish to be approximately right.
 
