@@ -6,8 +6,15 @@
     <description>Recent content on clipperhouse.com</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 25 Jul 2024 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 01 Aug 2024 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://clipperhouse.com/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>80% of physics in 800 words</title>
+      <link>https://clipperhouse.com/physics/</link>
+      <pubDate>Thu, 01 Aug 2024 00:00:00 +0000</pubDate>
+      <guid>https://clipperhouse.com/physics/</guid>
+      <description>I had a physics professor who said the most important skill in science was to be able to characterize a system approximately and quickly.</description>
+    </item>
     <item>
       <title>C# (almost) has implicit interfaces</title>
       <link>https://clipperhouse.com/c-sharp-implicit-interfaces/</link>
