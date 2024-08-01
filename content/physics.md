@@ -51,7 +51,7 @@ If something is warm enough, we can see the light. We call that "red hot". Even 
 
 Sound is a vibration of air. Again, think ripples in a pond.
 
-High-frequency sound is called "treble", low-frequency sound is call "bass".
+High-frequency sound is called "treble", low-frequency sound is called "bass".
 
 As with light, higher sound frequencies are easier to block. When your neighbor is playing music, you will mostly hear the bass, because the walls have blocked the treble.
 
@@ -81,7 +81,9 @@ Nature doesn't like differences! The greater the _difference_ in speed, the more
 
 This happens with air, and with water, too. Your car is hitting millions of air molecules, causing those molecules to go faster, while those molecules cause your car to go slower.
 
-We call this air resistance, or friction. We usually want less of it. Car manufacturers design the shape of their cars so that they will hit less air.
+### Friction
+
+We call these collisions air resistance, or friction. We usually want less of it. Car manufacturers design their cars so that they will hit less air.
 
 Sometimes we want more friction. Think about the soles of your snow boots.
 
