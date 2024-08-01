@@ -1,5 +1,5 @@
 ---
-title: "80% of physics in 800 words"
+title: "90% of physics in 900 words"
 date: 2024-08-01
 ---
 
@@ -11,9 +11,15 @@ Anyway, here's physics for non-scientists, who wish to be approximately right.
 
 Hot things want to cool off. Cold things want to warm up. The hotter a thing is, the faster it will cool off.
 
-Temperature _difference_ is what matters, and is what you feel. When something feels cool, it's because your body heat is leaving your body and warming up the thing. If something feels neither hot nor cold, it's because you and it are the same temperature.
+Temperature _difference_ is what matters, and is what you feel. When something feels cool, it's because heat is leaving your body and warming up the thing. If something feels neither hot nor cold, it's because you and it are the same temperature.
 
 Nature doesn't like differences, and will try to reduce them. Our senses are sensitive to differences.
+
+Ice turns into water because it's absorbing heat. Water turns into steam for the same reason.
+
+This requires a lot of heat (energy). Your sweat, when it dries (evaoporates), takes a lot of heat from your body. Your body is cooling down, and the air is warming up.
+
+Condensation (a cold soda becoming wet on the outside) is the same thing in the opposite direction. The bottle is warming up, and the air is cooling down.
 
 ### Light
 
@@ -51,15 +57,19 @@ As with light, higher sound frequencies are easier to block. When your neighbor 
 
 Trebly things are easier for us to locate with our ears. It's harder to figure out where bassy things are coming from.
 
+Most sounds are many frequencies. Sounds are unique because their combination of frequencies is unique.
+
 ### Speed
 
 Your location is where you are. If your location is changing, we call that speed. If your speed is changing, we call that acceleration.
 
 You can't feel speed. You can feel acceleration. You get pulled back into your seat during take off, but not when you are cruising.
 
+Gravity is a type of acceleration.
+
 There is the thing, a change in the thing, and a change in a change in a thing.
 
-Money is similar! Our wealth is what we have. If our wealth is changing, we call that income (or spending). If our income is changing, we call that a raise (or inflation).
+> 👉 Money is similar! Our wealth is what we have. If our wealth is changing, we call that income (or spending). If our income is changing, we call that a raise (or inflation).
 
 Calculus is the math that helps us to understand changes of changes.
 
@@ -75,4 +85,14 @@ We call this air resistance, or friction. We usually want less of it. Car manufa
 
 Sometimes we want more friction. Think about the soles of your snow boots.
 
-Friction causes thing to become hotter. Speed gets turned into heat. Usually, it's not much heat, and we don't notice it. Things that fall from space, like meteors and Space Shuttles, definitely do feel the heat.
+Friction causes things to become hotter. Speed gets turned into heat. Usually, it's not much heat, and we don't notice it. Things that fall from space, like meteors and Space Shuttles, definitely do feel the heat.
+
+When you lift something up, you are giving it energy. When you drop it, it accelerates, and releases that energy.
+
+### Burning
+
+Burning things releases energy. It's a chemical reaction with oxygen.
+
+This reaction might be a flame, or it might be digestion, it might be rotting (think compost). Rotting is just digestion by bacteria. Rust is metal burning slowly.
+
+When plants grow due to sunlight, they are storing chemical energy. It is the reverse of burning. Campfires are releasing energy that used to be sunlight. A sugar rush is doing the same.
