@@ -9,17 +9,17 @@ Anyway, here's physics for non-scientists, who wish to be approximately right.
 
 ### Heat
 
-Hot things want to cool off. Cold things want to warm up. The hotter a thing is, the faster it will cool off.
+Hot things want to cool off. Cold things want to warm up.
 
-Temperature _difference_ is what matters, and is what you feel. When something feels cool, it's because heat is leaving your body and warming up the thing. If something feels neither hot nor cold, it's because you and it are the same temperature.
+Temperature _difference_ is what matters. When something feels cool, it's because heat is leaving your body and warming up the thing. If something feels neither hot nor cold, it's because you and it are the same temperature.
 
 Nature doesn't like differences, and will try to reduce them. Our senses are sensitive to differences.
 
 Ice turns into water because it's absorbing heat. Water turns into steam for the same reason.
 
-This requires a lot of heat (energy). Your sweat, when it dries (evaoporates), takes a lot of heat from your body. Your body is cooling down, and the air is warming up.
+This requires a lot of heat (energy). Your sweat, when it dries (evaporates), takes a lot of heat from your body. Your body is cooling down, and the air is warming up.
 
-Condensation (a cold soda becoming wet on the outside) is the same thing in the opposite direction. The bottle is warming up, and the air is cooling down.
+Condensation (a cold soda becoming wet on the outside) is the same thing in the opposite direction. The soda is warming up, and the air is cooling down.
 
 ### Light
 
@@ -31,7 +31,7 @@ Those vibrations might hit other things. The effect might be to warm up your ski
 
 Those vibrations might pass _through_ other things, or bounce off of them.
 
-The higher-frequency vibrations are more intense, but they are also easier to block. Blue has a higher frequency than red. A sunset might look red because the blue light has been blocked by the air.
+High-frequency vibrations are more intense, but they are also easier to block. Blue has a higher frequency than red. A sunset might look red because the blue light has been blocked by the air.
 
 Human eyes can see a small range of frequencies, represented by the rainbow, which we unsurprisingly call "visible light". We can't see Wi-fi or X-rays.
 
@@ -39,7 +39,7 @@ Most light is a combination of many frequencies. Combining lots of frequencies m
 
 Ultra-violet (UV) light has a high frequency, and is just barely outside what our eyes can see. Sunscreen mostly blocks it, as does glass.
 
-Infra-red light, which has a low frequency, is also just barley outside what we can see.
+Infra-red light, which has a low frequency, is also just barely outside what we can see.
 
 ### Heat and light
 
@@ -57,7 +57,7 @@ As with light, higher sound frequencies are easier to block. When your neighbor 
 
 Trebly things are easier for us to locate with our ears. It's harder to figure out where bassy things are coming from.
 
-Most sounds are many frequencies. Sounds are unique because their combination of frequencies is unique.
+Most sounds are a combination of many frequencies. Sounds are unique because their combination of frequencies is unique.
 
 ### Speed
 
@@ -69,9 +69,9 @@ Gravity is a type of acceleration.
 
 There is the thing, a change in the thing, and a change in a change in a thing.
 
-> 👉 Money is similar! Our wealth is what we have. If our wealth is changing, we call that income (or spending). If our income is changing, we call that a raise (or inflation).
-
 Calculus is the math that helps us to understand changes of changes.
+
+> 👉 Money is similar! Our wealth is what we have. If our wealth is changing, we call that income (or spending). If our income is changing, we call that a raise (or inflation).
 
 ### Energy
 
@@ -93,6 +93,6 @@ When you lift something up, you are giving it energy. When you drop it, it accel
 
 Burning things releases energy. It's a chemical reaction with oxygen.
 
-This reaction might be a flame, or it might be digestion, it might be rotting (think compost). Rotting is just digestion by bacteria. Rust is metal burning slowly.
+This reaction might be a flame, or it might be digestion, it might be rotting (think compost). Rotting is digestion by bacteria. Rust is metal burning slowly.
 
 When plants grow due to sunlight, they are storing chemical energy. It is the reverse of burning. Campfires are releasing energy that used to be sunlight. A sugar rush is doing the same.
