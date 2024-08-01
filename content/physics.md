@@ -67,7 +67,7 @@ You can't feel speed. You can feel acceleration. You get pulled back into your s
 
 Gravity is a type of acceleration.
 
-There is the thing, a change in the thing, and a change in a change in a thing.
+There is the thing, a change in the thing, and a change in a change in the thing.
 
 Calculus is the math that helps us to understand changes of changes.
 
