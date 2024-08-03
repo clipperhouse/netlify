@@ -66,7 +66,7 @@
 <p>In my experiments, <code>strings.Split</code>&rsquo;s and <code>bytes.Split</code>&rsquo;s substrings might or might not allocate on the heap. They are slices or string headers &ndash; which are inexpensive views into the underlying bytes.</p>
 <p>The allocation depends on escape analysis. We can make the escape less likely by using the aforementioned <a href="https://github.com/clipperhouse/split">iterator</a> &ndash; only one substring is in memory at a time, on-demand.</p>
 <h4 id="in-c-1">In C#</h4>
-<p><code>string.Split</code> will always allocate <code>n</code> (sub)strings in my experiments. C# has implemented <code>Span&lt;T&gt;</code>, a type which is an inexpensive view into the underlying memory, and is guranteed to stay on the stack.</p>
+<p><code>string.Split</code> will always allocate <code>n</code> (sub)strings in my experiments. C# has implemented <code>Span&lt;T&gt;</code>, a type which is an inexpensive view into the underlying memory, and is guaranteed to stay on the stack.</p>
 <p>There is a <a href="https://github.com/dotnet/runtime/pull/104534">new <code>Span</code> splitter</a> in the standard library, coming in C# 9. It achieves zero allocations in my experiments. My <a href="https://github.com/clipperhouse/Split.net">aforementioned splitter</a> began as a fork of the above, and is available for C# 8.</p>
 <h2 id="why-you-might-do-this">Why you might do this</h2>
 <p>To make hot paths faster, and perhaps more importantly, to reduce the tax on the garbage collector.</p>

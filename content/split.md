@@ -43,7 +43,7 @@ The allocation depends on escape analysis. We can make the escape less likely by
 
 #### In C#
 
-`string.Split` will always allocate `n` (sub)strings in my experiments. C# has implemented `Span<T>`, a type which is an inexpensive view into the underlying memory, and is guranteed to stay on the stack.
+`string.Split` will always allocate `n` (sub)strings in my experiments. C# has implemented `Span<T>`, a type which is an inexpensive view into the underlying memory, and is guaranteed to stay on the stack.
 
 There is a [new `Span` splitter](https://github.com/dotnet/runtime/pull/104534) in the standard library, coming in C# 9. It achieves zero allocations in my experiments. My [aforementioned splitter](https://github.com/clipperhouse/Split.net) began as a fork of the above, and is available for C# 8.
 
