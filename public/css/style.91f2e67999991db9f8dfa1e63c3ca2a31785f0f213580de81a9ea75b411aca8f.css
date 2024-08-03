@@ -1,0 +1,242 @@
+body {
+	padding: 1.5em;
+	font-size: 1.1rem;
+	max-width: 800px;
+	margin: auto;
+	line-height: 1.6;
+	color: hsl(0, 0%, 13%);
+}
+
+header {
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	margin-bottom: 2rem;
+	color: #555;
+}
+
+header>* {
+	display: inline-block;
+}
+
+header a {
+	color: inherit;
+	text-decoration: none;
+	border: none;
+	padding: 6px;
+}
+
+header a:first-child {
+	padding-left: 0;
+}
+
+footer {
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	clear: both;
+}
+
+
+footer a {
+	border: 0;
+	text-decoration: none;
+}
+
+blockquote {
+	margin-left: 0;
+	padding-left: 1.5rem;
+	font-style: italic;
+	border-left: 2px solid #eee;
+	color: #888;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-weight: normal;
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	line-height: 1.3;
+}
+
+p,
+li {
+	font-family: "Georgia", serif;
+}
+
+a {
+	color: #2079c7;
+	text-decoration: none;
+}
+
+.list a {}
+
+.single a {
+	text-underline-offset: 3px;
+	text-decoration-thickness: 1px;
+}
+
+/* Forms (adapted from skeleton.css)
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+form>* {
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+input[type="email"],
+input[type="number"],
+input[type="search"],
+input[type="text"],
+input[type="tel"],
+input[type="url"],
+input[type="password"],
+textarea,
+select {
+	font-weight: normal;
+	padding: 6px 10px;
+	/* The 6px vertically centers text on FF, ignored by Webkit */
+	background-color: #fff;
+	border: 1px solid #D1D1D1;
+	border-radius: 4px;
+	box-shadow: none;
+	box-sizing: border-box;
+	line-height: inherit;
+}
+
+/* Removes awkward default styles on some inputs for iOS */
+input[type="email"],
+input[type="number"],
+input[type="search"],
+input[type="text"],
+input[type="tel"],
+input[type="url"],
+input[type="password"],
+textarea {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+}
+
+/* Code (adapted from skeleton.css)
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+code,
+.code {
+	padding: .2rem .3rem;
+	font-size: 85%;
+	font-family: Menlo, Consolas, Monaco, "Courier New", Courier, monospace;
+	white-space: nowrap;
+	background: #F9F9F9;
+	border: 1px solid #E5E5E5;
+	border-radius: 4px;
+}
+
+pre>code {
+	display: block;
+	white-space: pre;
+	overflow-x: scroll;
+	padding: 1.2rem;
+}
+
+textarea.code {
+	background-color: unset;
+	white-space: pre-wrap;
+	padding: 1.2rem;
+}
+
+/* Buttons (adapted from skeleton.css)
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.button,
+button,
+input[type="submit"],
+input[type="reset"],
+input[type="button"] {
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size: 90%;
+	;
+	display: inline-block;
+	padding: 0.5rem 0.8rem;
+	text-align: center;
+	text-decoration: none;
+	white-space: nowrap;
+	border-radius: 4px;
+	border: 1px solid #bbb;
+	cursor: pointer;
+	box-sizing: border-box;
+}
+
+/* Home & list pages
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+main.list a p {
+	text-decoration: none;
+	color: initial;
+}
+
+main.list article {
+	border-bottom: 1px solid #eee;
+}
+
+main.list article a {
+	display: block;
+	border: none;
+	text-decoration: none;
+}
+
+.pagination {
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	margin: 2rem 0;
+}
+
+.pagination a {
+	display: inline-block;
+	text-decoration: none;
+	border-bottom: none;
+}
+
+.pagination a.next {
+	float: right;
+	margin-right: .5em;
+}
+
+main.single .post-meta {
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	color: rgba(0, 0, 0, .4);
+}
+
+main.single .post-meta p {
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+main.single.app .post-meta {
+	display: none;
+}
+
+main.single .post-meta a {
+	display: inline-block;
+}
+
+main.single .post-meta a.next {
+	float: right;
+}
+
+a.github {
+	padding-right: 22px;
+	padding-left: 2px;
+	background-image: url(https://github.githubassets.com/favicon.ico);
+	background-repeat: no-repeat;
+	background-position: right center;
+	background-size: 18px 18px;
+	text-decoration: none;
+	border: 0;
+}
+
+img[src$='#photo'] {
+	float: right;
+	margin: 0 1em 2em 2em;
+	opacity: .9;
+	width: 100px;
+	border-radius: 50%;
+	border: 1px solid #999;
+}
+
+img[src$='github-mark.svg'] {
+	width: 32px;
+	height: 32px;
+}

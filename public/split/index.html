@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>So, you’re splitting strings on the hot path
+		</title>
+
+	
+
+	
+	
+			
+			<link href="/css/normalize.580818700724d42d7fcc4979b0197971fca1c6d2e0286769237a0ac897df5512.css" rel="stylesheet">
+		
+			
+			<link href="/css/style.3c1e17c8f86637645ec4cfeb7b82412932235fb26c2086fdfb81f09e3256f4ca.css" rel="stylesheet">
+		
+
+	
+
+	
+
+	<link rel="icon" type="image/png" sizes="32x32" href="/img/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="/img/favicon-16x16.png">
+	<link rel="apple-touch-icon" href="/img/apple-touch-icon.png">
+</head>
+<body>
+	<header>
+	<nav>
+		<a href="https://clipperhouse.com/">clipperhouse.com</a>
+		<span class="sep">·</span>
+		<a href="/jargon/">jargon</a>
+		<span class="sep">·</span>
+		<a href="/gen/overview/">gen</a>
+		<span class="sep">·</span>
+		<a href="/stack-correlations/">tag correlations</a>
+		<span class="sep">·</span>
+		<a href="/classical/">classical radio</a>
+	</nav>
+</header>
+
+	
+	<main class="single">
+		<article>
+			<h1>So, you’re splitting strings on the hot path</h1>
+			<div>
+				<p>Can we make it less expensive? Probably yes. We&rsquo;ll talk about Go and C# in this post.</p>
+<h3 id="n1-allocations">n+1 allocations</h3>
+<p>The semantics of splitting strings (or bytes) in standard libraries typically is &ldquo;return <code>n</code> substrings and collect them in an array&rdquo;.</p>
+<p>These are fine semantics! But it certainly means <code>1</code> allocation (for the array) and likely <code>n</code> (for the substrings). Let&rsquo;s try two techniques to see if we can make them zero.</p>
+<p>(I don&rsquo;t claim originality, there&rsquo;s prior art for everything below.)</p>
+<h2 id="iterate-instead-of-collect-the-1">Iterate instead of collect (the <code>+1</code>)</h2>
+<p>Instead of collecting all of the substrings upfront, we might create an <strong>iterator</strong> (or enumerator in C# parlance). We return each substring as needed, but don&rsquo;t collect them all at once. Think streaming instead of batching.</p>
+<h4 id="in-go">In Go</h4>
+<p>In my experiments, <code>strings.Split</code> and <code>bytes.Split</code> (standard library) will always allocate the <code>1</code> array.</p>
+<p>To zero it out, I&rsquo;ve implemented an <a href="https://github.com/clipperhouse/split">iterator over splits</a> for bytes &amp; strings. <code>bufio.Scanner</code> in the standard library follows a similar pattern.</p>
+<h4 id="in-c">In C#</h4>
+<p><code>string.Split</code> will always allocate <code>n+1</code> in my experiments.</p>
+<p><a href="https://github.com/dotnet/runtime/pull/104534"><code>SpanSplitEnumerator</code></a> (coming in C# 9) achieves zero allocations in my experiments. Forking that, I&rsquo;ve implemented a <a href="https://github.com/clipperhouse/Split.net">enumerator over splits</a> for bytes, strings, streams &amp; readers.</p>
+<p>Other implementations in C#: <a href="https://learn.microsoft.com/en-us/dotnet/core/extensions/primitives#the-stringtokenizer-type"><code>StringTokenizer</code></a>, <a href="https://learn.microsoft.com/en-us/dotnet/api/microsoft.toolkit.highperformance.extensions.stringextensions.tokenize?view=win-comm-toolkit-dotnet-6.1"><code>StringExtensions.Tokenize</code></a></p>
+<h2 id="dont-allocate-substrings-the-n">Don&rsquo;t allocate substrings (the <code>n</code>)</h2>
+<p>The original string is already in memory. We would like the substring to be an <strong>inexpensive &ldquo;view&rdquo;</strong> into that underlying storage, instead of a literal copy.</p>
+<h4 id="in-go-1">In Go</h4>
+<p>In my experiments, <code>strings.Split</code>&rsquo;s and <code>bytes.Split</code>&rsquo;s substrings might or might not allocate on the heap. They are slices or string headers &ndash; which are inexpensive views into the underlying bytes.</p>
+<p>The allocation depends on escape analysis. We can make the escape less likely by using the aforementioned <a href="https://github.com/clipperhouse/split">iterator</a> &ndash; only one substring is in memory at a time, on-demand.</p>
+<h4 id="in-c-1">In C#</h4>
+<p><code>string.Split</code> will always allocate <code>n</code> (sub)strings in my experiments. C# has implemented <code>Span&lt;T&gt;</code>, a type which is an inexpensive view into the underlying memory, and is guranteed to stay on the stack.</p>
+<p>There is a <a href="https://github.com/dotnet/runtime/pull/104534">new <code>Span</code> splitter</a> in the standard library, coming in C# 9. It achieves zero allocations in my experiments. My <a href="https://github.com/clipperhouse/Split.net">aforementioned splitter</a> began as a fork of the above, and is available for C# 8.</p>
+<h2 id="why-you-might-do-this">Why you might do this</h2>
+<p>To make hot paths faster, and perhaps more importantly, to reduce the tax on the garbage collector.</p>
+<p>Ideally, you&rsquo;ll look at your whole pipeline and think <em>streaming</em> &ndash; small batches in memory, inexpensive views into underlying bytes, minimal copying. What&rsquo;s the original source of the string, and what&rsquo;s its ultimate destination?</p>
+<h2 id="why-you-might-not-do-this">Why you might not do this</h2>
+<p>If you actually need to <em>collect</em> the substrings &ndash; if later functions are just going to allocate them anyway &ndash; the above techniques might not be a win.</p>
+<h2 id="by-the-way">By the way</h2>
+<p>If your goal in splitting strings to parse &ldquo;words&rdquo;, splitting on spaces will be too naive. There is a <a href="https://www.unicode.org/reports/tr29/#Word_Boundaries">Unicode spec</a> for word boundaries, which is probably what you want.</p>
+<p>I&rsquo;ve implemented that spec <a href="https://github.com/clipperhouse/uax29">here in Go</a> and <a href="https://github.com/clipperhouse/uax29.net">here in C#</a>.</p>
+
+			</div>
+		</article>
+		<div class="post-meta">
+			<p>
+				Published August 3, 2024</p>
+			
+		</div>
+	</main>
+
+	<footer>
+    <p>
+        <a href="/">Home</a>
+        &nbsp;
+        <a href="https://x.com/clipperhouse">𝕏</a>
+        &nbsp;
+        <a class="github" href="https://github.com/clipperhouse"> </a>
+    </p>
+</footer>
+
+
+	
+</body>
+</html>
