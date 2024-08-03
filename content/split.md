@@ -59,6 +59,6 @@ If you actually need to _collect_ the substrings -- if later functions are just 
 
 ## By the way
 
-If your goal in splitting strings to parse "words", splitting on spaces will be too naive. There is a [Unicode spec](https://www.unicode.org/reports/tr29/#Word_Boundaries) for word boundaries, which is probably what you want.
+If your goal is to parse "words", splitting on spaces will be too naive. There is a [Unicode spec](https://www.unicode.org/reports/tr29/#Word_Boundaries) for word boundaries, which is probably what you want.
 
 I've implemented that spec [here in Go](https://github.com/clipperhouse/uax29) and [here in C#](https://github.com/clipperhouse/uax29.net).
