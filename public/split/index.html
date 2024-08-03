@@ -47,7 +47,7 @@
 			<h1>So, you’re splitting strings on the hot path</h1>
 			<div>
 				<p>Can we make it less expensive? Probably yes. We&rsquo;ll talk about Go and C# in this post.</p>
-<h3 id="n1-allocations">n+1 allocations</h3>
+<h2 id="n1-allocations">n+1 allocations</h2>
 <p>The semantics of splitting strings (or bytes) in standard libraries typically is &ldquo;return <code>n</code> substrings and collect them in an array&rdquo;.</p>
 <p>These are fine semantics! But it certainly means <code>1</code> allocation (for the array) and likely <code>n</code> (for the substrings). Let&rsquo;s try two techniques to see if we can make them zero.</p>
 <p>(I don&rsquo;t claim originality, there&rsquo;s prior art for everything below.)</p>

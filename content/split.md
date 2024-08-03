@@ -5,7 +5,7 @@ date: 2024-08-03
 
 Can we make it less expensive? Probably yes. We'll talk about Go and C# in this post.
 
-### n+1 allocations
+## n+1 allocations
 
 The semantics of splitting strings (or bytes) in standard libraries typically is "return `n` substrings and collect them in an array".
 
