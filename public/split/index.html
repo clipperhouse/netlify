@@ -58,19 +58,19 @@
 <p>To zero it out, I&rsquo;ve implemented an <a href="https://github.com/clipperhouse/split">iterator over splits</a> for bytes &amp; strings. <code>bufio.Scanner</code> in the standard library follows a similar pattern.</p>
 <h4 id="in-c">In C#</h4>
 <p><code>string.Split</code> will always allocate <code>n+1</code> in my experiments.</p>
-<p><a href="https://github.com/dotnet/runtime/pull/104534"><code>SpanSplitEnumerator</code></a> (coming in C# 9) achieves zero allocations in my experiments. Forking that, I&rsquo;ve implemented a <a href="https://github.com/clipperhouse/Split.net">enumerator over splits</a> for bytes, strings, streams &amp; readers.</p>
+<p><a href="https://github.com/dotnet/runtime/pull/104534"><code>SpanSplitEnumerator</code></a> (coming in .Net 9) achieves zero allocations in my experiments. I&rsquo;ve <a href="https://github.com/clipperhouse/Split.net">backported it to .Net 8</a>, and added support for UTF-8 bytes, streams &amp; readers.</p>
 <p>Other implementations in C#: <a href="https://learn.microsoft.com/en-us/dotnet/core/extensions/primitives#the-stringtokenizer-type"><code>StringTokenizer</code></a>, <a href="https://learn.microsoft.com/en-us/dotnet/api/microsoft.toolkit.highperformance.extensions.stringextensions.tokenize?view=win-comm-toolkit-dotnet-6.1"><code>StringExtensions.Tokenize</code></a></p>
 <h2 id="dont-allocate-substrings-the-n">Don&rsquo;t allocate substrings (the <code>n</code>)</h2>
 <p>The original string is already in memory. We would like the substring to be an <strong>inexpensive &ldquo;view&rdquo;</strong> into that underlying storage, instead of a literal copy.</p>
 <h4 id="in-go-1">In Go</h4>
 <p>In my experiments, <code>strings.Split</code>&rsquo;s and <code>bytes.Split</code>&rsquo;s substrings might or might not allocate on the heap. They are slices or string headers &ndash; which are inexpensive views into the underlying bytes.</p>
-<p>The allocation depends on escape analysis. We can make the escape less likely by using the aforementioned <a href="https://github.com/clipperhouse/split">iterator</a> &ndash; only one substring is in memory at a time, on-demand.</p>
+<p>The allocation depends on escape analysis. We can make the escape less likely by using my <a href="https://github.com/clipperhouse/split">aforementioned iterator</a> &ndash; only one substring is in memory at a time, on-demand.</p>
 <h4 id="in-c-1">In C#</h4>
 <p><code>string.Split</code> will always allocate <code>n</code> (sub)strings in my experiments. C# has implemented <code>Span&lt;T&gt;</code>, a type which is an inexpensive view into the underlying memory, and is guaranteed to stay on the stack.</p>
-<p>There is a <a href="https://github.com/dotnet/runtime/pull/104534">new <code>Span</code> splitter</a> in the standard library, coming in C# 9. It achieves zero allocations in my experiments. My <a href="https://github.com/clipperhouse/Split.net">aforementioned splitter</a> began as a fork of the above, and is available for C# 8.</p>
+<p>There is a <a href="https://github.com/dotnet/runtime/pull/104534">new <code>Span</code> splitter</a> in the standard library, coming in .Net 9. It achieves zero allocations in my experiments. My <a href="https://github.com/clipperhouse/Split.net">aforementioned splitter</a> is a backport of the above, for .Net 8.</p>
 <h2 id="why-you-might-do-this">Why you might do this</h2>
 <p>To make hot paths faster, and perhaps more importantly, to reduce the tax on the garbage collector.</p>
-<p>Ideally, you&rsquo;ll look at your whole pipeline and think <em>streaming</em> &ndash; small batches in memory, inexpensive views into underlying bytes, minimal copying. What&rsquo;s the original source of the string, and what&rsquo;s its ultimate destination?</p>
+<p>Ideally, you&rsquo;ll look at your whole pipeline and think <em>streaming</em> &ndash; small batches in memory, inexpensive views into underlying bytes, readers &amp; writers, minimal copying. What&rsquo;s the original source of the string, and what&rsquo;s its ultimate destination?</p>
 <h2 id="why-you-might-not-do-this">Why you might not do this</h2>
 <p>If you actually need to <em>collect</em> the substrings &ndash; if later functions are just going to allocate them anyway &ndash; the above techniques might not be a win.</p>
 <h2 id="by-the-way">By the way</h2>

@@ -27,7 +27,7 @@ To zero it out, I've implemented an [iterator over splits](https://github.com/cl
 
 `string.Split` will always allocate `n+1` in my experiments.
 
-[`SpanSplitEnumerator`](https://github.com/dotnet/runtime/pull/104534) (coming in C# 9) achieves zero allocations in my experiments. Forking that, I've implemented a [enumerator over splits](https://github.com/clipperhouse/Split.net) for bytes, strings, streams & readers.
+[`SpanSplitEnumerator`](https://github.com/dotnet/runtime/pull/104534) (coming in .Net 9) achieves zero allocations in my experiments. I've [backported it to .Net 8](https://github.com/clipperhouse/Split.net), and added support for UTF-8 bytes, streams & readers.
 
 Other implementations in C#: [`StringTokenizer`](https://learn.microsoft.com/en-us/dotnet/core/extensions/primitives#the-stringtokenizer-type), [`StringExtensions.Tokenize`](https://learn.microsoft.com/en-us/dotnet/api/microsoft.toolkit.highperformance.extensions.stringextensions.tokenize?view=win-comm-toolkit-dotnet-6.1)
 
@@ -39,19 +39,19 @@ The original string is already in memory. We would like the substring to be an *
 
 In my experiments, `strings.Split`'s and `bytes.Split`'s substrings might or might not allocate on the heap. They are slices or string headers -- which are inexpensive views into the underlying bytes.
 
-The allocation depends on escape analysis. We can make the escape less likely by using the aforementioned [iterator](https://github.com/clipperhouse/split) -- only one substring is in memory at a time, on-demand.
+The allocation depends on escape analysis. We can make the escape less likely by using my [aforementioned iterator](https://github.com/clipperhouse/split) -- only one substring is in memory at a time, on-demand.
 
 #### In C#
 
 `string.Split` will always allocate `n` (sub)strings in my experiments. C# has implemented `Span<T>`, a type which is an inexpensive view into the underlying memory, and is guaranteed to stay on the stack.
 
-There is a [new `Span` splitter](https://github.com/dotnet/runtime/pull/104534) in the standard library, coming in C# 9. It achieves zero allocations in my experiments. My [aforementioned splitter](https://github.com/clipperhouse/Split.net) began as a fork of the above, and is available for C# 8.
+There is a [new `Span` splitter](https://github.com/dotnet/runtime/pull/104534) in the standard library, coming in .Net 9. It achieves zero allocations in my experiments. My [aforementioned splitter](https://github.com/clipperhouse/Split.net) is a backport of the above, for .Net 8.
 
 ## Why you might do this
 
 To make hot paths faster, and perhaps more importantly, to reduce the tax on the garbage collector.
 
-Ideally, you'll look at your whole pipeline and think _streaming_ -- small batches in memory, inexpensive views into underlying bytes, minimal copying. What's the original source of the string, and what's its ultimate destination?
+Ideally, you'll look at your whole pipeline and think _streaming_ -- small batches in memory, inexpensive views into underlying bytes, readers & writers, minimal copying. What's the original source of the string, and what's its ultimate destination?
 
 ## Why you might not do this
 
