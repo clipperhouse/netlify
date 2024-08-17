@@ -69,7 +69,7 @@
 <ul>
 <li>CDC imposes a non-trivial increase in I/O and CPU</li>
 <li>If the downstream sink is not keeping up, you will be slowly losing disk space. It’s like a memory leak.</li>
-<li>It will not be obvious to operators that CDC is the culprit, and that slowness of downstream sink is the root cause.</li>
+<li>It will not be obvious to operators that CDC is the culprit, and that slowness of the downstream sink is the root cause.</li>
 <li>When the downstream sink gets “unblocked”, the backlog of CDC events will try to catch up, and may flood the network and spike CPU.</li>
 </ul>
 <h3 id="what-can-be-done">What can be done?</h3>
