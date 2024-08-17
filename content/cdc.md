@@ -40,4 +40,4 @@ If that's not an option, reconsider your latency requirements. Does your applica
 
 So instead of `OLTP → CDC → Kafka/OLAP`, consider `OLTP → CDC → S3 → Kafka/OLAP`.
 
-Cloud storage has high reliability and capacity -- you're unlikely to tax it. By writing to S3, the OLTP system will consider the changes emitted, avoiding a GC backlog, and reducing the likelihood of surprise.
+Cloud storage has high reliability and capacity -- you're unlikely to tax it. By writing to S3, the OLTP system will consider the changes emitted, avoiding a backlog, and reducing the likelihood of surprise.

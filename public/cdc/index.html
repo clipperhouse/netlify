@@ -76,7 +76,7 @@
 <p>The best thing is to ensure that the downstream sink is reliable and sufficiently provisioned.</p>
 <p>If that&rsquo;s not an option, reconsider your latency requirements. Does your application actually require SQL updates to replicated in ~seconds? If not, consider adding a buffer in the form of cloud storage (like S3).</p>
 <p>So instead of <code>OLTP → CDC → Kafka/OLAP</code>, consider <code>OLTP → CDC → S3 → Kafka/OLAP</code>.</p>
-<p>Cloud storage has high reliability and capacity &ndash; you&rsquo;re unlikely to tax it. By writing to S3, the OLTP system will consider the changes emitted, avoiding a GC backlog, and reducing the likelihood of surprise.</p>
+<p>Cloud storage has high reliability and capacity &ndash; you&rsquo;re unlikely to tax it. By writing to S3, the OLTP system will consider the changes emitted, avoiding a backlog, and reducing the likelihood of surprise.</p>
 
 			</div>
 		</article>
