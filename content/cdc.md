@@ -25,7 +25,7 @@ Until those two things happen, those events are stored on disk, and will remain 
 
 You'll note this implies that the production OLTP system now has a dependency on an external system. If Kafka is offline or too slow, the OLTP system is building up a backlog of changes.
 
-Anyway, back to the “surprise” part.
+Anyway, back to the “surprise” part:
 
 - CDC imposes a non-trivial increase in CPU and I/O
 - If the downstream sink is not keeping up, you will be slowly losing disk space. It’s like a memory leak.
@@ -38,6 +38,6 @@ The best thing is to ensure that the downstream sink is reliable and sufficientl
 
 If that's not an option, reconsider your latency requirements. Does your application actually require SQL updates to replicated in ~seconds? If not, consider adding a buffer in the form of cloud storage (like S3).
 
-So instead of OLTP → CDC → Kafka/OLAP, consider OLTP → CDC **→ S3** → Kafka/OLAP.
+So instead of `OLTP → CDC → Kafka/OLAP`, consider `OLTP → CDC → S3 → Kafka/OLAP`.
 
-Cloud storage has high reliability and capacity -- you're unlikely to tax it. By writing to S3, the OLTP system will consider the changes emitted, avoiding a backlog, and reducing the likelihood of surprise.
+Cloud storage has high reliability and capacity -- you're unlikely to tax it. By writing to S3, the OLTP system will consider the changes emitted, avoiding a GC backlog, and reducing the likelihood of surprise.
