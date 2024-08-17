@@ -36,7 +36,7 @@ Anyway, back to the “surprise” part:
 
 The best thing is to ensure that the downstream sink is reliable and sufficiently provisioned.
 
-If that's not an option, reconsider your latency requirements. Does your application actually require SQL updates to replicated in ~seconds? If not, consider adding a buffer in the form of cloud storage (like S3).
+If that's not an option, reconsider your latency requirements. Does your application actually require SQL updates to be replicated in ~seconds? If not, consider adding a buffer in the form of cloud storage (like S3).
 
 So instead of `OLTP → CDC → Kafka/OLAP`, consider `OLTP → CDC → S3 → Kafka/OLAP`.
 
