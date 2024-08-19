@@ -73,6 +73,7 @@
 <li>When the downstream sink gets “unblocked”, the backlog of CDC events will try to catch up, and may flood the network and spike CPU.</li>
 </ul>
 <h3 id="what-can-be-done">What can be done?</h3>
+<p>We need to get the backpressure (the backlog) off of the production system.</p>
 <p>The best thing is to ensure that the downstream sink is reliable and sufficiently provisioned.</p>
 <p>If that&rsquo;s not an option, reconsider your latency requirements. Does your application actually require SQL updates to be replicated in ~seconds? If not, consider adding a buffer in the form of cloud storage (like S3).</p>
 <p>So instead of <code>OLTP → CDC → Kafka/OLAP</code>, consider <code>OLTP → CDC → S3 → Kafka/OLAP</code>.</p>

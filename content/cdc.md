@@ -34,6 +34,8 @@ Anyway, back to the “surprise” part:
 
 ### What can be done?
 
+We need to get the backpressure (the backlog) off of the production system.
+
 The best thing is to ensure that the downstream sink is reliable and sufficiently provisioned.
 
 If that's not an option, reconsider your latency requirements. Does your application actually require SQL updates to be replicated in ~seconds? If not, consider adding a buffer in the form of cloud storage (like S3).
