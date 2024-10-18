@@ -7,7 +7,7 @@ I move between Go and C#, and one idiom I like in Go is tests living alongside t
 
 To achieve the Go style in .Net, one must a) make the tests discoverable by a test runner, and b) optionally-but-desirably, ensure that the test files and frameworks don't get compiled into Release builds. 
 
-This is configured in the `.csproj` file. If you'd like to cut to the chase, have a look at [this example](https://github.com/clipperhouse/uax29.net/blob/main/uax29/uax29.csproj).
+This is configured in the `.csproj` file. If you'd like to cut to the chase, have a look at [this example](https://github.com/clipperhouse/uax29.net/blob/e86ff7681837a5785d93bc44c56c335bc61c1ef8/uax29/uax29.csproj).
 
 ### Details
 
