@@ -15,7 +15,7 @@
 	
 	<link href="/css/normalize.580818700724d42d7fcc4979b0197971fca1c6d2e0286769237a0ac897df5512.css" rel="stylesheet">
 	
-	<link href="/css/style.3ae8d31df192322bef3a6446a8956448f291b6d0d2174bb75238a1d38c4823a3.css" rel="stylesheet">
+	<link href="/css/style.8cace777a37cf57765233252d752573ea3ed59a3900e4b4c5742f81fe85362b1.css" rel="stylesheet">
 
 	
 
@@ -81,10 +81,10 @@ refills as time passes. If there are no tokens left, the request is denied.</p>
 as I imagine that in production use, there will be thousands or millions of buckets.</p>
 <p>The <code>bucket</code> type need only contain a <code>time</code>. In combination with a <code>Limit</code>, we can fully
 determine how many tokens are in the bucket. The <a href="https://github.com/clipperhouse/rate/blob/main/bucket.go">type</a> is:</p>
-<pre tabindex="0"><code>type bucket struct {
-    time time.Time
-}
-</code></pre><p>It&rsquo;s helpful to understand that a duration of time is isomorphic to a &ldquo;token&rdquo;. So we&rsquo;ll have no
+<div class="highlight"><pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#007020;font-weight:bold">type</span> bucket <span style="color:#007020;font-weight:bold">struct</span> {
+</span></span><span style="display:flex;"><span>    time time.Time
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>It&rsquo;s helpful to understand that <strong>a duration of time is isomorphic to a &ldquo;token&rdquo;</strong>. So we&rsquo;ll have no
 <code>token</code> type, no <code>token</code> field, and only do arithmetic on time. There is no explicit refilling
 operation, just the system clock moving along.</p>
 <p>Let&rsquo;s define <code>durationPerToken</code> as <code>Limit.period / Limit.count</code>.</p>
@@ -105,7 +105,7 @@ representing one token.</p>
 </span></span><span style="display:flex;"><span>}
 </span></span></code></pre></div><p>I&rsquo;ve elided some type conversions and edge cases for the sake of this brevity.</p>
 <p>🐞 First bug! What happens if a bucket is old &ndash; say it hasn&rsquo;t been updated in
-an hour, but is defined by a 10-per-second limit? Naive arithmetic would calculate thousands
+an hour, but is defined by a 10-per-second limit? Naïve arithmetic would calculate thousands
 of tokens. But, we want it only to ever &ldquo;have&rdquo; up to 10 tokens. Let&rsquo;s fix that:</p>
 <div class="highlight"><pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#007020;font-weight:bold">func</span> (b <span style="color:#666">*</span>bucket) <span style="color:#06287e">remainingTokens</span>(now time.Time, limit Limit) <span style="color:#902000">int64</span> {
 </span></span><span style="display:flex;"><span>    cutoff <span style="color:#666">:=</span> now.<span style="color:#06287e">Add</span>(<span style="color:#666">-</span>limit.period)
@@ -116,7 +116,7 @@ of tokens. But, we want it only to ever &ldquo;have&rdquo; up to 10 tokens. Let&
 </span></span><span style="display:flex;"><span>}
 </span></span></code></pre></div><h2 id="limiter">Limiter</h2>
 <p>This will be our main API. The <code>Limiter</code>&rsquo;s job is to dynamically allow or deny a request. It will
-track many buckets and (later) many distinct limits. We want an API like:</p>
+track many buckets and (later) many limits. We want an API like:</p>
 <div class="highlight"><pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#60a0b0;font-style:italic">// Define a limit</span>
 </span></span><span style="display:flex;"><span>perSecond <span style="color:#666">:=</span> Limit{count: <span style="color:#40a070">10</span>, period: time.Second}
 </span></span><span style="display:flex;"><span>
@@ -137,17 +137,16 @@ arbitrary logic, encapsulated in a named func.</p>
 </span></span><span style="display:flex;"><span>}
 </span></span></code></pre></div><p>The <code>Allow</code> method&rsquo;s job is to:</p>
 <ul>
-<li>Fetch or create the bucket for the IP address</li>
-<li>See if the bucket has tokens, based on <code>time.Now()</code>.</li>
+<li>Fetch or create the bucket for the IP address.</li>
+<li>See if the bucket has tokens.</li>
 <li>Deduct a token and return true if yes; otherwise return false and mutate nothing.</li>
 </ul>
 <p>See the <a href="https://github.com/clipperhouse/rate/blob/main/limiter.go">implementation-in-progress</a>. A few interesting
-things you may notice in the implementation:</p>
+things you may notice:</p>
 <ul>
-<li><code>Limiter</code> and <code>Keyer</code> are <strong>generic</strong>, allowing arbitrary types. Type inference allows this to read nicely.</li>
-<li><code>Limiter</code> manages a map of key → bucket.</li>
+<li><code>Limiter</code> and <code>Keyer</code> are <strong>generic</strong>, allowing arbitrary types for keys. Type inference allows this to read nicely.</li>
+<li><code>Limiter</code> manages a map of key → bucket. We need safe concurrency, so we use a <code>sync.Map</code>.</li>
 <li>A bucket is only meaningful in combination with a limit, so we create a composite key of limit + user-defined key.</li>
-<li>We need concurrency, so we use a <code>sync.Map</code>.</li>
 </ul>
 <h3 id="multiple-limits-per-bucket">Multiple limits per bucket</h3>
 <p>Let&rsquo;s extend <code>Limiter</code> to accept multiple limits per bucket. Perhaps we wish to tolerate short spikes
@@ -173,8 +172,8 @@ is desirable, especially under load.</p>
 <li>Otherwise return false and mutate nothing.</li>
 </ul>
 <p>Further, in the spirit of a database-like transaction, and to allow testability,
-we start with an <code>executionTime</code> and use it throughout the logic (instead of calling
-<code>time.Now()</code>)</p>
+we start with an <code>executionTime</code> and use it throughout the logic (instead of repeatedly calling
+<code>time.Now()</code>).</p>
 <p><a href="https://github.com/clipperhouse/rate/blob/main/limiter.go#L126">Implementation-in-progress here</a>.</p>
 <h2 id="conditional-limits">Conditional Limits</h2>
 <p>Perhaps we want a limit to be determined dynamically.</p>
@@ -222,17 +221,20 @@ we start with an <code>executionTime</code> and use it throughout the logic (ins
 </span></span><span style="display:flex;"><span>}
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>limiter <span style="color:#666">:=</span> rate.<span style="color:#06287e">NewLimiterFunc</span>(byPlan, free, enterprise)
-</span></span></code></pre></div><h2 id="review-of-composability-concepts">Review of composability concepts</h2>
+</span></span></code></pre></div><h2 id="stacked-limiter">Stacked Limiter?</h2>
+<p>An idea for the future: combine multiple <code>Limiter</code>s into a single <code>LimiterStack</code>.</p>
+<p>Implement logic similar to the &ldquo;multiple limits&rdquo; above &ndash; one <code>Allow()</code> method for
+all limiters; &ldquo;all or nothing&rdquo; transactional semantics. I&rsquo;m musing about it now 🤔.</p>
+<h2 id="review-of-composability-concepts">Review of composability concepts</h2>
 <p>The overall design here is that each primitive should be easy to express,
 and then combined into sophisticated logic for our application&rsquo;s needs.</p>
 <p>For anything dynamic, let&rsquo;s allow arbitrary computation, i.e. a function with a name. Let&rsquo;s
-allow the arbitrary combination of each primitive, and abstract away the hard parts, such
+allow the arbitrary combination of each primitive, and handle the hard parts, such
 as transactions.</p>
-<p>The user does need to do some thinking, as they build up the logic &ndash; we can&rsquo;t abstract
-that away. There is no substitute for doing the reasoning and arithmetic.</p>
+<p>The user does need to do some thinking, as they build up their logic. There is no substitute for doing the reasoning and the arithmetic.</p>
 <p>If we&rsquo;ve done a good job, then the user will be unsurprised by the outcomes, even under
 complex circumstances.</p>
-<p>Have we done that? The work is in progress. Your opinion is welcome on GitHub or on <a href="https://x.com/clipperhouse">𝕏</a>.</p>
+<p>Have we done that? The work is <a href="https://github.com/clipperhouse/rate">in progress</a>. Your opinion is welcome on <a href="https://github.com/clipperhouse/rate">GitHub</a> or on <a href="https://x.com/clipperhouse">𝕏</a>.</p>
 
 			</div>
 		</article>

@@ -49,13 +49,13 @@ as I imagine that in production use, there will be thousands or millions of buck
 The `bucket` type need only contain a `time`. In combination with a `Limit`, we can fully
 determine how many tokens are in the bucket. The [type](https://github.com/clipperhouse/rate/blob/main/bucket.go) is:
 
-```
+```go
 type bucket struct {
     time time.Time
 }
 ```
 
-It's helpful to understand that a duration of time is isomorphic to a "token". So we'll have no
+It's helpful to understand that **a duration of time is isomorphic to a "token"**. So we'll have no
 `token` type, no `token` field, and only do arithmetic on time. There is no explicit refilling
 operation, just the system clock moving along.
 
@@ -91,7 +91,7 @@ func (b *bucket) remainingTokens(now time.Time, limit Limit) int64 {
 I've elided some type conversions and edge cases for the sake of this brevity.
 
 🐞 First bug! What happens if a bucket is old -- say it hasn't been updated in
-an hour, but is defined by a 10-per-second limit? Naive arithmetic would calculate thousands
+an hour, but is defined by a 10-per-second limit? Naïve arithmetic would calculate thousands
 of tokens. But, we want it only to ever "have" up to 10 tokens. Let's fix that:
 
 ```go
@@ -107,7 +107,7 @@ func (b *bucket) remainingTokens(now time.Time, limit Limit) int64 {
 ## Limiter
 
 This will be our main API. The `Limiter`'s job is to dynamically allow or deny a request. It will
-track many buckets and (later) many distinct limits. We want an API like:
+track many buckets and (later) many limits. We want an API like:
 
 ```go
 // Define a limit
@@ -137,17 +137,16 @@ if limiter.Allow(r) {
 
 The `Allow` method's job is to:
 
-- Fetch or create the bucket for the IP address
-- See if the bucket has tokens, based on `time.Now()`.
+- Fetch or create the bucket for the IP address.
+- See if the bucket has tokens.
 - Deduct a token and return true if yes; otherwise return false and mutate nothing.
 
 See the [implementation-in-progress](https://github.com/clipperhouse/rate/blob/main/limiter.go). A few interesting
-things you may notice in the implementation:
+things you may notice:
 
-- `Limiter` and `Keyer` are **generic**, allowing arbitrary types. Type inference allows this to read nicely.
-- `Limiter` manages a map of key → bucket.
+- `Limiter` and `Keyer` are **generic**, allowing arbitrary types for keys. Type inference allows this to read nicely.
+- `Limiter` manages a map of key → bucket. We need safe concurrency, so we use a `sync.Map`.
 - A bucket is only meaningful in combination with a limit, so we create a composite key of limit + user-defined key.
-- We need concurrency, so we use a `sync.Map`.
 
 ### Multiple limits per bucket
 
@@ -180,8 +179,8 @@ It's non-trivial to do this right. The basic logic is:
 - Otherwise return false and mutate nothing.
 
 Further, in the spirit of a database-like transaction, and to allow testability,
-we start with an `executionTime` and use it throughout the logic (instead of calling
-`time.Now()`)
+we start with an `executionTime` and use it throughout the logic (instead of repeatedly calling
+`time.Now()`).
 
 [Implementation-in-progress here](https://github.com/clipperhouse/rate/blob/main/limiter.go#L126).
 
@@ -240,19 +239,25 @@ enterprise := func(r *http.Request) Limit {
 limiter := rate.NewLimiterFunc(byPlan, free, enterprise)
 ```
 
+## Stacked Limiter?
+
+An idea for the future: combine multiple `Limiter`s into a single `LimiterStack`.
+
+Implement logic similar to the "multiple limits" above -- one `Allow()` method for
+all limiters; "all or nothing" transactional semantics. I'm musing about it now 🤔.
+
 ## Review of composability concepts
 
 The overall design here is that each primitive should be easy to express,
 and then combined into sophisticated logic for our application's needs.
 
 For anything dynamic, let's allow arbitrary computation, i.e. a function with a name. Let's
-allow the arbitrary combination of each primitive, and abstract away the hard parts, such
+allow the arbitrary combination of each primitive, and handle the hard parts, such
 as transactions.
 
-The user does need to do some thinking, as they build up the logic -- we can't abstract
-that away. There is no substitute for doing the reasoning and arithmetic.
+The user does need to do some thinking, as they build up their logic. There is no substitute for doing the reasoning and the arithmetic.
 
 If we've done a good job, then the user will be unsurprised by the outcomes, even under
 complex circumstances.
 
-Have we done that? The work is in progress. Your opinion is welcome on GitHub or on [𝕏](https://x.com/clipperhouse).
+Have we done that? The work is [in progress](https://github.com/clipperhouse/rate). Your opinion is welcome on [GitHub](https://github.com/clipperhouse/rate) or on [𝕏](https://x.com/clipperhouse).
