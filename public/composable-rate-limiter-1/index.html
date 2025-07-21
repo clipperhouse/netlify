@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Designing a composable rate limiter, part 1
+		</title>
+
+	
+
+	
+	
+	
+	<link href="/css/normalize.580818700724d42d7fcc4979b0197971fca1c6d2e0286769237a0ac897df5512.css" rel="stylesheet">
+	
+	<link href="/css/style.3ae8d31df192322bef3a6446a8956448f291b6d0d2174bb75238a1d38c4823a3.css" rel="stylesheet">
+
+	
+
+	
+
+	<link rel="icon" type="image/png" sizes="32x32" href="/img/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="/img/favicon-16x16.png">
+	<link rel="apple-touch-icon" href="/img/apple-touch-icon.png">
+</head>
+
+<body>
+	<header>
+	<nav>
+		<a href="https://clipperhouse.com/">clipperhouse.com</a>
+		<span class="sep">·</span>
+		<a href="/jargon/">jargon</a>
+		<span class="sep">·</span>
+		<a href="/gen/overview/">gen</a>
+		<span class="sep">·</span>
+		<a href="/stack-correlations/">tag correlations</a>
+		<span class="sep">·</span>
+		<a href="/classical/">classical radio</a>
+	</nav>
+</header>
+
+	
+	<main class="single">
+		<article>
+			<h1>Designing a composable rate limiter, part 1</h1>
+			<div>
+				<p>Having used rate limiters a few times, I&rsquo;ve observed that they must be thoughtfully designed. In particular,
+there are typically comprised of several policies which we wish to stack on one another. It can get messy.</p>
+<p>So I decided to design a rate limiter that emphasizes <strong>composability</strong>, which I define as having the right
+primitives, where one can express arbitrary policies, and which can be combined in a way
+that is easy to read and reason about. Let&rsquo;s start by defining the basics.</p>
+<blockquote>
+<p>If you&rsquo;d like to skip ahead to the work-in-progress: <a href="https://github.com/clipperhouse/rate">https://github.com/clipperhouse/rate</a>. It&rsquo;s in Go,
+but if I like this work I may port to C#, Rust or Zig.</p>
+</blockquote>
+<h3 id="limit">Limit</h3>
+<p>The first primitive is a <code>Limit</code>. We would like to be able to define an abritrary number of requests
+for an arbitrary amount of time. We might like to address short spikes, say 10 requests per second,
+or sustained load, such as 100 requests per minute. This <a href="https://github.com/clipperhouse/rate/blob/main/limit.go">type</a> will be pretty simple:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="line"><span class="cl"><span class="kd">type</span> <span class="nx">Limit</span> <span class="kd">struct</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">count</span>    <span class="kt">int64</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">period</span>   <span class="nx">time</span><span class="p">.</span><span class="nx">Duration</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><p>Not much else to say about it!</p>
+<h3 id="bucket">Bucket</h3>
+<p>We will implement a <a href="https://en.wikipedia.org/wiki/Token_bucket">token-bucket algorithm</a>. The metaphor is
+that a bucket will begin by containing some number of tokens; each request consumes a token; the bucket
+refills as time passes.</p>
+<p>I believe this type can be minimal. In fact, I would like to prematurely optimize for the fewest bytes,
+as I imagine that in production use, there will be thousands or millions of buckets.</p>
+<p>I believe the <code>bucket</code> type need only contain a <code>time</code>. In combination with a <code>Limit</code>, we can fully
+determine how many tokens are in the bucket. The <a href="https://github.com/clipperhouse/rate/blob/main/bucket.go">type</a> is:</p>
+<pre tabindex="0"><code>type bucket struct {
+    time time.Time
+}
+</code></pre><p>It&rsquo;s helpful to understand that a duration of time is isomorphic to a &ldquo;token&rdquo;. So we&rsquo;ll have no
+<code>token</code> type, no <code>token</code> field, and only do arithmetic on time. There is no explicit refilling
+operation, just the passage of time.</p>
+<p>We&rsquo;ll give ourselves some helper methods. To determine if a bucket contains at least one token,
+we check to see if the bucket&rsquo;s time is before or equal to now, minus the time duration
+representing one token.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="line"><span class="cl"><span class="kd">func</span> <span class="p">(</span><span class="nx">b</span> <span class="o">*</span><span class="nx">bucket</span><span class="p">)</span> <span class="nf">hasToken</span><span class="p">(</span><span class="nx">now</span> <span class="nx">time</span><span class="p">.</span><span class="nx">Time</span><span class="p">,</span> <span class="nx">limit</span> <span class="nx">Limit</span><span class="p">)</span> <span class="kt">bool</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">// &#34;not after&#34; expresses &#34;before or equal&#34;
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="k">return</span> <span class="p">!</span><span class="nx">b</span><span class="p">.</span><span class="nx">time</span><span class="p">.</span><span class="nf">After</span><span class="p">(</span><span class="nx">now</span><span class="p">.</span><span class="nf">Add</span><span class="p">(</span><span class="o">-</span><span class="nx">limit</span><span class="p">.</span><span class="nx">durationPerToken</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// We can add a durationPerToken property to Limit: Limit.period / Limit.count.
+</span></span></span></code></pre></div><p>To consume a token, we forward the bucket&rsquo;s time by one token:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="line"><span class="cl"><span class="kd">func</span> <span class="p">(</span><span class="nx">b</span> <span class="o">*</span><span class="nx">bucket</span><span class="p">)</span> <span class="nf">consumeToken</span><span class="p">(</span><span class="nx">limit</span> <span class="nx">Limit</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">b</span><span class="p">.</span><span class="nx">time</span> <span class="p">=</span> <span class="nx">b</span><span class="p">.</span><span class="nx">time</span><span class="p">.</span><span class="nf">Add</span><span class="p">(</span><span class="nx">limit</span><span class="p">.</span><span class="nx">durationPerToken</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><p>To count all the remaining tokens:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="line"><span class="cl"><span class="kd">func</span> <span class="p">(</span><span class="nx">b</span> <span class="o">*</span><span class="nx">bucket</span><span class="p">)</span> <span class="nf">remainingTokens</span><span class="p">(</span><span class="nx">now</span> <span class="nx">time</span><span class="p">.</span><span class="nx">Time</span><span class="p">,</span> <span class="nx">limit</span> <span class="nx">Limit</span><span class="p">)</span> <span class="kt">int64</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="nx">now</span><span class="p">.</span><span class="nf">Sub</span><span class="p">(</span><span class="nx">b</span><span class="p">.</span><span class="nx">time</span><span class="p">)</span> <span class="o">/</span> <span class="nx">limit</span><span class="p">.</span><span class="nx">durationPerToken</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><p>I&rsquo;ve elided some type conversions and other concerns for the sake of this brevity.</p>
+<p>🐞 First bug alert! What happens if a bucket is old &ndash; say it hasn&rsquo;t been updated in
+an hour, but is defined by a 10-per-second limit? Naive arithmetic would calculate thousands
+of tokens. But, we want it only to ever &ldquo;have&rdquo; up to 10 tokens. Let&rsquo;s fix that:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="line"><span class="cl"><span class="kd">func</span> <span class="p">(</span><span class="nx">b</span> <span class="o">*</span><span class="nx">bucket</span><span class="p">)</span> <span class="nf">remainingTokens</span><span class="p">(</span><span class="nx">now</span> <span class="nx">time</span><span class="p">.</span><span class="nx">Time</span><span class="p">,</span> <span class="nx">limit</span> <span class="nx">Limit</span><span class="p">)</span> <span class="kt">int64</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">cutoff</span> <span class="o">:=</span> <span class="nx">now</span><span class="p">.</span><span class="nf">Add</span><span class="p">(</span><span class="o">-</span><span class="nx">limit</span><span class="p">.</span><span class="nx">period</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="nx">b</span><span class="p">.</span><span class="nx">time</span><span class="p">.</span><span class="nf">Before</span><span class="p">(</span><span class="nx">cutoff</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="nx">limit</span><span class="p">.</span><span class="nx">count</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="nx">now</span><span class="p">.</span><span class="nf">Sub</span><span class="p">(</span><span class="nx">b</span><span class="p">.</span><span class="nx">time</span><span class="p">)</span> <span class="o">/</span> <span class="nx">limit</span><span class="p">.</span><span class="nx">durationPerToken</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><p>I think these primitives form a good basis for building up our structures. In part 2,
+we&rsquo;ll talk about managing many buckets.</p>
+
+			</div>
+		</article>
+		<div class="post-meta">
+			<p>
+				Published July 20, 2025</p>
+			
+		</div>
+	</main>
+
+	<footer>
+    <p>
+        <a href="https://x.com/clipperhouse">𝕏</a>
+        &nbsp;
+        <a class="github" href="https://github.com/clipperhouse"> </a>
+    </p>
+</footer>
+
+
+	
+
+	
+	 
+	
+	<link href="/css/chroma-friendly.085612d786e5ab641b61c69b7d82b3a912c37a09bfc8e694a1c3165a3840131b.css" rel="stylesheet">
+	
+	
+</body>
+
+</html>

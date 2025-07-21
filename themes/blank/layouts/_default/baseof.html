@@ -1,56 +1,67 @@
 <!DOCTYPE html>
-<html lang="{{ .Site.LanguageCode | default "en-us" }}">
+<html lang="{{ .Site.LanguageCode | default " en-us" }}">
+
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<title>
 		{{- if .IsHome }}
-			{{- .Site.Title }}
+		{{- .Site.Title }}
 		{{- else }}
-			{{- .Title }}
-		{{ end -}}
-	</title>
+		{{- .Title }}
+		{{ end -}}</title>
 
-	{{ with .Site.Params.description }}<meta name="description" content="{{ . }}">{{ end }}
+	{{ with .Site.Params.description }}
+	<meta name="description" content="{{ . }}">{{ end }}
 
 	{{ $csss := slice "normalize" "style" }}
 	{{ range $csss -}}
-		{{ with print "css/" . ".css" }}
-			{{ $css := resources.Get . | fingerprint }}
-			<link href="{{ $css.RelPermalink }}" rel="stylesheet">
-		{{ end }}
+	{{ with print "css/" . ".css" }}
+	{{ $css := resources.Get . | fingerprint }}
+	<link href="{{ $css.RelPermalink }}" rel="stylesheet">
+	{{- end }}
 	{{- end }}
 
 	{{ range .Params.css -}}
-		{{ with print "css/" . ".css" }}
-			{{ $css := resources.Get . | fingerprint }}
-			<link href="{{ $css.RelPermalink }}" rel="stylesheet">
-		{{ end }}
+	{{ with print "css/" . ".css" }}
+	{{ $css := resources.Get . | fingerprint }}
+	<link href="{{ $css.RelPermalink }}" rel="stylesheet">
+	{{- end }}
 	{{- end }}
 
 	{{ with .OutputFormats.Get "RSS" -}}
-		{{ printf `<link rel="%s" type="%s" href="%s" title="%s">` .Rel .MediaType.Type .RelPermalink $.Site.Title | safeHTML }}
+	{{ printf `
+	<link rel="%s" type="%s" href="%s" title="%s">` .Rel .MediaType.Type .RelPermalink $.Site.Title | safeHTML }}
 	{{- end }}
 
 	<link rel="icon" type="image/png" sizes="32x32" href="/img/favicon-32x32.png">
 	<link rel="icon" type="image/png" sizes="16x16" href="/img/favicon-16x16.png">
 	<link rel="apple-touch-icon" href="/img/apple-touch-icon.png">
 </head>
+
 <body>
 	{{ partial "header" . }}
 	{{ block "main" . }}{{ end }}
 	{{ partial "footer" . }}
 
 	{{ range .Params.js -}}
-		{{ if hasPrefix . "http" }}
-			<script src="{{ . }}" defer></script>
-		{{ else }}
-			{{ with print "js/" . ".js" }}
-				{{ $js := resources.Get . | minify | fingerprint }}
-				<script src="{{ $js.RelPermalink }}" integrity="{{ $js.Data.Integrity }}" defer></script>
-			{{ end }}
-		{{ end }}
+	{{ if hasPrefix . "http" }}
+	<script src="{{ . }}" defer></script>
+	{{ else }}
+	{{ with print "js/" . ".js" }}
+	{{ $js := resources.Get . | minify | fingerprint }}
+	<script src="{{ $js.RelPermalink }}" integrity="{{ $js.Data.Integrity }}" defer></script>
+	{{ end }}
+	{{ end }}
+	{{ end }}
+
+	{{/* Load Chroma CSS only if the page content contains code blocks */}}
+	{{ if (findRE "```|<pre|<code" .RawContent) }} {{ with "css/chroma-friendly.css" }}
+	{{ $css := resources.Get . | fingerprint }}
+	<link href="{{ $css.RelPermalink }}" rel="stylesheet">
+	{{ end }}
 	{{ end }}
 </body>
+
 </html>

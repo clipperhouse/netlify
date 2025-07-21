@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en-us">
+
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -11,12 +12,10 @@
 
 	
 	
-			
-			<link href="/css/normalize.580818700724d42d7fcc4979b0197971fca1c6d2e0286769237a0ac897df5512.css" rel="stylesheet">
-		
-			
-			<link href="/css/style.3ae8d31df192322bef3a6446a8956448f291b6d0d2174bb75238a1d38c4823a3.css" rel="stylesheet">
-		
+	
+	<link href="/css/normalize.580818700724d42d7fcc4979b0197971fca1c6d2e0286769237a0ac897df5512.css" rel="stylesheet">
+	
+	<link href="/css/style.3ae8d31df192322bef3a6446a8956448f291b6d0d2174bb75238a1d38c4823a3.css" rel="stylesheet">
 
 	
 
@@ -26,6 +25,7 @@
 	<link rel="icon" type="image/png" sizes="16x16" href="/img/favicon-16x16.png">
 	<link rel="apple-touch-icon" href="/img/apple-touch-icon.png">
 </head>
+
 <body>
 	<header>
 	<nav>
@@ -48,7 +48,7 @@
 			<div>
 				<p>I move between Go and C#, and one idiom I like in Go is tests living alongside the things they are testing, right in the same project. In addition to style preference, it (IMHO) more easily allows testing internal functions. In the .Net world, having a <a href="https://stackoverflow.com/questions/358196/c-sharp-internal-access-modifier-when-doing-unit-testing">separate test project</a> is traditional.</p>
 <p>To achieve the Go style in .Net, one must a) make the tests discoverable by a test runner, and b) optionally-but-desirably, ensure that the test files and frameworks don&rsquo;t get compiled into Release builds.</p>
-<p>This is configured in the <code>.csproj</code> file. If you&rsquo;d like to cut to the chase, have a look at <a href="https://github.com/clipperhouse/uax29.net/blob/main/uax29/uax29.csproj">this example</a>.</p>
+<p>This is configured in the <code>.csproj</code> file. If you&rsquo;d like to cut to the chase, have a look at <a href="https://github.com/clipperhouse/uax29.net/blob/e86ff7681837a5785d93bc44c56c335bc61c1ef8/uax29/uax29.csproj">this example</a>.</p>
 <h3 id="details">Details</h3>
 <p>To make the tests discoverable by the test runner, but only in Debug mode:</p>
 <pre tabindex="0"><code>&lt;PropertyGroup Condition=&#34;&#39;$(Configuration)&#39; != &#39;Release&#39;&#34;&gt;
@@ -91,5 +91,13 @@
 
 
 	
+
+	
+	 
+	
+	<link href="/css/chroma-friendly.085612d786e5ab641b61c69b7d82b3a912c37a09bfc8e694a1c3165a3840131b.css" rel="stylesheet">
+	
+	
 </body>
+
 </html>
