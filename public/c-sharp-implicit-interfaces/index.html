@@ -50,8 +50,7 @@
 <p>Go has <a href="https://go.dev/tour/methods/10">implicit interfaces</a>, which means that a type implements an interface <em>iff</em> it satisfies that interface. It&rsquo;s not declared. It&rsquo;s simply something that the type system determines to be true or false, as needed.</p>
 <p>I though it was clever, and I was a bit enamored when I first heard it (having come from a C# background). Now, I think implicit interfaces are simply, obviously right. An interface is a characteristic, not an assertion.</p>
 <blockquote>
-<p>There is an <a href="https://stackoverflow.com/questions/31753282/go-how-to-explicitly-state-that-a-structure-is-implementing-an-interface">idiom in Go</a> for making such declarations explcit, if only to signal intent and avoid regressions.</p>
-</blockquote>
+<p>There is an <a href="https://stackoverflow.com/questions/31753282/go-how-to-explicitly-state-that-a-structure-is-implementing-an-interface">idiom in Go</a> for making such declarations explcit, if only to signal intent and avoid regressions.</p></blockquote>
 <p>C#, on the other hand, has explicit interfaces, by design. It&rsquo;s a fine choice, but I have found myself wishing to classify types that have a shared method signature, but do not share an interface.</p>
 <p>For example, C#&rsquo;s <code>Stream</code> and <code>StreamReader</code> have identical <code>Read</code> methods &ndash; but no <code>Reader</code> interface declared. I have a type that I wish to accept <code>Stream</code> or <code>StreamReader</code>. What to do?</p>
 <p>Well, I realized I don&rsquo;t care about the <em>types</em>, per se, I care about their <code>Read</code> methods.</p>
@@ -79,8 +78,6 @@
 
 	
 
-	
-	
 </body>
 
 </html>

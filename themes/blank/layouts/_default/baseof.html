@@ -56,12 +56,6 @@
 	{{ end }}
 	{{ end }}
 
-	{{/* Load Chroma CSS only if the page content contains code blocks */}}
-	{{ if (findRE "```|<pre|<code" .RawContent) }} {{ with "css/chroma-friendly.css" }}
-	{{ $css := resources.Get . | fingerprint }}
-	<link href="{{ $css.RelPermalink }}" rel="stylesheet">
-	{{ end }}
-	{{ end }}
 </body>
 
 </html>

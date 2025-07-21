@@ -15,4 +15,3 @@ unsafe = true
 style = "friendly"
 lineNos = false
 lineNumbersInTable = false
-noClasses = false

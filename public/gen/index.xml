@@ -4,7 +4,7 @@
     <title>Gens on clipperhouse.com</title>
     <link>https://clipperhouse.com/gen/</link>
     <description>Recent content in Gens on clipperhouse.com</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo</generator>
     <language>en-us</language>
     <atom:link href="https://clipperhouse.com/gen/index.xml" rel="self" type="application/rss+xml" />
     <item>
@@ -12,42 +12,42 @@
       <link>https://clipperhouse.com/gen/force/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://clipperhouse.com/gen/force/</guid>
-      <description>Tolerating type errors gen operates by parsing and type-checking your source code. The correctness of your code will affect gen&amp;rsquo;s ability to operate.</description>
+      <description>&lt;h3 id=&#34;tolerating-type-errors&#34;&gt;Tolerating type errors&lt;/h3&gt;&#xA;&lt;p&gt;&lt;code&gt;gen&lt;/code&gt; operates by parsing and type-checking your source code. The correctness of your code will affect gen&amp;rsquo;s ability to operate.&lt;/p&gt;</description>
     </item>
     <item>
       <title>gen: optional typewriters</title>
       <link>https://clipperhouse.com/gen/optional/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://clipperhouse.com/gen/optional/</guid>
-      <description>Here are a few optional typewriters I&amp;rsquo;ve created. They are not built into gen, but can be added as follows.</description>
+      <description>&lt;p&gt;Here are a few optional &lt;a href=&#34;https://clipperhouse.com/gen/typewriters/&#34;&gt;typewriters&lt;/a&gt; I&amp;rsquo;ve created. They are not built into &lt;a href=&#34;https://clipperhouse.com/gen/&#34;&gt;gen&lt;/a&gt;, but can be added as follows.&lt;/p&gt;</description>
     </item>
     <item>
       <title>gen: slice typewriter</title>
       <link>https://clipperhouse.com/gen/slice/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://clipperhouse.com/gen/slice/</guid>
-      <description>The slice typewriter is built into gen by default. It generates functional convenience methods that will look familiar to users of C#&amp;rsquo;s LINQ or JavaScript&amp;rsquo;s Array methods.</description>
+      <description>&lt;p&gt;The &lt;code&gt;slice&lt;/code&gt; typewriter is built into &lt;a href=&#34;https://clipperhouse.com/gen/&#34;&gt;&lt;code&gt;gen&lt;/code&gt;&lt;/a&gt; by default. It generates functional convenience methods that will look familiar to users of C#&amp;rsquo;s LINQ or JavaScript&amp;rsquo;s Array methods. It is intended to save you some loops, using a &amp;ldquo;pass a function&amp;rdquo; pattern. It offers easier ad-hoc sorts.&lt;/p&gt;</description>
     </item>
     <item>
       <title>gen: stringer</title>
       <link>https://clipperhouse.com/gen/stringer/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://clipperhouse.com/gen/stringer/</guid>
-      <description>The stringer typewriter is a fork of Rob Pike’s tool of the same name, which generates readable strings for consts.</description>
+      <description>&lt;p&gt;The &lt;code&gt;stringer&lt;/code&gt; &lt;a href=&#34;https://clipperhouse.com/gen/typewriters/&#34;&gt;typewriter&lt;/a&gt; is a fork of Rob Pike’s &lt;a href=&#34;https://godoc.org/golang.org/x/tools/cmd/stringer&#34;&gt;tool&lt;/a&gt; of the same name, which generates readable strings for consts. It is built into gen by default.&lt;/p&gt;</description>
     </item>
     <item>
       <title>gen: type writers</title>
       <link>https://clipperhouse.com/gen/typewriters/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://clipperhouse.com/gen/typewriters/</guid>
-      <description>gen is driven by “type writers” – packages which are responsible for interpreting the annotated tags and turning them into generated code.</description>
+      <description>&lt;p&gt;&lt;a href=&#34;https://clipperhouse.com/gen/&#34;&gt;gen&lt;/a&gt; is driven by “type writers” – packages which are responsible for interpreting the annotated tags and turning them into generated code.&lt;/p&gt;</description>
     </item>
     <item>
       <title>gen: Type-driven code generation for Go</title>
       <link>https://clipperhouse.com/gen/overview/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://clipperhouse.com/gen/overview/</guid>
-      <description>gen is an attempt to bring some generics-like functionality to Go. It uses type annotations to add &amp;ldquo;of T&amp;rdquo; functionality to your packages.</description>
+      <description>&lt;p&gt;&lt;strong&gt;gen&lt;/strong&gt; is an attempt to bring some generics-like functionality to Go. It uses type annotations to add &amp;ldquo;of T&amp;rdquo; functionality to your packages.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>
