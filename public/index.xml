@@ -9,11 +9,11 @@
     <lastBuildDate>Sun, 20 Jul 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://clipperhouse.com/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Designing a composable rate limiter, part 1</title>
-      <link>https://clipperhouse.com/composable-rate-limiter-1/</link>
+      <title>Designing a composable rate limiter</title>
+      <link>https://clipperhouse.com/composable-rate-limiter/</link>
       <pubDate>Sun, 20 Jul 2025 00:00:00 +0000</pubDate>
-      <guid>https://clipperhouse.com/composable-rate-limiter-1/</guid>
-      <description>&lt;p&gt;Having used rate limiters a few times, I&amp;rsquo;ve observed that they must be thoughtfully designed. In particular,&#xA;there are typically comprised of several policies which we wish to stack on one another. It can get messy.&lt;/p&gt;</description>
+      <guid>https://clipperhouse.com/composable-rate-limiter/</guid>
+      <description>&lt;p&gt;Having used rate limiters a few times, I&amp;rsquo;ve observed that they must be thoughtfully designed. In particular,&#xA;they are typically comprised of several policies which we wish to stack on one another. It can get messy.&lt;/p&gt;</description>
     </item>
     <item>
       <title>The surprises of CDC on production workloads</title>
