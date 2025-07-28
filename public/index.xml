@@ -9,11 +9,11 @@
     <lastBuildDate>Mon, 28 Jul 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://clipperhouse.com/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>So, you&#39;re inspecting strings on the hot path</title>
+      <title>So, you’re inspecting strings on the hot path</title>
       <link>https://clipperhouse.com/inspecting-strings-hot-path/</link>
       <pubDate>Mon, 28 Jul 2025 00:00:00 +0000</pubDate>
       <guid>https://clipperhouse.com/inspecting-strings-hot-path/</guid>
-      <description>&lt;blockquote&gt;&#xA;&lt;p&gt;A follow-up to: &lt;a href=&#34;https://clipperhouse.com/split/&#34;&gt;So, you&amp;rsquo;re splitting strings on the hot path&lt;/a&gt;&lt;/p&gt;&lt;/blockquote&gt;&#xA;&lt;p&gt;I have enjoyed optimizing &lt;a href=&#34;https://github.com/clipperhouse/uax29&#34;&gt;my Go library&lt;/a&gt; for splitting (tokenizing) words according to the Unicode standard.&lt;/p&gt;</description>
+      <description>&lt;blockquote&gt;&#xA;&lt;p&gt;A follow-up to &lt;a href=&#34;https://clipperhouse.com/split/&#34;&gt;So, you&amp;rsquo;re splitting strings on the hot path&lt;/a&gt;&lt;/p&gt;&lt;/blockquote&gt;&#xA;&lt;p&gt;I have enjoyed optimizing &lt;a href=&#34;https://github.com/clipperhouse/uax29&#34;&gt;my Go library&lt;/a&gt; for splitting (tokenizing) words according to the Unicode standard.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Designing a composable rate limiter</title>

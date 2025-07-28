@@ -5,7 +5,7 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>So, you&#39;re inspecting strings on the hot path
+	<title>So, you’re inspecting strings on the hot path
 		</title>
 
 	
@@ -44,20 +44,20 @@
 	
 	<main class="single">
 		<article>
-			<h1>So, you&#39;re inspecting strings on the hot path</h1>
+			<h1>So, you’re inspecting strings on the hot path</h1>
 			<div>
 				<blockquote>
-<p>A follow-up to: <a href="/split/">So, you&rsquo;re splitting strings on the hot path</a></p></blockquote>
+<p>A follow-up to <a href="/split/">So, you&rsquo;re splitting strings on the hot path</a></p></blockquote>
 <p>I have enjoyed optimizing <a href="https://github.com/clipperhouse/uax29">my Go library</a> for splitting (tokenizing) words according to the Unicode standard.</p>
 <p>I recently <a href="https://github.com/clipperhouse/uax29/tree/master/words#joiners">added optional &ldquo;joiners&rdquo; functionality</a>, with a focus on performance. A &ldquo;joiner&rdquo; is a character, typically a symbol like <code>@</code> or <code>#</code> or <code>/</code>, that you specify should be treated like any other letter, and which should <em>not</em> split a word.</p>
-<h3 id="use-case">Use case</h3>
+<h2 id="use-case">Use case</h2>
 <p>According to the <a href="https://unicode.org/reports/tr29/#Word_Boundaries">Unicode standard</a>, handles such as &ldquo;@clipperhouse&rdquo; will result in two separate tokens: &ldquo;@&rdquo; and &ldquo;clipperhouse&rdquo;.</p>
 <p>Similarly, a <code>#hashtag</code> will be two tokens, and <code>email@example.com</code> will be three. The standard also splits on hyphens <code>-</code>, slashes <code>/</code>, etc.</p>
 <p>This is all fine, but perhaps you don&rsquo;t want that &ndash; perhaps, for your app, you&rsquo;d like to treat handles &amp; email addresses &ndash; or hyphen-ates, or fract/ions &ndash; as a single word.</p>
-<h3 id="naïve-version">Naïve version</h3>
+<h2 id="naïve-version">Naïve version</h2>
 <p>One could do this joining logic <em>after</em> the tokens come out of the tokenizer. Something like “if this token is ‘@’ and the next token is alphanumeric, concatenate&quot;. Perfectly fine.</p>
 <p>But it’s a <em>lot</em> faster to do it within the tokenizer. Why?</p>
-<h3 id="faster-version">Faster version</h3>
+<h2 id="faster-version">Faster version</h2>
 <p>This is a lot faster within the tokenizer because:</p>
 <ol>
 <li>
@@ -70,8 +70,10 @@
 <p>From my perf-obsessed perspective, wins come from iterating as few times as possible, and allocating as little as possible.</p>
 <p>My tokenizer is pretty optimal in those respects today. So, if you add even a single allocation on your hot path, or a redundant iteration, your perf craters.</p>
 <p>So, I moved some logic into the tokenizer&rsquo;s <a href="https://github.com/clipperhouse/uax29/blob/master/words/splitfunc.go#L91-L96">main loop</a>, so you won&rsquo;t have to do those things. Here&rsquo;s <a href="https://github.com/clipperhouse/uax29/tree/master/words#joiners">how to use it</a>.</p>
-<h3 id="your-code">Your code</h3>
+<h2 id="your-code">Your code</h2>
 <p>The above is intended as food for thought in your own code. If you are working with strings on the hot path, you might be iterating over bytes you&rsquo;ve already seen, and adding allocations. If you can think of ways to avoid that, you will get a performance win.</p>
+<p>&ndash;</p>
+<p>This blog post started as <a href="https://x.com/clipperhouse/status/1949872965169893833">this series of tweets</a>.</p>
 
 			</div>
 		</article>
