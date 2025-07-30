@@ -35,7 +35,7 @@ From my perf-obsessed perspective, wins come from iterating as few times as poss
 
 My tokenizer is pretty optimal in those respects today. So, if you add even a single allocation on your hot path, or a redundant iteration, your perf craters.
 
-So, I moved some logic into the tokenizer's [main loop](https://github.com/clipperhouse/uax29/blob/master/words/splitfunc.go#L91-L96), so you won't have to do those things. Here's [how to use it](https://github.com/clipperhouse/uax29/tree/master/words#joiners).
+So, I moved some joining logic into the tokenizer's [main loop](https://github.com/clipperhouse/uax29/blob/master/words/splitfunc.go#L93-L100). The tokenizer is already iterating the bytes -- maybe we can do you a favor while we're in the neighborhood. Here's [how to use it](https://github.com/clipperhouse/uax29/tree/master/words#joiners).
 
 ## Your code
 

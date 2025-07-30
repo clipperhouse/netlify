@@ -69,7 +69,7 @@
 </ol>
 <p>From my perf-obsessed perspective, wins come from iterating as few times as possible, and allocating as little as possible.</p>
 <p>My tokenizer is pretty optimal in those respects today. So, if you add even a single allocation on your hot path, or a redundant iteration, your perf craters.</p>
-<p>So, I moved some logic into the tokenizer&rsquo;s <a href="https://github.com/clipperhouse/uax29/blob/master/words/splitfunc.go#L91-L96">main loop</a>, so you won&rsquo;t have to do those things. Here&rsquo;s <a href="https://github.com/clipperhouse/uax29/tree/master/words#joiners">how to use it</a>.</p>
+<p>So, I moved some joining logic into the tokenizer&rsquo;s <a href="https://github.com/clipperhouse/uax29/blob/master/words/splitfunc.go#L93-L100">main loop</a>. The tokenizer is already iterating the bytes &ndash; maybe we can do you a favor while we&rsquo;re in the neighborhood. Here&rsquo;s <a href="https://github.com/clipperhouse/uax29/tree/master/words#joiners">how to use it</a>.</p>
 <h2 id="your-code">Your code</h2>
 <p>The above is intended as food for thought in your own code. If you are working with strings on the hot path, you might be iterating over bytes you&rsquo;ve already seen, and adding allocations. If you can think of ways to avoid that, you will get a performance win.</p>
 <p>&ndash;</p>
