@@ -11,8 +11,8 @@ I offer that?
 
 Cards on the table: I worked pretty hard on optimal semantics and performance
 for my rate limiter, and the task of supporting an external store gives me a
-feeling of "ugh". It would be a step change in complexity, dependencies and
-perf. Distributed data is a hard problem.
+feeling of "ugh". It would be a step change in complexity and perf. Distributed
+data is a hard problem.
 
 Is it possible that, for most cases,
 [you aren't gonna need it](https://en.wikipedia.org/wiki/You_aren%27t_gonna_need_it)?
