@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>YAGNI for distributed rate limiters
+		</title>
+
+	
+
+	
+	
+	
+	<link href="/css/normalize.580818700724d42d7fcc4979b0197971fca1c6d2e0286769237a0ac897df5512.css" rel="stylesheet">
+	
+	<link href="/css/style.8cace777a37cf57765233252d752573ea3ed59a3900e4b4c5742f81fe85362b1.css" rel="stylesheet">
+
+	
+
+	
+
+	<link rel="icon" type="image/png" sizes="32x32" href="/img/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="/img/favicon-16x16.png">
+	<link rel="apple-touch-icon" href="/img/apple-touch-icon.png">
+</head>
+
+<body>
+	<header>
+	<nav>
+		<a href="https://clipperhouse.com/">clipperhouse.com</a>
+		<span class="sep">·</span>
+		<a href="/jargon/">jargon</a>
+		<span class="sep">·</span>
+		<a href="/gen/overview/">gen</a>
+		<span class="sep">·</span>
+		<a href="/stack-correlations/">tag correlations</a>
+		<span class="sep">·</span>
+		<a href="/classical/">classical radio</a>
+	</nav>
+</header>
+
+	
+	<main class="single">
+		<article>
+			<h1>YAGNI for distributed rate limiters</h1>
+			<div>
+				<p>So, I am working on <a href="https://github.com/clipperhouse/rate">this rate limiter</a>.
+It&rsquo;s in-process and in-memory. I look at other fine rate limiters, and many
+offer the ability to store the state in a shared system, such as Redis. Should
+I offer that?</p>
+<p>Cards on the table: I worked pretty hard on optimal semantics and performance
+for my rate limiter, and the task of supporting an external store gives me a
+feeling of &ldquo;ugh&rdquo;. It would be a step change in complexity, dependencies and
+perf. Distributed data is a hard problem.</p>
+<p>Is it possible that, for most cases,
+<a href="https://en.wikipedia.org/wiki/You_aren%27t_gonna_need_it">you aren&rsquo;t gonna need it</a>?
+Let me attempt to talk <del>you</del> me out of the need for a distributed rate
+limiter.</p>
+<h2 id="the-use-case">The use case</h2>
+<p>We often run clusters of machines (say web servers), and wish to apply a rate
+limit policy to the <em>cluster</em>, not the individual machine.</p>
+<p>Let&rsquo;s adopt the assumption that the primary use case for a rate limiter is to
+protect a service from overload, with some notion of fairness. There are other
+use cases, but this is Job One.</p>
+<p>Let&rsquo;s further stipulate that precision is not <em>too</em> important. There is not a
+meaningful difference between 10 requests per second and 11 requests per second;
+we care about blunting the guy hitting us with 100 requests per second.</p>
+<h3 id="strategy-1-round-robin-and-divide-by-n">Strategy 1: Round-robin and divide by N</h3>
+<p>If we have a cluster of <code>N</code> machines, we can use a round-robin (or similar)
+algorithm to distribute the requests ~equally across all machines.</p>
+<p>Instead of sharing state, we can decide on a <strong>cluster</strong> rate limit of <code>X</code>, and
+on each machine, simply configure a rate limit of <code>X/N</code>. We can do further
+division if we run mutliple processes.</p>
+<h3 id="strategy-2-sticky-sessions-and-ignore-n">Strategy 2: Sticky sessions (and ignore N)</h3>
+<p>A <a href="https://docs.aws.amazon.com/prescriptive-guidance/latest/load-balancer-stickiness/welcome.html">sticky session</a>
+means that the same user (or IP address or whatever) will always be routed to
+the same machine.</p>
+<p>If our rate limit is applied per-user (or other sharding key), then we don&rsquo;t
+need to share state at all. The machine-local state is equivalent to the
+&ldquo;cluster&rdquo; state for that user, since that user will only ever &ldquo;see&rdquo;
+one machine.</p>
+<p>(Credit to <a href="https://github.com/kevin-montrose">@kevin-montrose</a> for this idea.)</p>
+<h3 id="strategy-3-do-it-on-the-load-balancer">Strategy 3: Do it on the load balancer</h3>
+<p>The load balancer is a proxy for the cluster, both literally and figuratively.
+If we wish apply a cluster-wide rate limit, let&rsquo;s do it there, and not on
+individual machines.</p>
+<h2 id="summary-and-addendum">Summary and addendum</h2>
+<p>So perhaps the complexity of true, distributed rate limiting should only be
+adopted after we have proved that the above strategies are insufficient.</p>
+<h3 id="spitballing-if-i-were-to-implement-it">Spitballing: if I were to implement it&hellip;</h3>
+<p>If I choose to support distribution in
+<a href="https://github.com/clipperhouse/rate">my rate limiter</a>, I will try to do it
+<em>not</em> by implementing alternative data stores within the package. Rather, I
+would offer the primitives to allow others to do so.</p>
+<p>I might offer a method to emit events from the rate limiter, and a complementary
+method for consuming such events. I would define a serializable data type
+representing the event.</p>
+<p>In turn, you, the user, can choose to transport that event over pub/sub,
+persist it to a database, or whatever. The user can decide on synchrony,
+batching, eventual consistency, etc.</p>
+
+			</div>
+		</article>
+		<div class="post-meta">
+			<p>
+				Published August 28, 2025</p>
+			
+		</div>
+	</main>
+
+	<footer>
+    <p>
+        <a href="https://x.com/clipperhouse">𝕏</a>
+        &nbsp;
+        <a class="github" href="https://github.com/clipperhouse"> </a>
+    </p>
+</footer>
+
+
+	
+
+</body>
+
+</html>

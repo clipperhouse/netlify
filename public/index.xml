@@ -6,8 +6,15 @@
     <description>Recent content on clipperhouse.com</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 28 Jul 2025 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 28 Aug 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://clipperhouse.com/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>YAGNI for distributed rate limiters</title>
+      <link>https://clipperhouse.com/yagni-distributed-rate-limiter/</link>
+      <pubDate>Thu, 28 Aug 2025 00:00:00 +0000</pubDate>
+      <guid>https://clipperhouse.com/yagni-distributed-rate-limiter/</guid>
+      <description>&lt;p&gt;So, I am working on &lt;a href=&#34;https://github.com/clipperhouse/rate&#34;&gt;this rate limiter&lt;/a&gt;.&#xA;It&amp;rsquo;s in-process and in-memory. I look at other fine rate limiters, and many&#xA;offer the ability to store the state in a shared system, such as Redis. Should&#xA;I offer that?&lt;/p&gt;</description>
+    </item>
     <item>
       <title>So, you’re inspecting strings on the hot path</title>
       <link>https://clipperhouse.com/inspecting-strings-hot-path/</link>
