@@ -72,7 +72,7 @@ we care about blunting the guy hitting us with 100 requests per second.</p>
 algorithm to distribute the requests ~equally across all machines.</p>
 <p>Instead of sharing state, we can decide on a <strong>cluster</strong> rate limit of <code>X</code>, and
 on each machine, simply configure a rate limit of <code>X/N</code>. We can do further
-division if we run mutliple processes.</p>
+division if we run multiple processes.</p>
 <h3 id="strategy-2-sticky-sessions-and-ignore-n">Strategy 2: Sticky sessions (and ignore N)</h3>
 <p>A <a href="https://docs.aws.amazon.com/prescriptive-guidance/latest/load-balancer-stickiness/welcome.html">sticky session</a>
 means that the same user (or IP address or whatever) will always be routed to

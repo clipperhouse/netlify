@@ -39,7 +39,7 @@ algorithm to distribute the requests ~equally across all machines.
 
 Instead of sharing state, we can decide on a **cluster** rate limit of `X`, and
 on each machine, simply configure a rate limit of `X/N`. We can do further
-division if we run mutliple processes.
+division if we run multiple processes.
 
 ### Strategy 2: Sticky sessions (and ignore N)
 
@@ -68,7 +68,7 @@ adopted after we have proved that the above strategies are insufficient.
 ### Spitballing: if I were to implement it...
 
 If I choose to support distribution in
- [my rate limiter](https://github.com/clipperhouse/rate), I will try to do it
+[my rate limiter](https://github.com/clipperhouse/rate), I will try to do it
 _not_ by implementing alternative data stores within the package. Rather, I
 would offer the primitives to allow others to do so.
 
