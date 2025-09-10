@@ -69,11 +69,11 @@ but if I like this work I may port to C#, Rust or Zig.</p></blockquote>
 <p>The first primitive is a <code>Limit</code>. We would like to be able to define an arbitrary number of requests
 for an arbitrary amount of time. We might like to address short spikes, say 10 requests per second,
 or sustained load, such as 100 requests per minute. This <a href="https://github.com/clipperhouse/rate/blob/main/limit.go">type</a> will be pretty simple:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#007020;font-weight:bold">type</span> Limit <span style="color:#007020;font-weight:bold">struct</span> {
-</span></span><span style="display:flex;"><span>    count    <span style="color:#902000">int64</span>
-</span></span><span style="display:flex;"><span>    period   time.Duration
-</span></span><span style="display:flex;"><span>}
-</span></span></code></pre></div><h2 id="bucket">Bucket</h2>
+<div class="highlight"><pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#007020;font-weight:bold">type</span><span style="color:#bbb"> </span>Limit<span style="color:#bbb"> </span><span style="color:#007020;font-weight:bold">struct</span><span style="color:#bbb"> </span>{<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">    </span>count<span style="color:#bbb">    </span><span style="color:#902000">int64</span><span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">    </span>period<span style="color:#bbb">   </span>time.Duration<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb"></span>}<span style="color:#bbb">
+</span></span></span></code></pre></div><h2 id="bucket">Bucket</h2>
 <p>We will implement a <a href="https://en.wikipedia.org/wiki/Token_bucket">token-bucket algorithm</a>. The metaphor is
 that a bucket will begin by containing some number of tokens; each request consumes a token; the bucket
 refills as time passes. If there are no tokens left, the request is denied.</p>
@@ -81,61 +81,61 @@ refills as time passes. If there are no tokens left, the request is denied.</p>
 as I imagine that in production use, there will be thousands or millions of buckets.</p>
 <p>The <code>bucket</code> type need only contain a <code>time</code>. In combination with a <code>Limit</code>, we can fully
 determine how many tokens are in the bucket. The <a href="https://github.com/clipperhouse/rate/blob/main/bucket.go">type</a> is:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#007020;font-weight:bold">type</span> bucket <span style="color:#007020;font-weight:bold">struct</span> {
-</span></span><span style="display:flex;"><span>    time time.Time
-</span></span><span style="display:flex;"><span>}
-</span></span></code></pre></div><p>It&rsquo;s helpful to understand that <strong>a duration of time is isomorphic to a &ldquo;token&rdquo;</strong>. So we&rsquo;ll have no
+<div class="highlight"><pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#007020;font-weight:bold">type</span><span style="color:#bbb"> </span>bucket<span style="color:#bbb"> </span><span style="color:#007020;font-weight:bold">struct</span><span style="color:#bbb"> </span>{<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">    </span>time<span style="color:#bbb"> </span>time.Time<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb"></span>}<span style="color:#bbb">
+</span></span></span></code></pre></div><p>It&rsquo;s helpful to understand that <strong>a duration of time is isomorphic to a &ldquo;token&rdquo;</strong>. So we&rsquo;ll have no
 <code>token</code> type, no <code>token</code> field, and only do arithmetic on time. There is no explicit refilling
 operation, just the system clock moving along.</p>
 <p>Let&rsquo;s define <code>durationPerToken</code> as <code>Limit.period / Limit.count</code>.</p>
 <p>Let&rsquo;s give ourselves some helper methods. To determine if a bucket contains at least one token,
 we check to see if the bucket&rsquo;s time is before or equal to now, minus the duration
 representing one token.</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#007020;font-weight:bold">func</span> (b <span style="color:#666">*</span>bucket) <span style="color:#06287e">hasToken</span>(now time.Time, limit Limit) <span style="color:#902000">bool</span> {
-</span></span><span style="display:flex;"><span>    threshold <span style="color:#666">:=</span> now.<span style="color:#06287e">Add</span>(<span style="color:#666">-</span>limit.durationPerToken)
-</span></span><span style="display:flex;"><span>    <span style="color:#007020;font-weight:bold">return</span> b.time.<span style="color:#06287e">Before</span>(threshold)
-</span></span><span style="display:flex;"><span>}
-</span></span></code></pre></div><p>To consume a token, we forward the bucket&rsquo;s time by one token:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#007020;font-weight:bold">func</span> (b <span style="color:#666">*</span>bucket) <span style="color:#06287e">consumeToken</span>(limit Limit) {
-</span></span><span style="display:flex;"><span>    b.time = b.time.<span style="color:#06287e">Add</span>(limit.durationPerToken)
-</span></span><span style="display:flex;"><span>}
-</span></span></code></pre></div><p>To count the remaining tokens:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#007020;font-weight:bold">func</span> (b <span style="color:#666">*</span>bucket) <span style="color:#06287e">remainingTokens</span>(now time.Time, limit Limit) <span style="color:#902000">int64</span> {
-</span></span><span style="display:flex;"><span>    <span style="color:#007020;font-weight:bold">return</span> now.<span style="color:#06287e">Sub</span>(b.time) <span style="color:#666">/</span> limit.durationPerToken
-</span></span><span style="display:flex;"><span>}
-</span></span></code></pre></div><p>I&rsquo;ve elided some type conversions and edge cases for the sake of this brevity.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#007020;font-weight:bold">func</span><span style="color:#bbb"> </span>(b<span style="color:#bbb"> </span><span style="color:#666">*</span>bucket)<span style="color:#bbb"> </span><span style="color:#06287e">hasToken</span>(now<span style="color:#bbb"> </span>time.Time,<span style="color:#bbb"> </span>limit<span style="color:#bbb"> </span>Limit)<span style="color:#bbb"> </span><span style="color:#902000">bool</span><span style="color:#bbb"> </span>{<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">    </span>threshold<span style="color:#bbb"> </span><span style="color:#666">:=</span><span style="color:#bbb"> </span>now.<span style="color:#06287e">Add</span>(<span style="color:#666">-</span>limit.durationPerToken)<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">    </span><span style="color:#007020;font-weight:bold">return</span><span style="color:#bbb"> </span>b.time.<span style="color:#06287e">Before</span>(threshold)<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb"></span>}<span style="color:#bbb">
+</span></span></span></code></pre></div><p>To consume a token, we forward the bucket&rsquo;s time by one token:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#007020;font-weight:bold">func</span><span style="color:#bbb"> </span>(b<span style="color:#bbb"> </span><span style="color:#666">*</span>bucket)<span style="color:#bbb"> </span><span style="color:#06287e">consumeToken</span>(limit<span style="color:#bbb"> </span>Limit)<span style="color:#bbb"> </span>{<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">    </span>b.time<span style="color:#bbb"> </span>=<span style="color:#bbb"> </span>b.time.<span style="color:#06287e">Add</span>(limit.durationPerToken)<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb"></span>}<span style="color:#bbb">
+</span></span></span></code></pre></div><p>To count the remaining tokens:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#007020;font-weight:bold">func</span><span style="color:#bbb"> </span>(b<span style="color:#bbb"> </span><span style="color:#666">*</span>bucket)<span style="color:#bbb"> </span><span style="color:#06287e">remainingTokens</span>(now<span style="color:#bbb"> </span>time.Time,<span style="color:#bbb"> </span>limit<span style="color:#bbb"> </span>Limit)<span style="color:#bbb"> </span><span style="color:#902000">int64</span><span style="color:#bbb"> </span>{<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">    </span><span style="color:#007020;font-weight:bold">return</span><span style="color:#bbb"> </span>now.<span style="color:#06287e">Sub</span>(b.time)<span style="color:#bbb"> </span><span style="color:#666">/</span><span style="color:#bbb"> </span>limit.durationPerToken<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb"></span>}<span style="color:#bbb">
+</span></span></span></code></pre></div><p>I&rsquo;ve elided some type conversions and edge cases for the sake of this brevity.</p>
 <p>🐞 First bug! What happens if a bucket is old &ndash; say it hasn&rsquo;t been updated in
 an hour, but is defined by a 10-per-second limit? Naïve arithmetic would calculate thousands
 of tokens. But, we want it only to ever &ldquo;have&rdquo; up to 10 tokens. Let&rsquo;s fix that:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#007020;font-weight:bold">func</span> (b <span style="color:#666">*</span>bucket) <span style="color:#06287e">remainingTokens</span>(now time.Time, limit Limit) <span style="color:#902000">int64</span> {
-</span></span><span style="display:flex;"><span>    cutoff <span style="color:#666">:=</span> now.<span style="color:#06287e">Add</span>(<span style="color:#666">-</span>limit.period)
-</span></span><span style="display:flex;"><span>    <span style="color:#007020;font-weight:bold">if</span> b.time.<span style="color:#06287e">Before</span>(cutoff) {
-</span></span><span style="display:flex;"><span>        <span style="color:#007020;font-weight:bold">return</span> limit.count
-</span></span><span style="display:flex;"><span>    }
-</span></span><span style="display:flex;"><span>    <span style="color:#007020;font-weight:bold">return</span> now.<span style="color:#06287e">Sub</span>(b.time) <span style="color:#666">/</span> limit.durationPerToken
-</span></span><span style="display:flex;"><span>}
-</span></span></code></pre></div><h2 id="limiter">Limiter</h2>
+<div class="highlight"><pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#007020;font-weight:bold">func</span><span style="color:#bbb"> </span>(b<span style="color:#bbb"> </span><span style="color:#666">*</span>bucket)<span style="color:#bbb"> </span><span style="color:#06287e">remainingTokens</span>(now<span style="color:#bbb"> </span>time.Time,<span style="color:#bbb"> </span>limit<span style="color:#bbb"> </span>Limit)<span style="color:#bbb"> </span><span style="color:#902000">int64</span><span style="color:#bbb"> </span>{<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">    </span>cutoff<span style="color:#bbb"> </span><span style="color:#666">:=</span><span style="color:#bbb"> </span>now.<span style="color:#06287e">Add</span>(<span style="color:#666">-</span>limit.period)<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">    </span><span style="color:#007020;font-weight:bold">if</span><span style="color:#bbb"> </span>b.time.<span style="color:#06287e">Before</span>(cutoff)<span style="color:#bbb"> </span>{<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">        </span><span style="color:#007020;font-weight:bold">return</span><span style="color:#bbb"> </span>limit.count<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">    </span>}<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">    </span><span style="color:#007020;font-weight:bold">return</span><span style="color:#bbb"> </span>now.<span style="color:#06287e">Sub</span>(b.time)<span style="color:#bbb"> </span><span style="color:#666">/</span><span style="color:#bbb"> </span>limit.durationPerToken<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb"></span>}<span style="color:#bbb">
+</span></span></span></code></pre></div><h2 id="limiter">Limiter</h2>
 <p>This will be our main API. The <code>Limiter</code>&rsquo;s job is to dynamically allow or deny a request. It will
 track many buckets and (later) many limits. We want an API like:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#60a0b0;font-style:italic">// Define a limit</span>
-</span></span><span style="display:flex;"><span>perSecond <span style="color:#666">:=</span> Limit{count: <span style="color:#40a070">10</span>, period: time.Second}
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#60a0b0;font-style:italic">// Define a &#34;keyer&#34; for the bucket</span>
-</span></span><span style="display:flex;"><span><span style="color:#007020;font-weight:bold">func</span> <span style="color:#06287e">byIP</span>(req <span style="color:#666">*</span>http.Request) <span style="color:#902000">string</span> {
-</span></span><span style="display:flex;"><span>    <span style="color:#60a0b0;font-style:italic">// You can put arbitrary logic in here. In this case, we’ll just use IP address.</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#007020;font-weight:bold">return</span> req.RemoteAddr
-</span></span><span style="display:flex;"><span>}
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>limiter <span style="color:#666">:=</span> rate.<span style="color:#06287e">NewLimiter</span>(byIP, perSecond)
-</span></span></code></pre></div><p>I think we&rsquo;re starting to compose nicely! The bucket key can be defined by
+<div class="highlight"><pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#60a0b0;font-style:italic">// Define a limit</span><span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb"></span>perSecond<span style="color:#bbb"> </span><span style="color:#666">:=</span><span style="color:#bbb"> </span>Limit{count:<span style="color:#bbb"> </span><span style="color:#40a070">10</span>,<span style="color:#bbb"> </span>period:<span style="color:#bbb"> </span>time.Second}<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb"></span><span style="color:#60a0b0;font-style:italic">// Define a &#34;keyer&#34; for the bucket</span><span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb"></span><span style="color:#007020;font-weight:bold">func</span><span style="color:#bbb"> </span><span style="color:#06287e">byIP</span>(req<span style="color:#bbb"> </span><span style="color:#666">*</span>http.Request)<span style="color:#bbb"> </span><span style="color:#902000">string</span><span style="color:#bbb"> </span>{<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">    </span><span style="color:#60a0b0;font-style:italic">// You can put arbitrary logic in here. In this case, we’ll just use IP address.</span><span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">    </span><span style="color:#007020;font-weight:bold">return</span><span style="color:#bbb"> </span>req.RemoteAddr<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb"></span>}<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb"></span>limiter<span style="color:#bbb"> </span><span style="color:#666">:=</span><span style="color:#bbb"> </span>rate.<span style="color:#06287e">NewLimiter</span>(byIP,<span style="color:#bbb"> </span>perSecond)<span style="color:#bbb">
+</span></span></span></code></pre></div><p>I think we&rsquo;re starting to compose nicely! The bucket key can be defined by
 arbitrary logic, encapsulated in a named func.</p>
 <p>Then, in our (e.g.) HTTP handler:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#007020;font-weight:bold">if</span> limiter.<span style="color:#06287e">Allow</span>(r) {
-</span></span><span style="display:flex;"><span>    w.<span style="color:#06287e">WriteHeader</span>(http.StatusOK)
-</span></span><span style="display:flex;"><span>} <span style="color:#007020;font-weight:bold">else</span> {
-</span></span><span style="display:flex;"><span>    w.<span style="color:#06287e">WriteHeader</span>(http.StatusTooManyRequests)
-</span></span><span style="display:flex;"><span>}
-</span></span></code></pre></div><p>The <code>Allow</code> method&rsquo;s job is to:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#007020;font-weight:bold">if</span><span style="color:#bbb"> </span>limiter.<span style="color:#06287e">Allow</span>(r)<span style="color:#bbb"> </span>{<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">    </span>w.<span style="color:#06287e">WriteHeader</span>(http.StatusOK)<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb"></span>}<span style="color:#bbb"> </span><span style="color:#007020;font-weight:bold">else</span><span style="color:#bbb"> </span>{<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">    </span>w.<span style="color:#06287e">WriteHeader</span>(http.StatusTooManyRequests)<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb"></span>}<span style="color:#bbb">
+</span></span></span></code></pre></div><p>The <code>Allow</code> method&rsquo;s job is to:</p>
 <ul>
 <li>Fetch or create the bucket for the IP address.</li>
 <li>See if the bucket has tokens.</li>
@@ -151,15 +151,15 @@ things you may notice:</p>
 <h3 id="multiple-limits-per-bucket">Multiple limits per bucket</h3>
 <p>Let&rsquo;s extend <code>Limiter</code> to accept multiple limits per bucket. Perhaps we wish to tolerate short spikes
 but not sustained load:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span>perSecond <span style="color:#666">:=</span> Limit{count: <span style="color:#40a070">10</span>, period: time.Second}
-</span></span><span style="display:flex;"><span>perMinute <span style="color:#666">:=</span> Limit{count: <span style="color:#40a070">100</span>, period: time.Minute}
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#007020;font-weight:bold">func</span> <span style="color:#06287e">byIP</span>(req <span style="color:#666">*</span>http.Request) <span style="color:#902000">string</span> {
-</span></span><span style="display:flex;"><span>    <span style="color:#007020;font-weight:bold">return</span> req.RemoteAddr
-</span></span><span style="display:flex;"><span>}
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>limiter <span style="color:#666">:=</span> rate.<span style="color:#06287e">NewLimiter</span>(byIP, perSecond, perMinute)
-</span></span></code></pre></div><p>We still call a single <code>limiter.Allow()</code> method. We want &ldquo;all or nothing&rdquo; semantics:
+<div class="highlight"><pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span>perSecond<span style="color:#bbb"> </span><span style="color:#666">:=</span><span style="color:#bbb"> </span>Limit{count:<span style="color:#bbb"> </span><span style="color:#40a070">10</span>,<span style="color:#bbb"> </span>period:<span style="color:#bbb"> </span>time.Second}<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb"></span>perMinute<span style="color:#bbb"> </span><span style="color:#666">:=</span><span style="color:#bbb"> </span>Limit{count:<span style="color:#bbb"> </span><span style="color:#40a070">100</span>,<span style="color:#bbb"> </span>period:<span style="color:#bbb"> </span>time.Minute}<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb"></span><span style="color:#007020;font-weight:bold">func</span><span style="color:#bbb"> </span><span style="color:#06287e">byIP</span>(req<span style="color:#bbb"> </span><span style="color:#666">*</span>http.Request)<span style="color:#bbb"> </span><span style="color:#902000">string</span><span style="color:#bbb"> </span>{<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">    </span><span style="color:#007020;font-weight:bold">return</span><span style="color:#bbb"> </span>req.RemoteAddr<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb"></span>}<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb"></span>limiter<span style="color:#bbb"> </span><span style="color:#666">:=</span><span style="color:#bbb"> </span>rate.<span style="color:#06287e">NewLimiter</span>(byIP,<span style="color:#bbb"> </span>perSecond,<span style="color:#bbb"> </span>perMinute)<span style="color:#bbb">
+</span></span></span></code></pre></div><p>We still call a single <code>limiter.Allow()</code> method. We want &ldquo;all or nothing&rdquo; semantics:
 if any one of the limits is exhausted, we return false.</p>
 <p>Further, we want something subtler: we only will consume a token from one bucket <em>iff</em>
 all limits were allowed. Otherwise, we deduct none. I think this sort of &ldquo;transactional&rdquo; accounting
@@ -177,51 +177,51 @@ we start with an <code>executionTime</code> and use it throughout the logic (ins
 <p><a href="https://github.com/clipperhouse/rate/blob/main/limiter.go#L126">Implementation-in-progress here</a>.</p>
 <h2 id="conditional-limits">Conditional Limits</h2>
 <p>Perhaps we want a limit to be determined dynamically.</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span>db <span style="color:#666">:=</span> <span style="color:#06287e">getDatabase</span>()
-</span></span><span style="display:flex;"><span><span style="color:#007020;font-weight:bold">func</span> <span style="color:#06287e">byCustomerID</span>(r <span style="color:#666">*</span>http.Request) <span style="color:#902000">int</span> {
-</span></span><span style="display:flex;"><span>    <span style="color:#007020;font-weight:bold">return</span> db.<span style="color:#06287e">GetCustomerID</span>(r.Cookies[<span style="color:#4070a0">&#34;CustomerID&#34;</span>])
-</span></span><span style="display:flex;"><span>}
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#60a0b0;font-style:italic">// reads are cheap</span>
-</span></span><span style="display:flex;"><span>readLimit <span style="color:#666">:=</span> rate.<span style="color:#06287e">NewLimit</span>(<span style="color:#40a070">50</span>, time.Second)
-</span></span><span style="display:flex;"><span><span style="color:#60a0b0;font-style:italic">// writes are expensive</span>
-</span></span><span style="display:flex;"><span>writeLimit <span style="color:#666">:=</span> rate.<span style="color:#06287e">NewLimit</span>(<span style="color:#40a070">10</span>, time.Second)
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>limitFunc <span style="color:#666">:=</span> <span style="color:#007020;font-weight:bold">func</span>(r <span style="color:#666">*</span>http.Request) Limit {
-</span></span><span style="display:flex;"><span>    <span style="color:#007020;font-weight:bold">if</span> r.Method <span style="color:#666">==</span> <span style="color:#4070a0">&#34;GET&#34;</span> {
-</span></span><span style="display:flex;"><span>        <span style="color:#007020;font-weight:bold">return</span> readLimit
-</span></span><span style="display:flex;"><span>    }
-</span></span><span style="display:flex;"><span>    <span style="color:#007020;font-weight:bold">return</span> writeLimit
-</span></span><span style="display:flex;"><span>}
-</span></span><span style="display:flex;"><span>limiter <span style="color:#666">:=</span> rate.<span style="color:#06287e">NewLimiterFunc</span>(byCustomerID, limitFunc)
-</span></span></code></pre></div><p>We can support multiple <code>LimitFunc</code>&rsquo;s as well:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span>db <span style="color:#666">:=</span> <span style="color:#06287e">getDatabase</span>()
-</span></span><span style="display:flex;"><span><span style="color:#007020;font-weight:bold">func</span> <span style="color:#06287e">byPlan</span>(r <span style="color:#666">*</span>http.Request) PlanID {
-</span></span><span style="display:flex;"><span>    <span style="color:#007020;font-weight:bold">return</span> db.<span style="color:#06287e">GetCustomerPlan</span>(r.Cookies[<span style="color:#4070a0">&#34;CustomerID&#34;</span>])
-</span></span><span style="display:flex;"><span>}
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>readLimitFreePlan <span style="color:#666">:=</span> rate.<span style="color:#06287e">NewLimit</span>(<span style="color:#40a070">50</span>, time.Second)
-</span></span><span style="display:flex;"><span>writeLimitFreePlan <span style="color:#666">:=</span> rate.<span style="color:#06287e">NewLimit</span>(<span style="color:#40a070">10</span>, time.Second)
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>free <span style="color:#666">:=</span> <span style="color:#007020;font-weight:bold">func</span>(r <span style="color:#666">*</span>http.Request) Limit {
-</span></span><span style="display:flex;"><span>    <span style="color:#007020;font-weight:bold">if</span> r.Method <span style="color:#666">==</span> <span style="color:#4070a0">&#34;GET&#34;</span> {
-</span></span><span style="display:flex;"><span>        <span style="color:#007020;font-weight:bold">return</span> readLimitFreePlan
-</span></span><span style="display:flex;"><span>    }
-</span></span><span style="display:flex;"><span>    <span style="color:#007020;font-weight:bold">return</span> writeLimitFreePlan
-</span></span><span style="display:flex;"><span>}
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>readLimitEnterprisePlan <span style="color:#666">:=</span> rate.<span style="color:#06287e">NewLimit</span>(<span style="color:#40a070">100</span>, time.Second)
-</span></span><span style="display:flex;"><span>writeLimitEnterprisePlan <span style="color:#666">:=</span> rate.<span style="color:#06287e">NewLimit</span>(<span style="color:#40a070">20</span>, time.Second)
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>enterprise <span style="color:#666">:=</span> <span style="color:#007020;font-weight:bold">func</span>(r <span style="color:#666">*</span>http.Request) Limit {
-</span></span><span style="display:flex;"><span>    <span style="color:#007020;font-weight:bold">if</span> r.Method <span style="color:#666">==</span> <span style="color:#4070a0">&#34;GET&#34;</span> {
-</span></span><span style="display:flex;"><span>        <span style="color:#007020;font-weight:bold">return</span> readLimitEnterprisePlan
-</span></span><span style="display:flex;"><span>    }
-</span></span><span style="display:flex;"><span>    <span style="color:#007020;font-weight:bold">return</span> writeLimitEnterprisePlan
-</span></span><span style="display:flex;"><span>}
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>limiter <span style="color:#666">:=</span> rate.<span style="color:#06287e">NewLimiterFunc</span>(byPlan, free, enterprise)
-</span></span></code></pre></div><h2 id="stacked-limiter">Stacked Limiter?</h2>
+<div class="highlight"><pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span>db<span style="color:#bbb"> </span><span style="color:#666">:=</span><span style="color:#bbb"> </span><span style="color:#06287e">getDatabase</span>()<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb"></span><span style="color:#007020;font-weight:bold">func</span><span style="color:#bbb"> </span><span style="color:#06287e">byCustomerID</span>(r<span style="color:#bbb"> </span><span style="color:#666">*</span>http.Request)<span style="color:#bbb"> </span><span style="color:#902000">int</span><span style="color:#bbb"> </span>{<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">    </span><span style="color:#007020;font-weight:bold">return</span><span style="color:#bbb"> </span>db.<span style="color:#06287e">GetCustomerID</span>(r.Cookies[<span style="color:#4070a0">&#34;CustomerID&#34;</span>])<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb"></span>}<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb"></span><span style="color:#60a0b0;font-style:italic">// reads are cheap</span><span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb"></span>readLimit<span style="color:#bbb"> </span><span style="color:#666">:=</span><span style="color:#bbb"> </span>rate.<span style="color:#06287e">NewLimit</span>(<span style="color:#40a070">50</span>,<span style="color:#bbb"> </span>time.Second)<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb"></span><span style="color:#60a0b0;font-style:italic">// writes are expensive</span><span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb"></span>writeLimit<span style="color:#bbb"> </span><span style="color:#666">:=</span><span style="color:#bbb"> </span>rate.<span style="color:#06287e">NewLimit</span>(<span style="color:#40a070">10</span>,<span style="color:#bbb"> </span>time.Second)<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb"></span>limitFunc<span style="color:#bbb"> </span><span style="color:#666">:=</span><span style="color:#bbb"> </span><span style="color:#007020;font-weight:bold">func</span>(r<span style="color:#bbb"> </span><span style="color:#666">*</span>http.Request)<span style="color:#bbb"> </span>Limit<span style="color:#bbb"> </span>{<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">    </span><span style="color:#007020;font-weight:bold">if</span><span style="color:#bbb"> </span>r.Method<span style="color:#bbb"> </span><span style="color:#666">==</span><span style="color:#bbb"> </span><span style="color:#4070a0">&#34;GET&#34;</span><span style="color:#bbb"> </span>{<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">        </span><span style="color:#007020;font-weight:bold">return</span><span style="color:#bbb"> </span>readLimit<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">    </span>}<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">    </span><span style="color:#007020;font-weight:bold">return</span><span style="color:#bbb"> </span>writeLimit<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb"></span>}<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb"></span>limiter<span style="color:#bbb"> </span><span style="color:#666">:=</span><span style="color:#bbb"> </span>rate.<span style="color:#06287e">NewLimiterFunc</span>(byCustomerID,<span style="color:#bbb"> </span>limitFunc)<span style="color:#bbb">
+</span></span></span></code></pre></div><p>We can support multiple <code>LimitFunc</code>&rsquo;s as well:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span>db<span style="color:#bbb"> </span><span style="color:#666">:=</span><span style="color:#bbb"> </span><span style="color:#06287e">getDatabase</span>()<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb"></span><span style="color:#007020;font-weight:bold">func</span><span style="color:#bbb"> </span><span style="color:#06287e">byPlan</span>(r<span style="color:#bbb"> </span><span style="color:#666">*</span>http.Request)<span style="color:#bbb"> </span>PlanID<span style="color:#bbb"> </span>{<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">    </span><span style="color:#007020;font-weight:bold">return</span><span style="color:#bbb"> </span>db.<span style="color:#06287e">GetCustomerPlan</span>(r.Cookies[<span style="color:#4070a0">&#34;CustomerID&#34;</span>])<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb"></span>}<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb"></span>readLimitFreePlan<span style="color:#bbb"> </span><span style="color:#666">:=</span><span style="color:#bbb"> </span>rate.<span style="color:#06287e">NewLimit</span>(<span style="color:#40a070">50</span>,<span style="color:#bbb"> </span>time.Second)<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb"></span>writeLimitFreePlan<span style="color:#bbb"> </span><span style="color:#666">:=</span><span style="color:#bbb"> </span>rate.<span style="color:#06287e">NewLimit</span>(<span style="color:#40a070">10</span>,<span style="color:#bbb"> </span>time.Second)<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb"></span>free<span style="color:#bbb"> </span><span style="color:#666">:=</span><span style="color:#bbb"> </span><span style="color:#007020;font-weight:bold">func</span>(r<span style="color:#bbb"> </span><span style="color:#666">*</span>http.Request)<span style="color:#bbb"> </span>Limit<span style="color:#bbb"> </span>{<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">    </span><span style="color:#007020;font-weight:bold">if</span><span style="color:#bbb"> </span>r.Method<span style="color:#bbb"> </span><span style="color:#666">==</span><span style="color:#bbb"> </span><span style="color:#4070a0">&#34;GET&#34;</span><span style="color:#bbb"> </span>{<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">        </span><span style="color:#007020;font-weight:bold">return</span><span style="color:#bbb"> </span>readLimitFreePlan<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">    </span>}<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">    </span><span style="color:#007020;font-weight:bold">return</span><span style="color:#bbb"> </span>writeLimitFreePlan<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb"></span>}<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb"></span>readLimitEnterprisePlan<span style="color:#bbb"> </span><span style="color:#666">:=</span><span style="color:#bbb"> </span>rate.<span style="color:#06287e">NewLimit</span>(<span style="color:#40a070">100</span>,<span style="color:#bbb"> </span>time.Second)<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb"></span>writeLimitEnterprisePlan<span style="color:#bbb"> </span><span style="color:#666">:=</span><span style="color:#bbb"> </span>rate.<span style="color:#06287e">NewLimit</span>(<span style="color:#40a070">20</span>,<span style="color:#bbb"> </span>time.Second)<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb"></span>enterprise<span style="color:#bbb"> </span><span style="color:#666">:=</span><span style="color:#bbb"> </span><span style="color:#007020;font-weight:bold">func</span>(r<span style="color:#bbb"> </span><span style="color:#666">*</span>http.Request)<span style="color:#bbb"> </span>Limit<span style="color:#bbb"> </span>{<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">    </span><span style="color:#007020;font-weight:bold">if</span><span style="color:#bbb"> </span>r.Method<span style="color:#bbb"> </span><span style="color:#666">==</span><span style="color:#bbb"> </span><span style="color:#4070a0">&#34;GET&#34;</span><span style="color:#bbb"> </span>{<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">        </span><span style="color:#007020;font-weight:bold">return</span><span style="color:#bbb"> </span>readLimitEnterprisePlan<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">    </span>}<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">    </span><span style="color:#007020;font-weight:bold">return</span><span style="color:#bbb"> </span>writeLimitEnterprisePlan<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb"></span>}<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb"></span>limiter<span style="color:#bbb"> </span><span style="color:#666">:=</span><span style="color:#bbb"> </span>rate.<span style="color:#06287e">NewLimiterFunc</span>(byPlan,<span style="color:#bbb"> </span>free,<span style="color:#bbb"> </span>enterprise)<span style="color:#bbb">
+</span></span></span></code></pre></div><h2 id="stacked-limiter">Stacked Limiter?</h2>
 <p>An idea for the future: combine multiple <code>Limiter</code>s into a single <code>LimiterStack</code>.</p>
 <p>Implement logic similar to the &ldquo;multiple limits&rdquo; above &ndash; one <code>Allow()</code> method for
 all limiters; &ldquo;all or nothing&rdquo; transactional semantics. I&rsquo;m musing about it now 🤔.</p>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Allocations are a dependency
+		</title>
+
+	
+
+	
+	
+	
+	<link href="/css/normalize.580818700724d42d7fcc4979b0197971fca1c6d2e0286769237a0ac897df5512.css" rel="stylesheet">
+	
+	<link href="/css/style.8cace777a37cf57765233252d752573ea3ed59a3900e4b4c5742f81fe85362b1.css" rel="stylesheet">
+
+	
+
+	
+
+	<link rel="icon" type="image/png" sizes="32x32" href="/img/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="/img/favicon-16x16.png">
+	<link rel="apple-touch-icon" href="/img/apple-touch-icon.png">
+</head>
+
+<body>
+	<header>
+	<nav>
+		<a href="https://clipperhouse.com/">clipperhouse.com</a>
+		<span class="sep">·</span>
+		<a href="/jargon/">jargon</a>
+		<span class="sep">·</span>
+		<a href="/gen/overview/">gen</a>
+		<span class="sep">·</span>
+		<a href="/stack-correlations/">tag correlations</a>
+		<span class="sep">·</span>
+		<a href="/classical/">classical radio</a>
+	</nav>
+</header>
+
+	
+	<main class="single">
+		<article>
+			<h1>Allocations are a dependency</h1>
+			<div>
+				<p>I like to reduce or eliminate allocations in my projects, which use garbage-collected languages (Go and C#). Like you, I want efficiency &ndash; both in CPU cycles and memory.</p>
+<p>But we might also understand allocations as taking a dependency on other systems. As such,
+eliminating allocations is also an improvement in reliability.</p>
+<p>First, by allocating, we take a dependency on the garbage collector. Modern
+GC&rsquo;s are great. But, they are complex systems in themselves. When we take them
+out of our code paths, we eliminate a class of complexity. We also become less-noisy
+neighbors to the other dependents of that shared system.</p>
+<p>The second dependency is the OS, which provides the memory allocation. Also
+a complex system! If we can remove that system call, we avoid invoking a
+yet another code path, and again are kind to our neighbors.</p>
+<p>Our apps get big over time. If you&rsquo;ve ever handled an escalation or an outage
+(who hasn&rsquo;t), you learn that our ability to predict the behavior of our systems
+is the definition of reliability. To the extent we can take a variable out of
+the equation, we and our users benefit.</p>
+
+			</div>
+		</article>
+		<div class="post-meta">
+			<p>
+				Published September 10, 2025</p>
+			
+		</div>
+	</main>
+
+	<footer>
+    <p>
+        <a href="https://x.com/clipperhouse">𝕏</a>
+        &nbsp;
+        <a class="github" href="https://github.com/clipperhouse"> </a>
+    </p>
+</footer>
+
+
+	
+
+</body>
+
+</html>
