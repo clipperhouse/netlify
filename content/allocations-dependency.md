@@ -3,7 +3,7 @@ title: "Allocations are a dependency"
 date: 2025-09-10
 ---
 
-I like to reduce or eliminate allocations in my projects, which use garbage-collected languages (Go and C#). Like you, I want efficiency -- both in CPU cycles and memory.
+I like to reduce or eliminate allocations in [my projects](https://github.com/clipperhouse), which use garbage-collected languages (Go and C#). Like you, I want efficiency -- both in CPU cycles and memory.
 
 But we might also understand allocations as taking a dependency on other systems. As such,
 eliminating allocations is also an improvement in reliability.

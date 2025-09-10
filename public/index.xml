@@ -13,7 +13,7 @@
       <link>https://clipperhouse.com/allocations-dependency/</link>
       <pubDate>Wed, 10 Sep 2025 00:00:00 +0000</pubDate>
       <guid>https://clipperhouse.com/allocations-dependency/</guid>
-      <description>&lt;p&gt;I like to reduce or eliminate allocations in my projects, which use garbage-collected languages (Go and C#). Like you, I want efficiency &amp;ndash; both in CPU cycles and memory.&lt;/p&gt;</description>
+      <description>&lt;p&gt;I like to reduce or eliminate allocations in &lt;a href=&#34;https://github.com/clipperhouse&#34;&gt;my projects&lt;/a&gt;, which use garbage-collected languages (Go and C#). Like you, I want efficiency &amp;ndash; both in CPU cycles and memory.&lt;/p&gt;</description>
     </item>
     <item>
       <title>YAGNI for distributed rate limiters</title>
